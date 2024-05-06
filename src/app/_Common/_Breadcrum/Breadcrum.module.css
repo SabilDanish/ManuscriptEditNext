@@ -1,0 +1,5 @@
+.bg-inner{
+    background-image: url('/images/innerimg/research-bg.jpg');
+    background-size: cover;  
+    padding: 70px 0px;
+  }

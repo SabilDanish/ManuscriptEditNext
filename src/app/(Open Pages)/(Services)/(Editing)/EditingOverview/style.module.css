@@ -1,0 +1,15 @@
+.stt-1{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+ }
+ .active{
+     background-color: #a31e22;
+ }
+ .active h4 {
+    color: #fff;
+ }
+ .active p {
+    color: #fff;
+ }
