@@ -1,0 +1,36 @@
+#ediCat .nme {
+    background-color: #ddc587;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+#ediCat .me {
+    background-color: #ededed;
+    border: 2px solid #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    color: #4f4f4f;
+}
+
+#ediIcon .detail {
+    width: 70%;
+}
+
+.nmEditor{
+    border: 0px solid rgb(193, 193, 193);
+    padding: 0px;
+    text-align: center;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}

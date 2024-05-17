@@ -351,8 +351,8 @@ export default function header() {
                 <li>
                   <a href="#">EDITOR</a>
                   <ul>
-                    {/* <li><Link href={'/QualityDelivery'}>Editor Profile</Link></li> */}
-                    <li>
+                    <li><Link href={'/EditorialPanel'}>Editor Profile</Link></li>
+                    {/* <li>
                       <a
                         onClick={() => {
                           redirect("editorial-panel");
@@ -361,7 +361,7 @@ export default function header() {
                       >
                         Editor Profile
                       </a>
-                    </li>
+                    </li> */}
 
                     <li>
                       <Link href={"/EditPanel"}>Editor Panel</Link>
@@ -411,8 +411,8 @@ export default function header() {
                         Client List
                       </a>
                     </li>
-                    {/* <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li> */}
-                    <li>
+                    <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li>
+                    {/* <li>
                       <a
                         onClick={() => {
                           redirect("partner-recent");
@@ -421,7 +421,7 @@ export default function header() {
                       >
                         Recent Partners
                       </a>
-                    </li>
+                    </li> */}
 
                     {/* <li><Link href={'/Process'}>Contact us</Link></li> */}
                     <li>
@@ -759,8 +759,8 @@ export default function header() {
               <li>
                 <a href="#">EDITOR</a>
                 <ul>
-                  {/* <li><Link href={'/QualityDelivery'}>Editor Profile</Link></li> */}
-                  <li>
+                  <li><Link href={'/QualityDelivery'}>Editor Profile</Link></li>
+                  {/* <li>
                     <a
                       onClick={() => {
                         redirect("editorial-panel");
@@ -769,7 +769,7 @@ export default function header() {
                     >
                       Editor Profile
                     </a>
-                  </li>
+                  </li> */}
 
                   <li>
                     <Link href={"/EditPanel"}>Editor Panel</Link>

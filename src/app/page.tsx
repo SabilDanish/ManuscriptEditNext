@@ -8,6 +8,8 @@ import ourProfessional from "./_Common/_OurProfessional/OurProfessional";
 import howWeWork from "./_Common/_HowWeWork/HowWeWork";
 import Link from "next/link";
 import redirect from "./_Common/_functionality/Redirect";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // import '../../public/js/vendor/jquery-3.2.1.min.js'
 // import '../../public/js/bootstrap.min.js'
@@ -16,6 +18,7 @@ export default function Home() {
   SwiperCore.use([Autoplay]);
   return (
     <>
+      <ToastContainer />
       <Swiper
         // install Swiper modules
         spaceBetween={10}

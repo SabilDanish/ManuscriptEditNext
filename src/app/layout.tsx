@@ -24,6 +24,8 @@ import header from "./_Common/_Header/Header";
 import footer from "./_Common/_Footer/Footer";
 import Script from "next/script";
 import { Suspense } from "react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // export const metadata: Metadata = {
 //   title: "Manuscript-Edit",
@@ -58,10 +60,11 @@ export default function RootLayout({
       <Script type="text/javascript" src="/js/jquery.scrollUp.js" />
       <Script type="text/javascript" src="/js/theme.js" />
       <body className="loaded">
+        <ToastContainer />
         {/* <header/> */}
         {header()}
         <Suspense fallback={<p>Loading feed...</p>}>
-        {children}
+          {children}
         </Suspense>
         {footer()}
       </body>
