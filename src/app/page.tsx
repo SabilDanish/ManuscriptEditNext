@@ -10,12 +10,25 @@ import Link from "next/link";
 import redirect from "./_Common/_functionality/Redirect";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/navigation';
+import { useEffect } from "react";
 
 // import '../../public/js/vendor/jquery-3.2.1.min.js'
 // import '../../public/js/bootstrap.min.js'
 
 export default function Home() {
   SwiperCore.use([Autoplay]);
+  const router = useRouter();
+
+  useEffect(() => {
+    const storedDataString = sessionStorage.getItem('userId');
+    console.log({storedDataString})
+
+    if (!storedDataString) {
+      // Redirect to /Auth page if storedData does not exist
+      router.push('/Auth');
+    }
+  }, []);
   return (
     <>
       <ToastContainer />

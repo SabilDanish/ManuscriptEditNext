@@ -1,4 +1,5 @@
 import { Editor } from '@/app/utils/interfaces';
+import env from '@/env/env';
 import { useState, useEffect } from 'react';
 
 const useFetchEditors = (type: string, limit: number, offset: number) => {
@@ -15,7 +16,7 @@ const useFetchEditors = (type: string, limit: number, offset: number) => {
         setLoading(true)
         try {
             fetch(
-                ` https://www.manuscriptedit.com/api/get_all_editor_profile_details.php?ediType=${type}&limit=${limit}&offset=${offset}`, {
+                `${env.testingUrl}get_all_editor_profile_details.php?ediType=${type}&limit=${limit}&offset=${offset}`, {
                 method: "get",
                 headers: new Headers({
                     "ngrok-skip-browser-warning": "69420",
