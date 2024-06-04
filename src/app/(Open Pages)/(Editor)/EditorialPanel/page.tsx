@@ -66,9 +66,9 @@ export default function Home() {
               <div className="me">MEDICAL EDITORS PROFILE</div>
             </div>
           </div>
-        </div>
 
-        <br></br>
+
+          <div className="row">
         <div
           className="container nmEditor"
           style={{
@@ -77,7 +77,7 @@ export default function Home() {
             textAlign: "center",
           }}
         >
-          <div id="ediIcon" className="row" style={{ margin: "20px 0px" }}>
+          <div id="ediIcon" className="row" style={{ margin: "20px 0px" , gap: "29px" }}>
             {allEditor &&
               allEditor.length &&
               allEditor.map((editor) => {
@@ -85,7 +85,7 @@ export default function Home() {
                 return (
                   <div
                     className="col-lg-2 col-md-4 col-sm-4 col-xs-4"
-                    style={{ border: "0 solid #022039" }}
+                    style={{ border: "0 solid #022039" , boxShadow: "0px 0px 6px #f39194" }}
                   >
                     <div style={{ padding: "5px" }}>
                       <div style={{ textAlign: "center" }}>
@@ -102,8 +102,8 @@ export default function Home() {
                       </div>
                       <div className="titl">
                         <div className="name">{ediName}</div>
-                        <div style={{ textAlign: "center" }} className="detail">
-                          <button className="btn">View Details</button>
+                        <div style={{ textAlign: "center" , width:"100%"  }} className="detail">
+                          <button className="btn" style={{color:"#2257de" , fontWeight:"600"}}>View Details</button>
                         </div>
                       </div>
                     </div>
@@ -112,6 +112,22 @@ export default function Home() {
               })}
           </div>
         </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+       
+        
+        
 
         {/* <div className="col-lg-4 col-md-4 col-sm-4 firstdivpanel">
                     <p>
