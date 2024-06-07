@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import useFetchEditors from "@/app/hooks/editor/useEditorProfile";
 import { DNA } from "react-loader-spinner";
 import { Editor } from "@/app/utils/interfaces";
+import EditorModal from "@/app/_Common/_Modals/EditorModal/EditorModal";
+
 
 
 export default function Home() {
@@ -12,6 +14,8 @@ export default function Home() {
   const [offset, setOffset] = useState(0);
   const [type, setType] = useState("");
   const [allEditor, setAllEditor] = useState<Editor[]>([]);
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [modalData, setModalData] = useState<any>()
   const { loading, error, editors } = useFetchEditors(type, limit, offset);
 
   useEffect(() => {
@@ -28,10 +32,22 @@ export default function Home() {
   useEffect(() => {
     setAllEditor((prev) => [...prev, ...editors]);
   }, [editors]);
-  console.log({editors,type})
+
+  const modalHandler = (e:any) => {
+    console.log("I am here")
+    const id = e.target.className.split(" ")[1]
+    console.log({id})
+    const filteredData = allEditor.filter(editor => editor.id === id)[0]
+    console.log({filteredData})
+    setModalData(filteredData)
+    setShowModal(true)
+  }
+
+  console.log({showModal})
   return (
     <>
       {breadcrum("Editor", "Editorial Panel")}
+      {showModal && <EditorModal modalData={modalData} setShowModal={setShowModal} />}
       <div className="col-lg-10 col-md-10 col-sm-10 mt-50 mb-50 mx-auto d-flex1k">
         {loading && !allEditor.length && (
           <DNA
@@ -81,11 +97,13 @@ export default function Home() {
             {allEditor &&
               allEditor.length &&
               allEditor.map((editor) => {
-                const { ediImg, ediName } = editor;
+                const { ediImg, ediName, id } = editor;
+                console.log({id})
                 return (
                   <div
                     className="col-lg-2 col-md-4 col-sm-4 col-xs-4"
                     style={{ border: "0 solid #022039" }}
+                    key={id}
                   >
                     <div style={{ padding: "5px" }}>
                       <div style={{ textAlign: "center" }}>
@@ -103,7 +121,7 @@ export default function Home() {
                       <div className="titl">
                         <div className="name">{ediName}</div>
                         <div style={{ textAlign: "center" }} className="detail">
-                          <button className="btn">View Details</button>
+                          <button className={`btn ${id}`} onClick={(e) => modalHandler(e)}>View Details</button>
                         </div>
                       </div>
                     </div>

@@ -11,16 +11,14 @@ const useFetchEditors = (type: string, limit: number, offset: number) => {
     useEffect(() => {
         fetchEditors()
     }, [limit, offset, type])
+    console.log({type,offset,limit})
 
     const fetchEditors = async () => {
         setLoading(true)
         try {
             fetch(
-                `${env.testingUrl}get_all_editor_profile_details.php?ediType=${type}&limit=${limit}&offset=${offset}`, {
+                `https://www.manuscriptedit.com/api/get_all_editor_profile_details.php?ediType=${type}&limit=${limit}&offset=${offset}`, {
                 method: "get",
-                headers: new Headers({
-                    "ngrok-skip-browser-warning": "69420",
-                }),
             }
             ).then(response => {
                 return response.json()

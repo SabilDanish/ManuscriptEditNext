@@ -20,5 +20,12 @@ export interface FetchPostResponse<T> {
     error: string | null;
     data: T | null;
     postData: (formData: any) => Promise<void>;
-    login: (formData: any,router:any) => Promise<void>;
+    login: (formData: any, router: any) => Promise<void>;
+}
+
+export interface Editor {
+    id: string;
+    ediImg: string;
+    ediName: string;
+    ediBio: string;
 }
