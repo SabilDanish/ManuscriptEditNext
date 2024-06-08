@@ -1,0 +1,7 @@
+.column-separator {
+    border-right: 4px solid #a40001;
+}
+
+.column-separator:last-child {
+    border-right: none;
+}

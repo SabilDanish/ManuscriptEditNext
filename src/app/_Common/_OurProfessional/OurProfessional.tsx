@@ -1,4 +1,10 @@
-export default function ourProfessional() {
+"use client";
+
+import "./OurProfessional.css"
+
+
+
+export default function OurProfessional() {
 
     return (
         <div className="service_area pt-60 pb-70">
@@ -9,9 +15,9 @@ export default function ourProfessional() {
 						<div className="section_main_title">
 							<h1>Our professionals</h1>
 						</div>
-						<div className="em_bar">
+						{/* <div className="em_bar">
 							<div className="em_bar_bg"></div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
@@ -20,7 +26,7 @@ export default function ourProfessional() {
 					<div className="service_style_ten wow flipInY" data-wow-delay="0ms" data-wow-duration="2500ms">
 						<div className="single_service_style_ten st-grid-2">
 							<div className="service_style_ten_icon pb-2">
-									 <img src="/images/menuscimg/dr_emm-min.png"  width="100px" style={{borderRadius:5}}/>
+									 <img src="/images/menuscimg/dr_emm-min.png" className="OurprofessionalImage"   style={{borderRadius:5}}/>
                                 <h5>Dr. E M M</h5>
 							</div>
 							<div className="service_style_ten_content">
@@ -42,7 +48,7 @@ export default function ourProfessional() {
 					<div className="service_style_ten wow flipInY" data-wow-delay="0ms" data-wow-duration="2500ms">
 						<div className="single_service_style_ten st-grid-2">
 							<div className="service_style_ten_icon pb-2">
-									 <img src="/images/menuscimg/dr_lb.png"  width="100px" style={{borderRadius:5}}/>
+									 <img src="/images/menuscimg/dr_lb.png" className="OurprofessionalImage"   style={{borderRadius:5}}/>
                                 <h5>Dr. L B</h5>
 							</div>
 							<div className="service_style_ten_content">
@@ -61,7 +67,7 @@ export default function ourProfessional() {
 					<div className="service_style_ten wow flipInY" data-wow-delay="0ms" data-wow-duration="2500ms">
 						<div className="single_service_style_ten st-grid-2">
 							<div className="service_style_ten_icon pb-2">
-									 <img src="/images/menuscimg/dr_dl.png"  width="100px" style={{borderRadius:5}}/>
+									 <img src="/images/menuscimg/dr_dl.png" className="OurprofessionalImage" style={{borderRadius:5}}/>
                                 <h5>Dr. D L</h5>
 							</div>
 							<div className="service_style_ten_content">
@@ -83,7 +89,7 @@ export default function ourProfessional() {
 					<div className="service_style_ten wow flipInY" data-wow-delay="0ms" data-wow-duration="2500ms">
 						<div className="single_service_style_ten st-grid-2">
 							<div className="service_style_ten_icon pb-2">
-									 <img src="/images/menuscimg/dr_BH-min.png"  width="100px" style={{borderRadius:5}}/>
+									 <img src="/images/menuscimg/dr_BH-min.png" className="OurprofessionalImage"   style={{borderRadius:5}}/>
                                 <h5>Dr. B H</h5>
 							</div>
 							<div className="service_style_ten_content">
