@@ -75,6 +75,9 @@ const TopBannerForm = () => {
           <div className="carouselItem">
             <img src={banner4.src} className="carouselImage" alt="Banner 4" />
           </div>
+          <div className="carouselItem">
+            <img src={banner1.src} className="carouselImage" alt="Banner 1" />
+          </div>
         </div>
         <div className="formContainer">
           <h6>Get Quick Response Within 24 Hours</h6>
