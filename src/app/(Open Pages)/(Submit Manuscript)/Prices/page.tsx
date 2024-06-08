@@ -68,7 +68,7 @@ export default function Home() {
           <div className="row gy-4">
             {result &&
               result.length ?
-              result.map((price) => {
+              result.map((price:any) => {
                 const { Header, Messages } = price;
                 return (
                   <div
@@ -84,7 +84,7 @@ export default function Home() {
                       <ul>
                         {Messages &&
                           Messages.length &&
-                          Messages.map((message) => {
+                          Messages.map((message:any) => {
                             let [message_first_part,message_second_part] = message.split("|")
                             const numberStr = message_second_part.trim().replace(/'/g, '');
                             let new_message = `${message_first_part} | ${(+numberStr*Number(wordCount)).toFixed(0)}`

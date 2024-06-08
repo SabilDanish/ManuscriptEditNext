@@ -28,7 +28,8 @@ const nextConfig = {
          'window.jQuery': 'jquery',
       }));
      return config;
-    }
+    },
+    output: "export"
 };
 
 export default nextConfig;
