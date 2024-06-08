@@ -5,3 +5,9 @@
 .column-separator:last-child {
     border-right: none;
 }
+
+@media (max-width:768px){
+    .getEverySpace{
+        margin-top: 0px !important;
+    }
+}

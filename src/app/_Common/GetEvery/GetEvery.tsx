@@ -5,7 +5,7 @@ import "./GetEvery.css";
 const GetEvery = () => {
     return (
         <>
-            <div className="container-fluid" style={{ marginTop: "70px", marginBottom: "90px" }}>
+            <div className="container-fluid getEverySpace" style={{ marginTop: "70px", marginBottom: "90px" }}>
                 <div>
                     <div className="row" style={{ justifyContent: 'center' }}>
                         <div className="col-lg-3" style={{ marginTop: "20px" }}>

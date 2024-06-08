@@ -12,9 +12,9 @@ const BlogDesk = () => {
         <>
 
 
-            <div className="container BlogDesktop" >
+            <div className="container BlogDesktop"  style={{marginTop:"30px"}} >
                 <div className="row" style={{ justifyContent: "center" }}>
-                    <h1 className="accordion__title" style={{marginTop:"30px"}}>OUR BEST-READ SCIENTIFIC ARTICLES</h1>
+                    <h1 className="accordion__title" style={{marginTop:"30px",marginBottom:"40px"}}>OUR BEST-READ SCIENTIFIC ARTICLES</h1>
                 </div>
             </div>
 

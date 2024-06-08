@@ -60,3 +60,9 @@ body {
     font-weight: var(--fw-bold);
     color: var(--color-title);
 }
+
+@media (max-width:768px) {
+  .GetEveryHead{
+    display: none;
+  }
+}

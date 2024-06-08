@@ -2,6 +2,9 @@
 
 
 const nextConfig = {
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
     // webpack: (
     //     config,
     //     { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }

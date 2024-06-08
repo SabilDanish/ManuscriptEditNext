@@ -1,4 +1,5 @@
 import { Partner } from '@/app/utils/interfaces';
+import env from '@/env/env';
 import { useState, useEffect } from 'react';
 
 
@@ -15,7 +16,7 @@ const useFetchPartners = (limit: number, offset: number) => {
         setLoading(true)
         try {
           fetch(
-            `https://317e-103-39-242-37.ngrok-free.app/api/get_all_rec_patners_img.php?limit=${limit}&offset=${offset}`, {
+            `${env.testingUrl}get_all_rec_patners_img.php?limit=${limit}&offset=${offset}`, {
                 method: "get",
                 headers: new Headers({
                   "ngrok-skip-browser-warning": "69420",

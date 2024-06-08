@@ -23,7 +23,7 @@ const Testimonial = () => {
         <>
 
 
-            <div className="container" style={{ marginTop: "40px" }}>
+            <div className="container">
                 <div className="row" style={{ justifyContent: "center" }}>
                     <h1 className="accordion__title">Testimonial</h1>
                 </div>

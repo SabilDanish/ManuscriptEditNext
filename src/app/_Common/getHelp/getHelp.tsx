@@ -17,13 +17,13 @@ const GetHelp = () => {
     return (
         <>
 
-<div >
-            <h2 className='TitleAll' style={{ textAlign: 'center', marginTop: '20px' }}>FELLING CONFUSED WHAT TO OPT FOR?</h2>
-            <p style={{ textAlign: 'center' }}>Choose Your issues, Let ManuscriptEdit HELP YOU</p>
-            
-        </div>
+            <div className='GetEveryHead' >
+                <h2 className='TitleAll' style={{ textAlign: 'center', marginTop: '20px' }}>FELLING CONFUSED WHAT TO OPT FOR?</h2>
+                <p style={{ textAlign: 'center' }}>Choose Your issues, Let ManuscriptEdit HELP YOU</p>
 
-            <div className="container-fluid" style={{ marginTop: "23px", marginBottom: "30px" }}>
+            </div>
+
+            <div className="container-fluid GetEveryHead" style={{ marginTop: "23px", marginBottom: "30px" }}>
                 <div className="row" style={{ margin: "auto", justifyContent: "center" }}>
                     <div className="tab">
                         <button
@@ -113,7 +113,7 @@ const GetHelp = () => {
                         </table>
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            <a href="" className='dtbtn' style={{ marginRight: "8px" }}>See Samples</a>
+                            
 
                             <a href="" className='dtbtn'>View More</a>
                         </div>
@@ -207,7 +207,7 @@ const GetHelp = () => {
                         </table>
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            <a href="" className='dtbtn' style={{ marginRight: "8px" }}>See Samples</a>
+                            
 
                             <a href="" className='dtbtn'>View More</a>
                         </div>
@@ -277,7 +277,7 @@ const GetHelp = () => {
                         </table>
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            <a href="" className='dtbtn' style={{ marginRight: "8px" }}>See Samples</a>
+                            
 
                             <a href="" className='dtbtn'>View More</a>
                         </div>
@@ -379,7 +379,7 @@ const GetHelp = () => {
                         </table>
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            <a href="" className='dtbtn' style={{ marginRight: "8px" }}>See Samples</a>
+                            
 
                             <a href="" className='dtbtn'>View More</a>
                         </div>
@@ -470,7 +470,7 @@ const GetHelp = () => {
                         </table>
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            <a href="" className='dtbtn' style={{ marginRight: "8px" }}>See Samples</a>
+                            
 
                             <a href="" className='dtbtn'>View More</a>
                         </div>
