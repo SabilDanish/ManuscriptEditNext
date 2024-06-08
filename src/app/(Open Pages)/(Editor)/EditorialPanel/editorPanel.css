@@ -1,5 +1,4 @@
 #ediCat .nme {
-    background-color: #ddc587;
     color: #FFFFFF;
     border: 2px solid #FFFFFF;
     text-align: center;
@@ -8,12 +7,11 @@
 }
 
 #ediCat .me {
-    background-color: #ededed;
     border: 2px solid #FFFFFF;
     text-align: center;
     padding: 20px;
     font-weight: bold;
-    color: #4f4f4f;
+    color: #FFFFFF;
 }
 
 #ediIcon .detail {

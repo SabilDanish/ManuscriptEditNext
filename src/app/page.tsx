@@ -10,8 +10,24 @@ import Link from "next/link";
 import redirect from "./_Common/_functionality/Redirect";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import GetHelp from "./_Common/getHelp/getHelp";
+import GetEvery from "./_Common/GetEvery/GetEvery";
+import SocialIcon from "./_Common/StickySocial/SocialIcons";
+import FAQ from "./_Common/_FAQ/FAQ";
+import FaqHome from "./_Common/FaqHome/FaqHome";
+import BlogMob from "./_Common/BlogMob/BlogMob";
+import BlogDesk from "./_Common/BlogDesk/BlogDesk";
+import Testimonial from "./_Common/Testimonial/testimonial";
+import Clients from "./_Common/Clients/Clients";
+import OurProfessional from "./_Common/_OurProfessional/OurProfessional";
 import { useRouter } from 'next/navigation';
 import { useEffect } from "react";
+import ourClientBanner from "./utils/images/Logos.jpg";
+import TrustedPartner from "./_Common/_TrustedPartner/TrustedPartner";
+import GetHelpMobile from "./_Common/_getHelpMobile/getHelpMobile";
+import TopBannerForm from "./_Common/_TopBannerForm/TopBannerForm";
+import EnquiryForm from "./_Common/_enquiryForm/EnquiryForm";
+
 
 // import '../../public/js/vendor/jquery-3.2.1.min.js'
 // import '../../public/js/bootstrap.min.js'
@@ -29,10 +45,12 @@ export default function Home() {
   //     router.push('/Auth');
   //   }
   // }, []);
+  
   return (
     <>
+
       <ToastContainer />
-      <Swiper
+      {/* <Swiper
         // install Swiper modules
         spaceBetween={10}
         slidesPerView={1}
@@ -54,9 +72,51 @@ export default function Home() {
         <SwiperSlide>
           <img className="silder-banner" src="/images/BANNER3.jpg" />
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
+      {/* Inserting Biswa's custom codes here */}
+      <TopBannerForm />
+      <GetHelpMobile />
+      {/* <TrustedPartner/> */}
 
-      <div className="flipbox_area top_feature mt-3">
+
+      {/* End of Biswa's custom codes */}
+
+
+
+      <SocialIcon />
+
+
+      <GetEvery />
+
+      <GetHelp />
+
+      
+
+
+      <Clients />
+
+
+
+      <OurProfessional />
+
+      <Testimonial />
+
+
+      <BlogDesk />
+
+      <BlogMob />
+
+      <FaqHome />
+
+
+
+
+
+      {/* pillow section */}
+
+      {/* <div className="flipbox_area top_feature mt-3">
+      </Swiper> */}
+      {/* <div className="flipbox_area top_feature mt-3">
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col-md-6 col-sm-12 col-xs-6">
@@ -313,7 +373,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+
+
+
+
 
       {/* <div className="how_it_work pt-50 pb-65">
         <div className="container">
@@ -394,7 +459,7 @@ export default function Home() {
         </div>
       </div> */}
 
-      {ourProfessional()}
+      {/* {ourProfessional()} */}
       {/* <div className="counter_area">
         <div className="container">
           <div className="row cntr_bg_up nagative_margin pt-50 pb-45">
@@ -459,9 +524,10 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-      {howWeWork(3)}
+      {/* {howWeWork(3)} */}
 
-      {clientFeedback()}
+      {/* {clientFeedback()} */}
+
     </>
   );
 }
