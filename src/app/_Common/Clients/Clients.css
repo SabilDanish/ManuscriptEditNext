@@ -1,0 +1,55 @@
+/* Clients.css */
+
+/* @keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: scroll 60s linear infinite;
+}
+
+.image-important {
+    width: 3016px !important;
+    height: 60px; 
+    margin-bottom: 30px;
+} */
+
+
+
+/* Clients.css */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: flex;
+    animation: scroll 15s linear infinite;
+}
+
+.image-important {
+    width: 3016px !important;
+    height: 60px;
+    margin-bottom: 30px;
+}

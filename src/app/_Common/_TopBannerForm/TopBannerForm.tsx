@@ -91,7 +91,7 @@ const TopBannerForm = () => {
             <input type="tel" name="phone_no" placeholder="Enter Your Phone Number" required className="formControl"  onChange={(e) => formHandler(e)}/>
             <input type="email" name="email" placeholder="Enter Mail" required className="formControl"  onChange={(e) => formHandler(e)}/>
             <textarea name="msg" placeholder="Your Message" required className="formControl"  onChange={(e) => formHandler(e)}></textarea>
-            <button type="submit" className="submitButton" onClick={formSubmitOne}>{isLoading ? <DNA /> : "Send"}</button>
+            <button type="submit" className="submitButton" onClick={formSubmitOne}>{isLoading ? <DNA height="30"/> : "Send"}</button>
           </form>
         </div>
       </div>
@@ -111,7 +111,7 @@ const TopBannerForm = () => {
               <input type="tel" name="phone_no" placeholder="Enter Your Phone Number" required className="formControl"  onChange={(e) => formHandler(e)}/>
               <input type="email" name="email" placeholder="Enter Mail" required className="formControl"  onChange={(e) => formHandler(e)}/>
               <textarea name="msg" placeholder="Your Message" required className="formControl"  onChange={(e) => formHandler(e)}></textarea>
-              <button type="submit" className="submitButton" onClick={formSubmitTwo}>{isLoading ? <DNA /> : "Send"}Send</button>
+              <button type="submit" className="submitButton" onClick={formSubmitTwo}>{isLoading ? <DNA height="20"/> : "Send"}</button>
             </form>
           </div>
         </div>

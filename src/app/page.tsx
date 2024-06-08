@@ -10,6 +10,16 @@ import Link from "next/link";
 import redirect from "./_Common/_functionality/Redirect";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import GetHelp from "./_Common/getHelp/getHelp";
+import GetEvery from "./_Common/GetEvery/GetEvery";
+import SocialIcon from "./_Common/StickySocial/SocialIcons";
+import FAQ from "./_Common/_FAQ/FAQ";
+import FaqHome from "./_Common/FaqHome/FaqHome";
+import BlogMob from "./_Common/BlogMob/BlogMob";
+import BlogDesk from "./_Common/BlogDesk/BlogDesk";
+import Testimonial from "./_Common/Testimonial/testimonial";
+import Clients from "./_Common/Clients/Clients";
+import OurProfessional from "./_Common/_OurProfessional/OurProfessional";
 import { useRouter } from 'next/navigation';
 import { useEffect } from "react";
 import ourClientBanner from "./utils/images/Logos.jpg";
@@ -62,14 +72,50 @@ export default function Home() {
           <img className="silder-banner" src="/images/BANNER3.jpg" />
         </SwiperSlide>
       </Swiper> */}
-        {/* Inserting Biswa's custom codes here */}
-        <TopBannerForm/>
-      <GetHelpMobile/>
-      <TrustedPartner/>
+      {/* Inserting Biswa's custom codes here */}
+      <TopBannerForm />
+      <GetHelpMobile />
+      {/* <TrustedPartner/> */}
+
+
+      {/* End of Biswa's custom codes */}
+
+
+
+      <SocialIcon />
+
+
+      <GetEvery />
+
+      <GetHelp />
+
       
-      
-        {/* End of Biswa's custom codes */}
-      <div className="flipbox_area top_feature mt-3">
+
+
+      <Clients />
+
+
+
+      <OurProfessional />
+
+      <Testimonial />
+
+
+      <BlogDesk />
+
+      <BlogMob />
+
+      <FaqHome />
+
+
+
+
+
+      {/* pillow section */}
+
+      {/* <div className="flipbox_area top_feature mt-3">
+      </Swiper> */}
+      {/* <div className="flipbox_area top_feature mt-3">
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col-md-6 col-sm-12 col-xs-6">
@@ -326,7 +372,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+
+
+
+
 
       {/* <div className="how_it_work pt-50 pb-65">
         <div className="container">
@@ -407,7 +458,7 @@ export default function Home() {
         </div>
       </div> */}
 
-      {ourProfessional()}
+      {/* {ourProfessional()} */}
       {/* <div className="counter_area">
         <div className="container">
           <div className="row cntr_bg_up nagative_margin pt-50 pb-45">
@@ -472,9 +523,10 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-      {howWeWork(3)}
+      {/* {howWeWork(3)} */}
 
-      {clientFeedback()}
+      {/* {clientFeedback()} */}
+
     </>
   );
 }
