@@ -72,7 +72,8 @@ const useAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse<T> =>
                 return response.json()
             }).then(responseData => {
                 console.log({responseData1: responseData})
-                sessionStorage.setItem("userId",responseData[0].user_id)
+                localStorage.setItem("userId",responseData[0].user_id)
+                window.location.href = `https://www.manuscriptedit.com/author-new/index.php?sid=${responseData[0].user_id}`;
                 setData(responseData);
                 router.push('/');
                 toast.success("Login Successful")

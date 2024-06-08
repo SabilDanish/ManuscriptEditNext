@@ -18,17 +18,17 @@ import { useEffect } from "react";
 
 export default function Home() {
   SwiperCore.use([Autoplay]);
-  const router = useRouter();
+  // const router = useRouter();
 
-  useEffect(() => {
-    const storedDataString = sessionStorage.getItem('userId');
-    console.log({storedDataString})
+  // useEffect(() => {
+  //   const storedDataString = sessionStorage.getItem('userId');
+  //   console.log({storedDataString})
 
-    if (!storedDataString) {
-      // Redirect to /Auth page if storedData does not exist
-      router.push('/Auth');
-    }
-  }, []);
+  //   if (!storedDataString) {
+  //     // Redirect to /Auth page if storedData does not exist
+  //     router.push('/Auth');
+  //   }
+  // }, []);
   return (
     <>
       <ToastContainer />
