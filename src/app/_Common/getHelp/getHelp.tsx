@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import './getHelp.css';
+import Link from 'next/link';
 
 const GetHelp = () => {
     const [activeTab, setActiveTab] = useState('firstTab');
@@ -115,7 +116,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
                             
 
-                            <a href="" className='dtbtn'>View More</a>
+                            <Link href="/Writing" className='dtbtn'>View More</Link>
                         </div>
                     </div>
 
@@ -209,7 +210,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
                             
 
-                            <a href="" className='dtbtn'>View More</a>
+                            <Link href="/PackageService" className='dtbtn'>View More</Link>
                         </div>
                     </div>
 
@@ -279,7 +280,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
                             
 
-                            <a href="" className='dtbtn'>View More</a>
+                            <Link href="/EditingOverview" className='dtbtn'>View More</Link>
                         </div>
                     </div>
 
@@ -381,7 +382,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
                             
 
-                            <a href="" className='dtbtn'>View More</a>
+                            <Link href="/ResearchSupportOverview" className='dtbtn'>View More</Link>
                         </div>
                     </div>
 
@@ -472,7 +473,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
                             
 
-                            <a href="" className='dtbtn'>View More</a>
+                            <Link href="/PHDThesis" className='dtbtn'>View More</Link>
                         </div>
                     </div>
 
