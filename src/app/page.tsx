@@ -12,6 +12,12 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';
 import { useEffect } from "react";
+import ourClientBanner from "./utils/images/Logos.jpg";
+import TrustedPartner from "./_Common/_TrustedPartner/TrustedPartner";
+import GetHelpMobile from "./_Common/_getHelpMobile/getHelpMobile";
+import TopBannerForm from "./_Common/_TopBannerForm/TopBannerForm";
+import EnquiryForm from "./_Common/_enquiryForm/EnquiryForm";
+
 
 // import '../../public/js/vendor/jquery-3.2.1.min.js'
 // import '../../public/js/bootstrap.min.js'
@@ -20,19 +26,20 @@ export default function Home() {
   SwiperCore.use([Autoplay]);
   const router = useRouter();
 
-  useEffect(() => {
-    const storedDataString = sessionStorage.getItem('userId');
-    console.log({storedDataString})
+  // useEffect(() => {
+  //   const storedDataString = sessionStorage.getItem('userId');
+  //   console.log({storedDataString})
 
-    if (!storedDataString) {
-      // Redirect to /Auth page if storedData does not exist
-      router.push('/Auth');
-    }
-  }, []);
+  //   if (!storedDataString) {
+  //     // Redirect to /Auth page if storedData does not exist
+  //     router.push('/Auth');
+  //   }
+  // }, []);
   return (
     <>
+
       <ToastContainer />
-      <Swiper
+      {/* <Swiper
         // install Swiper modules
         spaceBetween={10}
         slidesPerView={1}
@@ -54,8 +61,14 @@ export default function Home() {
         <SwiperSlide>
           <img className="silder-banner" src="/images/BANNER3.jpg" />
         </SwiperSlide>
-      </Swiper>
-
+      </Swiper> */}
+        {/* Inserting Biswa's custom codes here */}
+        <TopBannerForm/>
+      <GetHelpMobile/>
+      <TrustedPartner/>
+      
+      
+        {/* End of Biswa's custom codes */}
       <div className="flipbox_area top_feature mt-3">
         <div className="container">
           <div className="row">
