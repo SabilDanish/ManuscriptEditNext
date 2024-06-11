@@ -6,7 +6,7 @@ import Link from 'next/link';
 const GetHelp = () => {
     const [activeTab, setActiveTab] = useState('firstTab');
 
-    const openTab = (evt, cityName) => {
+    const openTab = (evt:any, cityName:string) => {
         setActiveTab(cityName);
     };
 

@@ -29,7 +29,8 @@ const nextConfig = {
       }));
      return config;
     },
-    output: "export"
+    output: "export",
+    basePath: '/admin/admin',
 };
 
 export default nextConfig;
