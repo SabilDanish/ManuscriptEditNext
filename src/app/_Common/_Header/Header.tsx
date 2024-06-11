@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Style from "./header.module.css";
+import "./header.css";
 import redirect, { redirectSameTab } from "../_functionality/Redirect";
 // import { useRef } from "react";
 
@@ -82,7 +82,7 @@ export default function header() {
                           <Link href={"/EditingOverview"}>
                             <b>English Editing</b>
                           </Link>
-                          <ul className={Style.subList}>
+                          <ul className="subList">
                             <li>
                               <Link href={"/EditingOverview"}>
                                 Editing Overview
@@ -124,7 +124,7 @@ export default function header() {
                           <Link href={"/PackageService"}>
                             <b>Publication Support</b>
                           </Link>
-                          <ul className={Style.subList}>
+                          <ul className="subList">
                             <li>
                               <Link href={"/PackageService"}>
                                 Publication Package
@@ -168,7 +168,7 @@ export default function header() {
                           <Link href={"/Writing"}>
                             <b>Writing & Rewriting</b>
                           </Link>
-                          <ul className={Style.subList}>
+                          <ul className="subList">
                             <li>
                               <Link href={"/Writing"}>Writing Overview</Link>
                             </li>
@@ -213,7 +213,7 @@ export default function header() {
                           <Link href={"/ResearchSupportOverview"}>
                             <b>Research Support</b>
                           </Link>
-                          <ul className={Style.subList}>
+                          <ul className="subList">
                             <li>
                               <Link href={"/ResearchSupportOverview"}>
                                 Research Support Overview
@@ -523,7 +523,7 @@ export default function header() {
                     <Link href={"/EditingOverview"}>
                       <b>English Editing</b>
                     </Link>
-                    <ul className={Style.subList}>
+                    <ul className="subList">
                       <li>
                         <Link href={"/EditingOverview"}>Editing Overview</Link>
                       </li>
@@ -557,7 +557,7 @@ export default function header() {
                     <Link href={"/PackageService"}>
                       <b>Publication Support</b>
                     </Link>
-                    <ul className={Style.subList}>
+                    <ul className="subList">
                       <li>
                         <Link href={"/PackageService"}>
                           Publication Package
@@ -593,7 +593,7 @@ export default function header() {
                     <Link href={"/Writing"}>
                       <b>Writing & Rewriting</b>
                     </Link>
-                    <ul className={Style.subList}>
+                    <ul className="subList">
                       <li>
                         <Link href={"/Writing"}>Writing Overview</Link>
                       </li>
@@ -632,7 +632,7 @@ export default function header() {
                     <Link href={"/ResearchSupportOverview"}>
                       <b>Research Support</b>
                     </Link>
-                    <ul className={Style.subList}>
+                    <ul className="subList">
                       <li>
                         <Link href={"/ResearchSupportOverview"}>
                           Research Support Overview
