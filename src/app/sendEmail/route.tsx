@@ -18,9 +18,9 @@ export async function POST(req: NextRequest, res: NextResponse) {
     });
 
     const mailOptions = {
-      from: "sabil.danish1997@gmail.com", // sender address
-      to: email, // list of receivers
-      subject: 'Email Received', // Subject line
+      from: "sabil.danish1997@gmail.com",
+      to: email,
+      subject: 'Email Received',
       html: '<h1>Your Email is Received</h1><p>We have received your email: ' + email + '</p>'
     };
 
