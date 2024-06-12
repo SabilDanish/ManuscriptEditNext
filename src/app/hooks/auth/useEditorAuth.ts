@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
 
-const useAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse<T> => {
+const useEditorAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse<T> => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
     const [data, setData] = useState<T | null>(null);
@@ -13,7 +13,7 @@ const useAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse<T> =>
         setIsLoading(true);
         setError(null);
         try {
-            fetch(`https://www.manuscriptedit.com/api/author_signup.php`, {
+            fetch(`https://www.manuscriptedit.com/api/editor_signup.php`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -22,6 +22,7 @@ const useAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse<T> =>
             }).then(response => {
                 return response.json()
             }).then(responseData => {
+                console.log({responseData})
                 setData(responseData);
                 setShowLogin(!showLogin)
                 fetch('/sendEmail',{
@@ -62,7 +63,7 @@ const useAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse<T> =>
         setIsLoading(true);
         setError(null);
         try {
-            fetch(`https://www.manuscriptedit.com/api/author_signin.php`, {
+            fetch(`https://www.manuscriptedit.com/api/editor_signin.php`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -72,8 +73,7 @@ const useAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse<T> =>
                 return response.json()
             }).then(responseData => {
                 console.log({responseData1: responseData})
-                localStorage.setItem("userId",responseData[0].user_id)
-                window.location.href = `https://www.manuscriptedit.com/author-new/index.php?sid=${responseData[0].user_id}`;
+                // sessionStorage.setItem("editorUserId",responseData[0][0].user_id)
                 setData(responseData);
                 router.push('/');
                 toast.success("Login Successful")
@@ -96,4 +96,4 @@ const useAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse<T> =>
     return { isLoading, error, data, postData, login };
 };
 
-export default useAuth;
+export default useEditorAuth;

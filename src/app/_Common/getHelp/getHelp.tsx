@@ -1,11 +1,12 @@
 "use client";
 import { useState, useEffect } from 'react';
 import './getHelp.css';
+import Link from 'next/link';
 
 const GetHelp = () => {
     const [activeTab, setActiveTab] = useState('firstTab');
 
-    const openTab = (evt, cityName) => {
+    const openTab = (evt:any, cityName:string) => {
         setActiveTab(cityName);
     };
 
@@ -50,7 +51,7 @@ const GetHelp = () => {
                             className={`tablinks ${activeTab === 'FourthTab' && 'active'}`}
                             onClick={(event) => openTab(event, 'FourthTab')}
                         >
-                            My paper got rejected due to poor English, can you help?
+                            I am facing difficulty in getting grants and developing Research projects.Need Help?
                         </button>
 
 
@@ -58,7 +59,7 @@ const GetHelp = () => {
                             className={`tablinks ${activeTab === 'FifthTab' && 'active'}`}
                             onClick={(event) => openTab(event, 'FifthTab')}
                         >
-                            My paper got rejected due to poor English, can you help?
+                            I am struggling with my PhD and PhD thesis. Can someone guide me?
                         </button>
                     </div>
 
@@ -115,7 +116,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
                             
 
-                            <a href="" className='dtbtn'>View More</a>
+                            <Link href="/Writing" className='dtbtn'>View More</Link>
                         </div>
                     </div>
 
@@ -209,7 +210,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
                             
 
-                            <a href="" className='dtbtn'>View More</a>
+                            <Link href="/PackageService" className='dtbtn'>View More</Link>
                         </div>
                     </div>
 
@@ -279,7 +280,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
                             
 
-                            <a href="" className='dtbtn'>View More</a>
+                            <Link href="/EditingOverview" className='dtbtn'>View More</Link>
                         </div>
                     </div>
 
@@ -381,7 +382,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
                             
 
-                            <a href="" className='dtbtn'>View More</a>
+                            <Link href="/ResearchSupportOverview" className='dtbtn'>View More</Link>
                         </div>
                     </div>
 
@@ -472,7 +473,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
                             
 
-                            <a href="" className='dtbtn'>View More</a>
+                            <Link href="/PHDThesis" className='dtbtn'>View More</Link>
                         </div>
                     </div>
 

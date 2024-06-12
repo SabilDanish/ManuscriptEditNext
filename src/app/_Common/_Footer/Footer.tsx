@@ -1,9 +1,15 @@
+"use client"
 import Link from "next/link";
 import redirect from "../_functionality/Redirect";
+import useEmail from "@/app/hooks/newsLetter/useEmail";
+import { useState } from "react";
 
 export default function footer() {
+  const [email,setEmail] = useState<string | null>()
   const textColor = { color: "white" };
   const textDecorator = { textDecoration: "underline" };
+
+  const {isLoading,error,acceptNewsLetter} = useEmail()
   return (
     <>
       <div className="subscribe_area bg_color pt-30 pb-45">
@@ -15,7 +21,6 @@ export default function footer() {
                 <div className="subscribe_content_title white text_center pb-30">
                   <h2>Subscribe Our Newsletter</h2>
                 </div>
-                <form action="#">
                   <div className="subscribe_form">
                     <input
                       type="email"
@@ -25,17 +30,21 @@ export default function footer() {
                       required
                       data-error="Please enter your email"
                       placeholder="Enter Your Email"
+                      onChange={(e) => {
+                        setEmail(e.target.value)
+                      }}
                     />
                     <div className="help-block with-errors"></div>
                   </div>
                   <div className="subscribe_form_send">
-                    <button type="submit" className="btn">
+                    <button className="btn" onClick={() => {
+                      email && acceptNewsLetter(email)
+                    }} style={{zIndex: "10"}}>
                       Subscribe
                     </button>
                     <div id="msgSubmit" className="h3 text-center hidden"></div>
                     <div className="clearfix"></div>
                   </div>
-                </form>
               </div>
             </div>
             <div className="col-lg-2"></div>

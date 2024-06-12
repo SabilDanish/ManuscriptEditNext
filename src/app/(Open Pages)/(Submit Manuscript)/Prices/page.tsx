@@ -1,7 +1,18 @@
+"use client"
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import './price.css'
+import usePriceCalculator from "@/app/hooks/priceCalculator/usePriceCalculator";
+import { useState } from "react";
 
 export default function Home() {
+  const [wordCount, setWordCount] = useState<string | null>()
+  const {isLoading,error,result,getPriceCalculator} = usePriceCalculator()
+
+  const calculateHandler = () => {
+    getPriceCalculator(wordCount)
+  }
+
+  
   return (
     <>
       {breadcrum("Submit Manuscript", "Prices")}
@@ -18,235 +29,98 @@ export default function Home() {
           <div id="inpSec" className="col-lg-12 ">
             {/* <div className="d-flex justify-content-center"> */}
             {/* <div id="inpSec" style={{ width: "60%", padding: "15px 0" }}> */}
-              <div
-                className="col-lg-3"
-                style={{
-                  padding: 13,
-                  fontWeight: "bold",
-                  fontSize: 16,
-                  color: "#232323",
-                }}
-              >
-                Word count
-              </div>
-              <div className="col-lg-6" style={{ padding: 5 }}>
-                <input
-                  type="textbox"
-                  id="wordC"
-                  name="wordC"
-                  style={{
-                    width: "100%",
-                    border: "1px solid #a7a7a7",
-                    borderRadius: 0,
-                    height: 40,
-                  }}
-                />
-              </div>
-              <div className="col-lg-3" style={{ padding: 4 }}>
-                <button className="btn">Calculate</button>
-              </div>
-            {/* </div> */}
+            <div
+              className="col-lg-3"
+              style={{
+                padding: 13,
+                fontWeight: "bold",
+                fontSize: 16,
+                color: "#232323",
+              }}
+            >
+              Word count
             </div>
+            <div className="col-lg-6" style={{ padding: 5 }}>
+              <input
+                type="textbox"
+                id="wordC"
+                name="wordC"
+                style={{
+                  width: "100%",
+                  border: "1px solid #a7a7a7",
+                  borderRadius: 0,
+                  height: 40,
+                }}
+                onChange={(e) => {
+                  setWordCount(e.target.value);
+                }}
+              />
+            </div>
+            <div className="col-lg-3" style={{ padding: 4 }}>
+              <button className="btn" onClick={calculateHandler}>
+                Calculate
+              </button>
+            </div>
+            {/* </div> */}
+          </div>
           {/* </div> */}
 
           <div className="row gy-4">
-            <div
-              className="col-lg-4 aos-init aos-animate"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div className="pricing-item1">
-                <div className="pricing-header">
-                  <h3 className="price">Extensive Substantive Editing</h3>
-                </div>
-
-                <ul>
-                  <div id="pkg1">
-                    <div className="btnStyl">
-                      Price for 1 days delivery | $18.80
-                    </div>
-                  </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 2 days delivery | $16.60
-                    </div>
-                  </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 3 days delivery | $13.80
-                    </div>
-                  </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 5 days delivery | $11.60
-                    </div>
-                  </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 10 days delivery | $9.40
-                    </div>
-                  </div>
-                </ul>
-
-                <div style={{ marginTop: 12, textAlign: "center" }}>
-                  <a
-                    className="btn btn-danger"
-                    href="https://www.manuscriptedit.com/register"
-                    style={{ padding: 10 }}
+            {result &&
+              result.length ?
+              result.map((price:any) => {
+                const { Header, Messages } = price;
+                return (
+                  <div
+                    className="col-lg-4 aos-init aos-animate"
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
                   >
-                    Get Started
-                  </a>
-                  &nbsp;&nbsp;
-                  <a
-                    className="btn"
-                    href="https://www.manuscriptedit.com/register"
-                    style={{
-                      color: "#FFF",
-                      backgroundColor: "#1f5174",
-                      padding: 10,
-                    }}
-                  >
-                    Get a price Quote
-                  </a>
-                </div>
-              </div>
-            </div>
+                    <div className="pricing-item1">
+                      <div className="pricing-header">
+                        <h3 className="price">{Header}</h3>
+                      </div>
 
-            <div
-              className="col-lg-4 aos-init aos-animate"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              <div className="pricing-item1">
-                <div className="pricing-header">
-                  <h3 className="price">Substantive Editing</h3>
-                </div>
+                      <ul>
+                        {Messages &&
+                          Messages.length &&
+                          Messages.map((message:any) => {
+                            let [message_first_part,message_second_part] = message.split("|")
+                            const numberStr = message_second_part.trim().replace(/'/g, '');
+                            let new_message = `${message_first_part} | ${(+numberStr*Number(wordCount)).toFixed(0)}`
+                            return (<div id="pkg1" style={{margin: "1rem"}}>
+                              <div className="btnStyl">
+                                {new_message}
+                              </div>
+                            </div>)
+                          })}
+                      </ul>
 
-                <ul>
-                  <div id="pkg1">
-                    <div className="btnStyl">
-                      Price for 1 days delivery | $16.60
+                      <div style={{ marginTop: 12, textAlign: "center" }}>
+                        <a
+                          className="btn btn-danger"
+                          href="https://www.manuscriptedit.com/register"
+                          style={{ padding: 10 }}
+                        >
+                          Get Started
+                        </a>
+                        &nbsp;&nbsp;
+                        <a
+                          className="btn"
+                          href="https://www.manuscriptedit.com/register"
+                          style={{
+                            color: "#FFF",
+                            backgroundColor: "#1f5174",
+                            padding: 10,
+                          }}
+                        >
+                          Get a price Quote
+                        </a>
+                      </div>
                     </div>
                   </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 2 days delivery | $13.80
-                    </div>
-                  </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 3 days delivery | $11.60
-                    </div>
-                  </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 5 days delivery | $9.40
-                    </div>
-                  </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 10 days delivery | $8.00
-                    </div>
-                  </div>
-                </ul>
-
-                <div style={{ marginTop: 12, textAlign: "center" }}>
-                  <a
-                    className="btn btn-danger"
-                    href="https://www.manuscriptedit.com/register"
-                    style={{ padding: 10 }}
-                  >
-                    Get Started
-                  </a>
-                  &nbsp;&nbsp;
-                  <a
-                    className="btn"
-                    href="https://www.manuscriptedit.com/register"
-                    style={{
-                      color: "#FFF",
-                      backgroundColor: "#1f5174",
-                      padding: 10,
-                    }}
-                  >
-                    Get a price Quote
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-4 aos-init aos-animate"
-              data-aos="zoom-in"
-              data-aos-delay="600"
-            >
-              <div className="pricing-item1">
-                <div className="pricing-header">
-                  <h3 className="price">Proofreading</h3>
-                </div>
-
-                <ul>
-                  <div id="pkg1">
-                    <div className="btnStyl">
-                      Price for 1 days delivery | $13.80
-                    </div>
-                  </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 2 days delivery | $11.60
-                    </div>
-                  </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 3 days delivery | $9.40
-                    </div>
-                  </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 5 days delivery | $8.00
-                    </div>
-                  </div>
-
-                  <div id="pkg1" style={{ marginTop: 10 }}>
-                    <div className="btnStyl">
-                      Price for 10 days delivery | $6.40
-                    </div>
-                  </div>
-                </ul>
-
-                <div style={{ marginTop: 12, textAlign: "center" }}>
-                  <a
-                    className="btn btn-danger"
-                    href="https://www.manuscriptedit.com/register"
-                    style={{ padding: 10 }}
-                  >
-                    Get Started
-                  </a>
-                  &nbsp;&nbsp;
-                  <a
-                    className="btn"
-                    href="https://www.manuscriptedit.com/register"
-                    style={{
-                      color: "#FFF",
-                      backgroundColor: "#1f5174",
-                      padding: 10,
-                    }}
-                  >
-                    Get a price Quote
-                  </a>
-                </div>
-              </div>
-            </div>
+                );
+              }) : ""}
           </div>
           <div className="col-lg-12 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
             <br />
@@ -777,9 +651,9 @@ export default function Home() {
               <div className="pricing-item">
                 <div className="pricing-header">
                   <h3>
-                    Premium <br/>
+                    Premium <br />
                     Package
-                    </h3>
+                  </h3>
                   <h4>
                     <sup>$</sup>29<span> / 20 Days</span>
                   </h4>
@@ -843,8 +717,10 @@ export default function Home() {
             >
               <div className="pricing-item">
                 <div className="pricing-header">
-                  <h3>Advanced <br></br>
-                     Package</h3>
+                  <h3>
+                    Advanced <br></br>
+                    Package
+                  </h3>
                   <h4>
                     <sup>$</sup>49<span> / 15 Days</span>
                   </h4>
@@ -908,8 +784,10 @@ export default function Home() {
             >
               <div className="pricing-item">
                 <div className="pricing-header">
-                  <h3>Standard<br></br>
-                     Package</h3>
+                  <h3>
+                    Standard<br></br>
+                    Package
+                  </h3>
                   <h4>
                     <sup>$</sup>49<span> / 10 Days</span>
                   </h4>

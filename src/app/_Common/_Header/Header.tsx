@@ -3,9 +3,10 @@ import Link from "next/link";
 import Style from "./header.module.css";
 import redirect, { redirectSameTab } from "../_functionality/Redirect";
 // import { useRef } from "react";
+import { useRouter } from 'next/navigation'
 
 export default function header() {
-
+  const router = useRouter()
   return (
     <>
       {/* <div className="loader-wrapper">
@@ -499,7 +500,8 @@ export default function header() {
                   <a
                     className="dtbtn"
                     onClick={() => {
-                      redirect("register");
+                      // redirect("register");
+                      window.location.href = "https://www.manuscriptedit.com/register";
                     }}
                     href="#"
                   >

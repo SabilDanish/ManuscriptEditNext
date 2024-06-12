@@ -16,7 +16,7 @@ const useFetchPartners = (limit: number, offset: number) => {
         setLoading(true)
         try {
           fetch(
-            `${env.testingUrl}get_all_rec_patners_img.php?limit=${limit}&offset=${offset}`, {
+            `https://www.manuscriptedit.com/api/get_all_rec_patners_img.php?limit=${limit}&offset=${offset}`, {
                 method: "get",
                 headers: new Headers({
                   "ngrok-skip-browser-warning": "69420",

@@ -2,18 +2,18 @@ import { Editor } from '@/app/utils/interfaces';
 import env from '@/env/env';
 import { useState, useEffect } from 'react';
 
-const useFetchEditors = (type: string, limit: number, offset: number) => {
+const useClientList = (type: string, limit: number, offset: number) => {
     console.log({type})
-    const [editors, setEditors] = useState<Editor[]>([]);
+    const [clients, setClient] = useState<Editor[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        fetchEditors()
+        ClientList()
     }, [limit, offset, type])
     console.log({type,offset,limit})
 
-    const fetchEditors = async () => {
+    const ClientList = async () => {
         setLoading(true)
         try {
             fetch(
@@ -23,7 +23,7 @@ const useFetchEditors = (type: string, limit: number, offset: number) => {
             ).then(response => {
                 return response.json()
             }).then(data => {
-                setEditors(data);
+                setClient(data);
             }).finally(() => {
                 setLoading(false);
             });
@@ -33,10 +33,10 @@ const useFetchEditors = (type: string, limit: number, offset: number) => {
     }
 
     return {
-        editors,
+        clients,
         loading,
         error
     }
 }
 
-export default useFetchEditors
+export default useClientList

@@ -5,13 +5,15 @@ import { useEffect, useState } from "react";
 import useFetchEditors from "@/app/hooks/editor/useEditorProfile";
 import { DNA } from "react-loader-spinner";
 import { Editor } from "@/app/utils/interfaces";
-
+import EditorModal from "@/app/_Common/_Modals/EditorModal/EditorModal";
 
 export default function Home() {
   const [limit, setLimit] = useState(10);
   const [offset, setOffset] = useState(0);
   const [type, setType] = useState("");
   const [allEditor, setAllEditor] = useState<Editor[]>([]);
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [modalData, setModalData] = useState<any>();
   const { loading, error, editors } = useFetchEditors(type, limit, offset);
 
   useEffect(() => {
@@ -28,20 +30,36 @@ export default function Home() {
   useEffect(() => {
     setAllEditor((prev) => [...prev, ...editors]);
   }, [editors]);
-  console.log({editors,type})
+
+  const modalHandler = (e: any) => {
+    console.log("I am here");
+    const id = e.target.className.split(" ")[1];
+    console.log({ id });
+    const filteredData = allEditor.filter((editor) => editor.id === id)[0];
+    console.log({ filteredData });
+    setModalData(filteredData);
+    setShowModal(true);
+  };
+
+  console.log({ showModal });
   return (
     <>
       {breadcrum("Editor", "Editorial Panel")}
+      {showModal && (
+        <EditorModal modalData={modalData} setShowModal={setShowModal} />
+      )}
       <div className="col-lg-10 col-md-10 col-sm-10 mt-50 mb-50 mx-auto d-flex1k">
         {loading && !allEditor.length && (
-          <DNA
-            visible={true}
-            height="80"
-            width="80"
-            ariaLabel="dna-loading"
-            wrapperStyle={{}}
-            wrapperClass="dna-wrapper"
-          />
+          <div className="loader-overlay">
+            <DNA
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="dna-loading"
+              wrapperStyle={{}}
+              wrapperClass="dna-wrapper"
+            />
+          </div>
         )}
         <div className="container">
           <div id="ediCat" className="row">
@@ -75,67 +93,58 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="row">
-            <div
-              className="container nmEditor"
-              style={{
-                border: "0px solid rgb(193, 193, 193)",
-                padding: "0px",
-                textAlign: "center",
-              }}
-            >
-              <div
-                id="ediIcon"
-                className="row"
-                style={{ margin: "20px 0px", gap: "29px" }}
-              >
-                {allEditor &&
-                  allEditor.length &&
-                  allEditor.map((editor) => {
-                    const { ediImg, ediName } = editor;
-                    return (
-                      <div
-                        className="col-lg-2 col-md-4 col-sm-4 col-xs-4"
-                        style={{
-                          border: "0 solid #022039",
-                          boxShadow: "0px 0px 6px #f39194",
-                        }}
-                      >
-                        <div style={{ padding: "5px" }}>
-                          <div style={{ textAlign: "center" }}>
-                            <img
-                              src={ediImg}
-                              className="img-fluid"
-                              style={{
-                                borderRadius: "18%",
-                                width: "100px",
-                                height: "100px",
-                              }}
-                              alt="Doctor"
-                            />
-                          </div>
-                          <div className="titl">
-                            <div className="name">{ediName}</div>
-                            <div
-                              style={{
-                                textAlign: "center",
-                                width: "100%",
-                              }}
-                              className="detail"
+          <br></br>
+          <div
+            className="container nmEditor"
+            style={{
+              border: "0px solid rgb(193, 193, 193)",
+              padding: "0px",
+              textAlign: "center",
+            }}
+          >
+            <div id="ediIcon" className="row" style={{ margin: "20px 0px" }}>
+              {allEditor &&
+                allEditor.length &&
+                allEditor.map((editor) => {
+                  const { ediImg, ediName, id } = editor;
+                  console.log({ id });
+                  return (
+                    <div
+                      className="col-lg-2 col-md-4 col-sm-4 col-xs-4 "
+                      style={{ border: "0 solid #022039" }}
+                      key={id}
+                    >
+                      <div className="divSeperate" style={{ padding: "5px" }}>
+                        <div style={{ textAlign: "center" }}>
+                          <img
+                            src={ediImg}
+                            className="img-fluid"
+                            style={{
+                              borderRadius: "18%",
+                              width: "100px",
+                              height: "100px",
+                            }}
+                            alt="Doctor"
+                          />
+                        </div>
+                        <div className="titl">
+                          <div className="name">{ediName}</div>
+                          <div
+                            style={{ textAlign: "center" }}
+                            className="detail"
+                          >
+                            <button
+                              className={`btn ${id}`}
+                              onClick={(e) => modalHandler(e)}
                             >
-                              <button
-                                className="btn"
-                                style={{ color: "#2257de", fontWeight: "600" }}
-                              >
-                                View Details
-                              </button>
-                            </div>
+                              View Details
+                            </button>
                           </div>
                         </div>
                       </div>
-                    );
-                  })}
-              </div>
+                    </div>
+                  );
+                })}
             </div>
           </div>
         </div>
