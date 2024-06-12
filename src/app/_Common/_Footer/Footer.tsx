@@ -47,7 +47,7 @@ export default function footer() {
         style={{ backgroundImage: "url(/images/call-bg.png)" }}
       >
         <div className="container">
-          <div className="row">
+          <div className="row" style={{justifyContent:"center"}}>
             <div className="col-lg-3 col-md-6 col-sm-12">
               <div className="widget widgets-company-info">
                 <div className="footer-bottom-logo ">
@@ -129,7 +129,7 @@ export default function footer() {
                         </div>
                   </div>
             </div>
-            <div className="col-lg-9 col-md-6 col-sm-12">
+            <div className="col-lg-9 col-md-12 col-sm-12">
               <div className="row ">
                 <div className="col-12 pb-4">
                   
