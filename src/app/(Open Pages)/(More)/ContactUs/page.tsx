@@ -1,3 +1,4 @@
+import PeerForm from "@/app/_Common/PeerForm/PeerForm";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 
 export default function Home() {
@@ -10,7 +11,25 @@ export default function Home() {
          comment or suggestion, we will love to have your feedback by e-mail. Alternatively, you may leave a message
          using the form below.
      </p>
- </div>
+</div>
+          <div>
+              
+              <div className="container text-center">
+                  <div className="row">
+                      <div className="col">
+                          <div style={{ marginLeft: "3rem", marginTop: "3rem", textAlign: "left" }}><p> <i className="fa fa-telegram" aria-hidden="true"></i> Telegram : +91-904-000-5445<br /></p>
+                              <p><i className="fa fa-whatsapp" aria-hidden="true"></i>  WhatsApp :   +1 (646)916-3476   (USA)<br />
+                                 <span style={{color:"white"}}><i className="fa fa-whatsapp" aria-hidden="true"></i>  WhatsApp : </span>+91-904-002-3003 (India)<br /></p>
+                              <p><i className="fa fa-envelope" aria-hidden="true"></i> Email id : support@manuscriptedit.com</p>
+                          </div>
+                      </div>
+                      <div className="col">
+                        <div style={{padding: "2rem",backgroundColor:"#f3d5d5",width:"fit-content", boxShadow:"-3px 3px 20px grey", marginBottom:"4rem", marginTop:"2rem",borderRadius:"10px"}}> <PeerForm /></div>
+                           
+                      </div>
+                  </div>
+              </div>
+          </div>
 
  {/* <div className="col-lg-10 col-md-10 col-sm-10 pt-5 pb-65 mx-auto colldiv">
      <div className="modal-dialog formm">
@@ -114,7 +133,7 @@ export default function Home() {
                                  <option value="Equatorial Guinea">Equatorial Guinea</option>
                                  <option value="Eritrea">Eritrea</option>
                                  <option value="Estonia">Estonia</option>
-                                 <option value="Eswatini (fmr. " Swaziland")">Eswatini (fmr. "Swaziland")</option>
+                                 <option value="Eswatini (fmr. "Swaziland")">Eswatini (fmr. "Swaziland")</option>
                                  <option value="Ethiopia">Ethiopia</option>
                                  <option value="Fiji">Fiji</option>
                                  <option value="Finland">Finland</option>

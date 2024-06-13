@@ -426,8 +426,8 @@ export default function Header() {
                       </a>
                     </li> */}
 
-                    {/* <li><Link href={'/Process'}>Contact us</Link></li> */}
-                    <li>
+                    <li><Link href={'/ContactUs'}>Contact us</Link></li>
+                    {/* <li>
                       <a
                         onClick={() => {
                           redirect("contact-us");
@@ -436,7 +436,7 @@ export default function Header() {
                       >
                         Contact us
                       </a>
-                    </li>
+                    </li> */}
                     <li><Link href={'/NewsPromotions'}>News & Conferences</Link></li>
                     {/* <li>
                       <a
@@ -838,8 +838,8 @@ export default function Header() {
                     </a>
                   </li>
 
-                  {/* <li><Link href={'/Process'}>Contact us</Link></li> */}
-                  <li>
+                  <li><Link href={'/ContactUs'}>Contact us</Link></li>
+                  {/* <li>
                     <a
                       onClick={() => {
                         redirect("contact-us");
@@ -848,7 +848,7 @@ export default function Header() {
                     >
                       Contact us
                     </a>
-                  </li>
+                  </li> */}
                   {/* <li><Link href={'/QualityAssurance'}>News & Conferences</Link></li> */}
                   <li>
                     <a
