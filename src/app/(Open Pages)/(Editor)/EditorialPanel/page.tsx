@@ -6,6 +6,7 @@ import useFetchEditors from "@/app/hooks/editor/useEditorProfile";
 import { DNA } from "react-loader-spinner";
 import { Editor } from "@/app/utils/interfaces";
 import EditorModal from "@/app/_Common/_Modals/EditorModal/EditorModal";
+import defaultImage from '../../../utils/testi/2.jpg'
 
 export default function Home() {
   const [limit, setLimit] = useState(10);
@@ -42,6 +43,10 @@ export default function Home() {
   };
 
   console.log({ showModal });
+
+  const handleError = (e:any) => {
+    e.target.src = 'https://gravatar.com/avatar/0cb77b3b53fdfa2cbaa9e2ae3a9fe042?s=400&d=mp&r=x';
+  };
   return (
     <>
       {breadcrum("Editor", "Editorial Panel")}
@@ -125,6 +130,7 @@ export default function Home() {
                               height: "100px",
                             }}
                             alt="Doctor"
+                            onError={handleError}
                           />
                         </div>
                         <div className="titl">

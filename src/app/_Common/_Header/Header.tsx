@@ -403,8 +403,8 @@ export default function Header() {
                     <li>
                       <Link href={"/About"}>About Us</Link>
                     </li>
-                    {/* <li><Link href={'/'}>Client List</Link></li> */}
-                    <li>
+                    <li><Link href={'/ClientList'}>Client List</Link></li>
+                    {/* <li>
                       <a
                         onClick={() => {
                           redirect("client-list");
@@ -413,10 +413,8 @@ export default function Header() {
                       >
                         Client List
                       </a>
-                    </li>
-                    <li>
-                      <Link href={"/PartnerRecent"}>Recent Partners</Link>
-                    </li>
+                    </li> */}
+                    <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -439,8 +437,8 @@ export default function Header() {
                         Contact us
                       </a>
                     </li>
-                    {/* <li><Link href={'/QualityAssurance'}>News & Conferences</Link></li> */}
-                    <li>
+                    <li><Link href={'/NewsPromotions'}>News & Conferences</Link></li>
+                    {/* <li>
                       <a
                         onClick={() => {
                           redirect("news-promotions");
@@ -449,7 +447,7 @@ export default function Header() {
                       >
                         News & Conferences
                       </a>
-                    </li>
+                    </li> */}
 
                     {/* <li><Link href={'/Process'}>Referral Partner Program</Link></li> */}
                     <li>
