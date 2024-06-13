@@ -1,31 +1,29 @@
-import { Partner } from '@/app/utils/interfaces';
+"use client"
+// import { Partner } from '@/app/utils/interfaces';
 import env from '@/env/env';
 import { useState, useEffect } from 'react';
 
 
-const useFetchPartners = (limit: number, offset: number) => {
-    const [partners, setPartners] = useState<Partner[]>([]);
+const useFetchNews = () => {
+    const [news, setNews] = useState<any>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        fetchPartners()
-    },[limit,offset])
+        fetchNews()
+    },[])
 
-    const fetchPartners = async () => {
+    const fetchNews = async () => {
         setLoading(true)
         try {
           fetch(
-            `https://www.manuscriptedit.com/api/get_all_rec_patners_img.php?limit=${limit}&offset=${offset}`, {
+            `https://www.manuscriptedit.com/api/get_all_testimonial_news.php`, {
                 method: "get",
-                headers: new Headers({
-                  "ngrok-skip-browser-warning": "69420",
-                }),
               }
           ).then(response => {
             return response.json()
           }).then(data => {
-            setPartners(data);
+            setNews(data);
           }).finally(() => {
             setLoading(false);
           });
@@ -35,10 +33,10 @@ const useFetchPartners = (limit: number, offset: number) => {
     }
 
     return {
-        partners,
+        news,
         loading,
         error
     }
 }
 
-export default useFetchPartners
+export default useFetchNews

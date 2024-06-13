@@ -11,6 +11,7 @@ const useFetchEditors = (type: string, limit: number, offset: number) => {
     useEffect(() => {
         fetchEditors()
     }, [limit, offset, type])
+    console.log({type,offset,limit})
 
     const fetchEditors = async () => {
         setLoading(true)

@@ -1,32 +1,35 @@
-import { Partner } from '@/app/utils/interfaces';
+"use client"
+// import { Partner } from '@/app/utils/interfaces';
 import env from '@/env/env';
 import { useState, useEffect } from 'react';
 
 
-const useFetchPartners = (limit: number, offset: number) => {
-    const [partners, setPartners] = useState<Partner[]>([]);
+const useFetchClientList = () => {
+    const [clientList, setClientList] = useState<any>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        fetchPartners()
-    },[limit,offset])
+        fetchClientList()
+    },[])
 
-    const fetchPartners = async () => {
+    const fetchClientList = async () => {
         setLoading(true)
         try {
           fetch(
-            `https://www.manuscriptedit.com/api/get_all_rec_patners_img.php?limit=${limit}&offset=${offset}`, {
+            `https://www.manuscriptedit.com/api/get_all_country_univer.php`, {
                 method: "get",
-                headers: new Headers({
-                  "ngrok-skip-browser-warning": "69420",
-                }),
               }
           ).then(response => {
             return response.json()
           }).then(data => {
-            setPartners(data);
-          }).finally(() => {
+            console.log({data})
+            setClientList(data);
+          }).catch((err) => {
+            console.log({err})
+            setLoading(false)
+          })
+          .finally(() => {
             setLoading(false);
           });
         } catch (error) {
@@ -35,10 +38,10 @@ const useFetchPartners = (limit: number, offset: number) => {
     }
 
     return {
-        partners,
+        clientList,
         loading,
         error
     }
 }
 
-export default useFetchPartners
+export default useFetchClientList

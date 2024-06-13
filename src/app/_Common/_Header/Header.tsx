@@ -3,9 +3,10 @@ import Link from "next/link";
 import Style from "./header.module.css";
 import redirect, { redirectSameTab } from "../_functionality/Redirect";
 // import { useRef } from "react";
+import { useRouter } from 'next/navigation'
 
 export default function header() {
-
+  const router = useRouter()
   return (
     <>
       {/* <div className="loader-wrapper">
@@ -400,8 +401,8 @@ export default function header() {
                     <li>
                       <Link href={"/About"}>About Us</Link>
                     </li>
-                    {/* <li><Link href={'/'}>Client List</Link></li> */}
-                    <li>
+                    <li><Link href={'/ClientList'}>Client List</Link></li>
+                    {/* <li>
                       <a
                         onClick={() => {
                           redirect("client-list");
@@ -410,7 +411,7 @@ export default function header() {
                       >
                         Client List
                       </a>
-                    </li>
+                    </li> */}
                     <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li>
                     {/* <li>
                       <a
@@ -434,8 +435,8 @@ export default function header() {
                         Contact us
                       </a>
                     </li>
-                    {/* <li><Link href={'/QualityAssurance'}>News & Conferences</Link></li> */}
-                    <li>
+                    <li><Link href={'/NewsPromotions'}>News & Conferences</Link></li>
+                    {/* <li>
                       <a
                         onClick={() => {
                           redirect("news-promotions");
@@ -444,7 +445,7 @@ export default function header() {
                       >
                         News & Conferences
                       </a>
-                    </li>
+                    </li> */}
 
                     {/* <li><Link href={'/Process'}>Referral Partner Program</Link></li> */}
                     <li>
@@ -499,7 +500,8 @@ export default function header() {
                   <a
                     className="dtbtn"
                     onClick={() => {
-                      redirect("register");
+                      // redirect("register");
+                      window.location.href = "https://www.manuscriptedit.com/register";
                     }}
                     href="#"
                   >

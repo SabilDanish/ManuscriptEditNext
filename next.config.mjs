@@ -28,7 +28,9 @@ const nextConfig = {
          'window.jQuery': 'jquery',
       }));
      return config;
-    }
+    },
+    output: "export",
+    // basePath: '/admin/admin',
 };
 
 export default nextConfig;

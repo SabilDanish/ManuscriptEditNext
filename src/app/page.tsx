@@ -34,7 +34,7 @@ import EnquiryForm from "./_Common/_enquiryForm/EnquiryForm";
 
 export default function Home() {
   SwiperCore.use([Autoplay]);
-  const router = useRouter();
+  // const router = useRouter();
 
   // useEffect(() => {
   //   const storedDataString = sessionStorage.getItem('userId');
@@ -45,6 +45,7 @@ export default function Home() {
   //     router.push('/Auth');
   //   }
   // }, []);
+  
   return (
     <>
 
