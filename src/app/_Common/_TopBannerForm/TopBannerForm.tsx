@@ -106,8 +106,9 @@ const TopBannerForm = () => {
             <select
               name="service"
               required
-              className="formControl"
+              className="formControl serviceInp"
               onChange={(e) => formHandler(e)}
+              style={{height: '2rem'}}
             >
               <option value="">Select Service</option>
               <option value="testing">Testing</option>

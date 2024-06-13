@@ -42,3 +42,9 @@
   .vim{
       background-color:#59BFBE;
   }
+
+  @media (max-width:768px) {
+    .sticky-social{
+      display: none;
+    }
+  }
