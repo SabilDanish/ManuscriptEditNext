@@ -30,7 +30,7 @@ const nextConfig = {
      return config;
     },
     output: "export",
-    basePath: '/admin/admin',
+    // basePath: '/admin/admin',
 };
 
 export default nextConfig;
