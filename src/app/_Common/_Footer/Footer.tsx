@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link";
+import "./Footer.css"
 import redirect from "../_functionality/Redirect";
 import useEmail from "@/app/hooks/newsLetter/useEmail";
 import { useState } from "react";
@@ -60,7 +61,7 @@ export default function footer() {
             <div className="col-lg-3 col-md-6 col-sm-12">
               <div className="widget widgets-company-info">
                 <div className="footer-bottom-logo ">
-                  <img src="/images/2.png" alt="" />
+                  <img src="/images/2.png" alt="#"  style={{width:"100%"}}/>
                 </div>
                 <div className="company-info-desc">
                  
