@@ -13,11 +13,6 @@ const faqs = [
       "Yes, under the 'Target Journal Formatting' service we format your manuscript following the guidelines provided by the particular journal.",
   },
   {
-    question: "How can I customize the accordion?",
-    answer:
-      "You can customize the accordion by modifying the CSS styles and changing the HTML structure as per your needs. You can also add JavaScript to enhance its functionality.",
-  },
-  {
     question: "Do you correct or format artwork under any of the Publication support packages?",
     answer:
       "No, the correction or reformatting of artwork does not include in any of the packages. We have customized 'Illustration and Enhancement Services' under which you can avail different services related to artwork.",

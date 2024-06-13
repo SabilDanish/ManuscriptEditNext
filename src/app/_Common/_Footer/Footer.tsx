@@ -56,11 +56,11 @@ export default function footer() {
         style={{ backgroundImage: "url(/images/call-bg.png)" }}
       >
         <div className="container">
-          <div className="row">
+          <div className="row" style={{justifyContent:"center"}}>
             <div className="col-lg-3 col-md-6 col-sm-12">
               <div className="widget widgets-company-info">
                 <div className="footer-bottom-logo ">
-                  <img src="/images/logo.png" alt="" />
+                  <img src="/images/2.png" alt="" />
                 </div>
                 <div className="company-info-desc">
                  
@@ -138,21 +138,21 @@ export default function footer() {
                         </div>
                   </div>
             </div>
-            <div className="col-lg-9 col-md-6 col-sm-12">
+            <div className="col-lg-9 col-md-12 col-sm-12">
               <div className="row ">
                 <div className="col-12 pb-4">
                   
                 </div>
                 <div className="col-12">
                   <div className="widget widgets-company-info">
-                    <h3
+                    {/* <h3
                       style={textDecorator}
                       className="widget-title pb-4 text-center"
                     >
                       Company Address
-                    </h3>
-                    <div style={{fontSize:14}} className="row text-center">
-                      <div className="col-md-4">
+                    </h3> */}
+                    <div style={{fontSize:14}} className="row rowCentroid">
+                      <div className="col-md-4 footerSeperator4">
                         <div >
                           <h5 style={{ color: "#FFFFFF" }}>
                             <b>KYOTO, JAPAN</b>
@@ -179,9 +179,9 @@ export default function footer() {
                           </p>
                         </div>
                       </div>
-                      <div className="col-md-4">
+                      <div className="col-md-4 ">
                       <div style={{paddingLeft:15}} className="row">
-                        <div className="col-12">
+                        <div className="col-12 footerSeperator5" style={{ border: '1px solid grey' }}>
                         <h5 style={{ color: "#FFFFFF" }}>
                             <b>NC, DURHAM, USA</b>
                           </h5>
@@ -198,7 +198,7 @@ export default function footer() {
                         </div>
                       </div>
                       <div style={{paddingLeft:15}} className="row">
-                        <div className="col-12">
+                        <div className="col-12 footerSeperate">
                           <h5 style={{ color: "#FFFFFF" }}>
                             <b>BHUBANESWAR, INDIA</b>
                           </h5>
@@ -217,7 +217,7 @@ export default function footer() {
                       </div>
                       <div className="col-md-4">
                       <div style={{paddingLeft:15}} className="row">
-                      <div  className="col-12">
+                      <div  className="col-12 footerSeperator1">
                           <h5 style={{ color: "#FFFFFF" }}>
                             <b>MAIDSTONE, UK</b>
                           </h5>
@@ -234,7 +234,7 @@ export default function footer() {
                         </div>
                       </div>
                       <div style={{paddingLeft:15}} className="row">
-                      <div  className="col-12">
+                      <div  className="col-12 footerSeperator2">
                           <h5 style={{ color: "#FFFFFF" }}>
                             <b>BANGALORE, INDIA</b>
                           </h5>

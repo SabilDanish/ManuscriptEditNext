@@ -17,12 +17,11 @@
       display: block;
       width: 100%;
       padding: 1rem;
-      font-size: large;
+      font-size: 16px;
       margin-bottom: 1rem;
       border: 1px solid #ced4da;
       border-radius: 0.25rem;
-      
-  
+          color: #494949;
     }
   .submitButton {
       display: block;
@@ -36,7 +35,7 @@
       margin:0;
     }
 }
-@media (max-width: 1600px) {
+@media (max-width: 1440px) {
   .formContainer {
       position: absolute;
       bottom: 2%;
@@ -53,10 +52,11 @@
       display: block;
       width: 100%;
       padding: 0.2rem;
-      font-size: small    ;
+      font-size: 16px;
       margin-bottom: 1rem;
       border: 1px solid #ced4da;
       border-radius: 0.25rem;
+      color: #494949;
   
     }
   .submitButton {
@@ -89,10 +89,11 @@
       display: block;
       width: 100%;
       padding: 0.2rem;
-      font-size: small    ;
+      font-size: 16px;
       margin-bottom: .8rem;
       border: 1px solid #ced4da;
       border-radius: 0.25rem;
+      color: #494949;
   
     }
     textarea {
@@ -136,10 +137,11 @@
     display: block;
     width: 100%;
     padding: 0.2rem;
-    font-size: small    ;
+    font-size: 16px;
     margin-bottom: .8rem;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
+    color: #494949;
 
   }
   textarea {
@@ -156,6 +158,8 @@
     cursor: pointer;
     margin:0;
   }
+
+  
 }
 
 @media (max-width: 425px) {
@@ -177,10 +181,11 @@
     display: block;
     width: 100%;
     padding: 0.2rem;
-    font-size: small    ;
+    font-size: 16px;
     margin-bottom: .8rem;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
+    color: #494949;
 
   }
   textarea {
@@ -239,3 +244,11 @@
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
+
+
+.serviceInp{
+  font-size: 16px;
+    color: #494949;
+}
+
+

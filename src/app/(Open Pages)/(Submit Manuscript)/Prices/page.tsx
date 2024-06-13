@@ -75,6 +75,7 @@ export default function Home() {
                     className="col-lg-4 aos-init aos-animate"
                     data-aos="zoom-in"
                     data-aos-delay="200"
+                    key={Messages}
                   >
                     <div className="pricing-item1">
                       <div className="pricing-header">
@@ -88,7 +89,7 @@ export default function Home() {
                             let [message_first_part,message_second_part] = message.split("|")
                             const numberStr = message_second_part.trim().replace(/'/g, '');
                             let new_message = `${message_first_part} | ${(+numberStr*Number(wordCount)).toFixed(0)}`
-                            return (<div id="pkg1" style={{margin: "1rem"}}>
+                            return (<div id="pkg1" style={{margin: "1rem"}} key={message}>
                               <div className="btnStyl">
                                 {new_message}
                               </div>

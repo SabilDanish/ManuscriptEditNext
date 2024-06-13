@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import  './getHelpMobile.css';
+import Link from 'next/link';
 
 const GetHelpMobile: React.FC = () => {
   useEffect(() => {
@@ -89,11 +90,11 @@ const GetHelpMobile: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <button className="buttonv">View More</button>
+            <Link href="/Writing" className="buttonv">View More</Link>
           </div>
         </div>
       </div>
-      
+
     </div>
 
     <div className="accordion-item">
@@ -151,7 +152,7 @@ const GetHelpMobile: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <button className="buttonv">View More</button>
+            <Link href="/PackageService" className="buttonv">View More</Link>
           </div>
         </div>
       </div>
@@ -219,7 +220,7 @@ const GetHelpMobile: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <button className="buttonv">View More</button>
+            <Link href="/EditingOverview" className="buttonv">View More</Link>
           </div>
         </div>
       </div>
@@ -298,7 +299,7 @@ const GetHelpMobile: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <button className="buttonv">View More</button>
+            <Link href="/ResearchSupportOverview" className="buttonv">View More</Link>
           </div>
         </div>
       </div>
@@ -370,7 +371,7 @@ const GetHelpMobile: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <button className="buttonv">View More</button>
+            <Link href="/PHDThesis" className="buttonv">View More</Link>
           </div>
         </div>
       </div>

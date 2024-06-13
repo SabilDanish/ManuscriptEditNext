@@ -1,3 +1,4 @@
+import PeerForm from "@/app/_Common/PeerForm/PeerForm";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 
 export default function Home() {
@@ -16,20 +17,15 @@ export default function Home() {
               <div className="container text-center">
                   <div className="row">
                       <div className="col">
-                          <div style={{ marginLeft: "3rem", textAlign: "left" }}><p> <i className="fa fa-telegram" aria-hidden="true"></i> Telegram : +91-904-000-5445<br /></p>
+                          <div style={{ marginLeft: "3rem", marginTop: "3rem", textAlign: "left" }}><p> <i className="fa fa-telegram" aria-hidden="true"></i> Telegram : +91-904-000-5445<br /></p>
                               <p><i className="fa fa-whatsapp" aria-hidden="true"></i>  WhatsApp :   +1 (646)916-3476   (USA)<br />
                                  <span style={{color:"white"}}><i className="fa fa-whatsapp" aria-hidden="true"></i>  WhatsApp : </span>+91-904-002-3003 (India)<br /></p>
                               <p><i className="fa fa-envelope" aria-hidden="true"></i> Email id : support@manuscriptedit.com</p>
                           </div>
                       </div>
                       <div className="col">
-                          {/* ----------------------chage here------- */}
-                          <div style={{ marginLeft: "3rem", textAlign: "left" }}><p> <i className="fa fa-telegram" aria-hidden="true"></i> Telegram : +91-904-000-5445<br /></p>
-                              <p><i className="fa fa-whatsapp" aria-hidden="true"></i>  WhatsApp :   +1 (646)916-3476   (USA)<br />
-                                 <span style={{color:"white"}}><i className="fa fa-whatsapp" aria-hidden="true"></i>  WhatsApp : </span>+91-904-002-3003 (India)<br /></p>
-                              <p><i className="fa fa-envelope" aria-hidden="true"></i> Email id : support@manuscriptedit.com</p>
-                          </div>
-                          {/* ------------------------- */}
+                        <div style={{padding: "2rem",backgroundColor:"#f3d5d5",width:"fit-content", boxShadow:"-3px 3px 20px grey", marginBottom:"4rem", marginTop:"2rem",borderRadius:"10px"}}> <PeerForm /></div>
+                           
                       </div>
                   </div>
               </div>

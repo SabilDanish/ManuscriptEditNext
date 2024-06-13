@@ -6,6 +6,7 @@ import useFetchEditors from "@/app/hooks/editor/useEditorProfile";
 import { DNA } from "react-loader-spinner";
 import { Editor } from "@/app/utils/interfaces";
 import EditorModal from "@/app/_Common/_Modals/EditorModal/EditorModal";
+import defaultImage from '../../../utils/testi/2.jpg'
 
 export default function Home() {
   const [limit, setLimit] = useState(10);
@@ -42,6 +43,10 @@ export default function Home() {
   };
 
   console.log({ showModal });
+
+  const handleError = (e:any) => {
+    e.target.src = 'https://gravatar.com/avatar/0cb77b3b53fdfa2cbaa9e2ae3a9fe042?s=400&d=mp&r=x';
+  };
   return (
     <>
       {breadcrum("Editor", "Editorial Panel")}
@@ -50,14 +55,16 @@ export default function Home() {
       )}
       <div className="col-lg-10 col-md-10 col-sm-10 mt-50 mb-50 mx-auto d-flex1k">
         {loading && !allEditor.length && (
-          <DNA
-            visible={true}
-            height="80"
-            width="80"
-            ariaLabel="dna-loading"
-            wrapperStyle={{}}
-            wrapperClass="dna-wrapper"
-          />
+          <div className="loader-overlay">
+            <DNA
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="dna-loading"
+              wrapperStyle={{}}
+              wrapperClass="dna-wrapper"
+            />
+          </div>
         )}
         <div className="container">
           <div id="ediCat" className="row">
@@ -108,11 +115,11 @@ export default function Home() {
                   console.log({ id });
                   return (
                     <div
-                      className="col-lg-2 col-md-4 col-sm-4 col-xs-4"
+                      className="col-lg-2 col-md-4 col-sm-4 col-xs-4 "
                       style={{ border: "0 solid #022039" }}
                       key={id}
                     >
-                      <div style={{ padding: "5px" }}>
+                      <div className="divSeperate" style={{ padding: "5px" }}>
                         <div style={{ textAlign: "center" }}>
                           <img
                             src={ediImg}
@@ -123,6 +130,7 @@ export default function Home() {
                               height: "100px",
                             }}
                             alt="Doctor"
+                            onError={handleError}
                           />
                         </div>
                         <div className="titl">

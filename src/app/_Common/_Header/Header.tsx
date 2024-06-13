@@ -5,7 +5,7 @@ import redirect, { redirectSameTab } from "../_functionality/Redirect";
 // import { useRef } from "react";
 import { useRouter } from 'next/navigation'
 
-export default function header() {
+export default function Header() {
   const router = useRouter()
   return (
     <>
@@ -262,14 +262,14 @@ export default function header() {
                               </Link>
                             </li>
                             <li>
-                            <a
-                        onClick={() => {
-                          redirectSameTab("corporate");
-                        }}
-                        href="#"
-                      >
-                        Corporate Services
-                      </a>
+                              <a
+                                onClick={() => {
+                                  redirectSameTab("corporate");
+                                }}
+                                href="#"
+                              >
+                                Corporate Services
+                              </a>
                             </li>
                           </ul>
                         </li>
@@ -278,7 +278,7 @@ export default function header() {
                   </ul>
                 </li>
                 <li>
-                  <Link href={"/QualityDelivery"}>QUALITY</Link>
+                  <Link href={"/"}>QUALITY</Link>
                   <ul>
                     <li>
                       <Link href={"/QualityDelivery"}>Quality & Delivery</Link>
@@ -352,7 +352,9 @@ export default function header() {
                 <li>
                   <a href="#">EDITOR</a>
                   <ul>
-                    <li><Link href={'/EditorialPanel'}>Editor Profile</Link></li>
+                    <li>
+                      <Link href={"/EditorialPanel"}>Editor Profile</Link>
+                    </li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -501,7 +503,8 @@ export default function header() {
                     className="dtbtn"
                     onClick={() => {
                       // redirect("register");
-                      window.location.href = "https://www.manuscriptedit.com/register";
+                      window.location.href =
+                        "https://www.manuscriptedit.com/register";
                     }}
                     href="#"
                   >
@@ -519,7 +522,7 @@ export default function header() {
           <nav className="techno_menu">
             <ul className="clearfix">
               <li>
-                <a href="#">SERVICES </a>
+                  <a href="#">SERVICES </a>
                 <ul>
                   <li>
                     <Link href={"/EditingOverview"}>
@@ -687,7 +690,7 @@ export default function header() {
                 </ul>
               </li>
               <li>
-                <Link href={"/QualityDelivery"}>QUALITY</Link>
+                <Link href={"#"}>QUALITY</Link>
                 <ul>
                   <li>
                     <Link href={"/QualityDelivery"}>Quality & Delivery</Link>
@@ -761,7 +764,9 @@ export default function header() {
               <li>
                 <a href="#">EDITOR</a>
                 <ul>
-                  <li><Link href={'/QualityDelivery'}>Editor Profile</Link></li>
+                  <li>
+                    <Link href={"/QualityDelivery"}>Editor Profile</Link>
+                  </li>
                   {/* <li>
                     <a
                       onClick={() => {

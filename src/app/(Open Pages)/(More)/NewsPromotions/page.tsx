@@ -1,6 +1,6 @@
 "use client"
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
-import "./style.css";
+import "./news.css";
 import useFetchNews from "@/app/hooks/more/useNewsConference";
 import { DNA } from "react-loader-spinner";
 
