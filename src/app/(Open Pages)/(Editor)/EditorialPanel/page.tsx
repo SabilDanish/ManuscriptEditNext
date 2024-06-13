@@ -50,14 +50,16 @@ export default function Home() {
       )}
       <div className="col-lg-10 col-md-10 col-sm-10 mt-50 mb-50 mx-auto d-flex1k">
         {loading && !allEditor.length && (
-          <DNA
-            visible={true}
-            height="80"
-            width="80"
-            ariaLabel="dna-loading"
-            wrapperStyle={{}}
-            wrapperClass="dna-wrapper"
-          />
+          <div className="loader-overlay">
+            <DNA
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="dna-loading"
+              wrapperStyle={{}}
+              wrapperClass="dna-wrapper"
+            />
+          </div>
         )}
         <div className="container">
           <div id="ediCat" className="row">
@@ -108,11 +110,11 @@ export default function Home() {
                   console.log({ id });
                   return (
                     <div
-                      className="col-lg-2 col-md-4 col-sm-4 col-xs-4"
+                      className="col-lg-2 col-md-4 col-sm-4 col-xs-4 "
                       style={{ border: "0 solid #022039" }}
                       key={id}
                     >
-                      <div style={{ padding: "5px" }}>
+                      <div className="divSeperate" style={{ padding: "5px" }}>
                         <div style={{ textAlign: "center" }}>
                           <img
                             src={ediImg}
