@@ -40,5 +40,11 @@
       background-color:#CB2128;
   }
   .vim{
-      background-color:#28a745;
+      background-color:#59BFBE;
+  }
+
+  @media (max-width:768px) {
+    .sticky-social{
+      display: none;
+    }
   }
