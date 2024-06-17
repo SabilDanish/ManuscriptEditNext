@@ -108,10 +108,28 @@ const TopBannerForm = () => {
               required
               className="formControl"
               onChange={(e) => formHandler(e)}
+              style={{ height: "3rem" }}
             >
               <option value="">Select Service</option>
-              <option value="testing">Testing</option>
-              {/* Add more options as needed */}
+              <option value="Writing Manuscript/Thesis">
+                Writing Manuscript/Thesis
+              </option>
+              <option value="Data Analysis for Manuscript/Thesis">
+                Data Analysis for Manuscript/Thesis
+              </option>
+              <option value="Editing/Rewriting/Formatting/Proofreading">
+                Editing/Rewriting/Formatting/Proofreading
+              </option>
+              <option value="Publication of Manuscript ">
+                Publication of Manuscript
+              </option>
+              <option value="Paper from Thesis">Paper from Thesis</option>
+              <option value="Expert Book Chapter Publishing Support">
+                Expert Book Chapter Publishing Support
+              </option>
+              <option value="PhD Support & Assistance">
+                PhD Support & Assistance
+              </option>
             </select>
             <input
               type="tel"
@@ -167,8 +185,25 @@ const TopBannerForm = () => {
                 onChange={(e) => formHandler(e)}
               >
                 <option value="">Select Service</option>
-                <option value="testing">Testing</option>
-                {/* Add more options as needed */}
+                <option value="Writing Manuscript/Thesis">
+                  Writing Manuscript/Thesis
+                </option>
+                <option value="Data Analysis for Manuscript/Thesis">
+                  Data Analysis for Manuscript/Thesis
+                </option>
+                <option value="Editing/Rewriting/Formatting/Proofreading">
+                  Editing/Rewriting/Formatting/Proofreading
+                </option>
+                <option value="Publication of Manuscript ">
+                  Publication of Manuscript
+                </option>
+                <option value="Paper from Thesis">Paper from Thesis</option>
+                <option value="Expert Book Chapter Publishing Support">
+                  Expert Book Chapter Publishing Support
+                </option>
+                <option value="PhD Support & Assistance">
+                  PhD Support & Assistance        
+                </option>
               </select>
               <input
                 type="tel"

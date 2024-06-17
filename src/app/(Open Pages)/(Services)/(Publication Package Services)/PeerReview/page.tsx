@@ -1,5 +1,6 @@
 
 "use client";
+import PeerForm from "@/app/_Common/PeerForm/PeerForm";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
@@ -112,7 +113,7 @@ export default function Home() {
                     <h4 className="appointment_title mb-2">Create Account</h4>
                     <p>Get started with your free account</p>
                   </div>
-                  <form
+                  {/* <form
                     action="https://formspree.io/f/myyleorq"
                     method="POST"
                     id="dreamit-form"
@@ -446,7 +447,8 @@ export default function Home() {
                     </div>
 
                     <div className="form-check d-flex align-items-center text-center"></div>
-                  </form>
+                  </form> */}
+                  <PeerForm />
                   <div id="status"></div>
                 </div>
               </div>

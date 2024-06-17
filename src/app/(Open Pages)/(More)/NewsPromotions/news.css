@@ -1,0 +1,27 @@
+.changeColor {
+    background-color: #02163b;
+    animation-name: example;
+    animation-duration: 0.5s;
+  }
+  
+  .changeColor2 {
+    background-color: #fbffdf;
+    height: 25rem;
+  }
+  .changeColor2:hover {
+    background-color: #fffec1;
+    box-shadow: -5px 10px #888888;
+  }
+  .dnaCenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @keyframes example {
+    from {background-color: #CDFFD8;}
+    to {background-color: #94B9FF;}
+  }
+  .card-header{
+    font-weight: 700;
+    color: white;
+  }

@@ -31,6 +31,7 @@ const nextConfig = {
     },
     output: "export",
     // basePath: '/admin/admin',
+    trailingSlash: true,
 };
 
 export default nextConfig;

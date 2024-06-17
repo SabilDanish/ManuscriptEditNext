@@ -4,32 +4,27 @@ import env from '@/env/env';
 import { useState, useEffect } from 'react';
 
 
-const useFetchClientList = () => {
-    const [clientList, setClientList] = useState<any>([]);
+const useFetchNews = () => {
+    const [news, setNews] = useState<any>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        fetchClientList()
+        fetchNews()
     },[])
 
-    const fetchClientList = async () => {
+    const fetchNews = async () => {
         setLoading(true)
         try {
           fetch(
-            `https://www.manuscriptedit.com/api/get_all_country_univer.php`, {
+            `https://www.manuscriptedit.com/api/get_all_testimonial_news.php`, {
                 method: "get",
               }
           ).then(response => {
             return response.json()
           }).then(data => {
-            console.log({data})
-            setClientList(data);
-          }).catch((err) => {
-            console.log({err})
-            setLoading(false)
-          })
-          .finally(() => {
+            setNews(data);
+          }).finally(() => {
             setLoading(false);
           });
         } catch (error) {
@@ -38,10 +33,10 @@ const useFetchClientList = () => {
     }
 
     return {
-        clientList,
+        news,
         loading,
         error
     }
 }
 
-export default useFetchClientList
+export default useFetchNews

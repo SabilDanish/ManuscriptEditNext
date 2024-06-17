@@ -15,6 +15,10 @@ const truncateText = (text: string, wordLimit: number) => {
   return text;
 };
 
+const handleError = (e:any) => {
+  e.target.src = 'https://gravatar.com/avatar/0cb77b3b53fdfa2cbaa9e2ae3a9fe042?s=400&d=mp&r=x';
+};
+
 const EditorModal: React.FC<EditorModalProps> = ({
   modalData,
   setShowModal,
@@ -30,7 +34,7 @@ const EditorModal: React.FC<EditorModalProps> = ({
           X
         </button>
         <div className="modal-body">
-          <img src={ediImg} alt={ediName} />
+          <img src={ediImg} alt={ediName} onError={handleError}/>
           <h2>{ediName}</h2>
           <p>{truncateText(ediExp, 100)}</p>
         </div>
