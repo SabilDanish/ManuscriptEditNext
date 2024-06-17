@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import "./GetEvery.css";
 
 const GetEvery = () => {
@@ -13,9 +14,9 @@ const GetEvery = () => {
                                 <h5>
                                     GET HELP WITH PUBLICATION ASSISTANCE
                                 </h5>
-                                <a href="" style={{ color: "#a31e22", textDecoration: 'none' }}>
+                                <Link href="/EditingOverview" style={{ color: "#a31e22", textDecoration: 'none' }}>
                                     Know more &rarr;
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-lg-3" style={{ marginTop: "20px" }}>
@@ -23,9 +24,9 @@ const GetEvery = () => {
                                 <h5>
                                     GET EDITING AND LANGUAGE HELP
                                 </h5>
-                                <a href="" style={{ color: "#a31e22", textDecoration: 'none' }}>
+                                <Link href="/PackageService" style={{ color: "#a31e22", textDecoration: 'none' }}>
                                     Know more &rarr;
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-lg-3" style={{ marginTop: "20px" }}>
@@ -33,9 +34,9 @@ const GetEvery = () => {
                                 <h5>
                                     GET PhD & MASTER THESIS ASSISTANCE
                                 </h5>
-                                <a href="" style={{ color: "#a31e22", textDecoration: 'none' }}>
+                                <Link href="/ResearchSupportOverview" style={{ color: "#a31e22", textDecoration: 'none' }}>
                                     Know more &rarr;
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -14818,7 +14818,7 @@ button.btn.btn-primary{
 }
 .footer-services {
   width: 100%;
-  text-align: center;
-  margin-left: -42px;
+  text-align: start;
+  
 }
 

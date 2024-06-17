@@ -151,7 +151,7 @@ export default function footer() {
                     >
                       Company Address
                     </h3>
-                    <div style={{fontSize:14}} className="row text-center">
+                    <div style={{fontSize:14}} className="row ">
                       <div className="col-md-4">
                         <div >
                           <h5 style={{ color: "#FFFFFF" }}>
