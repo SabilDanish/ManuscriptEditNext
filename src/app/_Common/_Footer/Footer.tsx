@@ -61,7 +61,7 @@ export default function footer() {
             <div className="col-lg-3 col-md-6 col-sm-12">
               <div className="widget widgets-company-info">
                 <div className="footer-bottom-logo ">
-                  <img src="/images/2.png" alt="#"  style={{width:"100%"}}/>
+                  <img src="/images/reseapro.png" alt="#"  style={{width:"100%"}}/>
                 </div>
                 <div className="company-info-desc">
                  
