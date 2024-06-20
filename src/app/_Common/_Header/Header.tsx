@@ -261,7 +261,7 @@ export default function Header() {
                                 Customized Services
                               </Link>
                             </li>
-                            <li>
+                            {/* <li>
                               <a
                                 onClick={() => {
                                   redirectSameTab("corporate");
@@ -270,7 +270,7 @@ export default function Header() {
                               >
                                 Corporate Services
                               </a>
-                            </li>
+                            </li> */}
                           </ul>
                         </li>
                       </ul>
@@ -403,7 +403,7 @@ export default function Header() {
                     <li>
                       <Link href={"/About"}>About Us</Link>
                     </li>
-                    <li><Link href={'/ClientList'}>Client List</Link></li>
+                    {/* <li><Link href={'/ClientList'}>Client List</Link></li> */}
                     {/* <li>
                       <a
                         onClick={() => {
@@ -437,7 +437,7 @@ export default function Header() {
                         Contact us
                       </a>
                     </li> */}
-                    <li><Link href={'/NewsPromotions'}>News & Conferences</Link></li>
+                    {/* <li><Link href={'/NewsPromotions'}>News & Conferences</Link></li> */}
                     {/* <li>
                       <a
                         onClick={() => {
@@ -504,7 +504,7 @@ export default function Header() {
                     onClick={() => {
                       // redirect("register");
                       window.location.href =
-                        "https://www.manuscriptedit.com/register";
+                        "https://secure.manuscriptedit.com/register";
                     }}
                     href="#"
                   >
@@ -682,9 +682,9 @@ export default function Header() {
                           Customized Services
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href={"/Corporate"}>Corporate Services</Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
                 </ul>
@@ -816,7 +816,7 @@ export default function Header() {
                     <Link href={"/About"}>About Us</Link>
                   </li>
                   {/* <li><Link href={'/'}>Client List</Link></li> */}
-                  <li>
+                  {/* <li>
                     <a
                       onClick={() => {
                         redirect("client-list");
@@ -825,7 +825,7 @@ export default function Header() {
                     >
                       Client List
                     </a>
-                  </li>
+                  </li> */}
                   {/* <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li> */}
                   <li>
                     <a
@@ -850,7 +850,7 @@ export default function Header() {
                     </a>
                   </li> */}
                   {/* <li><Link href={'/QualityAssurance'}>News & Conferences</Link></li> */}
-                  <li>
+                  {/* <li>
                     <a
                       onClick={() => {
                         redirect("news-promotions");
@@ -859,7 +859,7 @@ export default function Header() {
                     >
                       News & Conferences
                     </a>
-                  </li>
+                  </li> */}
 
                   {/* <li><Link href={'/Process'}>Referral Partner Program</Link></li> */}
                   <li>

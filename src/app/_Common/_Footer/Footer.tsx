@@ -39,7 +39,7 @@ export default function footer() {
                   </div>
                   <div className="subscribe_form_send">
                     <button className="btn" onClick={() => {
-                      email && acceptNewsLetter(email)
+                      email && acceptNewsLetter({email})
                     }} style={{zIndex: "10"}}>
                       Subscribe
                     </button>

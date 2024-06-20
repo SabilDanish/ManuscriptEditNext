@@ -19,7 +19,7 @@ const GetHelp = () => {
         <>
 
             <div className='GetEveryHead' >
-                <h2 className='TitleAll' style={{ textAlign: 'center', marginTop: '20px' }}>FELLING CONFUSED WHAT TO OPT FOR?</h2>
+                <h2 className='TitleAll' style={{ textAlign: 'center', marginTop: '20px' }}>FEELING CONFUSED WHAT TO OPT FOR?</h2>
                 <p style={{ textAlign: 'center' }}>Choose Your issues, Let ManuscriptEdit HELP YOU</p>
 
             </div>

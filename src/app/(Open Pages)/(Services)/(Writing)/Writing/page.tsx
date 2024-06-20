@@ -28,7 +28,7 @@ export default function Home() {
               </button>
             </div>
             <div className="col-md-6">
-                <img src="images/menuscimg/subtantive.jpg" alt="" width="100%" style={{borderRadius: 10}} />
+                <img src="/images/menuscimg/subtantive.jpg" alt="" width="100%" style={{borderRadius: 10}} />
             </div>
         </div>
         </div>

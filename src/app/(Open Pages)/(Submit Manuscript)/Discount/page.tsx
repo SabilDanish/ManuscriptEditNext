@@ -32,7 +32,7 @@ export default function Home() {
 
              </div>
              <div className="col-md-6">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="images/code.png" alt=""
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="/images/code.png" alt=""
                      width="100%" />
              </div>
          </div>
@@ -42,7 +42,7 @@ export default function Home() {
  <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm" style={{margin: 0, padding: 25}}>
          <div className="col-lg-12 col-md-12 col-sm-12">
-             <img  src="images/Get-published.jpg" alt=""/>
+             <img  src="/images/Get-published.jpg" alt=""/>
          </div>
          <div className="col-lg-12 col-md-12 col-sm-12 d-flex950">
              <div className="col-lg-6 col-md-6 col-sm-6">
@@ -80,7 +80,7 @@ export default function Home() {
  <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm" style={{margin: 0, padding: 25}}>
          <div className="col-lg-12 col-md-12 col-sm-12">
-             <img  src="images/disc15.jpg" alt=""/>
+             <img  src="/images/disc15.jpg" alt=""/>
          </div>
          <div className="col-lg-12 col-md-12 col-sm-12 d-flex950">
              <div className="col-lg-6 col-md-6 col-sm-6">
@@ -125,7 +125,7 @@ export default function Home() {
  <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm" style={{margin: 0, padding: 25}}>
          <div className="col-lg-12 col-md-12 col-sm-12">
-             <img style={{border:'1px solid #c1c1c1', width:'100%', height:200}} src="images/disc030223.png" alt=""/>
+             <img style={{border:'1px solid #c1c1c1', width:'100%', height:200}} src="/images/disc030223.png" alt=""/>
          </div>
          <div className="col-lg-12 col-md-12 col-sm-12">
              <div className="col-lg-6 col-md-6 col-sm-6 pt-5">
@@ -190,7 +190,7 @@ export default function Home() {
 
              </div>
              <div className="col-md-6">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="images/disc5feb.jpg" alt=""
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="/images/disc5feb.jpg" alt=""
                      width="100%" />
              </div>
          </div>
@@ -217,7 +217,7 @@ export default function Home() {
 
              </div>
              <div className="col-md-6">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="images/disc24.jpg" alt=""
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="/images/disc24.jpg" alt=""
                      width="100%" />
              </div>
          </div>
@@ -242,7 +242,7 @@ export default function Home() {
 
              </div>
              <div className="col-md-6">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="images/PLAG-NEWSLETTER.png"
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="/images/PLAG-NEWSLETTER.png"
                      alt="" width="100%" />
              </div>
          </div>
@@ -266,7 +266,7 @@ export default function Home() {
 
              </div>
              <div className="col-md-6">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="images/disc3.png" alt=""
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="/images/disc3.png" alt=""
                      width="100%" />
              </div>
          </div>
@@ -277,7 +277,7 @@ export default function Home() {
      <div className="formmm" style={{margin: 0, padding: 25}}>
          <div className="row">
              <div className="col-md-12">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:'600px',borderRadius:10}} src="images/disc1.jpg" alt=""
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:'600px',borderRadius:10}} src="/images/disc1.jpg" alt=""
                      />
              </div>
          </div>
@@ -288,7 +288,7 @@ export default function Home() {
     <div className="formmm" style={{margin: 0, padding: 25}}>
         <div className="row">
             <div className="col-md-12">
-                <img style={{border:'1px solid #c1c1c1', width:'100%', height:'600px',borderRadius:10}} src="images/disc2.jpg" alt=""
+                <img style={{border:'1px solid #c1c1c1', width:'100%', height:'600px',borderRadius:10}} src="/images/disc2.jpg" alt=""
                     />
             </div>
         </div>

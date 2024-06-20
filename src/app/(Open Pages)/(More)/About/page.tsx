@@ -27,7 +27,7 @@ export default function Home() {
             </div>
             <div className="col-md-6">
               <img
-                src="images/why1.jpg"
+                src="/images/why1.jpg"
                 alt=""
                 width="100%"
                 style={{ borderRadius: 10 }}
@@ -61,7 +61,7 @@ export default function Home() {
             </div>
             <div className="col-md-6 pt-2">
               <img
-                src="images/aim.jpg"
+                src="/images/aim.jpg"
                 alt=""
                 width="100%"
                 style={{ borderRadius: 10 }}
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="container d-flex1">
           <div className="card text-center mt-5 mr-4 wid18 wid-autoo">
             <div className="card-body">
-              <img src="images/com.png" alt="" />
+              <img src="/images/com.png" alt="" />
               <h5 className="card-title">Best Security</h5>
               <p className="card-text">
                 Paper shared by you will be highly confidential and handled by
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
           <div className="card text-center mt-5 mr-4 wid18 wid-autoo">
             <div className="card-body">
-              <img src="images/ontime_delivery-min.png" alt="" />
+              <img src="/images/ontime_delivery-min.png" alt="" />
               <h5 className="card-title">On-Time Delivery</h5>
               <p className="card-text">
                 We value your time and have a well-known track record of
@@ -94,7 +94,7 @@ export default function Home() {
           </div>
           <div className="card text-center mt-5 mr-4 wid18 wid-autoo">
             <div className="card-body">
-              <img src="images/acceptance-min.png" alt="" />
+              <img src="/images/acceptance-min.png" alt="" />
               <h5 className="card-title">Acceptance</h5>
               <p className="card-text">
                 Get maximum possibilities of journal acceptance with the help of
@@ -104,7 +104,7 @@ export default function Home() {
           </div>
           <div className="card text-center mt-5 wid18 wid-autoo">
             <div className="card-body">
-              <img src="images/great_support-min.png" alt="" />
+              <img src="/images/great_support-min.png" alt="" />
               <h5 className="card-title">Great Support</h5>
               <p className="card-text">
                 Get 24 X 7 instant support with experienced team.
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
             <div className="col-md-6 pt-4">
               <img
-                src="images/aim.jpg"
+                src="/images/aim.jpg"
                 alt=""
                 width="100%"
                 style={{ borderRadius: 10 }}

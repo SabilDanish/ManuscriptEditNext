@@ -9,7 +9,8 @@ export default function Home() {
   const {isLoading,error,result,getPriceCalculator} = usePriceCalculator()
 
   const calculateHandler = () => {
-    getPriceCalculator(wordCount)
+    console.log({wordCount})
+    getPriceCalculator({word_count:wordCount})
   }
 
   
@@ -87,8 +88,10 @@ export default function Home() {
                           Messages.length &&
                           Messages.map((message:any) => {
                             let [message_first_part,message_second_part] = message.split("|")
-                            const numberStr = message_second_part.trim().replace(/'/g, '');
-                            let new_message = `${message_first_part} | ${(+numberStr*Number(wordCount)).toFixed(0)}`
+                            let trimmed_number = message_second_part.trim()
+                            let numberStr = trimmed_number.replace(/[^\d.]/g, "");
+                            let new_message = `${message_first_part} | $${numberStr.split(".")[0]}`
+                
                             return (<div id="pkg1" style={{margin: "1rem"}} key={message}>
                               <div className="btnStyl">
                                 {new_message}
@@ -100,7 +103,7 @@ export default function Home() {
                       <div style={{ marginTop: 12, textAlign: "center" }}>
                         <a
                           className="btn btn-danger"
-                          href="https://www.manuscriptedit.com/register"
+                          href="https://secure.manuscriptedit.com/register"
                           style={{ padding: 10 }}
                         >
                           Get Started
@@ -108,7 +111,7 @@ export default function Home() {
                         &nbsp;&nbsp;
                         <a
                           className="btn"
-                          href="https://www.manuscriptedit.com/register"
+                          href="https://secure.manuscriptedit.com/register"
                           style={{
                             color: "#FFF",
                             backgroundColor: "#1f5174",
@@ -489,7 +492,7 @@ export default function Home() {
                         without worrying about the security of their ideas.
                       </p>
                     </div>
-                    <a href="#" className="btn-learn-more">
+                    <a href="https://secure.manuscriptedit.com/register" className="btn-learn-more">
                       Request a Quote
                     </a>
                   </div>
@@ -637,7 +640,7 @@ export default function Home() {
                 </ul>
 
                 <div className="text-center mt-auto">
-                  <a href="#" className="buy-btn">
+                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
                     Order Now
                   </a>
                 </div>
@@ -704,7 +707,7 @@ export default function Home() {
                 </ul>
 
                 <div className="text-center mt-auto">
-                  <a href="#" className="buy-btn">
+                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
                     Order Now
                   </a>
                 </div>
@@ -771,7 +774,7 @@ export default function Home() {
                 </ul>
 
                 <div className="text-center mt-auto">
-                  <a href="#" className="buy-btn">
+                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
                     Order Now
                   </a>
                 </div>
@@ -838,7 +841,7 @@ export default function Home() {
                 </ul>
 
                 <div className="text-center mt-auto">
-                  <a href="#" className="buy-btn">
+                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
                     Order Now
                   </a>
                 </div>

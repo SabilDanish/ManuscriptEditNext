@@ -24,7 +24,7 @@ export default function Home() {
              We offer a maximum of up to 30 day credit period to large corporations, research groups, universities and
              publishing houses with bulk orders.
          </p>
-         <div className="mb-60 text-center" style={{marginTop:50}}><img src="images/cards.jpg" className="img-responsive"
+         <div className="mb-60 text-center" style={{marginTop:50}}><img src="/images/cards.jpg" className="img-responsive"
                  /></div>
          <h4 className="pb-4">BY ONLINE BANK TRANSFER</h4>
          <p>
