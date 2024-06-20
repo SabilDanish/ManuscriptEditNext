@@ -19,7 +19,7 @@ import testi3 from '../../utils/testi/testi3.png';
 
 const Testimonial = () => {
 
-    const renderStars = (rating) => {
+    const renderStars = (rating:number) => {
         const fullStars = Math.floor(rating);
         const halfStar = rating % 1 !== 0;
         const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
