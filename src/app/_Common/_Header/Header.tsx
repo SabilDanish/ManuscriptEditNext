@@ -18,7 +18,7 @@ export default function Header() {
                   <ul>
                     <li>
                       <a href="#">
-                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN) +1
+                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN) <i className="fa fa-phone" style={{marginLeft:"8px"}}></i>+91 92373 04004 (IN) <i className="fa fa-phone" style={{marginLeft:"8px"}}></i>+1
                         (646)916-3476 (USA)
                       </a>
                     </li>
@@ -432,7 +432,7 @@ export default function Header() {
                         Contact us
                       </a>
                     </li> */}
-                    {/* <li><Link href={'/NewsPromotions'}>News & Conferences</Link></li> */}
+                    <li><Link href={'/NewsPromotions'}>News & Conferences</Link></li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -456,8 +456,8 @@ export default function Header() {
                       </a>
                     </li>
 
-                    {/* <li><Link href={'/Security'}>Global Partner Program</Link></li> */}
-                    <li>
+                    <li><Link href={'/GlobalPartner'}>Global Partner Program</Link></li>
+                    {/* <li>
                       <a
                         onClick={() => {
                           redirect("partner");
@@ -466,7 +466,7 @@ export default function Header() {
                       >
                         Global Partner Program
                       </a>
-                    </li>
+                    </li> */}
 
                     {/* <li><Link href={'/Testimonial'}>Webinar Registration</Link></li> */}
                     <li>
@@ -844,7 +844,7 @@ export default function Header() {
                       Contact us
                     </a>
                   </li> */}
-                  {/* <li><Link href={'/QualityAssurance'}>News & Conferences</Link></li> */}
+                  <li><Link href={'/QualityAssurance'}>News & Conferences</Link></li>
                   {/* <li>
                     <a
                       onClick={() => {
@@ -868,8 +868,8 @@ export default function Header() {
                     </a>
                   </li>
 
-                  {/* <li><Link href={'/Security'}>Global Partner Program</Link></li> */}
-                  <li>
+                  <li><Link href={'/GlobalPartner'}>Global Partner Program</Link></li>
+                  {/* <li>
                     <a
                       onClick={() => {
                         redirect("partner");
@@ -878,7 +878,7 @@ export default function Header() {
                     >
                       Global Partner Program
                     </a>
-                  </li>
+                  </li> */}
 
                   {/* <li><Link href={'/Testimonial'}>Webinar Registration</Link></li> */}
                   <li>

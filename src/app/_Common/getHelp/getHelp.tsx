@@ -6,7 +6,7 @@ import Link from 'next/link';
 const GetHelp = () => {
     const [activeTab, setActiveTab] = useState('firstTab');
 
-    const openTab = (evt:any, cityName:string) => {
+    const openTab = (evt: any, cityName: string) => {
         setActiveTab(cityName);
     };
 
@@ -68,53 +68,138 @@ const GetHelp = () => {
                             <thead>
                                 <tr style={{ textAlign: 'center' }}>
                                     <th scope="col" style={{ color: "#a31e22" }}>Medical Writing</th>
-                                    <th scope="col" style={{ color: "#a31e22", width: "235px" }}>Scientific & Medical Writing</th>
+                                    <th scope="col" style={{ color: "#a31e22", width: "235px" }}>Scientific Writing</th>
                                     <th scope="col" style={{ color: "#a31e22" }}>Statistical Analysis</th>
                                     <th scope="col" style={{ color: "#a31e22", width: '296px' }}>Systematic Review & Meta Analysis</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr >
-                                    <td scope="row"> <span className="checkmark">&#10004;</span>Case Report</td>
-                                    <td><span className="checkmark">&#10004;</span>Research Proposal</td>
-                                    <td><span className="checkmark">&#10004;</span> Results using SPSS software.</td>
-                                    <td><span className="checkmark">&#10004;</span>Study in compliance with PRISMA guidelines.</td>
+                                    <td scope="row"> <span className="checkmark">&#10004;</span>Manuscript Writing &amp; Editing</td>
+                                    <td><span className="checkmark">&#10004;</span>Manuscript Preparation</td>
+                                    <td>
+                                        <ul>
+                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Data Preparation :-</li></strong>
+                                            <li><span className="checkmark">&#10004;</span> Data Cleaning</li>
+                                            <li><span className="checkmark">&#10004;</span> Descriptive Statistics</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Systematic Review:-</li></strong>
+                                            <li><span className="checkmark">&#10004;</span> Literature Search</li>
+                                            <li><span className="checkmark">&#10004;</span> Data Extraction</li>
+                                            <li><span className="checkmark">&#10004;</span> Quality Assessment</li>
+                                            <li><span className="checkmark">&#10004;</span> Narrative Synthesis</li>
+                                        </ul>
+                                    </td>
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Original Research Article</td>
-                                    <td><span className="checkmark">&#10004;</span> Review Article</td>
-                                    <td><span className="checkmark">&#10004;</span>Data analysis using the Defined methods (View)</td>
-                                    <td><span className="checkmark">&#10004;</span>Designing search strategies.</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Clinical Study Reports</td>
+                                    <td><span className="checkmark">&#10004;</span> Literature Reviews</td>
+                                    <td>
+                                        <ul>
+                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Advanced Analysis:-</li></strong>
+                                            <li><span className="checkmark">&#10004;</span> Regression Analysis</li>
+                                            <li><span className="checkmark">&#10004;</span> ANOVA</li>
+                                            <li><span className="checkmark">&#10004;</span> Multivariate Analysis</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Meta-Analysis:-</li></strong>
+                                            <li><span className="checkmark">&#10004;</span> Statistical Analysis</li>
+                                            <li><span className="checkmark">&#10004;</span> Forest Plots</li>
+                                            <li><span className="checkmark">&#10004;</span>Heterogeneity Assessment</li>
+                                        </ul>
+                                    </td>
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Review Article</td>
-                                    <td><span className="checkmark">&#10004;</span>Brief Communication</td>
-                                    <td><span className="checkmark">&#10004;</span>Construction of tables and graphs.</td>
-                                    <td><span className="checkmark">&#10004;</span>Screening the databases with search-strings.</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Regulatory Writing</td>
+                                    <td><span className="checkmark">&#10004;</span>Grant Proposals</td>
+                                    <td>
+                                        <ul>
+                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Specialized Techniques:-</li></strong>
+                                            <li><span className="checkmark">&#10004;</span> Survival Analysis</li>
+                                            <li><span className="checkmark">&#10004;</span> Time Series Analysis</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Reporting:-</li></strong>
+                                            <li><span className="checkmark">&#10004;</span> PRISMA Diagram</li>
+                                            <li><span className="checkmark">&#10004;</span> Manuscript Preparation</li>
+                                            <li><span className="checkmark">&#10004;</span> Journal Submission</li>
+                                        </ul>
+                                    </td>
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Research Proposal</td>
-                                    <td><span className="checkmark">&#10004;</span>Original Research Article</td>
-                                    <td> <span className="checkmark">&#10004;</span>Interpretation of results.</td>
-                                    <td> <span className="checkmark">&#10004;</span>Construction of tables and forest plots.</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Medical Communications</td>
+                                    <td><span className="checkmark">&#10004;</span>Technical Reports</td>
+                                    <td>
+                                        <ul>
+                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Report & Visualization:-</li></strong>
+                                            <li><span className="checkmark">&#10004;</span> Data Visualization</li>
+                                            <li><span className="checkmark">&#10004;</span> Statistical Reporting</li>
+                                        </ul>
+                                    </td>
+                                   
+
+
+                                </tr>
+
+                                {/* <tr>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Systematic Reviews</td>
+                                    <td><span className="checkmark">&#10004;</span>Research Summaries</td>
+
+
+                                </tr>
+
+
+                                <tr>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Grant Writing</td>
+                                    <td><span className="checkmark">&#10004;</span>Conference Abstracts</td>
 
 
                                 </tr>
 
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Original Research Article</td>
-                                    <td><span className="checkmark">&#10004;</span>Customized Writing</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Patient Case Reports</td>
+                                    <td><span className="checkmark">&#10004;</span>Scientific Presentations</td>
 
 
                                 </tr>
+
+                                <tr>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Medical Education Content</td>
+
+
+
+                                </tr>
+
+                                <tr>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>White Papers</td>
+
+
+
+                                </tr>
+ */}
+
+
+
+
+
+
+
+
                             </tbody>
                         </table>
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            
+
 
                             <Link href="/Writing" className='dtbtn'>View More</Link>
                         </div>
@@ -124,70 +209,88 @@ const GetHelp = () => {
                         <table className="table table-bordered">
                             <thead>
                                 <tr style={{ textAlign: 'center' }}>
-                                    <th scope="col" style={{ color: "#a31e22" }}>Premium Plus Package</th>
-                                    <th scope="col" style={{ color: "#a31e22" }}>Premium Package</th>
-                                    <th scope="col" style={{ color: "#a31e22" }}>Advanced Package</th>
                                     <th scope="col" style={{ color: "#a31e22" }}>Standard Package</th>
+                                    <th scope="col" style={{ color: "#a31e22" }}>Advanced Package</th>
+                                    <th scope="col" style={{ color: "#a31e22" }}>Premium Package</th>
+                                    <th scope="col" style={{ color: "#a31e22" }}>Premium + Package</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td scope="row"> <span className="checkmark">&#10004;</span>Data Analysis</td>
-                                    <td><span className="checkmark">&#10004;</span>Substantive Editing</td>
-                                    <td> <span className="checkmark">&#10004;</span>Substantive Editing</td>
+                                    <td scope="row"> <span className="checkmark">&#10004;</span>Peer Review Analysis</td>
+                                    <td><span className="checkmark">&#10004;</span>Peer Review Analysis</td>
+                                    <td> <span className="checkmark">&#10004;</span>Peer Review Analysis</td>
+                                    <td><span className="checkmark">&#10004;</span>Peer Review Analysis</td>
+
+                                </tr>
+                                <tr>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Journal Selection</td>
+                                    <td><span className="checkmark">&#10004;</span> Substantive Editing</td>
+                                    <td><span className="checkmark">&#10004;</span> Substantive Editing</td>
+                                    <td><span className="checkmark">&#10004;</span>Data Analysis</td>
+
+                                </tr>
+                                <tr>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Target Journal Formatting</td>
                                     <td><span className="checkmark">&#10004;</span>Journal Selection</td>
+                                    <td><span className="checkmark">&#10004;</span>Journal Selection</td>
+                                    <td><span className="checkmark">&#10004;</span> Research Paper Writing</td>
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Research Paper Writing</td>
-                                    <td><span className="checkmark">&#10004;</span> Journal Selection</td>
-                                    <td><span className="checkmark">&#10004;</span> Journal Selection</td>
-                                    <td><span className="checkmark">&#10004;</span>Target Journal Formatting</td>
-
-                                </tr>
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Research Paper Writing</td>
-                                    <td><span className="checkmark">&#10004;</span>Target Journal Formatting</td>
-                                    <td><span className="checkmark">&#10004;</span>Target Journal Formatting</td>
-                                    <td><span className="checkmark">&#10004;</span> Journal Submission</td>
-
-                                </tr>
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Substantive Editing</td>
-                                    <td><span className="checkmark">&#10004;</span>Artwork Formatting</td>
-                                    <td> <span className="checkmark">&#10004;</span>Journal Submission</td>
-                                    <td><span className="checkmark">&#10004;</span> Cover Letter Writing</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Cover Letter writing</td>
+                                    <td><span className="checkmark">&#10004;</span>Target Journal Formatting.</td>
+                                    <td> <span className="checkmark">&#10004;</span>Target Journal Formatting</td>
+                                    <td><span className="checkmark">&#10004;</span> Substantive Editing</td>
 
 
                                 </tr>
 
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>journal Selection</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
                                     <td><span className="checkmark">&#10004;</span>Journal Submission</td>
-                                    <td><span className="checkmark">&#10004;</span>Cover Letter Writing</td>
-                                    <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
+                                    <td><span className="checkmark">&#10004;</span>Artwork Formatting</td>
+                                    <td><span className="checkmark">&#10004;</span>Journal Selection</td>
                                 </tr>
 
                                 <tr>
                                     <td scope="row"><span className="checkmark">&#10004;</span>Journal Submission</td>
-                                    <td><span className="checkmark">&#10004;</span>Response to Reviewers</td>
+                                    <td><span className="checkmark">&#10004;</span>Cover Letter writing</td>
+                                    <td><span className="checkmark">&#10004;</span>Journal Submission</td>
+                                    <td><span className="checkmark">&#10004;</span>Journal Submission</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td scope="row"></td>
                                     <td><span className="checkmark">&#10004;</span>Plagiarism Check</td>
+                                    <td><span className="checkmark">&#10004;</span>Response to Reviewers*</td>
+                                    <td><span className="checkmark">&#10004;</span>Target Journal Formatting*</td>
 
                                 </tr>
 
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Target Journal Formatting</td>
-                                    <td><span className="checkmark">&#10004;</span>Peer Review Analysis</td>
+                                    <td scope="row"></td>
                                     <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
-
+                                    <td><span className="checkmark">&#10004;</span>Cover Letter Writing</td>
+                                    <td><span className="checkmark">&#10004;</span>Artwork Formatting</td>
                                 </tr>
 
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Artwork Formatting</td>
-                                    <td><span className="checkmark">&#10004;</span>Cover Letter Writing</td>
-
-
+                                    <td scope="row"></td>
+                                    <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
+                                    <td><span className="checkmark">&#10004;</span>Plagiarism Check</td>
+                                    <td><span className="checkmark">&#10004;</span>Response To Reviewer</td>
                                 </tr>
+
+                                <tr>
+                                    <td scope="row"></td>
+                                    <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
+                                    <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
+                                    <td><span className="checkmark">&#10004;</span>Cover Letter Writing</td>
+                                </tr>
+
+
                                 {/* 
                                 <tr>
                                     <td scope="row"><span className="checkmark">&#10004;</span>Response To Reviewer</td>
@@ -208,7 +311,7 @@ const GetHelp = () => {
                         </table>
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            
+
 
                             <Link href="/PackageService" className='dtbtn'>View More</Link>
                         </div>
@@ -218,42 +321,57 @@ const GetHelp = () => {
                         <table className="table table-bordered">
                             <thead>
                                 <tr style={{ textAlign: 'center' }}>
-                                    <th scope="col" style={{ color: "#a31e22" }}>Proofreading</th>
-                                    <th scope="col" style={{ color: "#a31e22" }}>Substantive Editing</th>
-                                    <th scope="col" style={{ color: "#a31e22" }}>Extensive Substantive Editing</th>
+                                    <th scope="col" style={{ color: "#a31e22" }}>Standard Editing</th>
+                                    <th scope="col" style={{ color: "#a31e22" }}>Advanced Editing</th>
+                                    <th scope="col" style={{ color: "#a31e22" }}>Premium Editing</th>
+                                    <th scope="col" style={{ color: "#a31e22" }}>Scientific Editing</th>
 
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td scope="row"> <span className="checkmark">&#10004;</span> Thorough reading of manuscript.</td>
-                                    <td><span className="checkmark">&#10004;</span> All included in Proof reading</td>
-                                    <td> <span className="checkmark">&#10004;</span> All included in Substantive Editing</td>
+                                    <td scope="row"> <span className="checkmark">&#10004;</span> Language Check</td>
+                                    <td><span className="checkmark">&#10004;</span> Language Precision</td>
+                                    <td><span className="checkmark">&#10004;</span> Advanced Editing</td>
+                                    <td><span className="checkmark">&#10004;</span> Premium Editing</td>
+                                    
 
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Spotting all errors.</td>
-                                    <td><span className="checkmark">&#10004;</span> Verify scientific terminology, units, symbols, and variables.</td>
-                                    <td><span className="checkmark">&#10004;</span>  Editing and review by two Subject matter expert</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Word Count Reduction</td>
+                                    <td><span className="checkmark">&#10004;</span> Logic Fix</td>
+                                    <td><span className="checkmark">&#10004;</span>Response Letter Editing</td>
+                                    <td><span className="checkmark">&#10004;</span> Manuscript Assessment</td>
 
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Review capitalization and punctuation.</td>
-                                    <td><span className="checkmark">&#10004;</span>Rephrase & revise sentences for clarity and word choice.</td>
-                                    <td><span className="checkmark">&#10004;</span>Rephrase & revise paragraphs for clarity and word choice.</td>
-
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Spelling Check</td>
+                                    <td><span className="checkmark">&#10004;</span>Word Count Reduction</td>
+                                    <td><span className="checkmark">&#10004;</span> Crosschecking Responses</td>
+                                    <td><span className="checkmark">&#10004;</span>Scientific Review</td>
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Check for spelling, grammar, and typos.</td>
-                                    <td><span className="checkmark">&#10004;</span> Remove repetitions for logical presentation.</td>
-                                    <td> <span className="checkmark">&#10004;</span>Improve organization</td>
-
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Grammar Check</td>
+                                    <td><span className="checkmark">&#10004;</span> Cover Letter</td>
+                                    <td><span className="checkmark">&#10004;</span> Manuscript Formatting</td>
+                                    <td><span className="checkmark">&#10004;</span> Re-editing Support</td>
 
 
                                 </tr>
+
+                                <tr>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Editing Certificate</td>
+                                    <td><span className="checkmark">&#10004;</span> Editing Certificate</td>
+                                    <td><span className="checkmark">&#10004;</span> Editing Certificate</td>
+                                    <td><span className="checkmark">&#10004;</span>Editing Certificate</td>
+
+
+                                </tr>
+
+
 
                                 {/* <tr>
                                     <td scope="row"><span className="checkmark">&#10004;</span>Remove redundancies</td>
@@ -278,7 +396,7 @@ const GetHelp = () => {
                         </table>
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            
+
 
                             <Link href="/EditingOverview" className='dtbtn'>View More</Link>
                         </div>
@@ -296,54 +414,41 @@ const GetHelp = () => {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td scope="row"> <span className="checkmark">&#10004;</span>  Journal Guidance (3)</td>
-                                    <td><span className="checkmark">&#10004;</span> Journal Guidance (5)</td>
-                                    <td> <span className="checkmark">&#10004;</span> Journal Guidance (8)</td>
+                                    <td scope="row"> <span className="checkmark">&#10004;</span>  Grant Search Assistance</td>
+                                    <td><span className="checkmark">&#10004;</span>Detailed Grant Search</td>
+                                    <td> <span className="checkmark">&#10004;</span> Customized Grant Search</td>
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Literature search assistance (2)</td>
-                                    <td><span className="checkmark">&#10004;</span> Literature search assistance (5)</td>
-                                    <td><span className="checkmark">&#10004;</span>  Literature search assistance (3)</td>
-
-
-                                </tr>
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Writing support (3)</td>
-                                    <td><span className="checkmark">&#10004;</span>Writing support (5)</td>
-                                    <td><span className="checkmark">&#10004;</span>Writing support (8)</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Proposal Writing</td>
+                                    <td><span className="checkmark">&#10004;</span> Proposal Writing &amp; Review</td>
+                                    <td><span className="checkmark">&#10004;</span>  Full Proposal Development</td>
 
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Editing consultation (1)</td>
-                                    <td><span className="checkmark">&#10004;</span> Editing consultation (5)</td>
-                                    <td> <span className="checkmark">&#10004;</span> Editing consultation (8)</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Budget Planning</td>
+                                    <td><span className="checkmark">&#10004;</span>Comprehensive Budget Planning</td>
+                                    <td><span className="checkmark">&#10004;</span>Advanced Budget Planning</td>
+
+
+                                </tr>
+                                <tr>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Project Outline Development</td>
+                                    <td><span className="checkmark">&#10004;</span> Project Management Plan</td>
+                                    <td> <span className="checkmark">&#10004;</span>Project Strategy Consultation</td>
 
 
 
                                 </tr>
 
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Artwork consultation (1)</td>
-                                    <td><span className="checkmark">&#10004;</span>Artwork consultation (5)</td>
-                                    <td><span className="checkmark">&#10004;</span>Artwork consultation (8)</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Editing Consultation</td>
+                                    <td><span className="checkmark">&#10004;</span>Editing and Formatting</td>
+                                    <td><span className="checkmark">&#10004;</span>Ongoing Support &amp; Revisions</td>
 
                                 </tr>
 
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>  Abstract Optimisation (1)</td>
-                                    <td><span className="checkmark">&#10004;</span>Abstract Optimisation (5)</td>
-                                    <td><span className="checkmark">&#10004;</span>In-depth Journal Consultation (4)</td>
-
-                                </tr>
-
-
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td><span className="checkmark">&#10004;</span>In-depth Journal Consultation (2)</td>
-                                    <td><span className="checkmark">&#10004;</span>Advanced Literature Search Guidance (4)</td>
-
-                                </tr>
+                              
 
                                 {/* <tr>
                                     <td scope="row"></td>
@@ -380,7 +485,7 @@ const GetHelp = () => {
                         </table>
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            
+
 
                             <Link href="/ResearchSupportOverview" className='dtbtn'>View More</Link>
                         </div>
@@ -399,38 +504,53 @@ const GetHelp = () => {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td scope="row"> <span className="checkmark">&#10004;</span>  PhD topic consultation</td>
-                                    <td><span className="checkmark">&#10004;</span> PhD topic consultation and selection</td>
-                                    <td> <span className="checkmark">&#10004;</span> Statistical analysis using SPSS/Data analysis</td>
-                                    <td><span className="checkmark">&#10004;</span>Journal Manuscript framework preparation</td>
-                                    <td><span className="checkmark">&#10004;</span>Initial Consultation and Invention Disclosure</td>
+                                    <td scope="row"> <span className="checkmark">&#10004;</span>  PhD Topic Consultation</td>
+                                    <td><span className="checkmark">&#10004;</span> Concept Paper Development</td>
+                                    <td> <span className="checkmark">&#10004;</span> Review of Literature</td>
+                                    <td><span className="checkmark">&#10004;</span>Data Analysis</td>
+                                    <td><span className="checkmark">&#10004;</span>Writing Support</td>
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>PhD topic selection & proposal help</td>
-                                    <td><span className="checkmark">&#10004;</span> Guidance on developing a project proposal</td>
-                                    <td><span className="checkmark">&#10004;</span> Research design consultation</td>
-                                    <td><span className="checkmark">&#10004;</span>Thesis review</td>
-                                    <td><span className="checkmark">&#10004;</span>Patent Search</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>PhD Project Proposal Writing</td>
+                                    <td><span className="checkmark">&#10004;</span> Guidance on Developing a Project Proposal</td>
+                                    <td><span className="checkmark">&#10004;</span> Questionnaire Development</td>
+                                    <td><span className="checkmark">&#10004;</span>Thesis Writing Assistance</td>
+                                    <td><span className="checkmark">&#10004;</span>Proofreading</td>
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Choosing subject field guidance</td>
-                                    <td><span className="checkmark">&#10004;</span>Writing assistance for scholarship proposals and grant applications</td>
-                                    <td><span className="checkmark">&#10004;</span>Questionnaire development</td>
-                                    <td><span className="checkmark">&#10004;</span> Dedicated expert as a mentor for final review</td>
-                                    <td><span className="checkmark">&#10004;</span>Drafting the Patent Application</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Choosing Subject Field Guidance</td>
+                                    <td><span className="checkmark">&#10004;</span>Writing Assistance for Scholarship Proposals and Grant Applications</td>
+                                    <td><span className="checkmark">&#10004;</span>Statistical Analysis Using SPSS/Data Analysis</td>
+                                    <td><span className="checkmark">&#10004;</span> PhD Mock Viva Assistance</td>
+                                    <td><span className="checkmark">&#10004;</span>Dedicated Expert Mentor for Final Review</td>
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Webinars and workshops on research trends and application processes</td>
-                                    <td><span className="checkmark">&#10004;</span> Research coursework support and test preparation</td>
-                                    <td> <span className="checkmark">&#10004;</span>Conference poster assistance</td>
-                                    <td><span className="checkmark">&#10004;</span> Workshop on manuscript submission and publication process</td>
-                                    <td><span className="checkmark">&#10004;</span> Patent Review and Feedback</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Webinars and Workshops on Research Trends</td>
+                                    <td><span className="checkmark">&#10004;</span> Literature Review and Data Collection Support</td>
+                                    <td> <span className="checkmark">&#10004;</span>Research Design Consultation</td>
+                                    <td><span className="checkmark">&#10004;</span> Writing and Submission of Second Indexed Paper</td>
+                                    <td><span className="checkmark">&#10004;</span> Workshop on Manuscript Submission and Publication Process</td>
 
 
                                 </tr>
+
+
+                                <tr>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Problem Statement Formulation</td>
+                                    <td><span className="checkmark">&#10004;</span> Initial Data Analysis</td>
+                                    <td><span className="checkmark">&#10004;</span> Writing and Submission of First Indexed Paper</td>
+                                    <td><span className="checkmark">&#10004;</span> Thesis Review and Feedback</td>
+                                    <td><span className="checkmark">&#10004;</span> Defense Preparation and Methodology Consultation</td>
+                                   
+
+
+                                </tr>
+
+
+
 
                                 {/* <tr>
                                     <td scope="row"></td>
@@ -471,7 +591,7 @@ const GetHelp = () => {
                         </table>
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            
+
 
                             <Link href="/PHDThesis" className='dtbtn'>View More</Link>
                         </div>

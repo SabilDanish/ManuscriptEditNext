@@ -66,3 +66,16 @@ body {
     display: none;
   }
 }
+
+li{
+  list-style-type: none;
+}
+
+.Headingli{
+  font-weight: 600;
+}
+
+.checkmarkli{
+  color: #dce4e7;
+  padding-left: 8px;
+}

@@ -79,4 +79,9 @@ h2{
     background-color: rgba(255, 255, 255, 0.8); /* Optional: adds a semi-transparent background */
     z-index: 9999; /* Ensures the overlay is above other content */
   }
+
+
+  .modal-body img {
+    width: 150px;
+  }
   

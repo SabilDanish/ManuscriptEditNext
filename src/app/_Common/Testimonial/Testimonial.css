@@ -1,0 +1,27 @@
+/* Add to Testimonial.css */
+
+.star-rating {
+    display: flex;
+    direction: row;
+    font-size: 2rem; /* Adjust size as needed */
+    color: #ffd700;
+    justify-content: start;
+    padding-top: 10px;
+}
+
+.star-rating .star {
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+.star-rating .star.full {
+    color: #ffd700;
+}
+
+.star-rating .star.empty {
+    color: #e0e0e0;
+}
+
+.card span {
+    font-size: 23px;
+}

@@ -19,6 +19,24 @@ import testi3 from '../../utils/testi/testi3.png';
 
 const Testimonial = () => {
 
+    const renderStars = (rating) => {
+        const fullStars = Math.floor(rating);
+        const halfStar = rating % 1 !== 0;
+        const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+        return (
+            <div className="star-rating">
+                {Array.from({ length: fullStars }, (_, index) => (
+                    <span key={index} className="star full">★</span>
+                ))}
+                {halfStar && <span className="star full">★</span>}
+                {Array.from({ length: emptyStars }, (_, index) => (
+                    <span key={index} className="star empty">★</span>
+                ))}
+            </div>
+        );
+    };
+
     return (
         <>
 
@@ -75,6 +93,7 @@ const Testimonial = () => {
                                             <Card.Text>All-Russian Institute of Plant Protection (VIZR), RUSSIA.</Card.Text>
                                         </div>
                                     </Card.Body>
+                                    {renderStars(4.5)}
                                 </Card>
                             </SwiperSlide>
                             <SwiperSlide>
@@ -98,6 +117,7 @@ const Testimonial = () => {
                                             <Card.Text>M.B.Ch.B (University of Sulaimani/School of Medicine)</Card.Text>
                                         </div>
                                     </Card.Body>
+                                    {renderStars(4.0)}
                                 </Card>
                             </SwiperSlide>
                             <SwiperSlide>
@@ -121,12 +141,14 @@ const Testimonial = () => {
                                             <Card.Text> M.B.Ch.B (University of Sulaimani/School of Medicine)</Card.Text>
                                         </div>
                                     </Card.Body>
+                                    {renderStars(5.0)}
                                 </Card>
                             </SwiperSlide>
                         </Swiper>
                     </div>
                 </div>
             </div>
+
         </>
 
     )
