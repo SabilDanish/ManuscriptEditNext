@@ -136,7 +136,7 @@ a.meanmenu-reveal{display:none}
 }
 .mean-container .mean-bar::before {
 	color: #fff;
-	content: "ManuscriptEdit";
+	/* content: "ManuscriptEdit"; */
 	font-size: 22px;
 	font-weight: 800;
 	left: 10px;

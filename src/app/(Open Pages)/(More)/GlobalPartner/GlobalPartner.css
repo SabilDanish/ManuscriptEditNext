@@ -1,0 +1,63 @@
+.Global-Header{
+    text-align: center;
+    font-weight: 600;
+}
+
+.GlobalImage{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.askusbtn{
+    text-align: center;
+    margin-top: 18px;
+}
+
+.globalbtn{
+    background-color: #a31e22;
+    color: white;
+    border: none;
+    background: #a31e22;
+    padding: 6px 57px;
+    border-radius: 6px;
+}
+
+.containerGlobal{
+    margin-top:30px
+}
+
+@media (max-width:768px){
+    .Global-Header{
+        font-weight: 400;
+        text-align: justify;
+        padding: 12px;
+    }
+}
+
+
+.Mid-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.GlobalHeadingMid{
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+.centroidGlobal{
+    display: flex;
+    justify-content: center;
+}
+
+
+.GlobalInp{
+    width: 80%;
+    margin-top: 20px;
+}
+
+.containerGlobal2{
+    margin-bottom: 60px;
+}

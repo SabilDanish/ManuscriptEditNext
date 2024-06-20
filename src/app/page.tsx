@@ -27,6 +27,7 @@ import TrustedPartner from "./_Common/_TrustedPartner/TrustedPartner";
 import GetHelpMobile from "./_Common/_getHelpMobile/getHelpMobile";
 import TopBannerForm from "./_Common/_TopBannerForm/TopBannerForm";
 import EnquiryForm from "./_Common/_enquiryForm/EnquiryForm";
+import CounterComponent from "./_Common/CounterUp/CounterUp";
 
 
 
@@ -71,6 +72,8 @@ export default function Home() {
       <Clients />
 
       <OurProfessional />
+
+      <CounterComponent/>
 
       <Testimonial />
 

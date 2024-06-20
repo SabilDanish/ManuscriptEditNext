@@ -1,0 +1,23 @@
+.counteupPart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2d4d4;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 8px grey;
+}
+
+.CounterPara{
+    margin-top: 10px;
+    font-weight: 600;
+    color: #a31e22;
+}
+
+.counterHeading{
+    padding-top: 20px;
+    font-weight: 700;
+    color: #a31e22;
+}
+

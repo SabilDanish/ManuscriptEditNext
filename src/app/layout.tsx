@@ -42,24 +42,24 @@ export default function RootLayout({
     <html lang="en">
       <title>Manuscript-Edit</title>
       <link href="/img/manu.ico" rel="icon"></link>
-      <Script type="text/javascript" src="/admin/admin/js/vendor/jquery-3.2.1.min.js" />
-      <Script type="text/javascript" src="/admin/admin/js/bootstrap.min.js" />
-      <Script type="text/javascript" src="/admin/admin/js/bootstrap.bundle.min.js" />
-      <Script type="text/javascript" src="/admin/admin/js/owl.carousel.min.js" />
-      <Script type="text/javascript" src="/admin/admin/js/jquery.counterup.min.js" />
-      <Script type="text/javascript" src="/admin/admin/js/waypoints.min.js" />
-      <Script type="text/javascript" src="/admin/admin/js/wow.js" />
-      <Script type="text/javascript" src="/admin/admin/js/imagesloaded.pkgd.min.js" />
+      <Script type="text/javascript" src="/js/vendor/jquery-3.2.1.min.js" />
+      <Script type="text/javascript" src="/js/bootstrap.min.js" />
+      <Script type="text/javascript" src="/js/bootstrap.bundle.min.js" />
+      <Script type="text/javascript" src="/js/owl.carousel.min.js" />
+      <Script type="text/javascript" src="/js/jquery.counterup.min.js" />
+      <Script type="text/javascript" src="/js/waypoints.min.js" />
+      <Script type="text/javascript" src="/js/wow.js" />
+      <Script type="text/javascript" src="/js/imagesloaded.pkgd.min.js" />
       {/* <Script type='text/javascript' src="/venobox/venobox.js"/> */}
-      <Script type="text/javascript" src="/admin/admin/js/ajax-mail.js" />
-      <Script type="text/javascript" src="/admin/admin/js/testimonial.js" />
-      <Script type="text/javascript" src="/admin/admin/js/animated-text.js" />
-      <Script type="text/javascript" src="/admin/admin/venobox/venobox.min.js" />
-      <Script type="text/javascript" src="/admin/admin/js/isotope.pkgd.min.js" />
-      <Script type="text/javascript" src="/admin/admin/js/jquery.nivo.slider.pack.js" />
-      <Script type="text/javascript" src="/admin/admin/js/jquery.meanmenu.js" />
-      <Script type="text/javascript" src="/admin/admin/js/jquery.scrollUp.js" />
-      <Script type="text/javascript" src="/admin/admin/js/theme.js" />
+      <Script type="text/javascript" src="/js/ajax-mail.js" />
+      <Script type="text/javascript" src="/js/testimonial.js" />
+      <Script type="text/javascript" src="/js/animated-text.js" />
+      <Script type="text/javascript" src="/venobox/venobox.min.js" />
+      <Script type="text/javascript" src="/js/isotope.pkgd.min.js" />
+      <Script type="text/javascript" src="/js/jquery.nivo.slider.pack.js" />
+      <Script type="text/javascript" src="/js/jquery.meanmenu.js" />
+      <Script type="text/javascript" src="/js/jquery.scrollUp.js" />
+      <Script type="text/javascript" src="/js/theme.js" />
       <body className="loaded">
         <ToastContainer />
         {/* <header/> */}

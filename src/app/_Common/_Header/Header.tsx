@@ -23,7 +23,7 @@ export default function Header() {
                   <ul>
                     <li>
                       <a href="#">
-                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN) +1
+                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN) <i className="fa fa-phone" style={{marginLeft:"8px"}}></i>+91 92373 04004 (IN) <i className="fa fa-phone" style={{marginLeft:"8px"}}></i>+1
                         (646)916-3476 (USA)
                       </a>
                     </li>
@@ -261,7 +261,7 @@ export default function Header() {
                                 Customized Services
                               </Link>
                             </li>
-                            <li>
+                            {/* <li>
                               <a
                                 onClick={() => {
                                   redirectSameTab("corporate");
@@ -270,7 +270,7 @@ export default function Header() {
                               >
                                 Corporate Services
                               </a>
-                            </li>
+                            </li> */}
                           </ul>
                         </li>
                       </ul>
