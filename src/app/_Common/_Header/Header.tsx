@@ -9,11 +9,6 @@ export default function Header() {
   const router = useRouter()
   return (
     <>
-      {/* <div className="loader-wrapper">
-          <div className="loader"></div>
-          <div className="loder-section left-section"></div>
-          <div className="loder-section right-section"></div>
-        </div> */}
       <div className="header_top_menu pt-2 pb-2 bg_color">
         <div className="container">
           <div className="row">
@@ -403,7 +398,7 @@ export default function Header() {
                     <li>
                       <Link href={"/About"}>About Us</Link>
                     </li>
-                    {/* <li><Link href={'/ClientList'}>Client List</Link></li> */}
+                    <li><Link href={'/ClientList'}>Client List</Link></li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -815,7 +810,7 @@ export default function Header() {
                   <li>
                     <Link href={"/About"}>About Us</Link>
                   </li>
-                  {/* <li><Link href={'/'}>Client List</Link></li> */}
+                  <li><Link href={'/'}>Client List</Link></li>
                   {/* <li>
                     <a
                       onClick={() => {

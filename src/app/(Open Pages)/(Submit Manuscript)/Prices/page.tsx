@@ -3,6 +3,7 @@ import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import './price.css'
 import usePriceCalculator from "@/app/hooks/priceCalculator/usePriceCalculator";
 import { useState } from "react";
+import { DNA } from "react-loader-spinner";
 
 export default function Home() {
   const [wordCount, setWordCount] = useState<string | null>()
@@ -65,6 +66,8 @@ export default function Home() {
             {/* </div> */}
           </div>
           {/* </div> */}
+
+          {isLoading ? <div style={{width: "100%", display: "flex", justifyContent: "center"}}><DNA /></div> : ""}
 
           <div className="row gy-4">
             {result &&

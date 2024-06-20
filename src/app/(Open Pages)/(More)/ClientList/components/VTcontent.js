@@ -3,7 +3,6 @@ import "./VTcontent.css";
 
 function VTcontent(props) {
   let data = props.data;
-  console.log({props})
 
   return (
     <div
@@ -17,8 +16,8 @@ function VTcontent(props) {
     >
       <h4>{data.country}</h4>
       <h5>{data.Status}</h5>
-      {data.universities.split("=").map(detail => (
-        <p className="section__Jobs-detail">{detail}</p>
+      {data.universities.split("=").map((detail,index) => (
+        <p key={index} className="section__Jobs-detail">{detail}</p>
       ))}
     </div>
   );

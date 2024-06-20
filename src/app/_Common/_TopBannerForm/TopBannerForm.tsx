@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./TopBannerForm.css";
 import banner1 from "../../utils/images/banner12.jpg";
 import banner2 from "../../utils/images/banner13.jpg";
@@ -15,6 +15,7 @@ const TopBannerForm = () => {
     email: "",
     msg: "",
   });
+  const formRef = useRef<any>(null);
 
   const { isLoading, postData } = useForm();
   useEffect(() => {
@@ -44,32 +45,18 @@ const TopBannerForm = () => {
   }, []);
 
   const formHandler = (event: any) => {
-    console.log({ event });
     const { name, value } = event.target;
     setForm({ ...form, [name]: value });
   };
 
   const formSubmitOne = (e: any) => {
-    e.preventDefault();
     postData(form);
-    setForm({
-      name: "",
-      service: "",
-      phone_no: "",
-      email: "",
-      msg: "",
-    });
+    formRef.current.reset();
   };
 
-  const formSubmitTwo = () => {
+  const formSubmitTwo = (e:any) => {
     postData(form);
-    setForm({
-      name: "",
-      service: "",
-      phone_no: "",
-      email: "",
-      msg: "",
-    });
+    formRef.current.reset();
   };
 
   return (
@@ -94,7 +81,7 @@ const TopBannerForm = () => {
         </div>
         <div className="formContainer">
           <h6>Get Quick Response Within 24 Hours</h6>
-          <form id="contactForm">
+          <form ref={formRef} id="contactForm">
             <input
               type="text"
               name="name"

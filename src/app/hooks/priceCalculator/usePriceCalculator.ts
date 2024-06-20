@@ -28,7 +28,7 @@ const usePriceCalculator = () => {
                 }
             }).catch(err => {
                 setError("Your mail cannot be registered");
-                toast.error("Your mail cannot be registered")
+                toast.error("Something went wrong.Please wait before retrying")
             }).finally(() => {
                 setIsLoading(false);
             })
