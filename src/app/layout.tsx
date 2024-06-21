@@ -23,12 +23,12 @@ import header from "./_Common/_Header/Header";
 // import "./globals.css";
 import footer from "./_Common/_Footer/Footer";
 import Script from "next/script";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./_Common/_Header/Header";
 import { DefaultSeo } from "next-seo";
-import SEO from "../../next-seo.config";
+// import SEO from "../../next-seo.config";
 
 // export const metadata: Metadata = {
 //   title: "Manuscript-Edit",
@@ -40,6 +40,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  useEffect(() => {
+    const url = 'https://salesiq.zoho.com/widget';
+    const widgetCode = '48b75dd3dada5e99bd73a91fe334bbb18644220ee9201f866679581b19cc5384';
+    const script = document.createElement('script');
+    script.setAttribute("type", "text/javascript");
+    script.setAttribute("id", "scriptid");
+    let code = `var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "${widgetCode}", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="${url}";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.innerHTML = "<div id='zsiqwidget'></div>";`
+    script.appendChild(document.createTextNode(code));
+    document.body.appendChild(script);
+  }, [])
   return (
     <html lang="en">
       {/* <DefaultSeo {...SEO}/> */}
@@ -66,10 +77,10 @@ export default function RootLayout({
         <Script type="text/javascript" src="/js/jquery.meanmenu.js" />
         <Script type="text/javascript" src="/js/jquery.scrollUp.js" />
         <Script type="text/javascript" src="/js/theme.js" />
-        {/* <Script type="text/javascript" src="/js/clarity.js" strategy="lazyOnload"/>
-        <Script type="text/javascript" src="/js/addRoll.js" strategy="lazyOnload"/>
-        <Script type="text/javascript" src="/js/facebookPixelCodeOne.js" strategy="lazyOnload"/>
-        <Script type="text/javascript" src="/js/facebookPixelCodeTwo.js" strategy="lazyOnload"/>
+        <Script type="text/javascript" src="/js/clarity.js" strategy="lazyOnload" />
+        <Script type="text/javascript" src="/js/addRoll.js" strategy="lazyOnload" />
+        <Script type="text/javascript" src="/js/facebookPixelCodeOne.js" strategy="lazyOnload" />
+        <Script type="text/javascript" src="/js/facebookPixelCodeTwo.js" strategy="lazyOnload" />
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=576246542585612&ev=PageView&noscript=1" />
         </noscript>
@@ -78,7 +89,7 @@ export default function RootLayout({
         </noscript>
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC86N23" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe>
-        </noscript> */}
+        </noscript>
         {/* <Script
           id="zoho-salesiq"
           type="text/javascript"

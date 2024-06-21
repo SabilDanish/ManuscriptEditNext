@@ -1,21 +1,8 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
-import { NextSeo } from "next-seo";
 
 export default function Home() {
   return (
     <>
-      <NextSeo
-        title="Research Enhancement Services - Manuscriptedit"
-        description="In academic research, visibility and impact are currencies of success. At Manuscriptedit.com, we offer bespoke Research Enhancement Services designed to amplify the reach and recognition of your scholarly work."
-        canonical="https://manuscriptedit.com/ResearchEnhancementServices/"
-        openGraph={{
-          url: "https://manuscriptedit.com/ResearchEnhancementServices/",
-          title: "Research Enhancement Services - Manuscriptedit",
-          description:
-            "In academic research, visibility and impact are currencies of success. At Manuscriptedit.com, we offer bespoke Research Enhancement Services designed to amplify the reach and recognition of your scholarly work.",
-          site_name: "ManuscriptEdit",
-        }}
-      />
       {breadcrum(
         "Services / Research Support",
         "Research Enhancement Services"
