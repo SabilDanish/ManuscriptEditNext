@@ -1,53 +1,54 @@
-
 @media (max-width: 425px) {
 
   body {
     align-items: left;
     background-color: #f0f0f0;
+
     .slider-container {
       overflow: hidden;
       background-color: #fff;
       border: none;
     }
-  
+
     .slider {
       display: flex;
       transition: transform 0.5s ease-in-out;
     }
-  
+
     .slide {
       min-width: 100%;
       box-sizing: border-box;
       padding: 20px;
       text-align: left;
     }
-  
+
     h2 {
       margin-bottom: 10px;
     }
-  
+
     ul {
       list-style-type: none;
       padding: 0;
     }
-  
+
     li {
       margin: 5px 0;
     }
-  
-    .accordion-button{
-      border:none;
+
+    .accordion-button {
+      border: none;
       text-align: left;
       padding: 1rem;
       font-size: smaller;
       font-weight: 400;
-      border-color:white;
+      border-color: white;
     }
-    .accordion-button:hover{
+
+    .accordion-button:hover {
       background-color: #c3ddff;
-      border-color:white;
+      border-color: white;
     }
-  
+
     .buttonv {
       display: inline-block;
       padding: 5px 25px;
@@ -63,22 +64,40 @@
       margin-left: 10%;
       margin-bottom: 2%;
     }
-  
+
     .buttonv:hover {
       background-color: #c01818
     }
-  
+
     .buttonv:active {
       background-color: #380404;
       box-shadow: 0 5px #666;
       transform: translateY(4px);
     }
   }
+}
+
+.GetEveryHeads {
+  display: none;
+}
+
+@media (min-width: 426px) {
+  #accordionExample {
+    display: none;
   }
-  @media (min-width: 426px) {
-    #accordionExample{
-      display: none;
-    }
-    
-    }
-  
+
+}
+
+@media (max-width:768px) {
+  .GetEveryHeads {
+    display: block;
+    margin-top: 3rem;
+    text-align: right;
+  }
+
+  .TitleAll {
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: right;
+  }
+}

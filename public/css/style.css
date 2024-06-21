@@ -14816,3 +14816,78 @@ button.btn.btn-primary{
   height: 100%;
   min-height: 200px;
 }
+.footer-services {
+  width: 100%;
+  text-align: start;
+}
+
+
+.footerSeperate{
+  margin-top: 5px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding-top: 9px;
+}
+
+.footerSeperator1{
+  border: 1px solid grey;
+    padding: 12px 23px;
+    border-radius: 8px;
+    line-height: 24px;
+}
+
+.footerSeperator2{
+  border: 1px solid grey;
+    margin-top: 5px;
+    padding-top: 6px;
+    border-radius: 8px;
+    line-height: 36px;
+}
+
+.footerSeperator4{
+  border: 1px solid grey;
+    line-height: 27px;
+    padding-top: 25px;
+    border-radius: 8px;
+}
+
+.footerSeperator5{
+  padding-top: 11px;
+}
+
+@media (max-width:768px){
+  .footer-services {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rowCentroid{
+    text-align: center;
+  }
+  .footerSeperate{
+    border:none !important;
+  }
+
+  .footerSeperator1{
+    border:none;
+  }
+
+  .footerSeperator2{
+    border:none;
+  }
+
+  .footerSeperator4{
+    border:none;
+  }
+
+  .footerSeperator5{
+    border:none !important;
+  }
+}
+
+
+.footer-services{
+  border: 1px solid grey;
+    padding: 16px;
+    border-radius: 8px;
+}

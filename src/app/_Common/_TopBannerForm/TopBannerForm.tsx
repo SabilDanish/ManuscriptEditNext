@@ -4,6 +4,10 @@ import banner1 from "../../utils/images/banner12.jpg";
 import banner2 from "../../utils/images/banner13.jpg";
 import banner3 from "../../utils/images/banner11.jpg";
 import banner4 from "../../utils/images/banner14.jpg";
+import mobileBanner1 from '../../utils/images/banner-for-mobile-view1.jpg';
+import mobileBanner2 from '../../utils/images/banner-for-mobile-view2.jpg';
+import mobileBanner3 from '../../utils/images/banner-for-mobile-view3.jpg';
+import mobileBanner4 from '../../utils/images/banner-for-mobile-view4.jpg';
 import useForm from "@/app/hooks/mainForm/useForm";
 import { DNA } from "react-loader-spinner";
 
@@ -15,6 +19,8 @@ const TopBannerForm = () => {
     email: "",
     msg: "",
   });
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
   const formRef = useRef<any>(null);
 
   const { isLoading, postData } = useForm();
@@ -44,6 +50,23 @@ const TopBannerForm = () => {
     });
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 600);
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const formHandler = (event: any) => {
     const { name, value } = event.target;
     setForm({ ...form, [name]: value });
@@ -59,24 +82,26 @@ const TopBannerForm = () => {
     formRef.current.reset();
   };
 
+  console.log({isSmallScreen})
+
   return (
     <>
       <div className="bannerContainer">
         <div className="carouselContainer">
           <div className={`$"carouselItem" $"active"`}>
-            <img src={banner1.src} className="carouselImage" alt="Banner 1" />
+            <img src={!isSmallScreen ? banner1.src : mobileBanner1.src}  className="carouselImage" alt="Banner 1" />
           </div>
           <div className="carouselItem">
-            <img src={banner2.src} className="carouselImage" alt="Banner 2" />
+            <img src={!isSmallScreen ? banner2.src : mobileBanner2.src} className="carouselImage" alt="Banner 2" />
           </div>
           <div className="carouselItem">
-            <img src={banner3.src} className="carouselImage" alt="Banner 3" />
+            <img src={!isSmallScreen ? banner3.src : mobileBanner3.src} className="carouselImage" alt="Banner 3" />
           </div>
           <div className="carouselItem">
-            <img src={banner4.src} className="carouselImage" alt="Banner 4" />
+            <img src={!isSmallScreen ? banner4.src : mobileBanner4.src} className="carouselImage" alt="Banner 4" />
           </div>
           <div className="carouselItem">
-            <img src={banner1.src} className="carouselImage" alt="Banner 1" />
+            <img src={!isSmallScreen ? banner1.src : mobileBanner1.src} className="carouselImage" alt="Banner 1" />
           </div>
         </div>
         <div className="formContainer">
