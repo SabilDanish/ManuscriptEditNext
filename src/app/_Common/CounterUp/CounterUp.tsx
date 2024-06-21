@@ -6,8 +6,8 @@ const CounterComponent = () => {
     return (
 
 
-        <div className="container" style={{marginBottom:"30px"}}>
-            <div className="row" style={{justifyContent:"space-evenly"}}>
+        <div className="container-fluid" style={{ marginBottom: "30px" }}>
+            <div className="row" style={{ justifyContent: "space-evenly" }}>
                 <div className="col-lg-3 counteupPart">
                     <h5 className="counterHeading">
                         <CountUp
@@ -17,7 +17,9 @@ const CounterComponent = () => {
                             suffix=" +"
                         />
 
-<p className="CounterPara">Publications</p>
+                        <div className="dividerzz1"></div>
+
+                        <p className="CounterPara">Publications</p>
                     </h5>
                 </div>
 
@@ -29,6 +31,8 @@ const CounterComponent = () => {
                             duration={5}
                             suffix=" +"
                         />
+
+                        <div className="dividerzz1"></div>
                         <p className="CounterPara">Experts</p>
                     </h5>
                 </div>
@@ -41,6 +45,8 @@ const CounterComponent = () => {
                             duration={5}
                             suffix=" +"
                         />
+
+                        <div className="dividerzz1"></div>
                         <p className="CounterPara">Subject Areas</p>
                     </h5>
                 </div>
