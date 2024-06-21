@@ -14884,3 +14884,10 @@ button.btn.btn-primary{
     border:none !important;
   }
 }
+
+
+.footer-services{
+  border: 1px solid grey;
+    padding: 16px;
+    border-radius: 8px;
+}

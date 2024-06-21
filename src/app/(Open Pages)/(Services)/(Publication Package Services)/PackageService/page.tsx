@@ -35,23 +35,18 @@ export default function Home() {
 								<h4>Premium Plus Package</h4>
 							</div>
 							<div className="pricing_tk">
-								<h2><span className="dollar">$</span>2134 <span>30 Days</span></h2>
+								<h2><span className="dollar"></span><span>30 Days</span></h2>
 							</div>
 						</div>
 						<div className="pricing_body">
 							<div className="featur_itmes">
 								<ul>
-									<li>Data Analysis</li>
-									<li>Research Paper Writing</li>
-									<li>Substantive Editing</li>
+									<li>Peer Review Analysis</li>
 									<li>Journal Selection</li>
-                                    <li>Target Journal Formating</li>
-                                    <li>Artwork Formating</li>
-                                    <li>Response to Reviewer</li>
-                                    <li>Peer Review Analysis</li>
-                                    <li>Cover Letter Writing</li>
-                                    <li>  Unlimited Assistance</li>
-                                    <li>Plagiarism Check</li>
+									<li>Target Journal Formatting</li>
+									<li>Cover Letter writing</li>
+                                    <li>Unlimited Assistance</li>
+                                   
 								</ul>
 							</div>
 						</div>
@@ -67,21 +62,20 @@ export default function Home() {
 								<h4>Premium Package</h4>
 							</div>
 							<div className="pricing_tk">
-								<h2><span className="dollar">$</span>1534<span> 20 Days</span></h2>
+								<h2><span className="dollar"></span><span> 20 Days</span></h2>
 							</div>
 						</div>
 						<div className="pricing_body">
 							<div className="featur_itmes">
 								<ul>
+									<li>Peer Review Analysis</li>
 									<li>Substantive Editing</li>
 									<li>Journal Selection</li>
-									<li>Target Journal Formatting</li>
-									<li>Journal Submission</li>
-                                    <li>Response to Reviewers</li>
-                                    <li>Peer Review Analysis</li>
-                                    <li>Cover Letter Writing</li>
+									<li>Target Journal Formatting.</li>
+                                    <li>Journal Submission</li>
+                                    <li>Cover Letter writing</li>
                                     <li>Plagiarism Check</li>
-                                    <li>Unlimited Assistance</li>
+                                   
 								</ul>
 							</div>
 						</div>
@@ -98,19 +92,19 @@ export default function Home() {
 								<h4>Advanced Package</h4>
 							</div>
 							<div className="pricing_tk">
-								<h2><span className="dollar">$</span>1134<span> 15 Days</span></h2>
+								<h2><span className="dollar"></span><span> 15 Days</span></h2>
 							</div>
 						</div>
 						<div className="pricing_body">
 							<div className="featur_itmes">
 								<ul>
+									<li>Peer Review Analysis</li>
 									<li>Substantive Editing</li>
-									<li>Journal Selection</li>
-									<li> Target Journal Formatting</li>
-									<li className='not'>Artwork Formatting</li>
+									<li> Journal Selection</li>
+									<li >Artwork Formatting</li>
                                     <li>Journal Submission</li>
-                                    <li className='not'>Response to Reviewers</li>
-                                    <li className='not'>Peer Review Analysis</li>
+                                    <li >Response to Reviewers</li>
+                                    <li >(One R to R Free)</li>
                                     <li> Cover Letter Writing</li>
                                     <li> Plagiarism Check</li>
                                     <li> Unlimited Assistance</li>
@@ -130,21 +124,23 @@ export default function Home() {
 								<h4>Standard Package</h4>
 							</div>
 							<div className="pricing_tk">
-								<h2><span className="dollar">$</span>867<span> 10 Days</span></h2>
+								<h2><span className="dollar"></span><span> 10 Days</span></h2>
 							</div>
 						</div>
 						<div className="pricing_body">
 							<div className="featur_itmes">
 								<ul>
-									<li className='not'>Substantive Editing</li>
-									<li>Journal Selection</li>
-									<li className='not'>Artwork Formatting</li>
-									<li >Journal Submission</li>
-                                    <li className='not'> Response to Reviewers</li>
-                                    <li className='not'>Peer Review Analysis</li>
-                                    <li >Cover Letter Writing</li>
-                                    <li className='not'>Plagiarism Check</li>
-                                    <li>  Unlimited Assistance</li>
+									<li >Peer Review Analysis</li>
+									<li>Data Analysis</li>
+									<li >Research Paper Writing</li>
+									<li >Substantive Editing</li>
+                                    <li > Journal Selection</li>
+                                    <li >Journal Submission</li>
+                                    <li >Target Journal Formatting*</li>
+                                    <li >(ono R to R Free)</li>
+                                    <li>  Artwork Formatting</li>
+									<li>  Response To Reviewer</li>
+									<li>  Cover Letter Writing</li>
 								</ul>
 							</div>
 						</div>

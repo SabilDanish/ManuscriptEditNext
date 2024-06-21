@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function footer() {
   const [email,setEmail] = useState<string | null>()
   const textColor = { color: "white" };
-  const textDecorator = { textDecoration: "underline" };
+  
 
   const {isLoading,error,acceptNewsLetter} = useEmail()
   return (
@@ -92,7 +92,7 @@ export default function footer() {
                     
                       <div className="d-flex flex-column footer-services">
                     <span
-                      style={textDecorator}
+                      
                       className="widget-title pb-2 "
                     >
                       Our Services

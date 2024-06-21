@@ -64,7 +64,7 @@ const GetHelp = () => {
                     </div>
 
                     <div id="firstTab" className="tabcontent" style={{ display: activeTab === 'firstTab' ? 'block' : 'none' }}>
-                        <table className="table table-bordered wow fadeInUp animated animated">
+                        <table className="table table-bordered ">
                             <thead>
                                 <tr style={{ textAlign: 'center' }}>
                                     <th scope="col" style={{ color: "#a31e22" }}>Medical Writing</th>
@@ -206,7 +206,7 @@ const GetHelp = () => {
                     </div>
 
                     <div id="secondTab" className="tabcontent" style={{ display: activeTab === 'secondTab' ? 'block' : 'none' }}>
-                        <table className="table table-bordered wow fadeInUp animated animated">
+                        <table className="table table-bordered ">
                             <thead>
                                 <tr style={{ textAlign: 'center' }}>
                                     <th scope="col" style={{ color: "#a31e22" }}>Standard Package</th>
@@ -264,8 +264,14 @@ const GetHelp = () => {
                                 <tr>
                                     <td scope="row"></td>
                                     <td><span className="checkmark">&#10004;</span>Plagiarism Check</td>
-                                    <td><span className="checkmark">&#10004;</span>Response to Reviewers*</td>
-                                    <td><span className="checkmark">&#10004;</span>Target Journal Formatting*</td>
+                                    <td>
+                                        <ul>
+                                            <li><span className="checkmark">&#10004;</span>Response to Reviewers*</li>
+                                            <li>(*One response to reviewer free)</li>
+                                        </ul>
+                                        
+                                        </td>
+                                    <td><span className="checkmark">&#10004;</span>Target Journal Formatting</td>
 
                                 </tr>
 
@@ -278,14 +284,14 @@ const GetHelp = () => {
 
                                 <tr>
                                     <td scope="row"></td>
-                                    <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
+                                    <td></td>
                                     <td><span className="checkmark">&#10004;</span>Plagiarism Check</td>
                                     <td><span className="checkmark">&#10004;</span>Response To Reviewer</td>
                                 </tr>
 
                                 <tr>
                                     <td scope="row"></td>
-                                    <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
+                                    <td></td>
                                     <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
                                     <td><span className="checkmark">&#10004;</span>Cover Letter Writing</td>
                                 </tr>
@@ -318,7 +324,7 @@ const GetHelp = () => {
                     </div>
 
                     <div id="thirdTab" className="tabcontent" style={{ display: activeTab === 'thirdTab' ? 'block' : 'none' }}>
-                        <table className="table table-bordered wow fadeInUp animated animated">
+                        <table className="table table-bordered ">
                             <thead>
                                 <tr style={{ textAlign: 'center' }}>
                                     <th scope="col" style={{ color: "#a31e22" }}>Standard Editing</th>
@@ -404,7 +410,7 @@ const GetHelp = () => {
 
 
                     <div id="FourthTab" className="tabcontent" style={{ display: activeTab === 'FourthTab' ? 'block' : 'none' }}>
-                        <table className="table table-bordered wow fadeInUp animated animated">
+                        <table className="table table-bordered ">
                             <thead>
                                 <tr style={{ textAlign: 'center' }}>
                                     <th scope="col" style={{ color: "#a31e22" }}>Basic</th>
@@ -492,7 +498,7 @@ const GetHelp = () => {
                     </div>
 
                     <div id="FifthTab" className="tabcontent" style={{ display: activeTab === 'FifthTab' ? 'block' : 'none' }}>
-                        <table className="table table-bordered wow fadeInUp animated animated">
+                        <table className="table table-bordered ">
                             <thead>
                                 <tr>
                                     <th scope="col" style={{ color: "#a31e22" }}>Pre-PhD</th>
