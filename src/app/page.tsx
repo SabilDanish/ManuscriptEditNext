@@ -8,8 +8,8 @@ import ourProfessional from "./_Common/_OurProfessional/OurProfessional";
 import howWeWork from "./_Common/_HowWeWork/HowWeWork";
 import Link from "next/link";
 import redirect from "./_Common/_functionality/Redirect";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import GetHelp from "./_Common/getHelp/getHelp";
 import GetEvery from "./_Common/GetEvery/GetEvery";
 import SocialIcon from "./_Common/StickySocial/SocialIcons";
@@ -20,7 +20,7 @@ import BlogDesk from "./_Common/BlogDesk/BlogDesk";
 import Testimonial from "./_Common/Testimonial/testimonial";
 import Clients from "./_Common/Clients/Clients";
 import OurProfessional from "./_Common/_OurProfessional/OurProfessional";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import ourClientBanner from "./utils/images/Logos.jpg";
 import TrustedPartner from "./_Common/_TrustedPartner/TrustedPartner";
@@ -38,19 +38,18 @@ import CounterComponent from "./_Common/CounterUp/CounterUp";
 
 export default function Home() {
   SwiperCore.use([Autoplay]);
-  const {loading,error,blogs} = useBlogs()
+  const { loading, error, blogs } = useBlogs();
   
+
   return (
     <>
 
       <ToastContainer />
 
-
       <TopBannerForm />
 
       <GetHelpMobile />
       {/* <TrustedPartner/> */}
-
 
       {/* End of Biswa's custom codes */}
 
@@ -64,17 +63,15 @@ export default function Home() {
 
       <OurProfessional />
 
-      <CounterComponent/>
+      <CounterComponent />
 
       <Testimonial />
 
+      {blogs && blogs.length && <BlogDesk blogs={blogs} />}
 
-      {blogs && blogs.length && <BlogDesk blogs={blogs}/>}
-
-      {blogs && blogs.length && <BlogMob blogs={blogs}/>}
+      {blogs && blogs.length && <BlogMob blogs={blogs} />}
 
       <FaqHome />
-
     </>
   );
 }
