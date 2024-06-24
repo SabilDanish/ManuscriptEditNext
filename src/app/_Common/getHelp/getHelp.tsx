@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import './getHelp.css';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faComment } from '@fortawesome/free-solid-svg-icons';
 
 const GetHelp = () => {
     const [activeTab, setActiveTab] = useState('firstTab');
@@ -145,7 +147,7 @@ const GetHelp = () => {
                                             <li><span className="checkmark">&#10004;</span> Statistical Reporting</li>
                                         </ul>
                                     </td>
-                                   
+
 
 
                                 </tr>
@@ -199,8 +201,8 @@ const GetHelp = () => {
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
 
+                            <span><Link href="/Writing" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
 
-                            <Link href="/Writing" className='dtbtn'>View More</Link>
                         </div>
                     </div>
 
@@ -268,8 +270,8 @@ const GetHelp = () => {
                                             <li><span className="checkmark">&#10004;</span>Response to Reviewers*</li>
                                             <li>(*One response to reviewer free)</li>
                                         </ul>
-                                        
-                                        </td>
+
+                                    </td>
                                     <td><span className="checkmark">&#10004;</span>Target Journal Formatting</td>
 
                                 </tr>
@@ -318,7 +320,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
 
 
-                            <Link href="/PackageService" className='dtbtn'>View More</Link>
+                        <span><Link href="/PackageService" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
                         </div>
                     </div>
 
@@ -339,7 +341,7 @@ const GetHelp = () => {
                                     <td><span className="checkmark">&#10004;</span> Language Precision</td>
                                     <td><span className="checkmark">&#10004;</span> Advanced Editing</td>
                                     <td><span className="checkmark">&#10004;</span> Premium Editing</td>
-                                    
+
 
 
                                 </tr>
@@ -403,7 +405,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
 
 
-                            <Link href="/EditingOverview" className='dtbtn'>View More</Link>
+                        <span><Link href="/EditingOverview" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
                         </div>
                     </div>
 
@@ -453,7 +455,7 @@ const GetHelp = () => {
 
                                 </tr>
 
-                              
+
 
                                 {/* <tr>
                                     <td scope="row"></td>
@@ -492,7 +494,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
 
 
-                            <Link href="/ResearchSupportOverview" className='dtbtn'>View More</Link>
+                        <span><Link href="/ResearchSupportOverview" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
                         </div>
                     </div>
 
@@ -549,7 +551,7 @@ const GetHelp = () => {
                                     <td><span className="checkmark">&#10004;</span> Writing and Submission of First Indexed Paper</td>
                                     <td><span className="checkmark">&#10004;</span> Thesis Review and Feedback</td>
                                     <td><span className="checkmark">&#10004;</span> Defense Preparation and Methodology Consultation</td>
-                                   
+
 
 
                                 </tr>
@@ -598,10 +600,9 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
 
 
-                            <Link href="/PHDThesis" className='dtbtn'>View More</Link>
+                        <span><Link href="/PHDThesis" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
                         </div>
                     </div>
-
 
 
 
