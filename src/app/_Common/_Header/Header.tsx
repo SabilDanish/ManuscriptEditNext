@@ -18,7 +18,7 @@ export default function Header() {
                   <ul>
                     <li>
                       <a href="#">
-                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN) <i className="fa fa-phone" style={{marginLeft:"8px"}}></i>+91 92373 04004 (IN) <i className="fa fa-phone" style={{marginLeft:"8px"}}></i>+1
+                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN) <i className="fa fa-phone" style={{ marginLeft: "8px" }}></i>+91 92373 04004 (IN) <i className="fa fa-phone" style={{ marginLeft: "8px" }}></i>+1
                         (646)916-3476 (USA)
                       </a>
                     </li>
@@ -70,7 +70,7 @@ export default function Header() {
               </Link>
               <ul className="clearfix">
                 <li>
-                  <a  href="#">SERVICES </a>
+                  <a href="#">SERVICES </a>
                   <ul >
                     <li >
                       <ul>
@@ -469,7 +469,7 @@ export default function Header() {
                     </li> */}
 
                     {/* <li><Link href={'/Testimonial'}>Webinar Registration</Link></li> */}
-                    <li>
+                    {/* <li>
                       <a
                         onClick={() => {
                           redirect("wregistration");
@@ -478,7 +478,14 @@ export default function Header() {
                       >
                         Webinar Registration
                       </a>
+                    </li> */}
+
+                    <li>
+                      <Link href={"/wregistration"}>
+                        Webinar Registration
+                      </Link>
                     </li>
+
 
                     {/* <li><Link href={'/Testimonial'}>Blog</Link></li> */}
                     <li>
@@ -517,7 +524,7 @@ export default function Header() {
           <nav className="techno_menu">
             <ul className="clearfix">
               <li>
-                  <a href="#">SERVICES </a>
+                <a href="#">SERVICES </a>
                 <ul>
                   <li>
                     <Link href={"/EditingOverview"}>
@@ -881,7 +888,7 @@ export default function Header() {
                   </li> */}
 
                   {/* <li><Link href={'/Testimonial'}>Webinar Registration</Link></li> */}
-                  <li>
+                  {/* <li>
                     <a
                       onClick={() => {
                         redirect("wregistration");
@@ -890,7 +897,13 @@ export default function Header() {
                     >
                       Webinar Registration
                     </a>
-                  </li>
+                  </li> */}
+
+<li>
+                      <Link href={"/wregistration"}>
+                        Webinar Registration
+                      </Link>
+                    </li>
 
                   {/* <li><Link href={'/Testimonial'}>Blog</Link></li> */}
                   <li>

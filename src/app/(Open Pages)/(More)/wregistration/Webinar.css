@@ -1,0 +1,44 @@
+.WebRow{
+    justify-content: space-between;
+    background: #e9e5e5;
+    padding: 18px;
+}
+
+.webContainer{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.ImgWeb{
+    width:100% ;
+
+}
+.headingweb5{
+    text-align: center;
+    font-size: 1.4rem;
+}
+.paragraphweb{
+    text-align: center;
+}
+
+.webButton{
+    padding: 8px 90px;
+    border: none;
+    background: #a31e22;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.webspan{
+    color: #114fcd;
+    font-size: large;
+    font-weight: 500;
+}
+
+
+.webSeminar{
+    background: aliceblue;
+    padding: 26px;
+    border-radius: 12px;
+}
+    
