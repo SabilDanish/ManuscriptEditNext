@@ -14,7 +14,7 @@ const GetEvery = () => {
                                 <h5>
                                     GET HELP WITH RESEARCH PAPER PUBLICATION
                                 </h5>
-                                <Link href="/EditingOverview" style={{ color: "#a31e22", textDecoration: 'none' }}>
+                                <Link href="/PackageService" style={{ color: "#a31e22", textDecoration: 'none' }}>
                                     Know more &rarr;
                                 </Link>
                             </div>
@@ -24,7 +24,7 @@ const GetEvery = () => {
                                 <h5 style={{textTransform:"uppercase"}}>
                                     Get Scientific and English Language editing help
                                 </h5>
-                                <Link href="/PackageService" style={{ color: "#a31e22", textDecoration: 'none' }}>
+                                <Link href="/EditingOverview" style={{ color: "#a31e22", textDecoration: 'none' }}>
                                     Know more &rarr;
                                 </Link>
                             </div>
@@ -34,7 +34,7 @@ const GetEvery = () => {
                                 <h5>
                                     GET PhD & MASTER THESIS ASSISTANCE
                                 </h5>
-                                <Link href="/ResearchSupportOverview" style={{ color: "#a31e22", textDecoration: 'none' }}>
+                                <Link href="/PHDThesis" style={{ color: "#a31e22", textDecoration: 'none' }}>
                                     Know more &rarr;
                                 </Link>
                             </div>
