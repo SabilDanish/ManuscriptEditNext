@@ -13,7 +13,7 @@ export default function Home() {
         "Services / Publication Package Services",
         "Publication Package"
       )}
-      <section className="pt-60 pb-50">
+      {/* <section className="pt-60 pb-50">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-12">
@@ -185,7 +185,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <div className="row">
         <div className="col-lg-3 col-md-6">
           <div className="pricing_single-box st-grid-price">
