@@ -65,8 +65,8 @@ export default function Header() {
           <div className="row align-items-center">
             <div className="menu">
               <Link href={"/"} className="logo">
-                <img className="down" src="/images/1.png" alt=""></img>{" "}
-                <img className="main_sticky" src="/images/1.png" alt=""></img>
+                <img style={{width: "150px"}} className="down" src="/images/1.png" alt=""></img>{" "}
+                <img style={{width: "150px"}} className="main_sticky" src="/images/1.png" alt=""></img>
               </Link>
               <ul className="clearfix">
                 <li>
@@ -922,7 +922,8 @@ export default function Header() {
                 <a
                   className="dtbtn"
                   onClick={() => {
-                    redirect("register");
+                    window.location.href =
+                      "https://secure.manuscriptedit.com/register";
                   }}
                   href="#"
                 >

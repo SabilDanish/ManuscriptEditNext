@@ -66,7 +66,7 @@ export default function footer() {
                 <div className="company-info-desc">
                  
                 </div>
-                <div className="follow-company-info pt-3">
+                {/* <div className="follow-company-info pt-3">
                   <div className="follow-company-text mr-3">
                     <a href="#">
                       <p>Follow Us</p>
@@ -86,12 +86,33 @@ export default function footer() {
                       <i className="fa fa-skype"></i>
                     </a>
                   </div>
-                </div>
+                </div> */}
+                <div className="follow-company-info pt-3">
+                  <div className="follow-company-text mr-3">
+                    <a href="#">
+                      <p>Follow Us</p>
+                    </a>
+                  </div>
+                  <div className="follow-company-icon">
+                    <a href="https://www.facebook.com/Manuscriptedit">
+                      <i className="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit">
+                      <i className="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/manuscriptedit/">
+                    <i className="fa fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@manuscriptedit.">
+                    <i className="fa fa-youtube-play"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
               <div className="widget widgets-company-info">
 
                     
-                      <div className="d-flex flex-column footer-services">
+                      <div className="d-flex flex-column footer-services footerServ">
                     <span
                       
                       className="widget-title pb-2 "

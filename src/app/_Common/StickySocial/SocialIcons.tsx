@@ -19,7 +19,7 @@ const SocialIcon = () => {
                             <li className="fb"><Link href="https://www.facebook.com/Manuscriptedit"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
                             <li className="twitter"><Link href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit"><i className="fa fa-twitter" aria-hidden="true"></i></Link></li>
                             <li className="insta"><Link href="https://www.instagram.com/manuscriptedit/"><i className="fa fa-instagram" aria-hidden="true"></i></Link></li>
-                            <li className="vim"><Link href="https://www.youtube.com/@Manuscripteditdocs"><i className="fa fa-youtube" aria-hidden="true"></i></Link></li>
+                            <li className="vim"><Link href="https://www.youtube.com/@manuscriptedit."><i className="fa fa-youtube" aria-hidden="true"></i></Link></li>
                         </ul>
                     </div>
 

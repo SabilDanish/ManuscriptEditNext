@@ -27,7 +27,7 @@ import { Suspense, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./_Common/_Header/Header";
-import { DefaultSeo } from "next-seo";
+// import { DefaultSeo } from "next-seo";
 // import SEO from "../../next-seo.config";
 
 // export const metadata: Metadata = {
@@ -59,23 +59,23 @@ export default function RootLayout({
           Manuscriptedit - Expert Scientific Journal Publication Services
         </title>
         <link href="/img/manu.ico" rel="icon"></link>
-        <Script type="text/javascript" src="/js/vendor/jquery-3.2.1.min.js" />
-        <Script type="text/javascript" src="/js/bootstrap.min.js" />
-        <Script type="text/javascript" src="/js/bootstrap.bundle.min.js" />
-        <Script type="text/javascript" src="/js/owl.carousel.min.js" />
-        <Script type="text/javascript" src="/js/jquery.counterup.min.js" />
-        <Script type="text/javascript" src="/js/waypoints.min.js" />
-        <Script type="text/javascript" src="/js/wow.js" />
-        <Script type="text/javascript" src="/js/imagesloaded.pkgd.min.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/vendor/jquery-3.2.1.min.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/bootstrap.min.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/bootstrap.bundle.min.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/owl.carousel.min.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/jquery.counterup.min.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/waypoints.min.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/wow.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/imagesloaded.pkgd.min.js" />
         {/* <Script type='text/javascript' src="/venobox/venobox.js"/> */}
-        <Script type="text/javascript" src="/js/ajax-mail.js" />
-        <Script type="text/javascript" src="/js/testimonial.js" />
-        <Script type="text/javascript" src="/js/animated-text.js" />
-        <Script type="text/javascript" src="/venobox/venobox.min.js" />
-        <Script type="text/javascript" src="/js/isotope.pkgd.min.js" />
-        <Script type="text/javascript" src="/js/jquery.nivo.slider.pack.js" />
-        <Script type="text/javascript" src="/js/jquery.meanmenu.js" />
-        <Script type="text/javascript" src="/js/jquery.scrollUp.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/ajax-mail.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/testimonial.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/animated-text.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/venobox/venobox.min.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/isotope.pkgd.min.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/jquery.nivo.slider.pack.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/jquery.meanmenu.js" />
+        <Script type="text/javascript" strategy="beforeInteractive" src="/js/jquery.scrollUp.js" />
         <Script type="text/javascript" src="/js/theme.js" />
         <Script type="text/javascript" src="/js/clarity.js" strategy="lazyOnload" />
         <Script type="text/javascript" src="/js/addRoll.js" strategy="lazyOnload" />
