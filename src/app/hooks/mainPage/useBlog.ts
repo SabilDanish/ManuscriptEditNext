@@ -27,6 +27,7 @@ const useBlogs = () => {
           });
         } catch (error) {
           setError("something went wrong");
+          setLoading(false)
         }
     }
 
