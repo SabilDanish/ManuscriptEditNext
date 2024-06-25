@@ -39,10 +39,10 @@ const GetHelpMobile: React.FC = () => {
   return (
     <>
       <div className="accordion" id="accordionExample">
-      <div className='GetEveryHeads' >
-        <h2 className='TitleAll' style={{ textAlign: 'center', marginTop: '20px' }}>FEELING CONFUSED WHAT TO OPT FOR?</h2>
-        <p style={{ textAlign: 'center' }}>Choose Your issues,<br /> Let ManuscriptEdit HELP YOU</p>
-      </div>
+        <div className='GetEveryHeads' >
+          <h2 className='TitleAll' style={{ textAlign: 'center', marginTop: '20px' }}>FEELING CONFUSED WHAT TO OPT FOR?</h2>
+          <p style={{ textAlign: 'center' }}>Choose Your issues,<br /> Let ManuscriptEdit HELP YOU</p>
+        </div>
         <div className="accordion-item">
           <h5 className="accordion-header" id="headingOne">
             <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -58,21 +58,23 @@ const GetHelpMobile: React.FC = () => {
                   <div className="slide">
                     <h5>Medical Writing</h5>
                     <ul>
-                      <li>✔ Case Report</li>
-                      <li>✔ Original Research Article</li>
-                      <li>✔ Review Article</li>
-                      <li>✔ Research Proposal</li>
-                      <li>✔ Customized Writing</li>
+                      <li>&#10004; Manuscript Writing and Editing</li>
+                      <li>&#10004; Clinical Study Reports</li>
+                      <li>&#10004; Regulatory Writing</li>
+                      <li>&#10004; Medical Communications</li>
+
+
                     </ul>
                   </div>
                   <div className="slide">
-                    <h5>Scientific & Academic Writing</h5>
+                    <h5>Scientific Writing</h5>
                     <ul>
-                      <li>✔ Research Proposal</li>
-                      <li>✔ Review Article</li>
-                      <li>✔ Brief Communication</li>
-                      <li>✔ Original Research Article</li>
-                      <li>✔ Customized Writing</li>
+                      <li>&#10004; Manuscript Preparation</li>
+                      <li>&#10004; Literature Reviews</li>
+                      <li>&#10004; Grant Proposals</li>
+                      <li>&#10004; Technical Reports</li>
+
+
                     </ul>
                   </div>
                   <div className="slide">
