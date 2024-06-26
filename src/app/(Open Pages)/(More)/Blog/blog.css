@@ -3,7 +3,8 @@
     border: 1px solid black;
     padding: 17px;
     border-radius: 16px;
-    margin-bottom:10px
+    margin-bottom:10px;
+    background:white;
 }
 
 .blogImg{
@@ -13,11 +14,21 @@
 }
 
 .CategoryBlog{
-    color:red
+    color:red;
+    background: whitesmoke;
+    padding: 2px 7px;
+    border-radius: 7px;
+    font-size: small;
 }
 
 .blogHeading{
     font-weight: 600;
+    cursor: pointer;
+}
+
+.blogHeading:hover{
+    text-decoration: underline;
+    color: #760e12;
 }
 
 .blogHeading1{
@@ -39,6 +50,10 @@
 
 .blog-Ul{
     padding-left: 18px !important;
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    gap: 1rem;
 }
 
 .BlogColImg{
@@ -73,21 +88,42 @@
 .sticky-wrapper {
     position: sticky;
     top: 0;
-    padding: 15px; /* Adjust padding as needed */
-    background-color: #fff; /* Optional: Add background color for clarity */
+    padding: 15px;
+    background-color: #fff;
 }
 
 .BlogRow {
     display: flex;
     justify-content: space-around;
-    overflow-y: auto; /* Enable vertical scrolling */
-    max-height: calc(100vh - 100px); /* Adjust height based on your layout */
-    scroll-behavior: smooth; /* Smooth scrolling behavior */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .BlogRow::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+    display: none;
+}
+
+.pagination-blog {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+}
+
+.pagination-button {
+    padding: 10px 20px;
+    background-color: #a31e22;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+    background-color: #760e12;
 }
 

@@ -31,23 +31,23 @@ export default function Header() {
                 <div className="header_top_menu_icon_inner">
                   <ul>
                     <li>
-                      <a href="#">
+                      <a href="https://www.facebook.com/Manuscriptedit">
                         <i className="fa fa-facebook"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit">
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="fa fa-pinterest"></i>
+                      <a href="https://www.instagram.com/manuscriptedit/">
+                      <i className="fa fa-instagram"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="fa fa-linkedin"></i>
+                      <a href="https://www.youtube.com/@manuscriptedit.">
+                      <i className="fa fa-youtube-play"></i>
                       </a>
                     </li>
                   </ul>
@@ -65,8 +65,8 @@ export default function Header() {
           <div className="row align-items-center">
             <div className="menu">
               <Link href={"/"} className="logo">
-                <img style={{width: "150px"}} className="down" src="/images/1.png" alt=""></img>{" "}
-                <img style={{width: "150px"}} className="main_sticky" src="/images/1.png" alt=""></img>
+                <img style={{ width: "150px" }} className="down" src="/images/1.png" alt=""></img>{" "}
+                <img style={{ width: "150px" }} className="main_sticky" src="/images/1.png" alt=""></img>
               </Link>
               <ul className="clearfix">
                 <li>
@@ -487,8 +487,8 @@ export default function Header() {
                     </li>
 
 
-                    {/* <li><Link href={'/Testimonial'}>Blog</Link></li> */}
-                    <li>
+                    <li><Link href={'/Blog'}>Blog</Link></li>
+                    {/* <li>
                       <a
                         onClick={() => {
                           redirect("scholar-hangout");
@@ -497,7 +497,7 @@ export default function Header() {
                       >
                         Blog
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
                 <div className="donate-btn-header">
@@ -899,14 +899,14 @@ export default function Header() {
                     </a>
                   </li> */}
 
-<li>
-                      <Link href={"/wregistration"}>
-                        Webinar Registration
-                      </Link>
-                    </li>
-
-                  {/* <li><Link href={'/Testimonial'}>Blog</Link></li> */}
                   <li>
+                    <Link href={"/wregistration"}>
+                      Webinar Registration
+                    </Link>
+                  </li>
+
+                  <li><Link href={'/Blog'}>Blog</Link></li>
+                  {/* <li>
                     <a
                       onClick={() => {
                         redirect("scholar-hangout");
@@ -915,11 +915,11 @@ export default function Header() {
                     >
                       Blog
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <div className="donate-btn-header">
-                <a  
+                <a
                   className="dtbtn"
                   href="https://secure.manuscriptedit.com/register"
                 >

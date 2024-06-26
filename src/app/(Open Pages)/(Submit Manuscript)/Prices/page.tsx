@@ -2,8 +2,9 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import './price.css'
 import usePriceCalculator from "@/app/hooks/priceCalculator/usePriceCalculator";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DNA } from "react-loader-spinner";
+import redirect from "@/app/_Common/_functionality/Redirect";
 
 export default function Home() {
   const [wordCount, setWordCount] = useState<string | null>()
@@ -13,6 +14,7 @@ export default function Home() {
     console.log({wordCount})
     getPriceCalculator({word_count:wordCount})
   }
+  
 
   
   return (
@@ -568,7 +570,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="pricing section-area">
+      {/* <section id="pricing" className="pricing section-area">
         <div className="container aos-init aos-animate" data-aos="fade-up">
           <div
             className="section-title aos-init aos-animate"
@@ -852,7 +854,137 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-3 col-md-6">
+            <div className="pricing_single-box st-grid-price">
+              <div className="pricing-head">
+                <div className="pricing_title">
+                  <h4>Premium Plus Package</h4>
+                </div>
+                <div className="pricing_tk">
+                  <h2><span className="dollar"></span><span>30 Days</span></h2>
+                </div>
+              </div>
+              <div className="pricing_body">
+                <div className="featur_itmes">
+                  <ul>
+                    <li>Peer Review Analysis</li>
+                    <li>Data Analysis</li>
+                    <li>Research Paper Writing</li>
+                    <li>Substantive Editing</li>
+                    <li>Journal Selection</li>
+                    <li>Journal Submission</li>
+                    <li>Target Journal Formatting</li>
+                    <li>Artwork Formatting</li>
+                    <li>Response To Reviewer</li>
+                    <li>Cover Letter Writing</li>
+
+
+                  </ul>
+                </div>
+              </div>
+              <div className="pricing_button">
+                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6">
+            <div className="pricing_single-box st-grid-price" >
+              <div className="pricing-head">
+                <div className="pricing_title">
+                  <h4>Premium Package</h4>
+                </div>
+                <div className="pricing_tk">
+                  <h2><span className="dollar"></span><span> 20 Days</span></h2>
+                </div>
+              </div>
+              <div className="pricing_body">
+                <div className="featur_itmes">
+                  <ul>
+                    <li>Peer Review Analysis</li>
+                    <li>Substantive Editing</li>
+                    <li>Journal Selection</li>
+                    <li>Target Journal Formatting</li>
+                    <li>Artwork Formatting</li>
+                    <li>Journal Submission</li>
+                    <li>Response to Reviewers*
+                    (*One response to reviewer free)</li>
+                    <li>Cover Letter Writing</li>
+                    <li>Plagiarism Check</li>
+                    <li>Unlimited Assistance</li>
+
+                  </ul>
+                </div>
+              </div>
+              <div className="pricing_button">
+                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6">
+
+            <div className="pricing_single-box st-grid-price">
+              <div className="pricing-head">
+                <div className="pricing_title">
+                  <h4>Advanced Package</h4>
+                </div>
+                <div className="pricing_tk">
+                  <h2><span className="dollar"></span><span> 15 Days</span></h2>
+                </div>
+              </div>
+              <div className="pricing_body">
+                <div className="featur_itmes">
+                  <ul>
+                    <li>Peer Review Analysis</li>
+                    <li>Substantive Editing</li>
+                    <li> Journal Selection</li>
+                    <li >Target Journal Formatting.</li>
+                    <li>Journal Submission</li>
+                    <li >Cover Letter writing</li>
+                    <li >Plagiarism Check</li>
+                    <li> Unlimited Assistance</li>
+                   
+                  </ul>
+                </div>
+              </div>
+              <div className="pricing_button">
+                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6">
+
+            <div className="pricing_single-box st-grid-price">
+              <div className="pricing-head">
+                <div className="pricing_title">
+                  <h4>Standard Package</h4>
+                </div>
+                <div className="pricing_tk">
+                  <h2><span className="dollar"></span><span> 10 Days</span></h2>
+                </div>
+              </div>
+              <div className="pricing_body">
+                <div className="featur_itmes">
+                  <ul>
+                    <li >Peer Review Analysis</li>
+                    <li>Journal Selection</li>
+                    <li >Target Journal Formatting</li>
+                    <li >Cover Letter writing</li>
+                    <li > Unlimited Assistance</li>
+                    <li >Journal Submission</li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div className="pricing_button">
+                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section id="pricing" className="pricing section-area">
         <div className="container aos-init aos-animate" data-aos="fade-up">
@@ -871,7 +1003,7 @@ export default function Home() {
             >
               <div id="pkg">
                 <a href="https://api.whatsapp.com/send?phone=919040005445">
-                  <img src="/img/logoWhatsapp.png" />
+                  <img src="/img/logoWhatsapp.png"  style={{width:"30px",height:"30px"}} />
                   &nbsp;&nbsp;<b style={{ color: "black" }}>WhatsApp&nbsp;:</b>
                   &nbsp;<span style={{ color: "red" }}>+91-904-000-5445</span>
                 </a>
@@ -885,7 +1017,7 @@ export default function Home() {
             >
               <div id="pkg">
                 <a href="https://t.me/share/url?url=&amp;text=&amp;phone=919040005445">
-                  <img src="/img/telegram.png" />
+                  <img src="/img/telegram.png" style={{width:"30px",height:"30px"}} />
                   &nbsp;&nbsp;<b style={{ color: "black" }}>Telegram&nbsp;:</b>
                   &nbsp;<span style={{ color: "red" }}>+91-904-000-5445</span>
                 </a>
@@ -898,7 +1030,7 @@ export default function Home() {
               data-aos-delay="600"
             >
               <div id="pkg">
-                <img src="/img/zoom.png" width="30" height="30" />
+                <img src="/img/zoom.png" style={{width:"30px",height:"30px"}} />
                 &nbsp;&nbsp;<b>Zoom meeting&nbsp;:</b>&nbsp;
                 <a href="https://bit.ly/3VTs2is" style={{ color: "red" }}>
                   https://bit.ly/3VTs2is

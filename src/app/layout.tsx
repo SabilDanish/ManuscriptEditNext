@@ -27,6 +27,7 @@ import { Suspense, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./_Common/_Header/Header";
+import { DNA } from "react-loader-spinner";
 // import { DefaultSeo } from "next-seo";
 // import SEO from "../../next-seo.config";
 
@@ -96,7 +97,7 @@ export default function RootLayout({
         {/* <header/> */}
         {/* {header()} */}
         <Header />
-        <Suspense fallback={<p>Loading feed...</p>}>{children}</Suspense>
+        <Suspense fallback={<p style={{width: "100%", display: 'flex', justifyContent: "center"}}><DNA /></p>}>{children}</Suspense>
         {footer()}
       </body>
     </html>
