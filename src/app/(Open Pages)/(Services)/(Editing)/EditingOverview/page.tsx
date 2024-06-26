@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
     
- {breadcrum('Services / English Editing','Editing Overview')}
+ {breadcrum('Services / English Editing','Editing Overview', "manuscript preparation, academic manuscript, English translation, academic translation, academic editing, native English speaking editors, publish in top journals, author services, researcher services, publication support, poster preparation, scientific poster preparation, research poster preparation, journal submission, manuscript submission, research paper, peer review, abstract editing, figure formatting, scientific illustration, scientific animation, video abstracts, journal guidelines, grant application guidelines, grant editing, grant application, grant application editing, thesis editing, dissertation editing, manuscript, research paper, scientific paper, journal rejection, journal acceptance","English, editors, native English, substantive editing, proofreading, formatting, translation, scientific, research, proposals, grant applications, posters")}
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">

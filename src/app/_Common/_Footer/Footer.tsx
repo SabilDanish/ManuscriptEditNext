@@ -94,16 +94,16 @@ export default function footer() {
                     </a>
                   </div>
                   <div className="follow-company-icon">
-                    <a href="https://www.facebook.com/Manuscriptedit">
+                    <a href="https://www.facebook.com/Manuscriptedit" target="_blank">
                       <i className="fa fa-facebook"></i>
                     </a>
-                    <a href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit">
+                    <a href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit" target="_blank">
                       <i className="fa fa-twitter"></i>
                     </a>
-                    <a href="https://www.instagram.com/manuscriptedit/">
+                    <a href="https://www.instagram.com/manuscriptedit/" target="_blank">
                     <i className="fa fa-instagram"></i>
                     </a>
-                    <a href="https://www.youtube.com/@manuscriptedit.">
+                    <a href="https://www.youtube.com/@manuscriptedit." target="_blank">
                     <i className="fa fa-youtube-play"></i>
                     </a>
                   </div>
