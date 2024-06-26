@@ -919,13 +919,9 @@ export default function Header() {
                 </ul>
               </li>
               <div className="donate-btn-header">
-                <a
+                <a  
                   className="dtbtn"
-                  onClick={() => {
-                    window.location.href =
-                      "https://secure.manuscriptedit.com/register";
-                  }}
-                  href="#"
+                  href="https://secure.manuscriptedit.com/register"
                 >
                   Sign Up | Sign In
                 </a>
