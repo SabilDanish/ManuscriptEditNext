@@ -9058,7 +9058,7 @@ h2.cntr-sb-title {
   margin-bottom: 30px;
   border-radius: 20px;
   transition: 0.5s;
-  height: 200px;
+  height: 255px;
 }
 
 .work_process .single_work_content_title h4 {
@@ -14815,10 +14815,6 @@ button.btn.btn-primary{
 .team .member{
   height: 100%;
   min-height: 200px;
-}
-.footer-services {
-  width: 100%;
-  text-align: start;
 }
 
 

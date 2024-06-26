@@ -1,4 +1,8 @@
+"use client"
+
+import FaqHome from "@/app/_Common/FaqHome/FaqHome";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
+import FaqPhd from "@/app/_Common/faqPhd/faqPhd";
 
 export default function Home() {
   return (
@@ -280,7 +284,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="accordion_area style-two upper1 pt-0 pb-100">
+      {/* <div className="accordion_area style-two upper1 pt-0 pb-100">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -397,7 +401,10 @@ export default function Home() {
             <div className="col-lg-2 col-md-2 pr-3"></div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+
+      <FaqPhd/>
     </>
   );
 }

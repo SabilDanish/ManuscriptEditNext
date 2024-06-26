@@ -1,12 +1,11 @@
-"use client"
+"use client";
 
 import useBlogs from "@/app/hooks/mainPage/useBlog";
-import "./blog.css"
+import "./blog.css";
 import { DNA } from "react-loader-spinner";
 import { formatDate, get_image_src, truncateString } from "@/app/utils/lib";
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
-
 
 const BlogNext = () => {
     const [page, setPage] = useState<number>(1)
@@ -17,11 +16,8 @@ const BlogNext = () => {
         router.push(url);
     };
 
-    if (loading) {
-        return (
-            <DNA />
-        )
-    }
+   
+
     return (
         <>
 
@@ -92,8 +88,7 @@ const BlogNext = () => {
                 }}>Next</button>
             </div>
         </>
-    )
-
+    );
 }
 
 export default BlogNext
@@ -150,5 +145,3 @@ const loadCategories = async (categories:any) => {
         return <div>Error fetching categories. Please try again later.</div>;
     }
 };
-
-

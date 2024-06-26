@@ -11,8 +11,17 @@ const BlogNext = ({ children }: any) => {
 
     if (loading) {
         return (
-            <DNA />
-        )
+            <div className="loader-overlay">
+                <DNA
+                    visible={true}
+                    height="80"
+                    width="80"
+                    ariaLabel="dna-loading"
+                    wrapperStyle={{}}
+                    wrapperClass="dna-wrapper"
+                />
+            </div>
+        );
     }
     return (
         <>

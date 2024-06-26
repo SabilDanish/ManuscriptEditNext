@@ -31,23 +31,23 @@ export default function Header() {
                 <div className="header_top_menu_icon_inner">
                   <ul>
                     <li>
-                      <a href="https://www.facebook.com/Manuscriptedit">
+                      <Link href={"https://www.facebook.com/Manuscriptedit"} target="_blank">
                         <i className="fa fa-facebook"></i>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit">
+                      <a href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit" target="_blank">
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.instagram.com/manuscriptedit/">
-                      <i className="fa fa-instagram"></i>
+                      <a href="https://www.instagram.com/manuscriptedit/" target="_blank">
+                        <i className="fa fa-instagram"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.youtube.com/@manuscriptedit.">
-                      <i className="fa fa-youtube-play"></i>
+                      <a href="https://www.youtube.com/@manuscriptedit." target="_blank">
+                        <i className="fa fa-youtube"></i>
                       </a>
                     </li>
                   </ul>
