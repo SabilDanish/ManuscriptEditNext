@@ -28,6 +28,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./_Common/_Header/Header";
 import { DefaultSeo } from "next-seo";
+import FloatingWp from "./_Common/FloatingWp/FloatingWp";
 // import SEO from "../../next-seo.config";
 
 // export const metadata: Metadata = {
@@ -97,6 +98,7 @@ export default function RootLayout({
         {/* {header()} */}
         <Header />
         <Suspense fallback={<p>Loading feed...</p>}>{children}</Suspense>
+        <FloatingWp/>
         {footer()}
       </body>
     </html>

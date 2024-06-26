@@ -136,7 +136,7 @@ export default function Home() {
               <i className="bi bi-check-circle-fill"></i> If your document
               contains 40000 words or more, please contact us to receive a
               customized quote. For Indian Customers we have customized pricing
-              in INR. Please contact support@manuscriptedit.com{" "}
+              in INR. Please contact {" "}
               <a href="mailto:support@manuscriptedit.com">
                 support@manuscriptedit.com
               </a>

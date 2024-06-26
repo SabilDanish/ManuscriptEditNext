@@ -42,7 +42,7 @@ export default function Home() {
                   Proofreading
                   <span style={{ float: "right" }}>
                     <Link href={"/ProofReading"}>
-                      <button className="btn btn-primary"> Check Price</button>
+                      <button className="btn btn-primary"> Know More</button>
                     </Link>
                   </span>
                 </h4>
@@ -82,7 +82,7 @@ export default function Home() {
                   Substantive Editing
                   <span style={{ float: "right" }}>
                     <Link href={"/SubEditing"}>
-                      <button className="btn btn-primary"> Check Price</button>
+                      <button className="btn btn-primary"> Know More</button>
                     </Link>
                   </span>
                 </h4>
@@ -125,7 +125,7 @@ export default function Home() {
                   Extensive Substantive Editing
                   <span style={{ float: "right" }}>
                     <Link href={"/ExtensiveSubstantiveEditing"}>
-                      <button className="btn btn-primary"> Check Price</button>
+                      <button className="btn btn-primary"> Know More</button>
                     </Link>
                   </span>
                 </h4>
@@ -169,7 +169,7 @@ export default function Home() {
                   Other Services
                   <span style={{ float: "right" }}>
                     <Link href={"/CustomizedServices"}>
-                      <button className="btn btn-primary"> Check Price</button>
+                      <button className="btn btn-primary"> Know More</button>
                     </Link>
                   </span>
                 </h4>
