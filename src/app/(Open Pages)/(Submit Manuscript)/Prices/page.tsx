@@ -11,7 +11,6 @@ export default function Home() {
   const {isLoading,error,result,getPriceCalculator} = usePriceCalculator()
 
   const calculateHandler = () => {
-    console.log({wordCount})
     getPriceCalculator({word_count:wordCount})
   }
   

@@ -35,7 +35,6 @@ const useForm =  () => {
             });
 
         } catch (error) {
-            console.log({error})
             setError("Something went wrong");
             setIsLoading(false);
         }

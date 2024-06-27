@@ -17,7 +17,6 @@ const PeerForm = () => {
   const { isLoading, postData } = useForm();
 
   const formHandler = (event: any) => {
-    console.log({ event });
     const { name, value } = event.target;
     setForm({ ...form, [name]: value });
   };

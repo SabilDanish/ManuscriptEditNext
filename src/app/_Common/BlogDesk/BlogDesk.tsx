@@ -14,7 +14,6 @@ const BlogDesk = ({ blogs }: any) => {
     router.push(url);
   };
 
-  console.log({blogs})
   return (
     <>
       <div className="container BlogDesktop" style={{ marginTop: "30px" }}>

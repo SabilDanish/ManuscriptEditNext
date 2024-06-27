@@ -34,7 +34,6 @@ const FaqHome = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index:number) => {
-    console.log(typeof(index))
     setOpenIndex(openIndex === index ? null : index);
   };
 

@@ -20,7 +20,6 @@ const useEmail = () => {
             }).then(response => {
                 return response.json()
             }).then(responseData => {
-                console.log({responseData})
                 const [{Status,message}] = responseData
                 if(Status){
                     toast.success("Your email has been successfully registered")

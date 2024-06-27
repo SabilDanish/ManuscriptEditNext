@@ -22,7 +22,6 @@ const useEditorAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse
             }).then(response => {
                 return response.json()
             }).then(responseData => {
-                console.log({responseData})
                 setData(responseData);
                 setShowLogin(!showLogin)
                 fetch('/sendEmail',{
@@ -36,24 +35,21 @@ const useEditorAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse
                         message: `Hi ${formData.fname},\n\nThank you for registering. Welcome to our service!`,
                     }),
                 }).then(emailResponse => {
-                    console.log({emailResponse})
                     if (emailResponse.ok) {
                         toast.success('Registration successful and email sent');
                       } else {
                         toast.error('Registration successful but email could not be sent');
                       }
                 }).catch(err => {
-                    console.log({err2: err})
+                    toast.error("Something went wrong")
                 })
             }).catch(err => {
-                console.log({err})
                 setError("Couldn't save your data");
                 toast.error("Something went wrong")
             }).finally(() => {
                 setIsLoading(false);
             });
         } catch (error) {
-            console.log({error})
             setError("Something went wrong");
             setIsLoading(false);
         }
@@ -72,20 +68,17 @@ const useEditorAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse
             }).then(response => {
                 return response.json()
             }).then(responseData => {
-                console.log({responseData1: responseData})
                 // sessionStorage.setItem("editorUserId",responseData[0][0].user_id)
                 setData(responseData);
                 router.push('/');
                 toast.success("Login Successful")
             }).catch(err => {
-                console.log({err})
                 setError("Couldn't save your data");
                 toast.error("Something went wrong")
             }).finally(() => {
                 setIsLoading(false);
             });
         } catch (error) {
-            console.log({error})
             setError("Something went wrong");
             setIsLoading(false);
         }

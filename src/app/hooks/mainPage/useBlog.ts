@@ -22,7 +22,6 @@ const useBlogs = (page: number=1) => {
       ).then(response => {
         return response.json()
       }).then(data => {
-        console.log({ data })
         setBlogs(data);
       }).finally(() => {
         setLoading(false);

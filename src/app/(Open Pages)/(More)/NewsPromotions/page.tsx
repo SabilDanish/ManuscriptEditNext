@@ -7,13 +7,13 @@ import { DNA } from "react-loader-spinner";
 export default function Home() {
 
   const {loading,news} = useFetchNews()
-  console.log({news})
+
   return (
     <>
     {breadcrum("More", "Recent Partners")}
     <div className="container mt-3 mb-3">
     <div className="row">
-      {news.length ? news.map((val: any) => (<div className="col-md-4 mt-3">
+      {news.length ? news.map((val: any,index:number) => (<div key={index} className="col-md-4 mt-3">
        <div className="card text-center mrmine changeColor2">
          <div className="card-header changeColor">
              Conference

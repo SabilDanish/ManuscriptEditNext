@@ -112,7 +112,6 @@ const fetchCategories = (categories:any) => {
 
     const value = Promise.all(fetchPromises)
         .then(category => {
-            console.log('All categories fetched:', category);
             return category
         })
         .catch(error => {

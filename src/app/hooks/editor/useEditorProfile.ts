@@ -3,7 +3,6 @@ import env from '@/env/env';
 import { useState, useEffect } from 'react';
 
 const useFetchEditors = (type: string, limit: number, offset: number) => {
-    console.log({type})
     const [editors, setEditors] = useState<Editor[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
@@ -11,7 +10,6 @@ const useFetchEditors = (type: string, limit: number, offset: number) => {
     useEffect(() => {
         fetchEditors()
     }, [limit, offset, type])
-    console.log({type,offset,limit})
 
     const fetchEditors = async () => {
         setLoading(true)

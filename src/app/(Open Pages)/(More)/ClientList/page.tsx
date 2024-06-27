@@ -8,7 +8,6 @@ import { DNA } from "react-loader-spinner";
 
 export default function Home() {
   const {loading,clientList}  = useFetchClientList()
-  console.log({clientList})
   
   return (
     <>

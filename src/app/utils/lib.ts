@@ -14,6 +14,5 @@ export function truncateString(str: string, maxLength: number): string {
 
 export function get_image_src(str:string):string {
     let image_tag = str.split("img")[1].split(" ")[2].split("=")[1].split("\"")
-    console.log({image_tag})
     return image_tag[1]
 }
