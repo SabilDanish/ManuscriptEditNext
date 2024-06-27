@@ -38,7 +38,6 @@ const BlogNext = () => {
                     categories
                 } = blog
 
-                // const categories_string_array:any = await fetchCategories(categories)
                 return (
 
                     <>

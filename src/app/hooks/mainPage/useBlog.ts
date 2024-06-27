@@ -2,7 +2,7 @@ import env from '@/env/env';
 import { useState, useEffect } from 'react';
 
 
-const useBlogs = (page: number) => {
+const useBlogs = (page: number=1) => {
   const [blogs, setBlogs] = useState<any>([]);
   const [category, setCategory] = useState<any>([])
   const [loading, setLoading] = useState<boolean>(false);
