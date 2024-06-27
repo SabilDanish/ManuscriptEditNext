@@ -22,7 +22,7 @@ const GetHelp = () => {
 
             <div className='GetEveryHead' >
                 <h2 className='TitleAll' style={{ textAlign: 'center', marginTop: '3rem' }}>FEELING CONFUSED WHAT TO OPT FOR?</h2>
-                <p style={{ textAlign: 'center' }}>Choose Your issues, Let ManuscriptEdit HELP YOU</p>
+                <p style={{ textAlign: 'center' }}>Choose Your issues, Let ManuscriptEdit help you</p>
             </div>
 
             <div className="container-fluid GetEveryHead" style={{ marginTop: "23px", marginBottom: "30px" }}>
@@ -33,7 +33,7 @@ const GetHelp = () => {
                             onClick={(event) => openTab(event, 'firstTab')}
                             id="defaultOpen"
                         >
-                            Can I get assistance in writing my Research Paper?
+                            Can I get assistance in writing my research Paper?
                         </button>
                         <button
                             className={`tablinks ${activeTab === 'secondTab' && 'active'}`}
@@ -52,7 +52,7 @@ const GetHelp = () => {
                             className={`tablinks ${activeTab === 'FourthTab' && 'active'}`}
                             onClick={(event) => openTab(event, 'FourthTab')}
                         >
-                            I am facing difficulty in getting grants and developing Research projects.Need Help?
+                            I am facing difficulty in getting grants and Developing research projects, can you guide?
                         </button>
 
 
@@ -213,7 +213,7 @@ const GetHelp = () => {
                                     <th scope="col" style={{ color: "#a31e22" }}>Standard Package</th>
                                     <th scope="col" style={{ color: "#a31e22" }}>Advanced Package</th>
                                     <th scope="col" style={{ color: "#a31e22" }}>Premium Package</th>
-                                    <th scope="col" style={{ color: "#a31e22" }}>Premium + Package</th>
+                                    <th scope="col" style={{ color: "#a31e22" }}>Premium Plus Package</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -235,28 +235,36 @@ const GetHelp = () => {
                                     <td scope="row"><span className="checkmark">&#10004;</span>Target Journal Formatting</td>
                                     <td><span className="checkmark">&#10004;</span>Journal Selection</td>
                                     <td><span className="checkmark">&#10004;</span>Journal Selection</td>
-                                    <td><span className="checkmark">&#10004;</span> Research Paper Writing</td>
+                                    <td><span className="checkmark">&#10004;</span> Journal Selection</td>
 
                                 </tr>
                                 <tr>
                                     <td scope="row"><span className="checkmark">&#10004;</span>Cover Letter writing</td>
                                     <td><span className="checkmark">&#10004;</span>Target Journal Formatting.</td>
                                     <td> <span className="checkmark">&#10004;</span>Target Journal Formatting</td>
-                                    <td><span className="checkmark">&#10004;</span> Substantive Editing</td>
+                                    <td><span className="checkmark">&#10004;</span> Target Journal Formatting</td>
 
 
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
-                                    <td><span className="checkmark">&#10004;</span>Journal Submission</td>
-                                    <td><span className="checkmark">&#10004;</span>Artwork Formatting</td>
-                                    <td><span className="checkmark">&#10004;</span>Journal Selection</td>
                                 </tr>
 
                                 <tr>
                                     <td scope="row"><span className="checkmark">&#10004;</span>Journal Submission</td>
                                     <td><span className="checkmark">&#10004;</span>Cover Letter writing</td>
+                                    <td><span className="checkmark">&#10004;</span>Artwork Formatting</td>
+                                    <td><span className="checkmark">&#10004;</span>Artwork Formatting</td>
+                                </tr>
+
+                                <tr>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
+                                    <td><span className="checkmark">&#10004;</span>Journal Submission</td>
+                                    <td><span className="checkmark">&#10004;</span>Cover Letter Writing</td>
+                                    <td><span className="checkmark">&#10004;</span>Cover Letter Writing</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td scope="row"></td>
+                                    <td><span className="checkmark">&#10004;</span>Plagiarism Check</td>
                                     <td><span className="checkmark">&#10004;</span>Journal Submission</td>
                                     <td><span className="checkmark">&#10004;</span>Journal Submission</td>
 
@@ -264,7 +272,7 @@ const GetHelp = () => {
 
                                 <tr>
                                     <td scope="row"></td>
-                                    <td><span className="checkmark">&#10004;</span>Plagiarism Check</td>
+                                    <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
                                     <td>
                                         <ul>
                                             <li><span className="checkmark">&#10004;</span>Response to Reviewers*</li>
@@ -272,29 +280,21 @@ const GetHelp = () => {
                                         </ul>
 
                                     </td>
-                                    <td><span className="checkmark">&#10004;</span>Target Journal Formatting</td>
-
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
-                                    <td><span className="checkmark">&#10004;</span>Cover Letter Writing</td>
-                                    <td><span className="checkmark">&#10004;</span>Artwork Formatting</td>
+                                    <td><span className="checkmark">&#10004;</span>Substantive Editing</td>
                                 </tr>
 
                                 <tr>
                                     <td scope="row"></td>
                                     <td></td>
                                     <td><span className="checkmark">&#10004;</span>Plagiarism Check</td>
-                                    <td><span className="checkmark">&#10004;</span>Response To Reviewer</td>
+                                    <td><span className="checkmark">&#10004;</span>Research Paper Writing</td>
                                 </tr>
 
                                 <tr>
                                     <td scope="row"></td>
                                     <td></td>
                                     <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
-                                    <td><span className="checkmark">&#10004;</span>Cover Letter Writing</td>
+                                    <td><span className="checkmark">&#10004;</span>Response To Reviewer</td>
                                 </tr>
 
 
@@ -346,34 +346,34 @@ const GetHelp = () => {
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Word Count Reduction</td>
-                                    <td><span className="checkmark">&#10004;</span> Logic Fix</td>
-                                    <td><span className="checkmark">&#10004;</span>Response Letter Editing</td>
-                                    <td><span className="checkmark">&#10004;</span> Manuscript Assessment</td>
+                                <td scope="row"><span className="checkmark">&#10004;</span>Spelling Check</td>
+                                    <td><span className="checkmark">&#10004;</span> Clarity and Coherence Check</td>
+                                    <td><span className="checkmark">&#10004;</span>Content and Structural Review</td>
+                                    <td><span className="checkmark">&#10004;</span> Scientific Content and Structural review</td>
 
 
                                 </tr>
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Spelling Check</td>
-                                    <td><span className="checkmark">&#10004;</span>Word Count Reduction</td>
-                                    <td><span className="checkmark">&#10004;</span> Crosschecking Responses</td>
-                                    <td><span className="checkmark">&#10004;</span>Scientific Review</td>
-
-                                </tr>
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Grammar Check</td>
-                                    <td><span className="checkmark">&#10004;</span> Cover Letter</td>
-                                    <td><span className="checkmark">&#10004;</span> Manuscript Formatting</td>
+                                <td scope="row"><span className="checkmark">&#10004;</span>Grammar Check</td>
+                                    <td><span className="checkmark">&#10004;</span>Grammar check and spell check</td>
+                                    <td><span className="checkmark">&#10004;</span> Editing Certificate</td>
                                     <td><span className="checkmark">&#10004;</span> Re-editing Support</td>
 
+                                </tr>
+                                <tr>
+                                <td scope="row"><span className="checkmark">&#10004;</span>Editing Certificate</td>
+                                    <td><span className="checkmark">&#10004;</span> Cover Letter</td>
+                                    <td></td>
+                                    <td><span className="checkmark">&#10004;</span>Editing Certificate</td>
+
 
                                 </tr>
 
                                 <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Editing Certificate</td>
-                                    <td><span className="checkmark">&#10004;</span> Editing Certificate</td>
+                                    
+                                <td></td>
                                     <td><span className="checkmark">&#10004;</span> Editing Certificate</td>
-                                    <td><span className="checkmark">&#10004;</span>Editing Certificate</td>
+                                    
 
 
                                 </tr>
@@ -529,7 +529,7 @@ const GetHelp = () => {
                                 <tr>
                                     <td scope="row"><span className="checkmark">&#10004;</span>Choosing Subject Field Guidance</td>
                                     <td><span className="checkmark">&#10004;</span>Writing Assistance for Scholarship Proposals and Grant Applications</td>
-                                    <td><span className="checkmark">&#10004;</span>Statistical Analysis Using SPSS/Data Analysis</td>
+                                    <td><span className="checkmark">&#10004;</span>Data Analysis/ Statistical Analysis using SPSS;</td>
                                     <td><span className="checkmark">&#10004;</span> PhD Mock Viva Assistance</td>
                                     <td><span className="checkmark">&#10004;</span>Dedicated Expert Mentor for Final Review</td>
 
@@ -538,7 +538,7 @@ const GetHelp = () => {
                                     <td scope="row"><span className="checkmark">&#10004;</span>Webinars and Workshops on Research Trends</td>
                                     <td><span className="checkmark">&#10004;</span> Literature Review and Data Collection Support</td>
                                     <td> <span className="checkmark">&#10004;</span>Research Design Consultation</td>
-                                    <td><span className="checkmark">&#10004;</span> Writing and Submission of Second Indexed Paper</td>
+                                    <td><span className="checkmark">&#10004;</span> Writing and Submission of Second research Paper</td>
                                     <td><span className="checkmark">&#10004;</span> Workshop on Manuscript Submission and Publication Process</td>
 
 
@@ -548,7 +548,7 @@ const GetHelp = () => {
                                 <tr>
                                     <td scope="row"><span className="checkmark">&#10004;</span>Problem Statement Formulation</td>
                                     <td><span className="checkmark">&#10004;</span> Initial Data Analysis</td>
-                                    <td><span className="checkmark">&#10004;</span> Writing and Submission of First Indexed Paper</td>
+                                    <td><span className="checkmark">&#10004;</span> Writing and Submission of First research Paper</td>
                                     <td><span className="checkmark">&#10004;</span> Thesis Review and Feedback</td>
                                     <td><span className="checkmark">&#10004;</span> Defense Preparation and Methodology Consultation</td>
 
