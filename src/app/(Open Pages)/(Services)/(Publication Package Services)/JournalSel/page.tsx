@@ -4,6 +4,7 @@ import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
                     <i className="bi bi-check-lg"></i>
                     <h6>
                       Identify significant overlaps in text with published and
-                      in-press articles.{" "}
+                      in-press articles.
                     </h6>
                   </span>
                   <span>
@@ -63,9 +64,9 @@ export default function Home() {
               <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
               Order Now
               </button>
-              <button onClick={() => {redirect('contact-us')}} className="btn btn-primary mt-3 mr-3">
+              <Link href={"/ContactUs"}><button className="btn btn-primary mt-3 mr-3">
               Schedule a Call
-              </button>
+              </button></Link>
             </div>
             <div className="col-md-6">
               <img

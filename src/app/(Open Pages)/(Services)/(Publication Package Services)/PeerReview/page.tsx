@@ -50,7 +50,7 @@ export default function Home() {
                   <span>
                     <i className="bi bi-check-lg"></i>
                     <h6>
-                      {" "}
+                      
                       Is the Introduction/Background sound and logical as a
                       context for the study?
                     </h6>
@@ -69,23 +69,17 @@ export default function Home() {
                   <span>
                     <i className="bi bi-check-lg"></i>
                     <h6>
-                      {" "}
+                     
                       Is there is a clear differentiation between Results and
                       Discussion sections.
                     </h6>
                   </span>
+                  
+                 
                   <span>
                     <i className="bi bi-check-lg"></i>
                     <h6>
-                      the Discussion made in relation to published literature
-                      and/or fundamental basis, or is it just a mere repetition
-                      of the Results section?
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      {" "}
+                     
                       Do the Conclusions clearly reflect the salient findings of
                       the study?
                     </h6>

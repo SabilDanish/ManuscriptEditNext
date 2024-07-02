@@ -210,8 +210,11 @@ export default function Home() {
                     <li>Journal Submission</li>
                     <li>Target Journal Formatting</li>
                     <li>Artwork Formatting</li>
-                    <li>Response To Reviewer</li>
                     <li>Cover Letter Writing</li>
+                    <li>Response To Reviewer</li>
+                    <li>Plagarism Check</li>
+                    <li>Unlimited Assistance</li>
+                    
 
 
                   </ul>
@@ -240,10 +243,11 @@ export default function Home() {
                     <li>Journal Selection</li>
                     <li>Target Journal Formatting</li>
                     <li>Artwork Formatting</li>
+                    <li>Cover Letter Writing</li>
                     <li>Journal Submission</li>
                     <li>Response to Reviewers*
                     (*One response to reviewer free)</li>
-                    <li>Cover Letter Writing</li>
+                    
                     <li>Plagiarism Check</li>
                     <li>Unlimited Assistance</li>
 
@@ -273,8 +277,9 @@ export default function Home() {
                     <li>Substantive Editing</li>
                     <li> Journal Selection</li>
                     <li >Target Journal Formatting.</li>
-                    <li>Journal Submission</li>
                     <li >Cover Letter writing</li>
+                    <li>Journal Submission</li>
+                   
                     <li >Plagiarism Check</li>
                     <li> Unlimited Assistance</li>
                    
@@ -304,8 +309,9 @@ export default function Home() {
                     <li>Journal Selection</li>
                     <li >Target Journal Formatting</li>
                     <li >Cover Letter writing</li>
-                    <li > Unlimited Assistance</li>
+                    
                     <li >Journal Submission</li>
+                    <li > Unlimited Assistance</li>
                     
                   </ul>
                 </div>
@@ -357,7 +363,7 @@ export default function Home() {
                     <i className="fa fa-check"></i>
                   </div>
                   <div className="single_service_content">
-                    <h4>Pre-Submission Perr Review</h4>
+                    <h4>Pre-Submission Per Review</h4>
                   </div>
                 </div>
               </div>
@@ -408,7 +414,7 @@ export default function Home() {
                     <i className="fa fa-check"></i>
                   </div>
                   <div className="single_service_content">
-                    <h4>Responsive to Reviewers</h4>
+                    <h4>Response to Reviewers</h4>
                   </div>
                 </div>
               </div>

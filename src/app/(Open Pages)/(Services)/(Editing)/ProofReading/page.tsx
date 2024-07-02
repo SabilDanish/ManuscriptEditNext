@@ -17,7 +17,7 @@ export default function Home() {
                 Introduction to the critical role of proofreading in ensuring
                 polished and error-free written communication.
               </p>
-              <ul style={{ listStyle: "none" }}>
+              <ul >
                 <li>Thorough reading of manuscript.</li>
                 <li>Spotting all errors.</li>
                 <li>Review capitalization and punctuation.</li>

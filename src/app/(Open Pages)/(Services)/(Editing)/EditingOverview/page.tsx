@@ -193,7 +193,7 @@ export default function Home() {
                     </span>
                     <span>
                       <i className="bi bi-check-lg"></i>
-                      <h6> RBook Editing </h6>
+                      <h6>Book Editing </h6>
                     </span>
                     <span>
                       <i className="bi bi-check-lg"></i>
