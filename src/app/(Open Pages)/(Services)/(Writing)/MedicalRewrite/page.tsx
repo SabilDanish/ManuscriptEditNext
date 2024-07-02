@@ -13,13 +13,13 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3"> ReWriting</h3>
+              <h3 className="pt-2 pb-3">Rewriting</h3>
               <p>
-                ReWriting is a specialized service offered by MenuscriptEdit,
+               Rewriting is a specialized service offered by ManuscriptEdit,
                 dedicated to improving the clarity, coherence, and effectiveness
                 of existing written content. Whether it's a manuscript, report,
                 article, website content, or any other document,
-                MenuscriptEdit's ReWriting service helps clients refine and
+                ManuscriptEdit's Rewriting service helps clients refine and
                 enhance their written material to better meet their
                 communication goals and target audience needs.
               </p>

@@ -175,7 +175,7 @@ export default function Header() {
                             </li>
                             <li>
                               <Link href={"/ScientificWriting"}>
-                                Scientific Writing
+                              Scientific & Academic Writing
                               </Link>
                             </li>
                             <li>

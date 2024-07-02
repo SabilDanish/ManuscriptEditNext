@@ -16,7 +16,7 @@ export default function Home() {
               <h3 className="pt-2 pb-3"> Scientific & Academic Writing</h3>
               <p>
                 Scientific & Academic Writing is a specialized service offered
-                by MenuscriptEdit, tailored for researchers, academics, and
+                by ManuscriptEdit, tailored for researchers, academics, and
                 professionals in various scientific fields. This service assists
                 clients in effectively communicating their research findings,
                 theories, and academic insights through clear, concise, and
