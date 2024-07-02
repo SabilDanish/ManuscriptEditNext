@@ -11,10 +11,10 @@ export default function SpecializedArea(showDetails = true) {
             <div className="col-lg-12">
               <div className="section_title text_center mb-50 mt-3">
                 <div className="section_main_title">
-                  <h1>Explore our editor's specialized areas</h1>
+                  <h1>Explore our Expert’s specialized areas</h1>
                   <p>
                     From Medicine to Life Sciences, Physical Sciences, Economics
-                    and the Art & Humanities -- our English editing team
+                    and the Art & Humanities -- our expert team
                     specializes in 1,117 subject areas.
                   </p>
                 </div>

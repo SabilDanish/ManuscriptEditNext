@@ -209,7 +209,7 @@ export default function Home() {
                             animationName: "fadeInUp",
                           }}
                         >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
+                          <h5 className="mt-1 mb-4">What We Provide</h5>
                           <div className="about_icon_box_inner mb-20">
                             <span>
                               <i className="fa fa-check-square-o"></i> Extensive
@@ -237,7 +237,7 @@ export default function Home() {
                           <div className="about_icon_box_inner mb-20">
                             <span>
                               <i className="fa fa-check-square-o"></i>{" "}
-                              ustification and Recommendation
+                              Justification and Recommendation
                             </span>
                           </div>
                           <div className="about_icon_box_inner mb-20">
@@ -343,7 +343,7 @@ export default function Home() {
                             animationName: "fadeInUp",
                           }}
                         >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
+                          <h5 className="mt-1 mb-4">What We Provide</h5>
                           <div className="about_icon_box_inner mb-20">
                             <span>
                               <i className="fa fa-check-square-o"></i> Extensive
@@ -453,7 +453,7 @@ export default function Home() {
                                 animationName: "fadeInUp",
                               }}
                             >
-                              <h5 className="mt-1 mb-4">What You Provide</h5>
+                              <h5 className="mt-1 mb-4">What We Provide</h5>
                               <div className="about_icon_box_inner mb-20">
                                 <span>
                                   <i className="fa fa-check-square-o"></i>{" "}
@@ -601,7 +601,7 @@ export default function Home() {
                           animationName: "fadeInUp",
                         }}
                       >
-                        <h5 className="mt-1 mb-4">What You Provide</h5>
+                        <h5 className="mt-1 mb-4">What We Provide</h5>
                         <div className="about_icon_box_inner mb-20">
                           <span>
                             <i className="fa fa-check-square-o"></i> Extensive
@@ -663,10 +663,6 @@ export default function Home() {
                         >
                           <h5 className="mt-1 mb-4">What You Provide</h5>
                           <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Statistical analysis (SPSS)
-                            </span>
                           </div>
                           <div className="about_icon_box_inner mb-20">
                             <span>
@@ -765,7 +761,7 @@ export default function Home() {
                             animationName: "fadeInUp",
                           }}
                         >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
+                          <h5 className="mt-1 mb-4">What We Provide</h5>
                           <div className="about_icon_box_inner mb-20">
                             <span>
                               <i className="fa fa-check-square-o"></i> Necessary

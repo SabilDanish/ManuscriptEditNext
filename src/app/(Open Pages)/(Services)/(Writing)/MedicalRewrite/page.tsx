@@ -4,6 +4,7 @@ import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -288,9 +289,9 @@ export default function Home() {
               <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
               Submit Manuscript
               </button>
-              <button onClick={() => {redirect('contact-us')}} className="btn btn-primary mt-3 mr-3">
+              <Link href={"/ContactUs"}><button className="btn btn-primary mt-3 mr-3">
               Schedule a Call
-              </button>
+              </button></Link>
             </div>
           </div>
         </div>
