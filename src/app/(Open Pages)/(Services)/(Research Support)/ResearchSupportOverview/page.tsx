@@ -43,9 +43,9 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-12">
               <div className="section_title text_center mb-55">
-                <div className="section_sub_title uppercase mb-3">
+                {/* <div className="section_sub_title uppercase mb-3">
                   <h6>SERVICES</h6>
-                </div>
+                </div> */}
                 <div className="section_main_title">
                   <h1> Our Services</h1>
                 </div>

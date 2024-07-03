@@ -38,7 +38,7 @@ export default function Home() {
             </div>
             <div className="col-lg-7" style={{ paddingLeft: "0px !important" }}>
               <div className="content d-flex flex-column justify-content-center h-100">
-                <h3 className="fst-italic">MANUSCRIPTEDIT QUALITY GUARANTEE</h3>{" "}
+                <h3 className="fst-italic">ManuscriptEdit Quality Guarantee</h3>{" "}
                 <br />
                 <ul>
                   <li>
@@ -89,7 +89,7 @@ export default function Home() {
             <div className="col-lg-9 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
               <h3 className="fst-italic">
                 {" "}
-                HOW TO APPLY FOR MANUSCRIPTEDIT'S QUALITY GUARANTEE
+                How to Apply for ManuscriptEdit’s Quality Guarantee
               </h3>
               <p>
                 {" "}
@@ -103,7 +103,7 @@ export default function Home() {
               <p>
                 {" "}
                 <i className="bi bi-check-circle-fill"></i> You will receive a
-                response from Manuscriptedit regarding the independent
+                response from ManuscriptEdit regarding the independent
                 reviewer's assessment and suggested solution for resolution
                 within two business days.
               </p>

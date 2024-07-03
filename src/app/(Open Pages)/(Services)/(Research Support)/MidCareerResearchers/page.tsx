@@ -17,7 +17,7 @@ export default function Home() {
                 pursuit of knowledge and the desire to contribute significantly
                 to your field. But in the competitive landscape of academia,
                 even the most experienced scholars face challenges that can
-                stymie progress. Manuscriptedit.com is here to bridge that gap,
+                hinder progress. ManuscriptEdit.com is here to bridge that gap,
                 offering comprehensive services tailored specifically for you.
               </p>
             </div>
@@ -126,7 +126,7 @@ export default function Home() {
                     </h4>
                     <p>
                       Fortify your work against critical scrutiny with our
-                      thorough peer-review prep.
+                      thorough peer-review preparation.
                     </p>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ export default function Home() {
                   <div className="service_style_ten_content">
                     <h4 className="pb-2">
                       <a href="service-details.html">
-                        Manuscript Writing Assist.
+                        Manuscript Writing Assistance.
                       </a>
                     </h4>
                     <p>
@@ -260,7 +260,7 @@ export default function Home() {
                     </h4>
                     <p>
                       Ensure linguistic precision and clarity with our
-                      meticulous editing services.
+                      meticulous editing &amp; proofreading.  
                     </p>
                   </div>
                 </div>
@@ -486,7 +486,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a>
-                        How does Manuscriptedit.com help with peer review
+                        How does ManuscriptEdit.com help with peer review
                         preparation?
                       </a>
                       <p>

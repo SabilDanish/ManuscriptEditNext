@@ -3,12 +3,12 @@ import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 export default function Home() {
   return (
    <>
-   {breadcrum("Quality", "Editing Process")}
+   {breadcrum("Quality", "Editorial Processes")}
 <section className="pt-5 pb-5">
     <div className="container">
         <div className="row">
             <div className="col-md-6">
-                <h3 className="pt-5">Editing Process Overview</h3>
+                <h3 className="pt-5">Editorial Processes Overview</h3>
                 <p className="pt-3">
                     ASetting the stage for the importance of editing in the realm of written communication.
                     Introduction to the multifaceted nature of editing and its impact on clarity and effectiveness.
@@ -29,7 +29,7 @@ export default function Home() {
           <li className="nav-item col-6 col-md-4 col-lg-2">
             <a className="nav-link1 active show" data-bs-toggle="tab" data-bs-target="#tab-1">
               <i className="bi bi-binoculars color-cyan"></i>
-              <h4>Addressing your queries</h4>
+              <h4>Addressing your Queries</h4>
             </a>
           </li>
 

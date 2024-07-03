@@ -16,7 +16,7 @@ export default function Home() {
               </h3>
               <p>
                 In academic research, visibility and impact are currencies of
-                success. At Manuscriptedit.com, we offer bespoke Research
+                success. At ManuscriptEdit.com, we offer bespoke Research
                 Enhancement Services designed to amplify the reach and
                 recognition of your scholarly work.
               </p>
@@ -374,7 +374,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a>
-                        Can Manuscriptedit.com assist me in enhancing my
+                        Can ManuscriptEdit.com assist me in enhancing my
                         academic career?
                       </a>
                       <p>
@@ -412,7 +412,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a>
-                        How can I start using Manuscriptedit.com's Research
+                        How can I start using ManuscriptEdit.com's Research
                         Enhancement Services?
                       </a>
                       <p>
