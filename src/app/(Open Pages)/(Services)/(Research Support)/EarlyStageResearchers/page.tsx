@@ -1,9 +1,18 @@
+"use client"
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import whyToChoose from "@/app/_Common/_WhyToChoose/WhyToChoose";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../../utils/metaFile.js'
+import Metadata from "@/app/Metadata";
+
+const newData: any = data;
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   return (
     <>
+      {<Metadata metaData={metaData} />}
       {breadcrum("Services / Research Support", "Early-Stage Researchers")}
       <section className="pt-5 pb-5">
         <div className="container">
