@@ -160,7 +160,7 @@ export default function Home() {
 										</div>
 									</div>
 									<div className="how_it_work_title pt-65">
-										<h4><a href="#">ReWriting</a></h4>
+										<h4><a href="#">Rewriting</a></h4>
 									</div>
 								</div>
 							</div>

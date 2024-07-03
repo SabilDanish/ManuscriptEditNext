@@ -18,11 +18,11 @@ export default function Home() {
             <div className="col-md-6">
                 <h3 className="pt-2 pb-3"> Technical Writing</h3>
                 <p>
-                    Technical Writing is a specialized service offered by MenuscriptEdit,
+                    Technical Writing is a specialized service offered by ManuscriptEdit,
                     designed to help clients effectively communicate complex technical
                     information to specific audiences. This service encompasses a wide
                     range of documents, including user manuals, technical reports, instructional
-                    guides, software documentation, and whitepapers. MenuscriptEdit provides
+                    guides, software documentation, and whitepapers. ManuscriptEdit provides
                     comprehensive support throughout the technical writing process, ensuring
                     clarity, accuracy, and usability of the final documents.
                 </p>
