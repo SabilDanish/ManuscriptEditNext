@@ -61,6 +61,7 @@ export default function RootLayout({
           Manuscriptedit - Expert Scientific Journal Publication Services
         </title>
         <link href="/img/manu.ico" rel="icon"></link>
+        <meta name="google-site-verification" content="70JSDkkRBc9H-NNFHJMmgPVrZCV_JUqnDogS_tZnHD8" />
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/vendor/jquery-3.2.1.min.js" />
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/bootstrap.min.js" />
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/bootstrap.bundle.min.js" />
