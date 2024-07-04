@@ -3,12 +3,12 @@ import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 export default function Home() {
   return (
    <>
-   {breadcrum("Quality", "Editing Process")}
+   {breadcrum("Quality", "Editorial Processes")}
 <section className="pt-5 pb-5">
     <div className="container">
         <div className="row">
             <div className="col-md-6">
-                <h3 className="pt-5">Editing Process Overview</h3>
+                <h3 className="pt-5">Editorial Processes Overview</h3>
                 <p className="pt-3">
                     ASetting the stage for the importance of editing in the realm of written communication.
                     Introduction to the multifaceted nature of editing and its impact on clarity and effectiveness.
@@ -29,7 +29,7 @@ export default function Home() {
           <li className="nav-item col-6 col-md-4 col-lg-2">
             <a className="nav-link1 active show" data-bs-toggle="tab" data-bs-target="#tab-1">
               <i className="bi bi-binoculars color-cyan"></i>
-              <h4>Addressing your queries</h4>
+              <h4>Addressing your Queries</h4>
             </a>
           </li>
 
@@ -110,7 +110,7 @@ export default function Home() {
                 <h3>Assignment of Order</h3>
                 <ul>
                   <li><i className="bi bi-check-circle-fill"></i> The chief editor designates one of the subject matter experts to deal with the paper.</li>
-                  <li><i className="bi bi-check-circle-fill"></i> The subject expert does an in-depth study on the paper for understanding the client's requirement.</li>
+                  <li style={{whiteSpace:"pre"}}><i className="bi bi-check-circle-fill"></i> The subject expert does an in-depth study on the paper for understanding the client's requirement.</li>
                   <li><i className="bi bi-check-circle-fill"></i> The real work on the paper begins as per the preferred service of the client.</li>
                 </ul>
               </div>
@@ -125,8 +125,8 @@ export default function Home() {
               <div className="col-lg-8 order-2 order-lg-1">
                 <h3>Review in Progress</h3>
                 <ul>
-                  <li><i className="bi bi-check-circle-fill"></i> A team of experienced associate editors do the first round of review rechecking the language and its confirmation with the target journal guidelines/instructions provided by the client.</li>
-                  <li><i className="bi bi-check-circle-fill"></i> The chief editor ensures the paper is error free to maximum extent and does the second round of review.</li>
+                  <li><i className="bi bi-check-circle-fill"></i> A team of experienced associate editors do the first round of review rechecking the language and &nbsp; &nbsp; &nbsp; &nbsp; its confirmation with the target journal guidelines/instructions provided by the client.</li>
+                  <li><i className="bi bi-check-circle-fill"></i> The chief editor ensures the paper is error free to maximum extent and does the second round of &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; review.</li>
                 </ul>
               </div>
               <div className="col-lg-4 order-1 order-lg-2 text-center">
@@ -158,7 +158,7 @@ export default function Home() {
                   <li><i className="bi bi-check-circle-fill"></i> Scope for re-editing or modifications in the paper based on the client's feedback.</li>
                   <li><i className="bi bi-check-circle-fill"></i> Rework starts after immediate acknowledgement to the client's concerns.</li>
                   <li><i className="bi bi-check-circle-fill"></i> The concerned subject expert validates the incorporated changes required at the client's end.</li>
-                  <li><i className="bi bi-check-circle-fill"></i> The final re-edited paper undergoes the complete rounds of quality check, taking the client a step closer to reaching their publication goals.</li>
+                  <li><i className="bi bi-check-circle-fill"></i> The final re-edited paper undergoes the complete rounds of quality check, taking the client a step &nbsp; &nbsp; &nbsp; &nbsp; closer to reaching their publication goals.</li>
                 </ul>
               </div>
               <div className="col-lg-4 order-1 order-lg-2 text-center">

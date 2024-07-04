@@ -4,7 +4,7 @@ import './secutity.module.css'
 export default function Home() {
   return (
     <>
-    {breadcrum("Quality ", "Security")}
+    {breadcrum("Quality ", "Confidentiality")}
       <section id="cta" className="cta "  >
         <div className="container aos-init aos-animate" data-aos="zoom-out">
           <div className="row g-5">

@@ -11036,7 +11036,7 @@ li.color-op {
   display: block;
 }
 .tab_content_sub_text ul li {
-  list-style: none;
+  /* list-style: none; */
   margin-bottom: 5px;
 }
 /*====================================================

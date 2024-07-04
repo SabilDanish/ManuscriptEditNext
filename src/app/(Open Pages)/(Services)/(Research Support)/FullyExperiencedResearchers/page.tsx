@@ -24,7 +24,7 @@ export default function Home() {
               <p>
                 At the pinnacle of academic achievement, established researchers
                 like you require bespoke services that comprehend the nuances of
-                your work. Manuscriptedit.com is dedicated to providing that
+                your work. ManuscriptEdit.com is dedicated to providing that
                 elite level of support, ensuring your continued success and
                 impact in the scholarly community.
               </p>
@@ -447,7 +447,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a>
-                        How can Manuscriptedit.com help increase the impact of
+                        How can ManuscriptEdit.com help increase the impact of
                         my research?
                       </a>
                       <p>
@@ -470,7 +470,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a>
-                        How does Manuscriptedit.com help with peer review
+                        How does ManuscriptEdit.com help with peer review
                         preparation?
                       </a>
                       <p>

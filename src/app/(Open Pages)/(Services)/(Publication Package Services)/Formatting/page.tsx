@@ -98,34 +98,34 @@ export default function Home() {
                           </div>
                           <div className="tab_content_sub_text">
                             <ul>
-                              <li>
+                              <li className="DotLi">
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
+                                {" "}
                                 Format the full manuscript in accordance with
                                 the author's guidelines of the journal.
                               </li>
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
+                                {" "}
                                 Ensure the desired line spacing and margin of
                                 the journal.
                               </li>
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
+                                {" "}
                                 Arrange texts, paragraphs and figures within a
                                 specified margin and position.
                               </li>
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
+                                {" "}
                                 Ensure that references are presented in correct
                                 style (e.g. APA, MLA, CMS, Turabian etc.)
                               </li>
 
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i> If
+                                 If
                                 available, use the word template of the journal
                                 for the working document to ensure correct
                                 formatting according to the journal standard.
@@ -174,24 +174,24 @@ export default function Home() {
                             <ul>
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
+                                {" "}
                                 Prepare designated layout and formatting style.
                               </li>
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
+                                {" "}
                                 Arrange texts, paragraphs and figures within a
                                 specified margin and position.
                               </li>
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
+                                {" "}
                                 Ensure that the manuscript is ready for direct
                                 printing by the publisher.
                               </li>
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i> Use
+                                 Use
                                 the desired word template for the working
                                 document, if available.
                               </li>
@@ -220,30 +220,30 @@ export default function Home() {
                             <ul>
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
+                                {" "}
                                 Reformatting the text and images into the
                                 required style.
                               </li>
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
+                                {" "}
                                 Arranging the text, tables and figures on the
                                 predefined specifications of page sizes.
                               </li>
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
+                                {" "}
                                 Preparing a fully formatted manuscript for
                                 direct printing.
                               </li>
                               <li>
                                 {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
+                                {" "}
                                 Indexing is generally designed to help readers
                                 find their way around a document quickly and
                                 easily. This is made by preparing a route map
                                 for a document. The indexing service at
-                                Manuscriptedit covers manuscripts such as
+                                ManuscriptEdit covers manuscripts such as
                                 research papers, books, website, or database.
                                 Our indexers will make a systematic list of all
                                 the entities for an easy navigation within the
