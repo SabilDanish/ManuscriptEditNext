@@ -487,7 +487,7 @@ export default function Header() {
                     </li>
 
 
-                    <li><Link href={'/Blog'}>Blog</Link></li>
+                    <li><Link href={'/Blog'}>Scholar Hangout</Link></li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -495,7 +495,7 @@ export default function Header() {
                         }}
                         href="#"
                       >
-                        Blog
+                  Scholar Hangout
                       </a>
                     </li> */}
                   </ul>
@@ -905,7 +905,7 @@ export default function Header() {
                     </Link>
                   </li>
 
-                  <li><Link href={'/Blog'}>Blog</Link></li>
+                  <li><Link href={'/Blog'}>Scholar Hangout</Link></li>
                   {/* <li>
                     <a
                       onClick={() => {
