@@ -98,11 +98,7 @@ export default function Home() {
                         <i className="fa fa-check-square-o"></i> Thesis Writing
                       </span>
                     </div>
-                    <div className="about_icon_box_inner mb-20">
-                      <span>
-                        <i className="fa fa-check-square-o"></i> Essay Writing
-                      </span>
-                    </div>
+                   
                     <div className="about_icon_box_inner mb-20">
                       <span>
                         <i className="fa fa-check-square-o"></i> Dissertation
@@ -207,11 +203,7 @@ export default function Home() {
                         <i className="fa fa-check-square-o"></i> Novel Editing
                       </span>
                     </div>
-                    <div className="about_icon_box_inner mb-20">
-                      <span>
-                        <i className="fa fa-check-square-o"></i> Book Editing
-                      </span>
-                    </div>
+                    
                     <div className="about_icon_box_inner mb-20">
                       <span>
                         <i className="fa fa-check-square-o"></i> Book Editing
@@ -307,7 +299,7 @@ export default function Home() {
                     </div>
                     <div className="about_icon_box_inner mb-20">
                       <span>
-                        <i className="fa fa-check-square-o"></i>Content
+                        <i className="fa fa-check-square-o"></i> Content
                         Processing
                       </span>
                     </div>
@@ -341,11 +333,7 @@ export default function Home() {
                         writing
                       </span>
                     </div>
-                    <div className="about_icon_box_inner mb-20">
-                      <span>
-                        <i className="fa fa-check-square-o"></i> Book Formatting
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -416,13 +404,13 @@ export default function Home() {
                     </div>
                     <div className="about_icon_box_inner mb-20">
                       <span>
-                        <i className="fa fa-check-square-o"></i>Digital
+                        <i className="fa fa-check-square-o"></i> Digital
                         Management
                       </span>
                     </div>
                     <div className="about_icon_box_inner mb-20">
                       <span>
-                        <i className="fa fa-check-square-o"></i>SEO Copywriting
+                        <i className="fa fa-check-square-o"></i> SEO Copywriting
                       </span>
                     </div>
                     <div className="about_icon_box_inner mb-20">
@@ -453,11 +441,7 @@ export default function Home() {
                         Enhancement
                       </span>
                     </div>
-                    <div className="about_icon_box_inner mb-20">
-                      <span>
-                        <i className="fa fa-check-square-o"></i> Book Formatting
-                      </span>
-                    </div>
+                   
                   </div>
                 </div>
               </div>

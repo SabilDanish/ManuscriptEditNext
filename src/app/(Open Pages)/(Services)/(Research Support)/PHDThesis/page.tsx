@@ -72,9 +72,9 @@ export default function Home() {
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
                     <h4 className="pb-2">
-                      <a href="service-details.html">
+                      
                         In-Depth Research & Analysis
-                      </a>
+                      
                     </h4>
                     <p>
                       Navigate the vast ocean of academia with our expert
@@ -102,9 +102,9 @@ export default function Home() {
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
                     <h4 className="pb-2">
-                      <a href="service-details.html">
+                     
                         Professional Writing & Editing
-                      </a>
+                     
                     </h4>
                     <p>
                       Your ideas deserve to be presented with clarity and
@@ -132,9 +132,9 @@ export default function Home() {
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
                     <h4 className="pb-2">
-                      <a href="service-details.html">
+                     
                         Statistical & Data Analysis
-                      </a>
+                      
                     </h4>
                     <p>
                       Decipher complex datasets with ease. Our statistical
@@ -162,9 +162,9 @@ export default function Home() {
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
                     <h4 className="pb-2">
-                      <a href="service-details.html">
+                     
                         Complete Thesis Guidance
-                      </a>
+                     
                     </h4>
                     <p>
                       From conception to completion, our PhD thesis guidance
@@ -192,9 +192,9 @@ export default function Home() {
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
                     <h4 className="pb-2">
-                      <a href="service-details.html">
+                      
                         Delivery Time and Process
-                      </a>
+                      
                     </h4>
                     <p>
                       We streamline your PhD journey with a clear, efficient
