@@ -36,23 +36,30 @@ export default function Home() {
  </div>
 
  <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
-     <div className="formmm" style={{margin: 0, padding: 25}}>
-         <h4 className="pb-4">BY CREDIT CARDS</h4>
-         <p>
-             You don't need to worry about the security of your payment because we use two of the most secured payment
-             gateways, namely PayPal and CCAvenue, hosted by SSL encryption and certified by VeriSign that processes
-             credit card payments for all major banks throughout the world.
-         </p>
-         <p>
-             If you choose CCAvenue as your payment option, it has an additional security feature vide which the payment
-             made by you is held back by it until we complete the editing work and return the edited document to you. As
-             soon as your payment is received by CCAvenue, we receive an alert from it upon which we immediately set
-             about dedicating our time, thought, care, effort and skill into your document without being distracted by
-             administrative concerns. In this way, we don't have to worry about chasing late payments or writing off
-             debts which means we can offer more attractive pricing to our valuable customers like you.
-         </p>
-     </div>
- </div>
+    <div className="formmm" style={{margin: 0, padding: 25}}>
+        <h4 className="pb-4">Wire Transfer Banking Details:</h4>
+        <p>
+            <strong>Account Name:</strong> Reseapro Scientific Services Pvt. Ltd<br/>
+            <strong>Account Number:</strong> 242405000410<br/>
+            <strong>Account Type:</strong> Current Account<br/>
+            <strong>Bank Name:</strong> ICICI Bank<br/>
+            <strong>IFS Code:</strong> ICIC0002424<br/>
+            <strong>SWIFT Code:</strong> ICICINBBNRI<br/>
+            <strong>Branch Address:</strong> HIG-4, Jayadev Vihar, Opposite Pal Heights, Bhubaneswar-751015, India<br/>
+            <strong>PAN:</strong> AAECR2519Q<br/>
+            <strong>CIN:</strong> U731000R2009PTC10600
+        </p>
+        <h4 className="pb-4">Alternative Payment Option:</h4>
+        <p>
+            Alternatively, you can pay via UPI using our official UPI ID:<br/>
+            <strong>reseaproscientificservicesprivatelimited.9776003210.ibz@icici</strong>
+        </p>
+        <p>
+            Kindly share your details after the payment so that we can generate the invoice and email it back to you.
+        </p>
+    </div>
+</div>
+
    </>
   );
 }
