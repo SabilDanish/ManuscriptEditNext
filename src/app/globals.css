@@ -110,3 +110,10 @@ a {
 .DotLi{
   list-style-type: disc;
 }
+
+
+@media (max-width:768px){
+  .MainHighlighted{
+    font-size: 10px !important ;
+  }
+}
