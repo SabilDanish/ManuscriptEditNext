@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-    {breadcrum("More", "Recent Partners")}
+    {breadcrum("More", "News & Conferences")}
     <div className="container mt-3 mb-3">
     <div className="row">
       {news.length ? news.map((val: any,index:number) => (<div key={index} className="col-md-4 mt-3">

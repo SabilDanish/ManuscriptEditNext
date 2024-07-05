@@ -325,14 +325,14 @@ export default function footer() {
             </div> */}
           </div>
           <div className="row footer-bottom mt-70 pt-3 pb-1">
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-4 col-md-4">
               <div className="footer-bottom-content">
                 <div className="footer-bottom-content-copy">
                   <p>© 2024 ManuscriptEdit. All Rights Reserved. </p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-8 col-md-8">
               <div className="footer-bottom-right">
                 <div className="footer-bottom-right-text">
                   <Link className="absod" href={"/Publishing"}>
@@ -343,6 +343,8 @@ export default function footer() {
                   </Link>
 
                   <Link href={"/TermsOfService"}>Terms & Conditions</Link>
+
+                  <Link href={"https://secure.manuscriptedit.com/Service-agreement"}>  /   Service Agreement</Link>
                 </div>
               </div>
             </div>

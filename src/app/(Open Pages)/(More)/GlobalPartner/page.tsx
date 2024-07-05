@@ -58,14 +58,11 @@ const GlobalPartner = () => {
 
             <div className="col-lg-8 Mid-content">
               <h5 className="GlobalHeadingMid" style={{ color: "#fdc62c" }}>
-                JOR@ME
+              LAB@ME
               </h5>
 
               <p>
-                We offer a wide spectrum of services to scientific and
-                non-scientific journals. Our services include marketing, peer
-                review, editorial support, typesetting, indexing, and digital
-                branding.
+              Lab@ME takes full cognizance of all requirements of a scientific professional and has the expertise to transform your studies into publishable papers. Our services include writing, rewriting, editing, designing, and illustrating your research work to take it to the publication stage.
               </p>
             </div>
           </div>
@@ -79,14 +76,11 @@ const GlobalPartner = () => {
 
             <div className="col-lg-8 Mid-content">
               <h5 className="GlobalHeadingMid" style={{ color: "#e13656" }}>
-                JOR@ME
+              UNIV@ME
               </h5>
 
               <p>
-                We offer a wide spectrum of services to scientific and
-                non-scientific journals. Our services include marketing, peer
-                review, editorial support, typesetting, indexing, and digital
-                branding.
+              We fulfill the needs of undergraduates, graduates, post graduates, doctorates and post-doctorates through our wide range of tailored services, which include thesis rewriting, editing and proofreading; publication support; CV, LOR and SOP writing; and translation services for undergraduates.
               </p>
             </div>
           </div>
@@ -103,14 +97,11 @@ const GlobalPartner = () => {
 
             <div className="col-lg-8 Mid-content">
               <h5 className="GlobalHeadingMid" style={{ color: "#3c7a98" }}>
-                JOR@ME
+              CORP@ME
               </h5>
 
               <p>
-                We offer a wide spectrum of services to scientific and
-                non-scientific journals. Our services include marketing, peer
-                review, editorial support, typesetting, indexing, and digital
-                branding.
+              We help you take your business to the global stage by planning and executing all your corporate needs and building your business identity. In fact, our specialized teams pride themselves in playing the “enabler” for many companies by maximizing the reach of their products vis-à-vis customers. With Manuscriptedit Corporate Services as your start-to-finish service provider, you can free up your resources to focus on your core business activities.
               </p>
             </div>
           </div>

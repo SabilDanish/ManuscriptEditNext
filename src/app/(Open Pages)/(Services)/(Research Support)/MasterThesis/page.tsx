@@ -79,9 +79,9 @@ export default function Home() {
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
                     <h4 className="pb-2">
-                      <a href="service-details.html">
+                     
                         Expert Thesis Writing & Editing
-                      </a>
+                      
                     </h4>
                     <p>
                       Elevate your thesis with our unrivalled writing and
@@ -111,9 +111,9 @@ export default function Home() {
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
                     <h4 className="pb-2">
-                      <a href="service-details.html">
+                     
                         Literature Review & Statistical Analysis
-                      </a>
+                      
                     </h4>
                     <p>
                       Fortify your thesis with authoritative literature reviews
@@ -143,9 +143,9 @@ export default function Home() {
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
                     <h4 className="pb-2">
-                      <a href="service-details.html">
+                     
                         Originality & Grammar Checks
-                      </a>
+                      
                     </h4>
                     <p>
                       We uphold the integrity of your academic endeavors with
@@ -174,9 +174,9 @@ export default function Home() {
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
                     <h4 className="pb-2">
-                      <a href="service-details.html">
+                     
                         Delivery Time and Process
-                      </a>
+                      
                     </h4>
                     <p>
                       Embarking on your Master’s thesis should be as stress-free
