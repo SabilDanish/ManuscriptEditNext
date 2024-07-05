@@ -51,14 +51,17 @@ export default function Home() {
         </p>
         <h4 className="pb-4">Alternative Payment Option:</h4>
         <p>
-            Alternatively, you can pay via UPI using our official UPI ID:<br/>
-            <strong>reseaproscientificservicesprivatelimited.9776003210.ibz@icici</strong>
+            Alternatively, you can pay via UPI using our official UPI ID:
+            <div className="text-break">
+                <strong>reseaproscientificservicesprivatelimited.9776003210.ibz@icici</strong>
+            </div>
         </p>
         <p>
             Kindly share your details after the payment so that we can generate the invoice and email it back to you.
         </p>
     </div>
 </div>
+
 
    </>
   );
