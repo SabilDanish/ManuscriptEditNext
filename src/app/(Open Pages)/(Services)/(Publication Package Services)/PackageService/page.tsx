@@ -5,10 +5,18 @@ import FAQ from "@/app/_Common/_FAQ/FAQ";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../../utils/metaFile.js'
+import Metadata from "@/app/Metadata";
+
+const newData: any = data;
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   return (
     <>
+      {<Metadata metaData={metaData} />}
       {breadcrum(
         "Services / Publication Package Services",
         "Publication Package"

@@ -8,18 +8,18 @@ import redirect from "@/app/_Common/_functionality/Redirect";
 export default function Home() {
   return (
     <>
-      {breadcrum("Services / Writing", "Stastical Analysis")}
+      {breadcrum("Services / Writing", "Statistical Analysis")}
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3"> Stastical Analysis</h3>
+              <h3 className="pt-2 pb-3"> Statistical Analysis</h3>
               <p>
                 Statistical Analysis is a specialized service offered by
-                MenuscriptEdit, dedicated to helping clients derive meaningful
+                ManuscriptEdit, dedicated to helping clients derive meaningful
                 insights from data through rigorous statistical methods and
                 techniques. Whether it's for academic research, business
-                decision-making, or scientific investigation, MenuscriptEdit's
+                decision-making, or scientific investigation, ManuscriptEdit's
                 Statistical Analysis service provides comprehensive support
                 throughout the data analysis process.
               </p>

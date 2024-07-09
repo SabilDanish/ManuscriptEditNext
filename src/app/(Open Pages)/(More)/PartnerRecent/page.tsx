@@ -48,10 +48,10 @@ export default function Home() {
                         )
                     }
                     {
-                        allPartner && allPartner.length && allPartner.map(partner => {
+                        allPartner.length ? allPartner.map((partner,index) => {
                             const { logo_link } = partner
                             return (
-                                <div className="col-md-4">
+                                <div className="col-md-4" key={index}>
                                     <div className="card text-center mr-4 mt-5">
                                         <div className="card-body">
                                             <img src={logo_link} width="200px" height="83px" alt="" />
@@ -59,11 +59,11 @@ export default function Home() {
                                     </div>
                                 </div>
                             )
-                        })
+                        }) : ""
                     }
                     <br />
                     <div>
-                        {loading && allPartner.length && (
+                        {loading && allPartner.length ? (
                             <DNA
                                 visible={true}
                                 height="80"
@@ -72,7 +72,7 @@ export default function Home() {
                                 wrapperStyle={{}}
                                 wrapperClass="dna-wrapper"
                             />
-                        )}
+                        ) : ""}
                     </div>
                     {/* <div className="col-md-4">
                         <div className="card text-center mr-4 mt-5">

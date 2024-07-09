@@ -4,22 +4,31 @@ import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../../utils/metaFile.js'
+import Metadata from "@/app/Metadata";
+
+const newData: any = data;
+import Link from "next/link";
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   return (
     <>
+      {<Metadata metaData={metaData} />}
       {breadcrum("Services / Writing", "ReWriting")}
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3"> ReWriting</h3>
+              <h3 className="pt-2 pb-3">Rewriting</h3>
               <p>
-                ReWriting is a specialized service offered by MenuscriptEdit,
+               Rewriting is a specialized service offered by ManuscriptEdit,
                 dedicated to improving the clarity, coherence, and effectiveness
                 of existing written content. Whether it's a manuscript, report,
                 article, website content, or any other document,
-                MenuscriptEdit's ReWriting service helps clients refine and
+                ManuscriptEdit's Rewriting service helps clients refine and
                 enhance their written material to better meet their
                 communication goals and target audience needs.
               </p>
@@ -288,9 +297,9 @@ export default function Home() {
               <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
               Submit Manuscript
               </button>
-              <button onClick={() => {redirect('contact-us')}} className="btn btn-primary mt-3 mr-3">
+              <Link href={"/ContactUs"}><button className="btn btn-primary mt-3 mr-3">
               Schedule a Call
-              </button>
+              </button></Link>
             </div>
           </div>
         </div>

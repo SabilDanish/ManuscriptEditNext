@@ -61,6 +61,7 @@ export default function RootLayout({
           Manuscriptedit - Expert Scientific Journal Publication Services
         </title>
         <link href="/img/manu.ico" rel="icon"></link>
+        <meta name="google-site-verification" content="70JSDkkRBc9H-NNFHJMmgPVrZCV_JUqnDogS_tZnHD8" />
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/vendor/jquery-3.2.1.min.js" />
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/bootstrap.min.js" />
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/bootstrap.bundle.min.js" />
@@ -83,6 +84,7 @@ export default function RootLayout({
         <Script type="text/javascript" src="/js/addRoll.js" strategy="lazyOnload" />
         <Script type="text/javascript" src="/js/facebookPixelCodeOne.js" strategy="lazyOnload" />
         <Script type="text/javascript" src="/js/facebookPixelCodeTwo.js" strategy="lazyOnload" />
+        <Script type="text/javascript" src="/js/GtagManager.js" strategy="lazyOnload"/>
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=576246542585612&ev=PageView&noscript=1" />
         </noscript>
@@ -92,14 +94,16 @@ export default function RootLayout({
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC86N23" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe>
         </noscript>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC86N23"
+          height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe></noscript>
       </head>
       <body className="loaded">
         <ToastContainer />
         {/* <header/> */}
         {/* {header()} */}
         <Header />
-        <Suspense fallback={<p style={{width: "100%", display: 'flex', justifyContent: "center"}}><DNA /></p>}>{children}</Suspense>
-        <FloatingWp/>
+        <Suspense fallback={<p style={{ width: "100%", display: 'flex', justifyContent: "center" }}><DNA /></p>}>{children}</Suspense>
+        <FloatingWp />
         {footer()}
       </body>
     </html>

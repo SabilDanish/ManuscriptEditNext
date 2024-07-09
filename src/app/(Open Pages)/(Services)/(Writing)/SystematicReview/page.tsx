@@ -9,15 +9,15 @@ export default function Home() {
     <>
       {breadcrum(
         "Services / Writing",
-        "Systmatic Review"
+        "Systematic Review"
       )}
 <section className="pt-5 pb-5">
     <div className="container">
         <div className="row">
             <div className="col-md-6">
-                <h3 className="pt-2 pb-3">Systmatic Review</h3>
+                <h3 className="pt-2 pb-3">Systematic Review</h3>
                 <p>
-                   A Systematic Review is a specialized service offered by MenuscriptEdit, 
+                   A Systematic Review is a specialized service offered by ManuscriptEdit, 
                    dedicated to conducting comprehensive and methodical literature reviews 
                    to synthesize evidence on a specific research topic or question. Systematic 
                    reviews are crucial in evidence-based research, providing a rigorous and 

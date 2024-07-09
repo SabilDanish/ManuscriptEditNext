@@ -4,10 +4,18 @@ import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../../utils/metaFile.js'
+import Metadata from "@/app/Metadata";
+
+const newData: any = data;
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   return (
     <>
+      {<Metadata metaData={metaData} />}
       {breadcrum("Services / Writing", "Medical Writing")}
       <section className="pt-5 pb-5">
         <div className="container">
@@ -209,7 +217,7 @@ export default function Home() {
                             animationName: "fadeInUp",
                           }}
                         >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
+                          <h5 className="mt-1 mb-4">What We Provide</h5>
                           <div className="about_icon_box_inner mb-20">
                             <span>
                               <i className="fa fa-check-square-o"></i> Extensive
@@ -237,7 +245,7 @@ export default function Home() {
                           <div className="about_icon_box_inner mb-20">
                             <span>
                               <i className="fa fa-check-square-o"></i>{" "}
-                              ustification and Recommendation
+                              Justification and Recommendation
                             </span>
                           </div>
                           <div className="about_icon_box_inner mb-20">
@@ -343,7 +351,7 @@ export default function Home() {
                             animationName: "fadeInUp",
                           }}
                         >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
+                          <h5 className="mt-1 mb-4">What We Provide</h5>
                           <div className="about_icon_box_inner mb-20">
                             <span>
                               <i className="fa fa-check-square-o"></i> Extensive
@@ -453,7 +461,7 @@ export default function Home() {
                                 animationName: "fadeInUp",
                               }}
                             >
-                              <h5 className="mt-1 mb-4">What You Provide</h5>
+                              <h5 className="mt-1 mb-4">What We Provide</h5>
                               <div className="about_icon_box_inner mb-20">
                                 <span>
                                   <i className="fa fa-check-square-o"></i>{" "}
@@ -601,7 +609,7 @@ export default function Home() {
                           animationName: "fadeInUp",
                         }}
                       >
-                        <h5 className="mt-1 mb-4">What You Provide</h5>
+                        <h5 className="mt-1 mb-4">What We Provide</h5>
                         <div className="about_icon_box_inner mb-20">
                           <span>
                             <i className="fa fa-check-square-o"></i> Extensive
@@ -663,10 +671,6 @@ export default function Home() {
                         >
                           <h5 className="mt-1 mb-4">What You Provide</h5>
                           <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Statistical analysis (SPSS)
-                            </span>
                           </div>
                           <div className="about_icon_box_inner mb-20">
                             <span>
@@ -765,7 +769,7 @@ export default function Home() {
                             animationName: "fadeInUp",
                           }}
                         >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
+                          <h5 className="mt-1 mb-4">What We Provide</h5>
                           <div className="about_icon_box_inner mb-20">
                             <span>
                               <i className="fa fa-check-square-o"></i> Necessary

@@ -9,7 +9,7 @@ import EditorModal from "@/app/_Common/_Modals/EditorModal/EditorModal";
 import defaultImage from '../../../utils/testi/2.jpg'
 
 export default function Home() {
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(20);
   const [offset, setOffset] = useState(0);
   const [type, setType] = useState("");
   const [allEditor, setAllEditor] = useState<Editor[]>([]);
@@ -105,7 +105,7 @@ export default function Home() {
           >
             <div id="ediIcon" className="row" style={{ margin: "20px 0px" }}>
               {allEditor &&
-                allEditor.length &&
+                allEditor.length ?
                 allEditor.map((editor) => {
                   const { ediImg, ediName, id } = editor;
                   return (
@@ -145,7 +145,7 @@ export default function Home() {
                       </div>
                     </div>
                   );
-                })}
+                }) : ""}
             </div>
           </div>
         </div>

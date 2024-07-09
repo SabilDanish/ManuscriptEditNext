@@ -229,10 +229,10 @@ export default function footer() {
                                 color: "#FFFFFF",
                               }}
                             >
-                              4th Floor(North West), OCAC Tower
-                              <br /> Plot No-N-1/7D, Acharya Vihar,
+                              DCB-401,4th Floor,DLF Cyber City
+                              <br />Chandaka Industrial Estate, Patia,
                               <br />
-                              Bhubaneswar-751013, Odisha, INDIA
+                              Bhubaneswar -751024,Odisha, INDIA
                             </p>
                           </div>
                         </div>

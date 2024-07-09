@@ -1,6 +1,5 @@
 
 import styles from "./Breadcrum.module.css";
-import Head from 'next/head';
 
 export default function breadcrum(
     path:string,
@@ -10,11 +9,11 @@ export default function breadcrum(
 ) {
     return (
       <>
-      <Head>
+      {/* <Head>
         <title>{header}</title>
         <meta name="description" content={description}/>
         <meta name="keywords" content={keywords} />
-      </Head>
+      </Head> */}
       <section className={styles['bg-inner']}>
     <div className="container">
         <div className="row">
