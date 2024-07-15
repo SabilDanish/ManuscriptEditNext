@@ -204,7 +204,7 @@ export default function Home() {
                   <h4>Premium Plus Package</h4>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span>30 Days</span></h2>
+                  <h2><span className="dollar">$2134</span><span>30 Days</span></h2>
                 </div>
               </div>
               <div className="pricing_body">
@@ -240,7 +240,7 @@ export default function Home() {
                   <h4>Premium Package</h4>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span> 20 Days</span></h2>
+                  <h2><span className="dollar">$1534</span><span> 20 Days</span></h2>
                 </div>
               </div>
               <div className="pricing_body">
@@ -275,7 +275,7 @@ export default function Home() {
                   <h4>Advanced Package</h4>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span> 15 Days</span></h2>
+                  <h2><span className="dollar">$1134</span><span> 15 Days</span></h2>
                 </div>
               </div>
               <div className="pricing_body">
@@ -307,7 +307,7 @@ export default function Home() {
                   <h4>Standard Package</h4>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span> 10 Days</span></h2>
+                  <h2><span className="dollar">$867</span><span> 10 Days</span></h2>
                 </div>
               </div>
               <div className="pricing_body">
