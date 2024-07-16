@@ -57,9 +57,10 @@ export default function Home() {
           </div>
           <div className="row">
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4">
+              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4" style={{ height: 'fit-content' }}>
                 <div className="service_style_one_title mb-30">
                   <h4>ESR Support</h4>
+                  <p><br />ESR-Early Stage Researcher</p>
                 </div>
                 <div className="service_style_one_text">
                   <div className="em-about-icon-box2">
@@ -149,12 +150,23 @@ export default function Home() {
                     Read More <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
+                <div className="service_style_one_button pt-3">
+                  <Link href={"https://wa.me/919237304004"}>
+                  Talk to an expert <i className="fa fa-long-arrow-right"></i>
+                  </Link>
+                </div>
+                <div className="service_style_one_button pt-3">
+                  <Link href={"https://secure.manuscriptedit.com/register"}>
+                  Register to know more <i className="fa fa-long-arrow-right"></i>
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4">
+              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4" style={{ height: 'fit-content' }}>
                 <div className="service_style_one_title mb-30">
                   <h4>MCR Advancement</h4>
+                  <p><br />MCR- Mid Carrer Research</p>
                 </div>
                 <div className="service_style_one_text">
                   <div className="em-about-icon-box2">
@@ -243,12 +255,23 @@ export default function Home() {
                     Read More <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
+                <div className="service_style_one_button pt-3">
+                  <Link href={"https://wa.me/919237304004"}>
+                  Talk to an expert <i className="fa fa-long-arrow-right"></i>
+                  </Link>
+                </div>
+                <div className="service_style_one_button pt-3">
+                  <Link href={"https://secure.manuscriptedit.com/register"}>
+                  Register to know more <i className="fa fa-long-arrow-right"></i>
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4">
+              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4" style={{ height: 'fit-content' }}>
                 <div className="service_style_one_title mb-30">
-                  <h4> Elite Support</h4>
+                  <h4> FER Support</h4>
+                  <p><br />FER- Fully Experienced Researchers</p>
                 </div>
                 <div className="service_style_one_text">
                   <div className="em-about-icon-box2">
@@ -337,12 +360,23 @@ export default function Home() {
                     Read More <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
+                <div className="service_style_one_button pt-3">
+                  <Link href={"https://wa.me/919237304004"}>
+                  Talk to an expert <i className="fa fa-long-arrow-right"></i>
+                  </Link>
+                </div>
+                <div className="service_style_one_button pt-3">
+                  <Link href={"https://secure.manuscriptedit.com/register"}>
+                  Register to know more <i className="fa fa-long-arrow-right"></i>
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4">
+              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4" style={{ height: 'fit-content' }}>
                 <div className="service_style_one_title mb-30">
                   <h4> Read Full RES</h4>
+                  <p><br />RES- Research Enhancement Services</p>
                 </div>
                 <div className="service_style_one_text">
                   <div className="em-about-icon-box2">
@@ -432,11 +466,25 @@ export default function Home() {
                     Read More <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
+                <div className="service_style_one_button pt-3">
+                  <Link href={"https://wa.me/919237304004"}>
+                  Talk to an expert <i className="fa fa-long-arrow-right"></i>
+                  </Link>
+                </div>
+                <div className="service_style_one_button pt-3">
+                  <Link href={"https://secure.manuscriptedit.com/register"}>
+                  Register to know more <i className="fa fa-long-arrow-right"></i>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div>
+      </div>
+ 
+
       {whyToChoose()}
       <div className="accordion_area style-two upper1 pt-0 pb-100">
         <div className="container">

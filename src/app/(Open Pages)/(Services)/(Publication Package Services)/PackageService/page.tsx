@@ -5,10 +5,18 @@ import FAQ from "@/app/_Common/_FAQ/FAQ";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../../utils/metaFile.js'
+import Metadata from "@/app/Metadata";
+
+const newData: any = data;
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   return (
     <>
+      {<Metadata metaData={metaData} />}
       {breadcrum(
         "Services / Publication Package Services",
         "Publication Package"
@@ -196,7 +204,7 @@ export default function Home() {
                   <h4>Premium Plus Package</h4>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span>30 Days</span></h2>
+                  <h2><span className="dollar">$2134</span><span>30 Days</span></h2>
                 </div>
               </div>
               <div className="pricing_body">
@@ -220,9 +228,14 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button">
+              <div className="pricing_button" style={{textAlign:"center"}}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
               </div>
+
+              <div className="pricing_button" style={{textAlign:"center"}}>
+                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              </div>
+
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
@@ -232,7 +245,7 @@ export default function Home() {
                   <h4>Premium Package</h4>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span> 20 Days</span></h2>
+                  <h2><span className="dollar">$1534</span><span> 20 Days</span></h2>
                 </div>
               </div>
               <div className="pricing_body">
@@ -254,8 +267,12 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button">
+              <div className="pricing_button" style={{textAlign:"center"}}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div className="pricing_button" style={{textAlign:"center"}}>
+                <a onClick={() => { redirect('quotation') }}>Request a Quote<i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -267,7 +284,7 @@ export default function Home() {
                   <h4>Advanced Package</h4>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span> 15 Days</span></h2>
+                  <h2><span className="dollar">$1134</span><span> 15 Days</span></h2>
                 </div>
               </div>
               <div className="pricing_body">
@@ -286,8 +303,12 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button">
+              <div className="pricing_button" style={{textAlign:"center"}}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div className="pricing_button" style={{textAlign:"center"}}>
+                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -299,7 +320,7 @@ export default function Home() {
                   <h4>Standard Package</h4>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span> 10 Days</span></h2>
+                  <h2><span className="dollar">$867</span><span> 10 Days</span></h2>
                 </div>
               </div>
               <div className="pricing_body">
@@ -316,8 +337,12 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button">
+              <div className="pricing_button" style={{textAlign:"center"}}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div className="pricing_button" style={{textAlign:"center"}}>
+                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>

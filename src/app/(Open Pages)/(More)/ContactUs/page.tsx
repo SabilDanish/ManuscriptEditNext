@@ -1,9 +1,21 @@
+"use client"
+import Metadata from "@/app/Metadata";
 import PeerForm from "@/app/_Common/PeerForm/PeerForm";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
+import { usePathname } from "next/navigation";
+import { data } from '../../../utils/metaFile.js'
+
+const newData: any = data;
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
+
+  console.log({metaData})
+
   return (
     <>
+      {<Metadata metaData={metaData} />}
       {breadcrum("More", "Contact Us")}
       <div className="col-lg-10 col-md-10 col-sm-10 pt-5 mx-auto">
         <p className="text-center widfont">
