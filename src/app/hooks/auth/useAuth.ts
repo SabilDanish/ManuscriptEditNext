@@ -35,24 +35,21 @@ const useAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse<T> =>
                         message: `Hi ${formData.fname},\n\nThank you for registering. Welcome to our service!`,
                     }),
                 }).then(emailResponse => {
-                    console.log({emailResponse})
                     if (emailResponse.ok) {
                         toast.success('Registration successful and email sent');
                       } else {
                         toast.error('Registration successful but email could not be sent');
                       }
                 }).catch(err => {
-                    console.log({err2: err})
+                    toast.error('Something went wrong');
                 })
             }).catch(err => {
-                console.log({err})
                 setError("Couldn't save your data");
                 toast.error("Something went wrong")
             }).finally(() => {
                 setIsLoading(false);
             });
         } catch (error) {
-            console.log({error})
             setError("Something went wrong");
             setIsLoading(false);
         }
@@ -71,21 +68,18 @@ const useAuth = <T>(setShowLogin:any,showLogin:boolean): FetchPostResponse<T> =>
             }).then(response => {
                 return response.json()
             }).then(responseData => {
-                console.log({responseData1: responseData})
                 localStorage.setItem("userId",responseData[0].user_id)
                 window.location.href = `https://www.manuscriptedit.com/author-new/index.php?sid=${responseData[0].user_id}`;
                 setData(responseData);
                 router.push('/');
                 toast.success("Login Successful")
             }).catch(err => {
-                console.log({err})
                 setError("Couldn't save your data");
                 toast.error("Something went wrong")
             }).finally(() => {
                 setIsLoading(false);
             });
         } catch (error) {
-            console.log({error})
             setError("Something went wrong");
             setIsLoading(false);
         }

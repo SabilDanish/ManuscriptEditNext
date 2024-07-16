@@ -38,17 +38,7 @@ export default function Home() {
               <h3 className="mb-4">Enhance Your Academic Skills</h3>
             </div>
             <div className="col-md-6">
-              <div className="bx-grid">
-                <h5>Selecting the Perfect Research Topic</h5>
-                <p>
-                  Creating a robust research design is crucial. With our
-                  guidance, you'll develop a structured approach that answers
-                  your research questions and resonates with funding bodies and
-                  peer-reviewed journals. We stand by you, ensuring that your
-                  methodology is sound and your research objectives are clear
-                  and achievable.
-                </p>
-              </div>
+              
               <div className="bx-grid">
                 <h5>Designing Your Research for Success</h5>
                 <p>
@@ -58,6 +48,18 @@ export default function Home() {
                   and has significant academic or real-world impact. We help you
                   navigate the vast sea of information to pinpoint an innovative
                   and feasible topic.
+                </p>
+              </div>
+
+              <div className="bx-grid">
+                <h5>Selecting the Perfect Research Topic</h5>
+                <p>
+                  Creating a robust research design is crucial. With our
+                  guidance, you'll develop a structured approach that answers
+                  your research questions and resonates with funding bodies and
+                  peer-reviewed journals. We stand by you, ensuring that your
+                  methodology is sound and your research objectives are clear
+                  and achievable.
                 </p>
               </div>
               <div className="bx-grid">
@@ -100,7 +102,7 @@ export default function Home() {
                 <h5>Statistical Analysis and Research Methodology Training</h5>
                 <p>
                   In a world driven by data, proficiency in statistical analysis
-                  is indispensable. Our training modules demystify data analysis
+                  is indispensable. Our training modules simplify data analysis
                   and research methodology, empowering you to conduct rigorous
                   research and derive insightful conclusions. Embrace confidence
                   as you navigate the quantitative aspects of your work.
@@ -207,7 +209,7 @@ export default function Home() {
                       <p>
                         Yes, our training sessions cater to a range of
                         proficiency levels, from beginners to advanced
-                        researchers. We aim to demystify data analysis and
+                        researchers. We aim to simplify data analysis and
                         research methodology, making complex concepts accessible
                         and understandable.
                       </p>

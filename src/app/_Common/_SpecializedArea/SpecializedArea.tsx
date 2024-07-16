@@ -11,10 +11,10 @@ export default function SpecializedArea(showDetails = true) {
             <div className="col-lg-12">
               <div className="section_title text_center mb-50 mt-3">
                 <div className="section_main_title">
-                  <h1>Explore our editor's specialized areas</h1>
+                  <h1>Explore our expert specialized areas</h1>
                   <p>
                     From Medicine to Life Sciences, Physical Sciences, Economics
-                    and the Art & Humanities -- our English editing team
+                    and the Art & Humanities -- our English Editing expert
                     specializes in 1,117 subject areas.
                   </p>
                 </div>
@@ -137,27 +137,27 @@ export default function SpecializedArea(showDetails = true) {
               >
                 <div className="single_software_box">
                   <div className="single_software_box_content">
-                    <h5>Scientific research papers</h5>
+                    <h5>Scientific Research papers</h5>
                   </div>
                 </div>
                 <div className="single_software_box">
                   <div className="single_software_box_content">
-                    <h5>Medical research papers</h5>
+                    <h5>Medical Research papers</h5>
                   </div>
                 </div>
                 <div className="single_software_box">
                   <div className="single_software_box_content">
-                    <h5>Galley proofs</h5>
+                    <h5>Galley Proofs</h5>
                   </div>
                 </div>
                 <div className="single_software_box">
                   <div className="single_software_box_content">
-                    <h5>Returned articles with reviewer's..</h5>
+                    <h5>Returned Articles with Reviewer's..</h5>
                   </div>
                 </div>
                 <div className="single_software_box">
                   <div className="single_software_box_content">
-                    <h5>Research reports</h5>
+                    <h5>Research Reports</h5>
                   </div>
                 </div>
                 <div className="single_software_box">
@@ -187,7 +187,7 @@ export default function SpecializedArea(showDetails = true) {
               >
                 <div className="single_software_box">
                   <div className="single_software_box_content">
-                    <h5>Academic and Non-academic..</h5>
+                    <h5>Academic and Non-Academic..</h5>
                   </div>
                 </div>
                 <div className="single_software_box">
@@ -197,12 +197,12 @@ export default function SpecializedArea(showDetails = true) {
                 </div>
                 <div className="single_software_box">
                   <div className="single_software_box_content">
-                    <h5>Corporate literatures</h5>
+                    <h5>Corporate Literatures</h5>
                   </div>
                 </div>
                 <div className="single_software_box">
                   <div className="single_software_box_content">
-                    <h5>Company reports</h5>
+                    <h5>Company Reports</h5>
                   </div>
                 </div>
                 <div className="single_software_box">
@@ -222,7 +222,7 @@ export default function SpecializedArea(showDetails = true) {
                 </div>
                 <div className="single_software_box">
                   <div className="single_software_box_content">
-                    <h5>Press releases</h5>
+                    <h5>Press Releases</h5>
                   </div>
                 </div>
               </div>
@@ -272,7 +272,7 @@ export default function SpecializedArea(showDetails = true) {
                 </div>
                 <div className="single_software_box">
                   <div className="single_software_box_content">
-                    <h5>Student's essay</h5>
+                    <h5>Student's Essay</h5>
                   </div>
                 </div>
               </div>

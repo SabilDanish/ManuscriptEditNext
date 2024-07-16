@@ -11,13 +11,13 @@ export default function Home() {
             <div className="col-md-6 pb-2">
               <h3 className="">WHY CHOOSE US</h3>
               <p className="pt-3">
-                Manuscriptedit specializes in providing services in Scientific &
+                ManuscriptEdit specializes in providing services in Scientific &
                 English editing, proofreading, medical writing, academic
                 writing, formatting and publication support. Within a short span
                 of time, the company has grown rapidly to be counted among the
                 world's leading service providers in English editing and
                 proofreading. It has served clients in over 80 countries.
-                Manuscriptedit has a healthy blend of over 500 in-house and
+                ManuscriptEdit has a healthy blend of over 500 in-house and
                 online contractual editors from top universities and research
                 centres worldwide. The editorial panel includes subject experts
                 in all subject fields of science, medicine, engineering, art,
@@ -48,7 +48,7 @@ export default function Home() {
                 years of experience working in research institutions,
                 universities, hospitals, corporations and publishing houses. Our
                 global delivery model combined with efficient editing process
-                management system robust document handling system, secured
+                management system , robust document handling system, secured
                 payment process, quality assessment system, and strong
                 commitment and dedication, has enabled us to become a global
                 player and a trustworthy partner for English editing and

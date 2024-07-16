@@ -18,7 +18,7 @@ export default function Header() {
                   <ul>
                     <li>
                       <a href="#">
-                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN) <i className="fa fa-phone" style={{ marginLeft: "8px" }}></i>+91 92373 04004 (IN) <i className="fa fa-phone" style={{ marginLeft: "8px" }}></i>+1
+                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN) <i className="fa fa-phone" style={{ marginLeft: "8px" }}></i>+91-923-730-4004 (IN) <i className="fa fa-phone" style={{ marginLeft: "8px" }}></i>+1
                         (646)916-3476 (USA)
                       </a>
                     </li>
@@ -65,8 +65,8 @@ export default function Header() {
           <div className="row align-items-center">
             <div className="menu">
               <Link href={"/"} className="logo">
-                <img className="down" src="/images/1.png" alt=""></img>{" "}
-                <img className="main_sticky" src="/images/1.png" alt=""></img>
+                <img style={{ width: "150px" }} className="down" src="/images/1.png" alt=""></img>{" "}
+                <img style={{ width: "150px" }} className="main_sticky" src="/images/1.png" alt=""></img>
               </Link>
               <ul className="clearfix">
                 <li>
@@ -206,9 +206,11 @@ export default function Header() {
                     <li>
                       <ul>
                         <li>
-                          <Link href={"/ResearchSupportOverview"}>
-                            <b>Research Support</b>
-                          </Link>
+                          <a href="#">
+                          <b>Research Support</b>
+                          </a>
+                            
+                          
                           <ul className={Style.subList}>
                             <li>
                               <Link href={"/ResearchSupportOverview"}>
@@ -487,8 +489,8 @@ export default function Header() {
                     </li>
 
 
-                    {/* <li><Link href={'/Testimonial'}>Blog</Link></li> */}
-                    <li>
+                    <li><Link href={'/Blog'}>Blog</Link></li>
+                    {/* <li>
                       <a
                         onClick={() => {
                           redirect("scholar-hangout");
@@ -497,7 +499,7 @@ export default function Header() {
                       >
                         Blog
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
                 <div className="donate-btn-header">
@@ -899,14 +901,14 @@ export default function Header() {
                     </a>
                   </li> */}
 
-<li>
-                      <Link href={"/wregistration"}>
-                        Webinar Registration
-                      </Link>
-                    </li>
-
-                  {/* <li><Link href={'/Testimonial'}>Blog</Link></li> */}
                   <li>
+                    <Link href={"/wregistration"}>
+                      Webinar Registration
+                    </Link>
+                  </li>
+
+                  <li><Link href={'/Blog'}>Blog</Link></li>
+                  {/* <li>
                     <a
                       onClick={() => {
                         redirect("scholar-hangout");
@@ -915,16 +917,13 @@ export default function Header() {
                     >
                       Blog
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <div className="donate-btn-header">
                 <a
                   className="dtbtn"
-                  onClick={() => {
-                    redirect("register");
-                  }}
-                  href="#"
+                  href="https://secure.manuscriptedit.com/register"
                 >
                   Sign Up | Sign In
                 </a>

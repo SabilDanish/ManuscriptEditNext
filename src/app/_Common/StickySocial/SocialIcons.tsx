@@ -26,7 +26,7 @@ const SocialIcon = () => {
                             </Link>
                         </li>
                         <li className="vim">
-                            <Link href="https://www.youtube.com/@Manuscripteditdocs" target="_blank" rel="noopener noreferrer">
+                            <Link href="https://www.youtube.com/@Manuscriptedit." target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-youtube" aria-hidden="true"></i>
                             </Link>
                         </li>

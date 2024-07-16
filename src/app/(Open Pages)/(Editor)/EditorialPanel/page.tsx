@@ -33,16 +33,12 @@ export default function Home() {
   }, [editors]);
 
   const modalHandler = (e: any) => {
-    console.log("I am here");
     const id = e.target.className.split(" ")[1];
-    console.log({ id });
     const filteredData = allEditor.filter((editor) => editor.id === id)[0];
-    console.log({ filteredData });
     setModalData(filteredData);
     setShowModal(true);
   };
 
-  console.log({ showModal });
 
   const handleError = (e:any) => {
     e.target.src = 'https://gravatar.com/avatar/0cb77b3b53fdfa2cbaa9e2ae3a9fe042?s=400&d=mp&r=x';
@@ -112,7 +108,6 @@ export default function Home() {
                 allEditor.length &&
                 allEditor.map((editor) => {
                   const { ediImg, ediName, id } = editor;
-                  console.log({ id });
                   return (
                     <div
                       className="col-lg-2 col-md-4 col-sm-4 col-xs-4 "

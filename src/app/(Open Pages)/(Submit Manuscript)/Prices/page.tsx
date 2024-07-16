@@ -1,20 +1,19 @@
-"use client"
+"use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
-import './price.css'
+import "./price.css";
 import usePriceCalculator from "@/app/hooks/priceCalculator/usePriceCalculator";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DNA } from "react-loader-spinner";
+import redirect from "@/app/_Common/_functionality/Redirect";
 
 export default function Home() {
-  const [wordCount, setWordCount] = useState<string | null>()
-  const {isLoading,error,result,getPriceCalculator} = usePriceCalculator()
+  const [wordCount, setWordCount] = useState<string | null>();
+  const { isLoading, error, result, getPriceCalculator } = usePriceCalculator();
 
   const calculateHandler = () => {
-    console.log({wordCount})
-    getPriceCalculator({word_count:wordCount})
-  }
+    getPriceCalculator({ word_count: wordCount });
+  };
 
-  
   return (
     <>
       {breadcrum("Submit Manuscript", "Prices")}
@@ -67,67 +66,89 @@ export default function Home() {
           </div>
           {/* </div> */}
 
-          {isLoading ? <div style={{width: "100%", display: "flex", justifyContent: "center"}}><DNA /></div> : ""}
+          {isLoading ? (
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <DNA />
+            </div>
+          ) : (
+            ""
+          )}
 
           <div className="row gy-4">
-            {result &&
-              result.length ?
-              result.map((price:any) => {
-                const { Header, Messages } = price;
-                return (
-                  <div
-                    className="col-lg-4 aos-init aos-animate"
-                    data-aos="zoom-in"
-                    data-aos-delay="200"
-                    key={Messages}
-                  >
-                    <div className="pricing-item1">
-                      <div className="pricing-header">
-                        <h3 className="price">{Header}</h3>
-                      </div>
+            {result && result.length
+              ? result.map((price: any) => {
+                  const { Header, Messages } = price;
+                  return (
+                    <div
+                      className="col-lg-4 aos-init aos-animate"
+                      data-aos="zoom-in"
+                      data-aos-delay="200"
+                      key={Messages}
+                    >
+                      <div className="pricing-item1">
+                        <div className="pricing-header">
+                          <h3 className="price">{Header}</h3>
+                        </div>
 
-                      <ul>
-                        {Messages &&
-                          Messages.length &&
-                          Messages.map((message:any) => {
-                            let [message_first_part,message_second_part] = message.split("|")
-                            let trimmed_number = message_second_part.trim()
-                            let numberStr = trimmed_number.replace(/[^\d.]/g, "");
-                            let new_message = `${message_first_part} | $${numberStr.split(".")[0]}`
-                
-                            return (<div id="pkg1" style={{margin: "1rem"}} key={message}>
-                              <div className="btnStyl">
-                                {new_message}
-                              </div>
-                            </div>)
-                          })}
-                      </ul>
+                        <ul>
+                          {Messages &&
+                            Messages.length &&
+                            Messages.map((message: any) => {
+                              let [message_first_part, message_second_part] =
+                                message.split("|");
+                              let trimmed_number = message_second_part.trim();
+                              let numberStr = trimmed_number.replace(
+                                /[^\d.]/g,
+                                ""
+                              );
+                              let new_message = `${message_first_part} | $${
+                                numberStr.split(".")[0]
+                              }`;
 
-                      <div style={{ marginTop: 12, textAlign: "center" }}>
-                        <a
-                          className="btn btn-danger"
-                          href="https://secure.manuscriptedit.com/register"
-                          style={{ padding: 10 }}
-                        >
-                          Get Started
-                        </a>
-                        &nbsp;&nbsp;
-                        <a
-                          className="btn"
-                          href="https://secure.manuscriptedit.com/register"
-                          style={{
-                            color: "#FFF",
-                            backgroundColor: "#1f5174",
-                            padding: 10,
-                          }}
-                        >
-                          Get a price Quote
-                        </a>
+                              return (
+                                <div
+                                  id="pkg1"
+                                  style={{ margin: "1rem" }}
+                                  key={message}
+                                >
+                                  <div className="btnStyl">{new_message}</div>
+                                </div>
+                              );
+                            })}
+                        </ul>
+
+                        <div style={{ marginTop: 12, textAlign: "center" }}>
+                          <a
+                            className="btn btn-danger"
+                            href="https://secure.manuscriptedit.com/register"
+                            style={{ padding: 10 }}
+                          >
+                            Get Started
+                          </a>
+                          &nbsp;&nbsp;
+                          <a
+                            className="btn"
+                            href="https://secure.manuscriptedit.com/register"
+                            style={{
+                              color: "#FFF",
+                              backgroundColor: "#1f5174",
+                              padding: 10,
+                            }}
+                          >
+                            Get a price Quote
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
-              }) : ""}
+                  );
+                })
+              : ""}
           </div>
           <div className="col-lg-12 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
             <br />
@@ -136,7 +157,7 @@ export default function Home() {
               <i className="bi bi-check-circle-fill"></i> If your document
               contains 40000 words or more, please contact us to receive a
               customized quote. For Indian Customers we have customized pricing
-              in INR. Please contact {" "}
+              in INR. Please contact{" "}
               <a href="mailto:support@manuscriptedit.com">
                 support@manuscriptedit.com
               </a>
@@ -487,7 +508,7 @@ export default function Home() {
                       }}
                     >
                       <p>
-                        We at Manuscriptedit understand that the documents
+                        We at ManuscriptEdit understand that the documents
                         submitted by you for editing are results of your hard
                         work and revolutionary ideas. We adhere to a
                         professional code of ethics that allows the worldwide
@@ -495,7 +516,10 @@ export default function Home() {
                         without worrying about the security of their ideas.
                       </p>
                     </div>
-                    <a href="https://secure.manuscriptedit.com/register" className="btn-learn-more">
+                    <a
+                      href="https://secure.manuscriptedit.com/register"
+                      className="btn-learn-more"
+                    >
                       Request a Quote
                     </a>
                   </div>
@@ -568,7 +592,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="pricing section-area">
+      {/* <section id="pricing" className="pricing section-area">
         <div className="container aos-init aos-animate" data-aos="fade-up">
           <div
             className="section-title aos-init aos-animate"
@@ -852,7 +876,172 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-3 col-md-6">
+            <div className="pricing_single-box st-grid-price">
+              <div className="pricing-head">
+                <div className="pricing_title">
+                  <h4>Premium Plus Package</h4>
+                </div>
+                <div className="pricing_tk">
+                  <h2>
+                    <span className="dollar"></span>
+                    <span>30 Days</span>
+                  </h2>
+                </div>
+              </div>
+              <div className="pricing_body">
+                <div className="featur_itmes">
+                  <ul>
+                    <li>Peer Review Analysis</li>
+                    <li>Data Analysis</li>
+                    <li>Research Paper Writing</li>
+                    <li>Substantive Editing</li>
+                    <li>Journal Selection</li>
+                    <li>Journal Submission</li>
+                    <li>Target Journal Formatting</li>
+                    <li>Artwork Formatting</li>
+                    <li>Cover Letter Writing</li>
+                    <li>Response To Reviewer</li>
+                    <li>Plagarism Check</li>
+                    <li>Unlimited Assistance</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="pricing_button">
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6">
+            <div className="pricing_single-box st-grid-price">
+              <div className="pricing-head">
+                <div className="pricing_title">
+                  <h4>Premium Package</h4>
+                </div>
+                <div className="pricing_tk">
+                  <h2>
+                    <span className="dollar"></span>
+                    <span> 20 Days</span>
+                  </h2>
+                </div>
+              </div>
+              <div className="pricing_body">
+                <div className="featur_itmes">
+                  <ul>
+                    <li>Peer Review Analysis</li>
+                    <li>Substantive Editing</li>
+                    <li>Journal Selection</li>
+                    <li>Target Journal Formatting</li>
+                    <li>Artwork Formatting</li>
+                    <li>Cover Letter Writing</li>
+                    <li>Journal Submission</li>
+                    <li>
+                      Response to Reviewers* (*One response to reviewer free)
+                    </li>
+
+                    <li>Plagiarism Check</li>
+                    <li>Unlimited Assistance</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="pricing_button">
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6">
+            <div className="pricing_single-box st-grid-price">
+              <div className="pricing-head">
+                <div className="pricing_title">
+                  <h4>Advanced Package</h4>
+                </div>
+                <div className="pricing_tk">
+                  <h2>
+                    <span className="dollar"></span>
+                    <span> 15 Days</span>
+                  </h2>
+                </div>
+              </div>
+              <div className="pricing_body">
+                <div className="featur_itmes">
+                  <ul>
+                    <li>Peer Review Analysis</li>
+                    <li>Substantive Editing</li>
+                    <li> Journal Selection</li>
+                    <li>Target Journal Formatting.</li>
+                    <li>Cover Letter writing</li>
+                    <li>Journal Submission</li>
+
+                    <li>Plagiarism Check</li>
+                    <li> Unlimited Assistance</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="pricing_button">
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6">
+            <div className="pricing_single-box st-grid-price">
+              <div className="pricing-head">
+                <div className="pricing_title">
+                  <h4>Standard Package</h4>
+                </div>
+                <div className="pricing_tk">
+                  <h2>
+                    <span className="dollar"></span>
+                    <span> 10 Days</span>
+                  </h2>
+                </div>
+              </div>
+              <div className="pricing_body">
+                <div className="featur_itmes">
+                  <ul>
+                    <li>Peer Review Analysis</li>
+                    <li>Journal Selection</li>
+                    <li>Target Journal Formatting</li>
+                    <li>Cover Letter writing</li>
+
+                    <li>Journal Submission</li>
+                    <li> Unlimited Assistance</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="pricing_button">
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section id="pricing" className="pricing section-area">
         <div className="container aos-init aos-animate" data-aos="fade-up">
@@ -871,7 +1060,10 @@ export default function Home() {
             >
               <div id="pkg">
                 <a href="https://api.whatsapp.com/send?phone=919040005445">
-                  <img src="/img/logoWhatsapp.png" />
+                  <img
+                    src="/img/logoWhatsapp.png"
+                    style={{ width: "30px", height: "30px" }}
+                  />
                   &nbsp;&nbsp;<b style={{ color: "black" }}>WhatsApp&nbsp;:</b>
                   &nbsp;<span style={{ color: "red" }}>+91-904-000-5445</span>
                 </a>
@@ -885,7 +1077,10 @@ export default function Home() {
             >
               <div id="pkg">
                 <a href="https://t.me/share/url?url=&amp;text=&amp;phone=919040005445">
-                  <img src="/img/telegram.png" />
+                  <img
+                    src="/img/telegram.png"
+                    style={{ width: "30px", height: "30px" }}
+                  />
                   &nbsp;&nbsp;<b style={{ color: "black" }}>Telegram&nbsp;:</b>
                   &nbsp;<span style={{ color: "red" }}>+91-904-000-5445</span>
                 </a>
@@ -898,7 +1093,10 @@ export default function Home() {
               data-aos-delay="600"
             >
               <div id="pkg">
-                <img src="/img/zoom.png" width="30" height="30" />
+                <img
+                  src="/img/zoom.png"
+                  style={{ width: "30px", height: "30px" }}
+                />
                 &nbsp;&nbsp;<b>Zoom meeting&nbsp;:</b>&nbsp;
                 <a href="https://bit.ly/3VTs2is" style={{ color: "red" }}>
                   https://bit.ly/3VTs2is

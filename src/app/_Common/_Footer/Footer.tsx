@@ -66,7 +66,7 @@ export default function footer() {
                 <div className="company-info-desc">
 
                 </div>
-                <div className="follow-company-info pt-3">
+                {/* <div className="follow-company-info pt-3">
                   <div className="follow-company-text mr-3">
                     <a href="#">
                       <p>Follow Us</p>
@@ -86,58 +86,79 @@ export default function footer() {
                       <i className="fa fa-youtube"></i>
                     </a>
                   </div>
-                </div>
+                </div> */}
+                <div className="follow-company-info pt-3">
+                  <div className="follow-company-text mr-3">
+                    <a href="#">
+                      <p>Follow Us</p>
+                    </a>
+                  </div>
+                  <div className="follow-company-icon">
+                    <a href="https://www.facebook.com/Manuscriptedit" target="_blank">
+                      <i className="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit" target="_blank">
+                      <i className="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/manuscriptedit/" target="_blank">
+                    <i className="fa fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@manuscriptedit." target="_blank">
+                    <i className="fa fa-youtube-play"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
               <div className="widget widgets-company-info">
 
-
-                <div className="d-flex flex-column footer-services FooterServ">
-                  <span
-
-                    className="widget-title pb-2 "
-                  >
-                    Our Services
-                  </span>
-
-                  <Link style={textColor} href={"/EditingOverview"}>
-                    English Editing
-                  </Link>
-
-
-                  <Link style={textColor} href={"/PackageService"}>
-                    Publication Support
-                  </Link>
-
-
-                  <Link style={textColor} href={"/Writing"}>
-                    Writing & Rewriting
-                  </Link>
-
-
-                  <Link
-                    style={textColor}
-                    href={"/ResearchSupportOverview"}
-                  >
-                    Research Support
-                  </Link>
-
-
-                  <Link style={textColor} href={"/CustomizedServices"}>
-                    Customized Services
-                  </Link>
-
-
-                  <a
-                    style={textColor}
-                    onClick={() => {
-                      redirect("corporate");
-                    }}
-                    href="#"
-                  >
-                    Corporate Services
-                  </a>
-                </div>
-              </div>
+                    
+                      <div className="d-flex flex-column footer-services">
+                    <span
+                      
+                      className="widget-title pb-2 "
+                    >
+                      Our Services
+                    </span>
+                      
+                        <Link style={textColor} href={"/EditingOverview"}>
+                          English Editing
+                        </Link>
+                      
+                      
+                        <Link style={textColor} href={"/PackageService"}>
+                          Publication Support
+                        </Link>
+                      
+                      
+                        <Link style={textColor} href={"/Writing"}>
+                          Writing & Rewriting
+                        </Link>
+                      
+                      
+                        <Link
+                          style={textColor}
+                          href={"/ResearchSupportOverview"}
+                        >
+                          Research Support
+                        </Link>
+                      
+                      
+                        <Link style={textColor} href={"/CustomizedServices"}>
+                          Customized Services
+                        </Link>
+                      
+                      
+                        <a
+                          style={textColor}
+                          onClick={() => {
+                            redirect("corporate");
+                          }}
+                          href="#"
+                        >
+                          Corporate Services
+                        </a>
+                        </div>
+                  </div>
             </div>
             <div className="col-lg-9 col-md-12 col-sm-12">
               <div className="row ">
@@ -304,14 +325,14 @@ export default function footer() {
             </div> */}
           </div>
           <div className="row footer-bottom mt-70 pt-3 pb-1">
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-4 col-md-4">
               <div className="footer-bottom-content">
                 <div className="footer-bottom-content-copy">
                   <p>© 2024 ManuscriptEdit. All Rights Reserved. </p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-8 col-md-8">
               <div className="footer-bottom-right">
                 <div className="footer-bottom-right-text">
                   <Link className="absod" href={"/Publishing"}>
@@ -322,6 +343,8 @@ export default function footer() {
                   </Link>
 
                   <Link href={"/TermsOfService"}>Terms & Conditions</Link>
+
+                  <Link href={"https://secure.manuscriptedit.com/Service-agreement"}>  /   Service Agreement</Link>
                 </div>
               </div>
             </div>

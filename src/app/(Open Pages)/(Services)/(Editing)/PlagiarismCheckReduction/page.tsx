@@ -9,12 +9,12 @@ import redirect from "@/app/_Common/_functionality/Redirect";
 export default function Home() {
   return (
     <>
-    {breadcrum("Services / English Editing", "Plagiarism check and reduction")}
+    {breadcrum("Services / English Editing", "Plagiarism Check and Reduction")}
     <section className="pt-5 pb-5">
     <div className="container">
         <div className="row">
             <div className="col-md-7">
-                <h3 className="pt-0 pb-3">Plagiarism check and reduction</h3>
+                <h3 className="pt-0 pb-3">Plagiarism Check and Reduction</h3>
                 <p>
                    Plagiarism Check is a service dedicated to ensuring the originality 
                    and integrity of written content. Using advanced plagiarism detection 

@@ -11,7 +11,6 @@ const useFormWebReg =  () => {
     const postData = async (formData: any): Promise<void> => {
         setIsLoading(true);
         setError(null);
-        console.log({formData})
         try {
             fetch(`https://www.secure.manuscriptedit.com/api/webinar_register.php`, {
                 method: 'POST',
@@ -22,7 +21,6 @@ const useFormWebReg =  () => {
             }).then(response => {
                 return response.json()
             }).then(responseData => {
-                console.log({responseData})
                 const {status} = responseData[0]
 
                 if(status){
@@ -38,7 +36,6 @@ const useFormWebReg =  () => {
             });
 
         } catch (error) {
-            console.log({error})
             setError("Something went wrong");
             setIsLoading(false);
         }

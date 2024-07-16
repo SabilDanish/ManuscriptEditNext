@@ -28,7 +28,6 @@ export default function Home() {
         setAllPartner(prev => [...prev, ...partners])
     }, [partners])
 
-    console.log({loading})
 
 
     return (

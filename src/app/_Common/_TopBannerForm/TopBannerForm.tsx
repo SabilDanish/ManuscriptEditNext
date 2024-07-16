@@ -82,8 +82,6 @@ const TopBannerForm = () => {
     formRef.current.reset();
   };
 
-  console.log({isSmallScreen})
-
   return (
     <>
       <div className="bannerContainer">

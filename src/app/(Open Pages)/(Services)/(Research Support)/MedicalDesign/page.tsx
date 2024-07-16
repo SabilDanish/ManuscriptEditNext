@@ -10,7 +10,7 @@ export default function Home() {
     <>
       {breadcrum(
         "Services / Research Support",
-        "Fully Experienced Researchers"
+        "Illustration Services"
       )}
       <section className="pt-5 pb-5">
         <div className="container">
@@ -102,7 +102,7 @@ export default function Home() {
                       role="tab"
                       aria-expanded="false"
                     >
-                      SImage polishing
+                      Image polishing
                     </a>
                   </li>
                   <li className="nav-item">

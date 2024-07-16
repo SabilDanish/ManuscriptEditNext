@@ -23,10 +23,8 @@ const useFetchClientList = () => {
           ).then(response => {
             return response.json()
           }).then(data => {
-            console.log({data})
             setClientList(data);
           }).catch((err) => {
-            console.log({err})
             setLoading(false)
           })
           .finally(() => {

@@ -9,14 +9,14 @@ import redirect from "@/app/_Common/_functionality/Redirect";
 export default function Home() {
   return (
     <>
-    {breadcrum("Services / English Editing", "Plagiarism check and reduction")}
+    {breadcrum("Services / English Editing", "Translation Services")}
     <section className="pt-5 pb-5">
     <div className="container">
         <div className="row">
             <div className="col-md-7">
                 <h3 className="pt-0 pb-3">Breaking the Language Barrier</h3>
                 <p>
-                  We, at Manuscriptedit not only translate but transcreate documents of highest 
+                  We, at ManuscriptEdit not only translate but transcreate documents of highest 
                   standards for all region-specific needs. We do not believe in shortcuts and 
                   provide accurate and timeless language solutions across 70+ languages and 
                   2500+ language pairs . If there is a translation request for a language beyond 
@@ -25,7 +25,7 @@ export default function Home() {
                 </p>
 
                 <p>
-                   Manuscriptedit provides industry-expert linguists with deep industry expertise 
+                   ManuscriptEdit provides industry-expert linguists with deep industry expertise 
                    to ensure timely delivery of the project with quality and precision par excellence. 
                    Our people-powered translation service also builds customized solutions keeping 
                    in mind the client's time and budget, without compromising the output.
@@ -52,7 +52,7 @@ export default function Home() {
 						<div className="pricing_style_four_body">
 							<ul>
 								<li className="st-list"><i className="fa fa-check"></i> <span>Professional translators accurate content</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Covers various languages for global...</span></li>
+								<li className="st-list"><i className="fa fa-check"></i><span>Covers various languages for Global...</span></li>
 								<li className="st-list"><i className="fa fa-check"></i><span>Translates legal, business, academic.</span></li>
 								<li className="st-list"><i className="fa fa-check"></i><span>Rigorous proofreading for accuracy.</span></li>
 								<li className="st-list"><i className="fa fa-check"></i><span>Considers local nuances and idioms.</span></li>
@@ -105,7 +105,7 @@ export default function Home() {
 						</div>
 						<div className="pricing_style_four_body">
 							<ul>
-								<li className="st-list"><i className="fa fa-check"></i> <span>automated technology for language conver...</span></li>
+								<li className="st-list"><i className="fa fa-check"></i> <span>Automated technology for language conversion</span></li>
 								<li className="st-list"><i className="fa fa-check"></i><span>Provides quick results for large volumes.</span></li>
 								<li className="st-list"><i className="fa fa-check"></i><span>Applies to documents, websites, texts, more.</span></li>
 								<li className="st-list"><i className="fa fa-check"></i><span> Human editing to improve translation quality.</span></li>
@@ -165,9 +165,9 @@ export default function Home() {
               </div>
 
                <div className="">
-                  <h5 className="mb-2">Why choose Manuscriptedit?</h5>
+                  <h5 className="mb-2">Why choose ManuscriptEdit?</h5>
                   <p>
-                      From Medicine to Life Sciences, Physical Sciences, Economics and Art & Humanities -- our team of translators are specialized in 1,117 subject areas.
+                  Our team of experts specializes in 1,117 different subject areas, from medicine to life sciences, physical sciences, arts & humanities, finance, and economics.
                   </p>
               </div>
 

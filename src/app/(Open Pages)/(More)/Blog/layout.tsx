@@ -7,22 +7,7 @@ import { formatDate } from "@/app/utils/lib";
 
 
 const BlogNext = ({ children }: any) => {
-    const { loading, error, blogs } = useBlogs();
-
-    if (loading) {
-        return (
-            <div className="loader-overlay">
-                <DNA
-                    visible={true}
-                    height="80"
-                    width="80"
-                    ariaLabel="dna-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="dna-wrapper"
-                />
-            </div>
-        );
-    }
+    
     return (
         <>
             <div className="container-fluid blog-Container" >
