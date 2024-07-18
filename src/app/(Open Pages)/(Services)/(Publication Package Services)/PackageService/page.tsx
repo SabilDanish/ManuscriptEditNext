@@ -228,11 +228,11 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{textAlign:"center"}}>
+              <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
               </div>
 
-              <div className="pricing_button" style={{textAlign:"center"}}>
+              <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
                 <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
               </div>
 
@@ -267,11 +267,11 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{textAlign:"center"}}>
+              <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
               </div>
 
-              <div className="pricing_button" style={{textAlign:"center"}}>
+              <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
                 <a onClick={() => { redirect('quotation') }}>Request a Quote<i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -303,11 +303,11 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{textAlign:"center"}}>
+              <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
               </div>
 
-              <div className="pricing_button" style={{textAlign:"center"}}>
+              <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
                 <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -337,11 +337,11 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{textAlign:"center"}}>
+              <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
               </div>
 
-              <div className="pricing_button" style={{textAlign:"center"}}>
+              <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
                 <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>

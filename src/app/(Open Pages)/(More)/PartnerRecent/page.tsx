@@ -48,15 +48,17 @@ export default function Home() {
                         )
                     }
                     {
-                        allPartner.length ? allPartner.map((partner,index) => {
-                            const { logo_link } = partner
+                        allPartner.length ? allPartner.map((partner, index) => {
+                            const { logo_link, part_link } = partner
                             return (
                                 <div className="col-md-4" key={index}>
-                                    <div className="card text-center mr-4 mt-5">
-                                        <div className="card-body">
-                                            <img src={logo_link} width="200px" height="83px" alt="" />
+                                    <a href={part_link} target="_blank" rel="noopener noreferrer" className="card-link">
+                                        <div className="card text-center mr-4 mt-5">
+                                            <div className="card-body">
+                                                <img src={logo_link} width="200px" height="83px" alt="" />
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             )
                         }) : ""
