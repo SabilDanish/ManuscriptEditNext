@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  .tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #a31e22;
+    width: 15%;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+  }
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: #fff;
+    padding: 16px 7px;
+    width: 90%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+    margin: 5%;
+    border-radius: 4px;
+  }
+  .tab button.active {
+    background-color: #FFF0F0;
+    color: #a31e22;
+  }
+  .tabcontent {
+    float: left;
+    padding: 4px 23px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #dfe8eb;
+    display: none;
+  }
+  .tabcontent.activeTab {
+    display: block;
+  }
+  .checkmark {
+    color: green;
+    margin-right: 4px;
+  }
+  .tablinks {
+    font-weight: 600;
+  }
+  
+  
+  .TitleAll{
+    font-size: var(--fs-lg);
+      font-weight: var(--fw-bold);
+      color: var(--color-title);
+  }
+  
+  @media (max-width:768px) {
+    .tab{
+        width: 40%;
+    }
+
+    .tabcontent{
+        width: 60%;
+    }
+  }
+  
+  li{
+    list-style-type: none;
+  }
+  
+  .Headingli{
+    font-weight: 600;
+  }
+  
+  .checkmarkli{
+    color: #dce4e7;
+    padding-left: 8px;
+  }

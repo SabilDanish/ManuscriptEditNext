@@ -162,7 +162,7 @@ export default function Header() {
                       <ul>
                         <li>
                           <Link href={"/Writing"}>
-                            <b>Writing & Rewriting</b>
+                            <b>Scientific / Academic Writting</b>
                           </Link>
                           <ul className={Style.subList}>
                             <li>
@@ -203,6 +203,7 @@ export default function Header() {
                         </li>
                       </ul>
                     </li>
+                    
                     <li>
                       <ul>
                         <li>
