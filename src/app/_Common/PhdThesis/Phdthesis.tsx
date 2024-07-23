@@ -59,7 +59,7 @@ const PhdThesis = () => {
                         <div className="table-responsive">
                             <table className="table table-bordered">
                                 <thead>
-                                    <tr style={{ textAlign: 'center' }}>
+                                    <tr >
                                         <th scope="col" style={{ color: "#a31e22" }}>Subscription Package</th>
                                         <th scope="col" style={{ color: "#a31e22" }}>Core Services</th>
                                         <th scope="col" style={{ color: "#a31e22" }}>Add-On Services</th>
@@ -98,13 +98,14 @@ const PhdThesis = () => {
                                     </tr>
                                 </tbody>
                             </table>
+
+                            <div className="donate-btn-header1" style={{ textAlign: "end" }}>
+
+                                <span><Link href="/ContactUs" className='dtbtn'>Contact Us</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
+
+                            </div>
                         </div>
-                        <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            <span>
-                                <Link href="https://www.secure.manuscriptedit.com/register" className='dtbtn'>Know more</Link>
-                               
-                            </span>
-                        </div>
+
                     </div>
 
                     {/* <!-- Repeat the same structure for other tabs --> */}
@@ -113,7 +114,7 @@ const PhdThesis = () => {
                         <div className="table-responsive">
                             <table className="table table-bordered">
                                 <thead>
-                                    <tr style={{ textAlign: 'center' }}>
+                                    <tr >
                                         <th scope="col" style={{ color: "#a31e22" }}>Subscription Package</th>
                                         <th scope="col" style={{ color: "#a31e22" }}>Core Services</th>
                                         <th scope="col" style={{ color: "#a31e22" }}>Add-On Services</th>
@@ -162,10 +163,9 @@ const PhdThesis = () => {
                             </table>
                         </div>
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            <span>
-                                <Link href="https://www.secure.manuscriptedit.com/register" className='dtbtn'>Know more</Link>
-                               
-                            </span>
+
+                            <span><Link href="/ContactUs" className='dtbtn'>Contact Us</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
+
                         </div>
                     </div>
 
@@ -173,7 +173,7 @@ const PhdThesis = () => {
                         <div className="table-responsive">
                             <table className="table table-bordered">
                                 <thead>
-                                    <tr style={{ textAlign: 'center' }}>
+                                    <tr >
                                         <th scope="col" style={{ color: "#a31e22" }}>Subscription Package</th>
                                         <th scope="col" style={{ color: "#a31e22" }}>Core Services</th>
                                         <th scope="col" style={{ color: "#a31e22" }}>Add-On Services</th>
@@ -230,10 +230,9 @@ const PhdThesis = () => {
                             </table>
                         </div>
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            <span>
-                                <Link href="https://www.secure.manuscriptedit.com/register" className='dtbtn'>Know more</Link>
-                               
-                            </span>
+
+                            <span><Link href="/ContactUs" className='dtbtn'>Contact Us</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
+
                         </div>
                     </div>
 
@@ -241,7 +240,7 @@ const PhdThesis = () => {
                         <div className="table-responsive">
                             <table className="table table-bordered">
                                 <thead>
-                                    <tr style={{ textAlign: 'center' }}>
+                                    <tr >
                                         <th scope="col" style={{ color: "#a31e22" }}>Subscription Package</th>
                                         <th scope="col" style={{ color: "#a31e22" }}>Core Services</th>
                                         <th scope="col" style={{ color: "#a31e22" }}>Add-On Services</th>
@@ -282,10 +281,9 @@ const PhdThesis = () => {
                             </table>
                         </div>
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
-                            <span>
-                                <Link href="https://www.secure.manuscriptedit.com/register" className='dtbtn'>Know more</Link>
-                               
-                            </span>
+
+                            <span><Link href="/ContactUs" className='dtbtn'>Contact Us</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
+
                         </div>
                     </div>
                 </div>
