@@ -26,7 +26,6 @@ import Script from "next/script";
 import { Suspense, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Header from "./_Common/_Header/Header";
 import { DNA } from "react-loader-spinner";
 import FloatingWp from "./_Common/FloatingWp/FloatingWp";
 // import { DefaultSeo } from "next-seo";
@@ -77,7 +76,7 @@ export default function RootLayout({
         <Script type="text/javascript" strategy="beforeInteractive" src="/venobox/venobox.min.js" />
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/isotope.pkgd.min.js" />
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/jquery.nivo.slider.pack.js" />
-        <Script type="text/javascript" strategy="beforeInteractive" src="/js/jquery.meanmenu.js" />
+        {/* <Script type="text/javascript" strategy="beforeInteractive" src="/js/jquery.meanmenu.js" /> */}
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/jquery.scrollUp.js" />
         <Script type="text/javascript" src="/js/theme.js" />
         <Script type="text/javascript" src="/js/clarity.js" strategy="lazyOnload" />
@@ -104,8 +103,9 @@ export default function RootLayout({
         
         <ToastContainer />
         {/* <header/> */}
-        {/* {header()} */}
-        <Header />
+        {header()}
+        {/* <Header /> */}
+        {/* <Header2 /> */}
         <Suspense fallback={<p style={{ width: "100%", display: 'flex', justifyContent: "center" }}><DNA /></p>}>{children}</Suspense>
         <FloatingWp />
         {footer()}

@@ -1,12 +1,192 @@
+// "use client";
+// import Link from "next/link";
+// import "./header.css";
+// import redirect, { redirectSameTab } from "../_functionality/Redirect";
+// import { useRouter } from 'next/navigation';
+// import { Button } from "reactstrap";
+// import { useState } from "react";
+// import data from '../../utils/navbarData.js'
+
+// export default function Header() {
+//   const router = useRouter();
+
+//   const [active, setActive] = useState(false);
+//   const [header, setHeader] = useState("");
+//   const [navData, setNavData] = useState<any>()
+
+//   const handleClick = (tab: string) => {
+//     setActive(!active);
+//     setHeader(tab)
+
+//     let new_nav_data = data.filter(val => val.mainHeader === tab)
+//     setNavData(new_nav_data)
+//   };
+//   return (
+//     <>
+//       <div className="header_top_menu pt-2 pb-2 bg_color">
+//         <div className="container">
+//           <div className="row">
+//             <div className="col-lg-8 col-sm-8">
+//               <div className="header_top_menu_address">
+//                 <div className="header_top_menu_address_inner">
+//                   <ul>
+//                     <li>
+//                       <a href="#">
+//                         <i className="fa fa-phone"></i>+91-904-002-3003 (IN) <i className="fa fa-phone" style={{ marginLeft: "8px" }}></i>+91-923-730-4004 (IN) <i className="fa fa-phone" style={{ marginLeft: "8px" }}></i>+1
+//                         (646)916-3476 (USA)
+//                       </a>
+//                     </li>
+//                   </ul>
+//                 </div>
+//               </div>
+//             </div>
+//             <div className="col-lg-4 col-sm-4">
+//               <div className="header_top_menu_icon">
+//                 <div className="header_top_menu_icon_inner">
+//                   <ul>
+//                     <li>
+//                       <Link href={"https://www.facebook.com/Manuscriptedit"} target="_blank">
+//                         <i className="fa fa-facebook"></i>
+//                       </Link>
+//                     </li>
+//                     <li>
+//                       <a href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit" target="_blank">
+//                         <i className="fa fa-twitter"></i>
+//                       </a>
+//                     </li>
+//                     <li>
+//                       <a href="https://www.instagram.com/manuscriptedit/" target="_blank">
+//                         <i className="fa fa-instagram"></i>
+//                       </a>
+//                     </li>
+//                     <li>
+//                       <a href="https://www.youtube.com/@manuscriptedit." target="_blank">
+//                         <i className="fa fa-youtube"></i>
+//                       </a>
+//                     </li>
+//                   </ul>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//       <nav className="navbar">
+//         <h1 className="navbar-logo">
+//           <Link href={"/"} className="logo">
+//             <img style={{ width: "150px" }} className="down" src="/images/1.png" alt=""></img>{" "}
+//             <img style={{ width: "150px" }} className="main_sticky" src="/images/1.png" alt=""></img>
+//           </Link>
+//         </h1>
+
+//         <ul className={active ? "nav-menu active" : "nav-menu"}>
+//           <li onMouseEnter={() => handleClick("SERVICES")} onMouseLeave={() => handleClick("")}>
+//             <a href={"#"} className="nav-links">
+//               SERVICES
+//             </a>
+//           </li>
+//           <li>
+//             <a href={"#"} className="nav-links">
+//               QUALITY
+//               {/* {active && (
+//                 <div className="dropdown">
+//                   <ul>
+//                     <li><a href="#">Quality 1</a></li>
+//                     <li><a href="#">Quality 2</a></li>
+//                     <li><a href="#">Quality 3</a></li>
+//                     <li><a href="#">Quality 4</a></li>
+//                     <li><a href="#">Quality 5</a></li>
+//                   </ul>
+//                 </div>
+//               )} */}
+//             </a>
+//           </li>
+//           <li>
+//             <a href={"#"} className="nav-links">
+//               SUBMIT MANUSCRIPT
+//               {/* {active && (
+//                 <div className="dropdown">
+//                   <ul>
+//                     <li><a href="#">Submit Manuscript 1</a></li>
+//                     <li><a href="#">Submit Manuscript 2</a></li>
+//                     <li><a href="#">Submit Manuscript 3</a></li>
+//                     <li><a href="#">Submit Manuscript 4</a></li>
+//                     <li><a href="#">Submit Manuscript 5</a></li>
+//                   </ul>
+//                 </div>
+//               )} */}
+//             </a>
+//           </li>
+//           <li>
+//             <a href={"#"} className="nav-links">
+//               EDITOR
+//               {/* {active && (
+//                 <div className="dropdown">
+//                   <ul>
+//                     <li><a href="#">Editor 1</a></li>
+//                     <li><a href="#">Editor 2</a></li>
+//                     <li><a href="#">Editor 3</a></li>
+//                     <li><a href="#">Editor 4</a></li>
+//                     <li><a href="#">Editor 5</a></li>
+//                   </ul>
+//                 </div>
+//               )} */}
+//             </a>
+//           </li>
+//           <li>
+//             <a href={"#"} className="nav-links">
+//               MORE
+//               {/* {active && (
+//                 <div className="dropdown">
+//                   <ul>
+//                     <li><a href="#">More 1</a></li>
+//                     <li><a href="#">More 2</a></li>
+//                     <li><a href="#">More 3</a></li>
+//                     <li><a href="#">More 4</a></li>
+//                     <li><a href="#">More 5</a></li>
+//                   </ul>
+//                 </div>
+//               )} */}
+//             </a>
+//           </li>
+//         </ul>
+//         <li>
+//           <Button style={{ backgroundColor: "#a31e22" }}>Sign Up | Sign In</Button>
+//         </li>
+//       </nav>
+//       {active && header === "SERVICES" &&(
+//         <div className="dropdown" style={{marginTop: "5rem"}}>
+//           <ul>
+//             <li><a href="#">Service 1</a></li>
+//             <li><a href="#">Service 2</a></li>
+//             <li><a href="#">Service 3</a></li>
+//             <li><a href="#">Service 4</a></li>
+//             <li><a href="#">Service 5</a></li>
+//           </ul>
+//         </div>
+//       )}
+//     </>
+//   );
+// }
+
+
 "use client";
 import Link from "next/link";
-import Style from "./header.module.css";
-import redirect, { redirectSameTab } from "../_functionality/Redirect";
-// import { useRef } from "react";
-import { useRouter } from 'next/navigation'
+import "./header.css";
+import { useState } from "react";
+import { Button } from "reactstrap";
 
 export default function Header() {
-  const router = useRouter()
+  const [activeMenu, setActiveMenu] = useState(null);
+
+  const handleMouseEnter = (menuItem) => {
+    setActiveMenu(menuItem);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveMenu(null);
+  };
+
   return (
     <>
       <div className="header_top_menu pt-2 pb-2 bg_color">
@@ -57,882 +237,105 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div
-        id="sticky-header"
-        className="techno_nav_manu d-md-none d-lg-block d-sm-none d-none"
-      >
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="menu">
-              <Link href={"/"} className="logo">
-                <img style={{ width: "150px" }} className="down" src="/images/1.png" alt=""></img>{" "}
-                <img style={{ width: "150px" }} className="main_sticky" src="/images/1.png" alt=""></img>
-              </Link>
-              <ul className="clearfix">
-                <li>
-                  <a href="#">SERVICES </a>
-                  <ul >
-                    <li >
-                      <ul>
-                        <li>
-                          <Link href={"/EditingOverview"}>
-                            <b>English Editing</b>
-                          </Link>
-                          <ul className={Style.subList}>
-                            <li>
-                              <Link href={"/EditingOverview"}>
-                                Editing Overview
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/ProofReading"}>Proofreading</Link>
-                            </li>
-                            <li>
-                              <Link href={"/SubEditing"}>
-                                Substantive Editing
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/ExtensiveSubstantiveEditing"}>
-                                Extensive Substantive Editing
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/CopyEdit"}>Copyediting</Link>
-                            </li>
-                            <li>
-                              <Link href={"/PlagiarismCheckReduction"}>
-                                Plagiarism check and reduction
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/TranslationOverview"}>
-                                Translation Services
-                              </Link>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <ul>
-                        <li>
-                          <Link href={"/PackageService"}>
-                            <b>Publication Support</b>
-                          </Link>
-                          <ul className={Style.subList}>
-                            <li>
-                              <Link href={"/PackageService"}>
-                                Publication Package
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/JournalSel"}>
-                                Journal Selection
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/JournalSub"}>
-                                Journal Submission
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/ResponseToReviewer"}>
-                                Response to Reviewer
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/PeerReview"}>
-                                Peer Review&nbsp;&amp;&nbsp;Pre Submission
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/PosterCreation"}>
-                                Poster Creation &amp; Design
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/Formatting"}>Formatting</Link>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <ul>
-                        <li>
-                          <Link href={"/Writing"}>
-                            <b>Scientific / Academic Writting</b>
-                          </Link>
-                          <ul className={Style.subList}>
-                            <li>
-                              <Link href={"/Writing"}>Writing Overview</Link>
-                            </li>
-                            <li>
-                              <Link href={"/MedicalWrite"}>
-                                Medical Writing
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/ScientificWriting"}>
-                              Scientific & Academic Writing
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/TechnicalWriting"}>
-                                Technical Writing
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/MedicalRewrite"}>Rewriting</Link>
-                            </li>
-                            <li>
-                              <Link href={"/StatisticalAnalysis"}>
-                                Statistical Analysis
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/SystematicReview"}>
-                                Systematic Review
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/MetaAnalysis"}>Meta Analysis</Link>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    
-                    <li>
-                      <ul>
-                        <li>
-                          <a href="#">
-                          <b>Research Support</b>
-                          </a>
-                            
-                          
-                          <ul className={Style.subList}>
-                            <li>
-                              <Link href={"/ResearchSupportOverview"}>
-                                Research Support Overview
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/EarlyStageResearchers"}>
-                                Early Stage Researchers
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/MidCareerResearchers"}>
-                                Mid-Career Researchers
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/FullyExperiencedResearchers"}>
-                                Fully Experienced Researchers
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/ResearchEnhancementServices"}>
-                                Research Enhancement Services
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/CitationBooster"}>
-                                Citation Booster
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/MedicalDesign"}>
-                                Illustration Services
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/PHDThesis"}>Phd Thesis</Link>
-                            </li>
-                            <li>
-                              <Link href={"/MasterThesis"}>Master Thesis</Link>
-                            </li>
-                            <li>
-                              <Link href={"/CustomizedServices"}>
-                                Customized Services
-                              </Link>
-                            </li>
-                            {/* <li>
-                              <a
-                                onClick={() => {
-                                  redirectSameTab("corporate");
-                                }}
-                                href="#"
-                              >
-                                Corporate Services
-                              </a>
-                            </li> */}
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link href={"/"}>QUALITY</Link>
-                  <ul>
-                    <li>
-                      <Link href={"/QualityDelivery"}>Quality & Delivery</Link>
-                    </li>
-                    <li>
-                      <Link href={"/"}>Request a Sample Editing</Link>
-                    </li>
-                    <li>
-                      <Link href={"/FAQ"}>FAQs</Link>
-                    </li>
-                    <li>
-                      <Link href={"/Process"}>How We Work</Link>
-                    </li>
-                    <li>
-                      <Link href={"/QualityAssurance"}>Service Guarantee</Link>
-                    </li>
-                    <li>
-                      <Link href={"/Process"}>Editorial Process</Link>
-                    </li>
-                    <li>
-                      <Link href={"/Security"}>Confidentiality</Link>
-                    </li>
-                    <li>
-                      <Link href={"/Testimonial"}>Testimonial</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a
-                    onClick={() => {
-                      redirect("register");
-                    }}
-                    href="#"
-                  >
-                    SUBMIT MANUSCRIPT
-                  </a>
-                  <ul>
-                    {/* <li><Link href={'/QualityDelivery'}>Submit Manuscript</Link></li> */}
-                    <li>
-                      <a
-                        onClick={() => {
-                          redirect("register");
-                        }}
-                        href="#"
-                      >
-                        Submit Manuscript
-                      </a>
-                    </li>
-                    <li>
-                      <Link href={"/Prices"}>Price Calculator</Link>
-                    </li>
-                    {/* <li><Link href={'/FAQ'}>Quotation</Link></li> */}
-                    <li>
-                      <a
-                        onClick={() => {
-                          redirect("qregistration");
-                        }}
-                        href="#"
-                      >
-                        Quotation
-                      </a>
-                    </li>
-                    <li>
-                      <Link href={"/PaymentMethod"}>Payment Method</Link>
-                    </li>
-                    <li>
-                      <Link href={"/Discount"}>Discount</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">EDITOR</a>
-                  <ul>
-                    <li>
-                      <Link href={"/EditorialPanel"}>Editor Profile</Link>
-                    </li>
-                    {/* <li>
-                      <a
-                        onClick={() => {
-                          redirect("editorial-panel");
-                        }}
-                        href="#"
-                      >
-                        Editor Profile
-                      </a>
-                    </li> */}
-
-                    <li>
-                      <Link href={"/EditPanel"}>Editor Panel</Link>
-                    </li>
-                    {/* <li><Link href={'/FAQ'}>New Editor</Link></li> */}
-                    <li>
-                      <a
-                        onClick={() => {
-                          redirect("register1");
-                        }}
-                        href="#"
-                      >
-                        New Editor
-                      </a>
-                    </li>
-
-                    {/* <li><Link href={'/Process'}>Editor Login</Link></li> */}
-                    <li>
-                      <a
-                        onClick={() => {
-                          redirect("logineditor");
-                        }}
-                        href="#"
-                      >
-                        Editor Login
-                      </a>
-                    </li>
-                    <li>
-                      <Link href={"/Career"}>Careers</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">MORE</a>
-                  <ul>
-                    <li>
-                      <Link href={"/About"}>About Us</Link>
-                    </li>
-                    <li><Link href={'/ClientList'}>Client List</Link></li>
-                    {/* <li>
-                      <a
-                        onClick={() => {
-                          redirect("client-list");
-                        }}
-                        href="#"
-                      >
-                        Client List
-                      </a>
-                    </li> */}
-                    <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li>
-                    {/* <li>
-                      <a
-                        onClick={() => {
-                          redirect("partner-recent");
-                        }}
-                        href="#"
-                      >
-                        Recent Partners
-                      </a>
-                    </li> */}
-
-                    <li><Link href={'/ContactUs'}>Contact us</Link></li>
-                    {/* <li>
-                      <a
-                        onClick={() => {
-                          redirect("contact-us");
-                        }}
-                        href="#"
-                      >
-                        Contact us
-                      </a>
-                    </li> */}
-                    <li><Link href={'/NewsPromotions'}>News & Conferences</Link></li>
-                    {/* <li>
-                      <a
-                        onClick={() => {
-                          redirect("news-promotions");
-                        }}
-                        href="#"
-                      >
-                        News & Conferences
-                      </a>
-                    </li> */}
-
-                    {/* <li><Link href={'/Process'}>Referral Partner Program</Link></li> */}
-                    <li>
-                      <a
-                        onClick={() => {
-                          redirect("register");
-                        }}
-                        href="#"
-                      >
-                        Referral Partner Program
-                      </a>
-                    </li>
-
-                    <li><Link href={'/GlobalPartner'}>Global Partner Program</Link></li>
-                    {/* <li>
-                      <a
-                        onClick={() => {
-                          redirect("partner");
-                        }}
-                        href="#"
-                      >
-                        Global Partner Program
-                      </a>
-                    </li> */}
-
-                    {/* <li><Link href={'/Testimonial'}>Webinar Registration</Link></li> */}
-                    {/* <li>
-                      <a
-                        onClick={() => {
-                          redirect("wregistration");
-                        }}
-                        href="#"
-                      >
-                        Webinar Registration
-                      </a>
-                    </li> */}
-
-                    <li>
-                      <Link href={"/wregistration"}>
-                        Webinar Registration
-                      </Link>
-                    </li>
-
-
-                    <li><Link href={'/Blog'}>Scholar Hangout</Link></li>
-                    {/* <li>
-                      <a
-                        onClick={() => {
-                          redirect("scholar-hangout");
-                        }}
-                        href="#"
-                      >
-                  Scholar Hangout
-                      </a>
-                    </li> */}
-                  </ul>
-                </li>
-                <div className="donate-btn-header">
-                  <a
-                    className="dtbtn"
-                    onClick={() => {
-                      // redirect("register");
-                      window.location.href =
-                        "https://secure.manuscriptedit.com/register";
-                    }}
-                    href="#"
-                  >
-                    Sign Up | Sign In
-                  </a>
-                </div>
-              </ul>
-            </div>
-          </div>
+      <nav className="navbar">
+        <h1 className="navbar-logo">
+          <Link href={"/"} className="logo">
+            <img style={{ width: "150px" }} className="down" src="/images/1.png" alt=""></img>{" "}
+            <img style={{ width: "150px" }} className="main_sticky" src="/images/1.png" alt=""></img>
+          </Link>
+        </h1>
+        <ul className="nav-menu">
+          <NavItem
+            label="SERVICES"
+            dropdownItems={[
+              { label: "Service 1", link: "/service-1" },
+              { label: "Service 2", link: "/service-2" },
+              { label: "Service 3", link: "/service-3" },
+              { label: "Service 4", link: "/service-4" },
+              { label: "Service 5", link: "/service-5" },
+            ]}
+            onMouseEnter={() => handleMouseEnter("SERVICES")}
+            onMouseLeave={handleMouseLeave}
+            active={activeMenu === "SERVICES"}
+          />
+          <NavItem
+            label="QUALITY"
+            dropdownItems={[
+              { label: "Quality 1", link: "/quality-1" },
+              { label: "Quality 2", link: "/quality-2" },
+              { label: "Quality 3", link: "/quality-3" },
+              { label: "Quality 4", link: "/quality-4" },
+              { label: "Quality 5", link: "/quality-5" },
+            ]}
+            onMouseEnter={() => handleMouseEnter("QUALITY")}
+            onMouseLeave={handleMouseLeave}
+            active={activeMenu === "QUALITY"}
+          />
+          <NavItem
+            label="SUBMIT MANUSCRIPT"
+            dropdownItems={[
+              { label: "Submit Manuscript 1", link: "/submit-manuscript-1" },
+              { label: "Submit Manuscript 2", link: "/submit-manuscript-2" },
+              { label: "Submit Manuscript 3", link: "/submit-manuscript-3" },
+              { label: "Submit Manuscript 4", link: "/submit-manuscript-4" },
+              { label: "Submit Manuscript 5", link: "/submit-manuscript-5" },
+            ]}
+            onMouseEnter={() => handleMouseEnter("SUBMIT")}
+            onMouseLeave={handleMouseLeave}
+            active={activeMenu === "SUBMIT"}
+          />
+          <NavItem
+            label="EDITOR"
+            dropdownItems={[
+              { label: "Editor 1", link: "/editor-1" },
+              { label: "Editor 2", link: "/editor-2" },
+              { label: "Editor 3", link: "/editor-3" },
+              { label: "Editor 4", link: "/editor-4" },
+              { label: "Editor 5", link: "/editor-5" },
+            ]}
+            onMouseEnter={() => handleMouseEnter("EDITOR")}
+            onMouseLeave={handleMouseLeave}
+            active={activeMenu === "EDITOR"}
+          />
+          <NavItem
+            label="MORE"
+            dropdownItems={[
+              { label: "More 1", link: "/more-1" },
+              { label: "More 2", link: "/more-2" },
+              { label: "More 3", link: "/more-3" },
+              { label: "More 4", link: "/more-4" },
+              { label: "More 5", link: "/more-5" },
+            ]}
+            onMouseEnter={() => handleMouseEnter("MORE")}
+            onMouseLeave={handleMouseLeave}
+            active={activeMenu === "MORE"}
+          />
+        </ul>
+        <div className="signup-signin">
+          <Button style={{ backgroundColor: "#a31e22" }}>Sign Up | Sign In</Button>
         </div>
-      </div>
-
-      <div className="mobile-menu-area d-sm-block d-md-block d-lg-none">
-        <div className="mobile-menu">
-          <nav className="techno_menu">
-            <ul className="clearfix">
-              <li>
-                <a href="#">SERVICES </a>
-                <ul>
-                  <li>
-                    <Link href={"/EditingOverview"}>
-                      <b>English Editing</b>
-                    </Link>
-                    <ul className={Style.subList}>
-                      <li>
-                        <Link href={"/EditingOverview"}>Editing Overview</Link>
-                      </li>
-                      <li>
-                        <Link href={"/ProofReading"}>Proofreading</Link>
-                      </li>
-                      <li>
-                        <Link href={"/SubEditing"}>Substantive Editing</Link>
-                      </li>
-                      <li>
-                        <Link href={"/ExtensiveSubstantiveEditing"}>
-                          Extensive Substantive Editing
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/CopyEdit"}>Copyediting</Link>
-                      </li>
-                      <li>
-                        <Link href={"/PlagiarismCheckReduction"}>
-                          Plagiarism check and reduction
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/TranslationOverview"}>
-                          Translation Services
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <Link href={"/PackageService"}>
-                      <b>Publication Support</b>
-                    </Link>
-                    <ul className={Style.subList}>
-                      <li>
-                        <Link href={"/PackageService"}>
-                          Publication Package
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/JournalSel"}>Journal Selection</Link>
-                      </li>
-                      <li>
-                        <Link href={"/JournalSub"}>Journal Submission</Link>
-                      </li>
-                      <li>
-                        <Link href={"/ResponseToReviewer"}>
-                          Response to Reviewer
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/PeerReview"}>
-                          Peer Review&nbsp;&amp;&nbsp;Pre Submission
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/PosterCreation"}>
-                          Poster Creation &amp; Design
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/Formatting"}>Formatting</Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <Link href={"/Writing"}>
-                      <b>Writing & Rewriting</b>
-                    </Link>
-                    <ul className={Style.subList}>
-                      <li>
-                        <Link href={"/Writing"}>Writing Overview</Link>
-                      </li>
-                      <li>
-                        <Link href={"/MedicalWrite"}>Medical Writing</Link>
-                      </li>
-                      <li>
-                        <Link href={"/ScientificWriting"}>
-                          Scientific Writing
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/TechnicalWriting"}>
-                          Technical Writing
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/MedicalRewrite"}>Rewriting</Link>
-                      </li>
-                      <li>
-                        <Link href={"/StatisticalAnalysis"}>
-                          Statistical Analysis
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/SystematicReview"}>
-                          Systematic Review
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/MetaAnalysis"}>Meta Analysis</Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <Link href={"/ResearchSupportOverview"}>
-                      <b>Research Support</b>
-                    </Link>
-                    <ul className={Style.subList}>
-                      <li>
-                        <Link href={"/ResearchSupportOverview"}>
-                          Research Support Overview
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/EarlyStageResearchers"}>
-                          Early Stage Researchers
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/MidCareerResearchers"}>
-                          Mid-Career Researchers
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/FullyExperiencedResearchers"}>
-                          Fully Experienced Researchers
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/ResearchEnhancementServices"}>
-                          Research Enhancement Services
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/CitationBooster"}>Citation Booster</Link>
-                      </li>
-                      <li>
-                        <Link href={"/MedicalDesign"}>
-                          Illustration Services
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/PHDThesis"}>Phd Thesis</Link>
-                      </li>
-                      <li>
-                        <Link href={"/MasterThesis"}>Master Thesis</Link>
-                      </li>
-                      <li>
-                        <Link href={"/CustomizedServices"}>
-                          Customized Services
-                        </Link>
-                      </li>
-                      {/* <li>
-                        <Link href={"/Corporate"}>Corporate Services</Link>
-                      </li> */}
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href={"#"}>QUALITY</Link>
-                <ul>
-                  <li>
-                    <Link href={"/QualityDelivery"}>Quality & Delivery</Link>
-                  </li>
-                  <li>
-                    <Link href={"/"}>Request a Sample Editing</Link>
-                  </li>
-                  <li>
-                    <Link href={"/FAQ"}>FAQs</Link>
-                  </li>
-                  <li>
-                    <Link href={"/Process"}>How We Work</Link>
-                  </li>
-                  <li>
-                    <Link href={"/QualityAssurance"}>Service Guarantee</Link>
-                  </li>
-                  <li>
-                    <Link href={"/Process"}>Editorial Process</Link>
-                  </li>
-                  <li>
-                    <Link href={"/Security"}>Confidentiality</Link>
-                  </li>
-                  <li>
-                    <Link href={"/Testimonial"}>Testimonial</Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a
-                  onClick={() => {
-                    redirect("register");
-                  }}
-                  href="#"
-                >
-                  SUBMIT MANUSCRIPT
-                </a>
-                <ul>
-                  {/* <li><Link href={'/QualityDelivery'}>Submit Manuscript</Link></li> */}
-                  <li>
-                    <a
-                      onClick={() => {
-                        redirect("register");
-                      }}
-                      href="#"
-                    >
-                      Submit Manuscript
-                    </a>
-                  </li>
-                  <li>
-                    <Link href={"/Prices"}>Price Calculator</Link>
-                  </li>
-                  {/* <li><Link href={'/FAQ'}>Quotation</Link></li> */}
-                  <li>
-                    <a
-                      onClick={() => {
-                        redirect("qregistration");
-                      }}
-                      href="#"
-                    >
-                      Quotation
-                    </a>
-                  </li>
-                  <li>
-                    <Link href={"/PaymentMethod"}>Payment Method</Link>
-                  </li>
-                  <li>
-                    <Link href={"/Discount"}>Discount</Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">EDITOR</a>
-                <ul>
-                  <li>
-                    <Link href={"/QualityDelivery"}>Editor Profile</Link>
-                  </li>
-                  {/* <li>
-                    <a
-                      onClick={() => {
-                        redirect("editorial-panel");
-                      }}
-                      href="#"
-                    >
-                      Editor Profile
-                    </a>
-                  </li> */}
-
-                  <li>
-                    <Link href={"/EditPanel"}>Editor Panel</Link>
-                  </li>
-                  {/* <li><Link href={'/FAQ'}>New Editor</Link></li> */}
-                  <li>
-                    <a
-                      onClick={() => {
-                        redirect("register1");
-                      }}
-                      href="#"
-                    >
-                      New Editor
-                    </a>
-                  </li>
-
-                  {/* <li><Link href={'/Process'}>Editor Login</Link></li> */}
-                  <li>
-                    <a
-                      onClick={() => {
-                        redirect("logineditor");
-                      }}
-                      href="#"
-                    >
-                      Editor Login
-                    </a>
-                  </li>
-                  <li>
-                    <Link href={"/Career"}>Careers</Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">MORE</a>
-                <ul>
-                  <li>
-                    <Link href={"/About"}>About Us</Link>
-                  </li>
-                  <li><Link href={'/'}>Client List</Link></li>
-                  {/* <li>
-                    <a
-                      onClick={() => {
-                        redirect("client-list");
-                      }}
-                      href="#"
-                    >
-                      Client List
-                    </a>
-                  </li> */}
-                  {/* <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li> */}
-                  <li>
-                    <a
-                      onClick={() => {
-                        redirect("partner-recent");
-                      }}
-                      href="#"
-                    >
-                      Recent Partners
-                    </a>
-                  </li>
-
-                  <li><Link href={'/ContactUs'}>Contact us</Link></li>
-                  {/* <li>
-                    <a
-                      onClick={() => {
-                        redirect("contact-us");
-                      }}
-                      href="#"
-                    >
-                      Contact us
-                    </a>
-                  </li> */}
-                  <li><Link href={'/QualityAssurance'}>News & Conferences</Link></li>
-                  {/* <li>
-                    <a
-                      onClick={() => {
-                        redirect("news-promotions");
-                      }}
-                      href="#"
-                    >
-                      News & Conferences
-                    </a>
-                  </li> */}
-
-                  {/* <li><Link href={'/Process'}>Referral Partner Program</Link></li> */}
-                  <li>
-                    <a
-                      onClick={() => {
-                        redirect("register");
-                      }}
-                      href="#"
-                    >
-                      Referral Partner Program
-                    </a>
-                  </li>
-
-                  <li><Link href={'/GlobalPartner'}>Global Partner Program</Link></li>
-                  {/* <li>
-                    <a
-                      onClick={() => {
-                        redirect("partner");
-                      }}
-                      href="#"
-                    >
-                      Global Partner Program
-                    </a>
-                  </li> */}
-
-                  {/* <li><Link href={'/Testimonial'}>Webinar Registration</Link></li> */}
-                  {/* <li>
-                    <a
-                      onClick={() => {
-                        redirect("wregistration");
-                      }}
-                      href="#"
-                    >
-                      Webinar Registration
-                    </a>
-                  </li> */}
-
-                  <li>
-                    <Link href={"/wregistration"}>
-                      Webinar Registration
-                    </Link>
-                  </li>
-
-                  <li><Link href={'/Blog'}>Scholar Hangout</Link></li>
-                  {/* <li>
-                    <a
-                      onClick={() => {
-                        redirect("scholar-hangout");
-                      }}
-                      href="#"
-                    >
-                      Blog
-                    </a>
-                  </li> */}
-                </ul>
-              </li>
-              <div className="donate-btn-header">
-                <a
-                  className="dtbtn"
-                  href="https://secure.manuscriptedit.com/register"
-                >
-                  Sign Up | Sign In
-                </a>
-              </div>
-            </ul>
-          </nav>
-        </div>
-      </div>
+      </nav>
     </>
+  );
+}
+
+function NavItem({ label, dropdownItems, onMouseEnter, onMouseLeave, active }) {
+  return (
+    <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+      <a href={"#"} className={`nav-links ${active ? "active" : ""}`}>
+        {label}
+        {active && (
+          <div className="dropdown">
+            <ul>
+              {dropdownItems.map((item, index) => (
+                <li key={index}>
+                  <Link href={item.link}>{item.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </a>
+    </li>
   );
 }
