@@ -5,52 +5,53 @@ const data = [
             {
                 "subHeader": "English Editing",
                 "content": [
-                    { content: "Editing Overview", link: "https://www.example.com/editing-overview" },
-                    { content: "Proofreading", link: "https://www.example.com/proofreading" },
-                    { content: "Substantive Editing", link: "https://www.example.com/substantive-editing" },
-                    { content: "Extensive Substantive Editing", link: "https://www.example.com/extensive-substantive-editing" },
-                    { content: "Copyediting", link: "https://www.example.com/copyediting" },
-                    { content: "Plagiarism Check And Reduction", link: "https://www.example.com/plagiarism-check" },
-                    { content: "Translation Services", link: "https://www.example.com/translation-services" }
+                    { content: "Editing Overview", link: "/EditingOverview" },
+                    { content: "Proofreading", link: "/ProofReading" },
+                    { content: "Substantive Editing", link: "/SubEditing" },
+                    { content: "Extensive Substantive Editing", link: "/ExtensiveSubstantiveEditing" },
+                    { content: "Copyediting", link: "/CopyEdit" },
+                    { content: "Plagiarism Check And Reduction", link: "/PlagiarismCheckReduction" },
+                    { content: "Translation Services", link: "/TranslationOverview" }
                 ],
             },
             {
                 "subHeader": "Publication Support",
                 "content": [
-                    { content: "Publication Package", link: "https://www.example.com/publication-package" },
-                    { content: "Journal Selection", link: "https://www.example.com/journal-selection" },
-                    { content: "Journal Submission", link: "https://www.example.com/journal-submission" },
-                    { content: "Response To Reviewer", link: "https://www.example.com/response-to-reviewer" },
-                    { content: "Peer Review & Pre Submission", link: "https://www.example.com/peer-review-pre-submission" },
-                    { content: "Poster Creation & Design", link: "https://www.example.com/poster-creation-design" },
-                    { content: "Formatting", link: "https://www.example.com/formatting" }
+                    { content: "Publication Package", link: "/PackageService" },
+                    { content: "Journal Selection", link: "/JournalSel" },
+                    { content: "Journal Submission", link: "/JournalSub" },
+                    { content: "Response To Reviewer", link: "/ResponseToReviewer" },
+                    { content: "Peer Review & Pre Submission", link: "/PeerReview" },
+                    { content: "Poster Creation & Design", link: "/PosterCreation" },
+                    { content: "Formatting", link: "/Formatting" }
                 ],
             },
             {
                 "subHeader": "Scientific / Academic Writing",
                 "content": [
-                    { content: "Writing Overview", link: "https://www.example.com/writing-overview" },
-                    { content: "Medical Writing", link: "https://www.example.com/medical-writing" },
-                    { content: "Scientific & Academic Writing", link: "https://www.example.com/scientific-academic-writing" },
-                    { content: "Technical Writing", link: "https://www.example.com/technical-writing" },
-                    { content: "Rewriting", link: "https://www.example.com/rewriting" },
-                    { content: "Statistical Analysis", link: "https://www.example.com/statistical-analysis" },
-                    { content: "Systematic Review", link: "https://www.example.com/systematic-review" },
-                    { content: "Meta Analysis", link: "https://www.example.com/meta-analysis" }
+                    { content: "Writing Overview", link: "/Writing" },
+                    { content: "Medical Writing", link: "/MedicalWrite" },
+                    { content: "Scientific & Academic Writing", link: "/ScientificWriting" },
+                    { content: "Technical Writing", link: "/TechnicalWriting" },
+                    { content: "Rewriting", link: "/MedicalRewrite" },
+                    { content: "Statistical Analysis", link: "/StatisticalAnalysis" },
+                    { content: "Systematic Review", link: "/SystematicReview" },
+                    { content: "Meta Analysis", link: "/MetaAnalysis" }
                 ],
             },
             {
                 "subHeader": "Research Support",
                 "content": [
-                    { content: "Research Support Overview", link: "https://www.example.com/research-support-overview" },
-                    { content: "Early Stage Researchers", link: "https://www.example.com/early-stage-researchers" },
-                    { content: "Mid-Career Researchers", link: "https://www.example.com/mid-career-researchers" },
-                    { content: "Fully Experienced Researchers", link: "https://www.example.com/fully-experienced-researchers" },
-                    { content: "Research Enhancement Services", link: "https://www.example.com/research-enhancement-services" },
-                    { content: "Citation Booster", link: "https://www.example.com/citation-booster" },
-                    { content: "Illustration Services", link: "https://www.example.com/illustration-services" },
-                    { content: "PhD Thesis", link: "https://www.example.com/phd-thesis" },
-                    { content: "Master Thesis", link: "https://www.example.com/master-thesis" }
+                    { content: "Research Support Overview", link: "/ResearchSupportOverview" },
+                    { content: "Early Stage Researchers", link: "/EarlyStageResearchers" },
+                    { content: "Mid-Career Researchers", link: "/MidCareerResearchers" },
+                    { content: "Fully Experienced Researchers", link: "/FullyExperiencedResearchers" },
+                    { content: "Research Enhancement Services", link: "/ResearchEnhancementServices" },
+                    { content: "Citation Booster", link: "/CitationBooster" },
+                    { content: "Illustration Services", link: "/MedicalDesign" },
+                    { content: "PhD Thesis", link: "/PHDThesis" },
+                    { content: "Master Thesis", link: "/MasterThesis" },
+                    { content: "Customized Services", link: "/CustomizedServices" }
                 ],
             },
             {
