@@ -13,6 +13,9 @@ const data = [
                     { content: "Plagiarism Check And Reduction", link: "/PlagiarismCheckReduction" },
                     { content: "Translation Services", link: "/TranslationOverview" }
                 ],
+                "css": {
+                    "color": "#FFF5F5",
+                }
             },
             {
                 "subHeader": "Publication Support",
@@ -25,6 +28,10 @@ const data = [
                     { content: "Poster Creation & Design", link: "/PosterCreation" },
                     { content: "Formatting", link: "/Formatting" }
                 ],
+                "css": {
+            "color": "#FFFDF5",
+            "fontSize": "16px"
+        }
             },
             {
                 "subHeader": "Scientific / Academic Writing",
@@ -38,6 +45,10 @@ const data = [
                     { content: "Systematic Review", link: "/SystematicReview" },
                     { content: "Meta Analysis", link: "/MetaAnalysis" }
                 ],
+                "css": {
+            "color": "#F7FFF5",
+            "fontSize": "16px"
+        }
             },
             {
                 "subHeader": "Research Support",
@@ -53,6 +64,10 @@ const data = [
                     { content: "Master Thesis", link: "/MasterThesis" },
                     { content: "Customized Services", link: "/CustomizedServices" }
                 ],
+                "css": {
+            "color": "#F5F8FF",
+            "fontSize": "16px"
+        }
             },
             {
                 "subHeader": "Medical Writing",
@@ -77,6 +92,10 @@ const data = [
                     { content: "Scientific Communication", link: "https://www.example.com/phd-assistance-scientific-communication-2" },
                     { content: "Clinical Research Documentation", link: "https://www.example.com/phd-assistance-clinical-research-documentation-2" }
                 ],
+                "css": {
+            "color": "#F5F8FF",
+            "fontSize": "16px"
+        }
             },
             {
                 "subHeader": "Publication Packages",
@@ -87,6 +106,10 @@ const data = [
                     { content: "Technical Writing", link: "https://www.example.com/publication-packages-technical-writing" },
                     { content: "Medical Writing", link: "https://www.example.com/publication-packages-medical-writing-2" }
                 ],
+                "css": {
+            "color": "#F7FFF5",
+            "fontSize": "16px"
+        }
             },
             {
                 "subHeader": "Translation and Transcription",
@@ -101,12 +124,14 @@ const data = [
                     { content: "PhD Thesis", link: "https://www.example.com/translation-transcription-phd-thesis" },
                     { content: "Master Thesis", link: "https://www.example.com/translation-transcription-master-thesis" }
                 ],
-            }
-        ],
-        "css": {
-            "color": "blue",
+                "css": {
+            "color": "#FFF5F5",
             "fontSize": "16px"
         }
+            }
+        ],
+
+        "className": "ServicesTab"
     },
     {
         "mainHeader": "QUALITY",
@@ -129,7 +154,8 @@ const data = [
         "css": {
             "color": "green",
             "fontSize": "14px"
-        }
+        },
+        "className": "OtherTabs"
     },
     {
         "mainHeader": "SUBMIT MANUSCRIPT",
@@ -175,7 +201,8 @@ const data = [
         "css": {
             "color": "red",
             "fontSize": "18px"
-        }
+        },
+        "className": "OtherTabs"
     },
     {
         "mainHeader": "MORE",
@@ -198,11 +225,10 @@ const data = [
         "css": {
             "color": "red",
             "fontSize": "18px"
-        }
+        },
+        "className": "OtherTabs"
     }
 ];
-
-// hello
 
 export default data;
 

@@ -78,7 +78,7 @@ export default function RootLayout({
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/jquery.nivo.slider.pack.js" />
         {/* <Script type="text/javascript" strategy="beforeInteractive" src="/js/jquery.meanmenu.js" /> */}
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/jquery.scrollUp.js" />
-        <Script type="text/javascript" src="/js/theme.js" />
+        {/* <Script type="text/javascript" src="/js/theme.js" /> */}
         <Script type="text/javascript" src="/js/clarity.js" strategy="lazyOnload" />
         <Script type="text/javascript" src="/js/addRoll.js" strategy="lazyOnload" />
         <Script type="text/javascript" src="/js/facebookPixelCodeOne.js" strategy="lazyOnload" />
