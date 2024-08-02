@@ -14804,7 +14804,14 @@ button.btn.btn-primary{
   margin-bottom: 15px;
 }
 .st-grid-price {
-  height: 820px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  height: 1000px;
+}
+
+.featur_itmes{
+  height: 480px;
 }
 .stt-1 {
   height: 220px;

@@ -22,7 +22,6 @@ const useFetchPartners = (limit: number, offset: number) => {
           ).then(response => {
             return response.json()
           }).then(data => {
-            console.log({datarec: data})
             setPartners(data);
           }).finally(() => {
             setLoading(false);

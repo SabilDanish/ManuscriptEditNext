@@ -8,6 +8,7 @@ import redirect from "@/app/_Common/_functionality/Redirect";
 import { usePathname } from 'next/navigation'
 import { data } from '../../../../utils/metaFile.js'
 import Metadata from "@/app/Metadata";
+import {DiscountBanner, DiscountMessage} from "./DiscountSection";
 
 const newData: any = data;
 
@@ -201,10 +202,11 @@ export default function Home() {
             <div className="pricing_single-box st-grid-price">
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <h4>Premium Plus Package</h4>
+                  <center><h4>Premium Plus Package</h4></center>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar">$2134</span><span>30 Days</span></h2>
+                  <center><h2><span className="dollar">$2134</span><span>30 Days</span></h2></center>
+                  <DiscountBanner />
                 </div>
               </div>
               <div className="pricing_body">
@@ -236,16 +238,18 @@ export default function Home() {
                 <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
               </div>
 
+              <DiscountMessage />
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
             <div className="pricing_single-box st-grid-price" >
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <h4>Premium Package</h4>
+                  <center><h4>Premium Package</h4></center>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar">$1534</span><span> 20 Days</span></h2>
+                  <center><h2><span className="dollar">$1534</span><span> 20 Days</span></h2></center>
+                  <DiscountBanner />
                 </div>
               </div>
               <div className="pricing_body">
@@ -274,6 +278,8 @@ export default function Home() {
               <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
                 <a onClick={() => { redirect('quotation') }}>Request a Quote<i className="bi bi-arrow-right"></i></a>
               </div>
+
+              <DiscountMessage />
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
@@ -281,10 +287,11 @@ export default function Home() {
             <div className="pricing_single-box st-grid-price">
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <h4>Advanced Package</h4>
+                  <center><h4>Advanced Package</h4></center>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar">$1134</span><span> 15 Days</span></h2>
+                  <center><h2><span className="dollar">$1134</span><span> 15 Days</span></h2></center>
+                  <DiscountBanner />
                 </div>
               </div>
               <div className="pricing_body">
@@ -310,39 +317,46 @@ export default function Home() {
               <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
                 <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
               </div>
+              <DiscountMessage />
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
 
             <div className="pricing_single-box st-grid-price">
-              <div className="pricing-head">
-                <div className="pricing_title">
-                  <h4>Standard Package</h4>
+              <div>
+                <div className="pricing-head">
+                  <div className="pricing_title">
+                    <center><h4>Standard Package</h4></center>
+                  </div>
+                  <div className="pricing_tk">
+                    <center><h2><span className="dollar">$867</span><span> 10 Days</span></h2></center>
+                    <DiscountBanner />
+                  </div>
                 </div>
-                <div className="pricing_tk">
-                  <h2><span className="dollar">$867</span><span> 10 Days</span></h2>
-                </div>
-              </div>
-              <div className="pricing_body">
-                <div className="featur_itmes">
-                  <ul>
-                    <li >Peer Review Analysis</li>
-                    <li>Journal Selection</li>
-                    <li >Target Journal Formatting</li>
-                    <li >Cover Letter writing</li>
-                    
-                    <li >Journal Submission</li>
-                    <li > Unlimited Assistance</li>
-                    
-                  </ul>
-                </div>
-              </div>
-              <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
-                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
-              </div>
+                <div className="pricing_body">
+                  <div className="featur_itmes">
+                    <ul>
+                      <li >Peer Review Analysis</li>
+                      <li>Journal Selection</li>
+                      <li >Target Journal Formatting</li>
+                      <li >Cover Letter writing</li>
 
-              <div className="pricing_button" style={{textAlign:"center", cursor:"pointer"}}>
-                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+                      <li >Journal Submission</li>
+                      <li > Unlimited Assistance</li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="pricing_button" style={{ textAlign: "center", cursor: "pointer" }}>
+                  <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+                </div>
+
+                <div className="pricing_button" style={{ textAlign: "center", cursor: "pointer" }}>
+                  <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+                </div>
+                <DiscountMessage />
               </div>
             </div>
           </div>
