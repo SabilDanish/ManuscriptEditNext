@@ -139,15 +139,14 @@ const data = [
             {
                 "subHeader": "",
                 "content": [
-                    { content: "Clinical Research Documentation", link: "https://www.manuscriptedit.com/quality/clinical-research-documentation" },
-                    { content: "Regulatory Writing", link: "https://www.manuscriptedit.com/quality/regulatory-writing" },
-                    { content: "Mid-Career Researchers", link: "https://www.manuscriptedit.com/quality/mid-career-researchers" },
-                    { content: "Fully Experienced Researchers", link: "https://www.manuscriptedit.com/quality/fully-experienced-researchers" },
-                    { content: "Research Enhancement Services", link: "https://www.manuscriptedit.com/quality/research-enhancement-services" },
-                    { content: "Citation Booster", link: "https://www.manuscriptedit.com/quality/citation-booster" },
-                    { content: "Illustration Services", link: "https://www.manuscriptedit.com/quality/illustration-services" },
-                    { content: "PhD Thesis", link: "https://www.manuscriptedit.com/quality/phd-thesis" },
-                    { content: "Master Thesis", link: "https://www.manuscriptedit.com/quality/master-thesis" }
+                    { content: "Quality and Delivery", link: "https://www.manuscriptedit.com/quality/clinical-research-documentation" },
+                    { content: "Request a sample editing", link: "https://www.manuscriptedit.com/quality/regulatory-writing" },
+                    { content: "FAQ", link: "https://www.manuscriptedit.com/quality/mid-career-researchers" },
+                    { content: "How we work", link: "https://www.manuscriptedit.com/quality/fully-experienced-researchers" },
+                    { content: "Service Guarantee", link: "https://www.manuscriptedit.com/quality/research-enhancement-services" },
+                    { content: "Editorial process", link: "https://www.manuscriptedit.com/quality/citation-booster" },
+                    { content: "Confidentiality", link: "https://www.manuscriptedit.com/quality/illustration-services" },
+                    { content: "Testimonial", link: "https://www.manuscriptedit.com/quality/phd-thesis" },
                 ]
             }
         ],
@@ -163,15 +162,11 @@ const data = [
             {
                 "subHeader": "",
                 "content": [
-                    { content: "Clinical Research Documentation", link: "https://www.manuscriptedit.com/submit-manuscript/clinical-research-documentation" },
-                    { content: "Regulatory Writing", link: "https://www.manuscriptedit.com/submit-manuscript/regulatory-writing" },
-                    { content: "Mid-Career Researchers", link: "https://www.manuscriptedit.com/submit-manuscript/mid-career-researchers" },
-                    { content: "Fully Experienced Researchers", link: "https://www.manuscriptedit.com/submit-manuscript/fully-experienced-researchers" },
-                    { content: "Research Enhancement Services", link: "https://www.manuscriptedit.com/submit-manuscript/research-enhancement-services" },
-                    { content: "Citation Booster", link: "https://www.manuscriptedit.com/submit-manuscript/citation-booster" },
-                    { content: "Illustration Services", link: "https://www.manuscriptedit.com/submit-manuscript/illustration-services" },
-                    { content: "PhD Thesis", link: "https://www.manuscriptedit.com/submit-manuscript/phd-thesis" },
-                    { content: "Master Thesis", link: "https://www.manuscriptedit.com/submit-manuscript/master-thesis" }
+                    { content: "Submit Manuscript", link: "https://www.manuscriptedit.com/submit-manuscript/clinical-research-documentation" },
+                    { content: "Price Calculator", link: "https://www.manuscriptedit.com/submit-manuscript/regulatory-writing" },
+                    { content: "Quotation", link: "https://www.manuscriptedit.com/submit-manuscript/mid-career-researchers" },
+                    { content: "Payment Method", link: "https://www.manuscriptedit.com/submit-manuscript/fully-experienced-researchers" },
+                    { content: "Dicount", link: "https://www.manuscriptedit.com/submit-manuscript/research-enhancement-services" },
                 ]
             }
         ],
@@ -186,15 +181,11 @@ const data = [
             {
                 "subHeader": "",
                 "content": [
-                    { content: "Clinical Research Documentation", link: "https://www.manuscriptedit.com/editor/clinical-research-documentation" },
-                    { content: "Regulatory Writing", link: "https://www.manuscriptedit.com/editor/regulatory-writing" },
-                    { content: "Mid-Career Researchers", link: "https://www.manuscriptedit.com/editor/mid-career-researchers" },
-                    { content: "Fully Experienced Researchers", link: "https://www.manuscriptedit.com/editor/fully-experienced-researchers" },
-                    { content: "Research Enhancement Services", link: "https://www.manuscriptedit.com/editor/research-enhancement-services" },
-                    { content: "Citation Booster", link: "https://www.manuscriptedit.com/editor/citation-booster" },
-                    { content: "Illustration Services", link: "https://www.manuscriptedit.com/editor/illustration-services" },
-                    { content: "PhD Thesis", link: "https://www.manuscriptedit.com/editor/phd-thesis" },
-                    { content: "Master Thesis", link: "https://www.manuscriptedit.com/editor/master-thesis" }
+                    { content: "Editorial Profile", link: "https://www.manuscriptedit.com/editor/clinical-research-documentation" },
+                    { content: "Editorial Panel", link: "https://www.manuscriptedit.com/editor/regulatory-writing" },
+                    { content: "New Editor", link: "https://www.manuscriptedit.com/editor/mid-career-researchers" },
+                    { content: "Editor login", link: "https://www.manuscriptedit.com/editor/fully-experienced-researchers" },
+                    { content: "Careers", link: "https://www.manuscriptedit.com/editor/research-enhancement-services" },
                 ]
             }
         ],
@@ -210,15 +201,15 @@ const data = [
             {
                 "subHeader": "",
                 "content": [
-                    { content: "Clinical Research Documentation", link: "https://www.manuscriptedit.com/more/clinical-research-documentation" },
-                    { content: "Regulatory Writing", link: "https://www.manuscriptedit.com/more/regulatory-writing" },
-                    { content: "Mid-Career Researchers", link: "https://www.manuscriptedit.com/more/mid-career-researchers" },
-                    { content: "Fully Experienced Researchers", link: "https://www.manuscriptedit.com/more/fully-experienced-researchers" },
-                    { content: "Research Enhancement Services", link: "https://www.manuscriptedit.com/more/research-enhancement-services" },
-                    { content: "Citation Booster", link: "https://www.manuscriptedit.com/more/citation-booster" },
-                    { content: "Illustration Services", link: "https://www.manuscriptedit.com/more/illustration-services" },
-                    { content: "PhD Thesis", link: "https://www.manuscriptedit.com/more/phd-thesis" },
-                    { content: "Master Thesis", link: "https://www.manuscriptedit.com/more/master-thesis" }
+                    { content: "About us ", link: "https://www.manuscriptedit.com/more/clinical-research-documentation" },
+                    { content: "Client List", link: "https://www.manuscriptedit.com/more/regulatory-writing" },
+                    { content: "Rercent Partners", link: "https://www.manuscriptedit.com/more/mid-career-researchers" },
+                    { content: "contact us", link: "https://www.manuscriptedit.com/more/fully-experienced-researchers" },
+                    { content: "News & Conferences", link: "https://www.manuscriptedit.com/more/research-enhancement-services" },
+                    { content: "Referral Partner Program  ", link: "https://www.manuscriptedit.com/more/citation-booster" },
+                    { content: "Global Partner Program", link: "https://www.manuscriptedit.com/more/illustration-services" },
+                    { content: "Webinar Registration", link: "https://www.manuscriptedit.com/more/phd-thesis" },
+                    { content: "Scholar Hangout", link: "https://www.manuscriptedit.com/more/master-thesis" }
                 ]
             },
         ],

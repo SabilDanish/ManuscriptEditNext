@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './header.css'; // Import your CSS here
 import data from '../../utils/navbarData';
 import TabDropdownData from './TabDropdownData';
+import Link from 'next/link';
 
 const Header = () => {
   const [showInput, setShowInput] = useState(false);
@@ -10,6 +11,7 @@ const Header = () => {
   const [tabs, setTabs] = useState<string>("");
   const [tabData, setTabData] = useState<any>([]);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [navScroll, setnavScroll] = useState<number>(0)
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,6 +24,12 @@ const Header = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      setnavScroll(window.scrollY)
+    })
+  }, [])
 
   useEffect(() => {
     const tab_data = data.filter(val => val.mainHeader === tabs);
@@ -56,15 +64,69 @@ const Header = () => {
     }
   };
 
+  console.log({ navScroll })
+
   return (
 
-
-   
-      
-
-      <nav>
+    <>
+      <div className="header_top_menu pt-2 pb-2 bg_color">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 col-sm-8">
+              <div className="header_top_menu_address">
+                <div className="header_top_menu_address_inner">
+                  <ul>
+                    <li>
+                      <a href="tel:+919040023003" style={{textDecoration:"none"}} >
+                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN)
+                      </a>
+                      <i className="fa fa-phone" style={{ marginLeft: '8px' , color:"aliceblue" }}></i>
+                      <a href="tel:+919237304004" style={{textDecoration:"none"}} >
+                        +91-923-730-4004 (IN)
+                      </a>
+                      <i className="fa fa-phone" style={{ marginLeft: '8px' , color:"aliceblue" }}></i>
+                      <a href="tel:+16469163476" style={{textDecoration:"none"}} >
+                        +1 (646) 916-3476 (USA)
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-sm-4">
+              <div className="header_top_menu_icon">
+                <div className="header_top_menu_icon_inner">
+                  <ul>
+                    <li>
+                      <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Manuscriptedit">
+                        <i className="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" rel="noopener noreferrer" href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit">
+                        <i className="fa fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/manuscriptedit/">
+                        <i className="fa fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@manuscriptedit.">
+                        <i className="fa fa-youtube"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav style={{ position: navScroll === 0 ? 'relative' : 'fixed', top: 0, width: '100%', zIndex: 1000 }}>
         <div className="navbar">
-          <div className="logo"><a href="#"><img src="/images/NavbarLogo/1 (1).png" alt="" /></a></div>
+          <div className="logo"><Link href="/"><img src="/images/NavbarLogo/1 (1).png" alt="" /></Link></div>
           <div className="nav-links" style={{ left: navLeft }}>
             <div className="sidebar-logo">
               <span className="logo-name"><img src="/images/NavbarLogo/1 (1).png" alt="" /></span>
@@ -144,7 +206,7 @@ const Header = () => {
                 </li>
 
                 <li className='donate-btn-header' style={{ marginLeft: "0px", paddingLeft: "0px", paddingRight: "0px" }}>
-                  <a className="dtbtn" href="#" style={{ height: "40px", display: "flex", alignItems: "center", color: 'white' }}>Sign Up | Sign In</a>
+                  <a className="dtbtn" href="https://secure.manuscriptedit.com/register" style={{ height: "40px", display: "flex", alignItems: "center", color: 'white' }}>Sign Up | Sign In</a>
                 </li>
               </ul>
             </div>
@@ -157,7 +219,14 @@ const Header = () => {
       </nav>
 
 
-  
+    </>
+
+
+
+
+
+
+
 
 
   );
