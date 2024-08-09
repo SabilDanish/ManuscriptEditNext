@@ -103,7 +103,7 @@ const TopBannerForm = () => {
           </div>
         </div>
         <div className="formContainer">
-          <h6>Get Quick Response Within 24 Hours</h6>
+          <h6 style={{textTransform:"uppercase"}}>Get help in your research journey</h6>
           <form ref={formRef} id="contactForm">
             <input
               type="text"
@@ -157,19 +157,13 @@ const TopBannerForm = () => {
               className="formControl"
               onChange={(e) => formHandler(e)}
             />
-            <textarea
-              name="msg"
-              placeholder="Your Message"
-              required
-              className="formControl"
-              onChange={(e) => formHandler(e)}
-            ></textarea>
+
             <button
               type="submit"
               className="submitButton"
               onClick={formSubmitOne}
             >
-              {isLoading ? <DNA height="30" /> : "Send"}
+              {isLoading ? <DNA height="30" /> : "TALK TO AN EXPERT"}
             </button>
           </form>
         </div>
@@ -243,7 +237,7 @@ const TopBannerForm = () => {
                 className="submitButton"
                 onClick={formSubmitTwo}
               >
-                {isLoading ? <DNA height="20" /> : "Send"}
+                {isLoading ? <DNA height="20" /> : "TALK TO AN EXPERT"}
               </button>
             </form>
           </div>
