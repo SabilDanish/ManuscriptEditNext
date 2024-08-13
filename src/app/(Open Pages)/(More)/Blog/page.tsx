@@ -4,24 +4,33 @@ import useBlogs from "@/app/hooks/mainPage/useBlog";
 import "./blog.css";
 import { DNA } from "react-loader-spinner";
 import { formatDate, get_image_src, truncateString } from "@/app/utils/lib";
-import { useRouter } from 'next/navigation';
-import { useState } from "react";
+import { useContext, useState } from "react";
+import Link from "next/link";
+// import Router from "next/router";
+import { useRouter } from "next/navigation";
 
 const BlogNext = () => {
     const [page, setPage] = useState<number>(1)
-    const router = useRouter();
     const { loading, error, blogs } = useBlogs(page);
 
-    const redirectTo = (url: string) => {
-        router.push(url);
+    const router = useRouter();
+
+    // const redirectTo = (url: string) => {
+    //     router.push(url);
+    // };
+
+    const handleRedirect = (url: string):void => {
+        const data = { url };
+        localStorage.setItem("url",url)
+        router.push('/BlogDetails');
     };
 
-   
+
 
     return (
         <>
 
-            {blogs && blogs.length && blogs.map(async(blog: any, index: number) => {
+            {blogs && blogs.length && blogs.map(async (blog: any, index: number) => {
                 const {
                     id,
                     title: {
@@ -31,7 +40,7 @@ const BlogNext = () => {
                     excerpt,
                     guid,
                     _embedded: {
-                        'wp:featuredmedia':  [{
+                        'wp:featuredmedia': [{
                             source_url
                         }]
                     },
@@ -41,16 +50,14 @@ const BlogNext = () => {
                 return (
 
                     <>
-
-
-                        <div className="row Blognext7" onClick={() => redirectTo(guid.rendered)}>
+                        <div className="row Blognext7" onClick={() => handleRedirect(guid.rendered)}>
                             <div className="col-lg-5" >
                                 {source_url && <img className="blogImg" src={source_url} alt="no image" />}
                             </div>
 
                             <div className="col-lg-7 BlogCategoryCol">
                                 <div>
-                                    {loadCategories(categories)}
+                                    {/* {loadCategories(categories)} */}
                                 </div>
 
                                 <div className="blogHeading1">
@@ -76,12 +83,12 @@ const BlogNext = () => {
 
             <div className="pagination-blog">
                 <button className="pagination-button" disabled={page - 1 > 0 ? false : true} onClick={() => {
-                    if(page > 0){
+                    if (page > 0) {
                         setPage(page => page - 1)
                     }
                 }}>Previous</button>
                 <button className="pagination-button" onClick={() => {
-                    if(page > 0){
+                    if (page > 0) {
                         setPage(page => page + 1)
                     }
                 }}>Next</button>
@@ -93,7 +100,7 @@ const BlogNext = () => {
 export default BlogNext
 
 
-const fetchCategories = (categories:any) => {
+const fetchCategories = (categories: any) => {
     const fetchPromises = categories.map((categoryId: number) => {
         const url = `https://www.manuscriptedit.com/scholar-hangout/wp-json/wp/v2/categories/${categoryId}`;
 
@@ -121,9 +128,9 @@ const fetchCategories = (categories:any) => {
     return value
 }
 
-const loadCategories = async (categories:any) => {
+const loadCategories = async (categories: any) => {
     try {
-        const categories_string_array:any = await fetchCategories(categories);
+        const categories_string_array: any = await fetchCategories(categories);
 
         return (
             <div>

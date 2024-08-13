@@ -1,69 +1,69 @@
-
-.Blognext7{
+.Blognext7 {
     border: 1px solid black;
     padding: 17px;
     border-radius: 16px;
-    margin-bottom:10px
+    margin-bottom: 10px
 }
 
-.blogImg{
+.blogImg {
     width: 100%;
     border-radius: 8px;
     height: 100%;
 }
 
-.CategoryBlog{
-    color:red
+.CategoryBlog {
+    color: red
 }
 
-.blogHeading{
+.blogHeading {
     font-weight: 600;
 }
 
-.blogHeading1{
+.blogHeading1 {
     margin-top: 10px;
 }
 
-.DateSpan{
+.DateSpan {
     font-weight: 600;
 }
 
-.blog-Container{
+.blog-Container {
     padding-top: 30px;
     background-color: #f5f5f5;
 }
 
-.BlogCategoryCol{
+.BlogCategoryCol {
     margin-top: 5px;
 }
 
-.blog-Ul{
+.blog-Ul {
     padding-left: 18px !important;
 }
 
-.BlogColImg{
+.BlogColImg {
     border: 1px solid black;
     padding: 17px;
     border-radius: 16px;
 }
-.BlogRow{
+
+.BlogRow {
     display: flex;
     justify-content: space-around;
 }
 
-.BlogImgAdd{
+.BlogImgAdd {
     width: 100%;
     height: 100%;
 }
 
-.BlogColImgAdd{
+.BlogColImgAdd {
     border: 1px solid black;
     padding: 17px;
     border-radius: 16px;
-    
+
 }
 
-.BlogColImgAdd1{
+.BlogColImgAdd1 {
     border: 1px solid black;
     padding: 17px;
     border-radius: 16px;
@@ -73,29 +73,38 @@
 .sticky-wrapper {
     position: sticky;
     top: 0;
-    padding: 15px; /* Adjust padding as needed */
-    background-color: #fff; /* Optional: Add background color for clarity */
+    padding: 15px;
+    /* Adjust padding as needed */
+    background-color: #fff;
+    /* Optional: Add background color for clarity */
 }
 
 .BlogRow {
     display: flex;
     justify-content: space-around;
-    overflow-y: auto; /* Enable vertical scrolling */
-    max-height: calc(100vh - 100px); /* Adjust height based on your layout */
-    scroll-behavior: smooth; /* Smooth scrolling behavior */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    max-height: calc(100vh - 100px);
+    /* Adjust height based on your layout */
+    scroll-behavior: smooth;
+    /* Smooth scrolling behavior */
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE/Edge */
 }
 
 .BlogRow::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+    display: none;
+    /* Hide scrollbar for Chrome, Safari, and Opera */
 }
 
 .loader-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust based on your layout */
+    height: 100vh;
+    /* Adjust based on your layout */
 }
 
 .loader-overlay {
@@ -107,27 +116,58 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: adds a semi-transparent background */
-    z-index: 9999; /* Ensures the overlay is above other content */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Optional: adds a semi-transparent background */
+    z-index: 9999;
+    /* Ensures the overlay is above other content */
 }
 
-.DeatilsCon{
+.DeatilsCon {
     display: flex;
     gap: 12px;
 }
 
-.DetailsImg{
+.DetailsImg {
     width: 100%;
 }
 
-.padTop{
+.padTop {
     padding-top: 20px;
 }
 
-.padBottom{
+.padBottom {
     padding-Bottom: 20px;
 }
 
 .padTop p {
     font-size: 16px;
+}
+
+/* .iframe-wrapper {
+    position: relative;
+    height: calc(100% - 20rem);
+    top: 20rem;
+    overflow: hidden;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: -20rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 20rem);
+} */
+
+.navigation-outer-wrapper {
+    display: none;
+}
+
+iframe { 
+    border: none;
+    height: 100vh;
+} 
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }

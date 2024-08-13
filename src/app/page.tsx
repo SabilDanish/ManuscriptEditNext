@@ -44,8 +44,6 @@ export default function Home() {
 
   return (
     <>
-
-
       <ToastContainer />
 
       <TopBannerForm />
