@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import './getHelp.css';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComment } from '@fortawesome/free-solid-svg-icons';
+import { faComment, faWeight } from '@fortawesome/free-solid-svg-icons';
 
 const GetHelp = () => {
     const [activeTab, setActiveTab] = useState('firstTab');
@@ -28,6 +28,12 @@ const GetHelp = () => {
             <div className="container-fluid GetEveryHead" style={{ marginTop: "23px", marginBottom: "30px" }}>
                 <div className="row" style={{ margin: "auto", justifyContent: "center" }}>
                     <div className="tab">
+
+                        <button style={{ marginTop: "0px", marginBottom: "0px", textAlign: "center", fontWeight: "600", color: "rgb(182 199 249)", borderBottom: "1px solid aliceblue;", fontSize: "16px" }}>
+                            All Services
+                        </button>
+
+
                         <button
                             className={`tablinks ${activeTab === 'firstTab' && 'active'}`}
                             onClick={(event) => openTab(event, 'firstTab')}
@@ -65,139 +71,64 @@ const GetHelp = () => {
                     </div>
 
                     <div id="firstTab" className="tabcontent" style={{ display: activeTab === 'firstTab' ? 'block' : 'none' }}>
-                        <table className="table table-bordered ">
-                            <thead>
-                                <tr style={{ textAlign: 'center' }}>
-                                    <th scope="col" style={{ color: "#a31e22" }}>Medical Writing</th>
-                                    <th scope="col" style={{ color: "#a31e22", width: "235px" }}>Scientific Writing</th>
-                                    <th scope="col" style={{ color: "#a31e22" }}>Statistical Analysis</th>
-                                    <th scope="col" style={{ color: "#a31e22", width: '296px' }}>Systematic Review & Meta Analysis</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr >
-                                    <td scope="row"> <span className="checkmark">&#10004;</span>Manuscript Writing &amp; Editing</td>
-                                    <td><span className="checkmark">&#10004;</span>Manuscript Preparation</td>
-                                    <td>
+
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-6">
+                                    <div className="portion1">
                                         <ul>
-                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Data Preparation :-</li></strong>
-                                            <li><span className="checkmark">&#10004;</span> Data Cleaning</li>
-                                            <li><span className="checkmark">&#10004;</span> Descriptive Statistics</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
                                         </ul>
-                                    </td>
-                                    <td>
+                                    </div>
+
+                                </div>
+
+                                <div className="col-lg-6">
+                                    <div className="portion1">
                                         <ul>
-                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Systematic Review:-</li></strong>
-                                            <li><span className="checkmark">&#10004;</span> Literature Search</li>
-                                            <li><span className="checkmark">&#10004;</span> Data Extraction</li>
-                                            {/* <li><span className="checkmark">&#10004;</span> Quality Assessment</li>
-                                            <li><span className="checkmark">&#10004;</span> Narrative Synthesis</li> */}
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
                                         </ul>
-                                    </td>
+                                    </div>
 
-                                </tr>
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Clinical Study Reports</td>
-                                    <td><span className="checkmark">&#10004;</span> Literature Reviews</td>
-                                    <td>
+                                </div>
+
+                                <div className="col-lg-6">
+                                    <div className="portion1">
                                         <ul>
-                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Advanced Analysis:-</li></strong>
-                                            <li><span className="checkmark">&#10004;</span> Regression Analysis</li>
-                                            <li><span className="checkmark">&#10004;</span> ANOVA</li>
-                                            {/* <li><span className="checkmark">&#10004;</span> Multivariate Analysis</li> */}
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
                                         </ul>
-                                    </td>
-                                    <td>
+                                    </div>
+
+                                </div>
+
+                                <div className="col-lg-6">
+                                    <div className="portion1">
                                         <ul>
-                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Meta-Analysis:-</li></strong>
-                                            <li><span className="checkmark">&#10004;</span> Statistical Analysis</li>
-                                            <li><span className="checkmark">&#10004;</span> Forest Plots</li>
-                                            {/* <li><span className="checkmark">&#10004;</span>Heterogeneity Assessment</li> */}
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
+                                            <li>Medical Communications</li>
                                         </ul>
-                                    </td>
+                                    </div>
 
-                                </tr>
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Regulatory Writing</td>
-                                    <td><span className="checkmark">&#10004;</span>Grant Proposals</td>
-                                    <td>
-                                        <ul>
-                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Specialized Techniques:-</li></strong>
-                                            <li><span className="checkmark">&#10004;</span> Survival Analysis</li>
-                                            <li><span className="checkmark">&#10004;</span> Time Series Analysis</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <ul>
-                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Reporting:-</li></strong>
-                                            <li><span className="checkmark">&#10004;</span> PRISMA Diagram</li>
-                                            <li><span className="checkmark">&#10004;</span> Manuscript Preparation</li>
-                                            {/* <li><span className="checkmark">&#10004;</span> Journal Submission</li> */}
-                                        </ul>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Medical Communications</td>
-                                    <td><span className="checkmark">&#10004;</span>Technical Reports</td>
-                                    <td>
-                                        <ul>
-                                            <strong><li className='Headingli'><span className="checkmarkli">&#10004;</span>Report & Visualization:-</li></strong>
-                                            <li><span className="checkmark">&#10004;</span> Data Visualization</li>
-                                            <li><span className="checkmark">&#10004;</span> Statistical Reporting</li>
-                                        </ul>
-                                    </td>
+                                </div>
+                            </div>
+                        </div>
 
 
-
-                                </tr>
-
-                                {/* <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Systematic Reviews</td>
-                                    <td><span className="checkmark">&#10004;</span>Research Summaries</td>
-
-
-                                </tr>
-
-
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Grant Writing</td>
-                                    <td><span className="checkmark">&#10004;</span>Conference Abstracts</td>
-
-
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Patient Case Reports</td>
-                                    <td><span className="checkmark">&#10004;</span>Scientific Presentations</td>
-
-
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Medical Education Content</td>
-
-
-
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>White Papers</td>
-
-
-
-                                </tr>
- */}
-
-
-
-
-
-
-
-
-                            </tbody>
-                        </table>
 
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
 
@@ -320,7 +251,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
 
 
-                        <span><Link href="/PackageService" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
+                            <span><Link href="/PackageService" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
                         </div>
                     </div>
 
@@ -346,7 +277,7 @@ const GetHelp = () => {
 
                                 </tr>
                                 <tr>
-                                <td scope="row"><span className="checkmark">&#10004;</span>Spelling Check</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Spelling Check</td>
                                     <td><span className="checkmark">&#10004;</span> Clarity and Coherence Check</td>
                                     <td><span className="checkmark">&#10004;</span>Content and Structural Review</td>
                                     <td><span className="checkmark">&#10004;</span> Scientific Content and Structural review</td>
@@ -354,14 +285,14 @@ const GetHelp = () => {
 
                                 </tr>
                                 <tr>
-                                <td scope="row"><span className="checkmark">&#10004;</span>Grammar Check</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Grammar Check</td>
                                     <td><span className="checkmark">&#10004;</span>Grammar check and spell check</td>
                                     <td><span className="checkmark">&#10004;</span> Editing Certificate</td>
                                     <td><span className="checkmark">&#10004;</span> Re-editing Support</td>
 
                                 </tr>
                                 <tr>
-                                <td scope="row"><span className="checkmark">&#10004;</span>Editing Certificate</td>
+                                    <td scope="row"><span className="checkmark">&#10004;</span>Editing Certificate</td>
                                     <td><span className="checkmark">&#10004;</span> Cover Letter</td>
                                     <td></td>
                                     <td><span className="checkmark">&#10004;</span>Editing Certificate</td>
@@ -370,10 +301,10 @@ const GetHelp = () => {
                                 </tr>
 
                                 <tr>
-                                    
-                                <td></td>
+
+                                    <td></td>
                                     <td><span className="checkmark">&#10004;</span> Editing Certificate</td>
-                                    
+
 
 
                                 </tr>
@@ -405,7 +336,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
 
 
-                        <span><Link href="/EditingOverview" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
+                            <span><Link href="/EditingOverview" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
                         </div>
                     </div>
 
@@ -494,7 +425,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
 
 
-                        <span><Link href="/ResearchSupportOverview" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
+                            <span><Link href="/ResearchSupportOverview" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
                         </div>
                     </div>
 
@@ -600,7 +531,7 @@ const GetHelp = () => {
                         <div className="donate-btn-header1" style={{ textAlign: "end" }}>
 
 
-                        <span><Link href="/PHDThesis" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
+                            <span><Link href="/PHDThesis" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
                         </div>
                     </div>
 
