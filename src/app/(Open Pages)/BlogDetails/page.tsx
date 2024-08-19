@@ -8,19 +8,11 @@ import { DNA } from "react-loader-spinner";
 
 
 const BlogDetailsNext = () => {
-    const [url,setUrl] = useState<string | null>('')
-
-    // const router = useRouter()
+    const [url,setUrl] = useState<any>()
 
     useEffect(() => {
         setUrl(localStorage.getItem('url'))
     },[])
-
-    // const {
-    //     query: {
-    //         url
-    //     }
-    // } = router
 
     console.log({url})
 
