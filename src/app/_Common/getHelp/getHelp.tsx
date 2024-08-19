@@ -28,7 +28,7 @@ const GetHelp = () => {
                     <div className="row" style={{ margin: "auto", justifyContent: "center" }}>
                         <div className="tab">
 
-                            <button style={{ marginTop: "0px", marginBottom: "0px", textAlign: "center", fontWeight: "600", color: "rgb(182 199 249)", borderBottom: "1px solid aliceblue;", fontSize: "16px" }}>
+                            <button style={{ marginTop: "0px", marginBottom: "0px", textAlign: "center", fontWeight: "600", color: "var(--color-title)", borderBottom: "1px solid aliceblue;", fontSize: "16px" }}>
                                 All Services
                             </button>
 
@@ -79,8 +79,22 @@ const GetHelp = () => {
                         <div id="firstTab" className="tabcontent" style={{ display: activeTab === 'firstTab' ? 'block' : 'none' }}>
 
                             <div className="container">
-                                <div className="row">
-                                    <div className="col-lg-6">
+                                <div className="row" style={{justifyContent:"space-evenly"}}>
+                                    <div className="col-lg-4">
+                                        <div className="portion1">
+                                            <h6>Pre Phd</h6>
+                                            <ul>
+                                                <li>Medical Communications</li>
+                                                <li>Medical Communications</li>
+                                                <li>Medical Communications</li>
+                                                <li>Medical Communications</li>
+                                                <li>Medical Communications</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+                                    <div className="col-lg-4">
                                         <div className="portion1">
                                             <ul>
                                                 <li>Medical Communications</li>
@@ -93,7 +107,11 @@ const GetHelp = () => {
 
                                     </div>
 
-                                    <div className="col-lg-6">
+                                   
+                                </div>
+
+                                <div className="row" style={{justifyContent:"space-evenly"}}>
+                                    <div className="col-lg-4">
                                         <div className="portion1">
                                             <ul>
                                                 <li>Medical Communications</li>
@@ -106,7 +124,7 @@ const GetHelp = () => {
 
                                     </div>
 
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-4">
                                         <div className="portion1">
                                             <ul>
                                                 <li>Medical Communications</li>
@@ -119,18 +137,7 @@ const GetHelp = () => {
 
                                     </div>
 
-                                    <div className="col-lg-6">
-                                        <div className="portion1">
-                                            <ul>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
+                                   
                                 </div>
                             </div>
 

@@ -15,12 +15,13 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 12px;
+  background:#95c6ff;
 }
 
 .tab button {
   display: block;
   background-color: inherit;
-  color: #fff;
+  color: var(--color-title);
   padding: 16px 7px;
   width: 90%;
   border: none;
@@ -46,7 +47,7 @@ body {
   float: left;
   padding: 4px 23px;
   border: 1px solid #ccc;
-  width: 70%;
+  width: 49%;
   border-left: none;
   border-radius: 0 10px 10px 0;
   background-color: #eef6ff;
@@ -95,9 +96,15 @@ li {
 
 .portion1{
   padding: 18px;
+  border-radius: 25% 10%;
+  background: #95c6ff;
 }
 
 .tablinks:hover{
 background-color: #e6e6fa45;
+}
+
+.portion1 ul li {
+  text-align: center;
 }
 
