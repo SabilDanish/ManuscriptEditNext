@@ -4,11 +4,29 @@ import  "./getEveryPortion.css";
 
 
 const GetEveryPortion = ({tabData}:any) => {
-    console.log({tabData2: tabData})
+    const tabData_key_arr: any = Object.entries(tabData)
     return(
         <>
             {
-                
+                tabData_key_arr.map((data:any,index:number) => {
+                    const [header, {
+                        description,
+                        keywords
+                    }] = data
+                    return(
+                        <div key={index} style={{background: "red", margin: "5px"}}>
+                            <h1>{header}</h1>
+                            <h3>{description}</h3>
+                            <ul>
+                                {
+                                    keywords.map((val:string,index:number) => (
+                                        <li key={index}>{val}</li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                    )
+                })
             }
         </>
     )
