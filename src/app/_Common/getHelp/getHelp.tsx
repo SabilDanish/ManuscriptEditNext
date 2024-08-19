@@ -4,18 +4,24 @@ import './getHelp.css';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faWeight } from '@fortawesome/free-solid-svg-icons';
+import { data } from '@/app/utils/tab';
+import GetEveryPortion from '../getEveryPortion/GetEveryPortion';
+
+type TabKeys = "PhD Support Services" | "JOR@ME"
 
 const GetHelp = () => {
-    const [activeTab, setActiveTab] = useState('firstTab');
+    const [activeTab, setActiveTab] = useState<string>('firstTab');
+    const [selectedTab, setSelectedTab] = useState<string>("PhD Support Services")
+    const [tabData, setTabData] = useState<any>()
 
     const openTab = (evt: any, cityName: string) => {
         setActiveTab(cityName);
     };
 
-    //   useEffect(() => {
-    //     // Simulate a click on the default tab when the component mounts
-    //     document.getElementById("defaultOpen").click();
-    //   }, []);
+
+    useEffect(() => {
+        setTabData(data[selectedTab as keyof typeof data])
+    },[selectedTab])
 
     return (
         <>
@@ -35,14 +41,20 @@ const GetHelp = () => {
 
                             <button
                                 className={`tablinks ${activeTab === 'firstTab' && 'active'}`}
-                                onClick={(event) => openTab(event, 'firstTab')}
+                                onClick={(event) => {
+                                    openTab(event, 'firstTab')
+                                    setSelectedTab("PhD Support Services")
+                                }}
                                 id="defaultOpen"
                             >
                                 PhD Support Services
                             </button>
                             <button
                                 className={`tablinks ${activeTab === 'secondTab' && 'active'}`}
-                                onClick={(event) => openTab(event, 'secondTab')}
+                                onClick={(event) => {
+                                    openTab(event, 'secondTab')
+                                    setSelectedTab("Researcher Support Services")
+                                }}
                             >
                                Researcher Support Services
                             </button>
@@ -76,81 +88,22 @@ const GetHelp = () => {
                             </button>
                         </div>
 
-                        <div id="firstTab" className="tabcontent" style={{ display: activeTab === 'firstTab' ? 'block' : 'none' }}>
+                        <div id="firstTab" className="tabcontent" style={{ display: 'block' }}>
 
-                            <div className="container">
-                                <div className="row" style={{justifyContent:"space-evenly"}}>
-                                    <div className="col-lg-4">
-                                        <div className="portion1">
-                                            <h6>Pre Phd</h6>
-                                            <ul>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-
-                                    <div className="col-lg-4">
-                                        <div className="portion1">
-                                            <ul>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-
-                                   
-                                </div>
-
-                                <div className="row" style={{justifyContent:"space-evenly"}}>
-                                    <div className="col-lg-4">
-                                        <div className="portion1">
-                                            <ul>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-
-                                    <div className="col-lg-4">
-                                        <div className="portion1">
-                                            <ul>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                                <li>Medical Communications</li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-
-                                   
-                                </div>
-                            </div>
+                            
 
 
 
-                            <div className="donate-btn-header1" style={{ textAlign: "end" }}>
+                            {/* <div className="donate-btn-header1" style={{ textAlign: "end" }}>
 
                                 <span><Link href="/Writing" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
 
-                            </div>
+                            </div> */}
+
+                            {tabData && <GetEveryPortion tabData={tabData}/>}
                         </div>
 
-                        <div id="secondTab" className="tabcontent" style={{ display: activeTab === 'secondTab' ? 'block' : 'none' }}>
+                        {/* <div id="secondTab" className="tabcontent" style={{ display: activeTab === 'secondTab' ? 'block' : 'none' }}>
                             <table className="table table-bordered ">
                                 <thead>
                                     <tr style={{ textAlign: 'center' }}>
@@ -242,20 +195,6 @@ const GetHelp = () => {
                                     </tr>
 
 
-                                    {/* 
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Response To Reviewer</td>
-                                    <td><span className="checkmark">&#10004;</span>Plagiarism Check</td>
-
-
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Peer Review Analysis</td>
-                                    <td><span className="checkmark">&#10004;</span>Unlimited Assistance</td>
-
-
-                                </tr> */}
 
 
                                 </tbody>
@@ -324,19 +263,7 @@ const GetHelp = () => {
 
 
 
-                                    {/* <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span>Remove redundancies</td>
-                                    <td><span className="checkmark">&#10004;</span>Editing by Subject matter expert</td>
-                                    <td><span className="checkmark">&#10004;</span>Adjust writing style for consistency and logic</td>
-                                    
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"><span className="checkmark">&#10004;</span> Rectify improper word usage.</td>
-                                    <td></td>
-                                    <td><span className="checkmark">&#10004;</span>Fact-check statements for scientific accuracy.</td>
-                                    
-                                </tr> */}
+                                   
 
 
 
@@ -401,33 +328,7 @@ const GetHelp = () => {
 
 
 
-                                    {/* <tr>
-                                    <td scope="row"></td>
-                                    <td><span className="checkmark">&#10004;</span>Advanced Literature Search Guidance (2)</td>
-                                    <td><span className="checkmark">&#10004;</span>Grant Proposal Guidance (2)</td>
                                    
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td></td>
-                                    <td><span className="checkmark">&#10004;</span>Statistical Analysis Consultation (2)</td>
-                                    
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td></td>
-                                    <td><span className="checkmark">&#10004;</span>One-on-one Research Strategy Session (3)</td>
-                                    
-                                </tr>
-
-                              
-
-                                <tr>
-                                    <td scope="row"></td>
-                                    
-                                </tr> */}
 
 
 
@@ -503,36 +404,7 @@ const GetHelp = () => {
 
 
 
-                                    {/* <tr>
-                                    <td scope="row"></td>
-                                    <td><span className="checkmark">&#10004;</span>Assistance with preparing and presenting synopsis seminar and report</td>
-                                    <td><span className="checkmark">&#10004;</span>Conference abstract assistance</td>
-                                    <td><span className="checkmark">&#10004;</span>Post doctorate application help</td>
-                                    <td><span className="checkmark">&#10004;</span>Filing the Patent Application</td>
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td></td>
-                                    <td><span className="checkmark">&#10004;</span>Oral presentation assistance</td>
-                                    <td><span className="checkmark">&#10004;</span> Cover letter assistance</td>
-                                    <td><span className="checkmark">&#10004;</span> Patent Examination Process</td>
-                                </tr>
-
-
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><span className="checkmark">&#10004;</span> LinkedIn profile upgrade help</td>
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><span className="checkmark">&#10004;</span>Resume making assistance</td>
-                                </tr> */}
+                                    
 
 
 
@@ -609,36 +481,7 @@ const GetHelp = () => {
 
 
 
-                                    {/* <tr>
-                                    <td scope="row"></td>
-                                    <td><span className="checkmark">&#10004;</span>Assistance with preparing and presenting synopsis seminar and report</td>
-                                    <td><span className="checkmark">&#10004;</span>Conference abstract assistance</td>
-                                    <td><span className="checkmark">&#10004;</span>Post doctorate application help</td>
-                                    <td><span className="checkmark">&#10004;</span>Filing the Patent Application</td>
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td></td>
-                                    <td><span className="checkmark">&#10004;</span>Oral presentation assistance</td>
-                                    <td><span className="checkmark">&#10004;</span> Cover letter assistance</td>
-                                    <td><span className="checkmark">&#10004;</span> Patent Examination Process</td>
-                                </tr>
-
-
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><span className="checkmark">&#10004;</span> LinkedIn profile upgrade help</td>
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><span className="checkmark">&#10004;</span>Resume making assistance</td>
-                                </tr> */}
+                                   
 
 
 
@@ -652,7 +495,7 @@ const GetHelp = () => {
 
                                 <span><Link href="/PHDThesis" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
                             </div>
-                        </div>
+                        </div> */}
 
 
 
