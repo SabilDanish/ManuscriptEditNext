@@ -38,26 +38,26 @@ const GetHelp = () => {
                                 onClick={(event) => openTab(event, 'firstTab')}
                                 id="defaultOpen"
                             >
-                                Can I get assistance in writing my research Paper?
+                                PhD Support Services
                             </button>
                             <button
                                 className={`tablinks ${activeTab === 'secondTab' && 'active'}`}
                                 onClick={(event) => openTab(event, 'secondTab')}
                             >
-                                I'm struggling to publish my research paper, can you help?
+                               Researcher Support Services
                             </button>
                             <button
                                 className={`tablinks ${activeTab === 'thirdTab' && 'active'}`}
                                 onClick={(event) => openTab(event, 'thirdTab')}
                             >
-                                My paper got rejected due to poor English, can you help?
+                                Global Business Expansion CORP@ME
                             </button>
 
                             <button
                                 className={`tablinks ${activeTab === 'FourthTab' && 'active'}`}
                                 onClick={(event) => openTab(event, 'FourthTab')}
                             >
-                                I am facing difficulty in getting grants and Developing research projects, can you guide?
+                                Comprehensive Academic Support UNIV@ME
                             </button>
 
 
@@ -65,7 +65,14 @@ const GetHelp = () => {
                                 className={`tablinks ${activeTab === 'FifthTab' && 'active'}`}
                                 onClick={(event) => openTab(event, 'FifthTab')}
                             >
-                                I am struggling with my PhD and PhD thesis. Can someone guide me?
+                               Scientific Writing Excellence LAB@ME
+                            </button>
+
+                            <button
+                                className={`tablinks ${activeTab === 'SixthTab' && 'active'}`}
+                                onClick={(event) => openTab(event, 'SixthTab')}
+                            >
+                               Comprehensive Journal Support JOR@ME
                             </button>
                         </div>
 
@@ -433,6 +440,112 @@ const GetHelp = () => {
                                 <thead>
                                     <tr>
                                         <th scope="col" style={{ color: "#a31e22" }}>Pre-PhD</th>
+                                        <th scope="col" style={{ color: "#a31e22" }}>1st year PhD (1-2 year)</th>
+                                        <th scope="col" style={{ color: "#a31e22", width: "200px" }}>Mid PhD (3rd-4th year)</th>
+                                        <th scope="col" style={{ color: "#a31e22", width: '231px' }}>Last Stage PhD(5-6th year)</th>
+                                        <th scope="col" style={{ color: "#a31e22" }}>Patent assistance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row"> <span className="checkmark">&#10004;</span>  PhD Topic Consultation</td>
+                                        <td><span className="checkmark">&#10004;</span> Concept Paper Development</td>
+                                        <td> <span className="checkmark">&#10004;</span> Review of Literature</td>
+                                        <td><span className="checkmark">&#10004;</span>Data Analysis</td>
+                                        <td><span className="checkmark">&#10004;</span>Writing Support</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><span className="checkmark">&#10004;</span>PhD Project Proposal Writing</td>
+                                        <td><span className="checkmark">&#10004;</span> Guidance on Developing a Project Proposal</td>
+                                        <td><span className="checkmark">&#10004;</span> Questionnaire Development</td>
+                                        <td><span className="checkmark">&#10004;</span>Thesis Writing Assistance</td>
+                                        <td><span className="checkmark">&#10004;</span>Proofreading</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><span className="checkmark">&#10004;</span>Choosing Subject Field Guidance</td>
+                                        <td><span className="checkmark">&#10004;</span>Writing Assistance for Scholarship Proposals and Grant Applications</td>
+                                        <td><span className="checkmark">&#10004;</span>Data Analysis/ Statistical Analysis using SPSS;</td>
+                                        <td><span className="checkmark">&#10004;</span> PhD Mock Viva Assistance</td>
+                                        <td><span className="checkmark">&#10004;</span>Dedicated Expert Mentor for Final Review</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><span className="checkmark">&#10004;</span>Webinars and Workshops on Research Trends</td>
+                                        <td><span className="checkmark">&#10004;</span> Literature Review and Data Collection Support</td>
+                                        <td> <span className="checkmark">&#10004;</span>Research Design Consultation</td>
+                                        <td><span className="checkmark">&#10004;</span> Writing and Submission of Second research Paper</td>
+                                        <td><span className="checkmark">&#10004;</span> Workshop on Manuscript Submission and Publication Process</td>
+
+
+                                    </tr>
+
+
+                                    <tr>
+                                        <td scope="row"><span className="checkmark">&#10004;</span>Problem Statement Formulation</td>
+                                        <td><span className="checkmark">&#10004;</span> Initial Data Analysis</td>
+                                        <td><span className="checkmark">&#10004;</span> Writing and Submission of First research Paper</td>
+                                        <td><span className="checkmark">&#10004;</span> Thesis Review and Feedback</td>
+                                        <td><span className="checkmark">&#10004;</span> Defense Preparation and Methodology Consultation</td>
+
+
+
+                                    </tr>
+
+
+
+
+                                    {/* <tr>
+                                    <td scope="row"></td>
+                                    <td><span className="checkmark">&#10004;</span>Assistance with preparing and presenting synopsis seminar and report</td>
+                                    <td><span className="checkmark">&#10004;</span>Conference abstract assistance</td>
+                                    <td><span className="checkmark">&#10004;</span>Post doctorate application help</td>
+                                    <td><span className="checkmark">&#10004;</span>Filing the Patent Application</td>
+                                </tr>
+
+                                <tr>
+                                    <td scope="row"></td>
+                                    <td></td>
+                                    <td><span className="checkmark">&#10004;</span>Oral presentation assistance</td>
+                                    <td><span className="checkmark">&#10004;</span> Cover letter assistance</td>
+                                    <td><span className="checkmark">&#10004;</span> Patent Examination Process</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td scope="row"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span className="checkmark">&#10004;</span> LinkedIn profile upgrade help</td>
+                                </tr>
+
+                                <tr>
+                                    <td scope="row"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span className="checkmark">&#10004;</span>Resume making assistance</td>
+                                </tr> */}
+
+
+
+
+
+                                </tbody>
+                            </table>
+
+                            <div className="donate-btn-header1" style={{ textAlign: "end" }}>
+
+
+                                <span><Link href="/PHDThesis" className='dtbtn'>View More</Link> <Link href="https://salesiq.zohopublic.com/signaturesupport.ls?widgetcode=siq8d693704fe8ef7898f93fd220287834145838a6814d3df994dcd8741f14019a3" className='dtbtn'><FontAwesomeIcon icon={faComment} /> Chat with us</Link></span>
+                            </div>
+                        </div>
+
+                        <div id="SixthTab" className="tabcontent" style={{ display: activeTab === 'SixthTab' ? 'block' : 'none' }}>
+                            <table className="table table-bordered ">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" style={{ color: "#a31e22" }}>Pre-PhD1</th>
                                         <th scope="col" style={{ color: "#a31e22" }}>1st year PhD (1-2 year)</th>
                                         <th scope="col" style={{ color: "#a31e22", width: "200px" }}>Mid PhD (3rd-4th year)</th>
                                         <th scope="col" style={{ color: "#a31e22", width: '231px' }}>Last Stage PhD(5-6th year)</th>

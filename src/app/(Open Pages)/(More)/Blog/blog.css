@@ -1,10 +1,10 @@
 
 .Blognext7{
-    border: 1px solid black;
     padding: 17px;
     border-radius: 16px;
     margin-bottom:10px;
     background:white;
+    box-shadow: 0px 2px 3px #0000fd52;
 }
 
 .blogImg{
@@ -72,7 +72,7 @@
 }
 
 .BlogColImgAdd{
-    border: 1px solid black;
+    box-shadow: 1px 0px 9px #c3c3f6;
     padding: 17px;
     border-radius: 16px;
     
@@ -90,6 +90,7 @@
     top: 0;
     padding: 15px;
     background-color: #fff;
+    border-radius: 20px;
 }
 
 .BlogRow {
