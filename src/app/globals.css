@@ -111,6 +111,10 @@ a {
   list-style-type: disc;
 }
 
+/* input:focus {
+  outline: none;
+} */
+
 
 @media (max-width:768px){
   .MainHighlighted{
