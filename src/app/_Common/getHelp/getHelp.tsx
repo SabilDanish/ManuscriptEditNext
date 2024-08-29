@@ -7,9 +7,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faServicestack } from '@fortawesome/free-brands-svg-icons';
 
 const GetHelp = () => {
     const [activeTab, setActiveTab] = useState<keyof typeof data>('Editing Packages');
+    const [tabSize, setTabSize] = useState<number | null>()
     const windowSizeRef = useRef({ width: 0, height: 0 });
     const [isClient, setIsClient] = useState(false); // New state to track client-side rendering
 
@@ -19,6 +22,8 @@ const GetHelp = () => {
                 width: window.innerWidth,
                 height: window.innerHeight
             };
+
+            setTabSize(window.innerWidth)
             console.log('Window size updated:', windowSizeRef.current);
         }
     };
@@ -35,59 +40,64 @@ const GetHelp = () => {
 
     const openTab = (tab: any) => {
         setActiveTab(tab);
+        console.log({tab})
         console.log(`Active Tab: ${tab}`);
     };
 
     return (
         <>
-            <Tabs
-                activeKey={activeTab}
-                onSelect={(tab) => openTab(tab || 'Editing Packages')}
-                defaultActiveKey="profile"
-                // id="fill-tab-example"
-                // className="mb-3"
-                // fill
-            >
-                {Object.entries(data).map((val: any, index: number) => {
-                    const [header, cardData] = val;
-                    return (
-                        <Tab eventKey={header} title={header} key={index}>
-                            {isClient && ( // Conditionally render Swiper only on the client
-                                <Swiper
-                                    slidesPerView={3}
-                                    // spaceBetween={30}
-                                    pagination={{
-                                        clickable: true,
-                                    }}
-                                    navigation={true}
-                                    autoplay={{
-                                        delay: 2500,
-                                        // disableOnInteraction: false,
-                                    }}
-                                    // centeredSlides={true}
-                                    modules={[Autoplay, Pagination, Navigation]}
-                                    className="mySwiper"
-                                >
-                                    {cardData && cardData.items && cardData.items.length > 0 && cardData.items.map((item: any, index: number) => {
-                                        const { title, features, description, link } = item;
-                                        return (
-                                            <SwiperSlide key={index}>
-                                                <div className='carousel-item-custom'>
-                                                    <h2>{title}</h2>
-                                                    <p>{description}</p>
-                                                    {features.map((feature: any, index: number) => (
-                                                        <p key={index}>{feature}</p>
-                                                    ))}
-                                                </div>
-                                            </SwiperSlide>
-                                        );
-                                    })}
-                                </Swiper>
-                            )}
-                        </Tab>
-                    );
-                })}
-            </Tabs>
+            <div className="container">
+                <Tabs
+                    activeKey={activeTab}
+                    onSelect={(tab) => openTab(tab || 'Editing Packages')}
+                    defaultActiveKey="profile"
+                    id="fill-tab-example"
+                    className="mb-3"
+                    // fill
+                >
+                    {Object.entries(data).map((val: any, index: number) => {
+                        const [header, cardData] = val;
+                        return (
+                            <Tab eventKey={header} title={header} key={index}>
+                                {isClient && ( // Conditionally render Swiper only on the client
+                                    <Swiper
+                                        slidesPerView={tabSize && tabSize > 900 ? 3 : 1}
+                                        spaceBetween={30}
+                                        pagination={{
+                                            clickable: true,
+                                        }}
+                                        loop={true}
+                                        navigation={true}
+                                        autoplay={{
+                                            delay: 2500,
+                                            disableOnInteraction: true,
+                                            pauseOnMouseEnter: true,
+                                        }}
+                                        // centeredSlides={true}
+                                        modules={[Autoplay, Pagination, Navigation]}
+                                        className="mySwiper"
+                                    >
+                                        {cardData && cardData.items && cardData.items.length > 0 && cardData.items.map((item: any, index: number) => {
+                                            const { title, features, description, link } = item;
+                                            return (
+                                                <SwiperSlide key={index}>
+                                                    <div className='carousel-item-custom'>
+                                                        <h2><FontAwesomeIcon icon={faServicestack} /> {title}</h2>
+                                                        <p>{description}</p>
+                                                        {features.map((feature: any, index: number) => (
+                                                            <p key={index}>{feature}</p>
+                                                        ))}
+                                                    </div>
+                                                </SwiperSlide>
+                                            );
+                                        })}
+                                    </Swiper>
+                                )}
+                            </Tab>
+                        );
+                    })}
+                </Tabs>
+            </div>
         </>
     );
 };

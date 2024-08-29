@@ -6,7 +6,7 @@ const FloatingWp = () => {
     return (
         <>
         <div className="floating_btn">
-    <a target="_blank" href="https://wa.me/919237304004">
+    <a target="_blank" href="https://wa.me/16469163476">
       <div className="contact_icon">
         <i className="fa fa-whatsapp my-float"></i>
       </div>

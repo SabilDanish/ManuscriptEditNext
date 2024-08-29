@@ -23,6 +23,26 @@ export const data = {
         ],
         link: "https://secure.manuscriptedit.com/estimate?test=2",
       },
+      {
+        "title": "Premium Journal-Ready Editing",
+        "description": "Tailored for clients targeting journal submissions, offering full formatting, response letter editing, and consistency checks.",
+        "features": [
+          "Journal-Specific Formatting and Consistency Checks",
+          "Reviewer Response Letter Editing",
+          "Full Journal-Ready Presentation for Submission"
+        ],
+        "link": "https://secure.manuscriptedit.com/estimate?test=2"
+      },
+      {
+        "title": "Scientific Impact Editing",
+        "description": "Designed for high-impact research, ensuring scientific rigor, providing detailed review reports, and offering extended re-editing support.",
+        "features": [
+          "Scientific Review Report with Detailed Feedback",
+          "Crosschecking Responses for Scientific Integrity",
+          "Unlimited Re-Editing Support for 365 Days (up to 20% of Original Word Count)"
+        ],
+        "link": "https://secure.manuscriptedit.com/estimate?test=2"
+      }
     ],
   },
   "Writing Assistance": {
