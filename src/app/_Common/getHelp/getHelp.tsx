@@ -9,6 +9,9 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faServicestack } from '@fortawesome/free-brands-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const GetHelp = () => {
     const [activeTab, setActiveTab] = useState<keyof typeof data>('Editing Packages');
@@ -46,58 +49,85 @@ const GetHelp = () => {
 
     return (
         <>
-            <div className="container">
-                <Tabs
-                    activeKey={activeTab}
-                    onSelect={(tab) => openTab(tab || 'Editing Packages')}
-                    defaultActiveKey="profile"
-                    id="fill-tab-example"
-                    className="mb-3"
+            <div className="container-fluid" style={{ padding: '71px' }}>
+                <div>
+                    {tabSize && tabSize > 900 && <Tabs
+                        activeKey={activeTab}
+                        onSelect={(tab) => openTab(tab || 'Editing Packages')}
+                        defaultActiveKey="profile"
+                        style={{ gap: "17px" }}
+                    // id="fill-tab-example"
+                    // className="mb-3"
                     // fill
-                >
-                    {Object.entries(data).map((val: any, index: number) => {
-                        const [header, cardData] = val;
-                        return (
-                            <Tab eventKey={header} title={header} key={index}>
-                                {isClient && ( // Conditionally render Swiper only on the client
-                                    <Swiper
-                                        slidesPerView={tabSize && tabSize > 900 ? 3 : 1}
-                                        spaceBetween={30}
-                                        pagination={{
-                                            clickable: true,
-                                        }}
-                                        loop={true}
-                                        navigation={true}
-                                        autoplay={{
-                                            delay: 2500,
-                                            disableOnInteraction: true,
-                                            pauseOnMouseEnter: true,
-                                        }}
-                                        // centeredSlides={true}
-                                        modules={[Autoplay, Pagination, Navigation]}
-                                        className="mySwiper"
-                                    >
-                                        {cardData && cardData.items && cardData.items.length > 0 && cardData.items.map((item: any, index: number) => {
-                                            const { title, features, description, link } = item;
-                                            return (
-                                                <SwiperSlide key={index}>
-                                                    <div className='carousel-item-custom'>
-                                                        <h2><FontAwesomeIcon icon={faServicestack} /> {title}</h2>
-                                                        <p>{description}</p>
-                                                        {features.map((feature: any, index: number) => (
-                                                            <p key={index}>{feature}</p>
-                                                        ))}
-                                                    </div>
-                                                </SwiperSlide>
-                                            );
-                                        })}
-                                    </Swiper>
-                                )}
-                            </Tab>
-                        );
-                    })}
-                </Tabs>
+                    >
+                        {Object.entries(data).map((val: any, index: number) => {
+                            const [header, cardData] = val;
+                            return (
+
+                                <Tab eventKey={header} title={header} key={index}>
+                                    {isClient && ( // Conditionally render Swiper only on the client
+                                        <Swiper
+                                            slidesPerView={3}
+                                            // spaceBetween={10}
+                                            pagination={{
+                                                clickable: true,
+                                            }}
+                                            navigation={true}
+                                            autoplay={{
+                                                delay: 2500,
+                                                // disableOnInteraction: false,
+                                            }}
+                                            // centeredSlides={true}
+                                            modules={[Autoplay, Pagination, Navigation]}
+                                            className="mySwiper"
+                                        >
+
+
+
+                                            {cardData && cardData.items && cardData.items.length > 0 && cardData.items.map((item: any, index: number) => {
+                                                const { title, features, description, link } = item;
+                                                return (
+
+                                                    <SwiperSlide key={index}>
+
+                                                        <div className="row" style={{ justifyContent: 'center' }}>
+                                                            <div className="col-lg-12">
+                                                                <div className='carousel-item-custom'>
+                                                                    <h2><FontAwesomeIcon icon={faServicestack} />{title}</h2>
+                                                                    <p>{description}</p>
+                                                                    <ul>
+                                                                        {features.map((feature: any, index: number) => (
+                                                                            <li key={index}>
+                                                                                <FontAwesomeIcon icon={faCheck} style={{ marginRight: '8px' }} />
+                                                                                {feature}
+                                                                            </li>
+
+                                                                        ))}
+                                                                    </ul>
+
+                                                                    <a href={link}>
+                                                                        <button className="Know-More">Select Services</button>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                    </SwiperSlide>
+
+                                                );
+                                            })}
+                                        </Swiper>
+                                    )}
+                                </Tab>
+                            );
+                        })}
+                    </Tabs>}
+                </div>
+
             </div>
+
         </>
     );
 };
