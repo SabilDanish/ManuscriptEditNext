@@ -6,44 +6,70 @@ import "./GetEvery.css";
 const GetEvery = () => {
     return (
         <>
-            <div className="container-fluid getEverySpace" style={{ marginTop: "70px", marginBottom: "90px" }}>
-                <div>
-                    <div className="row" style={{ justifyContent: 'center' }}>
-                        <div className="col-lg-3" style={{ marginTop: "20px" }}>
-                            <div className="getHelp" style={{ backgroundColor: '#f3d5d5', padding: "22px", borderRadius: "22px", boxShadow: "1px 1px 8px grey" }}>
-                                <h5>
-                                    GET HELP WITH RESEARCH PAPER PUBLICATION
-                                </h5>
-                                <Link href="/PackageService" style={{ color: "#a31e22", textDecoration: 'none' }}>
-                                    Know more &rarr;
-                                </Link>
-                            </div>
+
+
+            <div className="container-fluid" style={{marginTop:"50px"}}>
+                <div className="row" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+                    <div className="col-lg-2" style={{ marginBottom: "30px" }}>
+                        <div
+                            style={{
+                                backgroundColor: "hsl(212, 100%, 91%)",
+                                padding: "5px",
+                                borderRadius: "8px",
+                                textAlign: "center",
+                                boxShadow: "-2px 2px 5px grey",
+                            }}
+                        >
+                            <div style={{ fontSize: "2rem", color: "#4377B1", fontWeight: "bold" }}>10,000 +</div>
+                            <p style={{ margin: 0, fontSize: "1rem", color: "rgb(51, 50, 50)" }}>Publications</p>
                         </div>
-                        <div className="col-lg-3" style={{ marginTop: "20px" }}>
-                            <div className="getHelp" style={{ backgroundColor: '#f3d5d5', padding: "22px", borderRadius: "22px", boxShadow: "1px 1px 8px grey" }}>
-                                <h5 style={{textTransform:"uppercase"}}>
-                                    Get Scientific and English Language editing help
-                                </h5>
-                                <Link href="/EditingOverview" style={{ color: "#a31e22", textDecoration: 'none' }}>
-                                    Know more &rarr;
-                                </Link>
-                            </div>
+                    </div>
+                    <div className="col-lg-2" style={{ marginBottom: "30px" }}>
+                        <div
+                            style={{
+                                backgroundColor: "hsl(212, 100%, 91%)",
+                                padding: "5px",
+                                borderRadius: "8px",
+                                textAlign: "center",
+                                boxShadow: "-2px 2px 5px grey",
+                            }}
+                        >
+                            <div style={{ fontSize: "2rem", color: "#4377B1", fontWeight: "bold" }}>1,117 +</div>
+                            <p style={{ margin: 0, fontSize: "1rem", color: "rgb(51, 50, 50)" }}>Subject areas</p>
                         </div>
-                        <div className="col-lg-3" style={{ marginTop: "20px" }}>
-                            <div className="getHelp" style={{ backgroundColor: '#f3d5d5', padding: "22px", borderRadius: "22px", boxShadow: "1px 1px 8px grey" }}>
-                                <h5>
-                                    GET PhD & MASTER THESIS ASSISTANCE
-                                </h5>
-                                <Link href="/PHDThesis" style={{ color: "#a31e22", textDecoration: 'none' }}>
-                                    Know more &rarr;
-                                </Link>
-                            </div>
+                    </div>
+                    <div className="col-lg-2" style={{ marginBottom: "30px" }}>
+                        <div
+                            style={{
+                                backgroundColor: "hsl(212, 100%, 91%)",
+                                padding: "5px",
+                                borderRadius: "8px",
+                                textAlign: "center",
+                                boxShadow: "-2px 2px 5px grey",
+                            }}
+                        >
+                            <div style={{ fontSize: "2rem", color: "#4377B1", fontWeight: "bold" }}>750 +</div>
+                            <p style={{ margin: 0, fontSize: "1rem", color: "rgb(51, 50, 50)" }}>Experts</p>
+                        </div>
+                    </div>
+                    <div className="col-lg-2" style={{ marginBottom: "30px" }}>
+                        <div
+                            style={{
+                                backgroundColor: "hsl(212, 100%, 91%)",
+                                padding: "5px",
+                                borderRadius: "8px",
+                                textAlign: "center",
+                                boxShadow: "-2px 2px 5px grey",
+                            }}
+                        >
+                            <div style={{ fontSize: "2rem", color: "#4377B1", fontWeight: "bold" }}>16 +</div>
+                            <p style={{ margin: 0, fontSize: "1rem", color: "rgb(51, 50, 50)" }}>Years of experience</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-          
+
         </>
     );
 }
