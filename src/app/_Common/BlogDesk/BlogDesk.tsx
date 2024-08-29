@@ -37,7 +37,7 @@ const BlogDesk = ({ blogs }: any) => {
             } = blog;
             if (index < 3) {
               return (
-                <div key={index} className="col-lg-4" onClick={() => redirectTo(guid.rendered)}>
+                <div key={index} className="col-lg-3" onClick={() => redirectTo(guid.rendered)}>
                   <div className="card">
                     <img src={index === 0 ? image4.src : index === 1 ? image5.src : image6.src} className="card-img-top" alt="..." />
                     <div className="card-body">

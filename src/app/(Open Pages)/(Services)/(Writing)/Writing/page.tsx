@@ -8,12 +8,17 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { data } from '../../../../utils/metaFile.js'
 import Metadata from "@/app/Metadata";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faServicestack } from "@fortawesome/free-brands-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { serviceData } from "@/app/utils/service.js";
+import '../../../../_Common/getHelp/getHelp.css'
 
 const newData: any = data;
 
 export default function Home() {
 	const pathName: string = usePathname().split("/").filter(val => val).join("")
-  	let metaData = newData[pathName]
+	let metaData = newData[pathName]
 	return (
 		<>
 			{<Metadata metaData={metaData} />}
@@ -22,9 +27,9 @@ export default function Home() {
 				"Writing Overview"
 			)}
 			<section className="pt-5 pb-5">
-				<div className="container">
-					<div className="row">
-						<div className="col-md-6">
+				
+					<div className="row conrow">
+						<div className="col-md-12">
 							<h3 className="pt-2 pb-3">Writing Overview</h3>
 							<p>
 								You have the ideas, we have the writing expertise to express those
@@ -36,12 +41,67 @@ export default function Home() {
 								Request a Quote
 							</button>
 						</div>
-						<div className="col-md-6">
-							<img src="images/menuscimg/subtantive.jpg" alt="" width="100%" style={{ borderRadius: 10 }} />
-						</div>
+
 					</div>
-				</div>
+				
 			</section>
+
+			<section className="pb-5">
+				<>
+
+					<div className="row ServicesSection">
+						{
+							serviceData['Writing Assistance'] && serviceData['Writing Assistance'].items && serviceData['Writing Assistance'].items.map(item => {
+								const { title, features, description, link } = item;
+								return (
+
+
+									<div className="col-lg-3">
+										<div className='carousel-item-custom' style={{height:"473px"}}>
+											<h2><FontAwesomeIcon icon={faServicestack} />{title}</h2>
+											<p>{description}</p>
+											<ul>
+												{features.map((feature: any, index: number) => (
+													<li key={index}>
+														<FontAwesomeIcon icon={faCheck} style={{ marginRight: '8px' }} />
+														{feature}
+													</li>
+
+												))}
+											</ul>
+
+											<a href={link}>
+												<button className="Know-More">Select Services</button>
+											</a>
+										</div>
+									</div>
+
+
+
+
+
+								)
+							})
+						}
+
+
+
+					</div>
+
+
+
+
+				</>
+
+			</section>
+
+
+
+
+
+
+
+
 			<div className="how_it_work style_three pt-0 pb-30">
 				<div className="container">
 					<div className="row">

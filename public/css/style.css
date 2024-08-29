@@ -11006,12 +11006,22 @@ li.color-op {
   margin: 0 5px;
 }
 .nav-tabs .nav-link {
-  border: 1px solid #a31e22 !important;
   background: #a31e22;
   padding: 20px 20px;
   font-size: 16px;
-  color: #fff;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+  border-radius: 10px 10px 0px 0px;
+  background: #dbe3ff;
+  box-shadow: 1px 1px 4px grey;
 }
+
+
+
 .nav-tabs .nav-item.active .nav-link {
   border: 1px solid #fff !important;
   background: #fff;

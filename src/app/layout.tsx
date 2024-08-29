@@ -89,6 +89,8 @@ export default function RootLayout({
         <noscript><img height="1" width="1" style={{display:"none"}}
           src="https://www.facebook.com/tr?id=1557346005163372&ev=PageView&noscript=1"
         /></noscript>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-16677438282" />
+        <Script src="/js/gtagNew.js" strategy="lazyOnload"/>
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=576246542585612&ev=PageView&noscript=1" />
         </noscript>

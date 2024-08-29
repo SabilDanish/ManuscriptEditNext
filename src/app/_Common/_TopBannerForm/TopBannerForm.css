@@ -292,4 +292,45 @@
     color: #494949;
 }
 
+.bannerContainer {
+  position: relative;
+}
+
+.carouselContainer {
+  position: relative;
+}
+
+.bannerButtons {
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+  display: flex;
+  gap: 10px;
+}
+
+.bannerButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bannerButton:hover {
+  background-color: #2285ee;
+border: #2285ee;
+}
+
+
+@media(max-width:768px){
+  .bannerButtons {
+    position: absolute;
+    bottom: 7px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+  }
+}
 

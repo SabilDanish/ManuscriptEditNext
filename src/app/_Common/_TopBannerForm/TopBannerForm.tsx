@@ -1,9 +1,9 @@
 import { useRef, useState, useEffect } from "react";
 import "./TopBannerForm.css";
-import banner1 from "../../utils/images/banner12.jpg";
-import banner2 from "../../utils/images/banner13.jpg";
-import banner3 from "../../utils/images/banner11.jpg";
-import banner4 from "../../utils/images/banner14.jpg";
+import banner1 from "../../utils/images/banner_01.jpg";
+// import banner2 from "../../utils/images/banner13.jpg";
+// import banner3 from "../../utils/images/banner11.jpg";
+// import banner4 from "../../utils/images/banner14.jpg";
 import mobileBanner1 from '../../utils/images/banner-for-mobile-view1.jpg';
 import mobileBanner2 from '../../utils/images/banner-for-mobile-view2.jpg';
 import mobileBanner3 from '../../utils/images/banner-for-mobile-view3.jpg';
@@ -77,7 +77,7 @@ const TopBannerForm = () => {
     formRef.current.reset();
   };
 
-  const formSubmitTwo = (e:any) => {
+  const formSubmitTwo = (e: any) => {
     postData(form);
     formRef.current.reset();
   };
@@ -87,9 +87,9 @@ const TopBannerForm = () => {
       <div className="bannerContainer">
         <div className="carouselContainer">
           <div className={`$"carouselItem" $"active"`}>
-            <img src={!isSmallScreen ? banner1.src : mobileBanner1.src}  className="carouselImage" alt="Banner 1" />
+            <img src={!isSmallScreen ? banner1.src : mobileBanner1.src} className="carouselImage" alt="Banner 1" />
           </div>
-          <div className="carouselItem">
+          {/* <div className="carouselItem">
             <img src={!isSmallScreen ? banner2.src : mobileBanner2.src} className="carouselImage" alt="Banner 2" />
           </div>
           <div className="carouselItem">
@@ -97,12 +97,12 @@ const TopBannerForm = () => {
           </div>
           <div className="carouselItem">
             <img src={!isSmallScreen ? banner4.src : mobileBanner4.src} className="carouselImage" alt="Banner 4" />
-          </div>
+          </div> */}
           <div className="carouselItem">
             <img src={!isSmallScreen ? banner1.src : mobileBanner1.src} className="carouselImage" alt="Banner 1" />
           </div>
         </div>
-        <div className="formContainer">
+        {/* <div className="formContainer">
           <h6 style={{textTransform:"uppercase"}}>Get help in your research journey</h6>
           <form ref={formRef} id="contactForm">
             <input
@@ -166,7 +166,14 @@ const TopBannerForm = () => {
               {isLoading ? <DNA height="30" /> : "TALK TO AN EXPERT"}
             </button>
           </form>
+        </div> */}
+
+        <div className="bannerButtons">
+         <a href="https://secure.manuscriptedit.com/quotation"><button className="bannerButton">Request a quote</button></a> 
+          <a href=""></a><button className="bannerButton">Consult an Expert</button>
         </div>
+
+
       </div>
 
       <div className="container">
@@ -206,7 +213,7 @@ const TopBannerForm = () => {
                   Expert Book Chapter Publishing Support
                 </option>
                 <option value="PhD Support & Assistance">
-                  PhD Support & Assistance        
+                  PhD Support & Assistance
                 </option>
               </select>
               <input
