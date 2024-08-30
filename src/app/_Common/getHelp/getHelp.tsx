@@ -67,7 +67,7 @@ const GetHelp = () => {
                                 <Tab eventKey={header} title={header} key={index}>
                                     {isClient && ( // Conditionally render Swiper only on the client
                                         <Swiper
-                                            slidesPerView={3}
+                                            slidesPerView={tabSize > 900 ? 3 : 1}
                                             // spaceBetween={10}
                                             pagination={{
                                                 clickable: true,
@@ -78,7 +78,7 @@ const GetHelp = () => {
                                                 // disableOnInteraction: false,
                                             }}
                                             // centeredSlides={true}
-                                            modules={[Autoplay, Pagination, Navigation]}
+                                            modules={[ Autoplay, Pagination, Navigation]}
                                             className="mySwiper"
                                         >
 
