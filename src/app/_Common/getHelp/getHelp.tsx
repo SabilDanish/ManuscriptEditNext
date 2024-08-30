@@ -49,7 +49,7 @@ const GetHelp = () => {
 
     return (
         <>
-            <div className="container-fluid" style={{ padding: '71px' }}>
+            <div className="container-fluid conTab" style={{ padding: '71px' }}>
                 <div>
                     {tabSize && tabSize > 900 && <Tabs
                         activeKey={activeTab}
@@ -67,7 +67,7 @@ const GetHelp = () => {
                                 <Tab eventKey={header} title={header} key={index}>
                                     {isClient && ( // Conditionally render Swiper only on the client
                                         <Swiper
-                                            slidesPerView={tabSize > 900 ? 3 : 1}
+                                            slidesPerView={tabSize >= 900 ? 3 : 1}
                                             // spaceBetween={10}
                                             pagination={{
                                                 clickable: true,
@@ -88,7 +88,7 @@ const GetHelp = () => {
                                                 const { title, features, description, link } = item;
                                                 return (
 
-                                                    <SwiperSlide key={index}>
+                                                    <SwiperSlide key={index} >
 
                                                         <div className="row" style={{ justifyContent: 'center' }}>
                                                             <div className="col-lg-12">

@@ -14914,3 +14914,9 @@ button.btn.btn-primary{
     height: auto !important;
   }
 }
+
+@media (max-width:768px){
+  .ServicesSection{
+    padding: 0 5px !important;
+  }
+}
