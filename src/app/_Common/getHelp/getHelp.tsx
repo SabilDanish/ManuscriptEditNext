@@ -51,7 +51,7 @@ const GetHelp = () => {
         <>
             <div className="container-fluid conTab" style={{ padding: '71px' }}>
                 <div>
-                    {tabSize && tabSize > 900 && <Tabs
+                    <Tabs
                         activeKey={activeTab}
                         onSelect={(tab) => openTab(tab || 'Editing Packages')}
                         defaultActiveKey="profile"
@@ -67,7 +67,7 @@ const GetHelp = () => {
                                 <Tab eventKey={header} title={header} key={index}>
                                     {isClient && ( // Conditionally render Swiper only on the client
                                         <Swiper
-                                            slidesPerView={tabSize >= 900 ? 3 : 1}
+                                            slidesPerView={tabSize && tabSize >= 900 ? 3 : 1}
                                             // spaceBetween={10}
                                             pagination={{
                                                 clickable: true,
@@ -95,9 +95,9 @@ const GetHelp = () => {
                                                                 <div className='carousel-item-custom'>
                                                                     <h2><FontAwesomeIcon icon={faServicestack} />{title}</h2>
                                                                     <p>{description}</p>
-                                                                    <ul>
+                                                                    <ul className="scrollable-container">
                                                                         {features.map((feature: any, index: number) => (
-                                                                            <li key={index}>
+                                                                            <li key={index} className="scrollable-item">
                                                                                 <FontAwesomeIcon icon={faCheck} style={{ marginRight: '8px' }} />
                                                                                 {feature}
                                                                             </li>
@@ -123,7 +123,7 @@ const GetHelp = () => {
                                 </Tab>
                             );
                         })}
-                    </Tabs>}
+                    </Tabs>
                 </div>
 
             </div>

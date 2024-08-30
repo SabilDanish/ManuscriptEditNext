@@ -1,0 +1,11 @@
+.formContainer3{
+    padding: 11px;
+    border-radius: 10px;
+    background:#bec6ef;
+    width: 100%;
+}
+
+input[type=radio]{
+    position: relative;
+    right: 7px;
+}

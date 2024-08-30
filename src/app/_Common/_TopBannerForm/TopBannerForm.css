@@ -163,7 +163,7 @@
     display:none;
   }
   .formContainer2 {
-  
+  display: none;
     z-index: 10;
     width: 80%;
     margin-top: 20px;
@@ -309,7 +309,7 @@
 }
 
 .bannerButton {
-  background-color: #007bff;
+  background-color: #a31e22;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -319,8 +319,8 @@
 }
 
 .bannerButton:hover {
-  background-color: #2285ee;
-border: #2285ee;
+  background-color:  #84090d;
+border: #84090d;
 }
 
 
@@ -332,5 +332,9 @@ border: #2285ee;
     display: flex;
     gap: 10px;
   }
+}
+
+.inputSec{
+  font-size: 14px;
 }
 
