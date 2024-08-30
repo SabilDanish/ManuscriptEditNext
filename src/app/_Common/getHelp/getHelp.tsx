@@ -15,6 +15,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const GetHelp = () => {
     const [activeTab, setActiveTab] = useState<keyof typeof data>('Editing Packages');
+    const [tabSize, setTabSize] = useState<number | null>()
     const windowSizeRef = useRef({ width: 0, height: 0 });
     const [isClient, setIsClient] = useState(false); // New state to track client-side rendering
 
@@ -24,6 +25,8 @@ const GetHelp = () => {
                 width: window.innerWidth,
                 height: window.innerHeight
             };
+
+            setTabSize(window.innerWidth)
             console.log('Window size updated:', windowSizeRef.current);
         }
     };
@@ -45,7 +48,7 @@ const GetHelp = () => {
 
     return (
         <>
-            <div className="container-fluid" style={{ padding: '71px' }}>
+            <div className="container-fluid conTab" style={{ padding: '71px' }}>
                 <div>
                     <Tabs
                         activeKey={activeTab}
@@ -63,7 +66,7 @@ const GetHelp = () => {
                                 <Tab eventKey={header} title={header} key={index}>
                                     {isClient && ( // Conditionally render Swiper only on the client
                                         <Swiper
-                                            slidesPerView={3}
+                                            slidesPerView={tabSize >= 900 ? 3 : 1}
                                             // spaceBetween={10}
                                             pagination={{
                                                 clickable: true,
@@ -84,7 +87,7 @@ const GetHelp = () => {
                                                 const { title, features, description, link } = item;
                                                 return (
 
-                                                    <SwiperSlide key={index}>
+                                                    <SwiperSlide key={index} >
 
                                                         <div className="row" style={{ justifyContent: 'center' }}>
                                                             <div className="col-lg-12">
