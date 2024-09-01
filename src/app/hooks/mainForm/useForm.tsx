@@ -8,7 +8,7 @@ const useForm =  () => {
     const [error, setError] = useState<string | null>(null);
     const [data, setData] = useState<[] | null>(null);
 
-    const postData = async (formData: any): Promise<void> => {
+    const postData = async (formData: any,setForm:any): Promise<void> => {
         setIsLoading(true);
         setError(null);
 
@@ -49,6 +49,13 @@ const useForm =  () => {
                 toast.error("Something went wrong")
             }).finally(() => {
                 setIsLoading(false);
+                setForm({
+                    name: "",
+                    service: "",
+                    phone_no: "",
+                    email: "",
+                    msg: "",
+                })
             });
 
         } catch (error) {

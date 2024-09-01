@@ -108,7 +108,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}} style={{paddingLeft:"15px" , paddingRight:"15px"}}>
+                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}}>
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Substantive Editing</li>
@@ -153,7 +153,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}} style={{paddingLeft:"15px" , paddingRight:"15px"}}>
+                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}}>
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Substantive Editing</li>
@@ -196,7 +196,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}} style={{paddingLeft:"15px" , paddingRight:"15px"}}>
+                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}}>
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Journal Selection</li>

@@ -4,6 +4,7 @@ import "../_TopBannerForm/TopBannerForm.css";
 import "./RadioSection.css";
 import useForm from "@/app/hooks/mainForm/useForm";
 import { DNA } from "react-loader-spinner";
+import useCountryCode from "@/app/hooks/mainForm/useCountryCode";
 
 const RadioSection = () => {
 
@@ -19,10 +20,7 @@ const RadioSection = () => {
     // const formRef = useRef<any>(null);
 
     const { postData } = useForm();
-    // useEffect(() => {
-    //     const carouselContainers = document.querySelectorAll(".carouselContainer");
-
-    // }, []);
+    const { countryCode } = useCountryCode()
 
 
 
@@ -33,8 +31,8 @@ const RadioSection = () => {
 
     const formSubmitOne = (e: any) => {
         e.preventDefault()
-        console.log({form})
-        postData(form);
+        console.log({ form })
+        postData(form,setForm);
         // formRef.current.reset();
     };
 
@@ -43,8 +41,8 @@ const RadioSection = () => {
     //     // formRef.current.reset();
     // };
 
-    const radioHandler = (e:any) => {
-        console.log({e})
+    const radioHandler = (e: any) => {
+        console.log({ e })
         const { name, value } = e.target;
         setForm({ ...form, [name]: value });
     }
@@ -56,16 +54,16 @@ const RadioSection = () => {
                     <h2 style={{ marginTop: "40px", marginBottom: "30px !important", color: "#a31e22" }}>Download Your Free Samples – It’s Quick and Easy!</h2>
                     <div className="col-lg-4" style={{ lineHeight: "40px" }}>
                         <div className="inputSec">
-                            <input type="radio" name="service" value="life-sciences" onChange={radioHandler}/>Editing (Life Sciences)
+                            <input type="radio" name="service" value="life-sciences" onChange={radioHandler} />Editing (Life Sciences)
                         </div>
                         <div className="inputSec">
-                            <input type="radio" name="service" value="physical-sciences" onChange={radioHandler}/>Editing (Physical Sciences)
+                            <input type="radio" name="service" value="physical-sciences" onChange={radioHandler} />Editing (Physical Sciences)
                         </div>
                         <div className="inputSec">
-                            <input type="radio" name="service" value="environmental-sciences" onChange={radioHandler}/>Editing (Environmental Sciences)
+                            <input type="radio" name="service" value="environmental-sciences" onChange={radioHandler} />Editing (Environmental Sciences)
                         </div>
                         <div className="inputSec">
-                            <input type="radio" name="service" value="social-sciences" onChange={radioHandler}/>Editing (Social Sciences)
+                            <input type="radio" name="service" value="social-sciences" onChange={radioHandler} />Editing (Social Sciences)
                         </div>
 
 
@@ -73,16 +71,16 @@ const RadioSection = () => {
 
                     <div className="col-lg-4" style={{ lineHeight: "40px" }}>
                         <div className="inputSec">
-                            <input type="radio" name="service" value="editing_finance_management" onChange={radioHandler}/>Editing (Finance and Management)
+                            <input type="radio" name="service" value="editing_finance_management" onChange={radioHandler} />Editing (Finance and Management)
                         </div>
                         <div className="inputSec">
-                            <input type="radio" name="service" value="journal_selection_report" onChange={radioHandler}/>Journal Selection Report
+                            <input type="radio" name="service" value="journal_selection_report" onChange={radioHandler} />Journal Selection Report
                         </div>
                         <div className="inputSec">
-                            <input type="radio" name="service" value="data_analytics_statistical_analysis" onChange={radioHandler}/>Data Analytics & Statistical Analysis
+                            <input type="radio" name="service" value="data_analytics_statistical_analysis" onChange={radioHandler} />Data Analytics & Statistical Analysis
                         </div>
                         <div className="inputSec">
-                            <input type="radio" name="service" value="proofreading_copy_substantive_editing" onChange={radioHandler}/>Proofreading, Copy editing, Substantive Editing
+                            <input type="radio" name="service" value="proofreading_copy_substantive_editing" onChange={radioHandler} />Proofreading, Copy editing, Substantive Editing
                         </div>
 
 
@@ -100,6 +98,7 @@ const RadioSection = () => {
                                             required
                                             className="formControl"
                                             onChange={(e) => formHandler(e)}
+                                            value={form.name}
                                         />
 
                                         <input
@@ -109,6 +108,7 @@ const RadioSection = () => {
                                             required
                                             className="formControl"
                                             onChange={(e) => formHandler(e)}
+                                            value={form.phone_no}
                                         />
                                         <input
                                             type="email"
@@ -117,9 +117,10 @@ const RadioSection = () => {
                                             required
                                             className="formControl"
                                             onChange={(e) => formHandler(e)}
+                                            value={form.email}
                                         />
 
-                                        <button style={{ paddingBottom: "6px", paddingLeft: "20px", paddingRight: "20px", borderRadius: "6px", background: "#007bff", color: "white", border: "#007bff", }} onClick={formSubmitOne}>Download Sample</button>
+                                        <button disabled={form.name && form.service && form.phone_no && form.email ? false : true} style={{ paddingBottom: "6px", paddingLeft: "20px", paddingRight: "20px", borderRadius: "6px", background: "#007bff", color: "white", border: "#007bff", }} onClick={formSubmitOne}>Download Sample</button>
 
                                     </form>
                                 </div>
