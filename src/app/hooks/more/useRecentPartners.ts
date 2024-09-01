@@ -17,10 +17,7 @@ const useFetchPartners = (limit: number, offset: number) => {
         try {
           fetch(
             `https://www.manuscriptedit.com/api/get_all_rec_patners_img.php?limit=${limit}&offset=${offset}`, {
-                method: "get",
-                headers: new Headers({
-                  "ngrok-skip-browser-warning": "69420",
-                }),
+                method: "get"
               }
           ).then(response => {
             return response.json()

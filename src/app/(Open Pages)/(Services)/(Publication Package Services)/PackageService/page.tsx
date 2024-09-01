@@ -8,6 +8,7 @@ import redirect from "@/app/_Common/_functionality/Redirect";
 import { usePathname } from 'next/navigation'
 import { data } from '../../../../utils/metaFile.js'
 import Metadata from "@/app/Metadata";
+import { DiscountBanner, DiscountMessage } from "./DiscountSection";
 
 const newData: any = data;
 
@@ -35,180 +36,32 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* <div className="row">
-            <div className="col-lg-3 col-md-6">
-              <div className="pricing_single-box st-grid-price">
-                <div className="pricing-head">
-                  <div className="pricing_title">
-                    <h4>Premium Plus Package</h4>
-                  </div>
-                  <div className="pricing_tk">
-                    <h2>
-                      <span className="dollar">30 Days</span>
-                    </h2>
-                  </div>
-                </div>
-                <div className="pricing_body">
-                  <div className="featur_itmes">
-                    <ul>
-                      <li>Data Analysis</li>
-                      <li>Research Paper Writing</li>
-                      <li>Substantive Editing</li>
-                      <li>Journal Selection</li>
-                      <li>Target Journal Formating</li>
-                      <li>Artwork Formating</li>
-                      <li>Response to Reviewer</li>
-                      <li>Peer Review Analysis</li>
-                      <li>Cover Letter Writing</li>
-                      <li> Unlimited Assistance</li>
-                      <li>Plagiarism Check</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="pricing_button">
-                  <a
-                    onClick={() => {
-                      redirect("register");
-                    }}
-                  >
-                    Purchase Now <i className="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="pricing_single-box st-grid-price">
-                <div className="pricing-head">
-                  <div className="pricing_title">
-                    <h4>Premium Package</h4>
-                  </div>
-                  <div className="pricing_tk">
-                    <h2>
-                      <span className="dollar">20 Days</span>
-                    </h2>
-                  </div>
-                </div>
-                <div className="pricing_body">
-                  <div className="featur_itmes">
-                    <ul>
-                      <li>Substantive Editing</li>
-                      <li>Journal Selection</li>
-                      <li>Target Journal Formatting</li>
-                      <li>Journal Submission</li>
-                      <li>Response to Reviewers</li>
-                      <li>Peer Review Analysis</li>
-                      <li>Cover Letter Writing</li>
-                      <li>Plagiarism Check</li>
-                      <li>Unlimited Assistance</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="pricing_button">
-                  <a
-                    onClick={() => {
-                      redirect("register");
-                    }}
-                  >
-                    Purchase Now <i className="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="pricing_single-box st-grid-price">
-                <div className="pricing-head">
-                  <div className="pricing_title">
-                    <h4>Advanced Package</h4>
-                  </div>
-                  <div className="pricing_tk">
-                    <h2>
-                      <span className="dollar">15 Days</span>
-                    </h2>
-                  </div>
-                </div>
-                <div className="pricing_body">
-                  <div className="featur_itmes">
-                    <ul>
-                      <li>Substantive Editing</li>
-                      <li>Journal Selection</li>
-                      <li> Target Journal Formatting</li>
-                      <li className="not">Artwork Formatting</li>
-                      <li>Journal Submission</li>
-                      <li className="not">Response to Reviewers</li>
-                      <li className="not">Peer Review Analysis</li>
-                      <li> Cover Letter Writing</li>
-                      <li> Plagiarism Check</li>
-                      <li> Unlimited Assistance</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="pricing_button">
-                  <a
-                    onClick={() => {
-                      redirect("register");
-                    }}
-                  >
-                    Purchase Now <i className="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="pricing_single-box st-grid-price">
-                <div className="pricing-head">
-                  <div className="pricing_title">
-                    <h4>Standard Package</h4>
-                  </div>
-                  <div className="pricing_tk">
-                    <h2>
-                      <span className="dollar">10 Days</span>
-                    </h2>
-                  </div>
-                </div>
-                <div className="pricing_body">
-                  <div className="featur_itmes">
-                    <ul>
-                      <li className="not">Substantive Editing</li>
-                      <li>Journal Selection</li>
-                      <li className="not">Artwork Formatting</li>
-                      <li>Journal Submission</li>
-                      <li className="not"> Response to Reviewers</li>
-                      <li className="not">Peer Review Analysis</li>
-                      <li>Cover Letter Writing</li>
-                      <li className="not">Plagiarism Check</li>
-                      <li> Unlimited Assistance</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="pricing_button">
-                  <a
-                    onClick={() => {
-                      redirect("register");
-                    }}
-                  >
-                    Purchase Now <i className="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
 
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-3 col-md-6">
-            <div className="pricing_single-box st-grid-price">
+            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+              <div className="discount-sticker">35% OFF</div>
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <h4>Premium Plus Package</h4>
+                  <center><h4>Premium Plus Package</h4></center>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span>30 Days</span></h2>
+                  <center>
+                    <h2>
+                      <span className="dollar">
+                        <s>$2134</s> $1387
+                      </span>
+                      <span>30 Days</span>
+                    </h2>
+                  </center>
+                  <DiscountBanner />
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes">
+                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}}>
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Data Analysis</li>
@@ -220,31 +73,42 @@ export default function Home() {
                     <li>Artwork Formatting</li>
                     <li>Cover Letter Writing</li>
                     <li>Response To Reviewer</li>
-                    <li>Plagarism Check</li>
+                    <li>Plagiarism Check</li>
                     <li>Unlimited Assistance</li>
-                    
-
-
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button">
+              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
               </div>
+              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
+                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              </div>
+              <DiscountMessage />
             </div>
           </div>
+
           <div className="col-lg-3 col-md-6">
-            <div className="pricing_single-box st-grid-price" >
+            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+              <div className="discount-sticker">35% OFF</div>
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <h4>Premium Package</h4>
+                  <center><h4>Premium Package</h4></center>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span> 20 Days</span></h2>
+                  <center>
+                    <h2>
+                      <span className="dollar">
+                        <s>$1534</s> $997
+                      </span>
+                      <span>20 Days</span>
+                    </h2>
+                  </center>
+                  <DiscountBanner />
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes">
+                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}} style={{paddingLeft:"15px" , paddingRight:"15px"}}>
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Substantive Editing</li>
@@ -253,82 +117,106 @@ export default function Home() {
                     <li>Artwork Formatting</li>
                     <li>Cover Letter Writing</li>
                     <li>Journal Submission</li>
-                    <li>Response to Reviewers*
-                    (*One response to reviewer free)</li>
-                    
+                    <li>Response to Reviewers* (*One response to reviewer free)</li>
                     <li>Plagiarism Check</li>
                     <li>Unlimited Assistance</li>
-
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button">
+              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
               </div>
+              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
+                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              </div>
+              <DiscountMessage />
             </div>
           </div>
-          <div className="col-lg-3 col-md-6">
 
-            <div className="pricing_single-box st-grid-price">
+          <div className="col-lg-3 col-md-6">
+            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+              <div className="discount-sticker">35% OFF</div>
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <h4>Advanced Package</h4>
+                  <center><h4>Advanced Package</h4></center>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span> 15 Days</span></h2>
+                  <center>
+                    <h2>
+                      <span className="dollar">
+                        <s>$1134</s> $737
+                      </span>
+                      <span>15 Days</span>
+                    </h2>
+                  </center>
+                  <DiscountBanner />
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes">
+                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}} style={{paddingLeft:"15px" , paddingRight:"15px"}}>
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Substantive Editing</li>
-                    <li> Journal Selection</li>
-                    <li >Target Journal Formatting.</li>
-                    <li >Cover Letter writing</li>
+                    <li>Journal Selection</li>
+                    <li>Target Journal Formatting</li>
+                    <li>Cover Letter Writing</li>
                     <li>Journal Submission</li>
-                   
-                    <li >Plagiarism Check</li>
-                    <li> Unlimited Assistance</li>
-                   
+                    <li>Plagiarism Check</li>
+                    <li>Unlimited Assistance</li>
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button">
+              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
               </div>
+              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
+                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              </div>
+              <DiscountMessage />
             </div>
           </div>
-          <div className="col-lg-3 col-md-6">
 
-            <div className="pricing_single-box st-grid-price">
+          <div className="col-lg-3 col-md-6">
+            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+              <div className="discount-sticker">35% OFF</div>
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <h4>Standard Package</h4>
+                  <center><h4>Standard Package</h4></center>
                 </div>
                 <div className="pricing_tk">
-                  <h2><span className="dollar"></span><span> 10 Days</span></h2>
+                  <center>
+                    <h2>
+                      <span className="dollar">
+                        <s>$867</s> $563
+                      </span>
+                      <span>10 Days</span>
+                    </h2>
+                  </center>
+                  <DiscountBanner />
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes">
+                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}} style={{paddingLeft:"15px" , paddingRight:"15px"}}>
                   <ul>
-                    <li >Peer Review Analysis</li>
+                    <li>Peer Review Analysis</li>
                     <li>Journal Selection</li>
-                    <li >Target Journal Formatting</li>
-                    <li >Cover Letter writing</li>
-                    
-                    <li >Journal Submission</li>
-                    <li > Unlimited Assistance</li>
-                    
+                    <li>Target Journal Formatting</li>
+                    <li>Cover Letter Writing</li>
+                    <li>Journal Submission</li>
+                    <li>Unlimited Assistance</li>
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button">
+              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
                 <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
               </div>
+              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
+                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              </div>
+              <DiscountMessage />
             </div>
           </div>
+
         </div>
       </div>
 
@@ -437,3 +325,5 @@ export default function Home() {
     </>
   );
 }
+
+

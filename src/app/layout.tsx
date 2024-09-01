@@ -84,7 +84,13 @@ export default function RootLayout({
         <Script type="text/javascript" src="/js/addRoll.js" strategy="lazyOnload" />
         <Script type="text/javascript" src="/js/facebookPixelCodeOne.js" strategy="lazyOnload" />
         <Script type="text/javascript" src="/js/facebookPixelCodeTwo.js" strategy="lazyOnload" />
-        <Script type="text/javascript" src="/js/GtagManager.js" strategy="lazyOnload"/>
+        <Script type="text/javascript" src="/js/GtagManager.js" strategy="lazyOnload" />
+        <Script type="text/javascript" src="/js/fbevents.js" strategy="lazyOnload" />
+        <noscript><img height="1" width="1" style={{display:"none"}}
+          src="https://www.facebook.com/tr?id=1557346005163372&ev=PageView&noscript=1"
+        /></noscript>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-16677438282" />
+        <Script src="/js/gtagNew.js" strategy="lazyOnload"/>
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=576246542585612&ev=PageView&noscript=1" />
         </noscript>
@@ -95,9 +101,13 @@ export default function RootLayout({
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC86N23" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe>
         </noscript>
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC86N23"
-          height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe></noscript>
+          height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
       </head>
       <body className="loaded">
+
+
+
+
         <ToastContainer />
         {/* <header/> */}
         {/* {header()} */}

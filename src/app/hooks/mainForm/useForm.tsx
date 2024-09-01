@@ -11,6 +11,8 @@ const useForm =  () => {
     const postData = async (formData: any): Promise<void> => {
         setIsLoading(true);
         setError(null);
+
+        const {email} = formData
         try {
             fetch(`https://www.manuscriptedit.com/api/contactus.php`, {
                 method: 'POST',
@@ -23,9 +25,23 @@ const useForm =  () => {
             }).then(responseData => {
                 const {Status} = responseData[0]
                 if(Status){
-                    toast.success("Query Sent")
+                    toast.success("Your request is received, we will get back to you in 24 hours.")
+                    fetch('https://email-nodemailer.vercel.app/sendEmail',{
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({email})
+                    }).then(response => {
+                        return response.json()
+                    }).then(response => {
+                        // toast.success("Your request is received, we will get back to you in 24 hours.")
+                    }).catch(err => {
+                        // console.log({err})
+                        // toast.error("Your request couldn't be sent, please try again.")
+                    })
                 }else{
-                    toast.error("Your query couldn't be sent")
+                    toast.error("Your request couldn't be sent, please try again.")
                 }
             }).catch(err => {
                 setError("Couldn't save your data");

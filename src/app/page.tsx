@@ -44,7 +44,6 @@ export default function Home() {
 
   return (
     <>
-
       <ToastContainer />
 
       <TopBannerForm />
@@ -56,7 +55,7 @@ export default function Home() {
 
       <SocialIcon />
 
-      <GetEvery />
+      {/* <GetEvery /> */}
 
       <GetHelp />
 

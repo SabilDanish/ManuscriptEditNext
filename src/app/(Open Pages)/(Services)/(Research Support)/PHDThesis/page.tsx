@@ -1,6 +1,7 @@
 "use client"
 
 import FaqHome from "@/app/_Common/FaqHome/FaqHome";
+import PhdThesis from "@/app/_Common/PhdThesis/Phdthesis";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import FaqPhd from "@/app/_Common/faqPhd/faqPhd";
 
@@ -40,6 +41,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+      <PhdThesis/>
 
       <div className="service_area pt-0 pb-0">
         <div className="container">
@@ -208,6 +212,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
+      
 
       <div className="process_area pt-50 pb-50">
         <div className="container">

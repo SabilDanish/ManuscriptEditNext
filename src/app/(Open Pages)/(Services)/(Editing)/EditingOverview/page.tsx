@@ -7,20 +7,27 @@ import Link from "next/link";
 import Metadata from "@/app/Metadata";
 import { usePathname } from 'next/navigation'
 import { data } from '../../../../utils/metaFile.js'
+import { serviceData } from '../../../../utils/service.js'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faServicestack } from "@fortawesome/free-brands-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import '../../../../_Common/getHelp/getHelp.css'
 
 const newData: any = data;
 
 export default function Home() {
   const pathName: string = usePathname().split("/").filter(val => val).join("")
   let metaData = newData[pathName]
+
+  console.log({ serviceData })
   return (
     <>
       {<Metadata metaData={metaData} />}
       {breadcrum('Services / English Editing', 'Editing Overview', "manuscript preparation, academic manuscript, English translation, academic translation, academic editing, native English speaking editors, publish in top journals, author services, researcher services, publication support, poster preparation, scientific poster preparation, research poster preparation, journal submission, manuscript submission, research paper, peer review, abstract editing, figure formatting, scientific illustration, scientific animation, video abstracts, journal guidelines, grant application guidelines, grant editing, grant application, grant application editing, thesis editing, dissertation editing, manuscript, research paper, scientific paper, journal rejection, journal acceptance", "English, editors, native English, substantive editing, proofreading, formatting, translation, scientific, research, proposals, grant applications, posters")}
       <section className="pt-5 pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
+       
+          <div className="row conrow">
+            <div className="col-md-12">
               <h3 className="pt-5">Editing Overview</h3>
               <p className="pt-3">
                 ASetting the stage for the importance of editing in the realm of
@@ -28,16 +35,61 @@ export default function Home() {
                 of editing and its impact on clarity and effectiveness.
               </p>
             </div>
-            <div className="col-md-6">
-              <img
-                src="/images/innerimg/re-1.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
-            </div>
+            {/* <div className="col-md-6">
+              {
+               
+              }
+            </div> */}
           </div>
-        </div>
+        
+      </section>
+      <section className="pb-5">
+        <>
+          
+          <div className="row ServicesSection">
+              {
+                serviceData['Editing Packages'] && serviceData['Editing Packages'].items && serviceData['Editing Packages'].items.map(item => {
+                  const { title, features, description, link } = item;
+                  return (
+
+
+                    <div className="col-lg-3">
+                      <div className='carousel-item-custom' style={{height:"400px"}}>
+                        <h2><FontAwesomeIcon icon={faServicestack} />{title}</h2>
+                        <p>{description}</p>
+                        <ul>
+                          {features.map((feature: any, index: number) => (
+                            <li key={index}>
+                              <FontAwesomeIcon icon={faCheck} style={{ marginRight: '8px' }} />
+                              {feature}
+                            </li>
+
+                          ))}
+                        </ul>
+
+                        <a href={link}>
+                          <button className="Know-More">Select Services</button>
+                        </a>
+                      </div>
+                    </div>
+
+
+
+
+
+                  )
+                })
+              }
+
+              
+
+            </div>
+          
+
+
+
+        </>
+
       </section>
       <section className="pb-5">
         <div className="container">
