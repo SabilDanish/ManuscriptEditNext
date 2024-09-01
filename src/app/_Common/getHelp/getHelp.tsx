@@ -43,6 +43,7 @@ const GetHelp = () => {
 
     const openTab = (tab: any) => {
         setActiveTab(tab);
+        console.log({tab})
         console.log(`Active Tab: ${tab}`);
     };
 
@@ -50,7 +51,7 @@ const GetHelp = () => {
         <>
             <div className="container-fluid conTab" style={{ padding: '71px' }}>
                 <div>
-                    <Tabs
+                    {tabSize && tabSize > 900 && <Tabs
                         activeKey={activeTab}
                         onSelect={(tab) => openTab(tab || 'Editing Packages')}
                         defaultActiveKey="profile"
@@ -77,7 +78,7 @@ const GetHelp = () => {
                                                 // disableOnInteraction: false,
                                             }}
                                             // centeredSlides={true}
-                                            modules={[Autoplay, Pagination, Navigation]}
+                                            modules={[ Autoplay, Pagination, Navigation]}
                                             className="mySwiper"
                                         >
 
@@ -117,17 +118,12 @@ const GetHelp = () => {
 
                                                 );
                                             })}
-
-
-
-
-
                                         </Swiper>
                                     )}
                                 </Tab>
                             );
                         })}
-                    </Tabs>
+                    </Tabs>}
                 </div>
 
             </div>

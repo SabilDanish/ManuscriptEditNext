@@ -53,7 +53,7 @@ export default function Home() {
 
       {/* End of Biswa's custom codes */}
 
-      <SocialIcon />
+      {/* <SocialIcon /> */}
 
       {/* <GetEvery /> */}
 
@@ -65,7 +65,7 @@ export default function Home() {
 
       {/* <UpcomingWebinar/> */}
 
-      <CounterComponent />
+      {/* <CounterComponent /> */}
 
       <Testimonial />
 
