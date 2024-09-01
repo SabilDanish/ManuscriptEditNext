@@ -24,25 +24,27 @@ export const data = {
         link: "https://secure.manuscriptedit.com/estimate?test=2",
       },
       {
-        "title": "Premium Journal-Ready Editing",
-        "description": "Tailored for clients targeting journal submissions, offering full formatting, response letter editing, and consistency checks.",
-        "features": [
+        title: "Premium Journal-Ready Editing",
+        description:
+          "Tailored for clients targeting journal submissions, offering full formatting, response letter editing, and consistency checks.",
+        features: [
           "Journal-Specific Formatting and Consistency Checks",
           "Reviewer Response Letter Editing",
-          "Full Journal-Ready Presentation for Submission"
+          "Full Journal-Ready Presentation for Submission",
         ],
-        "link": "https://secure.manuscriptedit.com/estimate?test=2"
+        link: "https://secure.manuscriptedit.com/estimate?test=2",
       },
       {
-        "title": "Scientific Impact Editing",
-        "description": "Designed for high-impact research, ensuring scientific rigor, providing detailed review reports, and offering extended re-editing support.",
-        "features": [
+        title: "Scientific Impact Editing",
+        description:
+          "Designed for high-impact research, ensuring scientific rigor, providing detailed review reports, and offering extended re-editing support.",
+        features: [
           "Scientific Review Report with Detailed Feedback",
           "Crosschecking Responses for Scientific Integrity",
-          "Unlimited Re-Editing Support for 365 Days (up to 20% of Original Word Count)"
+          "Unlimited Re-Editing Support for 365 Days (up to 20% of Original Word Count)",
         ],
-        "link": "https://secure.manuscriptedit.com/estimate?test=2"
-      }
+        link: "https://secure.manuscriptedit.com/estimate?test=2",
+      },
     ],
   },
   "Writing Assistance": {
@@ -169,17 +171,33 @@ export const data = {
         title: "Premium Plus Package",
         features: [
           "Peer Review Analysis",
-          "Data Analysis and Research Paper Writing",
-          "Substantive Editing and Journal Selection",
+          "Data Analysis",
+          "Research Paper Writing",
+          "Substantive Editing",
+          "Journal Selection",
+          "Journal Submission",
+          "Target Journal Formatting",
+          "Artwork Formatting",
+          "Cover Letter Writing",
+          "Response To Reviewer",
+          "Plagiarism Check",
+          "Unlimited Assistance",
         ],
         link: "https://secure.manuscriptedit.com/estimate?test=5",
       },
       {
         title: "Premium Package",
         features: [
+          "Peer Review Analysis",
           "Substantive Editing",
-          "Journal Selection and Submission",
-          "Response to Reviewers (One Response)",
+          "Journal Selection",
+          "Target Journal Formatting",
+          "Artwork Formatting",
+          "Cover Letter Writing",
+          "Journal Submission",
+          "Response to Reviewers* (*One response to reviewer free)",
+          "Plagiarism Check",
+          "Unlimited Assistance",
         ],
         link: "https://secure.manuscriptedit.com/estimate?test=5",
       },
@@ -187,8 +205,13 @@ export const data = {
         title: "Advanced Package",
         features: [
           "Peer Review Analysis",
-          "Journal Selection and Formatting",
-          "Substantive Editing and Cover Letter Writing",
+          "Substantive Editing",
+          "Journal Selection",
+          "Target Journal Formatting",
+          "Cover Letter Writing",
+          "Journal Submission",
+          "Plagiarism Check",
+          "Unlimited Assistance",
         ],
         link: "https://secure.manuscriptedit.com/estimate?test=5",
       },
@@ -196,7 +219,10 @@ export const data = {
         title: "Standard Package",
         features: [
           "Peer Review Analysis",
-          "Journal Selection and Submission",
+          "Journal Selection",
+          "Target Journal Formatting",
+          "Cover Letter Writing",
+          "Journal Submission",
           "Unlimited Assistance",
         ],
         link: "https://secure.manuscriptedit.com/estimate?test=5",

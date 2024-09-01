@@ -929,6 +929,15 @@ export default function Header() {
                   Sign Up | Sign In
                 </a>
               </div>
+
+              <div className="donate-btn-header">
+                <a
+                  className="dtbtn"
+                  href="https://secure.manuscriptedit.com/register"
+                >
+                  Sign Up | Sign In
+                </a>
+              </div>
             </ul>
           </nav>
         </div>

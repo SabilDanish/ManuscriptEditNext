@@ -240,7 +240,7 @@ color: #0e84c0;
   padding: 0px 62px;
 }
 
-@media(max-width:375px){
+@media(max-width:376px){
   .conTab{
     padding: 10px !important;
   }
@@ -301,7 +301,7 @@ color: #0e84c0;
 @media(min-width:1358px) and (max-width:1600px){
   
   .carousel-item-custom{
-    height: 500px;
+    height: 550px;
   }
 
   .tab-content{
@@ -322,5 +322,19 @@ color: #0e84c0;
   font-size:15px !important;
 }
 
+
+@media(max-width:768px){
+  .nav-tabs .nav-item{
+    width: 100%;
+  }
+}
+
+.scrollable-container {
+  overflow-y: auto;
+}
+
+.scrollable-item {
+  overflow-y: auto;
+}
 
 

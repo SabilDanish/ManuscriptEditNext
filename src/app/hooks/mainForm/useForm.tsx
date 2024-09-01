@@ -8,7 +8,7 @@ const useForm =  () => {
     const [error, setError] = useState<string | null>(null);
     const [data, setData] = useState<[] | null>(null);
 
-    const postData = async (formData: any): Promise<void> => {
+    const postData = async (formData: any,setForm:any): Promise<void> => {
         setIsLoading(true);
         setError(null);
 
@@ -19,27 +19,28 @@ const useForm =  () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({...formData,country_code: 99})
             }).then(response => {
                 return response.json()
             }).then(responseData => {
                 const {Status} = responseData[0]
                 if(Status){
-                    toast.success("Your request is received, we will get back to you in 24 hours.")
-                    fetch('https://email-nodemailer.vercel.app/sendEmail',{
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({email})
-                    }).then(response => {
-                        return response.json()
-                    }).then(response => {
-                        // toast.success("Your request is received, we will get back to you in 24 hours.")
-                    }).catch(err => {
-                        // console.log({err})
-                        // toast.error("Your request couldn't be sent, please try again.")
-                    })
+                    // Thank you , your request is received. You will receive the sample in your mail shortly.
+                    toast.success("Thank you, your request is received. You will receive the sample in your mail shortly.")
+                    // fetch('https://email-nodemailer.vercel.app/sendEmail',{
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'Content-Type': 'application/json',
+                    //     },
+                    //     body: JSON.stringify({email})
+                    // }).then(response => {
+                    //     return response.json()
+                    // }).then(response => {
+                    //     // toast.success("Your request is received, we will get back to you in 24 hours.")
+                    // }).catch(err => {
+                    //     // console.log({err})
+                    //     // toast.error("Your request couldn't be sent, please try again.")
+                    // })
                 }else{
                     toast.error("Your request couldn't be sent, please try again.")
                 }
@@ -48,6 +49,13 @@ const useForm =  () => {
                 toast.error("Something went wrong")
             }).finally(() => {
                 setIsLoading(false);
+                setForm({
+                    name: "",
+                    service: "",
+                    phone_no: "",
+                    email: "",
+                    msg: "",
+                })
             });
 
         } catch (error) {
