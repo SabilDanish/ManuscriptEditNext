@@ -166,10 +166,10 @@ const RadioSection = () => {
                                                 name="country_code"
                                                 required
                                                 className="formControl"
-                                                style={{ width: "100px", marginRight: "10px" }}
+                                                style={{ width: "85px", marginRight: "10px" , paddingLeft:"10px" , paddingRight:"3px" }}
                                                 onChange={(e) => formHandler(e)}
                                             >
-                                                <option value="">Select a country</option>
+                                                <option value="">Select</option>
                                                 {
                                                     countryCode && countryCode.length && countryCode[0].map((val: any) => {
                                                         return (<option key={val.id} value={val.id}>{val.country}</option>);

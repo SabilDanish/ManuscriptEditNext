@@ -516,6 +516,20 @@ export default function Header() {
                     Sign Up | Sign In
                   </a>
                 </div>
+
+                <div className="donate-btn-header">
+                  <a
+                    className="dtbtn"
+                    onClick={() => {
+                      // redirect("register");
+                      window.location.href =
+                        "https://secure.manuscriptedit.com/quotation";
+                    }}
+                    href="#"
+                  >
+                    Request a Quote
+                  </a>
+                </div>
               </ul>
             </div>
           </div>
@@ -931,13 +945,18 @@ export default function Header() {
               </div>
 
               <div className="donate-btn-header">
-                <a
-                  className="dtbtn"
-                  href="https://secure.manuscriptedit.com/register"
-                >
-                  Sign Up | Sign In
-                </a>
-              </div>
+                  <a
+                    className="dtbtn"
+                    onClick={() => {
+                      // redirect("register");
+                      window.location.href =
+                        "https://secure.manuscriptedit.com/quotation";
+                    }}
+                    href="#"
+                  >
+                    Request a Quote
+                  </a>
+                </div>
             </ul>
           </nav>
         </div>
