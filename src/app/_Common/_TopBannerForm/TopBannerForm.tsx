@@ -168,10 +168,10 @@ const TopBannerForm = () => {
           </form>
         </div> */}
 
-        <div className="bannerButtons">
+        {/* <div className="bannerButtons">
          <a href="https://secure.manuscriptedit.com/quotation"><button className="bannerButton">Request a quote</button></a> 
-          {/* <a href="https://secure.manuscriptedit.com/advisory"></a><button className="bannerButton">Consult an Expert</button> */}
-        </div>
+          <a href="https://secure.manuscriptedit.com/advisory"></a><button className="bannerButton">Consult an Expert</button>
+        </div> */}
 
 
       </div>
