@@ -13,7 +13,8 @@ const RadioSection = () => {
         phone_no: "",
         email: "",
         msg: "Hello World",
-        country_code: ""
+        country_code: "",
+        radio_url: ""
     });
 
     // const formRef = useRef<any>(null);
@@ -39,19 +40,16 @@ const RadioSection = () => {
     // };
 
     const radioHandler = (e: any) => {
-        console.log({ e });
         const { name, value } = e.target;
-        setForm({ ...form, [name]: value });
+        setForm({ ...form, [name]: value,radio_url: value });
     };
-
-    console.log({ countryCode })
 
     return (
         <>
             <div
                 className="container"
                 style={{
-                    background: "#eaecf6",
+                    background: "#e8f3ff",
                     marginTop: "2rem",
                     padding: "2rem",
                     borderRadius: "8px",

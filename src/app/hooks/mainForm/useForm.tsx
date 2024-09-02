@@ -8,18 +8,30 @@ const useForm =  () => {
     const [error, setError] = useState<string | null>(null);
     const [data, setData] = useState<[] | null>(null);
 
+    const radioHandlerUrl:any = {
+        "life-sciences": "https://drive.google.com/file/d/1tzG-5L135VdsVCOs8GTgj_527XUL_8v5/view",
+        "physical-sciences": "https://drive.google.com/file/d/1tCPZFaVAzze-3wr0GHmS_S0OspW9PDLY/view",
+        "environmental-sciences": "https://drive.google.com/file/d/1UtXp2zWbQcKFhvM_Z26RzeBil3WckdX4/view",
+        "social-sciences": "https://drive.google.com/file/d/1IbaEiYRJaP_bt_wr34uvDEHPCwmSw_Xq/view",
+        "editing_finance_management": "https://drive.google.com/file/d/1b2AwNr0mUacoKimTk3zxCkLgbCUlEPYb/view",
+        "journal_selection_report": "https://drive.google.com/file/d/1ExQOsg7APC2szBymLJLA3PzHTulp9vUM/view",
+        "data_analytics_statistical_analysis": "https://drive.google.com/file/d/1621BhQ2e3x0iU_jx0q3Su6t4L08sKvIL/view",
+        "proofreading_copy_substantive_editing": "https://drive.google.com/file/d/19iCszWLuuVM8JgY0XvJ96_9iXkx2sabs/view"
+    }
+
     const postData = async (formData: any,setForm:any): Promise<void> => {
         setIsLoading(true);
         setError(null);
 
-        const {email} = formData
+        const {radio_url,...rest} = formData
+
         try {
             fetch(`https://www.manuscriptedit.com/api/contactus.php`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({...formData})
+                body: JSON.stringify({...rest})
             }).then(response => {
                 return response.json()
             }).then(responseData => {
@@ -27,6 +39,7 @@ const useForm =  () => {
                 if(Status){
                     // Thank you , your request is received. You will receive the sample in your mail shortly.
                     toast.success("Thank you, your request is received. You will receive the sample in your mail shortly.")
+                    window.location.assign(radioHandlerUrl[radio_url])
                     // fetch('https://email-nodemailer.vercel.app/sendEmail',{
                     //     method: 'POST',
                     //     headers: {
