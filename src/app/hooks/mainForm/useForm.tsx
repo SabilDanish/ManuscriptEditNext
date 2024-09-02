@@ -19,7 +19,7 @@ const useForm =  () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({...formData,country_code: 99})
+                body: JSON.stringify({...formData})
             }).then(response => {
                 return response.json()
             }).then(responseData => {

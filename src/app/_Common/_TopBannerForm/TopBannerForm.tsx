@@ -73,12 +73,12 @@ const TopBannerForm = () => {
   };
 
   const formSubmitOne = (e: any) => {
-    postData(form);
+    postData(form,setForm);
     formRef.current.reset();
   };
 
   const formSubmitTwo = (e: any) => {
-    postData(form);
+    postData(form,setForm);
     formRef.current.reset();
   };
 
