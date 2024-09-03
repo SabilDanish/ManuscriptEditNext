@@ -8,21 +8,21 @@ import { DNA } from "react-loader-spinner";
 
 
 export default function Home() {
-    const [limit, setLimit] = useState(10)
+    const [limit, setLimit] = useState(30)
     const [offset, setOffset] = useState(0)
     const [allPartner, setAllPartner] = useState<Partner[]>([])
     const { loading, error, partners } = useFetchPartners(limit, offset)
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [])
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, [])
 
-    const handleScroll = () => {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-            setOffset(prev => prev + 1)
-        }
-    };
+    // const handleScroll = () => {
+    //     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    //         setOffset(prev => prev + 1)
+    //     }
+    // };
 
     useEffect(() => {
         setAllPartner(prev => [...prev, ...partners])

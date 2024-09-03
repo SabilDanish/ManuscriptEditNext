@@ -4,15 +4,20 @@ import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import { serviceData } from "@/app/utils/service";
+import { faServicestack } from "@fortawesome/free-brands-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import '../../../../_Common/getHelp/getHelp.css'
 
 export default function Home() {
   return (
     <>
       {breadcrum("Services / Writing", "Statistical Analysis")}
       <section className="pt-5 pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
+        
+          <div className="row conrow">
+            <div className="col-md-12">
               <h3 className="pt-2 pb-3"> Statistical Analysis</h3>
               <p>
                 Statistical Analysis is a specialized service offered by
@@ -40,17 +45,68 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
-              <img
-                src="/images/menuscimg/subtantive.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
-            </div>
+            
           </div>
-        </div>
+        
       </section>
+
+
+
+      <section className="pb-5">
+        <>
+          
+          <div className="row ServicesSection">
+              {
+                serviceData['Data Analysis Assistance'] && serviceData['Data Analysis Assistance'].items && serviceData['Data Analysis Assistance'].items.map(item => {
+                  const { title, features, description, link } = item;
+                  return (
+
+
+                    <div className="col-lg-3">
+                      <div className='carousel-item-custom' style={{height:"460px"}}>
+                        <h2><FontAwesomeIcon icon={faServicestack} />{title}</h2>
+                        <p>{description}</p>
+                        <ul>
+                          {features.map((feature: any, index: number) => (
+                            <li key={index}>
+                              <FontAwesomeIcon icon={faCheck} style={{ marginRight: '8px' }} />
+                              {feature}
+                            </li>
+
+                          ))}
+                        </ul>
+
+                        <a href={link}>
+                          <button className="Know-More">Select Services</button>
+                        </a>
+                      </div>
+                    </div>
+
+
+
+
+
+                  )
+                })
+              }
+
+              
+
+            </div>
+          
+
+
+
+        </>
+
+      </section>
+
+
+
+
+
+
+      
       <div className="tab_area bg_color2 pt-80 pb-100">
         <div className="container">
           <div className="row">

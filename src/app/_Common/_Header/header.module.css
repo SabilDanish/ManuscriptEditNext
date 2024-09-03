@@ -8,3 +8,7 @@
     padding-left:15px;
     list-style:none;
 }
+
+.mean-container .mean-nav ul {
+    background: white !important;
+}

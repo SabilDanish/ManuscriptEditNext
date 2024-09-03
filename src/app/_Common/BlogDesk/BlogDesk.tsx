@@ -35,13 +35,13 @@ const BlogDesk = ({ blogs }: any) => {
               date,
               guid
             } = blog;
-            if (index < 3) {
+            if (index < 4) {
               return (
-                <div key={index} className="col-lg-4" onClick={() => redirectTo(guid.rendered)}>
+                <div key={index} className="col-lg-3" onClick={() => redirectTo(guid.rendered)}>
                   <div className="card">
                     <img src={index === 0 ? image4.src : index === 1 ? image5.src : image6.src} className="card-img-top" alt="..." />
                     <div className="card-body">
-                      <p className="card-text">{truncateString(rendered,70)}</p>
+                      <p className="card-text">{truncateString(rendered,40)}</p>
                       <p className="card-title">-{formatDate(date)}</p>
                     </div>
                   </div>

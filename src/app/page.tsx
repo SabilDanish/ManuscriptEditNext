@@ -30,6 +30,7 @@ import EnquiryForm from "./_Common/_enquiryForm/EnquiryForm";
 import useBlogs from "./hooks/mainPage/useBlog";
 import CounterComponent from "./_Common/CounterUp/CounterUp";
 import UpcomingWebinar from "./_Common/upcomingWebinar/upcomingWebinar";
+import RadioSection from "./_Common/RadioSection/RadioSection";
 
 
 
@@ -40,23 +41,23 @@ import UpcomingWebinar from "./_Common/upcomingWebinar/upcomingWebinar";
 export default function Home() {
   SwiperCore.use([Autoplay]);
   const { loading, error, blogs } = useBlogs();
-  
+
 
   return (
     <>
-
       <ToastContainer />
 
       <TopBannerForm />
 
-      <GetHelpMobile />
+      <RadioSection />
+      {/* <GetHelpMobile /> */}
       {/* <TrustedPartner/> */}
 
       {/* End of Biswa's custom codes */}
 
-      <SocialIcon />
+      {/* <SocialIcon /> */}
 
-      <GetEvery />
+      {/* <GetEvery /> */}
 
       <GetHelp />
 
@@ -66,7 +67,7 @@ export default function Home() {
 
       {/* <UpcomingWebinar/> */}
 
-      <CounterComponent />
+      {/* <CounterComponent /> */}
 
       <Testimonial />
 
@@ -75,7 +76,7 @@ export default function Home() {
       {blogs && blogs.length && <BlogMob blogs={blogs} />}
 
 
-      
+
 
       <FaqHome />
     </>

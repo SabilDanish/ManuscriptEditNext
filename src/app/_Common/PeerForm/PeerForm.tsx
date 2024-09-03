@@ -23,7 +23,7 @@ const PeerForm = () => {
 
   const formSubmitOne = (e: any) => {
     e.preventDefault();
-    postData(form);
+    postData(form,setForm);
     setForm({
       name: "",
       service: "",
