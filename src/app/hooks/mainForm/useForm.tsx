@@ -38,7 +38,7 @@ const useForm =  () => {
                     // }).then(response => {
                     //     // toast.success("Your request is received, we will get back to you in 24 hours.")
                     // }).catch(err => {
-                    //     // console.log({err})
+                    
                     //     // toast.error("Your request couldn't be sent, please try again.")
                     // })
                 }else{

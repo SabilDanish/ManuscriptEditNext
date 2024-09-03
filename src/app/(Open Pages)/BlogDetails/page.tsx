@@ -14,7 +14,7 @@ const BlogDetailsNext = () => {
         setUrl(localStorage.getItem('url'))
     },[])
 
-    console.log({url})
+   
 
     return (
         <>

@@ -19,7 +19,7 @@ export default function Home() {
   const pathName: string = usePathname().split("/").filter(val => val).join("")
   let metaData = newData[pathName]
 
-  console.log({ serviceData })
+ 
   return (
     <>
       {<Metadata metaData={metaData} />}

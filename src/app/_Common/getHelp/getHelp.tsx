@@ -27,7 +27,7 @@ const GetHelp = () => {
             };
 
             setTabSize(window.innerWidth)
-            console.log('Window size updated:', windowSizeRef.current);
+           
         }
     };
 
@@ -43,8 +43,7 @@ const GetHelp = () => {
 
     const openTab = (tab: any) => {
         setActiveTab(tab);
-        console.log({tab})
-        console.log(`Active Tab: ${tab}`);
+       
     };
 
     return (

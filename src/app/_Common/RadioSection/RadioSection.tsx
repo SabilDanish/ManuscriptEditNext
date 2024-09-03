@@ -28,7 +28,7 @@ const RadioSection = () => {
 
     const formSubmitOne = (e: any) => {
         e.preventDefault();
-        console.log({ form });
+       
         postData(form, setForm);
         // formRef.current.reset();
     };
@@ -39,12 +39,12 @@ const RadioSection = () => {
     // };
 
     const radioHandler = (e: any) => {
-        console.log({ e });
+       
         const { name, value } = e.target;
         setForm({ ...form, [name]: value });
     };
 
-    console.log({ countryCode })
+   
 
     return (
         <>
