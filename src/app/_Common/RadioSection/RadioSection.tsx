@@ -79,7 +79,7 @@ const RadioSection = () => {
                         <div className="inputSec">
                             <input
                                 type="radio"
-                                name="service"
+                                name="service "
                                 value="physical-sciences"
                                 onChange={radioHandler}
                             />
