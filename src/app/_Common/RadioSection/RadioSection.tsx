@@ -29,7 +29,7 @@ const RadioSection = () => {
 
     const formSubmitOne = (e: any) => {
         e.preventDefault();
-        console.log({ form });
+       
         postData(form, setForm);
         // formRef.current.reset();
     };
@@ -53,6 +53,7 @@ const RadioSection = () => {
                     marginTop: "2rem",
                     padding: "2rem",
                     borderRadius: "8px",
+                    boxShadow: '1px 2px 8px grey'
                 }}
             >
                 <div className="row">
@@ -65,7 +66,7 @@ const RadioSection = () => {
                     >
                         Download Your Free Samples – It’s Quick and Easy!
                     </h2>
-                    <div className="col-lg-4" style={{ lineHeight: "40px" }}>
+                    <div className="col-lg-4" style={{ lineHeight: "47px" }}>
                         <div className="inputSec">
                             <input
                                 type="radio"
@@ -104,7 +105,7 @@ const RadioSection = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4" style={{ lineHeight: "40px" }}>
+                    <div className="col-lg-4" style={{ lineHeight: "47px" }}>
                         <div className="inputSec">
                             <input
                                 type="radio"

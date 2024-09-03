@@ -20,7 +20,7 @@ const BlogNext = () => {
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
     let { loading, error, blogs } = useBlogs(page);
 
-    console.log({ blogs })
+   
 
     useEffect(() => {
       if(blogs.length){
@@ -47,10 +47,10 @@ const BlogNext = () => {
         }
 
         timeoutRef.current = setTimeout(() => {
-            console.log("API call with value:", inputRef.current.value);
+           
             if (blogs.length) {
                 blogs = blogs.filter((blog: any) => {
-                    console.log({ blog, bool: blog.title.rendered.includes(inputRef.current.value) })
+                   
                     return blog.title.rendered.toLowerCase().includes(inputRef.current.value.toLowerCase())
                 })
 

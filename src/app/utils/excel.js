@@ -21,4 +21,3 @@ const transformedData = data.reduce((acc, row) => {
 const output = `export const data = ${JSON.stringify(transformedData, null, 2)};`;
 fs.writeFileSync('./metaFile.js', output);
 
-console.log('JavaScript file created successfully');
