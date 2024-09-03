@@ -14,6 +14,12 @@ const BlogDesk = ({ blogs }: any) => {
     router.push(url);
   };
 
+  const handleRedirect = (url: string): void => {
+    const data = { url };
+    localStorage.setItem("url", url)
+    router.push('/BlogDetails');
+  };
+
   return (
     <>
       <div className="container BlogDesktop" style={{ marginTop: "30px" }}>
@@ -30,25 +36,31 @@ const BlogDesk = ({ blogs }: any) => {
       <div className="container BlogDesktop">
         <div className="row">
           {blogs.map((blog: any, index: number) => {
+            console.log({ blog })
             const {
               title: { rendered },
               date,
-              guid
+              guid,
+              _embedded: {
+                'wp:featuredmedia': [{
+                    source_url
+                }]
+            },
             } = blog;
             if (index < 4) {
               return (
-                <div key={index} className="col-lg-3" onClick={() => redirectTo(guid.rendered)}>
+                <div key={index} className="col-lg-3" onClick={() => handleRedirect(guid.rendered)}>
                   <div className="card">
-                    <img src={index === 0 ? image4.src : index === 1 ? image5.src : image6.src} className="card-img-top" alt="..." />
+                    <img src={source_url} className="card-img-top" alt="..."/>
                     <div className="card-body">
-                      <p className="card-text">{truncateString(rendered,40)}</p>
+                      <p className="card-text">{truncateString(rendered, 50)}</p>
                       <p className="card-title">-{formatDate(date)}</p>
                     </div>
                   </div>
                 </div>
               );
             }
-          })} 
+          })}
         </div>
       </div>
     </>

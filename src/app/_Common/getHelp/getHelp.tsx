@@ -47,6 +47,9 @@ const GetHelp = () => {
         console.log(`Active Tab: ${tab}`);
     };
 
+
+    console.log({activeTab})
+
     return (
         <>
             <div className="container-fluid conTab" style={{ padding: '71px' }}>
