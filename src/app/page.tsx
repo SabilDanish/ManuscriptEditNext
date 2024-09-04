@@ -31,6 +31,7 @@ import useBlogs from "./hooks/mainPage/useBlog";
 import CounterComponent from "./_Common/CounterUp/CounterUp";
 import UpcomingWebinar from "./_Common/upcomingWebinar/upcomingWebinar";
 import RadioSection from "./_Common/RadioSection/RadioSection";
+import OfferSlider from "./_Common/_OfferSlider/OfferSlider";
 
 
 
@@ -48,6 +49,7 @@ export default function Home() {
       <ToastContainer />
 
       <TopBannerForm />
+      <OfferSlider />
 
       <RadioSection />
       {/* <GetHelpMobile /> */}
