@@ -1,9 +1,16 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
+import Metadata from "@/app/Metadata";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../utils/metaFile.js'
+const newData: any = data;
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   return (
     <>
+    {<Metadata metaData={metaData} />}
     {breadcrum("More", "About Us")}
       <section className="pt-5 pb-5">
         <div className="container">

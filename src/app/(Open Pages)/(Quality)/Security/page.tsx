@@ -1,9 +1,17 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import './secutity.module.css'
+import Metadata from "@/app/Metadata";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../utils/metaFile.js'
+const newData: any = data;
+
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   return (
     <>
+    {<Metadata metaData={metaData} />}
     {breadcrum("Quality ", "Confidentiality")}
       <section id="cta" className="cta "  >
         <div className="container aos-init aos-animate" data-aos="zoom-out">
