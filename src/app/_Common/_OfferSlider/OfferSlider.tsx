@@ -11,6 +11,7 @@ const OfferSlider = () => {
                 <div className="marquee-container" style={{ marginTop: '0px' }}>
                     <div className="marquee-content" >
                         {/* <img src="./images/Logos.jpg" alt="partners" className="image-important" /> */}
+                        
                         <h3 style={{ marginLeft: "500rem", color: "#060e33" }}>Grab 35% Off on All Publication Packages—Publish your work in high impact journals</h3>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -32,3 +33,4 @@ const OfferSlider = () => {
 }
 
 export default OfferSlider;
+     

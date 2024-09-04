@@ -1,8 +1,15 @@
 'use client';
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import { useState } from "react";
+import Metadata from "@/app/Metadata";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../utils/metaFile.js'
+const newData: any = data;
+
 
 export default function Home() { 
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   let list: any = [
     {
       msg: "Thanks a lot for the work. I appreciate the copy editing of the manuscript before the duedate.",
@@ -223,6 +230,7 @@ export default function Home() {
   const [testimonials,setTestimonials] = useState(list);
   return (
     <>
+    {<Metadata metaData={metaData} />}
       {breadcrum("Quality ", "Testimonials")}
       <section className="pt-5 pb-5">
         <div className="container">

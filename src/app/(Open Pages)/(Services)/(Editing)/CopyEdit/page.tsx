@@ -2,14 +2,21 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import FAQ from "@/app/_Common/_FAQ/FAQ";
+import Metadata from "@/app/Metadata";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../../utils/metaFile.js'
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import Link from "next/link";
+const newData: any = data;
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   return (
     <>
+      {<Metadata metaData={metaData} />}
       {breadcrum("Services / English Editing", "Copy Editing")}
       <section className="pt-5 pb-5">
         <div className="container">
@@ -73,11 +80,11 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-              <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
-              Request a Quote 
+              <button onClick={() => { redirect('register') }} className="btn btn-primary mt-3 mr-3">
+                Request a Quote
               </button>
               <Link href={"/ContactUs"}><button className="btn btn-primary mt-3 mr-3">
-              Schedule a Call
+                Schedule a Call
               </button></Link>
 
             </div>
