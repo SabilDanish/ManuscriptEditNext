@@ -2,13 +2,20 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import FAQ from "@/app/_Common/_FAQ/FAQ";
+import Metadata from "@/app/Metadata";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../../utils/metaFile.js'
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+const newData: any = data;
 
 export default function Home() {
+    const pathName: string = usePathname().split("/").filter(val => val).join("")
+    let metaData = newData[pathName]
   return (
     <>
+    {<Metadata metaData={metaData} />}
     {breadcrum("Services / English Editing", "Plagiarism Check and Reduction")}
     <section className="pt-5 pb-5">
     <div className="container">

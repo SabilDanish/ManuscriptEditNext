@@ -17,7 +17,7 @@ const BlogNext = ({ children }: any) => {
                     </div>
                     <div className="col-lg-3" >
                         <div className="sticky-wrapper">
-                            <div className="BlogColImgAdd">
+                            {/* <div className="BlogColImgAdd">
 
                                 <iframe
                                     width="100%"
@@ -29,7 +29,7 @@ const BlogNext = ({ children }: any) => {
                                 >
                                 </iframe>
 
-                            </div>
+                            </div> */}
 
                             <div className="BlogColImgAdd1">
                                 <img className="BlogImgAdd" src="/images/innerimg/Thesis-455x1024.jpg" alt="#" />

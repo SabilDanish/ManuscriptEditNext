@@ -14,6 +14,12 @@ const BlogMob = ({ blogs }: any) => {
   const redirectTo = (url: string) => {
     router.push(url);
   };
+
+  const handleRedirect = (url: string): void => {
+    const data = { url };
+    localStorage.setItem("url", url)
+    router.push('/BlogDetails');
+  };
   return (
     <>
       <div className="container ContainerDesk">
@@ -25,29 +31,36 @@ const BlogMob = ({ blogs }: any) => {
       </div>
 
       <div className="container ContainerDesk" style={{ marginBottom: "70px" }}>
-      {blogs.map((blog: any, index: number) => {
-            const {
-              title: { rendered },
-              date,
-              guid
-            } = blog;
-            if (index < 3) {
-              return (
-        <div
-          className="row"
-          style={{ justifyContent: "center", marginBottom: "20px !important" }}
-          key={index}
-          onClick={() => redirectTo(guid.rendered)}
-        >
-          <img src={index === 0 ? image1.src : index === 1 ? image2.src : image3.src} className="BlogImg" alt="Blog Banner" />
+        {blogs.map((blog: any, index: number) => {
+          const {
+            title: { rendered },
+            date,
+            guid,
+            _embedded: {
+              'wp:featuredmedia': [{
+                source_url
+              }]
+            },
+          } = blog;
+          if (index < 3) {
+            return (
+              <div
+                className="row"
+                style={{ justifyContent: "center", marginBottom: "20px !important" }}
+                key={index}
+                onClick={() => handleRedirect(guid.rendered)}
+              >
+                <img src={source_url} className="BlogImg" alt="Blog Banner" />
 
-          <h6 className="contents">
-            {truncateString(rendered,70)}{" "}
-            <span className="ContentSpan" style={{ display: "block" }}>
-              -{formatDate(date)}
-            </span>
-          </h6>
-        </div>)}})}
+                <h6 className="contents">
+                  {truncateString(rendered, 70)}{" "}
+                  <span className="ContentSpan" style={{ display: "block" }}>
+                    -{formatDate(date)}
+                  </span>
+                </h6>
+              </div>)
+          }
+        })}
 
         {/* <div
           className="row"

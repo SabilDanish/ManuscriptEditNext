@@ -68,7 +68,7 @@ export default function Home() {
                         </ul>
 
                         <a href={link}>
-                          <button className="Know-More">Select Services</button>
+                          <button className="Know-More">Request a Quote</button>
                         </a>
                       </div>
                     </div>

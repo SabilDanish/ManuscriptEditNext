@@ -6,8 +6,16 @@ import { formatDate, truncateString } from "@/app/utils/lib";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import searchLogo from '../../../utils/images/search-svgrepo-com.svg'
+import Metadata from "@/app/Metadata";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../utils/metaFile.js'
+const newData: any = data;
+
 
 const BlogNext = () => {
+    const pathName: string = usePathname().split("/").filter(val => val).join("")
+    console.log({pathName})
+    let metaData = newData[pathName]
     const [page, setPage] = useState<number>(1)
     const [searchedBlog, setSearchedBlog] = useState<any>()
     const [isSearchActive, setIsSearchActive] = useState(false);
@@ -62,6 +70,7 @@ const BlogNext = () => {
 
     return (
         <>
+        {<Metadata metaData={metaData} />}
             <div className="navbar">
                 <div className="tabs">
                     <a target="_blank" href="https://www.manuscriptedit.com/scholar-hangout/category/publication/">Scholar Hub</a>
