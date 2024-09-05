@@ -1,0 +1,10 @@
+@media(min-width:992px) and (max-width:1808px) {
+    .carousel-item-custom{
+       height: 850px !important;
+    }
+ 
+    .Know-More{
+ 
+       right: 14px !important;
+    }
+  }

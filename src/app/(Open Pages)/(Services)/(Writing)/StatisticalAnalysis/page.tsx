@@ -8,7 +8,8 @@ import { serviceData } from "@/app/utils/service";
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import '../../../../_Common/getHelp/getHelp.css'
+import '../../../../_Common/getHelp/getHelp.css';
+import "./Statistical.css";
 
 export default function Home() {
   return (

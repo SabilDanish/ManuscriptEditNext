@@ -12,7 +12,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { serviceData } from "@/app/utils/service.js";
-import '../../../../_Common/getHelp/getHelp.css'
+import '../../../../_Common/getHelp/getHelp.css';
+import "./writingOverview.css";
+
 
 const newData: any = data;
 
@@ -57,7 +59,7 @@ export default function Home() {
 
 
 									<div className="col-lg-3">
-										<div className='carousel-item-custom' style={{height:"600px"}}>
+										<div className='carousel-item-custom' >
 											<h2><FontAwesomeIcon icon={faServicestack} />{title}</h2>
 											<p>{description}</p>
 											<ul>
