@@ -200,7 +200,7 @@ export const data = {
     "title": "Webinar Registration form | Register Now free",
     "description": "Register for our webinar to discover expert strategies and insights for improving your journal publication process with ManuscriptEdit. Don't miss out on this opportunity to elevate your academic writing and research impact."
   },
-  "scholar-hangout": {
+  "Blog": {
     "title": "SciHubSaudi Delivers Expert Insights for Researchers and Students | Manuscriptedit Blog",
     "description": "Discover invaluable resources at SciHubSaudi, bridging academia and Saudi Arabian scholarship. Explore [Manuscriptedit Blog] for essential advice on publishing and crafting articles tailored for PhD students."
   }
