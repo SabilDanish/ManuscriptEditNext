@@ -10,7 +10,7 @@ export const data = {
           "Sentence Structure and Basic Terminology Check",
           "Editing Certificate for Language Check",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=2",
+        link: "/EditingOverview",
       },
       {
         title: "Advanced Structural Editing",
@@ -21,7 +21,7 @@ export const data = {
           "Logical Structure Enhancement and Content Reorganization",
           "Advanced Terminology Check with Focus on Consistency",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=2",
+        link: "/EditingOverview",
       },
       {
         title: "Premium Journal-Ready Editing",
@@ -32,7 +32,7 @@ export const data = {
           "Reviewer Response Letter Editing",
           "Full Journal-Ready Presentation for Submission",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=2",
+        link: "/EditingOverview",
       },
       {
         title: "Scientific Impact Editing",
@@ -43,7 +43,7 @@ export const data = {
           "Crosschecking Responses for Scientific Integrity",
           "Unlimited Re-Editing Support for 365 Days (up to 20% of Original Word Count)",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=2",
+        link: "/EditingOverview",
       },
     ],
   },
@@ -58,7 +58,7 @@ export const data = {
           "Proofreading for Language Errors (Grammar, Spelling, Punctuation)",
           "Formatting Based on General Academic Standards",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=4",
+        link: "/Writing",
       },
       {
         title: "Advanced Conceptual Writing Assistance",
@@ -69,7 +69,7 @@ export const data = {
           "In-Depth Support for Literature Review and Synthesizing Research Gaps",
           "Formatting Tailored to Thesis or Journal Guidelines",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=4",
+        link: "/Writing",
       },
       {
         title: "Publication-Ready Writing Service",
@@ -80,7 +80,7 @@ export const data = {
           "Advanced Proofreading and Revisions for Publication Standards",
           "Full Development of Literature Review with Systematic or Narrative Flow",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=4",
+        link: "/Writing",
       },
       {
         title: "Premium Scientific Writing & Review",
@@ -91,7 +91,7 @@ export const data = {
           "Comprehensive Scientific Review with Detailed Feedback on Methods, Data Presentation, and Discussion Quality",
           "Strategic Editing of Reviewer Response Letters and Crosschecking for Consistency",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=4",
+        link: "/Writing",
       },
       {
         title: "Customized Writing Service",
@@ -102,7 +102,7 @@ export const data = {
           "Fully Customized Formatting and Style Based on Unique Guidelines or Multi-Journal Submissions",
           "Advanced Literature Review Support for Large-Scale Systematic or Narrative Reviews",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=4",
+        link: "/Writing",
       },
     ],
   },
@@ -117,7 +117,7 @@ export const data = {
           "Descriptive Statistics (Mean, Median, Mode)",
           "Simple Trend Analysis & Visualization",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=1",
+        link: "/StatisticalAnalysis",
       },
       {
         title: "Comprehensive Statistical Analysis",
@@ -128,7 +128,7 @@ export const data = {
           "Hypothesis Testing & Regression Analysis",
           "Advanced Data Visualizations (Graphs, Tables)",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=1",
+        link: "/StatisticalAnalysis",
       },
       {
         title: "Advanced Publication-Ready Services",
@@ -139,7 +139,7 @@ export const data = {
           "Publication-Level Statistical Analysis & Interpretation",
           "High-Quality Figures, Tables, and Journal-Ready Visualizations",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=1",
+        link: "/StatisticalAnalysis",
       },
       {
         title: "Expert Scientific Data Review & Analysis",
@@ -150,7 +150,7 @@ export const data = {
           "High-Impact Statistical Models and In-Depth Validation",
           "Critical Data Interpretation Emphasizing Scientific Rigor",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=1",
+        link: "/StatisticalAnalysis",
       },
       {
         title: "Custom Data Solutions for Complex Research",
@@ -161,7 +161,7 @@ export const data = {
           "Custom Models Designed for Specialized Research Needs",
           "Customized Visualizations and Insights for Multi-Layered Analysis",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=1",
+        link: "/StatisticalAnalysis",
       },
     ],
   },
@@ -183,7 +183,7 @@ export const data = {
           "Plagiarism Check",
           "Unlimited Assistance",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=5",
+        link: "/PackageService",
       },
       {
         title: "Premium Package",
@@ -199,7 +199,7 @@ export const data = {
           "Plagiarism Check",
           "Unlimited Assistance",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=5",
+        link: "/PackageService",
       },
       {
         title: "Advanced Package",
@@ -213,7 +213,7 @@ export const data = {
           "Plagiarism Check",
           "Unlimited Assistance",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=5",
+        link: "/PackageService",
       },
       {
         title: "Standard Package",
@@ -225,7 +225,7 @@ export const data = {
           "Journal Submission",
           "Unlimited Assistance",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=5",
+        link: "/PackageService",
       },
     ],
   },
@@ -240,7 +240,7 @@ export const data = {
           "Systematic Study Selection with Predefined Criteria",
           "Structured Data Extraction and Qualitative Synthesis",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=3",
+        link: "/MedicalWrite",
       },
       {
         title: "Systematic Review + Meta-Analysis",
@@ -251,7 +251,7 @@ export const data = {
           "Statistical Analysis and Meta-Analysis of Study Quality and Results",
           "Rigorous Quality Assessment with Statistical Weighting",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=3",
+        link: "/MedicalWrite",
       },
       {
         title: "Narrative Review",
@@ -262,7 +262,7 @@ export const data = {
           "Qualitative Synthesis with Thematic or Chronological Structuring",
           "Comprehensive Discussion of Trends and Gaps",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=3",
+        link: "/MedicalWrite",
       },
       {
         title: "Case Report",
@@ -273,7 +273,7 @@ export const data = {
           "Adherence to CARE Guidelines for Reporting",
           "Clinical Writing Focused on Diagnosis, Treatment, and Outcomes",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=3",
+        link: "/MedicalWrite",
       },
       {
         title: "Case Series",
@@ -284,7 +284,7 @@ export const data = {
           "Adherence to Case Series Reporting Guidelines",
           "In-Depth Comparison and Analysis Across Cases",
         ],
-        link: "https://secure.manuscriptedit.com/estimate?test=3",
+        link: "/MedicalWrite",
       },
     ],
   },

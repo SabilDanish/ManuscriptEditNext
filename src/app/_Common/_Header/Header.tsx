@@ -846,17 +846,7 @@ export default function Header() {
                     </a>
                   </li> */}
                   {/* <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li> */}
-                  <li>
-                    <a
-                      onClick={() => {
-                        redirect("partner-recent");
-                      }}
-                      href="#"
-                    >
-                      Recent Partners
-                    </a>
-                  </li>
-
+                  <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li>
                   <li><Link href={'/ContactUs'}>Contact us</Link></li>
                   {/* <li>
                     <a

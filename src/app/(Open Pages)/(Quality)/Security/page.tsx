@@ -7,11 +7,11 @@ const newData: any = data;
 
 
 export default function Home() {
-  const pathName: string = usePathname().split("/").filter(val => val).join("")
-  let metaData = newData[pathName]
+  // const pathName: string = usePathname().split("/").filter(val => val).join("")
+  // let metaData = newData[pathName]
   return (
     <>
-    {<Metadata metaData={metaData} />}
+    {/* {<Metadata metaData={metaData} />} */}
     {breadcrum("Quality ", "Confidentiality")}
       <section id="cta" className="cta "  >
         <div className="container aos-init aos-animate" data-aos="zoom-out">
