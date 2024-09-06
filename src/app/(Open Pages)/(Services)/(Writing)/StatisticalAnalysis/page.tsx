@@ -64,7 +64,7 @@ export default function Home() {
 
 
                     <div className="col-lg-3">
-                      <div className='carousel-item-custom' style={{height:"460px"}}>
+                      <div className='carousel-item-custom'>
                         <h2><FontAwesomeIcon icon={faServicestack} />{title}</h2>
                         <p>{description}</p>
                         <ul>

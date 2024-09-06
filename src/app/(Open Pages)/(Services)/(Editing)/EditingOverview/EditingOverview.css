@@ -14,15 +14,37 @@
     color: #fff;
  }
 
- @media(min-width:992px) and (max-width:1808px) {
-   .carousel-item-custom{
-      height: 800px !important;
+
+ @media (min-width: 376px) and (max-width: 768px) {
+   .carousel-item-custom {
+       height: 400px !important;
    }
-
-   .Know-More{
-
-      right: 14px !important;
-   }
- }
-
  
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+   .carousel-item-custom {
+       height: 400px !important;
+   }
+}
+
+
+@media (min-width: 992px) and (max-width: 1024px) {
+   .carousel-item-custom {
+       height: 800px !important;
+   }
+}
+
+@media (min-width: 1025px) and (max-width: 1357px) {
+   .carousel-item-custom {
+       height: 693px !important;
+   }
+}
+
+@media (min-width: 1600px) and (max-width: 1880px) {
+   .carousel-item-custom {
+       height: 450px !important;
+   }
+}
+
