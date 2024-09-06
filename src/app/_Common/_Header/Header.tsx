@@ -162,7 +162,7 @@ export default function Header() {
                       <ul>
                         <li>
                           <Link href={"/Writing"}>
-                            <b>Scientific / Academic Writting</b>
+                            <b>Scientific / Academic Writing</b>
                           </Link>
                           <ul className={Style.subList}>
                             <li>
