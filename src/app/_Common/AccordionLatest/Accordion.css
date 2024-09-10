@@ -1,0 +1,99 @@
+.custom-accordion {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .accordion-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .accordion .accordion-item {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .accordion .accordion-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .accordion .accordion-header {
+    font-weight: 500;
+    font-size: 18px;
+    color: #0056b3;
+    background: linear-gradient(45deg, #007bff, #00d2ff);
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .accordion .accordion-header .number {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  .accordion .accordion-header:hover {
+    background: linear-gradient(45deg, #0056b3, #00aaff);
+  }
+  
+  .accordion .accordion-header .icon-chevron {
+    transition: transform 0.3s ease;
+    color: #fff;
+  }
+  
+  .accordion .accordion-header[aria-expanded="true"] .icon-chevron {
+    transform: rotate(180deg);
+  }
+  
+  .accordion .accordion-body {
+    font-size: 16px;
+    color: #555;
+    background-color: #f4f8fc;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border-top: 1px solid #e1e4e8;
+  }
+  
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .accordion-title {
+      font-size: 20px;
+    }
+  
+    .accordion-header {
+      font-size: 16px;
+    }
+  
+    .accordion-body {
+      font-size: 14px;
+    }
+  }
+  
