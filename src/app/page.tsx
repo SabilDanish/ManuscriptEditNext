@@ -33,6 +33,7 @@ import UpcomingWebinar from "./_Common/upcomingWebinar/upcomingWebinar";
 import RadioSection from "./_Common/RadioSection/RadioSection";
 import OfferSlider from "./_Common/_OfferSlider/OfferSlider";
 import PublicationAccordion from "./_Common/AccordionLatest/Accordion";
+import Dropdown2 from "./_Common/Dropdown2/Dropdown2";
 
 
 
@@ -63,7 +64,7 @@ export default function Home() {
       {/* <GetEvery /> */}
 
       <GetHelp />
-
+      <Dropdown2 />
       <Clients />
 
       <OurProfessional />
@@ -77,9 +78,7 @@ export default function Home() {
       {blogs && blogs.length && <BlogDesk blogs={blogs} />}
 
       {blogs && blogs.length && <BlogMob blogs={blogs} />}
-
-
-
+     
 
       <FaqHome />
 

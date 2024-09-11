@@ -1,0 +1,245 @@
+.carousel-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .carousel-items-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-item-custom {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 600px;
+    position: relative;
+  }
+  
+  .carousel-item-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .carousel-item-custom h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #343a40;
+  }
+  
+  .carousel-item-custom p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+    text-align: start;
+    line-height: 30px;
+  }
+  
+  .carousel-item-custom ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+    line-height: 28px;
+  }
+  
+  .carousel-item-custom ul li {
+    font-size: 0.9rem;
+    color: #495057;
+    margin-bottom: 5px;
+    display: flex;
+  }
+  
+  .carousel-item-custom ul li svg {
+    margin-top: 8px;
+  }
+  
+  .tabsContainer {
+    padding: 20px; /* Adjust as needed */
+    background-color: #f8f9fa; /* Optional background color */
+    border-radius: 5px; /* Optional rounded corners */
+  }
+  
+  .carousel-item-custom{
+    margin-top:6px;
+  }
+  
+  .tab-content{
+    border: 3px solid #c7e2ff;
+    padding: 27px;
+    border-radius: 0px 28px;
+  }
+  
+  .carousel-item-custom{
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    box-shadow: 0px 1px 4px #3bbdfb;
+    border-radius: 20px;
+  }
+  
+  .nav-link {
+    border-radius: 10px 10px 0px 0px !important;
+      background: #dbe3ff;
+      box-shadow: 1px 1px 4px grey !important;
+      color:black;
+  }
+  
+  .nav-link.active {
+    background-color: #fff !important;
+    box-shadow: 0px 0px 3px #007bff !important;
+    color: #007bff !important;
+    font-weight: 400 !important;
+    border: none !important;
+  }
+  
+  .carousel-item-custom h2 {
+    text-align: start;
+    display: flex;
+    margin-bottom: 23px !important;
+  }
+  
+  .svg-inline--fa{
+  margin-right: 20px;
+  color: #0e84c0;
+  }
+  .Know-More {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 23px;
+    margin-top: 20px;
+    width: 85%;
+    position: absolute;
+    right: 37px;
+    bottom:20px;
+  }
+  
+  @media(max-width:600px) {
+    .nav-tabs .nav-item button {
+      width: 100% !important;
+    }
+  }
+  
+  .ServicesSection{
+    padding: 0px 62px;
+  }
+  
+  .conrow{
+    padding: 0px 62px;
+  }
+  
+  @media(max-width:376px){
+    .conTab{
+      padding: 10px !important;
+    }
+    .carousel-item-custom{
+      height: 669px;
+    }
+    .carousel-item-custom ul{
+      line-height: 30px;
+    }
+    .tab-content{
+      padding: 0px;
+    }
+  }
+  
+  @media(min-width:376px) and (max-width:768px){
+    .conTab{
+      padding: 10px !important;
+    }
+    .carousel-item-custom{
+      height: 600px;
+    }
+    .carousel-item-custom ul{
+      line-height: 30px;
+    }
+    .tab-content{
+      padding: 0px;
+    }
+  }
+  
+  
+  @media(min-width:769px) and (max-width:1024px){
+    
+    .carousel-item-custom{
+      height: 845px;
+    }
+  
+    .carousel-item-custom ul{
+      line-height: 30px;
+    }
+  
+    .tab-content{
+      padding: 5px;
+    }
+  }
+  
+  
+  @media(min-width:1025px) and (max-width:1357px){
+    
+    .carousel-item-custom{
+      height: 748px;
+    }
+  
+    .tab-content{
+      padding: 5px;
+    }
+  }
+  
+  @media(min-width:1358px) and (max-width:1600px){
+    
+    .carousel-item-custom{
+      height: 550px;
+    }
+  
+    .tab-content{
+      padding: 5px;
+    }
+  }
+  
+  
+  .swiper-button-prev:after{
+    position: relative;
+    left: -17px;
+    font-size:15px !important;
+  }
+  
+  .swiper-button-next:after {
+    position: relative;
+    right: -17px;
+    font-size:15px !important;
+  }
+  
+  
+  @media(max-width:768px){
+    .nav-tabs .nav-item{
+      width: 100%;
+    }
+  }
+  
+  .scrollable-container {
+    overflow-y: auto;
+  }
+  
+  .scrollable-item {
+    overflow-y: auto;
+  }
+  .accordion__wrapper2 {
+    padding: 0;
+}
+  
+  

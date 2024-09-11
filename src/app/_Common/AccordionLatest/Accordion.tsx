@@ -10,12 +10,12 @@ const PublicationAccordion = () => {
 
   // Define the images for each accordion item
   const images: { [key: number]: string } = {
-    0: "/images/A1.png",
-    1: "/images/A2.png",
-    2: "/images/A3.png",
-    3: "/images/A4.png",
-    4: "/images/A5.png",
-    5: "/images/A6.png",
+    0: "/images/ICONS For Website - PNG -/schedule.png",
+    1: "/images/ICONS For Website - PNG -/Ideal team.png",
+    2: "/images/ICONS For Website - PNG -/Delivery.png",
+    3: "/images/ICONS For Website - PNG -/Journal submission.png",
+    4: "/images/ICONS For Website - PNG -/journal submission 2.png",
+    5: "/images/ICONS For Website - PNG -/Support.png",
   };
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const PublicationAccordion = () => {
               className="img-fluid MobDisNone"
               style={{
                 borderRadius: "10px",
-                width: "70%",
+                width: "100%",
                 height: "auto",
                 objectFit: "contain"
               }}
