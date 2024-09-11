@@ -32,6 +32,7 @@ import CounterComponent from "./_Common/CounterUp/CounterUp";
 import UpcomingWebinar from "./_Common/upcomingWebinar/upcomingWebinar";
 import RadioSection from "./_Common/RadioSection/RadioSection";
 import OfferSlider from "./_Common/_OfferSlider/OfferSlider";
+import PublicationAccordion from "./_Common/AccordionLatest/Accordion";
 
 
 
@@ -81,6 +82,9 @@ export default function Home() {
 
 
       <FaqHome />
+
+<PublicationAccordion/>
+      
     </>
   );
 }
