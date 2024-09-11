@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Accordion } from "react-bootstrap";
 import './Accordion.css';  // Link your CSS file
 
 const PublicationAccordion = () => {
-  const [activeKey, setActiveKey] = useState("0"); // Default active key is "0"
+  const [activeKey, setActiveKey] = useState("0");
+  const [recentKey, setRecentKey] = useState<string>('0')
+  const [tabKey, setTabKey] = useState("0")
 
   // Define the images for each accordion item
   const images = {
@@ -15,17 +17,29 @@ const PublicationAccordion = () => {
     5: "/images/A6.png",
   };
 
+  useEffect(() => {
+    if(activeKey){
+      setRecentKey(activeKey)
+    }
+  },[activeKey])
+
   // Handle accordion toggle to update the image
-  const handleAccordionToggle = (key : string) => {
-    // If the same key is clicked, keep it open instead of collapsing it
+  const handleAccordionToggle = (key:any) => {
+    console.log({key})
+    // Check if the clicked item is already active
     if (key === activeKey) {
-      setActiveKey(key); // Keep the current accordion open
-    } 
-    else {
-      setActiveKey(key); // Switch to a new accordion item if another is clicked
+      // setActiveKey(recentKey)
+      // Do nothing if the same accordion item is clicked again (keep the image)
+      return;
+    } else {
+      // Set the new active key if a different accordion item is clicked
+      // setActiveKey(key ? key : recentKey);
+      setActiveKey(key)
+      setTabKey(key ? key : recentKey)
     }
   };
 
+  console.log({tabKey,activeKey})
   return (
     <>
       <div className="container">
@@ -39,7 +53,7 @@ const PublicationAccordion = () => {
           <div className="col-lg-4 image-container">
             {/* Dynamically change the image based on the active accordion item */}
             <img
-              src={images[activeKey]}
+              src={images[tabKey]}
               alt="Project support illustration"
               className="img-fluid"
               style={{
