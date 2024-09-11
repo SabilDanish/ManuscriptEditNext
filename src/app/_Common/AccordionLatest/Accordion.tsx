@@ -3,7 +3,7 @@ import { Accordion } from "react-bootstrap";
 import './Accordion.css';  // Link your CSS file
 
 const PublicationAccordion = () => {
-  const [activeKey, setActiveKey] = useState("0");
+  const [activeKey, setActiveKey] = useState("0"); // Default active key is "0"
 
   // Define the images for each accordion item
   const images = {
@@ -16,14 +16,13 @@ const PublicationAccordion = () => {
   };
 
   // Handle accordion toggle to update the image
-  const handleAccordionToggle = (key:string) => {
-    // Check if the clicked item is already active
+  const handleAccordionToggle = (key : string) => {
+    // If the same key is clicked, keep it open instead of collapsing it
     if (key === activeKey) {
-      // Do nothing if the same accordion item is clicked again (keep the image)
-      return;
-    } else {
-      // Set the new active key if a different accordion item is clicked
-      setActiveKey(key);
+      setActiveKey(key); // Keep the current accordion open
+    } 
+    else {
+      setActiveKey(key); // Switch to a new accordion item if another is clicked
     }
   };
 
