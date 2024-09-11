@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Accordion } from "react-bootstrap";
 import './Accordion.css';  // Link your CSS file
 
+
 const PublicationAccordion = () => {
   const [activeKey, setActiveKey] = useState("0");
-  const [recentKey, setRecentKey] = useState<string>('0')
-  const [tabKey, setTabKey] = useState("0")
+  const [recentKey, setRecentKey] = useState<string>('0');
+  const [tabKey, setTabKey] = useState("0");
 
   // Define the images for each accordion item
   const images = {
@@ -18,28 +19,21 @@ const PublicationAccordion = () => {
   };
 
   useEffect(() => {
-    if(activeKey){
-      setRecentKey(activeKey)
+    if (activeKey) {
+      setRecentKey(activeKey);
     }
-  },[activeKey])
+  }, [activeKey]);
 
-  // Handle accordion toggle to update the image
-  const handleAccordionToggle = (key:any) => {
-    console.log({key})
-    // Check if the clicked item is already active
+  // Handle accordion toggle to update the image and active key
+  const handleAccordionToggle = (key: any) => {
     if (key === activeKey) {
-      // setActiveKey(recentKey)
-      // Do nothing if the same accordion item is clicked again (keep the image)
       return;
     } else {
-      // Set the new active key if a different accordion item is clicked
-      // setActiveKey(key ? key : recentKey);
-      setActiveKey(key)
-      setTabKey(key ? key : recentKey)
+      setActiveKey(key);
+      setTabKey(key ? key : recentKey);
     }
   };
 
-  console.log({tabKey,activeKey})
   return (
     <>
       <div className="container">
@@ -49,13 +43,13 @@ const PublicationAccordion = () => {
       </div>
 
       <div className="container my-5 custom-accordion">
-        <div className="row align-items-center">
-          <div className="col-lg-4 image-container">
+        <div className="row align-items-stretch AllBack d-flex">
+          <div className="col-lg-4 image-container d-flex">
             {/* Dynamically change the image based on the active accordion item */}
             <img
               src={images[tabKey]}
               alt="Project support illustration"
-              className="img-fluid"
+              className="img-fluid MobDisNone"
               style={{
                 borderRadius: "10px",
                 width: "70%",
@@ -70,7 +64,9 @@ const PublicationAccordion = () => {
                 <Accordion.Item eventKey={index.toString()} key={index}>
                   <Accordion.Header>
                     <span className="number">{`0${index + 1}`}</span>
-                    {item.title}
+                    <p className="ParaAccFont">{item.title}</p>
+                    {/* Arrow icon that changes based on whether the item is expanded */}
+                    <i className={`bi ${activeKey === index.toString() ? 'bi-chevron-up' : 'bi-chevron-down'} ml-auto`}></i>
                   </Accordion.Header>
                   <Accordion.Body>{item.body}</Accordion.Body>
                 </Accordion.Item>
@@ -87,27 +83,27 @@ const PublicationAccordion = () => {
 const accordionItems = [
   {
     title: "Tailored Project Scheduling for Your Paper",
-    body: "We provide customized project scheduling based on your research goals and timelines."
+    body: "Our project manager carefully evaluates the current status of your paper and designs a personalized project timeline that aligns with your preferred deadlines. We break the project into manageable phases, offering services such as journal selection, advanced English editing, pre-submission peer review, and artwork formatting to ensure your paper is ready for publication."
   },
   {
     title: "Assembling the Ideal Team of Experts",
-    body: "Our team of professionals ensures that your paper is handled by the best in the field."
+    body: "Our project manager selects the most qualified experts to work on your paper, based on their subject expertise, academic credentials, and publication experience. Each team member is assigned a specific phase of the project to ensure smooth collaboration and quality results."
   },
   {
     title: "Delivery by Phases and Feedback Integration",
-    body: "We ensure continuous delivery with feedback integration at every phase."
+    body: "Our support packages are structured to keep you informed at every step. After each phase, we deliver the work for your review and integrate your feedback before moving forward. This ensures a collaborative and transparent process from start to finish."
   },
   {
     title: "Comprehensive Journal Submission Preparation",
-    body: "Comprehensive preparation for submitting your paper to top journals."
+    body: "We handle all aspects of journal submission for you. From creating an account with your chosen journal to reviewing their guidelines, we prepare a tailored submission package. You'll receive a final draft for approval before the formal submission."
   },
   {
     title: "Seamless Journal Submission on Your Behalf",
-    body: "We manage journal submissions, so you don’t have to worry about administrative work."
+    body: "Once the submission package is finalized, we submit it directly to the journal on your behalf. This includes your research paper, cover letter to the journal editor, and any additional documents requested by the journal. We track the journal's response and guide you through the next steps."
   },
   {
     title: "Ongoing Support Until Final Publication",
-    body: "Support continues until your paper is fully published."
+    body: "Journal feedback and revisions are part of the publishing process. We help you address reviewer comments professionally and prepare resubmissions, whether to the same journal or a new one. With our Gold or Platinum packages, you'll receive comprehensive resubmission support until your paper is published."
   }
 ];
 
