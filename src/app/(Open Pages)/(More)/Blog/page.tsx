@@ -13,9 +13,9 @@ const newData: any = data;
 
 
 const BlogNext = () => {
-    const pathName: string = usePathname().split("/").filter(val => val).join("")
-    console.log({pathName})
-    let metaData = newData[pathName]
+    // const pathName: string = usePathname().split("/").filter(val => val).join("")
+    // console.log({pathName})
+    // let metaData = newData[pathName]
     const [page, setPage] = useState<number>(1)
     const [searchedBlog, setSearchedBlog] = useState<any>()
     const [isSearchActive, setIsSearchActive] = useState(false);
@@ -28,11 +28,14 @@ const BlogNext = () => {
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
     let { loading, error, blogs } = useBlogs(page);
 
+    console.log({blogs})
+
    
 
     useEffect(() => {
       if(blogs.length){
         setSearchedBlog(blogs)
+        localStorage.setItem('blogs',blogs)
       }
     }, [blogs])
     
@@ -43,10 +46,12 @@ const BlogNext = () => {
     //     router.push(url);
     // };
 
-    const handleRedirect = (url: string): void => {
+    const handleRedirect = (url: string,slug:string,content:any): void => {
         const data = { url };
+        const formattedTitle = encodeURIComponent(slug.trim());
         localStorage.setItem("url", url)
-        router.push('/BlogDetails');
+        localStorage.setItem("content", content.rendered)
+        router.push(`/scholar-hangout/${formattedTitle}`);
     };
 
     const handleChange = () => {
@@ -70,7 +75,7 @@ const BlogNext = () => {
 
     return (
         <>
-        {<Metadata metaData={metaData} />}
+        {/* {<Metadata metaData={metaData} />} */}
             <div className="navbar">
                 <div className="tabs">
                     <a target="_blank" href="https://www.manuscriptedit.com/scholar-hangout/category/publication/">Scholar Hub</a>
@@ -128,6 +133,8 @@ const BlogNext = () => {
                     date,
                     excerpt,
                     guid,
+                    slug,
+                    content,
                     _embedded: {
                         'wp:featuredmedia': [{
                             source_url
@@ -139,7 +146,7 @@ const BlogNext = () => {
                 return (
 
                     <>
-                        <div className="row Blognext7" onClick={() => handleRedirect(guid.rendered)}>
+                        <div className="row Blognext7" onClick={() => handleRedirect(guid.rendered,slug,content)}>
                             <div className="col-lg-5" >
                                 {source_url && <img className="blogImg" src={source_url} alt="no image" />}
                             </div>
