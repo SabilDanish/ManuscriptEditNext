@@ -4,12 +4,12 @@ import './Accordion.css';  // Link your CSS file
 
 
 const PublicationAccordion = () => {
-  const [activeKey, setActiveKey] = useState("0");
+  const [activeKey, setActiveKey] = useState<any>("0");
   const [recentKey, setRecentKey] = useState<string>('0');
-  const [tabKey, setTabKey] = useState("0");
+  const [tabKey, setTabKey] = useState<any>("0");
 
   // Define the images for each accordion item
-  const images = {
+  const images: { [key: number]: string } = {
     0: "/images/A1.png",
     1: "/images/A2.png",
     2: "/images/A3.png",
@@ -24,7 +24,7 @@ const PublicationAccordion = () => {
     }
   }, [activeKey]);
 
-  // Handle accordion toggle to update the image and active key
+ 
   const handleAccordionToggle = (key: any) => {
     if (key === activeKey) {
       return;
