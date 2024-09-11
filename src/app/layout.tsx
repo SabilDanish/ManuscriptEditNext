@@ -114,6 +114,7 @@ export default function RootLayout({
         <Header />
         <Suspense fallback={<p style={{ width: "100%", display: 'flex', justifyContent: "center" }}><DNA /></p>}>{children}</Suspense>
         <FloatingWp />
+        
         {footer()}
       </body>
     </html>

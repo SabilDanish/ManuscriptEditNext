@@ -10,6 +10,7 @@ import { data } from '../../../../utils/metaFile.js'
 import Metadata from "@/app/Metadata";
 import { DiscountBanner, DiscountMessage } from "./DiscountSection";
 
+
 const newData: any = data;
 
 export default function Home() {
@@ -223,7 +224,7 @@ export default function Home() {
 
       {/* </div > */}
       {/* </section > */}
-      <div className="service_area style2 pt-0 pb-0">
+      {/* <div className="service_area style2 pt-0 pb-0">
         <div className="container">
           <div className="row">
             <div className="col-lg-6"></div>
@@ -317,7 +318,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {SpecializedArea()}
       {ourProfessional()}
       {clientFeedback()}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./Faq.css"; // Import the CSS file
-
+import "./Faq.css"; 
 const faqs = [
   {
     question: "ManuscriptEdit has different packages for Publication Support. Do these packages guarantee publication?",
