@@ -7,10 +7,12 @@ const BlogDetailsClient = () => {
   const [url, setUrl] = useState<string | null>(null);
   const [excerpt, setExcerpt] = useState<any>()
   const iframeWrapperRef = useRef<HTMLDivElement | null>(null);
+  const [title, setTitle] = useState<string | null>()
 
   useEffect(() => {
     setUrl(localStorage.getItem('url'));
     setExcerpt(localStorage.getItem('content'))
+    setTitle(localStorage.getItem("title"))
   }, []);
 
   useEffect(() => {
@@ -26,7 +28,12 @@ const BlogDetailsClient = () => {
     <div className="container">
       <div className="iframe-wrapper" id="iframe-wrapper" ref={iframeWrapperRef}>
         {/* {excerpt ? (
+      <div className="iframe-wrapper" id="iframe-wrapper">
+        {excerpt ? (
+          <div>
+            <h1>{title}</h1>
           <div dangerouslySetInnerHTML={{__html: excerpt}}/>
+          </div>
         ) : (
           <p>Loading...</p>
         )} */}
