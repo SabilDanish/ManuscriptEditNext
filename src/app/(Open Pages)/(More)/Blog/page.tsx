@@ -14,7 +14,6 @@ const newData: any = data;
 
 const BlogNext = () => {
     // const pathName: string = usePathname().split("/").filter(val => val).join("")
-    // console.log({pathName})
     // let metaData = newData[pathName]
     const [page, setPage] = useState<number>(1)
     const [searchedBlog, setSearchedBlog] = useState<any>()
@@ -26,9 +25,7 @@ const BlogNext = () => {
 
     const inputRef = useRef<any>()
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-    let { loading, error, blogs } = useBlogs(page);
-
-    console.log({blogs})
+    let { loading, error, blogs } = useBlogs(page)
 
    
 

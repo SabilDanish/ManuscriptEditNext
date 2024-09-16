@@ -14,10 +14,10 @@ const BlogDesk = ({ blogs }: any) => {
     router.push(url);
   };
 
-  const handleRedirect = (url: string): void => {
+  const handleRedirect = (url: string,slug: string): void => {
     const data = { url };
     localStorage.setItem("url", url)
-    router.push('/BlogDetails');
+    router.push(`/scholar-hangout/${slug}`);
   };
 
   return (
@@ -36,11 +36,11 @@ const BlogDesk = ({ blogs }: any) => {
       <div className="container BlogDesktop">
         <div className="row">
           {blogs.map((blog: any, index: number) => {
-            console.log({ blog })
             const {
               title: { rendered },
               date,
               guid,
+              slug,
               _embedded: {
                 'wp:featuredmedia': [{
                     source_url
@@ -49,7 +49,7 @@ const BlogDesk = ({ blogs }: any) => {
             } = blog;
             if (index < 4) {
               return (
-                <div key={index} className="col-lg-3" onClick={() => handleRedirect(guid.rendered)}>
+                <div key={index} className="col-lg-3" onClick={() => handleRedirect(guid.rendered,slug)}>
                   <div className="card">
                     <img src={source_url} className="card-img-top" alt="..."/>
                     <div className="card-body">
