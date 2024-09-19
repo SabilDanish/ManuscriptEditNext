@@ -53,3 +53,18 @@
     height: 60px;
     margin-bottom: 30px;
 }
+
+/* .card-body{
+    padding: 0px !important;
+} */
+
+.TitleAll {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem !important;
+}
+
+.TitleDescription {
+    width: 100%;
+    text-align: center;
+}

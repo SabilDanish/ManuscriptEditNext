@@ -15,10 +15,10 @@ const BlogMob = ({ blogs }: any) => {
     router.push(url);
   };
 
-  const handleRedirect = (url: string): void => {
+  const handleRedirect = (url: string,slug: string): void => {
     const data = { url };
     localStorage.setItem("url", url)
-    router.push('/BlogDetails');
+    router.push(`/scholar-hangout/${slug}`);
   };
   return (
     <>
@@ -36,6 +36,7 @@ const BlogMob = ({ blogs }: any) => {
             title: { rendered },
             date,
             guid,
+            slug,
             _embedded: {
               'wp:featuredmedia': [{
                 source_url
@@ -48,7 +49,7 @@ const BlogMob = ({ blogs }: any) => {
                 className="row"
                 style={{ justifyContent: "center", marginBottom: "20px !important" }}
                 key={index}
-                onClick={() => handleRedirect(guid.rendered)}
+                onClick={() => handleRedirect(guid.rendered,slug)}
               >
                 <img src={source_url} className="BlogImg" alt="Blog Banner" />
 
