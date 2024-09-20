@@ -1,0 +1,154 @@
+/* Container for both mobile and desktop views */
+.contBorder {
+    background-color: #f9f9f9;
+    border: 1px solid #d1e9ff;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Styling for Mobile View */
+.card-services {
+    border: none;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.card-header-services {
+    background-color: #e2f3ff;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card-body-services {
+    background-color: #f0f9ff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.btn {
+    font-size: 18px;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.btn-link {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.collapse.show {
+    display: block;
+}
+
+/* Subcategory buttons for mobile view */
+.subcategory-btn {
+    background-color: #e2f3ff;
+    padding: 10px;
+    border-radius: 8px;
+    color: #6c757d;
+    font-weight: 500;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.subcategory-btn:hover {
+    background-color: #d1e9ff;
+}
+
+/* Desktop view styling */
+#desktop-view {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#sidebar {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    height: 100%;
+}
+
+.list-group-item {
+    background-color: #ffffff;
+    border: none;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.list-group-item:hover {
+    background-color: #f0f9ff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item.active {
+    background-color: #e2f3ff;
+    color: #333;
+}
+
+/* Content section (subcategories) in desktop view */
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.subcategory-btn {
+    background-color: #e2f3ff;
+    padding: 10px 20px;
+    width: 15rem;
+    border-radius: 8px;
+    color: #6c757d;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subcategory-btn:hover {
+    background-color: #d1e9ff;
+}
+
+/* Mobile view accordion styling */
+#mobile-view .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    #desktop-view {
+        display: none;
+    }
+
+    #mobile-view {
+        display: block;
+    }
+}
+
+/* Desktop view media query */
+@media (min-width: 769px) {
+    #mobile-view {
+        display: none;
+    }
+
+    #desktop-view {
+        display: flex;
+    }
+}

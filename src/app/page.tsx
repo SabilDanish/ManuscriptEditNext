@@ -34,6 +34,7 @@ import RadioSection from "./_Common/RadioSection/RadioSection";
 import OfferSlider from "./_Common/_OfferSlider/OfferSlider";
 import PublicationAccordion from "./_Common/AccordionLatest/Accordion";
 import Dropdown2 from "./_Common/Dropdown2/Dropdown2";
+import OurServices from "./_Common/_OurServices/OurServices";
 
 
 
@@ -83,6 +84,8 @@ export default function Home() {
       <FaqHome />
 
 <PublicationAccordion/>
+
+    <OurServices />
       
     </>
   );

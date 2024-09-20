@@ -9,58 +9,62 @@ const Clients = () => {
     const [offset, setOffset] = useState(0)
     const [allPartner, setAllPartner] = useState<Partner[]>([])
     const { loading, error, partners } = useFetchPartners(limit, offset)
+    const [activeTab, setActiveTab] = useState<'companies' | 'journals'>('companies');
 
     useEffect(() => {
         setAllPartner(prev => [...prev, ...partners])
     }, [partners])
-    return (
-        // <div style={{marginTop:"60px"}}>
-        //     <h2 className='TitleAll' style={{ textAlign: 'center', marginTop: '20px' }}>Trusted by 500+ Partners</h2>
-        //     <p style={{ textAlign: 'center', marginBottom:"40px" }}>Uniting Academia: Bridging Journals, Publishers, Universities, and Societies</p>
-        //     <div className="marquee-container" style={{ marginTop: '0px' }}>
-        //         <div className="marquee-content">
-        //             <img src="./images/Logos.jpg" alt="partners" className="image-important" />
-        //         </div>
-        //     </div>
-        // </div>
-        <div className="container mb-3">
-                <div className="row">
-                    <h2 className='TitleAll'>Trusted by 500+ Partners</h2>
-                    <h5 className='TitleDescription'>Uniting Academia: Bridging Journals, Publishers, Universities, and Societies</h5>
-                    {
-                        loading && !allPartner.length && (
-                            <DNA
-                                visible={true}
-                                height="80"
-                                width="80"
-                                ariaLabel="dna-loading"
-                                wrapperStyle={{}}
-                                wrapperClass="dna-wrapper"
-                            />
+
+    const renderLogos = (items: string) => {
+        return (
+            <div className="logo-grid">
+                {
+                    loading && !allPartner.length && (
+                        <DNA
+                            visible={true}
+                            height="80"
+                            width="80"
+                            ariaLabel="dna-loading"
+                            wrapperStyle={{}}
+                            wrapperClass="dna-wrapper"
+                        />
+                    )
+                }
+                {allPartner.length ? allPartner.map((item, index) => {
+                    if (index < 12) {
+                        return (
+                            <div key={index} className="logo-item" >
+                                <img src={item.logo_link} alt="image" />
+                            </div>
                         )
                     }
-                    {
-                        allPartner.length ? allPartner.map((partner, index) => {
-                            const { logo_link, part_link } = partner
-                            console.log({logo_link,part_link})
-                            if(index < 6){
-                                return (
-                                    <div className="col-md-4" key={index}>
-                                        <a href={part_link} target="_blank" rel="noopener noreferrer" className="card-link">
-                                            <div className="card text-center mr-4 mt-5">
-                                                <div className="card-body">
-                                                <img src={logo_link} width="200px" height="83px" alt="" />
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                )
-                            }
-                        }) : ""
-                    }
-                    <br />
+                }) : ""}
+            </div>
+        )
+    };
+    return (
+        <>
+            <div className="companies-journals-container">
+                <div className="tabs clients-tab">
+                    <button
+                        className={activeTab === 'companies' ? 'active' : ''}
+                        onClick={() => setActiveTab('companies')}
+                    >
+                        Companies We Work For
+                    </button>
+                    <button
+                        className={activeTab === 'journals' ? 'active' : ''}
+                        onClick={() => setActiveTab('journals')}
+                    >
+                        Journals We Published
+                    </button>
+                </div>
+
+                <div className="content">
+                    {activeTab === 'companies' ? renderLogos("companies") : renderLogos("journals")}
                 </div>
             </div>
+        </>
     );
 }
 

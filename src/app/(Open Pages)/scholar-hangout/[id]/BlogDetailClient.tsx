@@ -21,8 +21,6 @@ const BlogDetailsClient = () => {
     }
   }, [excerpt]);
 
-  console.log({excerpt})
-
 
   return (
     <div className="container">
