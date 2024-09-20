@@ -1,9 +1,9 @@
 /* Add to Testimonial.css */
 
-.star-rating {
+/* .star-rating {
     display: flex;
     direction: row;
-    font-size: 2rem; /* Adjust size as needed */
+    font-size: 2rem; 
     color: #ffd700;
     justify-content: flex-start;
     padding-top: 10px;
@@ -24,4 +24,58 @@
 
 .card span {
     font-size: 23px;
-}
+} */
+
+
+
+.testimonial-section1 {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .testimonial-section1 h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .testimonial-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .testimonial-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-card h3 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .testimonial-card span {
+    color: #666;
+    font-size: 0.9em;
+  }
+  
