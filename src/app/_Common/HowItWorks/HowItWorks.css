@@ -46,3 +46,26 @@
     text-decoration: underline;
   }
   
+
+  .heading {
+    display: flex;
+    align-items: center;
+  }
+  
+  .heading p {
+    margin-right: 10px; /* Add spacing between the text and the line */
+    font-weight: bold;
+    color: #1f3c65; /* The color from the image */
+  }
+  
+  .line {
+    width: 100px; /* Set the specific width for the line */
+    height: 1px;
+    background-color: #1f3c65; /* Same color as the text */
+    display: inline-block;
+  }
+
+  p{
+    margin-top: 11px;
+  }
+  

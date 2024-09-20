@@ -35,6 +35,9 @@ import OfferSlider from "./_Common/_OfferSlider/OfferSlider";
 import PublicationAccordion from "./_Common/AccordionLatest/Accordion";
 import Dropdown2 from "./_Common/Dropdown2/Dropdown2";
 import HowItWorks from "./_Common/HowItWorks/HowItWorks";
+import CustomizedServices from "./_Common/CustomizedServices/CustomServices";
+import WhyChooseUs from "./_Common/WhyChooseUs/WhyChooseUs";
+import NewsletterSubscribe from "./_Common/SubsNewsletter/SubsNewsletter";
 
 
 
@@ -76,7 +79,13 @@ export default function Home() {
 
       <HowItWorks/>
 
-      <Testimonial />
+      <WhyChooseUs/>
+
+      {/* <NewsletterSubscribe/> */}
+
+      {/* <CustomizedServices/> */}
+
+      {/* <Testimonial /> */}
 
       {blogs && blogs.length && <BlogDesk blogs={blogs} />}
 

@@ -1,0 +1,87 @@
+/* Container */
+.why-choose-us {
+  background-color: #f0f4f9 !important;
+  padding: 40px 20px;
+  border-radius: 8px;
+  background: url("https://www.manuscriptedit.com/images/call-bg.png");
+}
+
+/* Left Section */
+.why-title {
+  font-size: 2rem;
+  color: #22325d;
+  font-weight: 700;
+  margin-bottom: 10px !important;
+}
+
+.why-subtitle {
+  font-size: 1.75rem;
+  color: #22325d;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.why-description {
+  font-size: 1rem;
+  color: #7a7f93;
+  line-height: 1.75;
+  margin-bottom: 30px;
+}
+
+/* Expert Box */
+.expert-box {
+  padding: 10px 20px;
+  background-color: #e2efff;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 1.25rem;
+  color: #22325d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.stat-card{
+  cursor: pointer;
+}
+
+.expert-count {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* Stat Cards */
+.stat-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.stat-number {
+  font-size: 1.25rem;
+  color: #22325d;
+  font-weight: 700;
+}
+
+.stat-description {
+  font-size: 1rem;
+  color: #7a7f93;
+}
+
+.paaddRow{
+  padding: 0px 74px;
+}
+
+@media(max-width:768px){
+  .paaddRow{
+    padding: 0px 0px;
+  }
+}
