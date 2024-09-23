@@ -57,25 +57,25 @@ export default function Home() {
       <ToastContainer />
 
       <TopBannerForm />
-      <OfferSlider />
+      {/* <OfferSlider /> */}
 
-      <RadioSection />
+      {/* <RadioSection /> */}
       {/* <GetHelpMobile /> */}
       {/* <TrustedPartner/> */}
 
       {/* End of Biswa's custom codes */}
 
-      <SocialIcon />
-      <GetEvery />
-      <GetHelp />
-      <Dropdown2 />
-      <Clients />
-      <OurProfessional />
+      {/* <SocialIcon /> */}
+      {/* <GetEvery /> */}
+      {/* <GetHelp /> */}
+     
+      {/* <Clients /> */}
+      {/* <OurProfessional /> */}
       {/* <UpcomingWebinar/> */}
-      <CounterComponent />
+      {/* <CounterComponent /> */}
       <HowItWorks/>
       <WhyChooseUs/>
-      <NewsletterSubscribe/>
+      <Experts/>
       <CustomizedServices/>
       <Testimonial />
 
@@ -85,10 +85,11 @@ export default function Home() {
       {blogs && blogs.length && <BlogMob blogs={blogs} />}
      
 
-      <FaqHome />
-      <Experts/>
+      {/* <FaqHome /> */}
 
-<PublicationAccordion/>
+      <Dropdown2 />
+      <NewsletterSubscribe/>
+{/* <PublicationAccordion/> */}
       
     </>
   );

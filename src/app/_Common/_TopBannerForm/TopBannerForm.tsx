@@ -259,10 +259,6 @@
 
 import { useRef, useState, useEffect } from "react";
 import "./TopBannerForm.css";
-import banner1 from "../../utils/images/banner_01.jpg";
-// import banner2 from "../../utils/images/banner13.jpg";
-// import banner3 from "../../utils/images/banner11.jpg";
-// import banner4 from "../../utils/images/banner14.jpg";
 import bannerA from '../../utils/images/bannerA.png';
 
 import useForm from "@/app/hooks/mainForm/useForm";
@@ -272,20 +268,23 @@ const TopBannerForm = () => {
 
   return (
     <>
-<div className="container d-flex" >
-<div className= "col-lg-6">
-  <h4  style={{fontWeight: "Bold", fontSize:"2rem"}}>
-  <span style={{fontSize:"3rem",color:"#6C070A", fontWeight:"800"}}>16 Years</span> of Servicing 
-the Scientific Community 
-Globally
-  </h4>
-  <h6>We provide end to end assistance from conception to publication.</h6>
-</div>
-<div className={`$"carouselItem" $"active" col-lg-6`}>
-  <img src={bannerA.src} className="carouselImage" alt="Banner 1" />
-   </div>
+      <div className="container" >
+        <div className="row">
+          <div className="col-lg-5">
+            <h4 style={{ fontWeight: "Bold", fontSize: "2rem", marginTop: "20%" }}>
+              <span style={{ fontSize: "3rem", color: "#6C070A", fontWeight: "800" }}>Expert</span> Research Paper Editing and
+              Publishing Services for Global Impact
+            </h4>
+            <h5 style={{ marginTop: "2rem" }}>We provide end to end assistance from conception to publication.</h5>
+            <a className="btn mt-12" href="#" role="button" style={{ backgroundColor: "#151130", color: "white", marginTop: "2rem" }}>Get Started →</a>
+          </div>
+          <div className={`$"carouselItem" $"active" col-lg-7`}>
+            <img src={bannerA.src} className="carouselImage" alt="Banner 1" />
+          </div>
+        </div>
 
-</div>
+
+      </div>
     </>
   );
 };
