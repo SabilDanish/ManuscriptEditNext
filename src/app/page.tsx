@@ -76,11 +76,6 @@ export default function Home() {
 
       <WhyChooseUs />
 
-      {/* <NewsletterSubscribe/> */}
-
-      {/* <CustomizedServices/> */}
-
-      {/* <Testimonial /> */}
 
       {blogs && blogs.length && <BlogDesk blogs={blogs} />}
       {blogs && blogs.length && <BlogMob blogs={blogs} />}
