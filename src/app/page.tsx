@@ -50,43 +50,26 @@ export default function Home() {
   return (
     <>
       <ToastContainer />
-
       <TopBannerForm />
       <OfferSlider />
-
       <RadioSection />
       {/* <GetHelpMobile /> */}
       {/* <TrustedPartner/> */}
-
       {/* End of Biswa's custom codes */}
-
       {/* <SocialIcon /> */}
-
       {/* <GetEvery /> */}
-
       <GetHelp />
       <Dropdown2 />
       <Clients />
-
       <OurProfessional />
-
       {/* <UpcomingWebinar/> */}
-
       {/* <CounterComponent /> */}
-
       <Testimonial />
-
       {blogs && blogs.length && <BlogDesk blogs={blogs} />}
-
       {blogs && blogs.length && <BlogMob blogs={blogs} />}
-     
-
       <FaqHome />
-
-<PublicationAccordion/>
-
-    <OurServices />
-      
+      <PublicationAccordion/>
+      <OurServices />
     </>
   );
 }
