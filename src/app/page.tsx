@@ -35,6 +35,12 @@ import OfferSlider from "./_Common/_OfferSlider/OfferSlider";
 import PublicationAccordion from "./_Common/AccordionLatest/Accordion";
 import Dropdown2 from "./_Common/Dropdown2/Dropdown2";
 import OurServices from "./_Common/_OurServices/OurServices";
+import HowItWorks from "./_Common/HowItWorks/HowItWorks";
+import CustomizedServices from "./_Common/CustomizedServices/CustomServices";
+import WhyChooseUs from "./_Common/WhyChooseUs/WhyChooseUs";
+import NewsletterSubscribe from "./_Common/SubsNewsletter/SubsNewsletter";
+import Experts from "./_Common/ExpertCard/Experts";
+
 
 
 
@@ -65,11 +71,26 @@ export default function Home() {
       {/* <UpcomingWebinar/> */}
       {/* <CounterComponent /> */}
       <Testimonial />
+
+      <HowItWorks />
+
+      <WhyChooseUs />
+
+      {/* <NewsletterSubscribe/> */}
+
+      {/* <CustomizedServices/> */}
+
+      {/* <Testimonial /> */}
+
       {blogs && blogs.length && <BlogDesk blogs={blogs} />}
       {blogs && blogs.length && <BlogMob blogs={blogs} />}
       <FaqHome />
-      <PublicationAccordion/>
+      <PublicationAccordion />
       <OurServices />
+      <Experts />
+
+      <PublicationAccordion />
+
     </>
   );
 }
