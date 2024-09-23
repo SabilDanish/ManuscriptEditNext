@@ -61,7 +61,7 @@ const experts = [
 const Experts = () => {
   return (
     <div className="container">
-      <h2 className="text-center my-4">Our Experts</h2>
+      <h2 className="text-center accordion__title my-4">Our Experts</h2>
       <div className="row">
         {experts.map((expert, index) => (
           <div className="col-lg-4 col-md-6 d-flex" key={index}>

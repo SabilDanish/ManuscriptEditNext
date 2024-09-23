@@ -39,6 +39,7 @@ import CustomizedServices from "./_Common/CustomizedServices/CustomServices";
 import WhyChooseUs from "./_Common/WhyChooseUs/WhyChooseUs";
 import NewsletterSubscribe from "./_Common/SubsNewsletter/SubsNewsletter";
 import Experts from "./_Common/ExpertCard/Experts";
+import PublicationPackages from "./_Common/Publication_package/Publication_package";
 
 
 
@@ -70,7 +71,7 @@ export default function Home() {
       {/* <GetEvery /> */}
 
       <GetHelp />
-      <Dropdown2 />
+      
       <Clients />
 
       <OurProfessional />
@@ -85,7 +86,7 @@ export default function Home() {
 
       {/* <NewsletterSubscribe/> */}
 
-      {/* <CustomizedServices/> */}
+      <CustomizedServices/>
 
       {/* <Testimonial /> */}
 
@@ -97,7 +98,11 @@ export default function Home() {
       <FaqHome />
       <Experts/>
 
-<PublicationAccordion/>
+      <PublicationPackages/>
+
+      <Dropdown2 />
+
+{/* <PublicationAccordion/> */}
       
     </>
   );

@@ -11,7 +11,7 @@
 
 .service-cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
@@ -20,7 +20,7 @@
 .service-card {
     border-radius: 8px;
     padding: 20px;
-    width: 130px;
+    width: 250px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;

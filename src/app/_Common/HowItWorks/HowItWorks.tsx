@@ -5,27 +5,27 @@ const HowItWorks = () => {
   const steps = [
     {
       id: 1,
-      title: "Sign up",
+      title: "Submit Your Order",
       description:
-        "Ipsum lorem dolor amet sit elit. Duis at est id leosco for it",
+        "Provide your research details, and we’ll get started on your project.",
     },
     {
       id: 2,
-      title: "Select course",
+      title: "Assign to Expert",
       description:
-        "Ipsum lorem dolor amet sit elit. Duis at est id leosco for it",
+        "Your project is assigned to a skilled expert for comprehensive review ",
     },
     {
       id: 3,
-      title: "Start Learning",
+      title: "Editing in Progress",
       description:
-        "Ipsum lorem dolor amet sit elit. Duis at est id leosco for it",
+        "We enhance your paper’s structure, clarity, and academic quality.",
     },
     {
       id: 4,
-      title: "Get Certificate",
+      title: "Receive Final Document",
       description:
-        "Ipsum lorem dolor amet sit elit. Duis at est id leosco for it",
+        "Get the polished manuscript ready for submission or further review.",
     },
   ];
 
@@ -43,10 +43,7 @@ const HowItWorks = () => {
 
           <div className="col-lg-6">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-              ut enim rem sapiente eum earum, perferendis aliquid aut nam neque!
-              Autem dolores tempore minima perferendis commodi error vitae in
-              facilis!
+            We simplify the process of enhancing your research work. From submitting your order to receiving the polished manuscript, our expert team ensures precision and quality at every step. Let us help you achieve publication success with ease. 
             </p>
           </div>
         </div>

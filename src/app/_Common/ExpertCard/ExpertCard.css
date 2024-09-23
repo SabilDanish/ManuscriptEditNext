@@ -14,7 +14,6 @@
   
   .expert-card-body {
     display: flex; /* Flex layout for image and info */
-    align-items: center;
     margin-bottom: 15px; /* Space between the info and the education section */
   }
   
