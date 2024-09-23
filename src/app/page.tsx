@@ -38,6 +38,8 @@ import HowItWorks from "./_Common/HowItWorks/HowItWorks";
 import CustomizedServices from "./_Common/CustomizedServices/CustomServices";
 import WhyChooseUs from "./_Common/WhyChooseUs/WhyChooseUs";
 import NewsletterSubscribe from "./_Common/SubsNewsletter/SubsNewsletter";
+import Experts from "./_Common/ExpertCard/Experts";
+
 
 
 
@@ -93,6 +95,7 @@ export default function Home() {
      
 
       <FaqHome />
+      <Experts/>
 
 <PublicationAccordion/>
       
