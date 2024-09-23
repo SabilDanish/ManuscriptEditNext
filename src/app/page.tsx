@@ -63,29 +63,20 @@ export default function Home() {
 
       {/* End of Biswa's custom codes */}
 
-      {/* <SocialIcon /> */}
-
-      {/* <GetEvery /> */}
-
+      <SocialIcon />
+      <GetEvery />
       <GetHelp />
       <Dropdown2 />
       <Clients />
-
       <OurProfessional />
-
       {/* <UpcomingWebinar/> */}
-
-      {/* <CounterComponent /> */}
-
+      <CounterComponent />
       <HowItWorks/>
-
       <WhyChooseUs/>
+      <NewsletterSubscribe/>
+      <CustomizedServices/>
+      <Testimonial />
 
-      {/* <NewsletterSubscribe/> */}
-
-      {/* <CustomizedServices/> */}
-
-      {/* <Testimonial /> */}
 
       {blogs && blogs.length && <BlogDesk blogs={blogs} />}
 
