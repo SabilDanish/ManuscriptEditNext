@@ -10,6 +10,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faServicestack } from '@fortawesome/free-brands-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 
 
@@ -45,9 +46,6 @@ const GetHelp = () => {
         setActiveTab(tab);
        
     };
-
-
-    console.log({activeTab})
 
     return (
         <>
@@ -107,9 +105,9 @@ const GetHelp = () => {
                                                                         ))}
                                                                     </ul>
 
-                                                                    <a href={link}>
+                                                                    <Link href={link}>
                                                                         <button className="Know-More">Select Services</button>
-                                                                    </a>
+                                                                    </Link>
                                                                 </div>
                                                             </div>
 
