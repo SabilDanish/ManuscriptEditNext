@@ -67,7 +67,7 @@ export default function Home() {
       <GetHelp />
       <Dropdown2 />
       <Clients />
-      <OurProfessional />
+      {/* <OurProfessional /> */}
       {/* <UpcomingWebinar/> */}
       {/* <CounterComponent /> */}
       <Testimonial />
