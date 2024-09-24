@@ -3,7 +3,7 @@ import ExpertCard from './ExpertCard';
 
 const experts = [
   {
-    name: 'Dr. Olivia Williams',
+    name: 'Dr. O W',
     title: 'M.D. (University of Texas Southwestern Medical Center, Dallas)',
     education: [
       'Ph.D in Oncology - University of Pennsylvania.',
@@ -12,7 +12,7 @@ const experts = [
     image: '/images/ourprof/aa1.jpg'
   },
   {
-    name: 'Dr. David Wilson',
+    name: 'Dr. D W',
     title: 'M.B.B.S (King’s College London/School of Medicine)',
     education: [
       'Ph.D in Pathology - University of Edinburgh.',
@@ -21,7 +21,7 @@ const experts = [
     image: '/images/ourprof/aa2.jpg'
   },
   {
-    name: 'Dr. Sophia Martinez',
+    name: 'Dr. S M',
     title: 'M.D. (Columbia University Vagelos College of Physicians and Surgeons)',
     education: [
       'Ph.D in Neurobiology - Duke University.',
@@ -30,7 +30,7 @@ const experts = [
     image: '/images/ourprof/aa3.jpg'
   },
   {
-    name: 'Dr. Emily Johnson',
+    name: 'Dr. E J',
     title: 'M.B.Ch.B (University of Cape Town/School of Medicine)',
     education: [
       'Ph.D in Human Genetics - University of Pretoria.',
@@ -39,7 +39,7 @@ const experts = [
     image: '/images/ourprof/aa4.jpg'
   },
   {
-    name: 'Dr. Michael Anderson',
+    name: 'Dr. M A',
     title: 'M.D. (New York University Grossman School of Medicine)',
     education: [
       'Ph.D in Public Health - Johns Hopkins University.',
@@ -48,7 +48,7 @@ const experts = [
     image: '/images/ourprof/aa6.jpg'
   },
   {
-    name: 'Dr. Lucas Thompson',
+    name: 'Dr. L T',
     title: 'M.B.Ch.B (University of Auckland/School of Medicine)',
     education: [
       'Ph.D in Epidemiology - University of Otago.',
