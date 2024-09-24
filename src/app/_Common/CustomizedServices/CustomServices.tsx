@@ -7,10 +7,6 @@ const services = [
     { id: 2, icon: <FaPen />, title: 'Writing Assistance' },
     { id: 3, icon: <FaChartBar />, title: 'Data Analysis Assistance' },
     { id: 4, icon: <FaAward />, title: 'Publication Package' },
-    { id: 5, icon: <FaEdit />, title: 'Editing Packages' },
-    { id: 6, icon: <FaChartBar />, title: 'Data Analysis Assistance' },
-    { id: 7, icon: <FaPen />, title: 'Writing Assistance' },
-    { id: 8, icon: <FaEdit />, title: 'Editing Packages' },
 ];
 
 const CustomizedServices = () => {

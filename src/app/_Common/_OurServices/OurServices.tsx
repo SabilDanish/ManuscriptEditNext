@@ -29,6 +29,13 @@ export default function OurServices() {
     };
     return (
         <>
+            <div className="container">
+                <div className="row">
+                    <div className="accordion__title">
+                        <h2>Our Services</h2>
+                    </div>
+                </div>
+            </div>
             <div className="container contBorder">
                 {isMobileView ? (
                     <div id="mobile-view" className="accordion">

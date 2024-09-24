@@ -1,5 +1,5 @@
-import React from 'react';
-import './WhyChooseUs.css'; 
+import React from "react";
+import "./WhyChooseUs.css";
 
 const WhyChooseUs = () => {
   return (
@@ -10,7 +10,11 @@ const WhyChooseUs = () => {
           <h2 className="why-title">Why Choose Us?</h2>
           <h3 className="why-subtitle">Trusted by 500+ Partners</h3>
           <p className="why-description">
-            The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy.
+            Expertise across diverse subject areas, ensuring precision in every
+            field. A global network of experts delivering tailored research
+            support. Seamless guidance from manuscript preparation to
+            publication success. Trusted by leading researchers and institutions
+            worldwide.
           </p>
           <div className="expert-box">
             <span className="expert-count">750+</span> Experts
@@ -36,8 +40,7 @@ const WhyChooseUs = () => {
   );
 };
 
-const StatCard = (props: {number:string ,text:string ,icon:string  }) => {
-
+const StatCard = (props: { number: string; text: string; icon: string }) => {
   return (
     <div className="stat-card d-flex align-items-center p-3 bg-white rounded shadow">
       <div className="stat-icon me-3 fs-2">{props.icon}</div>

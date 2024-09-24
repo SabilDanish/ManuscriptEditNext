@@ -40,6 +40,7 @@ import CustomizedServices from "./_Common/CustomizedServices/CustomServices";
 import WhyChooseUs from "./_Common/WhyChooseUs/WhyChooseUs";
 import NewsletterSubscribe from "./_Common/SubsNewsletter/SubsNewsletter";
 import Experts from "./_Common/ExpertCard/Experts";
+import PublicationPackages from "./_Common/Publication_package/Publication_package";
 
 
 
@@ -58,9 +59,9 @@ export default function Home() {
       <ToastContainer />
 
       <TopBannerForm />
-      <OfferSlider />
+      {/* <OfferSlider /> */}
 
-      <RadioSection />
+      {/* <RadioSection /> */}
       {/* <GetHelpMobile /> */}
       {/* <TrustedPartner/> */}
 
@@ -70,19 +71,20 @@ export default function Home() {
 
       {/* <GetEvery /> */}
 
-      <GetHelp />
-      <Dropdown2 />
+      {/* <GetHelp /> */}
+      
       <Clients />
       {/* <OurProfessional /> */}
       {/* <UpcomingWebinar/> */}
 
       {/* <CounterComponent /> */}
-
-      <Testimonial />
-
-      <HowItWorks />
-
       <WhyChooseUs />
+      <PublicationPackages/>
+      <HowItWorks />
+      <CustomizedServices/>
+      <OurServices />
+      <Experts />
+      <Testimonial />
 
 
       {blogs && blogs.length && <BlogDesk blogs={blogs} />}
@@ -90,11 +92,13 @@ export default function Home() {
       {blogs && blogs.length && <BlogMob blogs={blogs} />}
      
 
-      <FaqHome />
-      <PublicationAccordion />
-      <OurServices />
-      <Experts />
+      {/* <FaqHome />
+      <PublicationAccordion /> */}
 
+      {/* <Dropdown2 /> */}
+
+{/* <PublicationAccordion/> */}
+      
     </>
   );
 }
