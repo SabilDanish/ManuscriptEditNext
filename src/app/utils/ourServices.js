@@ -12,7 +12,9 @@ export const ourServices = [
             "Pediatrics",
             "Psychiatry",
             "Pharmacology",
+            "See More"
         ],
+        url: "/MedicalWrite"
     },
     {
         category: "Life Sciences",
@@ -25,6 +27,7 @@ export const ourServices = [
             "Evolutionary Biology",
             "Bioinformatics",
             "Marine Biology",
+            "See More"
         ],
     },
     {
@@ -38,6 +41,7 @@ export const ourServices = [
             "Materials Science",
             "Robotics and Automation",
             "Environmental Engineering",
+            "See More"
         ],
     },
     {
@@ -51,6 +55,7 @@ export const ourServices = [
             "Criminology",
             "Human Geography",
             "Communication Studies",
+            "See More"
         ],
     },
     {
@@ -64,6 +69,7 @@ export const ourServices = [
             "Entrepreneurship",
             "Macroeconomics",
             "Business Ethics",
+            "See More"
         ],
     },
 ];
