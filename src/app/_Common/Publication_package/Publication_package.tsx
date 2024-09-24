@@ -17,6 +17,17 @@ const PackageCard = (props:{title:string ,features:string[] }) => (
 const PublicationPackages = () => {
     const packages = [
         {
+          title: "Editing Plans",
+          features: [
+            "Extensive Sentence Rewriting for Improved Clarity and Flow",
+            "Logical Structure Enhancement and Content Reorganization",
+            "Advanced Terminology Check with Focus on Consistency",
+            "Journal-Specific Formatting and Consistency Checks",
+            "Reviewer Response Letter Editing",
+            "Full Journal-Ready Presentation for Submission"
+          ]
+        },
+        {
           title: "Publication Packages",
           features: [
             "Peer Review Analysis",
@@ -34,17 +45,6 @@ const PublicationPackages = () => {
           ]
         },
         {
-          title: "Editing Plans",
-          features: [
-            "Extensive Sentence Rewriting for Improved Clarity and Flow",
-            "Logical Structure Enhancement and Content Reorganization",
-            "Advanced Terminology Check with Focus on Consistency",
-            "Journal-Specific Formatting and Consistency Checks",
-            "Reviewer Response Letter Editing",
-            "Full Journal-Ready Presentation for Submission"
-          ]
-        },
-        {
           title: "Data Analysis Plans",
           features: [
             "Expert Scientific Data Review & Analysis",
@@ -54,17 +54,17 @@ const PublicationPackages = () => {
             "Critical Data Interpretation Emphasizing Scientific Rigor"
           ]
         },
-        {
-          title: "Scientific Writing Assistance Plans",
-          features: [
-            "Manuscript Drafting from Research Data",
-            "Abstract and Introduction Development",
-            "Comprehensive Literature Review Writing",
-            "Scientific Argumentation and Clarity Improvement",
-            "Journal-Specific Formatting and Submission Guidance",
-            "Response Letter Drafting for Reviewer Comments"
-          ]
-        },
+        // {
+        //   title: "Scientific Writing Assistance Plans",
+        //   features: [
+        //     "Manuscript Drafting from Research Data",
+        //     "Abstract and Introduction Development",
+        //     "Comprehensive Literature Review Writing",
+        //     "Scientific Argumentation and Clarity Improvement",
+        //     "Journal-Specific Formatting and Submission Guidance",
+        //     "Response Letter Drafting for Reviewer Comments"
+        //   ]
+        // },
         {
           title: "Research Advisory Plans",
           features: [
