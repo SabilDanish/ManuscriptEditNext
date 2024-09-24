@@ -80,7 +80,15 @@ const PublicationPackages = () => {
       
 
   return (
-    <div className="container packages-section">
+    <>
+      <div className="container">
+        <div className="row">
+          <div className="accordion__title">
+            <h2>Packaged Services</h2>
+          </div>
+        </div>
+      </div>
+      <div className="container packages-section">
       <div className="row">
         {packages.map((pkg, index) => (
           <div className="col-lg-3 col-md-6 col-sm-12 mb-4" key={index}>
@@ -89,6 +97,7 @@ const PublicationPackages = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

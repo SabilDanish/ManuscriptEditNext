@@ -19,16 +19,21 @@ export default function OurServices() {
     };
 
     useEffect(() => {
-        handleResize(); 
-        window.addEventListener('resize', handleResize); 
+        handleResize();
+        window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize); // Cleanup listener on unmount
     }, []);
 
-    const showSubcategories = (index:any) => {
+    const showSubcategories = (index: any) => {
         setSelectedCategoryIndex(index);
     };
     return (
         <>
+            <div className="container">
+                <div className="text-center accordion__title">
+                    <h2>Our Services</h2>
+                </div>
+            </div>
             <div className="container contBorder">
                 {isMobileView ? (
                     <div id="mobile-view" className="accordion">

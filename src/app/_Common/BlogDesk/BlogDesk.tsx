@@ -28,7 +28,7 @@ const BlogDesk = ({ blogs }: any) => {
             className="accordion__title"
             style={{ marginTop: "30px", marginBottom: "40px" }}
           >
-            OUR BEST-READ SCIENTIFIC ARTICLES
+            OUR ARTICLES
           </h1>
         </div>
       </div>

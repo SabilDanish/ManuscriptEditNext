@@ -89,7 +89,7 @@
 }
 
 .list-group-item.active {
-    background-color: #e2f3ff;
+    background-color: #e2f3ff !important;
     color: #333;
 }
 

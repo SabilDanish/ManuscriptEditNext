@@ -35,6 +35,13 @@ import OfferSlider from "./_Common/_OfferSlider/OfferSlider";
 import PublicationAccordion from "./_Common/AccordionLatest/Accordion";
 import Dropdown2 from "./_Common/Dropdown2/Dropdown2";
 import OurServices from "./_Common/_OurServices/OurServices";
+import HowItWorks from "./_Common/HowItWorks/HowItWorks";
+import CustomizedServices from "./_Common/CustomizedServices/CustomServices";
+import WhyChooseUs from "./_Common/WhyChooseUs/WhyChooseUs";
+import NewsletterSubscribe from "./_Common/SubsNewsletter/SubsNewsletter";
+import Experts from "./_Common/ExpertCard/Experts";
+import PublicationPackages from "./_Common/Publication_package/Publication_package";
+
 
 
 
@@ -50,26 +57,45 @@ export default function Home() {
   return (
     <>
       <ToastContainer />
+
       <TopBannerForm />
-      <OfferSlider />
-      <RadioSection />
+      {/* <OfferSlider /> */}
+
+      {/* <RadioSection /> */}
       {/* <GetHelpMobile /> */}
       {/* <TrustedPartner/> */}
+
       {/* End of Biswa's custom codes */}
+
       {/* <SocialIcon /> */}
       {/* <GetEvery /> */}
-      <GetHelp />
-      
+      {/* <GetHelp /> */}
+     
       <Clients />
-      <OurProfessional />
+      {/* <OurProfessional /> */}
       {/* <UpcomingWebinar/> */}
       {/* <CounterComponent /> */}
-      <Testimonial />
-      {blogs && blogs.length && <BlogDesk blogs={blogs} />}
-      {blogs && blogs.length && <BlogMob blogs={blogs} />}
-      <FaqHome />
-      <PublicationAccordion/>
+      {/* <HowItWorks/> */}
+      <WhyChooseUs/>
+      <Experts/>
+      <CustomizedServices/>
+      <PublicationPackages />
       <OurServices />
+      <Experts />
+      <Testimonial />
+
+
+      {blogs && blogs.length && <BlogDesk blogs={blogs} />}
+
+      {blogs && blogs.length && <BlogMob blogs={blogs} />}
+     
+
+      {/* <FaqHome /> */}
+
+      {/* <Dropdown2 /> */}
+      <NewsletterSubscribe/>
+{/* <PublicationAccordion/> */}
+      
     </>
   );
 }
