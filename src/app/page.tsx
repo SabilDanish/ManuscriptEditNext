@@ -68,20 +68,18 @@ export default function Home() {
       {/* End of Biswa's custom codes */}
 
       {/* <SocialIcon /> */}
-
       {/* <GetEvery /> */}
-
       {/* <GetHelp /> */}
-      
+     
       <Clients />
       {/* <OurProfessional /> */}
       {/* <UpcomingWebinar/> */}
-
       {/* <CounterComponent /> */}
-      <WhyChooseUs />
-      <PublicationPackages/>
-      <HowItWorks />
+      {/* <HowItWorks/> */}
+      <WhyChooseUs/>
+      <Experts/>
       <CustomizedServices/>
+      <PublicationPackages />
       <OurServices />
       <Experts />
       <Testimonial />
@@ -92,11 +90,10 @@ export default function Home() {
       {blogs && blogs.length && <BlogMob blogs={blogs} />}
      
 
-      {/* <FaqHome />
-      <PublicationAccordion /> */}
+      {/* <FaqHome /> */}
 
       {/* <Dropdown2 /> */}
-
+      <NewsletterSubscribe/>
 {/* <PublicationAccordion/> */}
       
     </>

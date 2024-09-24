@@ -13,7 +13,7 @@ export default function footer() {
   const { isLoading, error, acceptNewsLetter } = useEmail()
   return (
     <>
-      <div className="subscribe_area bg_color pt-30 pb-45">
+      {/* <div className="subscribe_area bg_color pt-30 pb-45">
         <div className="container">
           <div className="row">
             <div className="col-lg-2"></div>
@@ -51,7 +51,7 @@ export default function footer() {
             <div className="col-lg-2"></div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div
         className="footer-middle pt-45"
         style={{ backgroundImage: "url(/images/call-bg.png)" }}

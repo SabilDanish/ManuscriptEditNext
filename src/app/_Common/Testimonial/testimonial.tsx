@@ -166,7 +166,7 @@ import testi3 from '../../utils/testi/testi3.png';
 const Testimonial = () => {
   return (
     <section className="testimonial-section1 text-center py-5 bg-light">
-      <h1 className="mb-5 accordion__title">Testimonial</h1>
+      <h2 className="text-center">Testimonial</h2>
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-6 mb-4">
