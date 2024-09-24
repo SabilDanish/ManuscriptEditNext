@@ -263,6 +263,7 @@ import bannerA from '../../utils/images/bannerA.png';
 
 import useForm from "@/app/hooks/mainForm/useForm";
 import { DNA } from "react-loader-spinner";
+import Link from "next/link";
 
 const TopBannerForm = () => {
 
@@ -276,7 +277,7 @@ const TopBannerForm = () => {
               Publishing Services for Global Impact
             </h4>
             <h5 style={{ marginTop: "2rem" }}>We provide end to end assistance from conception to publication.</h5>
-            <a className="btn mt-12" href="#" role="button" style={{ backgroundColor: "#151130", color: "white", marginTop: "2rem" }}>Get Started →</a>
+            <Link className="btn mt-12" href={"https://secure.manuscriptedit.com/quotation"} role="button" style={{ backgroundColor: "#151130", color: "white", marginTop: "2rem" }}>Get Started →</Link>
           </div>
           <div className={`$"carouselItem" $"active" col-lg-5`}>
             <img src={bannerA.src} className="carouselImage" alt="Banner 1" />

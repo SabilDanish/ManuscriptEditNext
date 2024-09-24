@@ -81,7 +81,7 @@ const PublicationPackages = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" style={{marginTop: "3rem"}}>
         <div className="row">
           <div className="accordion__title">
             <h2 className='accordion_title'>Packaged Services</h2>
