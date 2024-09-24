@@ -30,8 +30,8 @@ export default function OurServices() {
     return (
         <>
             <div className="container">
-                <div className="text-center accordion__title">
-                    <h2>Our Services</h2>
+                <div className="text-center accordion__title" style={{marginTop:"40px"}}>
+                    <h2>Subject Areas</h2>
                 </div>
             </div>
             <div className="container contBorder">
@@ -55,7 +55,7 @@ export default function OurServices() {
                                         <div className="card-body-services">
                                             <div className="row">
                                                 {category.subcategories.map((sub, idx) => (
-                                                    <div key={idx} className="col-md-12">
+                                                    <div key={idx} className="col-md-12 Centroid">
                                                         <div className="subcategory-btn text-center">{sub}</div>
                                                     </div>
                                                 ))}

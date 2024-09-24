@@ -17,7 +17,7 @@ export default function Home() {
       {breadcrum("Services / Writing", "Statistical Analysis")}
       <section className="pt-5 pb-5">
         
-          <div className="row conrow">
+          {/* <div className="row conrow">
             <div className="col-md-12">
               <h3 className="pt-2 pb-3"> Statistical Analysis</h3>
               <p>
@@ -47,7 +47,7 @@ export default function Home() {
               </div>
             </div>
             
-          </div>
+          </div> */}
         
       </section>
 

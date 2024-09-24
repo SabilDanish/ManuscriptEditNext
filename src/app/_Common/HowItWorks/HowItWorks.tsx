@@ -8,24 +8,28 @@ const HowItWorks = () => {
       title: "Submit Your Order",
       description:
         "Provide your research details, and we’ll get started on your project.",
+        image: "/images/hiw1.png"
     },
     {
       id: 2,
       title: "Assign to Expert",
       description:
         "Your project is assigned to a skilled expert for comprehensive review ",
+        image: "/images/hiw2.png"
     },
     {
       id: 3,
       title: "Editing in Progress",
       description:
         "We enhance your paper’s structure, clarity, and academic quality.",
+        image: "/images/hiw3.png"
     },
     {
       id: 4,
       title: "Receive Final Document",
       description:
         "Get the polished manuscript ready for submission or further review.",
+        image: "/images/hiw4.png"
     },
   ];
 
@@ -53,13 +57,13 @@ const HowItWorks = () => {
             <div className="col-lg-3 col-md-6 mb-4" key={step.id}>
               <div className="step text-center p-4">
                 <div className="icon mb-3">
-                  <img src="/images/image.png" alt="#" />
+                  <img src={step.image} alt="#" />
                 </div>
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>
-                <a href="#" className="btn btn-link">
+                {/* <a href="#" className="btn btn-link">
                   Read More
-                </a>
+                </a> */}
               </div>
             </div>
           ))}

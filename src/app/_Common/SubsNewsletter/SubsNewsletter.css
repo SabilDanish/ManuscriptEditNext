@@ -1,8 +1,8 @@
 .newsletter-section {
-    background-color: #082142; /* Navy blue background */
+    background-color: #151130; /* Navy blue background */
     color: white;
     padding: 20px;
-    border-radius: 8px;
+    border: 1px solid #0f2a51;
   }
   
   .subscribe-text {

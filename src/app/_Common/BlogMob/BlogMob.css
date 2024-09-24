@@ -8,6 +8,9 @@
     margin-bottom: 4rem;
   }
 
+  .GappyDown{
+    margin-bottom:40px !important;
+  }
 
 
   @media (max-width:768px) {
@@ -21,6 +24,7 @@
         padding: 0px 21px;
     text-align: start;
     font-weight: 700;
+    margin-bottom: 30px;
     }
 
     .ContentSpan{
@@ -34,3 +38,4 @@ font-weight: 300;
         display: none;
     }
   }
+

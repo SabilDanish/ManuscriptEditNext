@@ -5,7 +5,7 @@ import { faFacebookF, faTwitter, faInstagram, faSkype, faPinterestP } from '@for
 
 const NewsletterSubscribe = () => {
   return (
-    <section className="newsletter-section container-fluid p-3 mb-1">
+    <section className="newsletter-section container-fluid p-3">
       <div className="row align-items-center justify-content-between">
         {/* Left - Subscribe Section */}
         <div className="col-md-6">

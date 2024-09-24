@@ -76,10 +76,13 @@ export default function Home() {
       {/* <UpcomingWebinar/> */}
       {/* <CounterComponent /> */}
       <WhyChooseUs/>
+      {/* <Experts/> */}
+      {/* <CustomizedServices/> */}
       <PublicationPackages />
+
       <HowItWorks/>
-      <Experts/>
       <CustomizedServices/>
+      
       <OurServices />
       <Experts />
       <Testimonial />
@@ -90,9 +93,9 @@ export default function Home() {
       {blogs && blogs.length && <BlogMob blogs={blogs} />}
      
 
-      {/* <FaqHome /> */}
+      <FaqHome />
 
-      <Dropdown2 />
+      {/* <Dropdown2 /> */}
       <NewsletterSubscribe/>
 {/* <PublicationAccordion/> */}
       

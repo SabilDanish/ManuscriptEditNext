@@ -1,18 +1,23 @@
 import React from 'react';
-import { FaEdit, FaPen, FaChartBar, FaAward } from 'react-icons/fa'; // Import Font Awesome icons
+import { FaCheck ,FaPaintBrush,FaPen,FaPencilRuler,FaLanguage,FaSearch,FaFileAlt,FaSquareRootAlt } from 'react-icons/fa'; // Import Font Awesome icons
 import './CustomServices.css'; // Import the CSS file
 
 const services = [
-    { id: 1, icon: <FaEdit />, title: 'Editing Packages' },
-    { id: 2, icon: <FaPen />, title: 'Writing Assistance' },
-    { id: 3, icon: <FaChartBar />, title: 'Data Analysis Assistance' },
-    { id: 4, icon: <FaAward />, title: 'Publication Package' },
+    { id: 1, icon: <FaCheck />, title: 'Plagiarism Check' },
+    { id: 2, icon: <FaPaintBrush />, title: 'Poster Creation' },
+    { id: 3, icon: <FaPen />, title: 'Technical Writing' },
+    { id: 4, icon: <FaPencilRuler />, title: 'Illustration Service' },
+    { id: 5, icon: <FaLanguage />, title: 'Translation Service' },
+    { id: 6, icon: <FaSearch />, title: 'Indexing' },
+    { id: 7, icon: <FaFileAlt />, title: 'Typesetting' },
+    { id: 8, icon: <FaSquareRootAlt />, title: 'Equation Building' },
 ];
+
 
 const CustomizedServices = () => {
     return (
         <div className="customized-services">
-            <h2 className='text-center'>Customized Services</h2>
+            <h2 className='text-center Gappy'>Customized Services</h2>
             <div className="service-cards">
                 {services.map((service) => (
                     <div key={service.id} className="service-card">

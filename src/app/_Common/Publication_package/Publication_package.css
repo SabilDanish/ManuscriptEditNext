@@ -2,7 +2,7 @@
     background-color: #eef3ff;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.3);
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -11,12 +11,13 @@
 }
   
   .package-card h3 {
-    background-color: #89abff;
+    background-color: #342e5b;
     padding: 10px;
     border-radius: 14px;
     text-align: center;
     font-size: 1.3rem;
-    color: azure;
+    color: white;
+    box-shadow: -2px 2px 5px grey;
 }
   
   .package-card ul {
