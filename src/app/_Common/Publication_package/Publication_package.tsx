@@ -84,7 +84,7 @@ const PublicationPackages = () => {
       <div className="container">
         <div className="row">
           <div className="accordion__title">
-            <h2>Packaged Services</h2>
+            <h2 className='accordion_title'>Packaged Services</h2>
           </div>
         </div>
       </div>

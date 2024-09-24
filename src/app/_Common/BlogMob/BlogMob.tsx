@@ -24,8 +24,8 @@ const BlogMob = ({ blogs }: any) => {
     <>
       <div className="container ContainerDesk">
         <div className="row" style={{ justifyContent: "center" }}>
-          <h1 className="accordion__title">
-            OUR BEST-READ SCIENTIFIC ARTICLES
+          <h1 className="Gappy text-center">
+            Our Articles
           </h1>
         </div>
       </div>
@@ -46,8 +46,8 @@ const BlogMob = ({ blogs }: any) => {
           if (index < 3) {
             return (
               <div
-                className="row"
-                style={{ justifyContent: "center", marginBottom: "20px !important" }}
+                className="row GappyDown"
+                style={{ justifyContent: "center" }}
                 key={index}
                 onClick={() => handleRedirect(guid.rendered,slug)}
               >

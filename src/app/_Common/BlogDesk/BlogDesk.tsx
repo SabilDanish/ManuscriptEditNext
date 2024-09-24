@@ -22,18 +22,17 @@ const BlogDesk = ({ blogs }: any) => {
 
   return (
     <>
-      <div className="container BlogDesktop" style={{ marginTop: "30px" }}>
+      <div className="container BlogDesktop" style={{ marginBottom: "30px" }}>
         <div className="row" style={{ justifyContent: "center" }}>
-          <h1
-            className="accordion__title"
-            style={{ marginTop: "30px", marginBottom: "40px" }}
+          <h2
+            className="text-center Gappy GappyTop"
           >
-            OUR ARTICLES
-          </h1>
+            Our Articles
+          </h2>
         </div>
       </div>
 
-      <div className="container BlogDesktop">
+      <div className="container BlogDesktop" >
         <div className="row">
           {blogs.map((blog: any, index: number) => {
             const {

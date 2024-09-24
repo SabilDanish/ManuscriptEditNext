@@ -80,6 +80,10 @@ export default function Home() {
       {/* <Experts/> */}
       <CustomizedServices/>
       <PublicationPackages />
+
+      <HowItWorks/>
+      <CustomizedServices/>
+      
       <OurServices />
       <Experts />
       <Testimonial />

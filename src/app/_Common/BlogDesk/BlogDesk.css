@@ -216,6 +216,10 @@ a {
   }
 }
 
+.Gappy{
+  margin-bottom: 30px !important;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Inter:700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro&display=swap");
@@ -347,4 +351,8 @@ h3 {
   .BlogDesktop {
     display: none;
   }
+}
+
+.BlogDesktop{
+  margin-bottom: 80px;
 }
