@@ -30,7 +30,7 @@ export default function Home() {
 			)}
 			<section className="pt-5 pb-5">
 				
-					<div className="row conrow">
+					{/* <div className="row conrow">
 						<div className="col-md-12">
 							<h3 className="pt-2 pb-3">Writing Overview</h3>
 							<p>
@@ -44,11 +44,11 @@ export default function Home() {
 							</button>
 						</div>
 
-					</div>
+					</div> */}
 				
 			</section>
 
-			<section className="pb-5">
+			{/* <section className="pb-5">
 				<>
 
 					<div className="row ServicesSection">
@@ -95,7 +95,7 @@ export default function Home() {
 
 				</>
 
-			</section>
+			</section> */}
 
 
 

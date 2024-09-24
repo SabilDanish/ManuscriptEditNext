@@ -1,5 +1,6 @@
 import React from "react";
 import "./WhyChooseUs.css";
+import Link from "next/link";
 
 const WhyChooseUs = () => {
   return (
@@ -18,6 +19,11 @@ const WhyChooseUs = () => {
           </p>
           <div className="expert-box">
             <span className="expert-count">750+</span> Experts
+          </div>
+          <div>
+          <Link className="btn mt-12" href={"https://secure.manuscriptedit.com/register"} role="button" style={{ backgroundColor: "#151130", color: "white", marginTop: "2rem" }}>Sign Up Now</Link>
+          <Link className="btn mt-12" href={"https://secure.manuscriptedit.com/quotation"} role="button" style={{ backgroundColor: "#151130", color: "white", marginTop: "2rem", marginLeft:"1rem" }}>Get a Quote</Link>
+
           </div>
         </div>
 
