@@ -140,6 +140,11 @@
     #mobile-view {
         display: block;
     }
+.Centroid{
+    display: flex;
+    justify-content: center;
+}
+
 }
 
 /* Desktop view media query */

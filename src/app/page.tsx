@@ -75,11 +75,13 @@ export default function Home() {
       {/* <OurProfessional /> */}
       {/* <UpcomingWebinar/> */}
       {/* <CounterComponent /> */}
-      {/* <HowItWorks/> */}
+      
       <WhyChooseUs/>
-      <Experts/>
-      <CustomizedServices/>
       <PublicationPackages />
+
+      <HowItWorks/>
+      <CustomizedServices/>
+      
       <OurServices />
       <Experts />
       <Testimonial />

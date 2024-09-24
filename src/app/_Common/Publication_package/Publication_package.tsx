@@ -55,17 +55,6 @@ const PublicationPackages = () => {
           ]
         },
         {
-          title: "Scientific Writing Assistance Plans",
-          features: [
-            "Manuscript Drafting from Research Data",
-            "Abstract and Introduction Development",
-            "Comprehensive Literature Review Writing",
-            "Scientific Argumentation and Clarity Improvement",
-            "Journal-Specific Formatting and Submission Guidance",
-            "Response Letter Drafting for Reviewer Comments"
-          ]
-        },
-        {
           title: "Research Advisory Plans",
           features: [
             "Guidance on Impactful Research Topics",
@@ -84,7 +73,7 @@ const PublicationPackages = () => {
       <div className="container">
         <div className="row">
           <div className="accordion__title">
-            <h2>Packaged Services</h2>
+            <h2 className='accordion_title'>Packaged Services</h2>
           </div>
         </div>
       </div>
