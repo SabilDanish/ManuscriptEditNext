@@ -2,6 +2,16 @@
 
 
 const nextConfig = {
+    async redirects() {
+        return [
+          {
+            source: '/abc',
+            destination: 'https://secure.manuscriptedit.com/quotation',
+            permanent: false,
+            basePath: false
+          },
+        ]
+    },
     eslint: {
         ignoreDuringBuilds: true,
     },

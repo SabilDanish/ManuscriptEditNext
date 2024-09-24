@@ -330,14 +330,9 @@ export default function Header() {
                     </li>
                     {/* <li><Link href={'/FAQ'}>Quotation</Link></li> */}
                     <li>
-                      <a
-                        onClick={() => {
-                          redirect("qregistration");
-                        }}
-                        href="#"
-                      >
+                      <Link href={"https://www.secure.manuscriptedit.com/quotation"}>
                         Quotation
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <Link href={"/PaymentMethod"}>Payment Method</Link>
@@ -484,7 +479,7 @@ export default function Header() {
                     </li> */}
 
                     <li>
-                      <Link href={"/wregistration"}>
+                      <Link href={"https://secure.manuscriptedit.com/wregistration"}>
                         Webinar Registration
                       </Link>
                     </li>
@@ -763,14 +758,9 @@ export default function Header() {
                   </li>
                   {/* <li><Link href={'/FAQ'}>Quotation</Link></li> */}
                   <li>
-                    <a
-                      onClick={() => {
-                        redirect("qregistration");
-                      }}
-                      href="#"
-                    >
+                    <Link href={"http://secure.manuscriptedit.com/quotation"}>
                       Quotation
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link href={"/PaymentMethod"}>Payment Method</Link>
@@ -907,7 +897,7 @@ export default function Header() {
                   </li> */}
 
                   <li>
-                    <Link href={"/wregistration"}>
+                    <Link href={"https://secure.manuscriptedit.com/wregistration"}>
                       Webinar Registration
                     </Link>
                   </li>

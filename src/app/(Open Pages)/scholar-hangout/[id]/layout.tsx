@@ -17,7 +17,7 @@ const BlogDetailsNext = ({ children }: any) => {
                         {children}
                     </div>
                     <div className="col-lg-3" >
-                        <div className="sticky-wrapper">
+                        <div className="">
                             {/* <div className="BlogColImgAdd">
                                 <img className="BlogImgAdd" src="/images/innerimg/blog1.jpg" alt="#" />
                             </div> */}

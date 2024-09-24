@@ -11,7 +11,7 @@ const FloatingWp = () => {
             <i className="fa fa-whatsapp my-float"></i>
           </div>
         </a>
-        <p className="text_icon">Talk to us?</p>
+        {/* <p className="text_icon">Talk to us?</p> */}
       </div>
     </>
   )

@@ -17,11 +17,9 @@ const BlogDetailsClient = () => {
 
   useEffect(() => {
     if (iframeWrapperRef.current && excerpt) {
-      iframeWrapperRef.current.innerHTML = excerpt; // Set the inner HTML content safely using useRef
+      iframeWrapperRef.current.innerHTML = `<h1>${title}</h1>${excerpt}`; // Set the inner HTML content safely using useRef
     }
   }, [excerpt]);
-
-  console.log({excerpt})
 
 
   return (
