@@ -86,9 +86,8 @@ export default function Home() {
       
       <OurServices />
       <Experts />
-      <Testimonial />
-
       <ServiceList />
+      <Testimonial />
       
 
 
