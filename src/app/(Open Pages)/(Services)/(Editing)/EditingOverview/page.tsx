@@ -32,10 +32,23 @@ export default function Home() {
             <div className="col-md-12">
               <h3 className="pt-5">Editing Overview</h3>
               <p className="pt-3">
-                ASetting the stage for the importance of editing in the realm of
+                Setting the stage for the importance of editing in the realm of
                 written communication. Introduction to the multifaceted nature
                 of editing and its impact on clarity and effectiveness.
               </p>
+              {/* <div className="col-lg-3">
+              <Link href="https://wa.me/16469163476"> <button className="choose-plan my-3"> <img src="../images/WhatsApp_icon.png" alt="Snow" style={{width:"1.5rem",marginRight:"1rem"}}/>Talk To An Expert</button></Link>
+              </div> */}
+              {/* <div className="container" >
+          <div className="row">
+            <div className="col-lg-3 my-3">
+              <h2 style={{display:"flex", justifyContent:"start",alignItems:"center"}}>Not Sure?</h2>
+            </div>
+            <div className="col-lg-3">
+             <Link href="https://wa.me/16469163476"> <button className="choose-plan my-3"> <img src="../images/WhatsApp_icon.png" alt="Snow" style={{width:"1.5rem",marginRight:"1rem"}}/>Talk To An Expert</button></Link>
+            </div>
+          </div>
+        </div>   */}
             </div>
             {/* <div className="col-md-6">
               {

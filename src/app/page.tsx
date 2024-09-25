@@ -72,11 +72,12 @@ export default function Home() {
       {/* <GetEvery /> */}
       {/* <GetHelp /> */}
      
-      <Clients />
+     
       {/* <OurProfessional /> */}
       {/* <UpcomingWebinar/> */}
       {/* <CounterComponent /> */}
       <WhyChooseUs/>
+      <Clients />
       {/* <Experts/> */}
       {/* <CustomizedServices/> */}
       <PublicationPackages />

@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaCheck ,FaPaintBrush,FaPen,FaPencilRuler,FaLanguage,FaSearch,FaFileAlt,FaSquareRootAlt } from 'react-icons/fa'; // Import Font Awesome icons
-import './CustomServices.css'; // Import the CSS file
+import { FaCheck ,FaPaintBrush,FaPen,FaPencilRuler,FaLanguage,FaSearch,FaFileAlt,FaSquareRootAlt } from 'react-icons/fa';
+import './CustomServices.css';
 
 const services = [
     { id: 1, icon: <FaCheck />, title: 'Plagiarism Check' },

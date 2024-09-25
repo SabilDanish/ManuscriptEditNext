@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const WhyChooseUs = () => {
   return (
-    <section className="why-choose-us container-fluid my-5 py-5">
+    <section className="why-choose-us container-fluid py-1">
       <div className="row paaddRow">
         {/* Left Section */}
         <div className="col-md-8 mb-4">
