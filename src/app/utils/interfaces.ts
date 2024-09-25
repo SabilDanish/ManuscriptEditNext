@@ -29,3 +29,8 @@ export interface Editor {
     ediName: string;
     ediBio: string;
 }
+
+export interface Service {
+    category: string;
+    subServices: string[];
+}

@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation'
 import { data } from '../../../../utils/metaFile.js'
 import Metadata from "@/app/Metadata";
 import { DiscountBanner, DiscountMessage } from "./DiscountSection";
+import Dropdown2 from "../Dropdown2/Dropdown2.jsx";
 
 
 const newData: any = data;
@@ -44,7 +45,7 @@ export default function Home() {
         <div className="row">
           <div className="col-lg-3 col-md-6">
             <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
-              <div className="discount-sticker">35% OFF</div>
+              {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
                   <center><h4>Premium Plus Package</h4></center>
@@ -53,7 +54,7 @@ export default function Home() {
                   <center>
                     <h2>
                       <span className="dollar">
-                        <s>$2134</s> $1387
+                        <s></s> $2134
                       </span>
                       <span>30 Days</span>
                     </h2>
@@ -91,7 +92,7 @@ export default function Home() {
 
           <div className="col-lg-3 col-md-6">
             <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
-              <div className="discount-sticker">35% OFF</div>
+              {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
                   <center><h4>Premium Package</h4></center>
@@ -100,7 +101,7 @@ export default function Home() {
                   <center>
                     <h2>
                       <span className="dollar">
-                        <s>$1534</s> $997
+                        <s></s> $1534
                       </span>
                       <span>20 Days</span>
                     </h2>
@@ -136,7 +137,7 @@ export default function Home() {
 
           <div className="col-lg-3 col-md-6">
             <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
-              <div className="discount-sticker">35% OFF</div>
+              {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
                   <center><h4>Advanced Package</h4></center>
@@ -145,7 +146,7 @@ export default function Home() {
                   <center>
                     <h2>
                       <span className="dollar">
-                        <s>$1134</s> $737
+                        <s></s> $1134
                       </span>
                       <span>15 Days</span>
                     </h2>
@@ -179,7 +180,7 @@ export default function Home() {
 
           <div className="col-lg-3 col-md-6">
             <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
-              <div className="discount-sticker">35% OFF</div>
+              {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
                   <center><h4>Standard Package</h4></center>
@@ -188,7 +189,7 @@ export default function Home() {
                   <center>
                     <h2>
                       <span className="dollar">
-                        <s>$867</s> $563
+                        <s></s> $867
                       </span>
                       <span>10 Days</span>
                     </h2>
@@ -320,9 +321,10 @@ export default function Home() {
         </div>
       </div> */}
       {SpecializedArea()}
-      {ourProfessional()}
+      {/* {ourProfessional()} */}
       {clientFeedback()}
       {FAQ()}
+      
     </>
   );
 }

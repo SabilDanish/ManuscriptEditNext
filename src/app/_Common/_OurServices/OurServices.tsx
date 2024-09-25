@@ -31,7 +31,7 @@ export default function OurServices() {
         <>
             <div className="container">
                 <div className="text-center accordion__title" style={{marginTop:"40px"}}>
-                    <h2>Our Services</h2>
+                    <h2>Subject Areas</h2>
                 </div>
             </div>
             <div className="container contBorder">

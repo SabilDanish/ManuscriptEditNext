@@ -24,9 +24,6 @@ const Clients = () => {
         "/images/JournalsNew/9.png",
         "/images/JournalsNew/10.png",
         "/images/JournalsNew/11.jpeg",
-
-
-        // Add more local paths as needed
     ];
 
     useEffect(() => {

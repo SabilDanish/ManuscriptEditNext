@@ -2,7 +2,7 @@ export const serviceData = {
     "Editing Packages": {
         items: [
             {
-                title: "Essential Manuscript Editing",
+                title: "Proofreading",
                 description:
                     "Suitable for clients looking for thorough language corrections with a focus on spelling, grammar, and basic sentence structure.",
                 features: [
@@ -13,7 +13,7 @@ export const serviceData = {
                 link: "https://secure.manuscriptedit.com/estimate?test=2",
             },
             {
-                title: "Advanced Structural Editing",
+                title: "Substantive Editing",
                 description:
                     "Adds logical flow and structural improvements along with advanced language corrections.",
                 features: [
@@ -24,7 +24,7 @@ export const serviceData = {
                 link: "https://secure.manuscriptedit.com/estimate?test=2",
             },
             {
-                "title": "Premium Journal-Ready Editing",
+                "title": "Extentive Substantive Editing",
                 "description": "Tailored for clients targeting journal submissions, offering full formatting, response letter editing, and consistency checks.",
                 "features": [
                   "Journal-Specific Formatting and Consistency Checks",

@@ -41,6 +41,7 @@ import WhyChooseUs from "./_Common/WhyChooseUs/WhyChooseUs";
 import NewsletterSubscribe from "./_Common/SubsNewsletter/SubsNewsletter";
 import Experts from "./_Common/ExpertCard/Experts";
 import PublicationPackages from "./_Common/Publication_package/Publication_package";
+import ServiceList from "./_Common/_ServiceData/ServiceData";
 
 
 
@@ -75,8 +76,9 @@ export default function Home() {
       {/* <OurProfessional /> */}
       {/* <UpcomingWebinar/> */}
       {/* <CounterComponent /> */}
-      
       <WhyChooseUs/>
+      {/* <Experts/> */}
+      {/* <CustomizedServices/> */}
       <PublicationPackages />
 
       <HowItWorks/>
@@ -86,15 +88,18 @@ export default function Home() {
       <Experts />
       <Testimonial />
 
+      <ServiceList />
+      
+
 
       {blogs && blogs.length && <BlogDesk blogs={blogs} />}
 
       {blogs && blogs.length && <BlogMob blogs={blogs} />}
      
 
-      {/* <FaqHome /> */}
+      <FaqHome />
 
-      <Dropdown2 />
+      {/* <Dropdown2 /> */}
       <NewsletterSubscribe/>
 {/* <PublicationAccordion/> */}
       

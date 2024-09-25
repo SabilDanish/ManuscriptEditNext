@@ -37,9 +37,21 @@ export default function Home() {
               </p>
               <div className="em-about-icon-box2">
                 <div className="list-icon">
-                  <span>
+                <span>
                     <i className="bi bi-check-lg"></i>
                     <h6> CASE REPORT</h6>
+                  </span>
+                  <span>
+                    <i className="bi bi-check-lg"></i>
+                    <h6> CASE SERIES</h6>
+                  </span>
+                  <span>
+                    <i className="bi bi-check-lg"></i>
+                    <h6> SYSTEMATIC REVIEW</h6>
+                  </span>
+                  <span>
+                    <i className="bi bi-check-lg"></i>
+                    <h6> SYSTEMATIC REVIEW & META ANALYSIS</h6>
                   </span>
                   <span>
                     <i className="bi bi-check-lg"></i>
@@ -74,7 +86,7 @@ export default function Home() {
         <section className="pb-5">
         <>
           
-          <div className="row ServicesSection">
+          {/* <div className="row ServicesSection">
               {
                 serviceData['Medical and Scientific Writing'] && serviceData['Medical and Scientific Writing'].items && serviceData['Medical and Scientific Writing'].items.map(item => {
                   const { title, features, description, link } = item;
@@ -110,7 +122,7 @@ export default function Home() {
 
               
 
-            </div>
+            </div> */}
           
 
 

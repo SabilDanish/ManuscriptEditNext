@@ -47,7 +47,7 @@ const Dropdown2 = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" style={{marginTop:"3rem"}}>
       <div className="accordion__wrapper2">
         <h1 className="accordion__title">How can you prevent rejections?<br /><span style={{ fontSize: "1rem" }}>7 reasons why you get rejected mostly, and find out how Manuscriptedit services can help you out.</span></h1>
 

@@ -12,6 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import '../../../../_Common/getHelp/getHelp.css'
+import Dropdown2 from "@/app/_Common/Dropdown2/Dropdown2";
+import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 
 const newData: any = data;
 
@@ -94,7 +96,7 @@ export default function Home() {
       <section className="pb-5">
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
+            {/* <div className="col-md-6">
               <div className="stt-1 grid-1">
                 <h4 className="text-left mb-3">
                   Proofreading
@@ -221,10 +223,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-12">
               <div className="stt-1 grid-1">
                 <h4 className="text-left mb-3">
-                  Other Services
+                  Customized Services
                   <span style={{ float: "right" }}>
                     <Link href={"/CustomizedServices"}>
                       <button className="btn btn-primary"> Know More</button>
@@ -260,11 +262,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
       {howWeWork()}
+      {SpecializedArea()}
+      <Dropdown2 />
     </>
   );
 }
