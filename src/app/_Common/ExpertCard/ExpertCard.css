@@ -73,3 +73,27 @@
     margin-bottom: 5px;
   }
   
+  .expert-flag {
+    width: 30px; /* Adjust the size as needed */
+    height: auto;
+    margin-top: 5px;
+  }
+  .expert-name-flag {
+    display: flex;
+    align-items: center; /* Aligns the flag vertically with the name */
+  }
+  
+  .expert-name {
+    margin-right: 10px; /* Adds some space between the name and the flag */
+    font-size: 1.25rem; /* Font size for name */
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .expert-flag {
+    width: 30px;
+    height: auto;
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+  

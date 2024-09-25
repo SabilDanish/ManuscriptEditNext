@@ -9,7 +9,8 @@ const experts = [
       'Ph.D in Oncology - University of Pennsylvania.',
       'BSc and MSc degrees in Biomedical Engineering - University of Michigan.'
     ],
-    image: '/images/ourprof/aa1.jpg'
+    image: '/images/ourprof/aa1.jpg',
+    flag: '/images/flags/1.jpeg'
   },
   {
     name: 'Dr. D W',
@@ -18,7 +19,8 @@ const experts = [
       'Ph.D in Pathology - University of Edinburgh.',
       'BSc and MSc degrees in Clinical Medicine - University of Manchester.'
     ],
-    image: '/images/ourprof/aa2.jpg'
+    image: '/images/ourprof/aa2.jpg',
+    flag: '/images/flags/2.jpeg'
   },
   {
     name: 'Dr. S M',
@@ -27,7 +29,8 @@ const experts = [
       'Ph.D in Neurobiology - Duke University.',
       'BSc and MSc degrees in Cognitive Science - University of Southern California.'
     ],
-    image: '/images/ourprof/aa3.jpg'
+    image: '/images/ourprof/aa3.jpg',
+    flag: '/images/flags/1.jpeg'
   },
   {
     name: 'Dr. E J',
@@ -36,7 +39,8 @@ const experts = [
       'Ph.D in Human Genetics - University of Pretoria.',
       'BSc and MSc degrees in Zoology - University of Cape Town.'
     ],
-    image: '/images/ourprof/aa4.jpg'
+    image: '/images/ourprof/aa4.jpg',
+    flag: '/images/flags/3.png'
   },
   {
     name: 'Dr. M A',
@@ -45,7 +49,8 @@ const experts = [
       'Ph.D in Public Health - Johns Hopkins University.',
       'BSc and MSc degrees in Environmental Science - Cornell University.'
     ],
-    image: '/images/ourprof/aa6.jpg'
+    image: '/images/ourprof/aa6.jpg',
+    flag: '/images/flags/1.jpeg'
   },
   {
     name: 'Dr. L T',
@@ -54,7 +59,8 @@ const experts = [
       'Ph.D in Epidemiology - University of Otago.',
       'BSc and MSc degrees in Health Sciences - University of Auckland.'
     ],
-    image: '/images/ourprof/aa34.jpg'
+    image: '/images/ourprof/aa34.jpg',
+    flag: '/images/flags/5.png'
   }
 ];
 
@@ -71,6 +77,7 @@ const Experts = () => {
               title={expert.title}
               education={expert.education}
               image={expert.image}
+              flag={expert.flag}
             />
           </div>
         ))}
