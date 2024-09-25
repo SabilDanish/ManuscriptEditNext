@@ -94,7 +94,7 @@ export default function Home() {
 
       {/* <FaqHome /> */}
 
-      {/* <Dropdown2 /> */}
+      <Dropdown2 />
       <NewsletterSubscribe/>
 {/* <PublicationAccordion/> */}
       
