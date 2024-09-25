@@ -2,7 +2,7 @@ export const serviceData = {
     "Editing Packages": {
         items: [
             {
-                title: "Proof Reading",
+                title: "Proofreading",
                 description:
                     "Suitable for clients looking for thorough language corrections with a focus on spelling, grammar, and basic sentence structure.",
                 features: [

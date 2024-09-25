@@ -41,6 +41,7 @@ import WhyChooseUs from "./_Common/WhyChooseUs/WhyChooseUs";
 import NewsletterSubscribe from "./_Common/SubsNewsletter/SubsNewsletter";
 import Experts from "./_Common/ExpertCard/Experts";
 import PublicationPackages from "./_Common/Publication_package/Publication_package";
+import ServiceList from "./_Common/_ServiceData/ServiceData";
 
 
 
@@ -86,6 +87,9 @@ export default function Home() {
       <OurServices />
       <Experts />
       <Testimonial />
+
+      <ServiceList />
+      
 
 
       {blogs && blogs.length && <BlogDesk blogs={blogs} />}
