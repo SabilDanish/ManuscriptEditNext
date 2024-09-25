@@ -75,13 +75,13 @@ const Clients = () => {
                         className={activeTab === 'companies' ? 'active' : ''}
                         onClick={() => setActiveTab('companies')}
                     >
-                        Serving Renowned Global Brands
+                        Our Global Partners
                     </button>
                     <button
                         className={activeTab === 'journals' ? 'active' : ''}
                         onClick={() => setActiveTab('journals')}
                     >
-                        Research Published in High-Impact Journals
+                        High Impact Publications
                     </button>
                 </div>
 

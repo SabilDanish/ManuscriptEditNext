@@ -277,9 +277,12 @@ const TopBannerForm = () => {
               Publishing Services for Global Impact
             </h4>
             <h5 style={{ marginTop: "2rem" }}>We provide end to end assistance from conception to publication.</h5>
+            <h5 style={{ marginTop: ".75rem" }}>✔ Assistance from drafting to final publication.</h5>
+            <h5 style={{ marginTop: ".75rem" }}>✔ Scientific editing for research accuracy.</h5>
+            <h5 style={{ marginTop: ".75rem" }}>✔ Optimize journal choice: scope, impact, format.</h5>
             <Link className="btn mt-12" href={"https://secure.manuscriptedit.com/quotation"} role="button" style={{ backgroundColor: "#151130", color: "white", marginTop: "2rem" }}>Get Started →</Link>
           </div>
-          <div className={`$"carouselItem" $"active" col-lg-5`}>
+          <div className={`$"carouselItem" $"active" col-lg-6`}>
             <img src={bannerA.src} className="carouselImage" alt="Banner 1" />
           </div>
         </div>
