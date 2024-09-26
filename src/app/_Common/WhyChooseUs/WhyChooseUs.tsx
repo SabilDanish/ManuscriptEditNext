@@ -7,7 +7,7 @@ const WhyChooseUs = () => {
     <section className="why-choose-us container-fluid py-1">
       <div className="row paaddRow">
         {/* Left Section */}
-        <div className="col-md-8 mb-4">
+        <div className="col-md-8 mb-4" style={{padding:"20px"}}>
           <h2 className="why-title">Why Choose Us?</h2>
           <h3 className="why-subtitle">Trusted by 500+ Partners</h3>
           <p className="why-description">
@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Right Section - Cards */}
-        <div className="col-md-4">
+        <div className="col-md-4" style={{display:"flex" , alignItems:"center"}}>
           <div className="row g-3">
             <div className="col-lg-6">
               <StatCard number="10,000+" text="Publications" icon="📚" />

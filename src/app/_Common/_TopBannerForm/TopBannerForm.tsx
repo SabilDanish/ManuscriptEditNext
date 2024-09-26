@@ -259,7 +259,6 @@
 
 import { useRef, useState, useEffect } from "react";
 import "./TopBannerForm.css";
-import bannerA from '../../utils/images/bannerA.png';
 
 import useForm from "@/app/hooks/mainForm/useForm";
 import { DNA } from "react-loader-spinner";
@@ -269,8 +268,8 @@ const TopBannerForm = () => {
 
   return (
     <>
-      <div className="container" style={{paddingLeft: "10%" }} >
-        <div className="row">
+      <div className="container" style={{marginBottom:"60px"}}>
+        <div className="row" style={{justifyContent:"end"}}>
           <div className="col-lg-5">
             <h4 style={{ fontWeight: "Bold", fontSize: "2rem", marginTop: "10%"}}>
               <span style={{ fontSize: "3rem", color: "#6C070A", fontWeight: "800" }}>Expert</span> Research Paper Editing and
@@ -283,7 +282,7 @@ const TopBannerForm = () => {
             <Link className="btn mt-12" href={"https://secure.manuscriptedit.com/quotation"} role="button" style={{ backgroundColor: "#151130", color: "white", marginTop: "2rem" }}>Get Started →</Link>
           </div>
           <div className={`$"carouselItem" $"active" col-lg-6`}>
-            <img src={bannerA.src} className="carouselImage" alt="Banner 1" />
+            <img src="/images/flags/Ban_updates.png" className="carouselImage" alt="Banner 1" />
           </div>
         </div>
       </div>

@@ -4,8 +4,8 @@ import './ServiceData.css'
 
 const ServiceList: React.FC = () => {
     return (
-      <div className="services-container">
-        <h2 className="text-center">Our Services</h2>
+      <div className="services-container" >
+        <h2 className="text-center" style={{marginBottom:"3rem !important" , marginTop:'1rem !important'}}>Our Services</h2>
         {servicesData.map((service: Service, index: number) => (
           <div key={index} className="service-category">
             <div className="category-title">

@@ -84,10 +84,10 @@ export default function Home() {
 
       <HowItWorks/>
       <CustomizedServices/>
-      
+      <ServiceList />
       <OurServices />
       <Experts />
-      <ServiceList />
+      
       <Testimonial />
       
 
