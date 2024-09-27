@@ -1,13 +1,14 @@
 "use client";
-
+import { Tooltip as ReactTooltip } from "react-tooltip";
 import { useEffect, useState } from 'react';
-import { ourServices } from '../../utils/ourServices.js'
+import { ourServices, ourServices2 } from '../../utils/ourServices.js'
 
 import './OurServices.css'
 
 export default function OurServices() {
     const [selectedCategoryIndex, setSelectedCategoryIndex] = useState<any>(0);
-
+    const [selectedSubCategory, setSelectedSubCategory] = useState<any>("")
+    const [content, setContent] = useState<any>([])
     const [isMobileView, setIsMobileView] = useState<boolean>(false);
 
     const handleResize = () => {
@@ -27,10 +28,28 @@ export default function OurServices() {
     const showSubcategories = (index: any) => {
         setSelectedCategoryIndex(index);
     };
+
+    const contentHandler = (subcategory:string) => {
+        return "Hello World"
+    }
+
+
+    // useEffect(() => {
+    //     if(selectedSubCategory){
+    //         const res = ourServices2[selectedCategoryIndex].subcategories.filter((val:any) => {
+    //             return typeof(val) === 'object' && Object.keys(val)[0] === selectedSubCategory
+    //         })
+    //         // console.log({res: Object.entries(res[0])[0][1]})
+    //         setContent(res && res[0] ? Object.entries(res[0])[0][1] : [])
+    //     }
+    // },[selectedSubCategory])
+
+    // console.log({content,selectedSubCategory})
+
     return (
         <>
             <div className="container">
-                <div className="text-center accordion__title" style={{marginTop:"40px"}}>
+                <div className="text-center accordion__title" style={{ marginTop: "40px" }}>
                     <h2>Subject Areas</h2>
                 </div>
             </div>
@@ -86,11 +105,17 @@ export default function OurServices() {
                         </div>
                         <div className="col-md-9">
                             <div id="content">
-                                {ourServices[selectedCategoryIndex].subcategories.map((subcategory, idx) => (
-                                    <div key={idx} className="subcategory-btn text-center">
-                                        {subcategory}
-                                    </div>
-                                ))}
+                                {ourServices2[selectedCategoryIndex].subcategories.map((subcategory, idx) => {
+                                    if (typeof (subcategory) !== 'object') {
+                                        return (
+                                            <div key={idx} className="subcategory-btn text-center" data-tooltip-id="hello" onMouseEnter={(e:any) => setSelectedSubCategory(e.target.textContent)}>
+                                                <p>{subcategory}</p>
+                                                {/* <ReactTooltip id="hello" variant="info" place="bottom" content={content.length ? content.join(",") : "Hello World"} /> */}
+                                            </div>
+                                        )
+                                    }
+                                }
+                                )}
                             </div>
                         </div>
                     </div>

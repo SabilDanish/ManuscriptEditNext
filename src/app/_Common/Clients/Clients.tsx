@@ -10,6 +10,23 @@ const Clients = () => {
     const [allPartner, setAllPartner] = useState<Partner[]>([]);
     const { loading, error, partners } = useFetchPartners(limit, offset);
     const [activeTab, setActiveTab] = useState<'companies' | 'journals'>('companies');
+    const [isMobileView, setIsMobileView] = useState<number>(12);
+    const [contentCount, setContentCount] = useState<number>(12)
+
+    const handleResize = () => {
+        if (window.innerWidth < 1000) {
+            setIsMobileView(3);
+            setContentCount(3)
+        } else {
+            setIsMobileView(12);
+        }
+    };
+
+    useEffect(() => {
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize); // Cleanup listener on unmount
+    }, []);
 
     const journalImages = [
         "/images/JournalsNew/13.png",
@@ -47,7 +64,7 @@ const Clients = () => {
                 )}
                 {type === 'companies' && allPartner.length ? (
                     allPartner.map((item, index) => {
-                        if (index < 12) {
+                        if (index < isMobileView) {
                             return (
                                 <div key={index} className="logo-item">
                                     <img src={item.logo_link} alt="Company logo" />
@@ -57,11 +74,15 @@ const Clients = () => {
                         return null;
                     })
                 ) : type === 'journals' ? (
-                    journalImages.map((imagePath, index) => (
-                        <div key={index} className="logo-item">
-                            <img src={imagePath} alt={`Journal ${index + 1}`} />
-                        </div>
-                    ))
+                    journalImages.map((imagePath, index) => {
+                        if (index < isMobileView) {
+                            return (
+                                <div key={index} className="logo-item">
+                                    <img src={imagePath} alt={`Journal ${index + 1}`} />
+                                </div>
+                            )
+                        }
+                    })
                 ) : null}
             </div>
         );
