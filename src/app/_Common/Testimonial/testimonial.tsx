@@ -1,230 +1,143 @@
-// "use client"
-
-// import "./Testimonial.css";
-// import Card from 'react-bootstrap/Card';
-
-// import { Swiper, SwiperSlide } from 'swiper/react';
-
-// // Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
-
-// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
-// // Import images
-// import testi1 from '../../utils/testi/testi1.png';
-// import testi2 from '../../utils/testi/testi2.jpg';
-// import testi3 from '../../utils/testi/testi3.png';
-
-// const Testimonial = () => {
-
-//     const renderStars = (rating:number) => {
-//         const fullStars = Math.floor(rating);
-//         const halfStar = rating % 1 !== 0;
-//         const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
-
-//         return (
-//             <div className="star-rating">
-//                 {Array.from({ length: fullStars }, (_, index) => (
-//                     <span key={index} className="star full">★</span>
-//                 ))}
-//                 {halfStar && <span className="star full">★</span>}
-//                 {Array.from({ length: emptyStars }, (_, index) => (
-//                     <span key={index} className="star empty">★</span>
-//                 ))}
-//             </div>
-//         );
-//     };
-
-//     return (
-//         <>
-
-
-//             <div className="container">
-//                 <div className="row" style={{ justifyContent: "center" }}>
-//                     <h1 className="accordion__title">Testimonial</h1>
-//                 </div>
-//             </div>
-
-//             <div className="container">
-//                 <div className='Choose-Card-Main backColor'>
-//                     <div className="dividerzz"></div>
-//                     <div className='Choose-Card'>
-//                         <Swiper
-//                             spaceBetween={10}
-//                             autoplay={{
-//                                 delay: 2500,
-//                                 disableOnInteraction: false,
-//                             }}
-//                             slidesPerView={2}
-//                             breakpoints={{
-//                                 0: {
-//                                     slidesPerView: 1,
-//                                 },
-//                                 640: {
-//                                     slidesPerView: 1,
-//                                 },
-//                                 768: {
-//                                     slidesPerView: 2,
-//                                 },
-//                             }}
-//                             modules={[Autoplay, Pagination, Navigation]}
-//                             className="testimonialSwiper"
-//                         >
-//                             <SwiperSlide>
-//                                 <Card className='Choose-Cardstesti testimonialWidth'>
-//                                     <p>" We are very thankful to you for your help in improving our manuscript! Without your help, we could not have published our reviews. We will continue to work and use your help. Please accept sincere gratitude from all the authors of the manuscript."</p>
-//                                     <Card.Body className="d-flex justify-content-start">
-//                                         <div >
-//                                             <Card.Img
-//                                                 variant="top"
-//                                                 style={{
-//                                                     width: '4rem',
-//                                                     marginRight: '1rem',
-//                                                     borderRadius: '50%',
-//                                                     boxShadow: '0 6px 8px rgba(0, 0, 0, 0.1)' // Adding box shadow
-//                                                 }}
-//                                                 src={testi1.src}
-//                                             />
-//                                         </div>
-//                                         <div>
-//                                             <Card.Title>Dr. Tatiana Yu. GAGKAEVA</Card.Title>
-//                                             <Card.Text>All-Russian Institute of Plant Protection (VIZR), RUSSIA.</Card.Text>
-//                                         </div>
-//                                     </Card.Body>
-//                                     {renderStars(4.5)}
-//                                 </Card>
-//                             </SwiperSlide>
-//                             <SwiperSlide>
-//                                 <Card className='Choose-Cardstesti testimonialWidth'>
-//                                     <p>" At the beginning of my research works I faced a lot of obstacles including finding a correct journal to publish my researches in, English language edition and proofreading, response to reviewers, etc. Manuscriptedit had solved these problems for me... "</p>
-//                                     <Card.Body className="d-flex justify-content-start">
-//                                         <div >
-//                                             <Card.Img
-//                                                 variant="top"
-//                                                 style={{
-//                                                     width: '4rem',
-//                                                     marginRight: '1rem',
-//                                                     borderRadius: '50%',
-//                                                     boxShadow: '0 6px 8px rgba(0, 0, 0, 0.1)' // Adding box shadow
-//                                                 }}
-//                                                 src={testi2.src}
-//                                             />
-//                                         </div>
-//                                         <div>
-//                                             <Card.Title>Seerwan O. Hasan</Card.Title>
-//                                             <Card.Text>M.B.Ch.B (University of Sulaimani/School of Medicine)</Card.Text>
-//                                         </div>
-//                                     </Card.Body>
-//                                     {renderStars(4.0)}
-//                                 </Card>
-//                             </SwiperSlide>
-//                             <SwiperSlide>
-//                                 <Card className='Choose-Cardstesti testimonialWidth'>
-//                                     <p>"Thank you very much Manuscriptedit for the type of writing which is apical, really it is a good job that exceeds my expectations. The most important thing is that | am thankful to the people who work in this association for the good work and the good writing "</p>
-//                                     <Card.Body className="d-flex justify-content-start">
-//                                         <div >
-//                                             <Card.Img
-//                                                 variant="top"
-//                                                 style={{
-//                                                     width: '4rem',
-//                                                     marginRight: '1rem',
-//                                                     borderRadius: '50%',
-//                                                     boxShadow: '0 6px 8px rgba(0, 0, 0, 0.1)' // Adding box shadow
-//                                                 }}
-//                                                 src={testi3.src}
-//                                             />
-//                                         </div>
-//                                         <div>
-//                                             <Card.Title>Dr. Laref Nora</Card.Title>
-//                                             <Card.Text> M.B.Ch.B (University of Sulaimani/School of Medicine)</Card.Text>
-//                                         </div>
-//                                     </Card.Body>
-//                                     {renderStars(5.0)}
-//                                 </Card>
-//                             </SwiperSlide>
-//                         </Swiper>
-//                     </div>
-//                 </div>
-//             </div>
-
-//         </>
-
-//     )
-// }
-
-// export default Testimonial;
-
-
 import React from 'react';
-import testi1 from '../../utils/testi/testi1.png';
-import testi2 from '../../utils/testi/testi2.jpg';
-import testi3 from '../../utils/testi/testi3.png';
+import testi1 from '../../utils/testi/aa.jpeg';
+import testi2 from '../../utils/testi/as.jpeg';
+import testi3 from '../../utils/testi/ad.jpeg';
+import testi4 from '../../utils/testi/af.jpeg';
+import testi5 from '../../utils/testi/ag.jpeg';
+import testi6 from '../../utils/testi/ah.jpeg';
+import testi7 from '../../utils/testi/aj.jpeg';
+import testi8 from '../../utils/testi/sa.jpeg';
+import testi9 from '../../utils/testi/ss.jpeg';
+import testi10 from '../../utils/testi/sd.jpeg';
+import testi11 from '../../utils/testi/sh.jpeg';
+import './Testimonial.css';
 
 
 const Testimonial = () => {
   return (
-    <section className="testimonial-section1 text-center py-5 bg-light">
-      <h2 className="text-center Gappy">Testimonial</h2>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="card h-100 shadow-sm">
-              <img
-                src={testi1.src}
-                alt="Bernard Castro"
-                className="card-img-top rounded-circle mx-auto d-block mt-4"
-                style={{ width: '100px', height: '100px', objectFit: 'cover' }}
-              />
-              <div className="card-body">
-                <p className="card-text">
-                  " We are very thankful to you for your help in improving our manuscript! Without your help, we could not have published our reviews."
-                </p>
-                <h5 className="card-title">Dr. Tatiana Yu. GAGKAEVA</h5>
-                <p className="text-muted">All-Russian Institute of Plant Protection (VIZR), RUSSIA.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="card h-100 shadow-sm">
-              <img
-                src={testi2.src}
-                alt="Lori Moses"
-                className="card-img-top rounded-circle mx-auto d-block mt-4"
-                style={{ width: '100px', height: '100px', objectFit: 'cover' }}
-              />
-              <div className="card-body">
-                <p className="card-text">
-                  " At the beginning of my research works I faced a lot of obstacles including finding a correct journal to publish my researches"
-                </p>
-                <h5 className="card-title">Seerwan O. Hasan</h5>
-                <p className="text-muted">M.B.Ch.B (University of Sulaimani/School of Medicine)</p>
-              </div>
-            </div>
-          </div>
+<>
+<div className="container unique-testimonial-section">
+    <h3 className="unique-testimonial-title mb-3" style={{color:'#21252c'}}>Testimonials</h3>
+    <h2 className="unique-testimonial-heading mb-5">We have worked with thousands of amazing people</h2>
 
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="card h-100 shadow-sm">
-              <img
-                src={testi3.src}
-                alt="Kalem Patel"
-                className="card-img-top rounded-circle mx-auto d-block mt-4"
-                style={{ width: '100px', height: '100px', objectFit: 'cover' }}
-              />
-              <div className="card-body">
-                <p className="card-text">
-                "Thank you very much Manuscriptedit for the type of writing which is apical, really it is a good job that exceeds my expectations."
-                </p>
-                <h5 className="card-title">Dr. Laref Nora</h5>
-                <p className="text-muted"> M.B.Ch.B (University of Sulaimani/School of Medicine)</p>
-              </div>
+    <div className="row">
+        <div className="col-lg-3 col-sm-12 d-flex flex-column mt-5">
+            <div className="card unique-testimonial-card">
+                <p className="unique-testimonial-content">"Thank you for your comments and corrections of my paper- it is done in much more professional way."</p>
+                
+                <div className='d-flex'>
+                  <div className="unique-card-icon">
+                    <img src={testi1.src} alt="SavvyCal" />
+                </div>
+                <div className="unique-testimonial-author">Firas obeidat,Jordan university hospital, Jordan</div>
+                </div>
             </div>
-          </div>
+
+            <div className="card unique-testimonial-card mt-3">
+                <p className="unique-testimonial-content">"Please send my great appreciation to the editors, they have done a wonderful job. I am very confident now in submitting my work to the journal. I will certainly recommend your service to any researcher who needs such kind of service."</p>
+                <div className='d-flex'>
+                  <div className="unique-card-icon">
+                    <img src={testi2.src} alt="SavvyCal" />
+                </div>
+                <div className="unique-testimonial-author">Z G,University of New South Wales, Australia</div>
+                </div></div>
+
+            <div className="card unique-testimonial-card mt-3">
+                <p className="unique-testimonial-content">"Many thanks for your excellent work and the comments. I like it very much, Appreciated."</p>
+                <div className='d-flex'>
+                  <div className="unique-card-icon">
+                    <img src={testi3.src} alt="SavvyCal" />
+                </div>
+                <div className="unique-testimonial-author">J Y,Seoul National University, Republic of Korea</div>
+                </div></div>
         </div>
-      </div>
-    </section>
+
+        <div className="col-lg-6 col-sm-12 d-flex flex-column">
+            <div className="card unique-testimonial-card unique-main-card">
+                <p className="unique-testimonial-content">"I am very pleased to see your corrections in my document, which I actually wrote so carefully choosing every word and checked it for spelling and grammar. I could not believe there was something more to correct. After experiencing the free sample editing, I realised that it is definitely beneficial to submit a manuscript for professional English language editing at Manuscriptedit.com. Thank you very much for your thoughtful work."</p>
+                <div className="d-flex justify-content-between align-items-center">
+                    <div>
+                    <div className='d-flex'>
+                  <div className="unique-card-icon">
+                    <img src={testi4.src} alt="SavvyCal" />
+                </div>
+                        <div className="unique-testimonial-author">M C,University of Split, Croatia</div>
+                    </div></div>
+                </div>
+            </div>
+            <div className="col-lg-12 d-flex flex-row mt-12">
+                <div className="card unique-testimonial-card m-3">
+                    <p className="unique-testimonial-content">"Thank you and your team for writing my research proposal. I just had a look at the work and I am pleased with your excellent and up to date review."</p>
+                    <div className='d-flex'>
+                  <div className="unique-card-icon">
+                    <img src={testi11.src} alt="SavvyCal" />
+                </div>
+                    <div className="unique-testimonial-author">Michael Foster,Northwest University , China</div>
+                </div>
+                </div>
+
+                <div className="card unique-testimonial-card m-3">
+                    <p className="unique-testimonial-content">"My research paper was handled very professionally by your manuscript editing service. Thank you for thorough English language editing and checking in minute details."</p>
+                    <div className='d-flex'>
+                  <div className="unique-card-icon">
+                    <img src={testi6.src} alt="SavvyCal" />
+                </div>
+                    <div className="unique-testimonial-author">J L,Iztapalpa, Mexico</div>
+                </div></div>
+            </div>
+            <div className="col-lg-12 d-flex flex-row mt-12">
+                <div className="card unique-testimonial-card m-3">
+                    <p className="unique-testimonial-content">"Thanks for your English manuscript proofreading service. I am very much satisfied with your timely delivery."</p>
+                    
+                    <div className='d-flex'>
+                  <div className="unique-card-icon">
+                    <img src={testi7.src} alt="SavvyCal" />
+                </div><div className="unique-testimonial-author">H M,Osaka University, Japan</div>
+                </div></div>
+
+                <div className="card unique-testimonial-card m-3">
+                    <p className="unique-testimonial-content">"Thank you very much for your prompt reply of sending my manuscript after sample editing. I appreciate your works."</p>
+                    
+                    <div className='d-flex'>
+                  <div className="unique-card-icon">
+                    <img src={testi8.src} alt="SavvyCal" />
+                </div><div className="unique-testimonial-author">D W K,Cheongju University, Republic of Korea</div>
+                </div></div>
+            </div>
+        </div>
+
+        <div className="col-lg-3 col-sm-12 d-flex flex-column mt-5">
+            <div className="card unique-testimonial-card">
+                <p className="unique-testimonial-content">"Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!"</p>
+                <div className='d-flex'>
+                  <div className="unique-card-icon">
+                    <img src={testi9.src} alt="SavvyCal" />
+                </div>
+                <div className="unique-testimonial-author">Lars-Ake,Jordan university hospital, Jordan, Sweden</div>
+            </div></div>
+
+            <div className="card unique-testimonial-card mt-3">
+                <p className="unique-testimonial-content">"Thank you so much for the free editing done on my document. I can say that it is very good and more than what I have expected. I look forward to using your services in future and recommending your business to my friends and associates."</p>
+                <div className='d-flex'>
+                  <div className="unique-card-icon">
+                    <img src={testi10.src} alt="SavvyCal" />
+                </div>
+                <div className="unique-testimonial-author">SNSA,Fakulti Bahasa Moden dan Komunikasi - Utama, Malaysia</div>
+            </div></div>
+
+            <div className="card unique-testimonial-card mt-3">
+                <p className="unique-testimonial-content">"Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity."</p>
+                <div className='d-flex'>
+                  <div className="unique-card-icon">
+                    <img src={testi5.src} alt="SavvyCal" />
+                </div>
+                <div className="unique-testimonial-author">Emily Selman,Northwest University , China, Saudi Arabia</div>
+            </div></div>
+        </div>
+    </div>
+</div>
+
+</>
   );
 };
 
