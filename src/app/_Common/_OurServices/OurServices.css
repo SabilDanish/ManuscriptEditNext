@@ -118,7 +118,22 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: self-end;
+}
+
+.see-more-btn {
+    background-color: #151130;
+    padding: 10px 20px;
+    width: 15rem;
+    border-radius: 8px;
+    color: #6c757d;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
 }
 
 .subcategory-btn:hover {

@@ -111,8 +111,8 @@ export default function OurServices() {
                                 {ourServices2[selectedCategoryIndex].subcategories.map((subcategory, idx) => {
                                     if (typeof (subcategory) !== 'object') {
                                         return (
-                                            <div key={idx} className="subcategory-btn text-center" data-tooltip-id="hello" onMouseEnter={(e:any) => setSelectedSubCategory(e.target.textContent)}>
-                                                {subcategory !== "See More" ? (<p>{subcategory}</p>) : <Link href={serviceUrl}><p>{subcategory}</p></Link>}
+                                            <div key={idx} className={`${subcategory !== "See More" ? "subcategory-btn" : "see-more-btn"} text-center`} data-tooltip-id="hello" onMouseEnter={(e:any) => setSelectedSubCategory(e.target.textContent)}>
+                                                {subcategory !== "See More" ? (<p>{subcategory}</p>) : <Link href={serviceUrl}><p style={{color: "white"}}>{subcategory}</p></Link>}
                                                 {/* <ReactTooltip id="hello" variant="info" place="bottom" content={content.length ? content.join(",") : "Hello World"} /> */}
                                             </div>
                                         )
