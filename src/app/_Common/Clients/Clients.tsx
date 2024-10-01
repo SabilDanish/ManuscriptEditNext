@@ -15,7 +15,7 @@ const Clients = () => {
 
     const handleResize = () => {
         if (window.innerWidth < 1000) {
-            setIsMobileView(3);
+            setIsMobileView(12);
             setContentCount(3)
         } else {
             setIsMobileView(12);
