@@ -39,7 +39,7 @@ const FaqHome = () => {
   return (
     <div className="container">
       <div className="accordion__wrapper">
-        <h1 className="accordion__title">Frequently Asked Questions</h1>
+        <h2 className="text-center marginBotm">Frequently Asked Questions</h2>
         {faqs.map((faq, index) => (
           <div className="accordion" key={index}>
             <div

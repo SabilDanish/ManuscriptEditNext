@@ -51,10 +51,10 @@
     background-color: #e2f3ff;
     padding: 10px;
     border-radius: 8px;
-    color: #6c757d;
     font-weight: 500;
     margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
 }
 
 .subcategory-btn:hover {
@@ -111,7 +111,6 @@
     padding: 10px 20px;
     width: 15rem;
     border-radius: 8px;
-    color: #6c757d;
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -130,6 +129,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-decoration: none !important;
 }
 
 /* For mobile responsiveness */
@@ -138,12 +138,25 @@
         display: none;
     }
 
+    #mobile-view .btn{
+        justify-content: center;
+    }
+
     #mobile-view {
         display: block;
     }
 .Centroid{
     display: flex;
     justify-content: center;
+}
+
+.service-category{
+    display: block !important;
+}
+
+.category-title{
+    min-height: 50px !important;
+    margin-bottom: 30px;
 }
 
 }

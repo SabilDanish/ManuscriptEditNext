@@ -44,4 +44,10 @@
   .choose-plan:hover {
     background-color: #444;
   }
+
+  @media(max-width:768px){
+    .package-card{
+      width: 401px;
+    }
+  }
   
