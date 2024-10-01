@@ -118,7 +118,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
-    align-items: self-end;
+    align-items: center;
 }
 
 .see-more-btn {
@@ -133,7 +133,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
-    align-items: self-end;
+    align-items: center;
 }
 
 .subcategory-btn:hover {
@@ -149,13 +149,13 @@
 
 /* For mobile responsiveness */
 @media (max-width: 768px) {
-    #desktop-view {
+    /* #desktop-view {
         display: none;
     }
 
     #mobile-view {
         display: block;
-    }
+    } */
 .Centroid{
     display: flex;
     justify-content: center;
