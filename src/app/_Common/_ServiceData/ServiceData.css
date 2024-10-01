@@ -32,6 +32,7 @@
     align-items: center;
     justify-content: center;
     min-height: 180px;
+    box-shadow: -2px 2px 8px #5db9ff;
     /* Increased height for the category title */
 }
 
@@ -51,7 +52,7 @@
     background-color: #e6f4ff;
     padding: 10px 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 4px #5db9ff;
     transition: transform 0.2s;
 }
 
