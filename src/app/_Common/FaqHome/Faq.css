@@ -76,7 +76,7 @@
   
   @media screen and (min-width: 580px) {
     .accordion__wrapper {
-      padding: 5rem 8rem;
+      padding: 1rem 8rem;
     }
   }
 
@@ -87,4 +87,6 @@
   }
 
 
-  
+  .marginBotm{
+    margin-bottom: 40px !important;
+  }

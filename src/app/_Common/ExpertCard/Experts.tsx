@@ -1,5 +1,6 @@
 import React from 'react';
 import ExpertCard from './ExpertCard';
+import { Carousel } from 'react-bootstrap';
 
 const experts = [
   {
@@ -64,12 +65,13 @@ const experts = [
   }
 ];
 
-
 const Experts = () => {
   return (
     <div className="container">
       <h2 className="text-center Gappy GappyTop">Our Experts</h2>
-      <div className="row">
+      
+      {/* Grid view for larger screens */}
+      <div className="row d-none d-md-flex">
         {experts.map((expert, index) => (
           <div className="col-lg-4 col-md-6 d-flex" key={index}>
             <ExpertCard
@@ -81,6 +83,25 @@ const Experts = () => {
             />
           </div>
         ))}
+      </div>
+
+      {/* Carousel view for mobile screens */}
+      <div className="d-md-none">
+        <Carousel>
+          {experts.map((expert, index) => (
+            <Carousel.Item key={index}>
+              <div className="d-flex justify-content-center">
+                <ExpertCard
+                  name={expert.name}
+                  title={expert.title}
+                  education={expert.education}
+                  image={expert.image}
+                  flag={expert.flag}
+                />
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
       </div>
     </div>
   );

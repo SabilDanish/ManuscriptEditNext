@@ -60,3 +60,21 @@
     transform: scale(1.05);
     /* Slight zoom on hover */
 }
+
+
+.category-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-bottom: 0.5rem;
+    font-size: 2rem; /* Adjust the size as needed */
+    color: #007bff; /* Customize the color */
+  }
+  
+  .service-category {
+    margin-bottom: 2rem;
+  }
+  

@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap for styling
 import './Publication_package.css';
 import Link from 'next/link';
+import { Carousel } from 'react-bootstrap'; // Import Carousel component from Bootstrap
 
 const PackageCard = (props: { title: string, features: string[], url: string }) => (
   <div className="package-card">
@@ -58,17 +59,6 @@ const PublicationPackages = () => {
       ],
       url: "/StatisticalAnalysis"
     },
-    // {
-    //   title: "Scientific Writing Assistance Plans",
-    //   features: [
-    //     "Manuscript Drafting from Research Data",
-    //     "Abstract and Introduction Development",
-    //     "Comprehensive Literature Review Writing",
-    //     "Scientific Argumentation and Clarity Improvement",
-    //     "Journal-Specific Formatting and Submission Guidance",
-    //     "Response Letter Drafting for Reviewer Comments"
-    //   ]
-    // },
     {
       title: "Research Advisory Plans",
       features: [
@@ -83,7 +73,6 @@ const PublicationPackages = () => {
     }
   ];
 
-
   return (
     <>
       <div className="container" style={{ marginTop: "3rem" }}>
@@ -93,7 +82,22 @@ const PublicationPackages = () => {
           </div>
         </div>
       </div>
-      <div className="container packages-section">
+
+      {/* Carousel for Mobile */}
+      <div className="container d-block d-md-none"> {/* Mobile view carousel */}
+        <Carousel>
+          {packages.map((pkg, index) => (
+            <Carousel.Item key={index}>
+              <div className="d-flex justify-content-center">
+                <PackageCard title={pkg.title} features={pkg.features} url={pkg.url} />
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+
+      {/* Grid for Larger Screens */}
+      <div className="container packages-section d-none d-md-block"> {/* Grid for desktop/tablet */}
         <div className="row">
           {packages.map((pkg, index) => (
             <div className="col-lg-3 col-md-6 col-sm-12 mb-4" key={index}>

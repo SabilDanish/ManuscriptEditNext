@@ -2,10 +2,8 @@
 
 import React from "react";
 import "./BlogMob.css";
-import image1 from "../../utils/images/blog-banner1.jpg";
-import image2 from "../../utils/images/Blog-banner2.jpg";
-import image3 from "../../utils/images/blog-banner-3.jpg";
 import { useRouter } from "next/navigation";
+import { Carousel } from 'react-bootstrap';
 import { formatDate, truncateString } from "@/app/utils/lib";
 
 const BlogMob = ({ blogs }: any) => {
@@ -15,11 +13,12 @@ const BlogMob = ({ blogs }: any) => {
     router.push(url);
   };
 
-  const handleRedirect = (url: string,slug: string): void => {
+  const handleRedirect = (url: string, slug: string): void => {
     const data = { url };
     localStorage.setItem("url", url)
     router.push(`/scholar-hangout/${slug}`);
   };
+
   return (
     <>
       <div className="container ContainerDesk">
@@ -30,66 +29,41 @@ const BlogMob = ({ blogs }: any) => {
         </div>
       </div>
 
-      <div className="container ContainerDesk" style={{ marginBottom: "70px" }}>
-        {blogs.map((blog: any, index: number) => {
-          const {
-            title: { rendered },
-            date,
-            guid,
-            slug,
-            _embedded: {
-              'wp:featuredmedia': [{
-                source_url
-              }]
-            },
-          } = blog;
-          if (index < 3) {
+      <div className="container ContainerDesk" style={{ marginBottom: "20px" }}>
+        <Carousel>
+          {blogs.map((blog: any, index: number) => {
+            const {
+              title: { rendered },
+              date,
+              guid,
+              slug,
+              _embedded: {
+                'wp:featuredmedia': [{
+                  source_url
+                }]
+              },
+            } = blog;
+
             return (
-              <div
-                className="row GappyDown"
-                style={{ justifyContent: "center" }}
-                key={index}
-                onClick={() => handleRedirect(guid.rendered,slug)}
-              >
-                <img src={source_url} className="BlogImg" alt="Blog Banner" />
-
-                <h6 className="contents">
-                  {truncateString(rendered, 70)}{" "}
-                  <span className="ContentSpan" style={{ display: "block" }}>
-                    -{formatDate(date)}
-                  </span>
-                </h6>
-              </div>)
-          }
-        })}
-
-        {/* <div
-          className="row"
-          style={{ justifyContent: "center", marginBottom: "20px !important" }}
-        >
-          <img src={image2.src} className="BlogImg" alt="Blog Banner" />
-
-          <h6 className="contents">
-            Exploring the Importance of Google Scholar Citations for Researchers{" "}
-            <span className="ContentSpan" style={{ display: "block" }}>
-              -May 28, 2024
-            </span>
-          </h6>
-        </div>
-
-        <div
-          className="row"
-          style={{ justifyContent: "center", marginBottom: "20px !important" }}
-        >
-          <img src={image3.src} className="BlogImg" alt="Blog Banner" />
-
-          <h6 className="contents">
-            Exploring the Importance of Google Scholar Citations for Researchers{" "}
-            <span className="ContentSpan" style={{ display: "block" }}>
-              -May 28, 2024
-            </span>
-          </h6>
-        </div> */}
+              <Carousel.Item key={index}>
+                <div className="row GappyDown" style={{ justifyContent: "center" }}>
+                  <img
+                    src={source_url}
+                    className="BlogImg"
+                    alt="Blog Banner"
+                    onClick={() => handleRedirect(guid.rendered, slug)}
+                  />
+                  <h6 className="contents" onClick={() => handleRedirect(guid.rendered, slug)}>
+                    {truncateString(rendered, 70)}{" "}
+                    <span className="ContentSpan" style={{ display: "block" }}>
+                      -{formatDate(date)}
+                    </span>
+                  </h6>
+                </div>
+              </Carousel.Item>
+            );
+          })}
+        </Carousel>
       </div>
     </>
   );
