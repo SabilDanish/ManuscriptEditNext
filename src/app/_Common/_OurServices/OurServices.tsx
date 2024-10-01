@@ -4,11 +4,13 @@ import { useEffect, useState } from 'react';
 import { ourServices, ourServices2 } from '../../utils/ourServices.js'
 
 import './OurServices.css'
+import Link from "next/link";
 
 export default function OurServices() {
     const [selectedCategoryIndex, setSelectedCategoryIndex] = useState<any>(0);
     const [selectedSubCategory, setSelectedSubCategory] = useState<any>("")
     const [content, setContent] = useState<any>([])
+    const [serviceUrl, setServiceUrl] = useState<any>(ourServices[0].url)
     const [isMobileView, setIsMobileView] = useState<boolean>(false);
 
     const handleResize = () => {
@@ -25,15 +27,16 @@ export default function OurServices() {
         return () => window.removeEventListener('resize', handleResize); // Cleanup listener on unmount
     }, []);
 
-    const showSubcategories = (index: any) => {
+    const showSubcategories = (index: any, url: any) => {
         setSelectedCategoryIndex(index);
+        setServiceUrl(url)
     };
 
     const contentHandler = (subcategory:string) => {
         return "Hello World"
     }
 
-
+    console.log({serviceUrl})
     // useEffect(() => {
     //     if(selectedSubCategory){
     //         const res = ourServices2[selectedCategoryIndex].subcategories.filter((val:any) => {
@@ -63,7 +66,7 @@ export default function OurServices() {
                                         <button
                                             className="btn btn-link btn-block text-left"
                                             type="button"
-                                            onClick={() => showSubcategories(index)}
+                                            onClick={() => showSubcategories(index,category.url)}
                                         >
                                             {category.category}
                                         </button>
@@ -96,7 +99,7 @@ export default function OurServices() {
                                         // href="javascript:void(0);"
                                         className={`list-group-item list-group-item-action Activation ${selectedCategoryIndex === index ? 'active' : ''
                                             }`}
-                                        onClick={() => showSubcategories(index)}
+                                        onClick={() => showSubcategories(index, category.url)}
                                     >
                                         {category.category}
                                     </div>
@@ -109,7 +112,7 @@ export default function OurServices() {
                                     if (typeof (subcategory) !== 'object') {
                                         return (
                                             <div key={idx} className="subcategory-btn text-center" data-tooltip-id="hello" onMouseEnter={(e:any) => setSelectedSubCategory(e.target.textContent)}>
-                                                <p>{subcategory}</p>
+                                                {subcategory !== "See More" ? (<p>{subcategory}</p>) : <Link href={serviceUrl}><p>{subcategory}</p></Link>}
                                                 {/* <ReactTooltip id="hello" variant="info" place="bottom" content={content.length ? content.join(",") : "Hello World"} /> */}
                                             </div>
                                         )
