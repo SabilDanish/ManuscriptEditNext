@@ -36,7 +36,6 @@ export default function OurServices() {
         return "Hello World"
     }
 
-    console.log({serviceUrl})
     // useEffect(() => {
     //     if(selectedSubCategory){
     //         const res = ourServices2[selectedCategoryIndex].subcategories.filter((val:any) => {

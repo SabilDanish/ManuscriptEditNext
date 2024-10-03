@@ -93,12 +93,12 @@ export default function Home() {
 
 
       {blogs && blogs.length && <BlogDesk blogs={blogs} />}
-
+      
       {blogs && blogs.length && <BlogMob blogs={blogs} />}
      
 
       <FaqHome />
-
+      
       {/* <Dropdown2 /> */}
       <NewsletterSubscribe/>
 {/* <PublicationAccordion/> */}
