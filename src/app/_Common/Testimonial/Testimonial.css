@@ -103,3 +103,13 @@
 .col-lg-4, .col-lg-6 {
     margin-bottom: 30px;
 }
+@media(max-width: 780px) {
+    .vanishOnMobile{
+      display: none !important;
+    }
+}
+@media(min-width: 780px) {
+.vanishOnMobile{
+  display: flex !important;
+}
+}

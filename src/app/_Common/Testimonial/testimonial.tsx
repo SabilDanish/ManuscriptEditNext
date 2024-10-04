@@ -21,7 +21,7 @@ const Testimonial = () => {
     <h2 className="unique-testimonial-heading mb-5">We have worked with thousands of amazing people</h2>
 
     <div className="row">
-        <div className="col-lg-3 col-sm-12 d-flex flex-column mt-5">
+        <div className="col-lg-3 d-flex flex-column mt-5">
             <div className="card unique-testimonial-card">
                 <p className="unique-testimonial-content">"Thank you for your comments and corrections of my paper- it is done in much more professional way."</p>
                 
@@ -52,7 +52,7 @@ const Testimonial = () => {
                 </div></div>
         </div>
 
-        <div className="col-lg-6 col-sm-12 d-flex flex-column">
+        <div className="col-lg-6 d-flex flex-column pt-3">
             <div className="card unique-testimonial-card unique-main-card">
                 <p className="unique-testimonial-content">"I am very pleased to see your corrections in my document, which I actually wrote so carefully choosing every word and checked it for spelling and grammar. I could not believe there was something more to correct. After experiencing the free sample editing, I realised that it is definitely beneficial to submit a manuscript for professional English language editing at Manuscriptedit.com. Thank you very much for your thoughtful work."</p>
                 <div className="d-flex justify-content-between align-items-center">
@@ -65,7 +65,7 @@ const Testimonial = () => {
                     </div></div>
                 </div>
             </div>
-            <div className="col-lg-12 d-flex flex-row mt-12">
+            <div className="col-lg-12 mt-12 vanishOnMobile">
                 <div className="card unique-testimonial-card m-3">
                     <p className="unique-testimonial-content">"Thank you and your team for writing my research proposal. I just had a look at the work and I am pleased with your excellent and up to date review."</p>
                     <div className='d-flex'>
@@ -85,7 +85,7 @@ const Testimonial = () => {
                     <div className="unique-testimonial-author">J L,Iztapalpa, Mexico</div>
                 </div></div>
             </div>
-            <div className="col-lg-12 d-flex flex-row mt-12">
+            <div className="col-lg-12 mt-12 vanishOnMobile">
                 <div className="card unique-testimonial-card m-3">
                     <p className="unique-testimonial-content">"Thanks for your English manuscript proofreading service. I am very much satisfied with your timely delivery."</p>
                     
@@ -106,7 +106,7 @@ const Testimonial = () => {
             </div>
         </div>
 
-        <div className="col-lg-3 col-sm-12 d-flex flex-column mt-5">
+        <div className="col-lg-3 d-flex flex-column mt-5">
             <div className="card unique-testimonial-card">
                 <p className="unique-testimonial-content">"Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!"</p>
                 <div className='d-flex'>
