@@ -68,7 +68,7 @@ export default function OurServices() {
                                             type="button"
                                             onClick={() => showSubcategories(index,category.url)}
                                         >
-                                            {category.category}
+                                            {category.category} 
                                         </button>
                                     </h2>
                                 </div>

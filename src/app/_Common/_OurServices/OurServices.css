@@ -53,7 +53,7 @@
     border-radius: 8px;
     font-weight: 500;
     margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 12px 15px #003b65;
     font-family: Arial, sans-serif;
 }
 
@@ -114,7 +114,7 @@
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 2px 8px #5db9ff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,7 +122,7 @@
 
 .see-more-btn {
     background-color: #151130;
-    padding: 10px 20px;
+
     width: 15rem;
     border-radius: 8px;
     color: #6c757d;
@@ -137,6 +137,7 @@
 
 .subcategory-btn:hover {
     background-color: #d1e9ff;
+    box-shadow: 3px 3px 4px #5db9ff;
 }
 
 /* Mobile view accordion styling */
