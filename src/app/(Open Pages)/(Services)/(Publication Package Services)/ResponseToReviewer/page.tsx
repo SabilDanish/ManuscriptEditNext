@@ -94,8 +94,8 @@ export default function Home() {
           </thead>
           <tbody>
             <tr>
-              <td>3</td>
-              <td>250</td>
+              <td>10</td>
+              <td>475</td>
             </tr>
           </tbody>
         </table>

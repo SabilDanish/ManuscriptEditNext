@@ -88,13 +88,13 @@ export default function Home() {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            {/* <tr>
               <td>3</td>
               <td>200</td>
-            </tr>
+            </tr> */}
             <tr>
               <td>5</td>
-              <td>150</td>
+              <td>350</td>
             </tr>
           </tbody>
         </table>
