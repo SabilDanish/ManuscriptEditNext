@@ -460,8 +460,8 @@ export default function Home() {
           </thead>
           <tbody>
             <tr>
-              <td>5</td>
-              <td>150</td>
+              <td>10</td>
+              <td>475</td>
             </tr>
           </tbody>
         </table>
