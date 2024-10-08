@@ -1,5 +1,4 @@
 "use client";
-import { Tooltip as ReactTooltip } from "react-tooltip";
 import { useEffect, useState } from 'react';
 import { ourServices, ourServices2 } from '../../utils/ourServices.js'
 
@@ -36,6 +35,7 @@ export default function OurServices() {
         return "Hello World"
     }
 
+    console.log({serviceUrl})
     // useEffect(() => {
     //     if(selectedSubCategory){
     //         const res = ourServices2[selectedCategoryIndex].subcategories.filter((val:any) => {
@@ -67,7 +67,7 @@ export default function OurServices() {
                                             type="button"
                                             onClick={() => showSubcategories(index,category.url)}
                                         >
-                                            {category.category} 
+                                            {category.category}
                                         </button>
                                     </h2>
                                 </div>

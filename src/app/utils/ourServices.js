@@ -14,7 +14,7 @@ export const ourServices = [
             "Pharmacology",
             "See More"
         ],
-        url: "https://secure.manuscriptedit.com/samplework"
+        url: "/SampleWorks"
     },
     {
         category: "Life Sciences",
