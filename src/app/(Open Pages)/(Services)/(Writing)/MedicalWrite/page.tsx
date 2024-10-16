@@ -26,7 +26,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h3 className="pt-2 pb-3">Medical Writing</h3>
+              {/* <h3 className="pt-2 pb-3">Medical Writing</h3> */}
               <p>
                 Medical writing is a specialized form of technical writing that
                 involves creating various types of documents related to

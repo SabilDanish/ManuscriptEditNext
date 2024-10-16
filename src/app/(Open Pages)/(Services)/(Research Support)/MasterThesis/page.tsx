@@ -8,10 +8,10 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">
+              {/* <h3 className="pt-2 pb-3">
                 "Professional Master's Thesis Help – Expert Writers & Editors |
                 ManuscriptEdit"
-              </h3>
+              </h3> */}
               <p>
                 Achieve mastery in your field with professional thesis writing
                 and editing services from ManuscriptEdit. Excellence in every

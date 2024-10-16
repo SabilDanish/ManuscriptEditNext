@@ -10,7 +10,7 @@ export default function Home() {
     <div className="container">
         <div className="row">
             <div className="col-md-6">
-                <h3 className="pt-2 pb-3">Increase the visibility of your research. Boost your citations</h3>
+                {/* <h3 className="pt-2 pb-3">Increase the visibility of your research. Boost your citations</h3> */}
                 <p>
                    ManuscriptEdit’s “Citation Booster” is here to help you reach a wider 
                    audience and boost the citation count for your manuscript. Explore

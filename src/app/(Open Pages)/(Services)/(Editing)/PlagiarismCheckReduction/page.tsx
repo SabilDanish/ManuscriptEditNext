@@ -21,25 +21,25 @@ export default function Home() {
     <div className="container">
         <div className="row">
             <div className="col-md-7">
-                <h3 className="pt-0 pb-3">Plagiarism Check and Reduction</h3>
+                {/* <h3 className="pt-0 pb-3">Plagiarism Check and Reduction</h3> */}
                 <p>
                    Plagiarism Check is a service dedicated to ensuring the originality 
                    and integrity of written content. Using advanced plagiarism detection 
                    tools and techniques, the service thoroughly scans documents to 
                    identify any instances of plagiarism or unoriginal text.
                 </p>
-                <div className="about_icon_box wow fadeInUp animated" data-wow-delay="0.5s" style={{visibility: 'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
+                <div className="about_icon_box wow fadeInUp animated list-icon" data-wow-delay="0.5s" style={{visibility: 'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
                     <div className="about_icon_box_inner mb-20">
-                        <span><i className="fa fa-check-square-o"></i>   Plagiarism check report.</span>
+                        <span><i className="bi bi-check-lg"></i>   Plagiarism check report.</span>
                     </div>
                     <div className="about_icon_box_inner mb-20">
-                        <span><i className="fa fa-check-square-o"></i>  Identify significant overlaps in text with published and in-press articles.</span>
+                        <span><i className="bi bi-check-lg"></i>  Identify significant overlaps in text with published and in-press articles.</span>
                     </div>
                     <div className="about_icon_box_inner mb-20">
-                        <span><i className="fa fa-check-square-o"></i>   Reduction or elimination of plagiarized text.</span>
+                        <span><i className="bi bi-check-lg"></i>   Reduction or elimination of plagiarized text.</span>
                     </div>
                     <div className="about_icon_box_inner mb-20">
-                        <span><i className="fa fa-check-square-o"></i> Ensuring no extent of overlap in text..</span>
+                        <span><i className="bi bi-check-lg"></i> Ensuring no extent of overlap in text..</span>
                     </div>
                 </div>
                 <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">

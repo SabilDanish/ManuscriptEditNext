@@ -29,12 +29,12 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-12">
               <div className="section_title text_center mb-50 mt-3">
-                <div className="section_main_title">
+                {/* <div className="section_main_title">
                   <h1>Publication Package Services</h1>
                 </div>
                 <div className="em_bar">
                   <div className="em_bar_bg"></div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

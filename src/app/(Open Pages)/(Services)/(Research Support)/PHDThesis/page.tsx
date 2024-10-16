@@ -16,10 +16,10 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">
+              {/* <h3 className="pt-2 pb-3">
                 "Unlock the full potential of your PhD research with tailored
                 assistance every step of the way."
-              </h3>
+              </h3> */}
               <p>
                 Embarking on a PhD is a monumental step in any scholar's life, a
                 journey filled with challenges yet brimming with opportunities.

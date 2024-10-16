@@ -30,7 +30,7 @@ export default function Home() {
        
           <div className="row conrow">
             <div className="col-md-12">
-              <h3 className="pt-5">Editing Overview</h3>
+              {/* <h3 className="pt-5">Editing Overview</h3> */}
               <p className="pt-3">
                 Setting the stage for the importance of editing in the realm of
                 written communication. Introduction to the multifaceted nature

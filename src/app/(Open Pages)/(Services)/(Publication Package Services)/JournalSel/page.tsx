@@ -17,7 +17,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">What We Provide</h3>
+              {/* <h3 className="pt-2 pb-3">What We Provide</h3> */}
               <p>
                 Choosing the appropriate journal for publishing is very crucial
                 but tedious process. You may have obtained excellent set of

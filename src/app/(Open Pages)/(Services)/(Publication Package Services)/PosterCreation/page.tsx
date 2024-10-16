@@ -16,7 +16,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-8">
-              <h3 className="pt-2 pb-3">Poster Design & Creation</h3>
+              {/* <h3 className="pt-2 pb-3">Poster Design & Creation</h3> */}
               <p>
                 In large conferences, you often have to communicate your
                 research results through a single poster. Posters are an

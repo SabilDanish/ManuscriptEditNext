@@ -21,7 +21,7 @@ export default function Home() {
     <div className="container">
         <div className="row">
             <div className="col-md-7">
-                <h3 className="pt-0 pb-3">Breaking the Language Barrier</h3>
+                {/* <h3 className="pt-0 pb-3">Breaking the Language Barrier</h3> */}
                 <p>
                   We, at ManuscriptEdit not only translate but transcreate documents of highest 
                   standards for all region-specific needs. We do not believe in shortcuts and 

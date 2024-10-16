@@ -43,12 +43,13 @@ const BlogNext = () => {
     //     router.push(url);
     // };
 
-    const handleRedirect = (url: string,slug:string,content:any,title:string): void => {
+    const handleRedirect = (url: string,slug:string,content:any,title:string,excerpt:string): void => {
         const data = { url };
         const formattedTitle = encodeURIComponent(slug.trim());
         localStorage.setItem("url", url)
         localStorage.setItem("content", content.rendered)
         localStorage.setItem("title", title)
+        localStorage.setItem("excerpt", excerpt)
         router.push(`/scholar-hangout/${formattedTitle}`);
     };
 
@@ -144,7 +145,7 @@ const BlogNext = () => {
                 return (
 
                     <>
-                        <div className="row Blognext7" onClick={() => handleRedirect(guid.rendered,slug,content,rendered)}>
+                        <div className="row Blognext7" onClick={() => handleRedirect(guid.rendered,slug,content,rendered,excerpt.rendered)}>
                             <div className="col-lg-5" >
                                 {source_url && <img className="blogImg" src={source_url} alt="no image" />}
                             </div>

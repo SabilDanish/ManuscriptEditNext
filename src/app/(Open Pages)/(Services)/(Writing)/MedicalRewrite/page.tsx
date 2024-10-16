@@ -22,7 +22,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">Rewriting</h3>
+              {/* <h3 className="pt-2 pb-3">Rewriting</h3> */}
               <p>
                Rewriting is a specialized service offered by ManuscriptEdit,
                 dedicated to improving the clarity, coherence, and effectiveness

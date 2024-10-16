@@ -17,7 +17,7 @@ export default function Home() {
     <div className="container">
         <div className="row">
             <div className="col-md-6">
-                <h3 className="pt-5">Editorial Processes Overview</h3>
+                {/* <h3 className="pt-5">Editorial Processes Overview</h3> */}
                 <p className="pt-3">
                     ASetting the stage for the importance of editing in the realm of written communication.
                     Introduction to the multifaceted nature of editing and its impact on clarity and effectiveness.

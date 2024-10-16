@@ -17,7 +17,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-8">
-              <h3 className="pt-2 pb-3">Peer Review & Pre Submission</h3>
+              {/* <h3 className="pt-2 pb-3">Peer Review & Pre Submission</h3> */}
               <p>
                 Almost no article get accepted without revision. Peer-reviewers
                 raise their concern to the suitability of the content to get

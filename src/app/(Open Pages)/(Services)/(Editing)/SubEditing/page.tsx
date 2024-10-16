@@ -20,7 +20,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">Substantive Editing</h3>
+              {/* <h3 className="pt-2 pb-3">Substantive Editing</h3> */}
               <div className="em-about-icon-box2">
                 <div className="list-icon">
                   <span>

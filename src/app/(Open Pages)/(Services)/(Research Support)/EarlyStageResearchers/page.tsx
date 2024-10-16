@@ -18,7 +18,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">Empowering Early-Stage Researchers</h3>
+              {/* <h3 className="pt-2 pb-3">Empowering Early-Stage Researchers</h3> */}
               <p>
                 Welcome to Manuscriptedit, where your research vision takes
                 flight. Embark on your academic journey with our Early-Stage

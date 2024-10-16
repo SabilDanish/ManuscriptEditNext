@@ -1,18 +1,21 @@
-"use client"; 
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import "./BlogDetails.css";
+import Metadata from "@/app/Metadata";
 
 const BlogDetailsClient = () => {
   const [url, setUrl] = useState<string | null>(null);
   const [excerpt, setExcerpt] = useState<any>()
   const iframeWrapperRef = useRef<HTMLDivElement | null>(null);
   const [title, setTitle] = useState<string | null>()
+  const [description, setDescription] = useState<string | null>()
 
   useEffect(() => {
     setUrl(localStorage.getItem('url'));
     setExcerpt(localStorage.getItem('content'))
     setTitle(localStorage.getItem("title"))
+    setDescription(localStorage.getItem("excerpt"))
   }, []);
 
   useEffect(() => {
@@ -23,9 +26,11 @@ const BlogDetailsClient = () => {
 
 
   return (
-    <div className="container">
-      <div className="iframe-wrapper" id="iframe-wrapper" ref={iframeWrapperRef}>
-        {/* {excerpt ? (
+    <>
+      {<Metadata metaData={{title, description}} />}
+      <div className="container">
+        <div className="iframe-wrapper" id="iframe-wrapper" ref={iframeWrapperRef}>
+          {/* {excerpt ? (
       <div className="iframe-wrapper" id="iframe-wrapper">
         {excerpt ? (
           <div>
@@ -35,9 +40,10 @@ const BlogDetailsClient = () => {
         ) : (
           <p>Loading...</p>
         )} */}
-        {!excerpt && <p>Loading...</p>}
+          {!excerpt && <p>Loading...</p>}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
