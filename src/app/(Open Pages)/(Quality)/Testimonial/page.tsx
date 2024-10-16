@@ -4,13 +4,14 @@ import { useState } from "react";
 import Metadata from "@/app/Metadata";
 import { usePathname } from 'next/navigation'
 import { data } from '../../../utils/metaFile.js'
+import Testimonial from "@/app/_Common/Testimonial/testimonial";
 const newData: any = data;
 
 
 export default function Home() { 
   const pathName: string = usePathname().split("/").filter(val => val).join("")
   let metaData = newData[pathName]
-  let list: any = [
+  const list: {msg: string,name: string,add: string}[] = [
     {
       msg: "Thanks a lot for the work. I appreciate the copy editing of the manuscript before the duedate.",
       name: "Dr Rajesh Joshi",
@@ -69,6 +70,7 @@ export default function Home() {
     {
       msg: "Thank you very much for your great editing job. Now my manuscript reads so professional. I can imagine that working on a text written by non-native speaker is not an easy job. Probably the most difficult thing is to guess what exactly an author means in every single sentence of his/her text. Manuscriptedit caught very well what I wanted to express in the text I submitted. This must have been difficult with my manuscript because not only I wrote it by myself (I am not fluent in english) but also the manuscript did not undergo preliminary proofread prior its submission to Manuscriptedit. I do appreciate your job. Also I notice with pleasure that you have completed editing before the deadline which was April 1st. Thank you for this.",
       name: "A M,Tarnow, Poland",
+      add: ""
     },
     {
       msg: "I availed the Editing and Translation services of Manuscriptedit. I was very impressed with the quality of their services, both in terms of the standard of their work as well as efficient handling and timely delivery of the completed work. They took on tough work schedules others couldn�t take on, with efficient delivery under high quality demands, and not only between widely used languages but between minor languages as well. I look forward to working with them to serve my clients and strongly recommend Manuscriptedit to my friends and colleagues.",
@@ -238,18 +240,13 @@ export default function Home() {
             <div className="col-md-6">
               {/* <h3 className="pt-5">Testimonials Overview</h3> */}
               <p className="pt-3">
-                ASetting the stage for the importance of editing in the realm of
+                Setting the stage for the importance of editing in the realm of
                 written communication. Introduction to the multifaceted nature
                 of editing and its impact on clarity and effectiveness.
               </p>
             </div>
             <div className="col-md-6">
-              <img
-                src="/images/innerimg/re-1.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
+            <iframe width="100%" height="250px"  src="https://www.youtube.com/embed?v=w1dzVNr64zs"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
           </div>
         </div>
@@ -264,8 +261,10 @@ export default function Home() {
             className="section-title text-center"
             style={{ marginBottom: 20 }}
           >
-            <h2>Our Testimonials</h2>
+            {/* <h2>Our Testimonials</h2> */}
           </div>
+
+          <Testimonial />
 
           <div className="row">
             {testimonials.map((_item: any, index: any) => {

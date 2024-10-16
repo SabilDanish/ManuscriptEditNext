@@ -24,14 +24,14 @@ export default function Home() {
                 Introduction to the critical role of proofreading in ensuring
                 polished and error-free written communication.
               </p>
-              <div className="list-icon" >
+              <ul className="list-icon">
                 <span><i className="bi bi-check-lg"></i><h6>Thorough reading of manuscript.</h6></span>
                 <span><i className="bi bi-check-lg"></i><h6>Spotting all errors.</h6></span>
                 <span><i className="bi bi-check-lg"></i><h6>Review capitalization and punctuation.</h6></span>
                 <span><i className="bi bi-check-lg"></i><h6>Check for spelling, grammar, and typos.</h6></span>
                 <span><i className="bi bi-check-lg"></i><h6>Remove redundancies</h6></span>
                 <span><i className="bi bi-check-lg"></i><h6>Rectify improper word usage.</h6></span>
-              </div>
+              </ul>
               <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
                 Submit Manuscript Now 
               </button>

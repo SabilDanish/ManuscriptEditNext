@@ -1,7 +1,7 @@
 import React from 'react';
 import './SubsNewsletter.css'; // Link to custom CSS for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram, faSkype, faPinterestP } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faSkype,faLinkedin, faInstagram, faThreads } from '@fortawesome/free-brands-svg-icons';
 
 const NewsletterSubscribe = () => {
   return (
@@ -19,13 +19,26 @@ const NewsletterSubscribe = () => {
         {/* Right - Social Media Icons */}
         <div className="col-md-4 d-flex justify-content-end">
           <div className="social-icons">
-            <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
-            <FontAwesomeIcon icon={faTwitter} className="social-icon" />
-            <FontAwesomeIcon icon={faInstagram} className="social-icon" />
-            <FontAwesomeIcon icon={faSkype} className="social-icon" />
-            <FontAwesomeIcon icon={faPinterestP} className="social-icon" />
+            <a href=" https://www.facebook.com/@Manuscriptedit" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
+            </a>
+            <a href=" https://x.com/manuscriptedit" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+            </a>
+            <a href="https://www.linkedin.com/company/reseaprojournals" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
+            </a>
+            <a href="https://www.threads.net/@manuscriptedit" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faThreads} className="social-icon" />
+            </a>
+
+            <a href="https://www.instagram.com/manuscriptedit/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+            </a>
+          
           </div>
         </div>
+
       </div>
     </section>
   );

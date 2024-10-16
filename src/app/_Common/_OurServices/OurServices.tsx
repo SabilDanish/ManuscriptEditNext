@@ -1,5 +1,4 @@
 "use client";
-import { Tooltip as ReactTooltip } from "react-tooltip";
 import { useEffect, useState } from 'react';
 import { ourServices, ourServices2 } from '../../utils/ourServices.js'
 
@@ -35,7 +34,6 @@ export default function OurServices() {
     const contentHandler = (subcategory:string) => {
         return "Hello World"
     }
-
     // useEffect(() => {
     //     if(selectedSubCategory){
     //         const res = ourServices2[selectedCategoryIndex].subcategories.filter((val:any) => {
@@ -67,7 +65,7 @@ export default function OurServices() {
                                             type="button"
                                             onClick={() => showSubcategories(index,category.url)}
                                         >
-                                            {category.category} 
+                                            {category.category}
                                         </button>
                                     </h2>
                                 </div>
@@ -112,7 +110,6 @@ export default function OurServices() {
                                         return (
                                             <div key={idx} className={`${subcategory !== "See More" ? "subcategory-btn" : "see-more-btn"} text-center`} data-tooltip-id="hello" onMouseEnter={(e:any) => setSelectedSubCategory(e.target.textContent)}>
                                                 {subcategory !== "See More" ? (<p>{subcategory}</p>) : <Link href={serviceUrl}><p style={{color: "white"}}>{subcategory}</p></Link>}
-                                                {/* <ReactTooltip id="hello" variant="info" place="bottom" content={content.length ? content.join(",") : "Hello World"} /> */}
                                             </div>
                                         )
                                     }

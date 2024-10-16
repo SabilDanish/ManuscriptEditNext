@@ -100,9 +100,7 @@
     border-radius: 50%;
 }
 
-.col-lg-4, .col-lg-6 {
-    margin-bottom: 30px;
-}
+
 @media(max-width: 780px) {
     .vanishOnMobile{
       display: none !important;
