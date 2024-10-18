@@ -10,6 +10,7 @@ import { data } from '../../../../utils/metaFile.js'
 import Metadata from "@/app/Metadata";
 import { DiscountBanner, DiscountMessage } from "./DiscountSection";
 import Dropdown2 from "../Dropdown2/Dropdown2.jsx";
+import FaqHome from "@/app/_Common/FaqHome/FaqHome";
 
 
 const newData: any = data;
@@ -323,7 +324,8 @@ export default function Home() {
       {SpecializedArea()}
       {/* {ourProfessional()} */}
       {clientFeedback()}
-      {FAQ()}
+      {/* {FAQ()} */}
+      <FaqHome />
       
     </>
   );

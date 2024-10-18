@@ -34,8 +34,6 @@ export default function OurServices() {
     const contentHandler = (subcategory:string) => {
         return "Hello World"
     }
-
-    console.log({serviceUrl})
     // useEffect(() => {
     //     if(selectedSubCategory){
     //         const res = ourServices2[selectedCategoryIndex].subcategories.filter((val:any) => {
@@ -112,7 +110,6 @@ export default function OurServices() {
                                         return (
                                             <div key={idx} className={`${subcategory !== "See More" ? "subcategory-btn" : "see-more-btn"} text-center`} data-tooltip-id="hello" onMouseEnter={(e:any) => setSelectedSubCategory(e.target.textContent)}>
                                                 {subcategory !== "See More" ? (<p>{subcategory}</p>) : <Link href={serviceUrl}><p style={{color: "white"}}>{subcategory}</p></Link>}
-                                                {/* <ReactTooltip id="hello" variant="info" place="bottom" content={content.length ? content.join(",") : "Hello World"} /> */}
                                             </div>
                                         )
                                     }

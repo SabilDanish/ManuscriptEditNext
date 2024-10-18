@@ -31,12 +31,7 @@ export default function Home() {
               </p>
             </div>
             <div className="col-md-6">
-              <img
-                src="/images/menuscimg/reach-support.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
+              <iframe width="100%" height="250px"  src="https://www.youtube.com/embed?v=uvSCIn1vEPs"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
           </div>
         </div>

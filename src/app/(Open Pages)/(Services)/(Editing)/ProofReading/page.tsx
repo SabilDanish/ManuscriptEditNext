@@ -19,18 +19,18 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-5">Proofreading</h3>
+              {/* <h3 className="pt-5">Proofreading</h3> */}
               <p className="pt-3">
                 Introduction to the critical role of proofreading in ensuring
                 polished and error-free written communication.
               </p>
-              <ul >
-                <li>Thorough reading of manuscript.</li>
-                <li>Spotting all errors.</li>
-                <li>Review capitalization and punctuation.</li>
-                <li>Check for spelling, grammar, and typos.</li>
-                <li>Remove redundancies</li>
-                <li>Rectify improper word usage.</li>
+              <ul className="list-icon">
+                <span><i className="bi bi-check-lg"></i><h6>Thorough reading of manuscript.</h6></span>
+                <span><i className="bi bi-check-lg"></i><h6>Spotting all errors.</h6></span>
+                <span><i className="bi bi-check-lg"></i><h6>Review capitalization and punctuation.</h6></span>
+                <span><i className="bi bi-check-lg"></i><h6>Check for spelling, grammar, and typos.</h6></span>
+                <span><i className="bi bi-check-lg"></i><h6>Remove redundancies</h6></span>
+                <span><i className="bi bi-check-lg"></i><h6>Rectify improper word usage.</h6></span>
               </ul>
               <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
                 Submit Manuscript Now 
