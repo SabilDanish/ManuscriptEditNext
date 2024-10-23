@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.email-input {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    box-shadow: 0px 0px 3px #c5c5c5;
+}
+
+.email-input input {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 35px;
+    border: 1px solid #e0d6d6;
+}
+
+.email-input button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.service.selected {
+    background-color: #e0ffe0;
+    border: 2px solid #4caf50;
+}
+
+.quotation {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.details,
+.add-ons {
+    margin-top: 10px;
+}
+
+.add-ons ul {
+    padding-left: 20px;
+}
+
+.count p {
+    text-align: center;
+    color: #007bff;
+}
+
+.count {
+    margin-top: 30px;
+    padding: 11px;
+    background-color: #f0f7fc;
+}
+
+input[type='file'] {
+    /* opacity: 0 */
+    width: 26%;
+}
+
+.btnApprox {
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.portion {
+    position: relative;
+    box-shadow: 0px 0px 3px #c5c5c5;
+    padding: 15px;
+    margin-top: 4px;
+}
+
+.btnApprox1 {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 18px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}

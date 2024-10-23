@@ -282,7 +282,7 @@ export default function Header() {
                       <Link href={"/QualityDelivery"}>Quality & Delivery</Link>
                     </li>
                     <li>
-                      <Link href={"/"}>Request a Sample Editing</Link>
+                      <Link href={"https://secure.manuscriptedit.com/samplework"}>Request a Sample Editing</Link>
                     </li>
                     <li>
                       <Link href={"/FAQ"}>FAQs</Link>
@@ -485,7 +485,7 @@ export default function Header() {
                     </li>
 
 
-                    <li><Link href={'/Blog'}>Scholar Hangout</Link></li>
+                    <li><Link href={'https://scholar-hangout.manuscriptedit.com'}>Scholar Hangout</Link></li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -710,7 +710,7 @@ export default function Header() {
                     <Link href={"/QualityDelivery"}>Quality & Delivery</Link>
                   </li>
                   <li>
-                    <Link href={"/"}>Request a Sample Editing</Link>
+                    <Link href={"https://secure.manuscriptedit.com/samplework"}>Request a Sample Editing</Link>
                   </li>
                   <li>
                     <Link href={"/FAQ"}>FAQs</Link>
@@ -902,7 +902,7 @@ export default function Header() {
                     </Link>
                   </li>
 
-                  <li><Link href={'/Blog'}>Scholar Hangout</Link></li>
+                  <li><Link href={'https://scholar-hangout.manuscriptedit.com'}>Scholar Hangout</Link></li>
                   {/* <li>
                     <a
                       onClick={() => {

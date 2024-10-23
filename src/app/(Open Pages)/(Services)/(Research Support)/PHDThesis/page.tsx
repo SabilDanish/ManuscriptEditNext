@@ -31,7 +31,7 @@ export default function Home() {
               </p>
             </div>
             <div className="col-md-6">
-              <iframe width="100%" height="250px"  src="https://www.youtube.com/embed?v=uvSCIn1vEPs"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+              <iframe width="100%" height="250px" title="Mastering the Editorial Process || From Submission to Perfection || ManuscriptEdit"  src="https://www.youtube.com/embed?uvSCIn1vEPs"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
           </div>
         </div>
