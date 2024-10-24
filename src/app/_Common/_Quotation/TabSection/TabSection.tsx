@@ -20,7 +20,7 @@ const tabItems = [
                 <h4>Add-Ons</h4>
                 <ul className="addon-list">
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) =>
@@ -31,7 +31,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Poster Presentation", "add-ons", 350)}
@@ -40,7 +40,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "VIP Editor", "add-ons", 350)}
@@ -49,7 +49,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Simplified Abstract", "add-ons", 250)}
@@ -58,7 +58,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) =>
@@ -69,7 +69,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Graphical Abstract", "add-ons", 350)}
@@ -78,7 +78,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Scientific News Report", "add-ons", 400)}
@@ -87,7 +87,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Journal Submission", "add-ons", 180)}
@@ -96,7 +96,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Artwork Editing", "add-ons", 350)}
@@ -109,7 +109,7 @@ const tabItems = [
                 <h4>Free Services</h4>
                 <ul className="free-services">
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Edit Unlimited'] || false}
@@ -119,7 +119,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Cover Letter'] || false}
@@ -129,7 +129,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Artwork Rework'] || false}
@@ -139,7 +139,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Rejection Shield'] || false}
@@ -149,7 +149,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Certificate Of Editing'] || false}
@@ -159,7 +159,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Resubmission Support'] || false}
@@ -182,7 +182,7 @@ const tabItems = [
                 <h4>Add-Ons</h4>
                 <ul className="addon-list">
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) =>
@@ -193,7 +193,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Poster Presentation", "add-ons", 350)}
@@ -202,7 +202,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "VIP Editor", "add-ons", 350)}
@@ -211,7 +211,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Simplified Abstract", "add-ons", 250)}
@@ -220,7 +220,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) =>
@@ -231,7 +231,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Graphical Abstract", "add-ons", 350)}
@@ -240,7 +240,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Scientific News Report", "add-ons", 400)}
@@ -249,7 +249,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Journal Submission", "add-ons", 180)}
@@ -258,7 +258,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 onChange={(e) => onCheckboxChange(e, "Artwork Editing", "add-ons", 350)}
@@ -271,7 +271,7 @@ const tabItems = [
                 <h4>Free Services</h4>
                 <ul className="free-services">
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Edit Unlimited'] || false}
@@ -281,7 +281,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Cover Letter'] || false}
@@ -291,7 +291,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Artwork Rework'] || false}
@@ -301,7 +301,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Rejection Shield'] || false}
@@ -311,7 +311,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Certificate Of Editing'] || false}
@@ -321,7 +321,7 @@ const tabItems = [
                         </label>
                     </li>
                     <li>
-                        <label>
+                        <label className="quotation-label">
                             <input
                                 type="checkbox"
                                 checked={checkedItems['Resubmission Support'] || false}
@@ -388,7 +388,9 @@ const TabsComponent: React.FC = () => {
                 ))}
             </div>
             <div className="content">
-                {tabItems.map(({ id, content }) => (active === id ? content(onCheckboxChange, checkedItems) : null))}
+                {tabItems.map(({ id, content }) => {
+                    return active === id ? content(onCheckboxChange, checkedItems) : null
+                })}
             </div>
         </div>
     );
@@ -412,7 +414,7 @@ const TabItemComponent: React.FC<TabItemComponentProps> = ({
     id,
     activeId,
 }) => {
-    console.log({title})
+    
     return (
         <label
             className={`tabitem ${isActive ? "tabitem--active" : "tabitem--inactive"} col-lg-3 col-md-12`}
