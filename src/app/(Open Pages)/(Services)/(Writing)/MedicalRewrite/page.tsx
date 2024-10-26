@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 import { data } from '../../../../utils/metaFile.js'
 import Metadata from "@/app/Metadata";
 
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 import Link from "next/link";
 
 export default function Home() {

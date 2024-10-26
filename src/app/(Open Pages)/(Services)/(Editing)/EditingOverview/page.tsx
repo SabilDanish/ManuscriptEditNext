@@ -15,7 +15,7 @@ import '../../../../_Common/getHelp/getHelp.css'
 import Dropdown2 from "@/app/_Common/Dropdown2/Dropdown2";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
   const pathName: string = usePathname().split("/").filter(val => val).join("")

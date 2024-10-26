@@ -13,7 +13,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import '../../../../_Common/getHelp/getHelp.css'
 
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
   const pathName: string = usePathname().split("/").filter(val => val).join("")

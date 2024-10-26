@@ -13,7 +13,7 @@ import Dropdown2 from "../Dropdown2/Dropdown2.jsx";
 import FaqHome from "@/app/_Common/FaqHome/FaqHome";
 
 
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
   const pathName: string = usePathname().split("/").filter(val => val).join("")

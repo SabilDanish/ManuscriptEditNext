@@ -6,7 +6,7 @@ import './SampleWork.css';
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState('Medical Sciences');
 
-  const tabContent: any = {
+  const tabContent: {[key: string]: {image: string}} = {
     'Medical Sciences': {
       image: '/img/Prooreading-1.webp',
     },

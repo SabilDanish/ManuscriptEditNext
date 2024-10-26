@@ -9,7 +9,7 @@ import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import Link from "next/link";
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
   const pathName: string = usePathname().split("/").filter(val => val).join("")

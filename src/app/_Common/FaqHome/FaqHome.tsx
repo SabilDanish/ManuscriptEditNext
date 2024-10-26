@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Faq.css"; 
-const faqs = [
+const faqs: {question: string, answer: string}[] = [
   {
     question: "ManuscriptEdit has different packages for Publication Support. Do these packages guarantee publication?",
     answer:
