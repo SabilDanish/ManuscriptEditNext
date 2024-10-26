@@ -335,6 +335,330 @@ const tabItems = [
             </div>
         ),
     },
+    {
+        id: 3,
+        title: "Top impact Scientific editing",
+        icon: faGem,
+        content: (onCheckboxChange: OnCheckboxChange, checkedItems: CheckedItems) => (
+            <div className="addon-section">
+                <h4>Add-Ons</h4>
+                <ul className="addon-list">
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) =>
+                                    onCheckboxChange(e, "Plagiarism Check - Turnitin", "add-ons", 100)
+                                }
+                            />
+                            Plagiarism Check - Turnitin <span>$100</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Poster Presentation", "add-ons", 350)}
+                            />
+                            Poster Presentation <span>$350</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "VIP Editor", "add-ons", 350)}
+                            />
+                            VIP Editor <span>$350</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Simplified Abstract", "add-ons", 250)}
+                            />
+                            Simplified Abstract <span>$250</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) =>
+                                    onCheckboxChange(e, "Journal Selection Assistant", "add-ons", 200)
+                                }
+                            />
+                            Journal Selection Assistant <span>$200</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Graphical Abstract", "add-ons", 350)}
+                            />
+                            Graphical Abstract <span>$350</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Scientific News Report", "add-ons", 400)}
+                            />
+                            Scientific News Report <span>$400</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Journal Submission", "add-ons", 180)}
+                            />
+                            Journal Submission <span>$180</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Artwork Editing", "add-ons", 350)}
+                            />
+                            Artwork Editing <span>$350</span>
+                        </label>
+                    </li>
+                </ul>
+
+                <h4>Free Services</h4>
+                <ul className="free-services">
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Edit Unlimited'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Edit Unlimited", "free-services", 0)}
+                            />
+                            Edit Unlimited
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Cover Letter'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Cover Letter", "free-services", 0)}
+                            />
+                            Cover Letter
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Artwork Rework'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Artwork Rework", "free-services", 0)}
+                            />
+                            Artwork Rework
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Rejection Shield'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Rejection Shield", "free-services", 0)}
+                            />
+                            Rejection Shield
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Certificate Of Editing'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Certificate Of Editing", "free-services", 0)}
+                            />
+                            Certificate Of Editing
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Resubmission Support'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Resubmission Support", "free-services", 0)}
+                            />
+                            Resubmission Support
+                        </label>
+                    </li>
+                </ul>
+                <button className="order-btn">Add Now</button>
+            </div>
+        ),
+    },
+    {
+        id: 4,
+        title: "Scientific Editing",
+        icon: faWebAwesome,
+        content: (onCheckboxChange: OnCheckboxChange, checkedItems: CheckedItems) => (
+            <div className="addon-section">
+                <h4>Add-Ons</h4>
+                <ul className="addon-list">
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) =>
+                                    onCheckboxChange(e, "Plagiarism Check-iThenticate", "add-ons", 100)
+                                }
+                            />
+                            Plagiarism Check-iThenticate <span>$100</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Poster Presentation", "add-ons", 350)}
+                            />
+                            Poster Presentation <span>$350</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "VIP Editor", "add-ons", 350)}
+                            />
+                            VIP Editor <span>$350</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Simplified Abstract", "add-ons", 250)}
+                            />
+                            Simplified Abstract <span>$250</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) =>
+                                    onCheckboxChange(e, "Journal Selection Assistant", "add-ons", 200)
+                                }
+                            />
+                            Journal Selection Assistant <span>$200</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Graphical Abstract", "add-ons", 350)}
+                            />
+                            Graphical Abstract <span>$350</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Scientific News Report", "add-ons", 400)}
+                            />
+                            Scientific News Report <span>$400</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Journal Submission", "add-ons", 180)}
+                            />
+                            Journal Submission <span>$180</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                onChange={(e) => onCheckboxChange(e, "Artwork Editing", "add-ons", 350)}
+                            />
+                            Artwork Editing <span>$350</span>
+                        </label>
+                    </li>
+                </ul>
+
+                <h4>Free Services</h4>
+                <ul className="free-services">
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Edit Unlimited'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Edit Unlimited", "free-services", 0)}
+                            />
+                            Edit Unlimited
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Cover Letter'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Cover Letter", "free-services", 0)}
+                            />
+                            Cover Letter
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Artwork Rework'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Artwork Rework", "free-services", 0)}
+                            />
+                            Artwork Rework
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Rejection Shield'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Rejection Shield", "free-services", 0)}
+                            />
+                            Rejection Shield
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Certificate Of Editing'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Certificate Of Editing", "free-services", 0)}
+                            />
+                            Certificate Of Editing
+                        </label>
+                    </li>
+                    <li>
+                        <label className="quotation-label">
+                            <input
+                                type="checkbox"
+                                checked={checkedItems['Resubmission Support'] || false}
+                                onChange={(e) => onCheckboxChange(e, "Resubmission Support", "free-services", 0)}
+                            />
+                            Resubmission Support
+                        </label>
+                    </li>
+                </ul>
+                <button className="order-btn">Add Now</button>
+            </div>
+        ),
+    },
 ];
 
 
@@ -414,7 +738,7 @@ const TabItemComponent: React.FC<TabItemComponentProps> = ({
     id,
     activeId,
 }) => {
-    
+
     return (
         <label
             className={`tabitem ${isActive ? "tabitem--active" : "tabitem--inactive"} col-lg-3 col-md-12`}
