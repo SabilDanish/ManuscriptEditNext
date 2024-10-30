@@ -12,6 +12,7 @@ const PeerForm = () => {
     phone_no: "",
     email: "",
     msg: "",
+    country_code: "99"
   });
 
   const { isLoading, postData } = useForm();
@@ -32,6 +33,8 @@ const PeerForm = () => {
       msg: "",
     });
   };
+
+  console.log({form})
   return (
     <>
       <div className="container">
