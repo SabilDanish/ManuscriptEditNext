@@ -16,7 +16,7 @@ import '../../../../_Common/getHelp/getHelp.css';
 import "./writingOverview.css";
 
 
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
 	const pathName: string = usePathname().split("/").filter(val => val).join("")

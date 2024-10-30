@@ -16,7 +16,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-8">
-              <h3 className="pt-2 pb-3">What We Provide</h3>
+              {/* <h3 className="pt-2 pb-3">What We Provide</h3> */}
               <p>
                 The aim of this service is to help evaluate the suitability of a
                 manuscript purely from a subject experts (peer) point of view,

@@ -8,7 +8,7 @@ const useForm =  () => {
     const [error, setError] = useState<string | null>(null);
     const [data, setData] = useState<[] | null>(null);
 
-    const radioHandlerUrl:any = {
+    const radioHandlerUrl: {[key: string]: string} = {
         "life-sciences": "https://drive.google.com/file/d/1tzG-5L135VdsVCOs8GTgj_527XUL_8v5/view",
         "physical-sciences": "https://drive.google.com/file/d/1tCPZFaVAzze-3wr0GHmS_S0OspW9PDLY/view",
         "environmental-sciences": "https://drive.google.com/file/d/1UtXp2zWbQcKFhvM_Z26RzeBil3WckdX4/view",

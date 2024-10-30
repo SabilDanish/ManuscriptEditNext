@@ -28,7 +28,7 @@ const Clients = () => {
         return () => window.removeEventListener('resize', handleResize); // Cleanup listener on unmount
     }, []);
 
-    const journalImages = [
+    const journalImages: string[] = [
         "/images/JournalsNew/13.png",
         '/images/JournalsNew/1.png',
         '/images/JournalsNew/2.1.png',

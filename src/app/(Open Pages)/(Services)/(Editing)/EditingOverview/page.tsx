@@ -15,7 +15,7 @@ import '../../../../_Common/getHelp/getHelp.css'
 import Dropdown2 from "@/app/_Common/Dropdown2/Dropdown2";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
   const pathName: string = usePathname().split("/").filter(val => val).join("")
@@ -30,7 +30,7 @@ export default function Home() {
        
           <div className="row conrow">
             <div className="col-md-12">
-              <h3 className="pt-5">Editing Overview</h3>
+              {/* <h3 className="pt-5">Editing Overview</h3> */}
               <p className="pt-3">
                 Setting the stage for the importance of editing in the realm of
                 written communication. Introduction to the multifaceted nature

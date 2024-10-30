@@ -485,7 +485,7 @@ export default function Header() {
                     </li>
 
 
-                    <li><Link href={'https://www.manuscriptedit.com/scholar-hangout/'}>Scholar Hangout</Link></li>
+                    <li><Link href={'https://scholar-hangout.manuscriptedit.com'}>Scholar Hangout</Link></li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -902,7 +902,7 @@ export default function Header() {
                     </Link>
                   </li>
 
-                  <li><Link href={'https://www.manuscriptedit.com/scholar-hangout/'}>Scholar Hangout</Link></li>
+                  <li><Link href={'https://scholar-hangout.manuscriptedit.com'}>Scholar Hangout</Link></li>
                   {/* <li>
                     <a
                       onClick={() => {

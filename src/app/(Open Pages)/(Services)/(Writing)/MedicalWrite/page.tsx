@@ -13,7 +13,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import '../../../../_Common/getHelp/getHelp.css'
 
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
   const pathName: string = usePathname().split("/").filter(val => val).join("")
@@ -26,7 +26,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h3 className="pt-2 pb-3">Medical Writing</h3>
+              {/* <h3 className="pt-2 pb-3">Medical Writing</h3> */}
               <p>
                 Medical writing is a specialized form of technical writing that
                 involves creating various types of documents related to

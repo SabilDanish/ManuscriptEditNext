@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import { data } from '../../../../utils/metaFile.js'
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import redirect from "@/app/_Common/_functionality/Redirect";
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
   const pathName: string = usePathname().split("/").filter(val => val).join("")
@@ -20,7 +20,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">Substantive Editing</h3>
+              {/* <h3 className="pt-2 pb-3">Substantive Editing</h3> */}
               <div className="em-about-icon-box2">
                 <div className="list-icon">
                   <span>

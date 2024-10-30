@@ -16,10 +16,10 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">
+              {/* <h3 className="pt-2 pb-3">
                 Manuscriptedit.com offer the following services for publication
                 support.
-              </h3>
+              </h3> */}
               <p>
                 You may have an excellent product or medical research result,
                 but it needs to be marketed effectively to attract the attention

@@ -13,9 +13,9 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">
+              {/* <h3 className="pt-2 pb-3">
                 Elevate Your Academic Journey with ManuscriptEdit
-              </h3>
+              </h3> */}
               <p>
                 Welcome to ManuscriptEdit, your trusted partner in navigating
                 the complexities of academic research. Whether you're embarking
