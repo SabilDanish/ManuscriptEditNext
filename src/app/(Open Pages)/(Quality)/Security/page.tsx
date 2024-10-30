@@ -3,7 +3,7 @@ import './secutity.module.css'
 import Metadata from "@/app/Metadata";
 import { usePathname } from 'next/navigation'
 import { data } from '../../../utils/metaFile.js'
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 
 export default function Home() {

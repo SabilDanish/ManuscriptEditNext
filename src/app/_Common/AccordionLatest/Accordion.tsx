@@ -80,7 +80,7 @@ const PublicationAccordion = () => {
 };
 
 // Accordion items data
-const accordionItems = [
+const accordionItems: {title: string, body: string}[] = [
   {
     title: "Tailored Project Scheduling for Your Paper",
     body: "Our project manager carefully evaluates the current status of your paper and designs a personalized project timeline that aligns with your preferred deadlines. We break the project into manageable phases, offering services such as journal selection, advanced English editing, pre-submission peer review, and artwork formatting to ensure your paper is ready for publication."

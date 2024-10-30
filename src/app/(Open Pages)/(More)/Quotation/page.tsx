@@ -45,7 +45,7 @@ export default function Quotation() {
                             </div>
                         </div>
 
-                        <div className="col-lg-4">
+                        <div className="col-lg-4" style={{ marginTop: "20px" }}>
                             <QuotationDetails />
                         </div>
                     </div>
