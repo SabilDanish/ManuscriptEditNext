@@ -12,7 +12,11 @@ import fund_image from "./images/fund.png";
 import melogo from "./images/melogo.png";
 import Clients from "@/app/_Common/Clients/Clients";
 import GlobalPartners2 from "@/app/_Common/GlobalPartner2/GlobalPartner2";
+<<<<<<< HEAD
 import PeerForm from "@/app/_Common/PeerForm/PeerForm";
+=======
+import ContactDown from "@/app/_Common/ContactDown/ContactDown";
+>>>>>>> b881c23b3ad4f13dadda274f6b93953970e81aa9
 
 const GlobalPartner2 = () => {
   const [select, setSelect] = useState<number>(0);
@@ -169,10 +173,17 @@ const GlobalPartner2 = () => {
           ))}
         </div>
       </div>
+<<<<<<< HEAD
     </div>
     <GlobalPartners2 />
     <Clients />
 
+=======
+
+
+      <GlobalPartners2 />
+<ContactDown/>
+>>>>>>> b881c23b3ad4f13dadda274f6b93953970e81aa9
     </>
 
 
