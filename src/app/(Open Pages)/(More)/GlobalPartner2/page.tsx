@@ -7,6 +7,7 @@ import jorame_image from "./images/jorame_image.png";
 import labatme_image from "./images/labatme_image.png";
 import univatme_image from "./images/univatme_image.png";
 import melogo from "./images/melogo.png";
+import GlobalPartners2 from "@/app/_Common/GlobalPartner2/GlobalPartner2";
 
 const GlobalPartner2 = () => {
   const [select, setSelect] = useState<number>(0);
@@ -39,33 +40,42 @@ const GlobalPartner2 = () => {
   ];
 
   return (
-    <div className="container">
-      <div className="row">
-        {/* Big Div */}
-        <div className="col-lg-7 bigdiv">
-          <img src={services[select].image.src} alt="" className="bigdiv-icon" />
-          <h1>{services[select].heading}</h1>
-          <p>{services[select].paragraph}</p>
-        </div>
-        
-        {/* Small Divs */}
-        <div className="col-lg-4">
-          {services.map((serv, index) => (
-            select !== index && (
-              <div 
-                onClick={() => setSelect(serv.id)}
-                key={serv.id}
-                className="smalldiv"
-              >
-                <img src={serv.image.src} alt="" className="smalldiv-icon" />
-                <h2>{serv.heading}</h2>
-                <img src={melogo.src} alt="" className="smalldiv-icon" />
-              </div>
-            )
-          ))}
+
+    <>
+      <div className="container">
+        <div className="row">
+          {/* Big Div */}
+          <div className="col-lg-7 bigdiv">
+            <img src={services[select].image.src} alt="" className="bigdiv-icon" />
+            <h1>{services[select].heading}</h1>
+            <p>{services[select].paragraph}</p>
+          </div>
+
+          {/* Small Divs */}
+          <div className="col-lg-4">
+            {services.map((serv, index) => (
+              select !== index && (
+                <div
+                  onClick={() => setSelect(serv.id)}
+                  key={serv.id}
+                  className="smalldiv"
+                >
+                  <img src={serv.image.src} alt="" className="smalldiv-icon" />
+                  <h2>{serv.heading}</h2>
+                  <img src={melogo.src} alt="" className="smalldiv-icon" />
+                </div>
+              )
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+
+
+      <GlobalPartners2 />
+
+    </>
+
+
   );
 };
 
