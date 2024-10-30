@@ -11,6 +11,8 @@ import course_image from "./images/course.png";
 import fund_image from "./images/fund.png";
 import melogo from "./images/melogo.png";
 import Clients from "@/app/_Common/Clients/Clients";
+import GlobalPartners2 from "@/app/_Common/GlobalPartner2/GlobalPartner2";
+import PeerForm from "@/app/_Common/PeerForm/PeerForm";
 
 const GlobalPartner2 = () => {
   const [select, setSelect] = useState<number>(0);
@@ -147,7 +149,7 @@ const GlobalPartner2 = () => {
           <h1>{services[select].heading}</h1>
           <img src={melogo.src} alt="" className="smalldiv-icon" style={{marginLeft:'.5rem'}}/>
           </div>
-          <p style={{marginLeft:'1rem',marginTop:'2rem'}}>{services[select].paragraph}</p>
+          <span style={{marginLeft:'1rem',marginTop:'2rem'}}>{services[select].paragraph}</span>
         </div>
         
         {/* Small Divs */}
@@ -168,8 +170,12 @@ const GlobalPartner2 = () => {
         </div>
       </div>
     </div>
+    <GlobalPartners2 />
     <Clients />
+
     </>
+
+
   );
 };
 
