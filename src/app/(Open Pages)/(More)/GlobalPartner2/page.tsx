@@ -8,6 +8,7 @@ import labatme_image from "./images/labatme_image.png";
 import univatme_image from "./images/univatme_image.png";
 import melogo from "./images/melogo.png";
 import GlobalPartners2 from "@/app/_Common/GlobalPartner2/GlobalPartner2";
+import ContactDown from "@/app/_Common/ContactDown/ContactDown";
 
 const GlobalPartner2 = () => {
   const [select, setSelect] = useState<number>(0);
@@ -72,7 +73,7 @@ const GlobalPartner2 = () => {
 
 
       <GlobalPartners2 />
-
+<ContactDown/>
     </>
 
 
