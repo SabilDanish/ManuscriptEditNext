@@ -6,7 +6,11 @@ import corpame_image from "./images/corpame_image.png";
 import jorame_image from "./images/jorame_image.png";
 import labatme_image from "./images/labatme_image.png";
 import univatme_image from "./images/univatme_image.png";
+import webinar_image from "./images/webinar.png";
+import course_image from "./images/course.png";
+import fund_image from "./images/fund.png";
 import melogo from "./images/melogo.png";
+import Clients from "@/app/_Common/Clients/Clients";
 
 const GlobalPartner2 = () => {
   const [select, setSelect] = useState<number>(0);
@@ -16,36 +20,134 @@ const GlobalPartner2 = () => {
       id: 0,
       image: jorame_image,
       heading: "JOR@ ",
-      paragraph: "We offer a wide spectrum of services to scientific and non-scientific journals. Our services include marketing, peer review, editorial support, typesetting, indexing, and digital branding."
+      paragraph: (
+        <>
+          Optimize your editorial processes with expert solutions:
+          <ul>
+            <li><strong>Editing and Peer Review Management</strong>: High-quality editorial services to ensure consistency across issues.</li>
+            <li><strong>Precise Translation Services</strong>: Expand global readership with expert translations.</li>
+            <li><strong>Training for Editorial Teams</strong>: Equip your teams with insights on publication trends and editorial practices.</li>
+            <li><strong>Client Success Stories</strong>: Worked with leading publishers like Elsevier, Taylor & Francis, BMJ, and Frontiers to achieve excellence.</li>
+          </ul>
+        </>
+      )
     },
     {
       id: 1,
       image: labatme_image,
       heading: "LAB@ ",
-      paragraph: "Lab@ME takes full cognizance of all requirements of a scientific professional and has the expertise to transform your studies into publishable papers. Our services include writing, rewriting, editing, designing, and illustrating your research work to take it to the publication stage."
+      paragraph: (
+        <>
+          Streamline research, from experimentation to publication:
+          <ul>
+            <li><strong>Manuscript Preparation and Submission Support</strong>: Assistance in transforming lab results into high-impact scientific papers.</li>
+            <li><strong>Data Visualization and Design</strong>: Create professional figures, diagrams, and infographics to showcase research findings.</li>
+            <li><strong>Technical Proofreading Services</strong>: Ensure precision and clarity in lab reports and presentations.</li>
+            <li><strong>Collaborative Publishing Solutions</strong>: Partner with laboratories to co-author papers in prestigious journals.</li>
+          </ul>
+        </>
+      )
     },
     {
       id: 2,
       image: univatme_image,
       heading: "UNIV@ ",
-      paragraph: "We fulfill the needs of undergraduates, graduates, postgraduates, doctorates, and post-doctorates through our wide range of tailored services, which include thesis rewriting, editing, proofreading, publication support, CV, LOR, and SOP writing, and translation services for undergraduates."
+      paragraph: (
+        <>
+          Empower your research output and global presence:
+          <ul>
+            <li><strong>Tailored Editorial Support</strong>: Improve the quality and reach of your research with expert writing, editing, and publishing services.</li>
+            <li><strong>End-to-End Publication Support</strong>: Assistance with manuscript preparation, submission, and revisions.</li>
+            <li><strong>Global Collaborations</strong>: Trusted by top institutions like Yonsei University, King Saud University, and Airlangga University.</li>
+            <li><strong>Customized Workshops</strong>: Upskill your academic team through training programs on academic publishing and research ethics.</li>
+          </ul>
+        </>
+      )
     },
     {
       id: 3,
       image: corpame_image,
       heading: "CORP@ ",
-      paragraph: "We help you take your business to the global stage by planning and executing all your corporate needs and building your business identity. Our specialized teams pride themselves in playing the enabler for many companies by maximizing the reach of their products vis-à-vis customers. With Manuscriptedit Corporate Services as your start-to-finish service provider, you can free up your resources to focus on your core business activities."
+      paragraph: (
+        <>
+          Accelerate innovation with research-backed content and communication services:
+          <ul>
+            <li><strong>Business-Centric Writing and Editing</strong>: Craft high-quality reports, whitepapers, and technical documents.</li>
+            <li><strong>Seamless Digital Communication Solutions</strong>: Enhance internal and external communication with expert editorial assistance.</li>
+            <li><strong>Trusted by Global Leaders</strong>: Collaborated with top companies like NEOM and Onyx Hospitality.</li>
+            <li><strong>Brand Impact Services</strong>: Strengthen your global reach through polished media content and engaging reports.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 4,
+      image: fund_image,
+      heading: "FUND@ ",
+      paragraph: (
+        <>
+          Maximize impact through clear and precise communication:
+          <ul>
+            <li><strong>Strategic Editorial Services</strong>: Create persuasive grant proposals, reports, and presentations.</li>
+            <li><strong>Public Engagement Support</strong>: Elevate your brand through targeted media strategies and storytelling.</li>
+            <li><strong>Professional Translation Services</strong>: Bridge language barriers for global impact.</li>
+            <li><strong>Collaborations with Global Foundations</strong>: Partnered with esteemed organizations like the Bill & Melinda Gates Foundation.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 5,
+      image: course_image,
+      heading: "COURSE@ ",
+      paragraph: (
+        <>
+          Enhance digital learning experiences with tailored content services:
+          <ul>
+            <li><strong>Course Content Development</strong>: Create engaging course modules, eBooks, and online assessments.</li>
+            <li><strong>Language and Instructional Design Support</strong>: Ensure course material is clear, concise, and aligned with best practices in online education.</li>
+            <li><strong>Learning Management System (LMS) Integration</strong>: Format content seamlessly for popular LMS platforms like Moodle, Canvas, and Blackboard.</li>
+            <li><strong>Localization Services</strong>: Adapt courses for diverse global audiences through expert translation and cultural customization.</li>
+            <li><strong>Multimedia Enhancements</strong>: Add interactive visuals, quizzes, and video scripts for a better learning experience.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 6,
+      image: webinar_image,
+      heading: "WEBINAR@ ",
+      paragraph: (
+        <>
+          Maximize event impact with expert editorial and promotional support:
+          <ul>
+            <li><strong>Content Development for Events</strong>: Prepare high-quality event brochures, abstracts, and presentation decks.</li>
+            <li><strong>Speaker and Session Support</strong>: Assist speakers with script writing, editing, and slide design to ensure engaging presentations.</li>
+            <li><strong>Event Promotion and Marketing</strong>: Craft compelling email campaigns, social media posts, and PR materials to drive registrations.</li>
+            <li><strong>Post-Event Documentation</strong>: Compile proceedings, reports, and summary documents for participants and stakeholders.</li>
+            <li><strong>Real-Time Transcription and Translation Services</strong>: Facilitate multilingual participation through live captioning and instant translations.</li>
+          </ul>
+        </>
+      )
     }
   ];
+  
+  
+  
 
   return (
+    <>
     <div className="container">
       <div className="row">
         {/* Big Div */}
         <div className="col-lg-7 bigdiv">
-          <img src={services[select].image.src} alt="" className="bigdiv-icon" />
+          <div className="smalldiv" style={{backgroundColor:'#353c57'}}>
+          
+          <img src={services[select].image.src} alt="" className="smalldiv-icon" style={{marginLeft:'.5rem'}}/>
           <h1>{services[select].heading}</h1>
-          <p>{services[select].paragraph}</p>
+          <img src={melogo.src} alt="" className="smalldiv-icon" style={{marginLeft:'.5rem'}}/>
+          </div>
+          <p style={{marginLeft:'1rem',marginTop:'2rem'}}>{services[select].paragraph}</p>
         </div>
         
         {/* Small Divs */}
@@ -59,13 +161,15 @@ const GlobalPartner2 = () => {
               >
                 <img src={serv.image.src} alt="" className="smalldiv-icon" />
                 <h2>{serv.heading}</h2>
-                <img src={melogo.src} alt="" className="smalldiv-icon" />
+                <img src={melogo.src} alt="" className="smalldiv-icon" style={{marginLeft:'.5rem'}}/>
               </div>
             )
           ))}
         </div>
       </div>
     </div>
+    <Clients />
+    </>
   );
 };
 
