@@ -8,15 +8,13 @@ import labatme_image from "./images/labatme_image.png";
 import univatme_image from "./images/univatme_image.png";
 import webinar_image from "./images/webinar.png";
 import course_image from "./images/course.png";
+import top_image from "./images/Groupnn.jpg";
 import fund_image from "./images/fund.png";
 import melogo from "./images/melogo.png";
 import Clients from "@/app/_Common/Clients/Clients";
 import GlobalPartners2 from "@/app/_Common/GlobalPartner2/GlobalPartner2";
-<<<<<<< HEAD
 import PeerForm from "@/app/_Common/PeerForm/PeerForm";
-=======
 import ContactDown from "@/app/_Common/ContactDown/ContactDown";
->>>>>>> b881c23b3ad4f13dadda274f6b93953970e81aa9
 
 const GlobalPartner2 = () => {
   const [select, setSelect] = useState<number>(0);
@@ -143,9 +141,12 @@ const GlobalPartner2 = () => {
 
   return (
     <>
+        <img src={top_image.src} alt="img" style={{width:'100%'}}/>
+
     <div className="container">
       <div className="row">
         {/* Big Div */}
+        
         <div className="col-lg-7 bigdiv">
           <div className="smalldiv" style={{backgroundColor:'#353c57'}}>
           
@@ -173,17 +174,14 @@ const GlobalPartner2 = () => {
           ))}
         </div>
       </div>
-<<<<<<< HEAD
     </div>
     <GlobalPartners2 />
     <Clients />
 
-=======
 
 
-      <GlobalPartners2 />
+     
 <ContactDown/>
->>>>>>> b881c23b3ad4f13dadda274f6b93953970e81aa9
     </>
 
 
