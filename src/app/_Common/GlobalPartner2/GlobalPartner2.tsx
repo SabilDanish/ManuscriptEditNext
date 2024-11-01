@@ -298,7 +298,7 @@ const GlobalPartners2 = () => {
 
 
     return (
-        <div className="container" style={{ marginTop: "30px", marginBottom: "40px" }}>
+        <div className="container container21" style={{ marginTop: "30px", marginBottom: "40px" }}>
             <div className="tabs">
                 {tabs.map((tab) => (
                     <button
