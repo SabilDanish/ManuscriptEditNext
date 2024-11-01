@@ -39,7 +39,7 @@ import FloatingWp from "./_Common/FloatingWp/FloatingWp";
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: Readonly<{                  
   children: React.ReactNode;
 }>) {
 
