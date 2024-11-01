@@ -23,6 +23,8 @@ const useBlogs = (page: number=1) => {
         return response.json()
       }).then(data => {
         setBlogs(data);
+      }).catch(err => {
+        setError("Something went wrong")
       }).finally(() => {
         setLoading(false);
       });
