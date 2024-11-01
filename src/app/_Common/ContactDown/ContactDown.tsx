@@ -5,8 +5,8 @@ import PeerForm from '../PeerForm/PeerForm';
 
 const ContactDown = () => {
     return (
-        <div className="container">
-            <div className="row">
+        <div className="container" style={{marginTop:'85px'}}>
+            <div className="row" >
                 <div className="col-lg-6">
 
                     
