@@ -24,6 +24,24 @@ const PeerForm = () => {
 
   const formSubmitOne = (e: any) => {
     e.preventDefault();
+    let validation = true
+    let message = ''
+
+    for(let key in form){
+      if(!form[key]){
+        validation = false
+        message = "Please complete all field data"
+      }else if(key === "phone_no" && form['phone_no'].length !== 10){
+        validation = false
+        message = "The phone number should be 10 digits"
+      }
+    }
+
+    if(!validation){
+      alert(message)
+      return
+    }
+
     postData(form,setForm);
     setForm({
       name: "",
@@ -34,7 +52,6 @@ const PeerForm = () => {
     });
   };
 
-  console.log({form})
   return (
     <>
       <div className="container">
