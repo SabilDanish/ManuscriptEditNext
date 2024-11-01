@@ -39,7 +39,7 @@ const useForm =  () => {
                 if(Status){
                     // Thank you , your request is received. You will receive the sample in your mail shortly.
                     toast.success("Thank you, your request is received. You will receive the sample in your mail shortly.")
-                    window.location.assign(radioHandlerUrl[radio_url])
+                    // window.location.assign(radioHandlerUrl[radio_url])
                     // fetch('https://email-nodemailer.vercel.app/sendEmail',{
                     //     method: 'POST',
                     //     headers: {
@@ -54,6 +54,7 @@ const useForm =  () => {
                     
                     //     // toast.error("Your request couldn't be sent, please try again.")
                     // })
+                    window.location.reload()
                 }else{
                     toast.error("Your request couldn't be sent, please try again.")
                 }
