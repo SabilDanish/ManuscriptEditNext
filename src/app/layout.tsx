@@ -39,7 +39,7 @@ import FloatingWp from "./_Common/FloatingWp/FloatingWp";
 
 export default function RootLayout({
   children,
-}: Readonly<{                  
+}: Readonly<{
   children: React.ReactNode;
 }>) {
 
@@ -86,11 +86,13 @@ export default function RootLayout({
         <Script type="text/javascript" src="/js/facebookPixelCodeTwo.js" strategy="lazyOnload" />
         <Script type="text/javascript" src="/js/GtagManager.js" strategy="lazyOnload" />
         <Script type="text/javascript" src="/js/fbevents.js" strategy="lazyOnload" />
-        <noscript><img height="1" width="1" style={{display:"none"}}
+        <Script type="text/javascript" src="/js/footerLinkedin.js" strategy="lazyOnload" />
+        <Script type="text/javascript" src="/js/footerLinkedinWindow.js" strategy="lazyOnload" />
+        <noscript><img height="1" width="1" style={{ display: "none" }}
           src="https://www.facebook.com/tr?id=1557346005163372&ev=PageView&noscript=1"
         /></noscript>
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-16677438282" />
-        <Script src="/js/gtagNew.js" strategy="lazyOnload"/>
+        <Script src="/js/gtagNew.js" strategy="lazyOnload" />
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=576246542585612&ev=PageView&noscript=1" />
         </noscript>
@@ -114,8 +116,11 @@ export default function RootLayout({
         <Header />
         <Suspense fallback={<p style={{ width: "100%", display: 'flex', justifyContent: "center" }}><DNA /></p>}>{children}</Suspense>
         <FloatingWp />
-        
+
         {footer()}
+        <noscript>
+          <img height="1" width="1" style={{"display":"none"}} alt="" src="https://px.ads.linkedin.com/collect/?pid=74803&fmt=gif" />
+        </noscript>
       </body>
     </html>
   );
