@@ -135,53 +135,49 @@ const GlobalPartner2 = () => {
       )
     }
   ];
-  
-  
-  
+
+
+
 
   return (
     <>
-        <img src={top_image.src} alt="img" style={{width:'100%'}}/>
+      <img src={top_image.src} alt="img" style={{ width: '100%' }} />
 
-    <div className="container" style={{marginTop:"40px" , marginBottom:"30px"}}>
-      <div className="row">
-        {/* Big Div */}
-        
-        <div className="col-lg-7 bigdiv">
-          <div className="smalldiv" style={{backgroundColor:'#353c57'}}>
-          
-          <img src={services[select].image.src} alt="" className="smalldiv-icon" style={{marginLeft:'.5rem'}}/>
-          <h1>{services[select].heading}</h1>
-          <img src={melogo.src} alt="" className="smalldiv-icon" style={{marginLeft:'.5rem'}}/>
+      <div className="container" style={{ marginTop: "40px", marginBottom: "30px" }}>
+        <div className="row">
+          {/* Big Div */}
+
+          <div className="col-lg-7 bigdiv">
+            <div className="smalldiv" style={{ backgroundColor: '#353c57' }}>
+
+              <img src={services[select].image.src} alt="" className="smalldiv-icon" style={{ marginLeft: '.5rem' }} />
+              <h1>{services[select].heading}</h1>
+              <img src={melogo.src} alt="" className="smalldiv-icon" style={{ marginLeft: '.5rem' }} />
+            </div>
+            <span style={{ marginLeft: '1rem', marginTop: '2rem' }}>{services[select].paragraph}</span>
           </div>
-          <span style={{marginLeft:'1rem',marginTop:'2rem'}}>{services[select].paragraph}</span>
-        </div>
-        
-        {/* Small Divs */}
-        <div className="col-lg-4">
-          {services.map((serv, index) => (
-            select !== index && (
-              <div 
-                onClick={() => setSelect(serv.id)}
-                key={serv.id}
-                className="smalldiv"
-              >
-                <img src={serv.image.src} alt="" className="smalldiv-icon" />
-                <h2>{serv.heading}</h2>
-                <img src={melogo.src} alt="" className="smalldiv-icon" style={{marginLeft:'.5rem'}}/>
-              </div>
-            )
-          ))}
+
+          {/* Small Divs */}
+          <div className="col-lg-4">
+            {services.map((serv, index) => (
+              select !== index && (
+                <div
+                  onClick={() => setSelect(serv.id)}
+                  key={serv.id}
+                  className="smalldiv"
+                >
+                  <img src={serv.image.src} alt="" className="smalldiv-icon" />
+                  <h2>{serv.heading}</h2>
+                  <img src={melogo.src} alt="" className="smalldiv-icon" style={{ marginLeft: '.5rem' }} />
+                </div>
+              )
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-    <GlobalPartners2 />
-    <Clients />
-
-
-
-     
-<ContactDown/>
+      <GlobalPartners2 />
+      <Clients />
+      <ContactDown />
     </>
 
 
