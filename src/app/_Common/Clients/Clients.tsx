@@ -94,13 +94,13 @@ const Clients = () => {
                 <div className="tabs clients-tab">
                     <button
                         className={activeTab === 'companies' ? 'active' : ''}
-                        onClick={() => setActiveTab('companies')}
+                        onClick={() => setActiveTab('companies')} style={{marginTop:'10px'}}
                     >
                         Our Global Partners
                     </button>
                     <button
                         className={activeTab === 'journals' ? 'active' : ''}
-                        onClick={() => setActiveTab('journals')}
+                        onClick={() => setActiveTab('journals')} style={{marginTop:'10px' , border:'1px solid #342e5b'}}
                     >
                         High Impact Publications
                     </button>

@@ -143,7 +143,7 @@ const GlobalPartner2 = () => {
     <>
         <img src={top_image.src} alt="img" style={{width:'100%'}}/>
 
-    <div className="container">
+    <div className="container" style={{marginTop:"40px" , marginBottom:"30px"}}>
       <div className="row">
         {/* Big Div */}
         

@@ -1,0 +1,10 @@
+.ContactImage{
+    width: 100%;
+}
+
+@media(max-width:768px){
+    .ContactImage{
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+}
