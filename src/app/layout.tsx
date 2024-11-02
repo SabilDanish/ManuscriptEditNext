@@ -29,6 +29,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Header from "./_Common/_Header/Header";
 import { DNA } from "react-loader-spinner";
 import FloatingWp from "./_Common/FloatingWp/FloatingWp";
+import '@fortawesome/fontawesome-svg-core/styles.css';
 // import { DefaultSeo } from "next-seo";
 // import SEO from "../../next-seo.config";
 
