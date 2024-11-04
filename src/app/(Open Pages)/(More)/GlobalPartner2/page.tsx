@@ -23,7 +23,7 @@ const GlobalPartner2 = () => {
     {
       id: 0,
       image: jorame_image,
-      heading: "JOR@ ",
+      heading: "JOUR@ ",
       paragraph: (
         <>
           Optimize your editorial processes with expert solutions:
