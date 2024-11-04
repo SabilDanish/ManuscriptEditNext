@@ -4,7 +4,43 @@ export default function Home() {
   return (
     <>
     {breadcrum("Submit Manuscript", "Discount")}
+
     <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
+     <div className="formmm" style={{margin: 0, padding: 25}}>
+         <div className="col-lg-12 col-md-12 col-sm-12">
+             <img  src="/images/Get-published.jpg" alt="" style={{width:'100%'}}/>
+         </div>
+         <div className="col-lg-12 col-md-12 col-sm-12 d-flex950">
+             <div className="col-lg-12 col-md-12 col-sm-12" style={{marginTop:'2rem'}}>
+                 <h4><strong>Halloween Sale Ends in 3 Days – Save 60% on Publication Support Package!</strong></h4>
+                 <p className="pt-3">
+                 Our Halloween Sale was a big hit, and due to popular demand, we’re extending it for 5 more days! Now you have an extra chance to enjoy 60% OFF on our premium publication services.
+                 </p>
+                 <p>
+                 If you’re ready to publish your research in a top journal, now is the time to act with our season’s best offer, ending November 7th.
+                 </p>
+                 <h4 style={{marginTop:'2rem'}}><strong>Validity:</strong></h4>
+                 <p>The offer is valid till Nov 7, 2024</p>
+             </div>
+             {/* <div className="col-lg-6 col-md-6 col-sm-6 pt-30">
+                 <div className="box0">
+                     <p style={{fontWeight: 'bold'}}>Terms & Conditions:</p>
+                     <ul style={{padding: '0px 15px'}}>
+                         <li className="pb-3">Writing wordcount limit for this offer is 1500 words</li>
+                         <li className="pb-3">1-time publication assistance (includes 1-time Journal selection, 1-time
+                             formatting, 1-time submission, and Response to reviewer)</li>
+                         <li className="pb-3">Response to reviewer service won't include additional wordcount writing</li>
+                         <li className="pb-3">Timeline = 20-25 days</li>
+                         <li className="pb-3">Prebook option included, prebook amount is $100, and prebook timeline is 60
+                             days.</li>
+                     </ul>
+                 </div>
+             </div> */}
+         </div>
+     </div>
+ </div>
+
+    {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm d-flex" style={{margin: 0, padding: 25}}>
          <div className="row rowflex">
              <div className="col-md-6 pb-2">
@@ -37,47 +73,11 @@ export default function Home() {
              </div>
          </div>
      </div>
- </div>
+ </div> */}
 
- <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
-     <div className="formmm" style={{margin: 0, padding: 25}}>
-         <div className="col-lg-12 col-md-12 col-sm-12">
-             <img  src="/images/Get-published.jpg" alt=""/>
-         </div>
-         <div className="col-lg-12 col-md-12 col-sm-12 d-flex950">
-             <div className="col-lg-6 col-md-6 col-sm-6">
-                 <h4>Save time and resources - let us handle your case report</h4>
-                 <p className="pt-3">
-                     Writing a case report got you feeling overwhelmed? Don't worry, we've got you covered with our
-                     5-in-1 Case Report Writing package. For just $685, you'll get case report writing, journal
-                     selection, formatting, submission, and response to the reviewer - everything you need to get your
-                     report published!
-                 </p>
-                 <p>
-                     Even if you don't need it right now, you can pre-book and freeze this offer for the next 60 days.
-                     Our team of experts has years of experience in case report writing, and we'll take care of
-                     everything, leaving you more time to focus on your research.
-                 </p>
-             </div>
-             <div className="col-lg-6 col-md-6 col-sm-6 pt-30">
-                 <div className="box0">
-                     <p style={{fontWeight: 'bold'}}>Terms & Conditions:</p>
-                     <ul style={{padding: '0px 15px'}}>
-                         <li className="pb-3">Writing wordcount limit for this offer is 1500 words</li>
-                         <li className="pb-3">1-time publication assistance (includes 1-time Journal selection, 1-time
-                             formatting, 1-time submission, and Response to reviewer)</li>
-                         <li className="pb-3">Response to reviewer service won't include additional wordcount writing</li>
-                         <li className="pb-3">Timeline = 20-25 days</li>
-                         <li className="pb-3">Prebook option included, prebook amount is $100, and prebook timeline is 60
-                             days.</li>
-                     </ul>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
 
- <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
+
+ {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm" style={{margin: 0, padding: 25}}>
          <div className="col-lg-12 col-md-12 col-sm-12">
              <img  src="/images/disc15.jpg" alt=""/>
@@ -293,7 +293,7 @@ export default function Home() {
             </div>
         </div>
     </div>
-</div>
+</div> */}
     </>
   );
 }
