@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import './ContactDown.css';
 import PeerForm from '../PeerForm/PeerForm';
+import ContactForm from '../ContactForm/ContactForm';
 
 const ContactDown = () => {
     return (
@@ -10,12 +11,12 @@ const ContactDown = () => {
                 <div className="col-lg-6">
 
                     
-                    <PeerForm />
+                    <ContactForm />
 
                 </div>
 
                 <div className="col-lg-6">
-                    <img src="/images/galery/unnamed (1).jpg" alt="#" />
+                    <img src="/images/galery/unnamed (1).jpg" alt="#" className='ContactImage ' />
                 </div>
             </div>
         </div>

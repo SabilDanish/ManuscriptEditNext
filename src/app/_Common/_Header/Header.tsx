@@ -454,7 +454,7 @@ export default function Header() {
                       </a>
                     </li>
 
-                    <li><Link href={'/GlobalPartner'}>Global Partner Program</Link></li>
+                    <li><Link href={'/GlobalPartner2'}>Global Partner Program</Link></li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -872,7 +872,7 @@ export default function Header() {
                     </a>
                   </li>
 
-                  <li><Link href={'/GlobalPartner'}>Global Partner Program</Link></li>
+                  <li><Link href={'/GlobalPartner2'}>Global Partner Program</Link></li>
                   {/* <li>
                     <a
                       onClick={() => {
