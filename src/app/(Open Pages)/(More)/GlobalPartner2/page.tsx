@@ -174,13 +174,12 @@ const GlobalPartner2 = () => {
             ))}
           </div>
         </div>
+
       </div>
       <GlobalPartners2 />
       <Clients />
       <ContactDown />
     </>
-
-
   );
 };
 
