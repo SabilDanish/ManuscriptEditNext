@@ -1,35 +1,111 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 
 export default function Home() {
-  return (
-    <>
-    {breadcrum("Submit Manuscript", "Discount")}
+    return (
+        <>
+            {breadcrum("Submit Manuscript", "Discount")}
 
-    <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
-     <div className="formmm" style={{margin: 0, padding: 25}}>
-         <div className="col-lg-12 col-md-12 col-sm-12">
-             <img  src="/images/Get-published.jpg" alt="" style={{width:'100%'}}/>
-         </div>
-         <div className="col-lg-12 col-md-12 col-sm-12 d-flex950">
-             <div className="col-lg-6 col-md-6 col-sm-6" style={{marginTop:'2rem'}}>
-                 <h4><strong>Halloween Sale Ends in 3 Days – Save 60%* on Publication Support Package!</strong></h4>
-                 <p className="pt-3">
-                 Our Halloween Sale was a big hit, and due to popular demand, we’re extending it for 5 more days! Now you have an extra chance to enjoy 60%* OFF on our premium publication services.
-                 </p>
-                 <p>
-                 If you’re ready to publish your research in a top journal, now is the time to act with our season’s best offer, ending November 7th.
-                 </p>
-                 <h4 style={{marginTop:'2rem'}}><strong>Validity:</strong></h4>
-                 <p>The offer is valid till Nov 7, 2024</p>
-             </div>
-             <div className="col-lg-6 col-md-6 col-sm-6 pt-30">
-             <img  src="/images/Scr111.png" alt="" style={{width:'100%'}}/>
-             </div>
-         </div>
-     </div>
- </div>
+            <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
 
-    {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
+
+                
+
+                <div className="formmm" style={{ margin: 0, padding: 25 }}>
+
+                <h4 style={{ marginBottom: "20px" }}><strong>Limited-Time Discount on Essential Writing Services!</strong></h4>
+                <p style={{ marginBottom: "40px" }}>With ManuscriptEdit, get full support at every stage of writing so you can focus on your research!</p>
+
+
+                    <div className="table-responsive">
+                        <table className="table table-bordered">
+                            <thead className="thead-light">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Discount & Assistance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>🔹 Research Paper Writing Assistance</td>
+                                    <td>Up to 20% OFF with expert guidance!</td>
+                                </tr>
+                                <tr>
+                                    <td>🔹 Narrative Review Paper Writing Assistance</td>
+                                    <td>Up to 20% OFF, complete with personalized support!</td>
+                                </tr>
+                                <tr>
+                                    <td>🔹 Systematic Review Writing Assistance</td>
+                                    <td>Up to 25% OFF, including step-by-step assistance!</td>
+                                </tr>
+                                <tr>
+                                    <td>🔹 Systematic Review & Meta-Analysis</td>
+                                    <td>Up to 30% OFF with comprehensive support!</td>
+                                </tr>
+                                <tr>
+                                    <td>🔹 Case Report Writing Assistance</td>
+                                    <td>Up to 15% OFF, fully guided!</td>
+                                </tr>
+                                <tr>
+                                    <td>🔹 Grant Proposal Writing Assistance</td>
+                                    <td>Starting at 20% OFF with end-to-end support!</td>
+                                </tr>
+                                <tr>
+                                    <td>🔹 Conference Paper Writing Assistance</td>
+                                    <td>Starting at 15% OFF with professional guidance!</td>
+                                </tr>
+                                <tr>
+                                    <td>🔹 Poster Presentation Creation</td>
+                                    <td>25% OFF, including design guidance!</td>
+                                </tr>
+                                <tr>
+                                    <td>🔹 Thesis Writing Assistance</td>
+                                    <td>Starting at 15% OFF, customized to your needs!</td>
+                                </tr>
+                                <tr>
+                                    <td>🔹 Dissertation Writing Assistance</td>
+                                    <td>Starting at 15% OFF, with full support!</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <p style={{ marginTop: "20px" }}><strong>Hurry! These offers won’t last long!</strong> Elevate your research and make a lasting impact in the academic world.</p>
+                    <p><strong>Questions?</strong>WhatsApp us now at +91-923-730-4004 (IN), +1 (646)916-3476 (USA) or Email us at success@manuscriptedit.com to learn more about our fully supported services.</p>
+                    <h4 style={{ marginTop: '2rem' }}><strong>Validity:</strong></h4>
+                    <p>The offer is valid till Nov 12, 2024</p>
+
+                </div>
+
+               
+            </div>
+
+
+            <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
+                <div className="formmm" style={{ margin: 0, padding: 25 }}>
+                    <div className="col-lg-12 col-md-12 col-sm-12">
+                        <img src="/images/Get-published.jpg" alt="" style={{ width: '100%' }} />
+                    </div>
+                    <div className="col-lg-12 col-md-12 col-sm-12 d-flex950">
+                        <div className="col-lg-6 col-md-6 col-sm-6" style={{ marginTop: '2rem' }}>
+                            <h4><strong>Halloween Sale Ends in 3 Days – Save 60%* on Publication Support Package!</strong></h4>
+                            <p className="pt-3">
+                                Our Halloween Sale was a big hit, and due to popular demand, we’re extending it for 5 more days! Now you have an extra chance to enjoy 60%* OFF on our premium publication services.
+                            </p>
+                            <p>
+                                If you’re ready to publish your research in a top journal, now is the time to act with our season’s best offer, ending November 7th.
+                            </p>
+                            <h4 style={{ marginTop: '2rem' }}><strong>Validity:</strong></h4>
+                            <p>The offer is valid till Nov 7, 2024</p>
+                        </div>
+                        <div className="col-lg-6 col-md-6 col-sm-6 pt-30">
+                            <img src="/images/Scr111.png" alt="" style={{ width: '100%' }} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm d-flex" style={{margin: 0, padding: 25}}>
          <div className="row rowflex">
              <div className="col-md-6 pb-2">
@@ -66,7 +142,7 @@ export default function Home() {
 
 
 
- {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
+            {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm" style={{margin: 0, padding: 25}}>
          <div className="col-lg-12 col-md-12 col-sm-12">
              <img  src="/images/disc15.jpg" alt=""/>
@@ -283,6 +359,6 @@ export default function Home() {
         </div>
     </div>
 </div> */}
-    </>
-  );
+        </>
+    );
 }

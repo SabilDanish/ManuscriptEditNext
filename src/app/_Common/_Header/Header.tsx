@@ -338,7 +338,7 @@ export default function Header() {
                       <Link href={"/PaymentMethod"}>Payment Method</Link>
                     </li>
                     <li>
-                      <Link href={"/Discount"}>Discount</Link>
+                      <Link href={"/Discount"}>Discount & Offers</Link>
                     </li>
                   </ul>
                 </li>
