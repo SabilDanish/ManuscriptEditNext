@@ -13,7 +13,7 @@ import Dropdown2 from "../Dropdown2/Dropdown2.jsx";
 import FaqHome from "@/app/_Common/FaqHome/FaqHome";
 
 
-const newData: {[key: string]: {[key: string]: string}} = data;
+const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
   const pathName: string = usePathname().split("/").filter(val => val).join("")
@@ -55,7 +55,7 @@ export default function Home() {
                   <center>
                     <h2>
                       <span className="dollar">
-                        <s></s> $2134
+                        <s></s> $2134 *
                       </span>
                       <span>30 Days</span>
                     </h2>
@@ -64,20 +64,20 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}}>
+                <div className="featur_itmes " style={{ paddingLeft: "15px", paddingRight: "15px" }}>
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Data Analysis</li>
                     <li>Research Paper Writing</li>
                     <li>Substantive Editing</li>
                     <li>Journal Selection</li>
-                    <li>Journal Submission</li>
                     <li>Target Journal Formatting</li>
                     <li>Artwork Formatting</li>
                     <li>Cover Letter Writing</li>
+                    <li>Journal Submission</li>
                     <li>Response To Reviewer</li>
                     <li>Plagiarism Check</li>
-                    <li>Unlimited Assistance</li>
+                    <li>Unlimited Assistance *</li>
                   </ul>
                 </div>
               </div>
@@ -86,6 +86,12 @@ export default function Home() {
               </div>
               <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
                 <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
+                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+                  *Terms and conditions applied.
+                </p>
               </div>
               <DiscountMessage />
             </div>
@@ -102,7 +108,7 @@ export default function Home() {
                   <center>
                     <h2>
                       <span className="dollar">
-                        <s></s> $1534
+                        <s></s> $1534 *
                       </span>
                       <span>20 Days</span>
                     </h2>
@@ -111,7 +117,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}}>
+                <div className="featur_itmes " style={{ paddingLeft: "15px", paddingRight: "15px" }}>
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Substantive Editing</li>
@@ -122,7 +128,7 @@ export default function Home() {
                     <li>Journal Submission</li>
                     <li>Response to Reviewers* (*One response to reviewer free)</li>
                     <li>Plagiarism Check</li>
-                    <li>Unlimited Assistance</li>
+                    <li>Unlimited Assistance *</li>
                   </ul>
                 </div>
               </div>
@@ -131,6 +137,12 @@ export default function Home() {
               </div>
               <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
                 <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
+                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+                  *Terms and conditions applied.
+                </p>
               </div>
               <DiscountMessage />
             </div>
@@ -147,7 +159,7 @@ export default function Home() {
                   <center>
                     <h2>
                       <span className="dollar">
-                        <s></s> $1134
+                        <s></s> $1134 *
                       </span>
                       <span>15 Days</span>
                     </h2>
@@ -156,7 +168,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}}>
+                <div className="featur_itmes " style={{ paddingLeft: "15px", paddingRight: "15px" }}>
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Substantive Editing</li>
@@ -165,7 +177,7 @@ export default function Home() {
                     <li>Cover Letter Writing</li>
                     <li>Journal Submission</li>
                     <li>Plagiarism Check</li>
-                    <li>Unlimited Assistance</li>
+                    <li>Unlimited Assistance *</li>
                   </ul>
                 </div>
               </div>
@@ -174,6 +186,12 @@ export default function Home() {
               </div>
               <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
                 <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
+                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+                  *Terms and conditions applied.
+                </p>
               </div>
               <DiscountMessage />
             </div>
@@ -184,13 +202,15 @@ export default function Home() {
               {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <center><h4>Standard Package</h4></center>
+                  <center>
+                    <h4>Standard Package</h4>
+                  </center>
                 </div>
                 <div className="pricing_tk">
                   <center>
                     <h2>
                       <span className="dollar">
-                        <s></s> $867
+                        <s>$867</s> $650 *
                       </span>
                       <span>10 Days</span>
                     </h2>
@@ -199,14 +219,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{paddingLeft:"15px" , paddingRight:"15px"}}>
+                <div className="featur_itmes" style={{ paddingLeft: "15px", paddingRight: "15px" }}>
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Journal Selection</li>
                     <li>Target Journal Formatting</li>
                     <li>Cover Letter Writing</li>
                     <li>Journal Submission</li>
-                    <li>Unlimited Assistance</li>
+                    <li>Unlimited Assistance *</li>
                   </ul>
                 </div>
               </div>
@@ -216,9 +236,18 @@ export default function Home() {
               <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
                 <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
               </div>
+
+              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
+                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+                  *Terms and conditions applied.
+                </p>
+              </div>
+
               <DiscountMessage />
             </div>
           </div>
+
+
 
         </div>
       </div>
@@ -326,7 +355,7 @@ export default function Home() {
       {clientFeedback()}
       {/* {FAQ()} */}
       <FaqHome />
-      
+
     </>
   );
 }
