@@ -1,14 +1,22 @@
 
 "use client";
+import Metadata from "@/app/Metadata";
 import PeerForm from "@/app/_Common/PeerForm/PeerForm";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../../utils/metaFile.js'
+
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   return (
     <>
+      {<Metadata metaData={metaData} />}
       {breadcrum(
         "Services / Publication Package Services",
         "Peer Review & Pre Submission"

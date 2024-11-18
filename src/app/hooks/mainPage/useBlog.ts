@@ -15,7 +15,7 @@ const useBlogs = (page: number=1) => {
   const fetchBlogs = async () => {
     setLoading(true)
     try {
-      fetch(`https://www.manuscriptedit.com/scholar-hangout/wp-json/wp/v2/posts?_embed&per_page=10&page=${page}`, {
+      fetch(`https://www.manuscriptedit.com/scholar-hangout/wp-json/wp/v2/posts?_embed&per_page=4&page=${1}`, {
         method: "GET",
       }
       ).then(response => {

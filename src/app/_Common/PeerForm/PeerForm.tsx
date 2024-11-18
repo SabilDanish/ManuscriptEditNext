@@ -102,7 +102,7 @@ const PeerForm = () => {
                 </option>
 
                 <option value="Pre-Submission Peer Review Service">
-                Pre-Submission Peer Review Service
+                  Pre-Submission Peer Review Service
                 </option>
               </select>
               <input
