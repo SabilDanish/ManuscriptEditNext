@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 body {
-  background-color: #0a192f;
   color: #e6f1ff;
 }
 
@@ -12,7 +11,8 @@ body {
   border: 2px solid rgb(134, 117, 231);
   border-left: 0px;
   border-right: 0px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  /* margin-top: 1rem;
+  margin-bottom: 1rem; */
   padding-bottom: 1rem;
+  background-color: #0a192f;
 }
