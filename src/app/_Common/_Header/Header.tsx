@@ -12,7 +12,7 @@ export default function Header() {
       <div className="header_top_menu pt-2 pb-2 bg_color">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 col-sm-8">
+            <div className="col-lg-7 col-sm-7">
               <div className="header_top_menu_address">
                 <div className="header_top_menu_address_inner">
                   <ul>
@@ -53,6 +53,12 @@ export default function Header() {
                   </ul>
                 </div>
               </div>
+            </div>
+
+            <div className="col-lg-1 col-sm-2">
+              <Link href={'/Discount'}><button className="BtnDiscount" style={{ width: "200px", borderRadius: '6px', border: 'none', color: '#a31e22' , background:'white'}}>
+                Discount & Offers
+              </button> </Link>
             </div>
           </div>
         </div>
@@ -175,7 +181,7 @@ export default function Header() {
                             </li>
                             <li>
                               <Link href={"/ScientificWriting"}>
-                              Scientific & Academic Writing
+                                Scientific & Academic Writing
                               </Link>
                             </li>
                             <li>
@@ -203,15 +209,15 @@ export default function Header() {
                         </li>
                       </ul>
                     </li>
-                    
+
                     <li>
                       <ul>
                         <li>
                           <a href="#">
-                          <b>Research Support</b>
+                            <b>Research Support</b>
                           </a>
-                            
-                          
+
+
                           <ul className={Style.subList}>
                             <li>
                               <Link href={"/ResearchSupportOverview"}>
@@ -925,18 +931,18 @@ export default function Header() {
               </div>
 
               <div className="donate-btn-header">
-                  <a
-                    className="dtbtn"
-                    onClick={() => {
-                      // redirect("register");
-                      window.location.href =
-                        "https://secure.manuscriptedit.com/quotation";
-                    }}
-                    href="#"
-                  >
-                    Request a Quote
-                  </a>
-                </div>
+                <a
+                  className="dtbtn"
+                  onClick={() => {
+                    // redirect("register");
+                    window.location.href =
+                      "https://secure.manuscriptedit.com/quotation";
+                  }}
+                  href="#"
+                >
+                  Request a Quote
+                </a>
+              </div>
             </ul>
           </nav>
         </div>

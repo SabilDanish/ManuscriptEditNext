@@ -636,7 +636,8 @@ a.dtbtn.up:hover {
   border: 2px solid #fff;
 }
 .techno_nav_manu.sticky a.dtbtn:hover {
-  color: #a31e22;
+  color: #fff;
+  background-color: #a31e22;
 }
 .mobile-menu.mean-container {
   overflow: hidden;

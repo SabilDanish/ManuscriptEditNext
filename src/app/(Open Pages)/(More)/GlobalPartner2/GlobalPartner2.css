@@ -62,6 +62,10 @@
     margin: 0;
 }
 
+.card1{
+    padding: 1.25rem;
+}
+
 
 
 @media(max-width:768px) {

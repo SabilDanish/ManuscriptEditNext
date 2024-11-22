@@ -15,6 +15,10 @@ import Clients from "@/app/_Common/Clients/Clients";
 import GlobalPartners2 from "@/app/_Common/GlobalPartner2/GlobalPartner2";
 import PeerForm from "@/app/_Common/PeerForm/PeerForm";
 import ContactDown from "@/app/_Common/ContactDown/ContactDown";
+import WhyChooseGlobal from "@/app/_Common/whyChooseGlobal/WhyChooseGlobal";
+import KeyBenifits from "@/app/_Common/KeyBenifits/KeyBenifits";
+import HowStartedGlobal from "@/app/_Common/HowStartedGlobal/HowStartedGlobal";
+import WorkTogether from "@/app/_Common/WorkTogether/WorkTogether";
 
 const GlobalPartner2 = () => {
   const [select, setSelect] = useState<number>(0);
@@ -141,11 +145,47 @@ const GlobalPartner2 = () => {
 
   return (
     <>
-      <img src={top_image.src} alt="img" style={{ width: '100%' }} />
 
-      <div className="container" style={{ marginTop: "40px", marginBottom: "30px" }}>
+
+
+      <div className="container-fluid" >
+        <div className="row align-items-center">
+          {/* Left Content Section */}
+          <div className="col-lg-6 px-5">
+            <div style={{ marginLeft: '4rem', maxWidth: '500px' }}>
+              <h1 style={{ fontSize: '4rem', fontWeight: 'bold', color: '#085e6d' }}>16+</h1>
+              <h3 style={{ fontSize: '1.75rem', fontWeight: 'bold', color: '#033b46' }}>Years of Trust</h3>
+              <p className="mt-4" style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#495057' }}>
+                At ManuscriptEdit, we understand the challenges that researchers, universities, and
+                publishers face in achieving publication success. That’s why we created the Global
+                Partner Program—to work alongside you, streamline your editorial processes, and
+                ensure your research gets the attention it deserves.
+              </p>
+              <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#495057' }}>
+                We’re not just a service provider; we’re your partner in enhancing the quality and
+                impact of your work.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Image Section */}
+          <div className="col-lg-6">
+            <img
+              src="/images/HowItWorks/bannerImage1.png"
+              alt="Professional partnership illustration"
+              className="img-fluid rounded " style={{width:'100%'}}
+            />
+          </div>
+        </div>
+      </div>
+
+
+      <WhyChooseGlobal />
+
+
+      {/* <div className="container" style={{ marginTop: "40px", marginBottom: "30px" }}>
         <div className="row">
-          {/* Big Div */}
+          
 
           <div className="col-lg-7 bigdiv">
             <div className="smalldiv" style={{ backgroundColor: '#353c57' }}>
@@ -157,7 +197,7 @@ const GlobalPartner2 = () => {
             <span style={{ marginLeft: '1rem', marginTop: '2rem' }}>{services[select].paragraph}</span>
           </div>
 
-          {/* Small Divs */}
+          
           <div className="col-lg-4">
             {services.map((serv, index) => (
               select !== index && (
@@ -175,10 +215,18 @@ const GlobalPartner2 = () => {
           </div>
         </div>
 
-      </div>
+      </div> */}
       <GlobalPartners2 />
       <Clients />
+
+      
+
+      <KeyBenifits />
+
+      <HowStartedGlobal/>
       <ContactDown />
+
+      <WorkTogether/>
     </>
   );
 };

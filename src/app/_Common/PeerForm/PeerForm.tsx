@@ -100,6 +100,10 @@ const PeerForm = () => {
                 <option value="PhD Support & Assistance">
                   PhD Support & Assistance
                 </option>
+
+                <option value="Pre-Submission Peer Review Service">
+                  Pre-Submission Peer Review Service
+                </option>
               </select>
               <input
                 type="tel"

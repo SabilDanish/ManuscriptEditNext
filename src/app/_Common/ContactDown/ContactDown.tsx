@@ -15,7 +15,10 @@ const ContactDown = () => {
 
                 </div>
 
-                <div className="col-lg-6">
+                <div className="col-lg-6" >
+                    <h4 >Your Success is Our Priority</h4>
+                    <p>At ManuscriptEdit, we believe every piece of research has the potential to change
+                    the world. Together, let’s make sure your work gets the recognition it deserves.</p>
                     <img src="/images/galery/unnamed (1).jpg" alt="#" className='ContactImage ' />
                 </div>
             </div>
