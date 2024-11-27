@@ -55,18 +55,18 @@ const KeyBenifits = () => {
         <div className="row align-items-center">
           <div className="col-lg-6">
             <div className="heading">
-              <p style={{ marginTop: "11px" }}>What we do</p>
+              <p style={{ marginTop: "11px" }}>Benifits we provide</p>
               <span className="line"></span>
             </div>
             <h1 className="accordion__title" style={{ textAlign: "start" }}>
-              How does it work?
+              Key benifits
             </h1>
           </div>
 
           <div className="col-lg-6">
-            <p>
+            {/* <p>
               Transforming your research is simple. Our streamlined process ensures every step is smooth and precise. From order placement to delivery, we ensure your work meets the highest standards, empowering you to publish with confidence.
-            </p>
+            </p> */}
           </div>
         </div>
 
