@@ -25,7 +25,7 @@ const NewsletterSubscribe = () => {
             <a href=" https://x.com/manuscriptedit" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faTwitter} className="social-icon" />
             </a>
-            <a href="https://www.linkedin.com/company/reseaprojournals" target="_blank" rel="noopener noreferrer">
+            <a href="https://in.linkedin.com/company/manuscriptedit" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
             </a>
             <a href="https://www.threads.net/@manuscriptedit" target="_blank" rel="noopener noreferrer">
