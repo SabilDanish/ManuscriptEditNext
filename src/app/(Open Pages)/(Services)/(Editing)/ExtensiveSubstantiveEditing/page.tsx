@@ -20,7 +20,7 @@ export default function Home() {
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">
-            <div className="col-md-7">
+            <div className="col-md-6">
               {/* <h3 className="pt-0 pb-3">Extensive Substantive Editing</h3> */}
 
               <div className="em-about-icon-box2">
@@ -79,13 +79,8 @@ export default function Home() {
                 Submit Manuscript Now
               </button>
             </div>
-            <div className="col-md-5">
-              <img
-                src="/images/menuscimg/subtantive.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
+            <div className="col-md-6">
+              <iframe width="100%" height="250px" title="Mastering the Editorial Process || From Submission to Perfection || ManuscriptEdit" src="https://youtube.com/embed/i1PGTti9WmY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
           </div>
         </div>

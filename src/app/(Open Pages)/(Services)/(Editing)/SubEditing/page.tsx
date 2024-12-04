@@ -78,12 +78,7 @@ export default function Home() {
               </button>
             </div>
             <div className="col-md-6">
-              <img
-                src="/images/menuscimg/subtantive.jpg"
-                alt=""
-                width="100%"
-                style={{borderRadius: 10}}
-              />
+              <iframe width="100%" height="250px" title="Mastering the Editorial Process || From Submission to Perfection || ManuscriptEdit" src="https://youtube.com/embed/oOhsHrnrD1I" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
           </div>
         </div>
