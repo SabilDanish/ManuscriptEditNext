@@ -10,7 +10,7 @@ const getIconForCategory = (category: string) => {
       return <FontAwesomeIcon icon={faPen} />; // Pencil icon for editing
     case 'Publication Support':
       return <FontAwesomeIcon icon={faFileAlt} />; // File icon for publication support
-    case 'Scientific Academic Writing':
+    case 'Scientific / Academic Writing':
       return <FontAwesomeIcon icon={faPenNib} />; // Pen nib icon for academic writing
     case 'Research Support':
       return <FontAwesomeIcon icon={faMicroscope} />; // Microscope icon for research
