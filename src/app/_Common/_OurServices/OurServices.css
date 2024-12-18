@@ -104,6 +104,7 @@
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     height: 100%;
+    align-items: center;
 }
 
 .subcategory-btn {
@@ -117,7 +118,25 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.subcategory-btn p {
+    margin-top: 1rem;
+}
+
+.see-more-btn {
+    background-color: #151130;
+    padding: 10px 20px;
+    width: 15rem;
+    border-radius: 8px;
+    color: #6c757d;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    height: 46px;
 }
 
 .subcategory-btn:hover {
@@ -127,14 +146,14 @@
 /* Mobile view accordion styling */
 #mobile-view .btn {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-decoration: none !important;
 }
 
 /* For mobile responsiveness */
 @media (max-width: 768px) {
-    #desktop-view {
+    /* #desktop-view {
         display: none;
     }
 
@@ -144,7 +163,7 @@
 
     #mobile-view {
         display: block;
-    }
+    } */
 .Centroid{
     display: flex;
     justify-content: center;
@@ -169,5 +188,15 @@
 
     #desktop-view {
         display: flex;
+    }
+}
+
+
+@media (min-width:769px) and (max-width:991px){
+    .subcategory-btn {
+        width: 100%;
+    }
+    #content{
+        justify-content: center;
     }
 }

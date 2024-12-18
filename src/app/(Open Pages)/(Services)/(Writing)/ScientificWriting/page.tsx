@@ -13,7 +13,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3"> Scientific & Academic Writing</h3>
+              {/* <h3 className="pt-2 pb-3"> Scientific & Academic Writing</h3> */}
               <p>
                 Scientific & Academic Writing is a specialized service offered
                 by ManuscriptEdit, tailored for researchers, academics, and
@@ -48,12 +48,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-md-6">
-              <img
-                src="/images/menuscimg/subtantive.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
+              <iframe width="100%" height="250px" title="Mastering the Editorial Process || From Submission to Perfection || ManuscriptEdit" src="https://youtube.com/embed/U5mb-cxljLk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
           </div>
         </div>
@@ -741,11 +736,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
-              Submit Manuscript
+              <button onClick={() => { redirect('register') }} className="btn btn-primary mt-3 mr-3">
+                Submit Manuscript
               </button>
-              <button onClick={() => {redirect('contact-us')}} className="btn btn-primary mt-3 mr-3">
-              Schedule a Call
+              <button onClick={() => { redirect('contact-us') }} className="btn btn-primary mt-3 mr-3">
+                Schedule a Call
               </button>
             </div>
           </div>

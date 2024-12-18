@@ -8,7 +8,7 @@ const useForm =  () => {
     const [error, setError] = useState<string | null>(null);
     const [data, setData] = useState<[] | null>(null);
 
-    const radioHandlerUrl:any = {
+    const radioHandlerUrl: {[key: string]: string} = {
         "life-sciences": "https://drive.google.com/file/d/1tzG-5L135VdsVCOs8GTgj_527XUL_8v5/view",
         "physical-sciences": "https://drive.google.com/file/d/1tCPZFaVAzze-3wr0GHmS_S0OspW9PDLY/view",
         "environmental-sciences": "https://drive.google.com/file/d/1UtXp2zWbQcKFhvM_Z26RzeBil3WckdX4/view",
@@ -39,7 +39,7 @@ const useForm =  () => {
                 if(Status){
                     // Thank you , your request is received. You will receive the sample in your mail shortly.
                     toast.success("Thank you, your request is received. You will receive the sample in your mail shortly.")
-                    window.location.assign(radioHandlerUrl[radio_url])
+                    // window.location.assign(radioHandlerUrl[radio_url])
                     // fetch('https://email-nodemailer.vercel.app/sendEmail',{
                     //     method: 'POST',
                     //     headers: {
@@ -54,6 +54,7 @@ const useForm =  () => {
                     
                     //     // toast.error("Your request couldn't be sent, please try again.")
                     // })
+                    window.location.reload()
                 }else{
                     toast.error("Your request couldn't be sent, please try again.")
                 }

@@ -15,7 +15,7 @@ export default function Home() {
     <div className="container">
         <div className="row">
             <div className="col-md-6">
-                <h3 className="pt-2 pb-3">Systematic Review</h3>
+                {/* <h3 className="pt-2 pb-3">Systematic Review</h3> */}
                 <p>
                    A Systematic Review is a specialized service offered by ManuscriptEdit, 
                    dedicated to conducting comprehensive and methodical literature reviews 
@@ -44,7 +44,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="col-md-6">
-                <img src="/images/menuscimg/subtantive.jpg" alt="" width="100%" style={{borderRadius: 10}} />
+            <iframe width="100%" height="250px" title="Mastering the Editorial Process || From Submission to Perfection || ManuscriptEdit"  src="https://www.youtube.com/embed/pXCJCmPg32E"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
         </div>
         </div>

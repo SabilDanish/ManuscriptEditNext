@@ -16,7 +16,7 @@ export default function Home() {
     <div className="container">
         <div className="row">
             <div className="col-md-6">
-                <h3 className="pt-2 pb-3"> Technical Writing</h3>
+                {/* <h3 className="pt-2 pb-3"> Technical Writing</h3> */}
                 <p>
                     Technical Writing is a specialized service offered by ManuscriptEdit,
                     designed to help clients effectively communicate complex technical

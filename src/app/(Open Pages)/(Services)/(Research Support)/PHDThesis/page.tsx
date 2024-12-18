@@ -16,10 +16,10 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">
+              {/* <h3 className="pt-2 pb-3">
                 "Unlock the full potential of your PhD research with tailored
                 assistance every step of the way."
-              </h3>
+              </h3> */}
               <p>
                 Embarking on a PhD is a monumental step in any scholar's life, a
                 journey filled with challenges yet brimming with opportunities.
@@ -31,12 +31,7 @@ export default function Home() {
               </p>
             </div>
             <div className="col-md-6">
-              <img
-                src="/images/menuscimg/reach-support.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
+              <iframe width="100%" height="250px" title="Mastering the Editorial Process || From Submission to Perfection || ManuscriptEdit"  src="https://www.youtube.com/embed/uvSCIn1vEPs"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
           </div>
         </div>

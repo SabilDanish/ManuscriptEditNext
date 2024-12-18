@@ -36,7 +36,7 @@ const HowItWorks = () => {
   return (
     <section className="how-it-works">
       <div className="container">
-        <div className="row">
+        <div className="row" style={{alignItems:'center'}}>
           <div className="col-lg-6">
             <div className="heading">
               <p style={{marginTop:"11px"}}>What we do</p>

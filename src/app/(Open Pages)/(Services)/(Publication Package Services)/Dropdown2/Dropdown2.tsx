@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Dropdown2.css";
-const accord2 = [
+const accord2: {question: string, answer: string}[] = [
   {
     question: "Mismatch between journal focus and manuscript",
     answer:

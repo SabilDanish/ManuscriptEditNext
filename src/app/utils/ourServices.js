@@ -14,7 +14,7 @@ export const ourServices = [
             "Pharmacology",
             "See More"
         ],
-        url: "/MedicalWrite"
+        url: "https://secure.manuscriptedit.com/samplework"
     },
     {
         category: "Life Sciences",
@@ -29,6 +29,7 @@ export const ourServices = [
             "Marine Biology",
             "See More"
         ],
+        url: "https://secure.manuscriptedit.com/samplework"
     },
     {
         category: "Physical Engineering",
@@ -43,6 +44,7 @@ export const ourServices = [
             "Environmental Engineering",
             "See More"
         ],
+        url: "https://secure.manuscriptedit.com/samplework"
     },
     {
         category: "Social Sciences",
@@ -57,6 +59,7 @@ export const ourServices = [
             "Communication Studies",
             "See More"
         ],
+        url: "https://secure.manuscriptedit.com/samplework"
     },
     {
         category: "Business & Economics",
@@ -71,6 +74,7 @@ export const ourServices = [
             "Business Ethics",
             "See More"
         ],
+        url: "https://secure.manuscriptedit.com/samplework"
     },
 ];
 

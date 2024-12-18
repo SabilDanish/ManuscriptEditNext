@@ -14,10 +14,13 @@ const BlogDesk = ({ blogs }: any) => {
     router.push(url);
   };
 
-  const handleRedirect = (url: string, slug: string): void => {
+  const handleRedirect = (url: string, slug: string, content: any, title: string): void => {
     const data = { url };
-    localStorage.setItem("url", url);
-    router.push(`/scholar-hangout/${slug}`);
+    const formattedTitle = encodeURIComponent(slug.trim());
+    localStorage.setItem("url", url)
+    localStorage.setItem("content", content.rendered)
+    localStorage.setItem("title", title)
+    router.push(`/scholar-hangout/${formattedTitle}`);
   };
 
   return (
@@ -40,6 +43,7 @@ const BlogDesk = ({ blogs }: any) => {
               date,
               guid,
               slug,
+              content,
               _embedded: {
                 "wp:featuredmedia": [{ source_url }],
               },
@@ -49,7 +53,7 @@ const BlogDesk = ({ blogs }: any) => {
                 <div
                   key={index}
                   className="col-lg-3"
-                  onClick={() => handleRedirect(guid.rendered, slug)}
+                  onClick={() => handleRedirect(guid.rendered,slug,content,rendered)}
                 >
                   <div className="card">
                     <img src={source_url} className="card-img-top" alt="..." />

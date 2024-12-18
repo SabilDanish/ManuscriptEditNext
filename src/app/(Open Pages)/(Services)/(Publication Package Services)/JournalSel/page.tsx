@@ -17,7 +17,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">What We Provide</h3>
+              {/* <h3 className="pt-2 pb-3">What We Provide</h3> */}
               <p>
                 Choosing the appropriate journal for publishing is very crucial
                 but tedious process. You may have obtained excellent set of
@@ -88,13 +88,13 @@ export default function Home() {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            {/* <tr>
               <td>3</td>
               <td>200</td>
-            </tr>
+            </tr> */}
             <tr>
               <td>5</td>
-              <td>150</td>
+              <td>350</td>
             </tr>
           </tbody>
         </table>

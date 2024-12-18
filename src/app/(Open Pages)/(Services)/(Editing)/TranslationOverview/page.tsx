@@ -8,7 +8,7 @@ import { data } from '../../../../utils/metaFile.js'
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
     const pathName: string = usePathname().split("/").filter(val => val).join("")
@@ -21,7 +21,7 @@ export default function Home() {
     <div className="container">
         <div className="row">
             <div className="col-md-7">
-                <h3 className="pt-0 pb-3">Breaking the Language Barrier</h3>
+                {/* <h3 className="pt-0 pb-3">Breaking the Language Barrier</h3> */}
                 <p>
                   We, at ManuscriptEdit not only translate but transcreate documents of highest 
                   standards for all region-specific needs. We do not believe in shortcuts and 

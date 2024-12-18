@@ -1,14 +1,22 @@
 
 "use client";
+import Metadata from "@/app/Metadata";
 import PeerForm from "@/app/_Common/PeerForm/PeerForm";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../../utils/metaFile.js'
+
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   return (
     <>
+      {<Metadata metaData={metaData} />}
       {breadcrum(
         "Services / Publication Package Services",
         "Peer Review & Pre Submission"
@@ -17,7 +25,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-8">
-              <h3 className="pt-2 pb-3">Peer Review & Pre Submission</h3>
+              {/* <h3 className="pt-2 pb-3">Peer Review & Pre Submission</h3> */}
               <p>
                 Almost no article get accepted without revision. Peer-reviewers
                 raise their concern to the suitability of the content to get
@@ -460,8 +468,8 @@ export default function Home() {
           </thead>
           <tbody>
             <tr>
-              <td>5</td>
-              <td>150</td>
+              <td>10</td>
+              <td>475</td>
             </tr>
           </tbody>
         </table>

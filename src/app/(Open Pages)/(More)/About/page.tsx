@@ -3,11 +3,10 @@ import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import Metadata from "@/app/Metadata";
 import { usePathname } from 'next/navigation'
 import { data } from '../../../utils/metaFile.js'
-const newData: any = data;
 
 export default function Home() {
-  // const pathName: string = usePathname().split("/").filter(val => val).join("")
-  // let metaData = newData[pathName]
+
+  
   return (
     <>
     {/* s */}

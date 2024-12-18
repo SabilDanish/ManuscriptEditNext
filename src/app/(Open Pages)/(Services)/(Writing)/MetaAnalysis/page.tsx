@@ -12,7 +12,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3"> Meta Analysis</h3>
+              {/* <h3 className="pt-2 pb-3"> Meta Analysis</h3> */}
               <p>
                 Meta-Analysis is a specialized service offered by
                 MenuscriptEdit, focusing on synthesizing and analyzing data from

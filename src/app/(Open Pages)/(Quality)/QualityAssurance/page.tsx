@@ -2,7 +2,7 @@ import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import Metadata from "@/app/Metadata";
 import { usePathname } from 'next/navigation'
 import { data } from '../../../utils/metaFile.js'
-const newData: any = data;
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
   // const pathName: string = usePathname().split("/").filter(val => val).join("")
@@ -15,7 +15,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-5">Quality Assurance Overview</h3>
+              {/* <h3 className="pt-5">Quality Assurance Overview</h3> */}
               <p className="pt-3">
                 ASetting the stage for the importance of editing in the realm of
                 written communication. Introduction to the multifaceted nature
