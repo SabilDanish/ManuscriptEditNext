@@ -30,6 +30,7 @@ import Header from "./_Common/_Header/Header";
 import { DNA } from "react-loader-spinner";
 import FloatingWp from "./_Common/FloatingWp/FloatingWp";
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import ChritmasImage from "./_Common/Crirstmas/Crismas";
 // import { DefaultSeo } from "next-seo";
 // import SEO from "../../next-seo.config";
 
@@ -117,6 +118,8 @@ export default function RootLayout({
         <Header />
         <Suspense fallback={<p style={{ width: "100%", display: 'flex', justifyContent: "center" }}><DNA /></p>}>{children}</Suspense>
         <FloatingWp />
+<ChritmasImage/>
+
 
         {footer()}
         <noscript>

@@ -306,6 +306,9 @@ export default function Header() {
                       <Link href={"/Security"}>Confidentiality</Link>
                     </li>
                     <li>
+                      <Link href={"/Publishing"}>Refund & Cancellation</Link>
+                    </li>
+                    <li>
                       <Link href={"/Testimonial"}>Testimonial</Link>
                     </li>
                   </ul>
