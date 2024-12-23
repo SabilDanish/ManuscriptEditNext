@@ -3,6 +3,7 @@ import Metadata from "@/app/Metadata";
 import { usePathname } from "next/navigation";
 import { data } from "../../../utils/metaFile.js";
 const newData: { [key: string]: { [key: string]: string } } = data;
+import "../../../_Common/Crirstmas/Cristamas.css"
 
 export default function Home() {
   // const pathName: string = usePathname().split("/").filter(val => val).join("")
@@ -29,11 +30,11 @@ export default function Home() {
               background: "#fff",
               borderRadius: "8px",
               boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              paddingTop:"20px",
             }}
           >
-            <h1 style={{ color: "#007bff" , textAlign:"center"}}>Refund Policy</h1>
-            <p style={{textAlign:"center"}}>ManuscriptEdit.com</p>
-            <h2 style={{ color: "#007bff" }}>Introduction</h2>
+            
+            
             <p>
               At ManuscriptEdit.com, we are dedicated to delivering the highest
               quality editorial and publication support services to help you
@@ -44,7 +45,7 @@ export default function Home() {
               and the effort of our experts.
             </p>
 
-            <h2 style={{ color: "#007bff" }}>Eligibility for Refunds</h2>
+            
             <p>Refunds are considered under the following conditions:</p>
             <ul>
               <li>
@@ -61,7 +62,7 @@ export default function Home() {
               </li>
               <li>
                 <strong>Written Request:</strong> All refund claims must be
-                submitted via email to
+                submitted via email to &nbsp;
                 <a
                   href="mailto:support@manuscriptedit.com"
                   style={{ color: "#007bff", textDecoration: "none" }}
@@ -78,7 +79,7 @@ export default function Home() {
               </li>
             </ul>
 
-            <h2 style={{ color: "#007bff" }}>Non-Refundable Scenarios</h2>
+            
             <p>Refunds will not be issued under the following circumstances:</p>
             <ul>
               <li>
@@ -113,9 +114,6 @@ export default function Home() {
               </li>
             </ul>
 
-            <h2 style={{ color: "#007bff" }}>
-              Respectful Communication Policy
-            </h2>
             <p>
               We believe in maintaining respectful and professional
               relationships with clients. If a refund request is under review:
@@ -133,7 +131,7 @@ export default function Home() {
               efficiently.
             </p>
 
-            <h2 style={{ color: "#007bff" }}>How to Request a Refund</h2>
+            
             <ol>
               <li>
                 <strong>Submit a Detailed Request:</strong> Email{" "}
@@ -161,7 +159,7 @@ export default function Home() {
               </li>
             </ol>
 
-            <h2 style={{ color: "#007bff" }}>Additional Safeguards</h2>
+            
             <ul>
               <li>
                 <strong>Expert Involvement:</strong> Refunds consider the
@@ -181,7 +179,7 @@ export default function Home() {
               </li>
             </ul>
 
-            <h2 style={{ color: "#007bff" }}>Contact Us</h2>
+            
             <p>
               If you have any questions or need assistance with our refund
               process, please contact us:
