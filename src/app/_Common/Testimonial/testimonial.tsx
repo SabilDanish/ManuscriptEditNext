@@ -9,7 +9,7 @@ import testi7 from '../../utils/testi/aj.jpeg';
 import testi8 from '../../utils/testi/sa.jpeg';
 import testi9 from '../../utils/testi/ss.jpeg';
 import testi10 from '../../utils/testi/sd.jpeg';
-import testi11 from '../../utils/testi/sh.jpeg';
+import testi11 from '../../utils/testi/sh.jpeg';  
 import './Testimonial.css';
 
 
@@ -103,7 +103,7 @@ const Testimonial = () => {
                     <img src={testi8.src} alt="SavvyCal" />
                   </div><div className="unique-testimonial-author">D W K,Cheongju University, Republic of Korea</div>
                 </div></div>
-            </div>
+            </div>  
           </div>
 
           <div className="col-lg-3 d-flex flex-column mt-5">
