@@ -34,7 +34,7 @@ export default function Home() {
         <>
             {breadcrum("More", "Recent Partners")}
             <div className="container mb-3">
-                <div className="row">
+                <div className="row" >
                     {
                         loading && !allPartner.length && (
                             <DNA
