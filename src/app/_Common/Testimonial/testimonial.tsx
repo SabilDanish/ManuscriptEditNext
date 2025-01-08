@@ -9,9 +9,8 @@ import testi7 from '../../utils/testi/aj.jpeg';
 import testi8 from '../../utils/testi/sa.jpeg';
 import testi9 from '../../utils/testi/ss.jpeg';
 import testi10 from '../../utils/testi/sd.jpeg';
-import testi11 from '../../utils/testi/sh.jpeg';  
+import testi11 from '../../utils/testi/sh.jpeg';
 import './Testimonial.css';
-
 
 const Testimonial = () => {
   return (
