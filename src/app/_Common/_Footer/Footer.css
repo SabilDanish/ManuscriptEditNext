@@ -73,3 +73,9 @@
   width: 95%;
   text-align: center;
 }
+
+.footer-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

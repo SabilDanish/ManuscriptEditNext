@@ -60,7 +60,10 @@ export default function footer() {
             <div className="row">
               {/* English Editing Section */}
               <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
-                <h4>Editing Overview</h4>
+                
+                <h4 style={{paddingRight:'98px'}}>Editing Overview</h4>
+                
+                
                 <ul>
                   <li>
                     <a href="/EditingOverview">Editing Overview</a>
@@ -92,7 +95,7 @@ export default function footer() {
 
               {/* Publication Support Section */}
               <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
-                <h4>Publication Support</h4>
+                <h4 style={{paddingRight:'98px'}}>Publication Support</h4>
                 <ul>
                   <li>
                     <a href="/PackageService">Publication Package</a>
@@ -120,7 +123,7 @@ export default function footer() {
 
               {/* Scientific/Academic Writing Section */}
               <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
-                <h4>Scientific / Academic Writing</h4>
+                <h4 style={{paddingRight:'44px'}}>Scientific / Academic Writing</h4>
                 <ul>
                   <li>
                     <a href="/Writing">Writing Overview</a>
@@ -153,7 +156,7 @@ export default function footer() {
 
               {/* Research Enhancement Services Section */}
               <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
-                <h4>Research Support</h4>
+                <h4 style={{paddingRight:'98px'}}>Research Support</h4>
                 <ul>
                   <li>
                     <a href="/ResearchSupportOverview">Research Support Overview</a>
