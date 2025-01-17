@@ -5,7 +5,7 @@ const ServiceAgreement = () => {
   return (
     <div className="container">
       <div className="agreement-container">
-        <h1 className="title" style={{textAlign:'center' , margin:"30px 30px",fontWeight:"bold"}}>Service Agreement</h1>
+        <h1 className="title" style={{textAlign:'center' , margin:"30px 30px"}}>Service Agreement</h1>
         <p className="intro">
           THIS END USER/CLIENT AGREEMENT (or “AGREEMENT") APPLIES WITH RESPECT
           TO MANUSCRIPT EDITING SERVICE PROVIDED BY RESEAPRO SCIENTIFIC SERVICES
@@ -439,7 +439,7 @@ const ServiceAgreement = () => {
           Reseapro on a case-by-case basis.
         </p>
 
-        <h2>Interlinked Orders – Non-Refundable and Non-Chargeback Clause</h2>  
+        <h2>Interlinked Orders – Non-Refundable and Non-Chargeback Clause</h2>
 
         <p>
           For orders classified as Interlinked Orders (where multiple orders
@@ -461,7 +461,7 @@ const ServiceAgreement = () => {
           interlinked orders.
         </p>
 
-        <h2>Consequences of Chargeback Attempts</h2>  
+        <h2>Consequences of Chargeback Attempts</h2>
 
         <p>
           Initiating chargebacks without completing the internal dispute
@@ -545,6 +545,26 @@ const ServiceAgreement = () => {
           However, beyond that, no further resubmission requests will be
           accommodated, and the order will be considered "Closed".
         </p>
+
+        <li><strong>One-Sided Withdrawal Prohibition:</strong>
+            <p>Once a manuscript is under review in a journal, unilateral withdrawal by the client without prior consultation and agreement with ManuscriptEdit is prohibited. Any such withdrawal initiated by the client without the journal’s decision will result in an additional administrative fee of [specify amount or percentage] to cover associated costs and effort. This fee is non-negotiable and must be cleared before any further services are provided.</p>
+        </li>
+
+        <li><strong>Journal Submission and APC Payments:</strong>
+            <p>The agreed service fee includes ManuscriptEdit's submission-related efforts but does not cover Article Processing Charges (APCs) or other journal-imposed fees unless explicitly mentioned in the client agreement. APCs are solely the client’s responsibility and will be communicated in advance if applicable. Failure to pay APCs promptly will halt the publication process, and no claim for refund or chargeback will be entertained.</p>
+        </li>
+
+        <li><strong>Chargeback Abuse:</strong>
+            <p>Any claims for refunds or chargebacks contrary to the terms of this Agreement will be considered a breach of contract. ManuscriptEdit reserves the right to initiate legal action to recover any dues, along with additional charges for disruption caused by chargeback proceedings. An administrative fee of [specify amount] will also be applied in such cases.</p>
+        </li>
+
+        <li><strong>Client Cooperation and Decision Compliance:</strong>
+            <p>Clients are required to cooperate with ManuscriptEdit and adhere to journal decisions during the publication process. Any deviation from agreed decisions, including unauthorized changes or instructions to withdraw without a valid reason, will result in the termination of services, and additional penalties may be imposed at the discretion of ManuscriptEdit.</p>
+        </li>
+
+        <li><strong>Co-Author Interference:</strong>
+            <p>All communication with ManuscriptEdit must be initiated and handled by the primary client listed in the Agreement. Co-authors or third parties are not authorized to contact ManuscriptEdit directly. Any instances of harassment, including calls from multiple numbers or repeated unwarranted communication, will result in the suspension of services and may lead to termination of the Agreement. In such cases, no refunds will be issued, and the client will bear all associated costs.</p>
+        </li>
 
         <p>
           Reseapro and its editors will use reasonable efforts to maintain the
