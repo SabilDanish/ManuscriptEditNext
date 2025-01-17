@@ -42,10 +42,7 @@ import NewsletterSubscribe from "./_Common/SubsNewsletter/SubsNewsletter";
 import Experts from "./_Common/ExpertCard/Experts";
 import PublicationPackages from "./_Common/Publication_package/Publication_package";
 import ServiceList from "./_Common/_ServiceData/ServiceData";
-
-
-
-
+import ChristmasBranch from "./_Common/Chritmas-Branch/ChristmasBranch";
 
 // import '../../public/js/vendor/jquery-3.2.1.min.js'
 // import '../../public/js/bootstrap.min.js'
@@ -54,12 +51,25 @@ export default function Home() {
   SwiperCore.use([Autoplay]);
   const { loading, error, blogs } = useBlogs();
 
-
   return (
     <>
       <ToastContainer />
-
       <TopBannerForm />
+      <WhyChooseUs />
+      <Clients />
+      <PublicationPackages />
+      <HowItWorks />
+      <CustomizedServices />
+      <ServiceList />
+      <OurServices />
+      <Experts />
+      <Testimonial />
+      {blogs && blogs.length ? <BlogDesk blogs={blogs} /> : ""}
+      {blogs && blogs.length ? <BlogMob blogs={blogs} /> : ""}
+      <FaqHome />
+      <NewsletterSubscribe />
+
+      {/* <ChristmasBranch/> */}
       {/* <OfferSlider /> */}
 
       {/* <RadioSection /> */}
@@ -71,40 +81,17 @@ export default function Home() {
       {/* <SocialIcon /> */}
       {/* <GetEvery /> */}
       {/* <GetHelp /> */}
-     
-     
+
       {/* <OurProfessional /> */}
       {/* <UpcomingWebinar/> */}
       {/* <CounterComponent /> */}
-      <WhyChooseUs/>
-      <Clients />
+
       {/* <Experts/> */}
       {/* <CustomizedServices/> */}
-      <PublicationPackages />
-
-      <HowItWorks/>
-      <CustomizedServices/>
-      <ServiceList />
-      <OurServices />
-      <Experts />
-      
-      <Testimonial />
-      
 
 
-      {blogs && blogs.length ? <BlogDesk blogs={blogs} /> : ""}
-      
-      {blogs && blogs.length ? <BlogMob blogs={blogs} /> : ""}
-     
-
-      <FaqHome />
-      
       {/* <Dropdown2 /> */}
-      <NewsletterSubscribe/>
-{/* <PublicationAccordion/> */}
-      
-
-      
+      {/* <PublicationAccordion/> */}
     </>
   );
 }

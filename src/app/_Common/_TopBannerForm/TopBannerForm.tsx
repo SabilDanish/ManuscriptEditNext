@@ -270,16 +270,16 @@ const TopBannerForm = () => {
     <>
       <div className="container" style={{marginBottom:"60px"}}>
         <div className="row" style={{justifyContent:"end"}}>
-          <div className="col-lg-5">
-            <h4 style={{ fontWeight: "Bold", fontSize: "2rem", marginTop: "10%", color: ""}}>
-              <span style={{ fontSize: "3rem", color: "#6C070A", fontWeight: "800" }}>Expert</span> Research Paper Editing and
-              Publishing Services for Global Impact
+          <div className="col-lg-6">
+            <h4 style={{ fontWeight: "Bold", fontSize: "2rem", marginTop: "10%",}}>Get 
+              <span style={{ fontSize: "2.5rem", color: "#6C070A", fontWeight: "800" }}> Published</span> <br />with Confidence |<br/> Expert Manuscript Support
             </h4>
-            <h5 style={{ marginTop: "2rem" }}>We provide end to end assistance from conception to publication.</h5>
-            <h5 style={{ marginTop: ".75rem" }}>✔ Assistance from drafting to final publication.</h5>
-            <h5 style={{ marginTop: ".75rem" }}>✔ Scientific editing for research accuracy.</h5>
-            <h5 style={{ marginTop: ".75rem" }}>✔ Optimize journal choice: scope, impact, format.</h5>
-            <Link className="btn mt-12" href={"https://secure.manuscriptedit.com/quotation"} role="button" style={{ backgroundColor: "#151130", color: "white", marginTop: "2rem" }}>Get Started →</Link>
+            <h5 style={{ marginTop: "1rem" }}>From manuscript preparation to journal publication, our experts handle it all. Partner with us to achieve success in Q1 and Q2 journals.</h5>
+            <h5 style={{ marginTop: ".5rem" }}>✔ 20+ years of expertise in research publication.</h5>
+            <h5 style={{ marginTop: ".5rem" }}>✔ Affordable, confidential, and timely support.</h5>
+            <h5 style={{ marginTop: ".5rem" }}>✔ Tailored solutions for researchers, PhDs, and postdocs.</h5>
+            <Link className="btn mt-12" href={"https://secure.manuscriptedit.com/quotation"} role="button" style={{ backgroundColor: "#151130", color: "white", marginTop: "1rem" }}>Submit Manuscript →</Link>
+            <Link className="btn mt-12" href={"https://secure.manuscriptedit.com/advisory"} role="button" style={{ backgroundColor: "#151130", color: "white", marginTop: "1rem",marginLeft:"1rem" }}>For Indian Researchers →</Link>
           </div>
           <div className={`$"carouselItem" $"active" col-lg-6`}>
             <img src="/images/flags/Ban_updates.png" className="carouselImage" alt="Banner 1" />
