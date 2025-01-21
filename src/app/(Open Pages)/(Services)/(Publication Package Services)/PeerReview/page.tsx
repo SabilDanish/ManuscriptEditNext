@@ -102,9 +102,7 @@ export default function Home() {
                 </h5>
                 <p>
                   {" "}
-                  This service does not guarantee acceptance of manuscript for
-                  publication but it guides you to improve the quality of your
-                  manuscript.
+                  This service provides a detailed peer review conducted by a single editor to improve the quality of your manuscript. However, it does not guarantee acceptance for publication in any journal. The cost for this service is $475 USD per assignment.
                 </p>
               </div>
             </div>
