@@ -524,7 +524,7 @@ export default function footer() {
                   <Link href={"/TermsOfService"}>Terms & Conditions</Link>
 
                   <Link
-                    href={"https://secure.manuscriptedit.com/Service-agreement"}
+                    href={'/Service-Agreement'}
                   >
                     {" "}
                     / Service Agreement

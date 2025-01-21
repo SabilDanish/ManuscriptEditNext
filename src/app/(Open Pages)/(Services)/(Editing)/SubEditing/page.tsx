@@ -86,6 +86,7 @@ export default function Home() {
       {ourProfessional()}
       {clientFeedback()}
       {FAQ()}
+      
     </>
   );
 }
