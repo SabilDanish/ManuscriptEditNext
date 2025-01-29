@@ -5,19 +5,21 @@ import FAQ from "@/app/_Common/_FAQ/FAQ";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
-import { usePathname } from 'next/navigation'
-import { data } from '../../../../utils/metaFile.js'
+import { usePathname } from "next/navigation";
+import { data } from "../../../../utils/metaFile.js";
 import Metadata from "@/app/Metadata";
 import { DiscountBanner, DiscountMessage } from "./DiscountSection";
 import Dropdown2 from "../Dropdown2/Dropdown2.jsx";
 import FaqHome from "@/app/_Common/FaqHome/FaqHome";
 
-
 const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
-  const pathName: string = usePathname().split("/").filter(val => val).join("")
-  let metaData = newData[pathName]
+  const pathName: string = usePathname()
+    .split("/")
+    .filter((val) => val)
+    .join("");
+  let metaData = newData[pathName];
   return (
     <>
       {<Metadata metaData={metaData} />}
@@ -45,11 +47,16 @@ export default function Home() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-3 col-md-6">
-            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+            <div
+              className="pricing_single-box st-grid-price"
+              style={{ position: "relative" }}
+            >
               {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <center><h4>Premium Plus Package</h4></center>
+                  <center>
+                    <h4>Premium Plus Package</h4>
+                  </center>
                 </div>
                 <div className="pricing_tk">
                   <center>
@@ -64,7 +71,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{ paddingLeft: "15px", paddingRight: "15px" }}>
+                <div
+                  className="featur_itmes "
+                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
+                >
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Data Analysis</li>
@@ -81,15 +91,40 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("quotation");
+                  }}
+                >
+                  Request a Quote <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
 
-              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
-                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "15px",
+                  fontSize: "0.8rem",
+                  color: "#555",
+                }}
+              >
+                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
                   *Terms and conditions applied.
                 </p>
               </div>
@@ -98,11 +133,16 @@ export default function Home() {
           </div>
 
           <div className="col-lg-3 col-md-6">
-            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+            <div
+              className="pricing_single-box st-grid-price"
+              style={{ position: "relative" }}
+            >
               {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <center><h4>Premium Package</h4></center>
+                  <center>
+                    <h4>Premium Package</h4>
+                  </center>
                 </div>
                 <div className="pricing_tk">
                   <center>
@@ -117,7 +157,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{ paddingLeft: "15px", paddingRight: "15px" }}>
+                <div
+                  className="featur_itmes "
+                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
+                >
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Substantive Editing</li>
@@ -126,21 +169,48 @@ export default function Home() {
                     <li>Artwork Formatting</li>
                     <li>Cover Letter Writing</li>
                     <li>Journal Submission</li>
-                    <li>Response to Reviewers* (*One response to reviewer free)</li>
+                    <li>
+                      Response to Reviewers* (*One response to reviewer free)
+                    </li>
                     <li>Plagiarism Check</li>
                     <li>Unlimited Assistance *</li>
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("quotation");
+                  }}
+                >
+                  Request a Quote <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
 
-              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
-                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "15px",
+                  fontSize: "0.8rem",
+                  color: "#555",
+                }}
+              >
+                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
                   *Terms and conditions applied.
                 </p>
               </div>
@@ -149,11 +219,16 @@ export default function Home() {
           </div>
 
           <div className="col-lg-3 col-md-6">
-            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+            <div
+              className="pricing_single-box st-grid-price"
+              style={{ position: "relative" }}
+            >
               {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <center><h4>Advanced Package</h4></center>
+                  <center>
+                    <h4>Advanced Package</h4>
+                  </center>
                 </div>
                 <div className="pricing_tk">
                   <center>
@@ -168,7 +243,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{ paddingLeft: "15px", paddingRight: "15px" }}>
+                <div
+                  className="featur_itmes "
+                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
+                >
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Substantive Editing</li>
@@ -181,15 +259,40 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("quotation");
+                  }}
+                >
+                  Request a Quote <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
 
-              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
-                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "15px",
+                  fontSize: "0.8rem",
+                  color: "#555",
+                }}
+              >
+                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
                   *Terms and conditions applied.
                 </p>
               </div>
@@ -198,7 +301,10 @@ export default function Home() {
           </div>
 
           <div className="col-lg-3 col-md-6">
-            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+            <div
+              className="pricing_single-box st-grid-price"
+              style={{ position: "relative" }}
+            >
               {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
@@ -219,7 +325,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes" style={{ paddingLeft: "15px", paddingRight: "15px" }}>
+                <div
+                  className="featur_itmes"
+                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
+                >
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Journal Selection</li>
@@ -230,15 +339,40 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("quotation");
+                  }}
+                >
+                  Request a Quote <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
 
-              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
-                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "15px",
+                  fontSize: "0.8rem",
+                  color: "#555",
+                }}
+              >
+                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
                   *Terms and conditions applied.
                 </p>
               </div>
@@ -246,12 +380,254 @@ export default function Home() {
               <DiscountMessage />
             </div>
           </div>
-
-
-
         </div>
       </div>
 
+      {/* <div className="container mt-4">
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Journal Selection</td>
+                <td>N/A</td>
+                <td>2–3 business days</td>
+                <td>$100 per service</td>
+              </tr>
+              <tr>
+                <td>Journal Submission</td>
+                <td>N/A</td>
+                <td>3–5 business days</td>
+                <td>$80 per service</td>
+              </tr>
+              <tr>
+                <td>Peer Review & Pre-Submission</td>
+                <td>Up to 4,000 words</td>
+                <td>3–4 business days</td>
+                <td>Approximately $360</td>
+              </tr>
+              <tr>
+                <td>Response to Reviewer</td>
+                <td>Up to 2,000 words</td>
+                <td>2–3 business days</td>
+                <td>Approximately $180</td>
+              </tr>
+              <tr>
+                <td>Poster Creation & Design</td>
+                <td>N/A</td>
+                <td>5–7 business days</td>
+                <td>$150 per poster</td>
+              </tr>
+              <tr>
+                <td>Formatting</td>
+                <td>Up to 6,000 words</td>
+                <td>1–2 business days</td>
+                <td>Approximately $90</td>
+              </tr>
+              <tr>
+                <td>Citation Booster</td>
+                <td>N/A</td>
+                <td>5–7 business days</td>
+                <td>Pricing may vary (Contact us)</td>
+              </tr>
+              <tr>
+                <td>Illustration Services</td>
+                <td>N/A</td>
+                <td>7–10 business days</td>
+                <td>Pricing may vary (Contact us)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="container mt-4">
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Medical Writing Assistance</td>
+                <td>Up to 3,000 words</td>
+                <td>5–7 business days</td>
+                <td>Approximately $360</td>
+              </tr>
+              <tr>
+                <td>Scientific & Academic Writing Assistance</td>
+                <td>Up to 4,000 words</td>
+                <td>4–6 business days</td>
+                <td>Approximately $440</td>
+              </tr>
+              <tr>
+                <td>Technical Writing Assistance</td>
+                <td>Up to 4,000 words</td>
+                <td>5–7 business days</td>
+                <td>Approximately $440</td>
+              </tr>
+              <tr>
+                <td>Rewriting Assistance</td>
+                <td>Up to 4,000 words</td>
+                <td>3–4 business days</td>
+                <td>Approximately $360</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="container mt-4">
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Statistical Analysis</td>
+                <td>N/A</td>
+                <td>7–10 business days</td>
+                <td>$180 per project</td>
+              </tr>
+              <tr>
+                <td>Systematic Review</td>
+                <td>Up to 8,000 words</td>
+                <td>10–15 business days</td>
+                <td>Approximately $800</td>
+              </tr>
+              <tr>
+                <td>Meta-Analysis</td>
+                <td>Up to 10,000 words</td>
+                <td>15–20 business days</td>
+                <td>Approximately $1,200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="container mt-4">
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PhD Thesis Editing</td>
+                <td>Up to 50,000 words</td>
+                <td>20–25 business days</td>
+                <td>Approximately $1,250</td>
+              </tr>
+              <tr>
+                <td>Master Thesis Editing</td>
+                <td>Up to 30,000 words</td>
+                <td>15–20 business days</td>
+                <td>Approximately $660</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="container mt-4">
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>High-Impact Scientific</td>
+                <td>Up to 4,000</td>
+                <td>6–8 business</td>
+                <td>Approximately</td>
+              </tr>
+              <tr>
+                <td>Editing</td>
+                <td>words</td>
+                <td>days</td>
+                <td>$720</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="container mt-4">
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>High-Impact Journal Publication Support</td>
+                <td>N/A</td>
+                <td>Varies based on requirements</td>
+                <td>Custom pricing (Contact us)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="container mt-4">
+          <h3>Notes</h3>
+          <ul>
+            <li>
+              <strong>Pricing Flexibility:</strong> For services where pricing
+              may vary (group service), we encourage clients to contact us
+              directly to receive a tailored quote based on their specific
+              needs.
+            </li>
+            <li>
+              <strong>High-Impact Services:</strong> The addition of High-Impact
+              Scientific Editing and High-Impact Journal Publication Support
+              services caters to clients aiming for prestigious journal
+              publications, offering specialized assistance to enhance their
+              chances of acceptance.
+            </li>
+            <li>
+              By offering competitive pricing and specialized services, we aim
+              to provide exceptional value to our clients, ensuring high-quality
+              support throughout their research and publication journey.
+            </li>
+          </ul>
+        </div>
+      </div> */}
 
       {/* </div > */}
       {/* </section > */}
@@ -356,8 +732,64 @@ export default function Home() {
       {/* {FAQ()} */}
       <FaqHome />
 
+      <div className="container mt-4" style={{marginBottom:"50px"}}>
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Proofreading</td>
+                <td>Up to 4,000 words</td>
+                <td>2–3 business days</td>
+                <td>Approximately $200</td>
+              </tr>
+              <tr>
+                <td>Copyediting</td>
+                <td>Up to 4,000 words</td>
+                <td>2–4 business days</td>
+                <td>Approximately $320</td>
+              </tr>
+              <tr>
+                <td>Substantive Editing</td>
+                <td>Up to 4,000 words</td>
+                <td>3–4 business days</td>
+                <td>Approximately $400</td>
+              </tr>
+              <tr>
+                <td>Extensive Substantive Editing</td>
+                <td>Up to 4,000 words</td>
+                <td>4–5 business days</td>
+                <td>Approximately $480</td>
+              </tr>
+              <tr>
+                <td>Plagiarism Check & Reduction</td>
+                <td>Up to 4,000 words</td>
+                <td>2–3 business days</td>
+                <td>$90 per manuscript</td>
+              </tr>
+              <tr>
+                <td>AI Reduction</td>
+                <td>Up to 4,000 words</td>
+                <td>4–6 business days</td>
+                <td>Approximately $600</td>
+              </tr>
+              <tr>
+                <td>Translation Services</td>
+                <td>Up to 2,500 words</td>
+                <td>5–7 business days</td>
+                <td>Approximately $125</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </>
   );
 }
-
-

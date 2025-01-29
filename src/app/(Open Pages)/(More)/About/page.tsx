@@ -32,9 +32,9 @@ export default function Home() {
               </p>
             </div>
             <div className="col-md-6">
-              <img
+              <img 
                 src="/images/why1.jpg"
-                alt=""
+                alt="#"
                 width="100%"
                 style={{ borderRadius: 10 }}
               />

@@ -3,10 +3,10 @@ import Link from "next/link";
 import Style from "./header.module.css";
 import redirect, { redirectSameTab } from "../_functionality/Redirect";
 // import { useRef } from "react";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 
 export default function Header() {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <>
       <div className="header_top_menu pt-2 pb-2 bg_color">
@@ -18,8 +18,17 @@ export default function Header() {
                   <ul>
                     <li>
                       <a href="#">
-                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN) <i className="fa fa-phone" style={{ marginLeft: "8px" }}></i>+91-923-730-4004 (IN) <i className="fa fa-phone" style={{ marginLeft: "8px" }}></i>+1
-                        (646)916-3476 (USA)
+                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN){" "}
+                        <i
+                          className="fa fa-phone"
+                          style={{ marginLeft: "8px" }}
+                        ></i>
+                        +91-923-730-4004 (IN){" "}
+                        <i
+                          className="fa fa-phone"
+                          style={{ marginLeft: "8px" }}
+                        ></i>
+                        +1 (646)916-3476 (USA)
                       </a>
                     </li>
                   </ul>
@@ -31,22 +40,34 @@ export default function Header() {
                 <div className="header_top_menu_icon_inner">
                   <ul>
                     <li>
-                      <Link href={"https://www.facebook.com/Manuscriptedit"} target="_blank">
+                      <Link
+                        href={"https://www.facebook.com/Manuscriptedit"}
+                        target="_blank"
+                      >
                         <i className="fa fa-facebook"></i>
                       </Link>
                     </li>
                     <li>
-                      <a href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit" target="_blank">
+                      <a
+                        href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit"
+                        target="_blank"
+                      >
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.instagram.com/manuscriptedit/" target="_blank">
+                      <a
+                        href="https://www.instagram.com/manuscriptedit/"
+                        target="_blank"
+                      >
                         <i className="fa fa-instagram"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.youtube.com/@manuscriptedit." target="_blank">
+                      <a
+                        href="https://www.youtube.com/@manuscriptedit."
+                        target="_blank"
+                      >
                         <i className="fa fa-youtube"></i>
                       </a>
                     </li>
@@ -56,9 +77,20 @@ export default function Header() {
             </div>
 
             <div className="col-lg-1 col-sm-2">
-              <Link href={'/Discount'}><button className="BtnDiscount" style={{ width: "200px", borderRadius: '6px', border: 'none', color: '#a31e22' , background:'white'}}>
-                Discount & Offers
-              </button> </Link>
+              <Link href={"/Discount"}>
+                <button
+                  className="BtnDiscount"
+                  style={{
+                    width: "200px",
+                    borderRadius: "6px",
+                    border: "none",
+                    color: "#a31e22",
+                    background: "white",
+                  }}
+                >
+                  Discount & Offers
+                </button>{" "}
+              </Link>
             </div>
           </div>
         </div>
@@ -71,46 +103,69 @@ export default function Header() {
           <div className="row align-items-center">
             <div className="menu">
               <Link href={"/"} className="logo">
-                <img style={{ width: "200px" }} className="down" src="/images/ManuscriptLogo.svg" alt=""></img>{" "}
-                <img style={{ width: "200px" }} className="main_sticky" src="/images/ManuscriptLogo.svg" alt=""></img>
+                <img
+                  style={{ width: "200px" }}
+                  className="down"
+                  src="/images/logoGif/Logo Animate_1.gif"
+                  alt=""
+                ></img>{" "}
+                <img
+                  style={{ width: "200px" }}
+                  className="main_sticky"
+                  src="/images/logoGif/Logo Animate_1.gif"
+                  alt=""
+                ></img>
               </Link>
               <ul className="clearfix">
                 <li>
                   <a href="#">SERVICES </a>
-                  <ul >
-                    <li >
+                  <ul>
+                    <li>
                       <ul>
                         <li>
                           <Link href={"/EditingOverview"}>
-                            <b>English Editing</b>
+                            <b>Editing &amp; Language Services</b>
                           </Link>
                           <ul className={Style.subList}>
-                            <li>
-                              <Link href={"/EditingOverview"}>
-                                Editing Overview
-                              </Link>
-                            </li>
-                            <li>
+                          <li>
                               <Link href={"/ProofReading"}>Proofreading</Link>
                             </li>
+
+                            <li>
+                              <Link href={"/CopyEdit"}>Copyediting</Link>
+                            </li>
+
+
                             <li>
                               <Link href={"/SubEditing"}>
                                 Substantive Editing
                               </Link>
                             </li>
+
+
                             <li>
                               <Link href={"/ExtensiveSubstantiveEditing"}>
                                 Extensive Substantive Editing
                               </Link>
                             </li>
-                            <li>
-                              <Link href={"/CopyEdit"}>Copyediting</Link>
-                            </li>
+
                             <li>
                               <Link href={"/PlagiarismCheckReduction"}>
                                 Plagiarism check and reduction
                               </Link>
                             </li>
+                           
+
+                            
+                            <li>
+                              <Link href={"/EditingOverview"}>
+                                Editing Overview
+                              </Link>
+                            </li>
+                           
+                            
+                            
+                            
                             <li>
                               <Link href={"/TranslationOverview"}>
                                 Translation Services
@@ -217,7 +272,6 @@ export default function Header() {
                             <b>Research Support</b>
                           </a>
 
-
                           <ul className={Style.subList}>
                             <li>
                               <Link href={"/ResearchSupportOverview"}>
@@ -288,7 +342,11 @@ export default function Header() {
                       <Link href={"/QualityDelivery"}>Quality & Delivery</Link>
                     </li>
                     <li>
-                      <Link href={"https://secure.manuscriptedit.com/samplework"}>Request a Sample Editing</Link>
+                      <Link
+                        href={"https://secure.manuscriptedit.com/samplework"}
+                      >
+                        Request a Sample Editing
+                      </Link>
                     </li>
                     <li>
                       <Link href={"/FAQ"}>FAQs</Link>
@@ -339,7 +397,9 @@ export default function Header() {
                     </li>
                     {/* <li><Link href={'/FAQ'}>Quotation</Link></li> */}
                     <li>
-                      <Link href={"https://www.secure.manuscriptedit.com/quotation"}>
+                      <Link
+                        href={"https://www.secure.manuscriptedit.com/quotation"}
+                      >
                         Quotation
                       </Link>
                     </li>
@@ -405,7 +465,9 @@ export default function Header() {
                     <li>
                       <Link href={"/About"}>About Us</Link>
                     </li>
-                    <li><Link href={'/ClientList'}>Client List</Link></li>
+                    <li>
+                      <Link href={"/ClientList"}>Client List</Link>
+                    </li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -416,7 +478,9 @@ export default function Header() {
                         Client List
                       </a>
                     </li> */}
-                    <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li>
+                    <li>
+                      <Link href={"/PartnerRecent"}>Recent Partners</Link>
+                    </li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -428,7 +492,9 @@ export default function Header() {
                       </a>
                     </li> */}
 
-                    <li><Link href={'/ContactUs'}>Contact us</Link></li>
+                    <li>
+                      <Link href={"/ContactUs"}>Contact us</Link>
+                    </li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -439,7 +505,9 @@ export default function Header() {
                         Contact us
                       </a>
                     </li> */}
-                    <li><Link href={'/NewsPromotions'}>News & Conferences</Link></li>
+                    <li>
+                      <Link href={"/NewsPromotions"}>News & Conferences</Link>
+                    </li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -463,7 +531,11 @@ export default function Header() {
                       </a>
                     </li>
 
-                    <li><Link href={'/GlobalPartner2'}>Global Partner Program</Link></li>
+                    <li>
+                      <Link href={"/GlobalPartner2"}>
+                        Global Partner Program
+                      </Link>
+                    </li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -488,13 +560,18 @@ export default function Header() {
                     </li> */}
 
                     <li>
-                      <Link href={"https://secure.manuscriptedit.com/wregistration"}>
+                      <Link
+                        href={"https://secure.manuscriptedit.com/wregistration"}
+                      >
                         Webinar Registration
                       </Link>
                     </li>
 
-
-                    <li><Link href={'https://scholar-hangout.manuscriptedit.com'}>Scholar Hangout</Link></li>
+                    <li>
+                      <Link href={"https://scholar-hangout.manuscriptedit.com"}>
+                        Scholar Hangout
+                      </Link>
+                    </li>
                     {/* <li>
                       <a
                         onClick={() => {
@@ -719,7 +796,9 @@ export default function Header() {
                     <Link href={"/QualityDelivery"}>Quality & Delivery</Link>
                   </li>
                   <li>
-                    <Link href={"https://secure.manuscriptedit.com/samplework"}>Request a Sample Editing</Link>
+                    <Link href={"https://secure.manuscriptedit.com/samplework"}>
+                      Request a Sample Editing
+                    </Link>
                   </li>
                   <li>
                     <Link href={"/FAQ"}>FAQs</Link>
@@ -833,7 +912,9 @@ export default function Header() {
                   <li>
                     <Link href={"/About"}>About Us</Link>
                   </li>
-                  <li><Link href={'/'}>Client List</Link></li>
+                  <li>
+                    <Link href={"/"}>Client List</Link>
+                  </li>
                   {/* <li>
                     <a
                       onClick={() => {
@@ -845,8 +926,12 @@ export default function Header() {
                     </a>
                   </li> */}
                   {/* <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li> */}
-                  <li><Link href={'/PartnerRecent'}>Recent Partners</Link></li>
-                  <li><Link href={'/ContactUs'}>Contact us</Link></li>
+                  <li>
+                    <Link href={"/PartnerRecent"}>Recent Partners</Link>
+                  </li>
+                  <li>
+                    <Link href={"/ContactUs"}>Contact us</Link>
+                  </li>
                   {/* <li>
                     <a
                       onClick={() => {
@@ -857,7 +942,9 @@ export default function Header() {
                       Contact us
                     </a>
                   </li> */}
-                  <li><Link href={'/QualityAssurance'}>News & Conferences</Link></li>
+                  <li>
+                    <Link href={"/QualityAssurance"}>News & Conferences</Link>
+                  </li>
                   {/* <li>
                     <a
                       onClick={() => {
@@ -881,7 +968,9 @@ export default function Header() {
                     </a>
                   </li>
 
-                  <li><Link href={'/GlobalPartner2'}>Global Partner Program</Link></li>
+                  <li>
+                    <Link href={"/GlobalPartner2"}>Global Partner Program</Link>
+                  </li>
                   {/* <li>
                     <a
                       onClick={() => {
@@ -906,12 +995,18 @@ export default function Header() {
                   </li> */}
 
                   <li>
-                    <Link href={"https://secure.manuscriptedit.com/wregistration"}>
+                    <Link
+                      href={"https://secure.manuscriptedit.com/wregistration"}
+                    >
                       Webinar Registration
                     </Link>
                   </li>
 
-                  <li><Link href={'https://scholar-hangout.manuscriptedit.com'}>Scholar Hangout</Link></li>
+                  <li>
+                    <Link href={"https://scholar-hangout.manuscriptedit.com"}>
+                      Scholar Hangout
+                    </Link>
+                  </li>
                   {/* <li>
                     <a
                       onClick={() => {

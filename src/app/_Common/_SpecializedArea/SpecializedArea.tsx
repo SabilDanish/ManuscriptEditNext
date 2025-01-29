@@ -11,7 +11,7 @@ export default function SpecializedArea(showDetails = true) {
             <div className="col-lg-12">
               <div className="section_title text_center mb-50 mt-3">
                 <div className="section_main_title">
-                  <h1>Explore our expert specialized areas</h1>
+                  <h2>Explore our expert specialized areas</h2>
                   <p>
                     From Medicine to Life Sciences, Physical Sciences, Economics
                     and the Art & Humanities -- our English Editing expert
@@ -117,9 +117,9 @@ export default function SpecializedArea(showDetails = true) {
               <div className="col-lg-12">
                 <div className="section_title text_center mb-50 mt-3">
                   <div className="section_main_title">
-                    <h1>
+                    <h2>
                       Manuscriptedit.com covers the following type of documents
-                    </h1>
+                    </h2>
                   </div>
                   <div className="em_bar">
                     <div className="em_bar_bg"></div>
