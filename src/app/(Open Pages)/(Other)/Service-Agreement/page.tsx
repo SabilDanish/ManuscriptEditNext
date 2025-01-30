@@ -393,7 +393,7 @@ const ServiceAgreement = () => {
         <ul>
           <li>1-7 Days Late: 10% of the total quotation amount</li>
           <li>8-15 Days Late: 15% of the total quotation amount</li>
-          <li>16-30 Days Late: 25%-30% of the total quotation amount</li>
+          <li>16-30 Days Late: 30% of the total quotation amount</li>
           <li>
             Over 30 Days Late: The order will be considered closed, and any
             outstanding balance will be immediately due. The client may be

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import FaqHome from "@/app/_Common/FaqHome/FaqHome";
 import PhdThesis from "@/app/_Common/PhdThesis/Phdthesis";
@@ -8,10 +8,66 @@ import FaqPhd from "@/app/_Common/faqPhd/faqPhd";
 export default function Home() {
   return (
     <>
-      {breadcrum(
-        "Services / Research Support",
-        "Phd Thesis"
-      )}
+      {breadcrum("Services / Research Support", "Phd Thesis")}
+
+      <div className="container mt-4">
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PhD Thesis Editing</td>
+                <td>Up to 50,000 words</td>
+                <td>20–25 business days</td>
+                <td>Approximately $1,250</td>
+              </tr>
+              <tr>
+                <td>Master Thesis Editing</td>
+                <td>Up to 30,000 words</td>
+                <td>15–20 business days</td>
+                <td>Approximately $660</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="container mt-4">
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PhD Thesis Editing</td>
+                <td>Up to 50,000 words</td>
+                <td>20–25 business days</td>
+                <td>Price may vary (Contact us)</td>
+              </tr>
+              <tr>
+                <td>Master Thesis Editing</td>
+                <td>Up to 30,000 words</td>
+                <td>15–20 business days</td>
+                <td>Price may vary (Contact us)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">
@@ -31,14 +87,19 @@ export default function Home() {
               </p>
             </div>
             <div className="col-md-6">
-              <iframe width="100%" height="250px" title="Mastering the Editorial Process || From Submission to Perfection || ManuscriptEdit"  src="https://www.youtube.com/embed/uvSCIn1vEPs"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+              <iframe
+                width="100%"
+                height="250px"
+                title="Mastering the Editorial Process || From Submission to Perfection || ManuscriptEdit"
+                src="https://www.youtube.com/embed/uvSCIn1vEPs"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              ></iframe>
             </div>
           </div>
         </div>
       </section>
 
-
-      <PhdThesis/>
+      <PhdThesis />
 
       <div className="service_area pt-0 pb-0">
         <div className="container">
@@ -70,11 +131,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-2">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                      
-                        In-Depth Research & Analysis
-                      
-                    </h4>
+                    <h4 className="pb-2">In-Depth Research & Analysis</h4>
                     <p>
                       Navigate the vast ocean of academia with our expert
                       research and analysis. We dive deep into your subject
@@ -100,11 +157,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-2">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                     
-                        Professional Writing & Editing
-                     
-                    </h4>
+                    <h4 className="pb-2">Professional Writing & Editing</h4>
                     <p>
                       Your ideas deserve to be presented with clarity and
                       precision. Our seasoned writers and editors bring finesse
@@ -130,11 +183,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-2">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                     
-                        Statistical & Data Analysis
-                      
-                    </h4>
+                    <h4 className="pb-2">Statistical & Data Analysis</h4>
                     <p>
                       Decipher complex datasets with ease. Our statistical
                       wizards employ cutting-edge techniques to provide
@@ -160,11 +209,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-2">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                     
-                        Complete Thesis Guidance
-                     
-                    </h4>
+                    <h4 className="pb-2">Complete Thesis Guidance</h4>
                     <p>
                       From conception to completion, our PhD thesis guidance
                       encompasses every aspect of your research journey. We
@@ -190,11 +235,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-2">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                      
-                        Delivery Time and Process
-                      
-                    </h4>
+                    <h4 className="pb-2">Delivery Time and Process</h4>
                     <p>
                       We streamline your PhD journey with a clear, efficient
                       process. With an average delivery time of 50-60 days*, we
@@ -207,9 +248,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
-      
 
       <div className="process_area pt-50 pb-50">
         <div className="container">
@@ -405,8 +443,7 @@ export default function Home() {
         </div>
       </div> */}
 
-
-      <FaqPhd/>
+      <FaqPhd />
     </>
   );
 }

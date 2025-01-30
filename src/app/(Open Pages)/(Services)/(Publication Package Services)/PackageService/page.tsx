@@ -29,7 +29,8 @@ export default function Home() {
         "Publication Package"
       )}
 
-      <div className="container mt-4" style={{ marginBottom: "50px" }}>
+
+<div className="container mt-4">
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -42,54 +43,59 @@ export default function Home() {
             </thead>
             <tbody>
               <tr>
-                <td>Proofreading</td>
-                <td>Up to 4,000 words</td>
+                <td>Journal Selection</td>
+                <td>N/A</td>
                 <td>2–3 business days</td>
-                <td>Approximately $200</td>
+                <td>$100 per service</td>
               </tr>
               <tr>
-                <td>Copyediting</td>
-                <td>Up to 4,000 words</td>
-                <td>2–4 business days</td>
-                <td>Approximately $320</td>
+                <td>Journal Submission</td>
+                <td>N/A</td>
+                <td>3–5 business days</td>
+                <td>$80 per service</td>
               </tr>
               <tr>
-                <td>Substantive Editing</td>
+                <td>Peer Review & Pre-Submission</td>
                 <td>Up to 4,000 words</td>
                 <td>3–4 business days</td>
-                <td>Approximately $400</td>
+                <td>Approximately $360</td>
               </tr>
               <tr>
-                <td>Extensive Substantive Editing</td>
-                <td>Up to 4,000 words</td>
-                <td>4–5 business days</td>
-                <td>Approximately $480</td>
-              </tr>
-              <tr>
-                <td>Plagiarism Check & Reduction</td>
-                <td>Up to 4,000 words</td>
+                <td>Response to Reviewer</td>
+                <td>Up to 2,000 words</td>
                 <td>2–3 business days</td>
-                <td>$90 per manuscript</td>
+                <td>Approximately $180</td>
               </tr>
               <tr>
-                <td>AI Reduction</td>
-                <td>Up to 4,000 words</td>
-                <td>4–6 business days</td>
-                <td>Approximately $600</td>
-              </tr>
-              <tr>
-                <td>Translation Services</td>
-                <td>Up to 2,500 words</td>
+                <td>Poster Creation & Design</td>
+                <td>N/A</td>
                 <td>5–7 business days</td>
-                <td>Approximately $125</td>
+                <td>$150 per poster</td>
+              </tr>
+              <tr>
+                <td>Formatting</td>
+                <td>Up to 6,000 words</td>
+                <td>1–2 business days</td>
+                <td>Approximately $90</td>
+              </tr>
+              <tr>
+                <td>Citation Booster</td>
+                <td>N/A</td>
+                <td>5–7 business days</td>
+                <td>Pricing may vary (Contact us)</td>
+              </tr>
+              <tr>
+                <td>Illustration Services</td>
+                <td>N/A</td>
+                <td>7–10 business days</td>
+                <td>Pricing may vary (Contact us)</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-
-      <div className="container mt-4" style={{ marginBottom: "50px" }}>
+      <div className="container mt-4">
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -102,45 +108,51 @@ export default function Home() {
             </thead>
             <tbody>
               <tr>
-                <td>Proofreading</td>
-                <td>Up to 4,000 words</td>
+                <td>Journal Selection</td>
+                <td>N/A</td>
                 <td>2–3 business days</td>
-                <td>4200 INR</td>
+                <td>12000 INR</td>
               </tr>
               <tr>
-                <td>Copyediting</td>
-                <td>Up to 4,000 words</td>
-                <td>2–4 business days</td>
-                <td>9900 INR</td>
+                <td>Journal Submission</td>
+                <td>N/A</td>
+                <td>3–5 business days</td>
+                <td>6500 INR</td>
               </tr>
               <tr>
-                <td>Substantive Editing</td>
+                <td>Peer Review & Pre-Submission</td>
                 <td>Up to 4,000 words</td>
                 <td>3–4 business days</td>
-                <td>9200 INR</td>
+                <td>9000 INR</td>
               </tr>
               <tr>
-                <td>Extensive Substantive Editing</td>
-                <td>Up to 4,000 words</td>
-                <td>4–5 business days</td>
-                <td>14500 INR</td>
-              </tr>
-              <tr>
-                <td>Plagiarism Check & Reduction</td>
-                <td>Up to 4,000 words</td>
+                <td>Response to Reviewer</td>
+                <td>Up to 2,000 words</td>
                 <td>2–3 business days</td>
-                <td>7200 INR</td>
+                <td>15200 INR</td>
               </tr>
               <tr>
-                <td>AI Reduction</td>
-                <td>Up to 4,000 words</td>
-                <td>4–6 business days</td>
-                <td>19900 INR</td>
-              </tr>
-              <tr>
-                <td>Translation Services</td>
-                <td>Up to 2,500 words</td>
+                <td>Poster Creation & Design</td>
+                <td>N/A</td>
                 <td>5–7 business days</td>
+                <td>9000 INR</td>
+              </tr>
+              <tr>
+                <td>Formatting</td>
+                <td>Up to 6,000 words</td>
+                <td>1–2 business days</td>
+                <td>6550 INR</td>
+              </tr>
+              <tr>
+                <td>Citation Booster</td>
+                <td>N/A</td>
+                <td>5–7 business days</td>
+                <td>Pricing may vary (Contact us)</td>
+              </tr>
+              <tr>
+                <td>Illustration Services</td>
+                <td>N/A</td>
+                <td>7–10 business days</td>
                 <td>Pricing may vary (Contact us)</td>
               </tr>
             </tbody>
@@ -504,175 +516,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className="container mt-4">
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
-              <tr>
-                <th>Service</th>
-                <th>Word Count Limit</th>
-                <th>Timeline</th>
-                <th>Pricing</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Journal Selection</td>
-                <td>N/A</td>
-                <td>2–3 business days</td>
-                <td>$100 per service</td>
-              </tr>
-              <tr>
-                <td>Journal Submission</td>
-                <td>N/A</td>
-                <td>3–5 business days</td>
-                <td>$80 per service</td>
-              </tr>
-              <tr>
-                <td>Peer Review & Pre-Submission</td>
-                <td>Up to 4,000 words</td>
-                <td>3–4 business days</td>
-                <td>Approximately $360</td>
-              </tr>
-              <tr>
-                <td>Response to Reviewer</td>
-                <td>Up to 2,000 words</td>
-                <td>2–3 business days</td>
-                <td>Approximately $180</td>
-              </tr>
-              <tr>
-                <td>Poster Creation & Design</td>
-                <td>N/A</td>
-                <td>5–7 business days</td>
-                <td>$150 per poster</td>
-              </tr>
-              <tr>
-                <td>Formatting</td>
-                <td>Up to 6,000 words</td>
-                <td>1–2 business days</td>
-                <td>Approximately $90</td>
-              </tr>
-              <tr>
-                <td>Citation Booster</td>
-                <td>N/A</td>
-                <td>5–7 business days</td>
-                <td>Pricing may vary (Contact us)</td>
-              </tr>
-              <tr>
-                <td>Illustration Services</td>
-                <td>N/A</td>
-                <td>7–10 business days</td>
-                <td>Pricing may vary (Contact us)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      
 
-      <div className="container mt-4">
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
-              <tr>
-                <th>Service</th>
-                <th>Word Count Limit</th>
-                <th>Timeline</th>
-                <th>Pricing</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Medical Writing Assistance</td>
-                <td>Up to 3,000 words</td>
-                <td>5–7 business days</td>
-                <td>Approximately $360</td>
-              </tr>
-              <tr>
-                <td>Scientific & Academic Writing Assistance</td>
-                <td>Up to 4,000 words</td>
-                <td>4–6 business days</td>
-                <td>Approximately $440</td>
-              </tr>
-              <tr>
-                <td>Technical Writing Assistance</td>
-                <td>Up to 4,000 words</td>
-                <td>5–7 business days</td>
-                <td>Approximately $440</td>
-              </tr>
-              <tr>
-                <td>Rewriting Assistance</td>
-                <td>Up to 4,000 words</td>
-                <td>3–4 business days</td>
-                <td>Approximately $360</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      {/* 
+      
 
-      <div className="container mt-4">
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
-              <tr>
-                <th>Service</th>
-                <th>Word Count Limit</th>
-                <th>Timeline</th>
-                <th>Pricing</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Statistical Analysis</td>
-                <td>N/A</td>
-                <td>7–10 business days</td>
-                <td>$180 per project</td>
-              </tr>
-              <tr>
-                <td>Systematic Review</td>
-                <td>Up to 8,000 words</td>
-                <td>10–15 business days</td>
-                <td>Approximately $800</td>
-              </tr>
-              <tr>
-                <td>Meta-Analysis</td>
-                <td>Up to 10,000 words</td>
-                <td>15–20 business days</td>
-                <td>Approximately $1,200</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div className="container mt-4">
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
-              <tr>
-                <th>Service</th>
-                <th>Word Count Limit</th>
-                <th>Timeline</th>
-                <th>Pricing</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>PhD Thesis Editing</td>
-                <td>Up to 50,000 words</td>
-                <td>20–25 business days</td>
-                <td>Approximately $1,250</td>
-              </tr>
-              <tr>
-                <td>Master Thesis Editing</td>
-                <td>Up to 30,000 words</td>
-                <td>15–20 business days</td>
-                <td>Approximately $660</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      
+     
 
       <div className="container mt-4">
         <div className="table-responsive">

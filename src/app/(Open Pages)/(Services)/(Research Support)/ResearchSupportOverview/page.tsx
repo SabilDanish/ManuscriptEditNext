@@ -9,6 +9,77 @@ export default function Home() {
     <>
       {breadcrum("Services / Research Support", "Research Support Overview")}
 
+      <div className="container mt-4">
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Statistical Analysis</td>
+                <td>N/A</td>
+                <td>7–10 business days</td>
+                <td>$180 per project</td>
+              </tr>
+              <tr>
+                <td>Systematic Review</td>
+                <td>Up to 8,000 words</td>
+                <td>10–15 business days</td>
+                <td>Approximately $800</td>
+              </tr>
+              <tr>
+                <td>Meta-Analysis</td>
+                <td>Up to 10,000 words</td>
+                <td>15–20 business days</td>
+                <td>Approximately $1,200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="container mt-4">
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Statistical Analysis</td>
+                <td>N/A</td>
+                <td>7–10 business days</td>
+                <td>Price may vary (Contact us)</td>
+              </tr>
+              <tr>
+                <td>Systematic Review</td>
+                <td>Up to 8,000 words</td>
+                <td>10–15 business days</td>
+                <td>Price may vary (Contact us)</td>
+              </tr>
+              <tr>
+                <td>Meta-Analysis</td>
+                <td>Up to 10,000 words</td>
+                <td>15–20 business days</td>
+                <td>Price may vary (Contact us)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">

@@ -159,7 +159,7 @@ export default function Header() {
                             
                             <li>
                               <Link href={"/EditingOverview"}>
-                                Editing Overview
+                                A.I Reduction
                               </Link>
                             </li>
                            
@@ -182,39 +182,59 @@ export default function Header() {
                             <b>Publication Support</b>
                           </Link>
                           <ul className={Style.subList}>
-                            <li>
-                              <Link href={"/PackageService"}>
-                                Publication Package
-                              </Link>
-                            </li>
-                            <li>
+
+                          <li>
                               <Link href={"/JournalSel"}>
                                 Journal Selection
                               </Link>
                             </li>
+
                             <li>
                               <Link href={"/JournalSub"}>
                                 Journal Submission
                               </Link>
                             </li>
-                            <li>
-                              <Link href={"/ResponseToReviewer"}>
-                                Response to Reviewer
-                              </Link>
-                            </li>
+
                             <li>
                               <Link href={"/PeerReview"}>
                                 Peer Review&nbsp;&amp;&nbsp;Pre Submission
                               </Link>
                             </li>
+
+                            <li>
+                              <Link href={"/ResponseToReviewer"}>
+                                Response to Reviewer
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link href={"/Formatting"}>Formatting</Link>
+                            </li>
+
+                            <li>
+                              <Link href={"/CitationBooster"}>
+                                Citation Booster
+                              </Link>
+                            </li>
+
+                            {/* <li>
+                              <Link href={"/PackageService"}>
+                                Publication Package
+                              </Link>
+                            </li> */}
+                            
                             <li>
                               <Link href={"/PosterCreation"}>
                                 Poster Creation &amp; Design
                               </Link>
                             </li>
+
                             <li>
-                              <Link href={"/Formatting"}>Formatting</Link>
+                              <Link href={"/MedicalDesign"}>
+                                Illustration Services
+                              </Link>
                             </li>
+                           
                           </ul>
                         </li>
                       </ul>
@@ -226,42 +246,81 @@ export default function Header() {
                             <b>Scientific / Academic Writing</b>
                           </Link>
                           <ul className={Style.subList}>
-                            <li>
-                              <Link href={"/Writing"}>Writing Overview</Link>
-                            </li>
-                            <li>
+
+                          <li>
                               <Link href={"/MedicalWrite"}>
-                                Medical Writing
+                                Medical Writing Assitance
                               </Link>
                             </li>
+
                             <li>
                               <Link href={"/ScientificWriting"}>
-                                Scientific & Academic Writing
+                                Scientific & Academic Writing Assitance
                               </Link>
                             </li>
+
                             <li>
                               <Link href={"/TechnicalWriting"}>
-                                Technical Writing
+                                Technical Writing Assitance
                               </Link>
                             </li>
+
                             <li>
-                              <Link href={"/MedicalRewrite"}>Rewriting</Link>
+                              <Link href={"/MedicalRewrite"}>Rewriting Assitance</Link>
                             </li>
-                            <li>
+
+                            {/* <li>
+                              <Link href={"/Writing"}>Writing Overview</Link>
+                            </li> */}
+                          </ul>
+                        </li>
+
+                        <li>
+                      <ul>
+                        <li>
+                          <a href="/ResearchSupportOverview">
+                            <b>Research & Statistical Analysis</b>
+                          </a>
+
+                          <ul className={Style.subList}>
+
+
+                          <li>
                               <Link href={"/StatisticalAnalysis"}>
                                 Statistical Analysis
                               </Link>
                             </li>
+
                             <li>
                               <Link href={"/SystematicReview"}>
                                 Systematic Review
                               </Link>
                             </li>
+
                             <li>
                               <Link href={"/MetaAnalysis"}>Meta Analysis</Link>
                             </li>
+
+
+                            <li>
+                              <Link href={"/MetaAnalysis"}>Data Analysis</Link>
+                            </li>
+                            {/* <li>
+                              <a
+                                onClick={() => {
+                                  redirectSameTab("corporate");
+                                }}
+                                href="#"
+                              >
+                                Corporate Services
+                              </a>
+                            </li> */}
                           </ul>
                         </li>
+                      </ul>
+                    </li>
+
+
                       </ul>
                     </li>
 
@@ -269,10 +328,34 @@ export default function Header() {
                       <ul>
                         <li>
                           <a href="#">
-                            <b>Research Support</b>
+                            <b>Thesis &amp; Dissertation Services</b>
                           </a>
 
                           <ul className={Style.subList}>
+
+
+                          {/* <li>
+                              <Link href={"/StatisticalAnalysis"}>
+                                Statistical Analysis
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link href={"/SystematicReview"}>
+                                Systematic Review
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link href={"/MetaAnalysis"}>Meta Analysis</Link>
+                            </li>
+
+
+                            <li>
+                              <Link href={"/MetaAnalysis"}>Data Analysis</Link>
+                            </li>
+
+
                             <li>
                               <Link href={"/ResearchSupportOverview"}>
                                 Research Support Overview
@@ -297,28 +380,20 @@ export default function Header() {
                               <Link href={"/ResearchEnhancementServices"}>
                                 Research Enhancement Services
                               </Link>
-                            </li>
-                            <li>
-                              <Link href={"/CitationBooster"}>
-                                Citation Booster
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href={"/MedicalDesign"}>
-                                Illustration Services
-                              </Link>
-                            </li>
+                            </li> */}
+                            
+                           
                             <li>
                               <Link href={"/PHDThesis"}>Phd Thesis</Link>
                             </li>
                             <li>
                               <Link href={"/MasterThesis"}>Master Thesis</Link>
                             </li>
-                            <li>
+                            {/* <li>
                               <Link href={"/CustomizedServices"}>
                                 Customized Services
                               </Link>
-                            </li>
+                            </li> */}
                             {/* <li>
                               <a
                                 onClick={() => {
@@ -331,8 +406,32 @@ export default function Header() {
                             </li> */}
                           </ul>
                         </li>
+
+
+                        <li>
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <b>Thesis &amp; Dissertation Services</b>
+                          </a>
+
+                          <ul className={Style.subList}>
+                            <li>
+                              <Link href={"/PHDThesis"}>High-Impact Scientific Editing</Link>
+                            </li>
+                            <li>
+                              <Link href={"/MasterThesis"}>High-Impact Journal Publication Support</Link>
+                            </li>
+                           
+                          </ul>
+                        </li>
                       </ul>
                     </li>
+                      </ul>
+                    </li>
+
+
+                   
                   </ul>
                 </li>
                 <li>
