@@ -44,6 +44,7 @@ import PublicationPackages from "./_Common/Publication_package/Publication_packa
 import ServiceList from "./_Common/_ServiceData/ServiceData";
 import ChristmasBranch from "./_Common/Chritmas-Branch/ChristmasBranch";
 
+
 // import '../../public/js/vendor/jquery-3.2.1.min.js'
 // import '../../public/js/bootstrap.min.js'
 
@@ -68,6 +69,8 @@ export default function Home() {
       {blogs && blogs.length ? <BlogMob blogs={blogs} /> : ""}
       <FaqHome />
       <NewsletterSubscribe />
+
+      
 
       {/* <ChristmasBranch/> */}
       {/* <OfferSlider /> */}

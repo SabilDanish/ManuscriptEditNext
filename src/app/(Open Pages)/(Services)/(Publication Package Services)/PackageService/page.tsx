@@ -11,6 +11,7 @@ import Metadata from "@/app/Metadata";
 import { DiscountBanner, DiscountMessage } from "./DiscountSection";
 import Dropdown2 from "../Dropdown2/Dropdown2.jsx";
 import FaqHome from "@/app/_Common/FaqHome/FaqHome";
+import PricingTable from "./PricingTableCurrency.jsx";
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
@@ -27,6 +28,126 @@ export default function Home() {
         "Services / Publication Package Services",
         "Publication Package"
       )}
+
+      <div className="container mt-4" style={{ marginBottom: "50px" }}>
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Proofreading</td>
+                <td>Up to 4,000 words</td>
+                <td>2–3 business days</td>
+                <td>Approximately $200</td>
+              </tr>
+              <tr>
+                <td>Copyediting</td>
+                <td>Up to 4,000 words</td>
+                <td>2–4 business days</td>
+                <td>Approximately $320</td>
+              </tr>
+              <tr>
+                <td>Substantive Editing</td>
+                <td>Up to 4,000 words</td>
+                <td>3–4 business days</td>
+                <td>Approximately $400</td>
+              </tr>
+              <tr>
+                <td>Extensive Substantive Editing</td>
+                <td>Up to 4,000 words</td>
+                <td>4–5 business days</td>
+                <td>Approximately $480</td>
+              </tr>
+              <tr>
+                <td>Plagiarism Check & Reduction</td>
+                <td>Up to 4,000 words</td>
+                <td>2–3 business days</td>
+                <td>$90 per manuscript</td>
+              </tr>
+              <tr>
+                <td>AI Reduction</td>
+                <td>Up to 4,000 words</td>
+                <td>4–6 business days</td>
+                <td>Approximately $600</td>
+              </tr>
+              <tr>
+                <td>Translation Services</td>
+                <td>Up to 2,500 words</td>
+                <td>5–7 business days</td>
+                <td>Approximately $125</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div className="container mt-4" style={{ marginBottom: "50px" }}>
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead className="table-dark">
+              <tr>
+                <th>Service</th>
+                <th>Word Count Limit</th>
+                <th>Timeline</th>
+                <th>Pricing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Proofreading</td>
+                <td>Up to 4,000 words</td>
+                <td>2–3 business days</td>
+                <td>4200 INR</td>
+              </tr>
+              <tr>
+                <td>Copyediting</td>
+                <td>Up to 4,000 words</td>
+                <td>2–4 business days</td>
+                <td>9900 INR</td>
+              </tr>
+              <tr>
+                <td>Substantive Editing</td>
+                <td>Up to 4,000 words</td>
+                <td>3–4 business days</td>
+                <td>9200 INR</td>
+              </tr>
+              <tr>
+                <td>Extensive Substantive Editing</td>
+                <td>Up to 4,000 words</td>
+                <td>4–5 business days</td>
+                <td>14500 INR</td>
+              </tr>
+              <tr>
+                <td>Plagiarism Check & Reduction</td>
+                <td>Up to 4,000 words</td>
+                <td>2–3 business days</td>
+                <td>7200 INR</td>
+              </tr>
+              <tr>
+                <td>AI Reduction</td>
+                <td>Up to 4,000 words</td>
+                <td>4–6 business days</td>
+                <td>19900 INR</td>
+              </tr>
+              <tr>
+                <td>Translation Services</td>
+                <td>Up to 2,500 words</td>
+                <td>5–7 business days</td>
+                <td>Pricing may vary (Contact us)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <section className="pt-60 pb-50">
         <div className="container-fluid">
           <div className="row">
@@ -731,65 +852,6 @@ export default function Home() {
       {clientFeedback()}
       {/* {FAQ()} */}
       <FaqHome />
-
-      <div className="container mt-4" style={{marginBottom:"50px"}}>
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
-              <tr>
-                <th>Service</th>
-                <th>Word Count Limit</th>
-                <th>Timeline</th>
-                <th>Pricing</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Proofreading</td>
-                <td>Up to 4,000 words</td>
-                <td>2–3 business days</td>
-                <td>Approximately $200</td>
-              </tr>
-              <tr>
-                <td>Copyediting</td>
-                <td>Up to 4,000 words</td>
-                <td>2–4 business days</td>
-                <td>Approximately $320</td>
-              </tr>
-              <tr>
-                <td>Substantive Editing</td>
-                <td>Up to 4,000 words</td>
-                <td>3–4 business days</td>
-                <td>Approximately $400</td>
-              </tr>
-              <tr>
-                <td>Extensive Substantive Editing</td>
-                <td>Up to 4,000 words</td>
-                <td>4–5 business days</td>
-                <td>Approximately $480</td>
-              </tr>
-              <tr>
-                <td>Plagiarism Check & Reduction</td>
-                <td>Up to 4,000 words</td>
-                <td>2–3 business days</td>
-                <td>$90 per manuscript</td>
-              </tr>
-              <tr>
-                <td>AI Reduction</td>
-                <td>Up to 4,000 words</td>
-                <td>4–6 business days</td>
-                <td>Approximately $600</td>
-              </tr>
-              <tr>
-                <td>Translation Services</td>
-                <td>Up to 2,500 words</td>
-                <td>5–7 business days</td>
-                <td>Approximately $125</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
     </>
   );
 }
