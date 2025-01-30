@@ -5,19 +5,53 @@ import FAQ from "@/app/_Common/_FAQ/FAQ";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
-import { usePathname } from 'next/navigation'
-import { data } from '../../../../utils/metaFile.js'
+import { usePathname } from "next/navigation";
+import { data } from "../../../../utils/metaFile.js";
 import Metadata from "@/app/Metadata";
 import { DiscountBanner, DiscountMessage } from "./DiscountSection";
 import Dropdown2 from "../Dropdown2/Dropdown2.jsx";
 import FaqHome from "@/app/_Common/FaqHome/FaqHome";
-
+import { useEffect, useState } from "react";
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
-  const pathName: string = usePathname().split("/").filter(val => val).join("")
-  let metaData = newData[pathName]
+  const pathName: string = usePathname()
+    .split("/")
+    .filter((val) => val)
+    .join("");
+  let metaData = newData[pathName];
+
+  // code for country location starts here
+  //  const [countryName, setCountryName] = useState<string | null>(null);
+  const [currency, setCurrency] = useState("");
+  const LocationBasedPricing = () => {
+    console.log("hii from here");
+    useEffect(() => {
+      fetch("https://www.secure.manuscriptedit.com/api/ip_api.php")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log({ data });
+          const countryCode = data[0].countryCode;
+          console.log({ countryCode });
+          if (countryCode === "IN") {
+            setCurrency("India");
+            // setCountryName('INR')
+          } else {
+            setCurrency("OutSide India");
+            // setCountryName('USD')
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching location:", error);
+        });
+    }, []);
+    return currency;
+  };
+  LocationBasedPricing();
+
+  // code for country location ends here
+
   return (
     <>
       {<Metadata metaData={metaData} />}
@@ -25,6 +59,7 @@ export default function Home() {
         "Services / Publication Package Services",
         "Publication Package"
       )}
+
       <section className="pt-60 pb-50">
         <div className="container-fluid">
           <div className="row">
@@ -45,11 +80,16 @@ export default function Home() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-3 col-md-6">
-            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+            <div
+              className="pricing_single-box st-grid-price"
+              style={{ position: "relative" }}
+            >
               {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <center><h4>Premium Plus Package</h4></center>
+                  <center>
+                    <h4>Premium Plus Package</h4>
+                  </center>
                 </div>
                 <div className="pricing_tk">
                   <center>
@@ -64,7 +104,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{ paddingLeft: "15px", paddingRight: "15px" }}>
+                <div
+                  className="featur_itmes "
+                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
+                >
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Data Analysis</li>
@@ -81,15 +124,40 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("quotation");
+                  }}
+                >
+                  Request a Quote <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
 
-              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
-                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "15px",
+                  fontSize: "0.8rem",
+                  color: "#555",
+                }}
+              >
+                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
                   *Terms and conditions applied.
                 </p>
               </div>
@@ -98,11 +166,16 @@ export default function Home() {
           </div>
 
           <div className="col-lg-3 col-md-6">
-            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+            <div
+              className="pricing_single-box st-grid-price"
+              style={{ position: "relative" }}
+            >
               {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <center><h4>Premium Package</h4></center>
+                  <center>
+                    <h4>Premium Package</h4>
+                  </center>
                 </div>
                 <div className="pricing_tk">
                   <center>
@@ -117,7 +190,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{ paddingLeft: "15px", paddingRight: "15px" }}>
+                <div
+                  className="featur_itmes "
+                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
+                >
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Substantive Editing</li>
@@ -126,21 +202,48 @@ export default function Home() {
                     <li>Artwork Formatting</li>
                     <li>Cover Letter Writing</li>
                     <li>Journal Submission</li>
-                    <li>Response to Reviewers* (*One response to reviewer free)</li>
+                    <li>
+                      Response to Reviewers* (*One response to reviewer free)
+                    </li>
                     <li>Plagiarism Check</li>
                     <li>Unlimited Assistance *</li>
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("quotation");
+                  }}
+                >
+                  Request a Quote <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
 
-              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
-                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "15px",
+                  fontSize: "0.8rem",
+                  color: "#555",
+                }}
+              >
+                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
                   *Terms and conditions applied.
                 </p>
               </div>
@@ -149,11 +252,16 @@ export default function Home() {
           </div>
 
           <div className="col-lg-3 col-md-6">
-            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+            <div
+              className="pricing_single-box st-grid-price"
+              style={{ position: "relative" }}
+            >
               {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
-                  <center><h4>Advanced Package</h4></center>
+                  <center>
+                    <h4>Advanced Package</h4>
+                  </center>
                 </div>
                 <div className="pricing_tk">
                   <center>
@@ -168,7 +276,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes " style={{ paddingLeft: "15px", paddingRight: "15px" }}>
+                <div
+                  className="featur_itmes "
+                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
+                >
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Substantive Editing</li>
@@ -181,15 +292,40 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("quotation");
+                  }}
+                >
+                  Request a Quote <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
 
-              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
-                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "15px",
+                  fontSize: "0.8rem",
+                  color: "#555",
+                }}
+              >
+                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
                   *Terms and conditions applied.
                 </p>
               </div>
@@ -198,7 +334,10 @@ export default function Home() {
           </div>
 
           <div className="col-lg-3 col-md-6">
-            <div className="pricing_single-box st-grid-price" style={{ position: 'relative' }}>
+            <div
+              className="pricing_single-box st-grid-price"
+              style={{ position: "relative" }}
+            >
               {/* <div className="discount-sticker">35% OFF</div> */}
               <div className="pricing-head">
                 <div className="pricing_title">
@@ -219,7 +358,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="pricing_body">
-                <div className="featur_itmes" style={{ paddingLeft: "15px", paddingRight: "15px" }}>
+                <div
+                  className="featur_itmes"
+                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
+                >
                   <ul>
                     <li>Peer Review Analysis</li>
                     <li>Journal Selection</li>
@@ -230,15 +372,40 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('register') }}>Purchase Now <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("register");
+                  }}
+                >
+                  Purchase Now <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
-              <div className="pricing_button" style={{ textAlign: 'center', cursor: 'pointer' }}>
-                <a onClick={() => { redirect('quotation') }}>Request a Quote <i className="bi bi-arrow-right"></i></a>
+              <div
+                className="pricing_button"
+                style={{ textAlign: "center", cursor: "pointer" }}
+              >
+                <a
+                  onClick={() => {
+                    redirect("quotation");
+                  }}
+                >
+                  Request a Quote <i className="bi bi-arrow-right"></i>
+                </a>
               </div>
 
-              <div style={{ textAlign: 'center', marginTop: '15px', fontSize: '0.8rem', color: '#555' }}>
-                <p style={{ fontStyle: 'italic', lineHeight: '1.5' }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "15px",
+                  fontSize: "0.8rem",
+                  color: "#555",
+                }}
+              >
+                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
                   *Terms and conditions applied.
                 </p>
               </div>
@@ -246,12 +413,8 @@ export default function Home() {
               <DiscountMessage />
             </div>
           </div>
-
-
-
         </div>
       </div>
-
 
       {/* </div > */}
       {/* </section > */}
@@ -355,9 +518,6 @@ export default function Home() {
       {clientFeedback()}
       {/* {FAQ()} */}
       <FaqHome />
-
     </>
   );
 }
-
-
