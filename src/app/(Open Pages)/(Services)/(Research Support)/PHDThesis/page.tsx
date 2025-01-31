@@ -4,13 +4,37 @@ import FaqHome from "@/app/_Common/FaqHome/FaqHome";
 import PhdThesis from "@/app/_Common/PhdThesis/Phdthesis";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import FaqPhd from "@/app/_Common/faqPhd/faqPhd";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+  const [currency, setCurrency] = useState("");
+  const LocationBasedPricing = () => {
+    useEffect(() => {
+      fetch("https://www.secure.manuscriptedit.com/api/ip_api.php")
+        .then((response) => response.json())
+        .then((data) => {
+          const countryCode = data[0].countryCode;
+          if (countryCode === "IN") {
+            setCurrency("INR");
+          } else {
+            setCurrency("USD");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching location:", error);
+        });
+    }, []);
+    return currency;
+  };
+  LocationBasedPricing();
+
+
   return (
     <>
       {breadcrum("Services / Research Support", "Phd Thesis")}
 
-      <div className="container mt-4">
+      <div className="container mt-4" style={{display:(currency==="INR")?"none":""}}>
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -39,7 +63,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mt-4">
+      <div className="container mt-4" style={{display:(currency==="INR")?"":"none"}}>
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">

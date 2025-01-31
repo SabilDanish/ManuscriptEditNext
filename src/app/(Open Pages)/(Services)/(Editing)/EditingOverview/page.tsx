@@ -14,10 +14,33 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import "../../../../_Common/getHelp/getHelp.css";
 import Dropdown2 from "@/app/_Common/Dropdown2/Dropdown2";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
+import { useEffect, useState } from "react";
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
+
+  const [currency, setCurrency] = useState("");
+  const LocationBasedPricing = () => {
+    useEffect(() => {
+      fetch("https://www.secure.manuscriptedit.com/api/ip_api.php")
+        .then((response) => response.json())
+        .then((data) => {
+          const countryCode = data[0].countryCode;
+          if (countryCode === "IN") {
+            setCurrency("INR");
+          } else {
+            setCurrency("USD");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching location:", error);
+        });
+    }, []);
+    return currency;
+  };
+  LocationBasedPricing();
+
   const pathName: string = usePathname()
     .split("/")
     .filter((val) => val)
@@ -34,7 +57,7 @@ export default function Home() {
         "English, editors, native English, substantive editing, proofreading, formatting, translation, scientific, research, proposals, grant applications, posters"
       )}
       <section className="pt-5 pb-5">
-        <div className="container mt-4" style={{ marginBottom: "50px" }}>
+        <div className="container mt-4" style={{ marginBottom: "50px",display:(currency==="INR")?"none":""  }}>
           <div className="table-responsive">
             <table className="table table-bordered table-striped">
               <thead className="table-dark">
@@ -93,7 +116,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container mt-4" style={{ marginBottom: "50px" }}>
+        <div className="container mt-4" style={{ marginBottom: "50px",display:(currency==="INR")?"":"none"}}>
           <div className="table-responsive">
             <table className="table table-bordered table-striped">
               <thead className="table-dark">

@@ -3,13 +3,38 @@ import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import whyToChoose from "@/app/_Common/_WhyToChoose/WhyToChoose";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [currency, setCurrency] = useState("");
+  const LocationBasedPricing = () => {
+    useEffect(() => {
+      fetch("https://www.secure.manuscriptedit.com/api/ip_api.php")
+        .then((response) => response.json())
+        .then((data) => {
+          const countryCode = data[0].countryCode;
+          if (countryCode === "IN") {
+            setCurrency("INR");
+          } else {
+            setCurrency("USD");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching location:", error);
+        });
+    }, []);
+    return currency;
+  };
+  LocationBasedPricing();
+
   return (
     <>
       {breadcrum("Services / Research Support", "Research Support Overview")}
 
-      <div className="container mt-4">
+      <div
+        className="container mt-4"
+        style={{ display: currency === "INR" ? "none" : "" }}
+      >
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -44,7 +69,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mt-4">
+      <div
+        className="container mt-4"
+        style={{ display: currency === "INR" ? "" : "none" }}
+      >
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -78,7 +106,6 @@ export default function Home() {
           </table>
         </div>
       </div>
-
 
       <section className="pt-5 pb-5">
         <div className="container">
@@ -128,10 +155,16 @@ export default function Home() {
           </div>
           <div className="row">
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4" style={{ height: 'fit-content' }}>
+              <div
+                className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4"
+                style={{ height: "fit-content" }}
+              >
                 <div className="service_style_one_title mb-30">
                   <h4>ESR Support</h4>
-                  <p><br />ESR-Early Stage Researcher</p>
+                  <p>
+                    <br />
+                    ESR-Early Stage Researcher
+                  </p>
                 </div>
                 <div className="service_style_one_text">
                   <div className="em-about-icon-box2">
@@ -223,21 +256,28 @@ export default function Home() {
                 </div>
                 <div className="service_style_one_button pt-3">
                   <Link href={"https://wa.me/919237304004"}>
-                  Talk to an expert <i className="fa fa-long-arrow-right"></i>
+                    Talk to an expert <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
                 <div className="service_style_one_button pt-3">
                   <Link href={"https://secure.manuscriptedit.com/register"}>
-                  Register to know more <i className="fa fa-long-arrow-right"></i>
+                    Register to know more{" "}
+                    <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4" style={{ height: 'fit-content' }}>
+              <div
+                className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4"
+                style={{ height: "fit-content" }}
+              >
                 <div className="service_style_one_title mb-30">
                   <h4>MCR Advancement</h4>
-                  <p><br />MCR- Mid Carrer Research</p>
+                  <p>
+                    <br />
+                    MCR- Mid Carrer Research
+                  </p>
                 </div>
                 <div className="service_style_one_text">
                   <div className="em-about-icon-box2">
@@ -328,21 +368,28 @@ export default function Home() {
                 </div>
                 <div className="service_style_one_button pt-3">
                   <Link href={"https://wa.me/919237304004"}>
-                  Talk to an expert <i className="fa fa-long-arrow-right"></i>
+                    Talk to an expert <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
                 <div className="service_style_one_button pt-3">
                   <Link href={"https://secure.manuscriptedit.com/register"}>
-                  Register to know more <i className="fa fa-long-arrow-right"></i>
+                    Register to know more{" "}
+                    <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4" style={{ height: 'fit-content' }}>
+              <div
+                className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4"
+                style={{ height: "fit-content" }}
+              >
                 <div className="service_style_one_title mb-30">
                   <h4> FER Support</h4>
-                  <p><br />FER- Fully Experienced Researchers</p>
+                  <p>
+                    <br />
+                    FER- Fully Experienced Researchers
+                  </p>
                 </div>
                 <div className="service_style_one_text">
                   <div className="em-about-icon-box2">
@@ -433,21 +480,28 @@ export default function Home() {
                 </div>
                 <div className="service_style_one_button pt-3">
                   <Link href={"https://wa.me/919237304004"}>
-                  Talk to an expert <i className="fa fa-long-arrow-right"></i>
+                    Talk to an expert <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
                 <div className="service_style_one_button pt-3">
                   <Link href={"https://secure.manuscriptedit.com/register"}>
-                  Register to know more <i className="fa fa-long-arrow-right"></i>
+                    Register to know more{" "}
+                    <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4" style={{ height: 'fit-content' }}>
+              <div
+                className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4"
+                style={{ height: "fit-content" }}
+              >
                 <div className="service_style_one_title mb-30">
                   <h4> Read Full RES</h4>
-                  <p><br />RES- Research Enhancement Services</p>
+                  <p>
+                    <br />
+                    RES- Research Enhancement Services
+                  </p>
                 </div>
                 <div className="service_style_one_text">
                   <div className="em-about-icon-box2">
@@ -539,12 +593,13 @@ export default function Home() {
                 </div>
                 <div className="service_style_one_button pt-3">
                   <Link href={"https://wa.me/919237304004"}>
-                  Talk to an expert <i className="fa fa-long-arrow-right"></i>
+                    Talk to an expert <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
                 <div className="service_style_one_button pt-3">
                   <Link href={"https://secure.manuscriptedit.com/register"}>
-                  Register to know more <i className="fa fa-long-arrow-right"></i>
+                    Register to know more{" "}
+                    <i className="fa fa-long-arrow-right"></i>
                   </Link>
                 </div>
               </div>
@@ -552,9 +607,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div>
-      </div>
- 
+      <div></div>
 
       {whyToChoose()}
       <div className="accordion_area style-two upper1 pt-0 pb-100">

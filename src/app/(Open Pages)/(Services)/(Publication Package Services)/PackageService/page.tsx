@@ -22,6 +22,7 @@ export default function Home() {
     .filter((val) => val)
     .join("");
   let metaData = newData[pathName];
+  
 
   const [currency, setCurrency] = useState("");
   const LocationBasedPricing = () => {
@@ -53,8 +54,7 @@ export default function Home() {
         "Publication Package"
       )}
 
-
-<div className="container mt-4">
+<div className="container mt-4" style={{display:(currency==="INR")?"none":""}}>
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -119,7 +119,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mt-4">
+      <div className="container mt-4" style={{display:(currency==="INR")?"":"none"}}>
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">

@@ -14,6 +14,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { serviceData } from "@/app/utils/service.js";
 import "../../../../_Common/getHelp/getHelp.css";
 import "./writingOverview.css";
+import { useEffect, useState } from "react";
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
@@ -23,12 +24,37 @@ export default function Home() {
     .filter((val) => val)
     .join("");
   let metaData = newData[pathName];
+
+  const [currency, setCurrency] = useState("");
+  const LocationBasedPricing = () => {
+    useEffect(() => {
+      fetch("https://www.secure.manuscriptedit.com/api/ip_api.php")
+        .then((response) => response.json())
+        .then((data) => {
+          const countryCode = data[0].countryCode;
+          if (countryCode === "IN") {
+            setCurrency("INR");
+          } else {
+            setCurrency("USD");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching location:", error);
+        });
+    }, []);
+    return currency;
+  };
+  LocationBasedPricing();
+
   return (
     <>
       {<Metadata metaData={metaData} />}
       {breadcrum("Services / Writing", "Writing Overview")}
 
-      <div className="container mt-4">
+      <div
+        className="container mt-4"
+        style={{ display: currency === "INR" ? "none" : "" }}
+      >
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -69,7 +95,10 @@ export default function Home() {
         </div>
       </div>
 
-	  <div className="container mt-4">
+      <div
+        className="container mt-4"
+        style={{ display: currency === "INR" ? "" : "none" }}
+      >
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -109,8 +138,6 @@ export default function Home() {
           </table>
         </div>
       </div>
-
-
 
       <section className="pt-5 pb-5">
         {/* <div className="row conrow">
