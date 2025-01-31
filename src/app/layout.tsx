@@ -63,6 +63,7 @@ export default function RootLayout({
           Manuscriptedit - Expert Scientific Journal Publication Services
         </title>
         <link href="/img/manu.ico" rel="icon"></link>
+        <link rel="canonical" href="https://manuscriptedit.com/PackageService/" />
         <meta name="google-site-verification" content="70JSDkkRBc9H-NNFHJMmgPVrZCV_JUqnDogS_tZnHD8" />
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/vendor/jquery-3.2.1.min.js" />
         <Script type="text/javascript" strategy="beforeInteractive" src="/js/bootstrap.min.js" />
@@ -90,16 +91,16 @@ export default function RootLayout({
         <Script type="text/javascript" src="/js/fbevents.js" strategy="lazyOnload" />
         <Script type="text/javascript" src="/js/footerLinkedin.js" strategy="lazyOnload" />
         <Script type="text/javascript" src="/js/footerLinkedinWindow.js" strategy="lazyOnload" />
-        <noscript><img height="1" width="1" style={{ display: "none" }}
+        <noscript><img height="1" width="1"  alt="#" style={{ display: "none" }}
           src="https://www.facebook.com/tr?id=1557346005163372&ev=PageView&noscript=1"
         /></noscript>
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-16677438282" />
         <Script src="/js/gtagNew.js" strategy="lazyOnload" />
         <noscript>
-          <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=576246542585612&ev=PageView&noscript=1" />
+          <img height="1" width="1"  alt="#" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=576246542585612&ev=PageView&noscript=1" />
         </noscript>
         <noscript>
-          <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=282044725992719&ev=PageView&noscript=1" />
+          <img height="1" width="1"  alt="#" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=282044725992719&ev=PageView&noscript=1" />
         </noscript>
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC86N23" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe>
@@ -123,7 +124,7 @@ export default function RootLayout({
 
         {footer()}
         <noscript>
-          <img height="1" width="1" style={{"display":"none"}} alt="" src="https://px.ads.linkedin.com/collect/?pid=74803&fmt=gif" />
+          <img height="1" width="1" style={{"display":"none"}} alt="#" src="https://px.ads.linkedin.com/collect/?pid=74803&fmt=gif" />
         </noscript>
       </body>
     </html>

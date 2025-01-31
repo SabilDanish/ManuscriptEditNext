@@ -104,7 +104,7 @@
                       }else if (obj.data('type') == 'youtube'){
                         loadYoutube(autoplay);
                       } else {
-                        content.html('<img src="'+dest+'">');
+                        content.html('<img alt="#" src="'+dest+'">');
                         preloadFirst();
                       }
                     });
@@ -213,7 +213,7 @@
                           } else if (theprev.data('type') == 'vimeo'){
                             loadVimeo(autoplay);
                           }else{
-                            content.html('<img src="'+dest+'">');
+                            content.html('<img  alt="#" src="'+dest+'">');
                             preloadFirst();
                           }
                           obj = theprev;
@@ -265,7 +265,7 @@
                           } else if (thenext.data('type') == 'vimeo'){
                             loadVimeo(autoplay);
                           }else{
-                            content.html('<img src="'+dest+'">');
+                            content.html('<img  alt="#" src="'+dest+'">');
                             preloadFirst();
                           }
                           obj = thenext;

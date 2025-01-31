@@ -7,7 +7,7 @@ export default function whyToChoose() {
             <div className="col-lg-12">
                 <div className="section_title text_center mb-90 mt-3">
                     <div className="section_main_title">
-                        <h1>Why Choose ManuscriptEdit?</h1>
+                        <h2>Why Choose ManuscriptEdit?</h2>
                     </div>
                     <div className="em_bar">
                         <div className="em_bar_bg"></div>

@@ -147,7 +147,7 @@
 									jQuery('.mean-container').prepend(
 										'<div class="mean-bar">' +
 											'<a href="/" style="display: inline-block;">' + // Add the anchor tag here
-												'<img style="background: white; padding: .2rem; border-radius: 0.2rem; margin-left: 0.2rem; margin-top: 10px; width: 150px;" src="/images/logo16.png"/>' +
+												'<img style="background: white; padding: .2rem; border-radius: 0.2rem; margin-left: 0.2rem; margin-top: 10px; width: 150px;"  alt="#" src="/images/logo16.png"/>' +
 											'</a>' +
 											'<a href="#nav" class="meanmenu-reveal" style="' + meanStyles + '">Show Navigation</a>' +
 											'<nav class="mean-nav"></nav>' +

@@ -15,7 +15,7 @@ const GetEveryPortion = ({tabData}:any) => {
                     }] = data
                     return(
                         <div key={index} style={{background: "red", margin: "5px"}}>
-                            <h1>{header}</h1>
+                            <h2>{header}</h2>
                             <h3>{description}</h3>
                             <ul>
                                 {
