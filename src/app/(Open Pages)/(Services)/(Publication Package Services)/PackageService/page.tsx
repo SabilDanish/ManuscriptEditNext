@@ -29,8 +29,7 @@ export default function Home() {
         "Publication Package"
       )}
 
-
-<div className="container mt-4">
+      <div className="container mt-4">
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -515,8 +514,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      
 
       {/* 
       
