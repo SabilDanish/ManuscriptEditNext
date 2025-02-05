@@ -72,7 +72,6 @@ export default function Home() {
       <FaqHome />
       <NewsletterSubscribe />
 
-      
 
       {/* <ChristmasBranch/> */}
       {/* <OfferSlider /> */}
@@ -96,7 +95,7 @@ export default function Home() {
 
       {/* <Dropdown2 /> */}
       {/* <PublicationAccordion/> */}
-    
+
     </>
   );
 }
