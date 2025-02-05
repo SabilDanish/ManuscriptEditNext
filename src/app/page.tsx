@@ -21,7 +21,7 @@ import Testimonial from "./_Common/Testimonial/testimonial";
 import Clients from "./_Common/Clients/Clients";
 import OurProfessional from "./_Common/_OurProfessional/OurProfessional";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ourClientBanner from "./utils/images/Logos.jpg";
 import TrustedPartner from "./_Common/_TrustedPartner/TrustedPartner";
 import GetHelpMobile from "./_Common/_getHelpMobile/getHelpMobile";
@@ -52,6 +52,8 @@ export default function Home() {
   SwiperCore.use([Autoplay]);
   const { loading, error, blogs } = useBlogs();
 
+
+
   return (
     <>
       <ToastContainer />
@@ -70,7 +72,6 @@ export default function Home() {
       <FaqHome />
       <NewsletterSubscribe />
 
-      
 
       {/* <ChristmasBranch/> */}
       {/* <OfferSlider /> */}
@@ -94,6 +95,7 @@ export default function Home() {
 
       {/* <Dropdown2 /> */}
       {/* <PublicationAccordion/> */}
+
     </>
   );
 }

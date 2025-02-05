@@ -11,6 +11,7 @@ import Metadata from "@/app/Metadata";
 import { DiscountBanner, DiscountMessage } from "./DiscountSection";
 import Dropdown2 from "../Dropdown2/Dropdown2.jsx";
 import FaqHome from "@/app/_Common/FaqHome/FaqHome";
+import { useEffect, useState } from "react";
 import PricingTable from "./PricingTableCurrency.jsx";
 
 const newData: { [key: string]: { [key: string]: string } } = data;
@@ -21,6 +22,30 @@ export default function Home() {
     .filter((val) => val)
     .join("");
   let metaData = newData[pathName];
+  
+
+  const [currency, setCurrency] = useState("");
+  const LocationBasedPricing = () => {
+    useEffect(() => {
+      fetch("https://www.secure.manuscriptedit.com/api/ip_api.php")
+        .then((response) => response.json())
+        .then((data) => {
+          const countryCode = data[0].countryCode;
+          if (countryCode === "IN") {
+            setCurrency("INR");
+          } else {
+            setCurrency("USD");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching location:", error);
+        });
+    }, []);
+    return currency;
+  };
+  LocationBasedPricing();
+
+
   return (
     <>
       {<Metadata metaData={metaData} />}
@@ -29,7 +54,7 @@ export default function Home() {
         "Publication Package"
       )}
 
-      <div className="container mt-4">
+<div className="container mt-4" style={{display:(currency==="INR")?"none":""}}>
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -94,7 +119,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mt-4">
+      <div className="container mt-4" style={{display:(currency==="INR")?"":"none"}}>
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -159,22 +184,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="pt-60 pb-50">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="section_title text_center mb-50 mt-3">
-                {/* <div className="section_main_title">
-                  <h1>Publication Package Services</h1>
-                </div>
-                <div className="em_bar">
-                  <div className="em_bar_bg"></div>
-                </div> */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       <div className="container-fluid">
         <div className="row">

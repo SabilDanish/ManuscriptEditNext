@@ -8,9 +8,16 @@ import redirect from "@/app/_Common/_functionality/Redirect";
 
 export default function Home() {
   const [wordCount, setWordCount] = useState<string | null>();
+  const [wordCountStatement, setWordCountStatement] = useState<string | null>();
   const { isLoading, error, result, getPriceCalculator } = usePriceCalculator();
 
+  useEffect(()=>{
+    setWordCountStatement('275')
+    getPriceCalculator({ word_count: 275 });
+  },[])
+
   const calculateHandler = () => {
+    setWordCountStatement(wordCount)
     getPriceCalculator({ word_count: wordCount });
   };
 
@@ -46,6 +53,7 @@ export default function Home() {
                 type="textbox"
                 id="wordC"
                 name="wordC"
+                placeholder="275"
                 style={{
                   width: "100%",
                   border: "1px solid #a7a7a7",
@@ -79,6 +87,10 @@ export default function Home() {
           ) : (
             ""
           )}
+
+
+        <h3 style={{color:'black',marginBottom:'2rem'}}>Prices for {wordCountStatement} words is:<br/></h3>
+
 
           <div className="row gy-4">
             {result && result.length
