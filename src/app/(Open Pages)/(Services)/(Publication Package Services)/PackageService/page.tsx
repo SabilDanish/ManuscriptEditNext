@@ -25,6 +25,8 @@ export default function Home() {
   
 
   const [currency, setCurrency] = useState("");
+  const [tablePriceFromDB,setTablePriceFromDB] = useState('');
+
   const LocationBasedPricing = () => {
     useEffect(() => {
       fetch("https://www.secure.manuscriptedit.com/api/ip_api.php")
@@ -44,6 +46,23 @@ export default function Home() {
     return currency;
   };
   LocationBasedPricing();
+
+  const priceFromDatabase = () =>{
+    useEffect(()=>{
+      fetch('https://www.secure.manuscriptedit.com/api/price_table.php')
+      .then((response) => response.json())
+      .then((data) => {
+        setTablePriceFromDB(data)
+        // console.log(response)
+       
+      })  
+    },[])
+    
+  }
+  priceFromDatabase()
+
+
+  console.log(tablePriceFromDB[0])
 
 
   return (
@@ -183,8 +202,6 @@ export default function Home() {
           </table>
         </div>
       </div>
-
-     
 
       <div className="container-fluid">
         <div className="row">

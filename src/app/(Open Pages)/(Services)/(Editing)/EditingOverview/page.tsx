@@ -15,6 +15,8 @@ import "../../../../_Common/getHelp/getHelp.css";
 import Dropdown2 from "@/app/_Common/Dropdown2/Dropdown2";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import { useEffect, useState } from "react";
+import ServicesNavbar1 from "@/app/_Common/ServicesNavbar/ServicesNavbar1";
+import ServicesNavbar2 from "@/app/_Common/ServicesNavbar/ServicesNavbar2";
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
@@ -49,13 +51,15 @@ export default function Home() {
 
   return (
     <>
-      {<Metadata metaData={metaData} />}
+      {/* {<Metadata metaData={metaData} />}
       {breadcrum(
         "Services / English Editing",
         "Editing Overview",
         "manuscript preparation, academic manuscript, English translation, academic translation, academic editing, native English speaking editors, publish in top journals, author services, researcher services, publication support, poster preparation, scientific poster preparation, research poster preparation, journal submission, manuscript submission, research paper, peer review, abstract editing, figure formatting, scientific illustration, scientific animation, video abstracts, journal guidelines, grant application guidelines, grant editing, grant application, grant application editing, thesis editing, dissertation editing, manuscript, research paper, scientific paper, journal rejection, journal acceptance",
         "English, editors, native English, substantive editing, proofreading, formatting, translation, scientific, research, proposals, grant applications, posters"
-      )}
+      )} */}
+      <ServicesNavbar1 />
+      {/* <ServicesNavbar2 /> */}
       <section className="pt-5 pb-5">
         <div className="container mt-4" style={{ marginBottom: "50px",display:(currency==="INR")?"none":""  }}>
           <div className="table-responsive">

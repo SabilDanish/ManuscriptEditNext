@@ -84,7 +84,7 @@ export default function Header() {
                     width: "200px",
                     borderRadius: "6px",
                     border: "none",
-                    color: "#a31e22",
+                    color: "#5161ce",
                     background: "white",
                   }}
                 >
@@ -127,7 +127,7 @@ export default function Header() {
                             <b>Editing &amp; Language Services</b>
                           </Link>
                           <ul className={Style.subList}>
-                          <li>
+                            <li>
                               <Link href={"/ProofReading"}>Proofreading</Link>
                             </li>
 
@@ -135,13 +135,11 @@ export default function Header() {
                               <Link href={"/CopyEdit"}>Copyediting</Link>
                             </li>
 
-
                             <li>
                               <Link href={"/SubEditing"}>
                                 Substantive Editing
                               </Link>
                             </li>
-
 
                             <li>
                               <Link href={"/ExtensiveSubstantiveEditing"}>
@@ -154,18 +152,13 @@ export default function Header() {
                                 Plagiarism check and reduction
                               </Link>
                             </li>
-                           
 
-                            
                             <li>
                               <Link href={"/EditingOverview"}>
                                 A.I Reduction
                               </Link>
                             </li>
-                           
-                            
-                            
-                            
+
                             <li>
                               <Link href={"/TranslationOverview"}>
                                 Translation Services
@@ -182,8 +175,7 @@ export default function Header() {
                             <b>Publication Support</b>
                           </Link>
                           <ul className={Style.subList}>
-
-                          <li>
+                            <li>
                               <Link href={"/JournalSel"}>
                                 Journal Selection
                               </Link>
@@ -222,7 +214,7 @@ export default function Header() {
                                 Publication Package
                               </Link>
                             </li> */}
-                            
+
                             <li>
                               <Link href={"/PosterCreation"}>
                                 Poster Creation &amp; Design
@@ -234,7 +226,6 @@ export default function Header() {
                                 Illustration Services
                               </Link>
                             </li>
-                           
                           </ul>
                         </li>
                       </ul>
@@ -246,8 +237,7 @@ export default function Header() {
                             <b>Scientific / Academic Writing</b>
                           </Link>
                           <ul className={Style.subList}>
-
-                          <li>
+                            <li>
                               <Link href={"/MedicalWrite"}>
                                 Medical Writing Assitance
                               </Link>
@@ -266,7 +256,9 @@ export default function Header() {
                             </li>
 
                             <li>
-                              <Link href={"/MedicalRewrite"}>Rewriting Assitance</Link>
+                              <Link href={"/MedicalRewrite"}>
+                                Rewriting Assitance
+                              </Link>
                             </li>
 
                             {/* <li>
@@ -276,36 +268,37 @@ export default function Header() {
                         </li>
 
                         <li>
-                      <ul>
-                        <li>
-                          <a href="/ResearchSupportOverview">
-                            <b>Research & Statistical Analysis</b>
-                          </a>
-
-                          <ul className={Style.subList}>
-
-
-                          <li>
-                              <Link href={"/StatisticalAnalysis"}>
-                                Statistical Analysis
-                              </Link>
-                            </li>
-
+                          <ul>
                             <li>
-                              <Link href={"/SystematicReview"}>
-                                Systematic Review
-                              </Link>
-                            </li>
+                              <a href="/ResearchSupportOverview">
+                                <b>Research & Statistical Analysis</b>
+                              </a>
 
-                            <li>
-                              <Link href={"/MetaAnalysis"}>Meta Analysis</Link>
-                            </li>
+                              <ul className={Style.subList}>
+                                <li>
+                                  <Link href={"/StatisticalAnalysis"}>
+                                    Statistical Analysis
+                                  </Link>
+                                </li>
 
+                                <li>
+                                  <Link href={"/SystematicReview"}>
+                                    Systematic Review
+                                  </Link>
+                                </li>
 
-                            <li>
-                              <Link href={"/MetaAnalysis"}>Data Analysis</Link>
-                            </li>
-                            {/* <li>
+                                <li>
+                                  <Link href={"/MetaAnalysis"}>
+                                    Meta Analysis
+                                  </Link>
+                                </li>
+
+                                <li>
+                                  <Link href={"/MetaAnalysis"}>
+                                    Data Analysis
+                                  </Link>
+                                </li>
+                                {/* <li>
                               <a
                                 onClick={() => {
                                   redirectSameTab("corporate");
@@ -315,12 +308,10 @@ export default function Header() {
                                 Corporate Services
                               </a>
                             </li> */}
+                              </ul>
+                            </li>
                           </ul>
                         </li>
-                      </ul>
-                    </li>
-
-
                       </ul>
                     </li>
 
@@ -332,9 +323,7 @@ export default function Header() {
                           </a>
 
                           <ul className={Style.subList}>
-
-
-                          {/* <li>
+                            {/* <li>
                               <Link href={"/StatisticalAnalysis"}>
                                 Statistical Analysis
                               </Link>
@@ -381,8 +370,7 @@ export default function Header() {
                                 Research Enhancement Services
                               </Link>
                             </li> */}
-                            
-                           
+
                             <li>
                               <Link href={"/PHDThesis"}>Phd Thesis</Link>
                             </li>
@@ -407,31 +395,30 @@ export default function Header() {
                           </ul>
                         </li>
 
-
                         <li>
-                      <ul>
-                        <li>
-                          <a href="#">
-                            <b>Thesis &amp; Dissertation Services</b>
-                          </a>
+                          <ul>
+                            <li>
+                              <a href="#">
+                                <b>Thesis &amp; Dissertation Services</b>
+                              </a>
 
-                          <ul className={Style.subList}>
-                            <li>
-                              <Link href={"/PHDThesis"}>High-Impact Scientific Editing</Link>
+                              <ul className={Style.subList}>
+                                <li>
+                                  <Link href={"/PHDThesis"}>
+                                    High-Impact Scientific Editing
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={"/MasterThesis"}>
+                                    High-Impact Journal Publication Support
+                                  </Link>
+                                </li>
+                              </ul>
                             </li>
-                            <li>
-                              <Link href={"/MasterThesis"}>High-Impact Journal Publication Support</Link>
-                            </li>
-                           
                           </ul>
                         </li>
                       </ul>
                     </li>
-                      </ul>
-                    </li>
-
-
-                   
                   </ul>
                 </li>
                 <li>

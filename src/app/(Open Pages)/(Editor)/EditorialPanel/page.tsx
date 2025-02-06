@@ -6,7 +6,7 @@ import useFetchEditors from "@/app/hooks/editor/useEditorProfile";
 import { DNA } from "react-loader-spinner";
 import { Editor } from "@/app/utils/interfaces";
 import EditorModal from "@/app/_Common/_Modals/EditorModal/EditorModal";
-import defaultImage from '../../../utils/testi/2.jpg'
+import defaultImage from "../../../utils/testi/2.jpg";
 
 export default function Home() {
   const [limit, setLimit] = useState(20);
@@ -39,9 +39,9 @@ export default function Home() {
     setShowModal(true);
   };
 
-
-  const handleError = (e:any) => {
-    e.target.src = 'https://gravatar.com/avatar/0cb77b3b53fdfa2cbaa9e2ae3a9fe042?s=400&d=mp&r=x';
+  const handleError = (e: any) => {
+    e.target.src =
+      "https://gravatar.com/avatar/0cb77b3b53fdfa2cbaa9e2ae3a9fe042?s=400&d=mp&r=x";
   };
   return (
     <>
@@ -69,7 +69,7 @@ export default function Home() {
               style={{
                 padding: "0px",
                 cursor: "pointer",
-                backgroundColor: type === "nonmed" ? "#a31e22" : "#ddc587",
+                backgroundColor: type === "nonmed" ? "#5161ce" : "#ddc587",
               }}
               onClick={() => {
                 setAllEditor([]);
@@ -83,7 +83,7 @@ export default function Home() {
               style={{
                 padding: "0px",
                 cursor: "pointer",
-                backgroundColor: type === "med" ? "#a31e22" : "#ddc587",
+                backgroundColor: type === "med" ? "#5161ce" : "#ddc587",
               }}
               onClick={() => {
                 setAllEditor([]);
@@ -104,48 +104,48 @@ export default function Home() {
             }}
           >
             <div id="ediIcon" className="row" style={{ margin: "20px 0px" }}>
-              {allEditor &&
-                allEditor.length ?
-                allEditor.map((editor) => {
-                  const { ediImg, ediName, id } = editor;
-                  return (
-                    <div
-                      className="col-lg-2 col-md-4 col-sm-4 col-xs-4 "
-                      style={{ border: "0 solid #022039" }}
-                      key={id}
-                    >
-                      <div className="divSeperate" style={{ padding: "5px" }}>
-                        <div style={{ textAlign: "center" }}>
-                          <img
-                            src={ediImg}
-                            className="img-fluid"
-                            style={{
-                              borderRadius: "18%",
-                              width: "100px",
-                              height: "100px",
-                            }}
-                            alt="Doctor"
-                            onError={handleError}
-                          />
-                        </div>
-                        <div className="titl">
-                          <div className="name">{ediName}</div>
-                          <div
-                            style={{ textAlign: "center" }}
-                            className="detail"
-                          >
-                            <button
-                              className={`btn ${id}`}
-                              onClick={(e) => modalHandler(e)}
+              {allEditor && allEditor.length
+                ? allEditor.map((editor) => {
+                    const { ediImg, ediName, id } = editor;
+                    return (
+                      <div
+                        className="col-lg-2 col-md-4 col-sm-4 col-xs-4 "
+                        style={{ border: "0 solid #022039" }}
+                        key={id}
+                      >
+                        <div className="divSeperate" style={{ padding: "5px" }}>
+                          <div style={{ textAlign: "center" }}>
+                            <img
+                              src={ediImg}
+                              className="img-fluid"
+                              style={{
+                                borderRadius: "18%",
+                                width: "100px",
+                                height: "100px",
+                              }}
+                              alt="Doctor"
+                              onError={handleError}
+                            />
+                          </div>
+                          <div className="titl">
+                            <div className="name">{ediName}</div>
+                            <div
+                              style={{ textAlign: "center" }}
+                              className="detail"
                             >
-                              View Details
-                            </button>
+                              <button
+                                className={`btn ${id}`}
+                                onClick={(e) => modalHandler(e)}
+                              >
+                                View Details
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                }) : ""}
+                    );
+                  })
+                : ""}
             </div>
           </div>
         </div>
