@@ -217,7 +217,7 @@ export default function footer() {
                   style={{ textAlign: "center" }}
                 >
                   <img
-                    src="/images/reseapro.png"
+                    src="/images/New_Reseapro_Scientific_Final-removebg-preview.png"
                     alt="#"
                     style={{ width: "80%" }}
                   />
