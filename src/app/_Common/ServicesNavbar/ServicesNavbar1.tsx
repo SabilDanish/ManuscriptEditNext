@@ -83,37 +83,43 @@ const ServicesNavbar1: React.FC = () => {
           <li className="nav-item active">
             <a className="nav-link" href="javascript:void(0);">
               {/* <i className="fas fa-tachometer-alt"></i> */}
-              Editing & Language Services
+              Proofreading
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="javascript:void(0);">
               {/* <i className="far fa-address-book"></i> */}
-              Publication Support
+              Copyediting
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="javascript:void(0);">
               {/* <i className="far fa-clone"></i> */}
-              Scientific / Academic Writing
+              Substantive Editing
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="javascript:void(0);">
               {/* <i className="far fa-calendar-alt"></i> */}
-              Research & Statistical Analysis
+              Extensive Substantive Editing
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="javascript:void(0);">
               {/* <i className="far fa-chart-bar"></i> */}
-              Thesis & Dissertation Services
+              Plagiarism check and reduction
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="javascript:void(0);">
               {/* <i className="far fa-copy"></i> */}
-              Documents
+              A.I Reduction
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="javascript:void(0);">
+              {/* <i className="far fa-copy"></i> */}
+              Translation Services
             </a>
           </li>
         </ul>
