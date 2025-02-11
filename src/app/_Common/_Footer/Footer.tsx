@@ -514,7 +514,7 @@ export default function footer() {
             <div className="col-lg-8 col-md-8">
               <div className="footer-bottom-right">
                 <div className="footer-bottom-right-text">
-                  <Link className="absod" href={"/Publishing"}>
+                  <Link className="absod" href={"/RefundAndCancellation"}>
                     Refund & Cancellation
                   </Link>
                   <Link className="absod" href={"/PrivacyPolicy"}>

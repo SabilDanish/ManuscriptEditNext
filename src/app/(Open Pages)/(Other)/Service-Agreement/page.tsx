@@ -10,7 +10,7 @@ const ServiceAgreement = () => {
         RESPECT TO MANUSCRIPT EDITING SERVICE PROVIDED BY RESEAPRO SCIENTIFIC
         SERVICES PRIVATE LIMITED (REFERRED TO IN THIS AGREEMENT AS
         &quot;RESEAPRO&quot;) TO ITS “CLIENT” THROUGH ITS TRADEMARK SERVICE
-        INTERFACE  https://www.manuscriptedit.com.
+        INTERFACE  <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">https://www.manuscriptedit.com</a>.
       </p>
       <h3>Parties</h3>
       <p>
@@ -18,18 +18,18 @@ const ServiceAgreement = () => {
         between RESEAPRO SCIENTIFIC SERVICES PRIVATE LIMITED
         (&quot;Reseapro&quot;), the Company incorporated under the Indian
         Companies Act 1956, with its trademark service on manuscript editing
-        carried out through  https://www.manuscriptedit.com, and existing under
+        carried out through  <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">https://www.manuscriptedit.com</a>, and existing under
         the laws of INDIA, with its head office located at: DCB-401, 4th Floor,
         DLF Cyber City, Chandaka Industrial Estate, Patia, Bhubaneswar-751024,
         Odisha, INDIA, AND Any party, individual or group who will avail the
         Services of Reseapro through its online service interface
-         https://www.manuscriptedit.com, deemed hereinafter to be its
+         <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">https://www.manuscriptedit.com</a>, deemed hereinafter to be its
         &quot;Client&quot;.
       </p>
       <p>
         The specific purpose of this agreement is to set forth the rights and
         obligations of the Clients with respect to its use of services of
-        Reseapro using the service interface  https://www.manuscriptedit.com. By
+        Reseapro using the service interface  <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">https://www.manuscriptedit.com</a>. By
         Clicking &quot;Accept&quot;, &quot;Finish&quot;, &quot;Continue&quot; or
         a similar Acknowledgement with respect to using the Services of
         Reseapro, the &quot;Client&quot; accepts all the terms and conditions of
@@ -40,7 +40,7 @@ const ServiceAgreement = () => {
       <h3>Definitions</h3>
       <p>
         For the purpose of this Agreement, Reseapro Scientific Services Private
-        Limited and its service interface  https://www.manuscriptedit.com  will
+        Limited and its service interface  <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">https://www.manuscriptedit.com</a>  will
         be referred to herein after as &quot;Reseapro&quot;. For the purpose of
         this Agreement, any party, individuals, authors, company, or group who
         avails the services of Reseapro will be deemed hereinafter as
@@ -143,8 +143,9 @@ const ServiceAgreement = () => {
       include writing review articles/literature reviews, research proposals,
       and articles for publication from scratch or from a rough draft/outline
       and/or based on the study data and guidelines provided by the client into
-      a well-structured document of the desired style. Creation of Promotional
-      and Sales Materials For the purpose of this agreement, &quot;Creation of
+      a well-structured document of the desired style. 
+      <h3>Creation of Promotional
+      and Sales Materials </h3>For the purpose of this agreement, &quot;Creation of
       Promotional and Sales materials&quot; will include writing and/or
       designing and developing any of the following: Newsletters, Press releases
       and publications, Patient information leaflets, Product monographs,
@@ -159,8 +160,8 @@ const ServiceAgreement = () => {
       <h3>Service</h3>
       For purposes of this agreement, it is understood that any product(s),
       information, or other services that are offered through the website
-      https://www.manuscriptedit.com shall from now on be known as (the
-      &quot;Service&quot;). The parties to this Agreement acknowledge and agree
+      <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">https://www.manuscriptedit.com</a> shall from now on be known as (the
+      &quot;Service&quot;). <br/><br/>The parties to this Agreement acknowledge and agree
       that: a. The Client wishes to have its document/manuscript checked for
       correct English usage and grammar, and get it scientifically edited that
       includes any or all of the following: Copy-editing, substantive editing,
@@ -175,14 +176,14 @@ const ServiceAgreement = () => {
       response to reviewers, poster creation, editorial support to journal
       publishers, and that Reseapro has agreed to provide the editing service
       and the Client agrees to pay Reseapro for the service rendered by Reseapro
-      through its service interface   https://www.manuscriptedit.com. The
+      through its service interface   <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">https://www.manuscriptedit.com</a>.<br/><br/> The
       “Client” will submit its document/manuscript to Reseapro by uploading via
-      the online service interface   https://www.manuscriptedit.com. of Reseapro
+      the online service interface   <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">https://www.manuscriptedit.com</a>. of Reseapro
       with a request for the service, after it logs in to the Client&#39;s
-      interface. Reseapro will forward/send the document/manuscript to an
+      interface.<br/><br/> Reseapro will forward/send the document/manuscript to an
       empanelled expert professional manuscript editor who is skilled and
       proficient at editing manuscripts and has the most relevant scientific
-      background to the submitted document for the editing work. The Client
+      background to the submitted document for the editing work.<br/><br/> The Client
       understands that Editing Services consist of any or all of the following:
       Copy-editing, substantive editing, English proofreading, checking the
       manuscript&#39;s English language for spelling, grammar and punctuation,
@@ -193,15 +194,15 @@ const ServiceAgreement = () => {
       formatting, full translation from different languages to English and
       scientific editing, editing research proposals, journal selection, journal
       submission, writing response to reviewers, poster creation, editorial
-      support to journal publishers. Reseapro will use reasonable efforts to
+      support to journal publishers.<br/><br/> Reseapro will use reasonable efforts to
       ensure that the edited manuscript is returned to Client within the chosen
       “turnaround time” which means the time period within which the Client
       wants/requires Reseapro to complete the Editing work and send it back to
-      it. Client agrees to pay Reseapro the cost of editing computed on the
-      basis of the total number of words of the submitted manuscript. For our
+      it.<br/><br/> Client agrees to pay Reseapro the cost of editing computed on the
+      basis of the total number of words of the submitted manuscript.<br/><br/> For our
       editing services, while revisions and/or corrections may affect the length
       of the document/material/text submitted, all service fees will be based on
-      the total number of words in the originally submitted document. Based on
+      the total number of words in the originally submitted document.<br/><br/> Based on
       the number of pages, type of service, and chosen turnaround time, an
       invoice will be generated and available for the Client to download. The
       Client will make the payment to Reseapro through Credit card or by direct
@@ -209,19 +210,19 @@ const ServiceAgreement = () => {
       PayPal or CC Avenue. PayPal or CC Avenue will act as an intermediate
       gateway to provide security of payment by the Client. On successful
       completion of payment by the Client, Reseapro will initiate and perform
-      the services based on the confirmation alert from PayPal or CC Avenue. It
+      the services based on the confirmation alert from PayPal or CC Avenue. <br/><br/>It
       is understood and agreed that the Service is provided on an as-is and
       as-available basis. Reseapro reserves the right to modify, suspend, or
       discontinue the Service with or without notice at any time. However, such
       discontinuance of service will not be applicable for a specific ongoing
       Order from the client and will be effective after completion and delivery
-      of the service. It is agreed that editing is a subjective service aimed at
+      of the service.<br/><br/> It is agreed that editing is a subjective service aimed at
       improving the submitted manuscript. Reseapro&#39;s sole function is to
       edit the manuscript submitted by the Client and return it to the Client
       within the chosen turnaround time. In this light, the Editors of Reseapro
       will make their best efforts to advise and suggest changes to improve the
       manuscript. The decision to accept or reject the editor&#39;s suggestions
-      is solely the Client’s. It is agreed that the service of Reseapro is not a
+      is solely the Client’s.<br/><br/> It is agreed that the service of Reseapro is not a
       Single-step service where any quality of document submitted by the client
       will be converted to a perfected manuscript just after the first edit. If
       there is some unclear text, unclear interpretation/intention (which the
@@ -238,32 +239,60 @@ const ServiceAgreement = () => {
       within these deadlines might lead to the unavailability of the concerned
       editor or writer at Reseapro and jeopardize optimum use of Reseapro’s time
       and resources. Therefore, it is agreed that in the eventuality of any such
-      delay on the part of the Client, Reseapro will charge an additional amount
-      according to the following slabs:  25% on the total invoice if the client
-      responds between 16 and 30 days after delivery.  50% of the total invoice
-      if the client responds between 31 and 45 days after delivery.  The full
-      invoiced amount if the client responds after 45 days of delivery. In such
-      cases, the order will be treated as a fresh order.
+      delay on the part of the Client,
+      
+      <ul style={{marginLeft:"13px !important"}}>
+      Reseapro will charge an additional amount
+      according to the following slabs:
+        <li> 25% on the total invoice if the client
+        responds between 16 and 30 days after delivery.</li>
+        <li>50% of the total invoice
+        if the client responds between 31 and 45 days after delivery.</li>
+        <li>The full
+        invoiced amount if the client responds after 45 days of delivery.</li>
+        <li>In such
+        cases, the order will be treated as a fresh order.</li>
+      </ul>
+        
       <h3>Milestone Part Payment Delay Penalty</h3>
       Late Payment Fees: Clients who fail to make scheduled part payments as per
       the mutually agreed milestone payment schedule will incur late payment
-      fees as follows:  1-7 Days Late: 10% of the total quotation amount  8-15
-      Days Late: 15% of the total quotation amount  16-30 Days Late: 25%-30% of
-      the total quotation amount  Over 30 Days Late: The order will be
+      fees as follows: 
+      <ul>
+        <li> 1-7 Days Late: 10% of the total quotation amount  8-15
+        Days Late: 15% of the total quotation amount</li>
+        <li>16-30 Days Late: 25%-30% of
+        the total quotation amount</li>
+        <li>Over 30 Days Late: The order will be
       considered closed, and any outstanding balance will be immediately due.
-      The client may be subject to additional collection actions. It is agreed
+      The client may be subject to additional collection actions. </li>
+
+      It is agreed
       that in the case of Reseapro’s packaged services, the Client needs to
       adhere to the following deadlines for feedback on each milestone of the
-      package (as applicable):  Editing: Within seven days from the date of
-      delivery by Reseapro.  Journal selection: Within two days from the date
-      of delivery by Reseapro.  Formatting: Within three days from the date of
-      delivery by Reseapro.  Figure preparation: Within two days from the date
-      of delivery by Reseapro.  Journal submission: Within two days from the
-      date of delivery by Reseapro.  Response to reviewer(s): Within two days
-      from the date of delivery by Reseapro. Any delay by the client in
+      package (as applicable):
+
+        <li>Editing: Within seven days from the date of
+        delivery by Reseapro.</li>
+        <li>Journal selection: Within two days from the date
+        of delivery by Reseapro.</li>
+        <li>Formatting: Within three days from the date of
+        delivery by Reseapro.</li>
+        <li>Figure preparation: Within two days from the date
+      of delivery by Reseapro. </li>
+
+      <li>Journal submission: Within two days from the
+      date of delivery by Reseapro.</li>
+      <li>Response to reviewer(s): Within two days
+      from the date of delivery by Reseapro. </li>
+
+      Any delay by the client in
       reverting within these deadlines will invoke additional charges of up to a
       maximum of 50% of the Invoice amount. The final amount levied will be at
       the sole discretion of Reseapro on a case-by-case basis.
+      </ul>
+      
+     
       <h3>Interlinked Orders – Non-Refundable and Non-Chargeback Clause</h3>
       For orders classified as Interlinked Orders (where multiple orders
       contribute to a single cohesive project such as sequential manuscripts,
@@ -285,7 +314,7 @@ const ServiceAgreement = () => {
       Reseapro delivering the document. Reseapro will review the cause of
       dissatisfaction. If Reseapro agrees that the quality of the Services is
       deficient, Reseapro will arrange to have the Work re-done again at no
-      additional cost to Client. Without limiting the generality of the
+      additional cost to Client. <br/><br/>Without limiting the generality of the
       foregoing, Client acknowledge and agree that except the obvious mistakes
       and logical flows of sentences where the Editors will input suggestions
       and corrections, Reseapro does not: (i) review the substance of content in
@@ -293,17 +322,17 @@ const ServiceAgreement = () => {
       quality, accuracy or results of the services based on the content
       submitted by the client. No claim or refund shall be entertained for any
       subscribed or purchased services on the Manuscriptedit platform or its
-      bouquet of services. There are no guarantees in the highly competitive
+      bouquet of services. <br/><br/>There are no guarantees in the highly competitive
       field of publishing. In large part the acceptance of a manuscript for
       publication is the subjective decision of a publisher and its editors.
       This decision is subject to the quality and novelty of the content
       provided by the client and whims of taste and perceived marketability of
       the manuscript. Reseapro, while working to aid the Client in preparing the
       best manuscript possible given the submitted material, has no way of
-      judging the market or the whims and caprices of the publishing industry.
+      judging the market or the whims and caprices of the publishing industry.<br/><br/>
       Under &quot;Publication Support Services&quot; offered by Reseapro
       Scientific services and through its online service interface
-       https://www.manuscriptedit.com, the mention of &quot;Unlimited
+       <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">https://www.manuscriptedit.com</a>, the mention of &quot;Unlimited
       Assistance&quot; is limited to a maximum period of one year from the date
       of order confirmation. On expiry of that maximum time period of one year,
       the &quot;Publication Support Service&quot; for that particular order will
@@ -311,7 +340,7 @@ const ServiceAgreement = () => {
       grounds of lack of novelty or originality of a paper will also result in a
       closure of that order. In either case, no further liability will accrue on
       the part of Reseapro Scientific services or its online service interface
-       https://www.manuscriptedit.com. After submitting the article to a target
+       <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">https://www.manuscriptedit.com</a>.<br/><br/> After submitting the article to a target
       journal, it becomes the client&#39;s responsibility to address the
       reviewer comments. Reseapro&#39;s role is limited to refining the
       responses and preparing the response letter. If the client chooses not to
@@ -360,39 +389,39 @@ const ServiceAgreement = () => {
       harassment, including calls from multiple numbers or repeated unwarranted
       communication, will result in the suspension of services and may lead to
       termination of the Agreement. In such cases, no refunds will be issued,
-      and the client will bear all associated costs. Reseapro and its editors
+      and the client will bear all associated costs.<br/><br/> Reseapro and its editors
       will use reasonable efforts to maintain the confidentiality of any
-      material supplied by Client to Reseapro. Because Reseapro editors use
+      material supplied by Client to Reseapro.<br/><br/> Because Reseapro editors use
       Microsoft Word to make all editing suggestions, Client must have access to
       Microsoft Word 2003 or higher and understand how to use it to
-      accept/reject and make suggested modifications during editing process.
+      accept/reject and make suggested modifications during editing process.<br/><br/>
       Client understands that while Reseapro will edit the manuscript, Reseapro
       shall not have final editorial control over it. The Client is free to
       accept or reject editorial changes and suggestions made by Reseapro before
-      submitting to journals for publication. Client agrees not to use the
+      submitting to journals for publication.<br/><br/> Client agrees not to use the
       Services for, and the Documents will not contain, any infringing, illegal,
       sexually explicit, threatening, abusive, harassing, defamatory, or
       racially, ethnically, or otherwise objectionable material, including,
       without limitation, any materials that could give rise to any liability to
       Reseapro or which might adversely affect the public image, reputation or
-      goodwill of Reseapro. Manuscriptedit.com the trademark service interface
+      goodwill of Reseapro. <br/><br/>Manuscriptedit.com the trademark service interface
       of Reseapro Scientific Services (P) Ltd. shall not be held liable for any
       plagiarism, illegal doings, or fraudulent material submitted to us by the
-      Client. Manuscriptedit.com the online service interface of Reseapro
+      Client. <br/><br/>Manuscriptedit.com the online service interface of Reseapro
       Scientific Services (P) Ltd. reserves the right to refuse materials
       submitted for editing or writing assignments. Documents containing
       unethical and/or illegal material may lead to the loss of the right to
-      confidentiality. While Manuscriptedit.com, the trademark service interface
+      confidentiality. <br/><br/>While Manuscriptedit.com, the trademark service interface
       of Reseapro Scientific Services (P) Ltd. takes all necessary precautions
       to safeguard all submitted documents, it shall not be held liable for the
       loss of documents due to power failure, hardware/software failure,
       computer viruses, natural disasters, or any other unforeseen matters and
-      factors beyond our control. Reseapro shall not be held liable for delay in
+      factors beyond our control. <br/><br/>Reseapro shall not be held liable for delay in
       services in the unforeseen act of god like natural disasters including
       flood, cyclone, hurricane, pandemic or any other such extraordinary act of
       nature that are beyond the control of Reseapro. Any dispute arising for
       any discounted services will be settled amicably. No refund of fee is
-      applicable for any discounted services.
+      applicable for any discounted services.<br/>
       <h3>Mandatory Discussion of Services</h3>
       Both parties hereby agree to engage in a mandatory discussion regarding
       all free services offered at the time of order confirmation. This
@@ -402,7 +431,7 @@ const ServiceAgreement = () => {
       The client acknowledges that they have been provided with a detailed list
       or menu of all free services associated with their chosen editing package.
       The client confirms their understanding of the specific services included
-      in their selected package. Written Confirmation of Agreed Services This
+      in their selected package. <br/><h3>Written Confirmation of Agreed Services</h3> This
       agreement shall include a provision for the written confirmation of the
       discussed services. Such confirmation may be executed through the signing
       of this contract or a formal email following the order confirmation. This
@@ -410,13 +439,19 @@ const ServiceAgreement = () => {
       agreement on the provided services, thereby preventing future disputes.
       <h3>Eligibility Criteria for Free Services</h3>
       The provision of free services as outlined in this policy shall be
-      applicable to orders meeting the following criteria:  The order value
-      must be equal to or greater than USD 250.  The word count of the
-      manuscript must exceed 6000 words.
+      applicable to orders meeting the following criteria: 
+      
+      <ul>
+        <li>The order value
+        must be equal to or greater than USD 250.</li>
+      <li>The word count of the
+      manuscript must exceed 6000 words.</li>
+      </ul>
+       
       <br/><strong>Discretion of Management:</strong> The eligibility for free
       services is subject to the discretion of the management. The management
       reserves the right to determine whether an order meets the eligibility
-      criteria based on its own assessment. Confirmation of Eligibility: Prior
+      criteria based on its own assessment. <br /> <strong>Confirmation of Eligibility:</strong>Prior
       to order placement, clients seeking to avail themselves of the free
       services must receive written confirmation through email from the
       management confirming their eligibility. This confirmation will serve as
@@ -426,21 +461,21 @@ const ServiceAgreement = () => {
       This policy is not applicable to orders or services that involve an
       upgrade from an existing service package. Free services are specifically
       offered in conjunction with initial orders meeting the eligibility
-      criteria outlined above. Contingency Based on Manuscript Analysis: The
+      criteria outlined above. <br/><strong>Contingency Based on Manuscript Analysis:</strong> The
       provision of free services is contingent upon an initial analysis of the
       manuscript and an assessment of the complexity encountered during the
-      editing process. Adjustment of Services Based on Complexity: In the event
+      editing process. <br/><strong>Adjustment of Services Based on Complexity:</strong> In the event
       that the manuscript requires more extensive work than initially assessed,
       the parties acknowledge that certain free services may no longer be
       applicable, or additional charges may be necessary.
       <br/><strong>Transparency and Rationale in Complexity Assessment:</strong> The
       client will be provided with a clear and transparent rationale should
       there be any necessity to alter the agreed-upon services based on the
-      complexity of the manuscript. Finalization of Agreed Services: The parties
+      complexity of the manuscript. <br/><strong>Finalization of Agreed Services: </strong>The parties
       agree that the services confirmed during the order confirmation process
       are final and binding. Any deviation or alteration from the confirmed
-      services will be treated as a new agreement. Additional Service
-      Requests: Any services requested by the client subsequent to the order
+      services will be treated as a new agreement. <br/><strong>Additional Service
+      Requests:</strong> Any services requested by the client subsequent to the order
       confirmation, including but not limited to journal selection services or
       additional formatting, shall be considered as extra services and subject
       to additional charges.
@@ -452,7 +487,7 @@ const ServiceAgreement = () => {
       client agrees to provide all necessary data, feedback, and communication
       in a timely manner to facilitate the successful completion of the order.
       Timely communication is essential for maintaining the workflow and meeting
-      project deadlines. Consequences of Prolonged Unresponsiveness: In the
+      project deadlines. <br/><strong>Consequences of Prolonged Unresponsiveness:</strong> In the
       event the client becomes unresponsive for a period exceeding four (4)
       months, without any communication either through call or email, the order
       will be considered as suspended. The client acknowledges that prolonged
@@ -462,8 +497,8 @@ const ServiceAgreement = () => {
       suspended order due to client unresponsiveness, a reinitiation fee of 250
       USD per order will be applicable. This fee is imposed to cover the
       administrative and operational costs incurred due to the disruption and
-      delay caused by the extended period of unresponsiveness. Payment of
-      Reinitiation Fee: The reinitiation fee must be paid in full before any
+      delay caused by the extended period of unresponsiveness. <br/><strong>Payment of
+      Reinitiation Fee:</strong> The reinitiation fee must be paid in full before any
       further work on the suspended order can commence. This fee is in addition
       to any previously agreed-upon charges and is non-negotiable.
       <br/><strong>Procedure for Reinitiating Services:</strong> Upon payment of the
@@ -473,36 +508,41 @@ const ServiceAgreement = () => {
       due to the elapsed time.
       <br/><strong>Communication of Reinitiation Terms:</strong> These terms will be
       communicated to the client at the time of order confirmation and will be
-      included in the written confirmation of agreed services. 1. Client will be
+      included in the written confirmation of agreed services. 
+      
+      <br/>
+      
+      
+      1. Client will be
       responsible for making back-up and archival copies of its documents. In no
       event will Reseapro be responsible to the Client or any other person for
-      any loss, corruption or alteration of documents. 2. The right to privacy
+      any loss, corruption or alteration of documents.<br/> 2. The right to privacy
       and confidentiality of the Client and the manuscript submitted to Reseapro
       shall always be respected. Reseapro and its employees make no claims on
       any work submitted to us for editing. Any documents
       (&quot;manuscript&quot;) submitted by the Client will remain the
       intellectual property of the Client. Editors have signed a service and
       confidentiality agreement to waive their claim to any intellectual
-      property submitted though the Service. 3. Client represents that it has
+      property submitted though the Service.<br/> 3. Client represents that it has
       obtained all necessary third party rights, including, without limitation,
       copyrights, for any Documents or portions thereof that belong to third
       parties. It is the responsibility of Client to determine if it is
       necessary for it to obtain, and for obtaining, any licenses required to
-      use third party content which is part of the Documents. 4. Client
+      use third party content which is part of the Documents. <br/>4. Client
       acknowledges that Reseapro owns all right, title and interest in and to
       the Service (the &quot;Reseapro rights&quot;), and such Reseapro Rights
       are protected by India and international intellectual property laws. The
       Client also agrees that it will not use any robot, spider, other automated
       device, or manual process to monitor or copy any content from the Service.
-      5. Manuscriptedit.com the trademark service interface of Reseapro
+      <br/>5. Manuscriptedit.com the trademark service interface of Reseapro
       Scientific Services (P) Ltd. may, in its sole and absolute discretion,
       immediately terminate service, should the Client&#39;s conduct fail to
-      conform to the terms and conditions of our service. 6. The validity,
+      conform to the terms and conditions of our service.<br/> 6. The validity,
       interpretation, construction, and performance of the Terms and Conditions
       of Service in this Agreement shall be governed and construed in accordance
       with the laws of INDIA and that the Client consents to the exclusive
       jurisdiction of the Courts at Cuttack, Orissa, INDIA for any dispute
-      arising out of this Agreement. 7. In the event of any disputes,
+      arising out of this Agreement. <br/> 7. In the event of any disputes,
       differences or claims whatsoever arising out of this agreement between
       parties, the parties will endeavor to settle them amicably by mutual
       discussion. Failing such amicable settlement, the disputes, differences or
@@ -512,8 +552,8 @@ const ServiceAgreement = () => {
       and the arbitral award shall be final and binding on both the parties. The
       arbitration proceedings will be held before the sole Arbitrator appointed
       by Reseapro. Any arbitration award will be final and binding on the
-      parties. 8. No other guarantees or liabilities that are not contained in
-      this agreement shall be binding upon our company. 9. This website is owned
+      parties. <br/>8. No other guarantees or liabilities that are not contained in
+      this agreement shall be binding upon our company. <br/> 9. This website is owned
       and operated by Reseapro Scientific Services (P) Ltd. and is protected by
       international copyright and trademark laws. You may not modify, copy,
       reproduce, republish, upload, post, transmit, or distribute in any way,
@@ -525,7 +565,7 @@ const ServiceAgreement = () => {
       Reseapro Scientific Services (P) Ltd.&#39;s service. Should the Client
       object to any such terms and conditions or any subsequent modifications
       thereto or become dissatisfied with the site in any way, the client&#39;s
-      sole recourse is to discontinue his/her use of the site. 10. The Terms and
+      sole recourse is to discontinue his/her use of the site. <br/> 10. The Terms and
       Conditions of Service and disclaimers, as well as the site itself, may be
       modified, amended, or updated by Manuscriptedit.com, the trademark service
       interface of Reseapro Scientific Services (P) Ltd. at any time without
@@ -535,7 +575,7 @@ const ServiceAgreement = () => {
       occur on the date that such modified Terms and Conditions are posted on
       this site. The Client&#39;s use of the Services after Reseapro provides it
       with notice of such changes shall be deemed its approval of such changes
-      11. We strive to provide optimal service to our valued clients. In order
+      <br/>11. We strive to provide optimal service to our valued clients. In order
       to ensure a seamless experience, we take certain steps to guarantee the
       availability of a subject expert before finalizing the timeline of an
       order. Once a client expresses their interest in our services and agrees
@@ -549,69 +589,69 @@ const ServiceAgreement = () => {
       the further handling and usage of the data shared by the client. We
       strongly encourage our clients to fulfil their payment obligations
       promptly to ensure the smooth execution of their orders and to safeguard
-      the integrity of their shared data. 12. In the event of a delayed payment
+      the integrity of their shared data. <br/> 12. In the event of a delayed payment
       beyond the designated due date, the client will be subject to
       compensation. For delays up to 5 days, a surcharge of 10% will be added to
       the invoice amount, 20% on delays of 5-10 days, and 35% for delays of
       10-20 days. Once the delay exceeds 20 days, a 100% surcharge will be
-      imposed. 13. Our operational schedule follows a 5-working day week,
+      imposed. <br/> 13. Our operational schedule follows a 5-working day week,
       excluding weekends. We strive to adhere to the specified timelines and
       make every effort to ensure prompt delivery of files. However, if the
       designated delivery date happens to fall on a weekend, the file will be
       delivered on the subsequent working day. Our delivery timeline aligns with
       the US timeline, considering that our team of experts primarily operates
       from the United States, the United Kingdom, Europe, Australia, and New
-      Zealand. 14. Additional charges may apply for requests for deliveries on
-      weekends. 15. When a client upgrades their package, it is essential for
+      Zealand. <br/>14. Additional charges may apply for requests for deliveries on
+      weekends.  <br/>15. When a client upgrades their package, it is essential for
       them to promptly complete the payment within the stipulated time frame.
       Failure to make the full payment for the upgraded service will result in
       the application of a service charge, and the order will be automatically
-      closed after a period of 5 days. 16. In the event that the client chooses
+      closed after a period of 5 days. <br/>16. In the event that the client chooses
       not to proceed with the service following the analysis, the client will be
-      responsible for covering the incurred analysis charges. 17. An
+      responsible for covering the incurred analysis charges. <br/> 17. An
       administrative charge of USD 35 will be applicable in the case of
-      uploading incorrect files or content. 18. A fee of USD 75 will be applied
+      uploading incorrect files or content. <br/> 18. A fee of USD 75 will be applied
       for requests of Native English Editing Certificate made after 1 month from
-      the completion of the service. 19. In the event of non-acknowledgment of
+      the completion of the service. <br/> 19. In the event of non-acknowledgment of
       emails, delayed response or lack of feedback from a client regarding an
       ongoing order for a duration exceeding 15 days, a supplementary charge of
       USD 135 will be applied. A charge of USD 200 will be applicable for a
       period ranging from 30 to 45 days. If the delay persists beyond 45 days,
       the order will be deemed closed, and a charge equivalent to the total
-      order amount may be imposed to re-initiate the order. 20. The generation
+      order amount may be imposed to re-initiate the order. <br/> 20. The generation
       of additional plagiarism reports on multiple occasions will incur a charge
-      of USD 35 per report. 21. The validity period for all publication packages
+      of USD 35 per report. <br/> 21. The validity period for all publication packages
       is 1 year. Extension charges for prolonging the validity are as follows: 2
-      Months*: USD 150; 4 Months*: USD 290; 6 Months*: USD 385 22. The word
+      Months*: USD 150; 4 Months*: USD 290; 6 Months*: USD 385 <br/> 22. The word
       count specified in the service suggestion and order confirmation is an
       approximate figure. Throughout the writing process, if the expert deems it
       necessary to increase the word count in order to align with the
       study&#39;s objectives and include essential information, or if the client
       requests additional content, any associated additional charges will be the
-      responsibility of the client. 23. At Manuscriptedit, we uphold the values
+      responsibility of the client. <br/>23. At Manuscriptedit, we uphold the values
       of mutual respect and professionalism. We place great emphasis on
       maintaining a professional and courteous tone in all our communication
       with clients, and we appreciate the same from them. We do not tolerate the
       use of vulgarity, slang, or any form of offensive language. If a client
       engages in such behavior, we will regrettably have to close the order
-      without further ado. 24. In case of an order being prematurely terminated
+      without further ado. <br/> 24. In case of an order being prematurely terminated
       due to non-compliance with the service protocol, and if the client desires
       to reinstate the service, the client shall bear full financial
       responsibility for the resumption, with an associated cost of USD 285. The
       client is required to submit the payment within a 7-day period from the
       date of the request. Failure to do so will result in the client being
       liable to pay the original order value, without any applicable discounts,
-      thereafter. 25. If the client has availed the Publication package from
+      thereafter. <br/> 25. If the client has availed the Publication package from
       ManuscriptEdit but submits the paper independently without informing
       ManuscriptEdit, the service will be considered closed, and we cannot be
       held responsible for any rejections. It is essential to obtain
-      ManuscriptEdit&#39;s consent before proceeding. 26. Upon receipt of
+      ManuscriptEdit&#39;s consent before proceeding. <br/> 26. Upon receipt of
       payment, it is essential for the client to promptly supply all necessary
       details or data pertaining to the specific assignments within a maximum
       timeframe of 30 days. Failure to comply within this period may result in
       the order being deemed closed. Alternatively, the client may choose to
       resume the order by remitting a minimum fee of USD 285, which is subject
-      to fluctuations in exchange rates and inflation. 27. In the event of an
+      to fluctuations in exchange rates and inflation.  <br/>27. In the event of an
       outstanding payment, it is the client&#39;s responsibility to fulfill the
       outstanding dues within the stipulated timeframe from the date of initial
       payment. Manuscriptedit will not entertain late payment claims resulting
@@ -629,14 +669,21 @@ const ServiceAgreement = () => {
       unsubstantiated and fake complaints, dissatisfaction, or negative content
       about ManuscriptEdit’s services on social media platforms, public forums,
       or review websites without prior written approval or explicit consent from
-      ManuscriptEdit, the following actions shall be initiated:  ManuscriptEdit
+      ManuscriptEdit, the following actions shall be initiated: 
+      
+      <ul>
+        <li>ManuscriptEdit
       reserves the right to file legal proceedings against the Client for
       defamation, reputational damage, and any financial or operational losses
-      incurred as a result of such posts.  All ongoing services for the Client
+      incurred as a result of such posts.</li>
+        <li>All ongoing services for the Client
       shall be terminated immediately, and no refunds or claims shall be
-      entertained.  The Client shall bear full legal and financial
+      entertained.</li>
+      <li>The Client shall bear full legal and financial
       liability for breach of this agreement, as accepted at the time of
-      registration.
+      registration.</li>
+      </ul>
+      
       <h3>Information article on English Language Editing Certificate</h3>
       Most top-tiered prestigious journals originate from the United States,
       United Kingdom, and European countries. To ensure the quality and clarity
@@ -644,14 +691,14 @@ const ServiceAgreement = () => {
       obtain a &quot;English Language Editing Certificate&quot; This certificate
       serves as evidence that the manuscript has been carefully reviewed and
       edited by a native English speaker to ensure accurate language usage,
-      grammar, and overall readability. In cases where the subject expert
+      grammar, and overall readability. <br/><br/>In cases where the subject expert
       responsible for the research and writing of the article is not a native
       English speaker, it is advisable to hire an additional expert who
       possesses native-level proficiency in English. This expert will carefully
       review the manuscript and make necessary edits to meet the journal&#39;s
       language standards. The purpose of this additional review is to certify
       that the language used in the paper is of high quality and can effectively
-      communicate the research findings to the intended audience. We recommend
+      communicate the research findings to the intended audience.<br/><br/> We recommend
       that authors seeking publication in renowned journals from the US, UK, and
       Europe take this requirement into consideration and avail the language
       certification service. This step will significantly contribute to the
@@ -711,15 +758,15 @@ const ServiceAgreement = () => {
       available to Reseapro. This Agreement shall be construed as to its fair
       meaning and not strictly for or against either party. The headings hereof
       are descriptive only and not to be construed in interpreting the
-      provisions hereof. PLEASE READ THIS AGREEMENT CAREFULLY. BY CLICKING
+      provisions hereof. <br/><br/>PLEASE READ THIS AGREEMENT CAREFULLY. BY CLICKING
       &quot;ACCEPT,&quot; &quot;FINISH,&quot; &quot;CONTINUE&quot; OR A SIMILAR
       ACKNOWLEDGMENT IN CONNECTION WITH AVAILING THE EDITING SERVICES
-      OF HTTPS://WWW.MANUSCRIPTEDIT.COM , YOU ACCEPT ALL THE TERMS AND
+      OF <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">HTTPS://WWW.MANUSCRIPTEDIT.COM</a>, YOU ACCEPT ALL THE TERMS AND
       CONDITIONS OF THIS AGREEMENT. YOU AGREE THAT THIS AGREEMENT IS ENFORCEABLE
       LIKE ANY WRITTEN NEGOTIATED AGREEMENT SIGNED BY YOU. IF YOU DO NOT AGREE,
       DO NOT CLICK &quot;ACCEPT,&quot; &quot;FINISH,&quot; &quot;CONTINUE&quot;
       OR A SIMILAR ACKNOWLEDGMENT WITH RESPECT TO USING THE SERVICES
-      OFHTTPS://WWW.MANUSCRIPTEDIT.COM
+      OF <a href='HTTPS://WWW.MANUSCRIPTEDIT.COM' target="_blank">HTTPS://WWW.MANUSCRIPTEDIT.COM</a>
     </div>
   );
 };

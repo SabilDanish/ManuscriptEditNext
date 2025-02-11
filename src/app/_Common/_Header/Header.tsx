@@ -412,7 +412,7 @@ export default function Header() {
                       <ul>
                         <li>
                           <a href="#">
-                            <b>Thesis &amp; Dissertation Services</b>
+                            <b>High-Impact Research &amp; Publication Support</b>
                           </a>
 
                           <ul className={Style.subList}>

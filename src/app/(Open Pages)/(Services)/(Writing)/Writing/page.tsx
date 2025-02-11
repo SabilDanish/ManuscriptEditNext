@@ -51,7 +51,7 @@ export default function Home() {
       {<Metadata metaData={metaData} />}
       {breadcrum("Services / Writing", "Writing Overview")}
 
-      <div
+      {/* <div
         className="container mt-4"
         style={{ display: currency === "INR" ? "none" : "" }}
       >
@@ -137,7 +137,7 @@ export default function Home() {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
 
       <section className="pt-5 pb-5">
         {/* <div className="row conrow">

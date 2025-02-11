@@ -57,7 +57,7 @@ export default function Home() {
         "English, editors, native English, substantive editing, proofreading, formatting, translation, scientific, research, proposals, grant applications, posters"
       )}
       <section className="pt-5 pb-5">
-        <div className="container mt-4" style={{ marginBottom: "50px",display:(currency==="INR")?"none":""  }}>
+        {/* <div className="container mt-4" style={{ marginBottom: "50px",display:(currency==="INR")?"none":""  }}>
           <div className="table-responsive">
             <table className="table table-bordered table-striped">
               <thead className="table-dark">
@@ -173,7 +173,7 @@ export default function Home() {
               </tbody>
             </table>
           </div>
-        </div>
+        </div> */}
 
         <div className="row conrow">
           <div className="col-md-12">
