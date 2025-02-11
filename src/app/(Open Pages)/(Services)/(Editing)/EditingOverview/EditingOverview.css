@@ -1,50 +1,45 @@
-.stt-1{
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    padding: 12px;
-    border-radius: 10px;
-    margin-bottom: 15px;
- }
- .active{
-     background-color: #a31e22;
- }
- .active h4 {
-    color: #fff;
- }
- .active p {
-    color: #fff;
- }
-
-
- @media (min-width: 376px) and (max-width: 768px) {
-   .carousel-item-custom {
-       height: 400px !important;
-   }
- 
+.stt-1 {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.active {
+  background-color: #5161ce;
+}
+.active h4 {
+  color: #fff;
+}
+.active p {
+  color: #fff;
 }
 
+@media (min-width: 376px) and (max-width: 768px) {
+  .carousel-item-custom {
+    height: 400px !important;
+  }
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
-   .carousel-item-custom {
-       height: 400px !important;
-   }
+  .carousel-item-custom {
+    height: 400px !important;
+  }
 }
 
-
 @media (min-width: 992px) and (max-width: 1024px) {
-   .carousel-item-custom {
-       height: 800px !important;
-   }
+  .carousel-item-custom {
+    height: 800px !important;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1357px) {
-   .carousel-item-custom {
-       height: 750px !important;
-   }
+  .carousel-item-custom {
+    height: 750px !important;
+  }
 }
 
 @media (min-width: 1600px) and (max-width: 1880px) {
-   .carousel-item-custom {
-       height: 450px !important;
-   }
+  .carousel-item-custom {
+    height: 450px !important;
+  }
 }
-

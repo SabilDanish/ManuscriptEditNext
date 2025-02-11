@@ -1,0 +1,21 @@
+.navbar2 ul{
+display: flex;
+justify-content: space-evenly;
+background-color: #2d42c6;
+color:white;
+list-style: none;
+padding: 4px;
+}
+
+.navbar2 ul li{
+  /* border: 2px solid #152685; */
+  padding: 10px;
+}
+
+.tabSelected{
+  background-color: white;
+  color:#0f1e80;
+  margin: 5px 0px 5px 0px;
+border-radius: 10px;
+box-shadow: 3px -3px 5px black;
+}
