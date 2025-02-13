@@ -91,7 +91,7 @@
 .nav-link {
   border-radius: 10px 10px 0px 0px !important;
     background: #dbe3ff;
-    box-shadow: 1px 1px 4px grey !important;
+    
     color:black;
 }
 
@@ -237,6 +237,17 @@ color: #0e84c0;
 
 .scrollable-item {
   overflow-y: auto;
+}
+
+
+@media(max-width:768px){
+  .navbar2{
+    display:none;
+  }
+
+  .navbar{
+    display: none !important;
+  }
 }
 
 

@@ -14,6 +14,8 @@ import FaqHome from "@/app/_Common/FaqHome/FaqHome";
 import { useEffect, useState } from "react";
 import PricingTable from "./PricingTableCurrency.jsx";
 
+import { motion } from 'framer-motion';
+
 const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
@@ -22,10 +24,9 @@ export default function Home() {
     .filter((val) => val)
     .join("");
   let metaData = newData[pathName];
-  
 
   const [currency, setCurrency] = useState("");
-  const [tablePriceFromDB,setTablePriceFromDB] = useState('');
+  const [tablePriceFromDB, setTablePriceFromDB] = useState("");
 
   const LocationBasedPricing = () => {
     useEffect(() => {
@@ -47,23 +48,19 @@ export default function Home() {
   };
   LocationBasedPricing();
 
-  const priceFromDatabase = () =>{
-    useEffect(()=>{
-      fetch('https://www.secure.manuscriptedit.com/api/price_table.php')
-      .then((response) => response.json())
-      .then((data) => {
-        setTablePriceFromDB(data)
-        // console.log(response)
-       
-      })  
-    },[])
-    
-  }
-  priceFromDatabase()
+  const priceFromDatabase = () => {
+    useEffect(() => {
+      fetch("https://www.secure.manuscriptedit.com/api/price_table.php")
+        .then((response) => response.json())
+        .then((data) => {
+          setTablePriceFromDB(data);
+          // console.log(response)
+        });
+    }, []);
+  };
+  priceFromDatabase();
 
-
-  console.log(tablePriceFromDB[0])
-
+  console.log(tablePriceFromDB[0]);
 
   return (
     <>
@@ -73,7 +70,7 @@ export default function Home() {
         "Publication Package"
       )}
 
-{/* <div className="container mt-4" style={{display:(currency==="INR")?"none":""}}>
+      {/* <div className="container mt-4" style={{display:(currency==="INR")?"none":""}}>
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -203,7 +200,9 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="container-fluid">
+    
+
+      <div className="container-fluid" style={{ marginTop: "40px" }}>
         <div className="row">
           <div className="col-lg-3 col-md-6">
             <div

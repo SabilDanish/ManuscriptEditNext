@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./ServicesNavbar1.css";
+import { BsJustify } from "react-icons/bs";
 
 const ServicesNavbar1: React.FC = () => {
   useEffect(() => {
@@ -64,6 +65,15 @@ const ServicesNavbar1: React.FC = () => {
     };
   }, []);
 
+
+  const NavbarAlign = {
+    display:"flex !important",
+   justifyContent:"center" ,
+   alignItems:"center"
+
+
+  }
+
   return (
     <nav
       className="navbar navbar-expand-custom navbar-mainbg"
@@ -74,8 +84,8 @@ const ServicesNavbar1: React.FC = () => {
         <i className="fas fa-bars text-white"></i>
 
       </button> */}
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav ml-auto">
+      <div className="collapse navbar-collapse" style={NavbarAlign} id="navbarSupportedContent">
+        <ul className="navbar-nav">
           <div className="hori-selector">
             <div className="left"></div>
             <div className="right"></div>
