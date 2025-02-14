@@ -29,9 +29,9 @@ export default function Home() {
 
   return (
     <>
-      {breadcrum("Services / Research Support", "Research Support Overview")}
+      {/* {breadcrum("Services / Research Support", "Research Support Overview")} */}
 
-      <div
+      {/* <div
         className="container mt-4"
         style={{ display: currency === "INR" ? "none" : "" }}
       >
@@ -105,7 +105,7 @@ export default function Home() {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
 
       <section className="pt-5 pb-5">
         <div className="container">

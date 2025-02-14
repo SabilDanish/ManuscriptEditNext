@@ -32,7 +32,7 @@ export default function Home() {
 
     return (
         <>
-            {breadcrum("More", "Recent Partners")}
+            {/* {breadcrum("More", "Recent Partners")} */}
             <div className="container mb-3">
                 <div className="row" >
                     {

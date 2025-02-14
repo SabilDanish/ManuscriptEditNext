@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       {/* {<Metadata metaData={metaData} />} */}
-      {breadcrum("", "Refund & Cancellation")}
+      {/* {breadcrum("", "Refund & Cancellation")} */}
       <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
         <div
           style={{

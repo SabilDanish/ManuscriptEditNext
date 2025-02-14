@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       {<Metadata metaData={metaData} />}
-      {breadcrum("More", "Contact Us")}
+      {/* {breadcrum("More", "Contact Us")} */}
       <div className="col-lg-10 col-md-10 col-sm-10 pt-5 mx-auto">
         <p className="text-center widfont">
           If you have any queries about our services, submission and payment

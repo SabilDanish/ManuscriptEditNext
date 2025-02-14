@@ -3,7 +3,7 @@ import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 export default function Home() {
   return (
    <>
-   {breadcrum("Submit Manuscript", "Payment Method")}
+   {/* {breadcrum("Submit Manuscript", "Payment Method")} */}
    <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm" style={{margin: 0, padding: 25}}>
          <h4 className="pb-4">BY CREDIT CARDS</h4>

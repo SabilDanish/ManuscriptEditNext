@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       {<Metadata metaData={metaData} />}
-      {breadcrum("Services / English Editing", "Extensive Substantive Editing")}
+      {/* {breadcrum("Services / English Editing", "Extensive Substantive Editing")} */}
 
       <section className="pt-5 pb-5">
         <div className="container">

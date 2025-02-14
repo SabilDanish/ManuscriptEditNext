@@ -68,12 +68,12 @@ export default function Home() {
   return (
     <>
       {<Metadata metaData={metaData} />}
-      {breadcrum(
+      {/* {breadcrum(
         "Services / Publication Package Services",
         "Publication Package"
-      )}
+      )} */}
 
-<div className="container mt-4" style={{display:(currency==="INR")?"none":""}}>
+{/* <div className="container mt-4" style={{display:(currency==="INR")?"none":""}}>
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -201,9 +201,9 @@ export default function Home() {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
 
-      <div className="container-fluid">
+      <div className="container-fluid mt-5">
         <div className="row">
           <div className="col-lg-3 col-md-6">
             <div

@@ -11,7 +11,7 @@ export default function Home() {
   
   return (
     <>
-    {breadcrum("More / Client List", "Client List")}
+    {/* {breadcrum("More / Client List", "Client List")} */}
     <div className="App">
       {loading ? <DNA /> : clientList.length ? <VerticalTab data={clientList}/> : ""}
     </div>

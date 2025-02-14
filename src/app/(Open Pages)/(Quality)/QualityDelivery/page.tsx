@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
     {/* {<Metadata metaData={metaData} />} */}
-      {breadcrum("Quality", "Quality & Delivery")}
+      {/* {breadcrum("Quality", "Quality & Delivery")} */}
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">

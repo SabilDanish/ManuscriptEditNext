@@ -7,7 +7,7 @@ import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 const GlobalPartner = () => {
     return (
       <>
-        {breadcrum("Home / More", "Partner Program")}
+        {/* {breadcrum("Home / More", "Partner Program")} */}
 
         <div className="container containerGlobal">
           <div className="row">

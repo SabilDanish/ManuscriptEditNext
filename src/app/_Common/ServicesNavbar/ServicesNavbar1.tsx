@@ -69,11 +69,6 @@ const ServicesNavbar1: React.FC = () => {
       className="navbar navbar-expand-custom navbar-mainbg"
       style={{ paddingBottom: "0px", paddingTop: "0px" }}
     >
-      {/* <a className="navbar-brand navbar-logo" href="#">Menu 2</a>
-      <button className="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i className="fas fa-bars text-white"></i>
-
-      </button> */}
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
           <div className="hori-selector">
@@ -82,43 +77,36 @@ const ServicesNavbar1: React.FC = () => {
           </div>
           <li className="nav-item active">
             <a className="nav-link" href="javascript:void(0);">
-              {/* <i className="fas fa-tachometer-alt"></i> */}
               Proofreading
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="javascript:void(0);">
-              {/* <i className="far fa-address-book"></i> */}
               Copyediting
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="javascript:void(0);">
-              {/* <i className="far fa-clone"></i> */}
               Substantive Editing
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="javascript:void(0);">
-              {/* <i className="far fa-calendar-alt"></i> */}
               Extensive Substantive Editing
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="javascript:void(0);">
-              {/* <i className="far fa-chart-bar"></i> */}
               Plagiarism check and reduction
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="javascript:void(0);">
-              {/* <i className="far fa-copy"></i> */}
               A.I Reduction
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="javascript:void(0);">
-              {/* <i className="far fa-copy"></i> */}
               Translation Services
             </a>
           </li>

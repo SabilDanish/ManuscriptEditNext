@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
     {/* s */}
-    {breadcrum("More", "About Us")}
+    {/* {breadcrum("More", "About Us")} */}
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">

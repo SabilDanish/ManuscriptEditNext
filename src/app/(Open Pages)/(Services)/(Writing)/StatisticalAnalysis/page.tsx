@@ -14,7 +14,7 @@ import "./Statistical.css";
 export default function Home() {
   return (
     <>
-      {breadcrum("Services / Writing", "Statistical Analysis")}
+      {/* {breadcrum("Services / Writing", "Statistical Analysis")} */}
       <section className="pt-5 pb-5">
         
           {/* <div className="row conrow">

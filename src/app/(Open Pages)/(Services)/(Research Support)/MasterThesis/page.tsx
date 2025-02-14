@@ -3,7 +3,7 @@ import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 export default function Home() {
   return (
     <>
-      {breadcrum("Services / Research Support", "Master Thesis")}
+      {/* {breadcrum("Services / Research Support", "Master Thesis")} */}
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">

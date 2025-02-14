@@ -43,8 +43,7 @@ import Experts from "./_Common/ExpertCard/Experts";
 import PublicationPackages from "./_Common/Publication_package/Publication_package";
 import ServiceList from "./_Common/_ServiceData/ServiceData";
 import ChristmasBranch from "./_Common/Chritmas-Branch/ChristmasBranch";
-import 'bootstrap/dist/css/bootstrap.min.css';  
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // import '../../public/js/vendor/jquery-3.2.1.min.js'
 // import '../../public/js/bootstrap.min.js'
@@ -52,8 +51,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Home() {
   SwiperCore.use([Autoplay]);
   const { loading, error, blogs } = useBlogs();
-
-
 
   return (
     <>
@@ -72,7 +69,6 @@ export default function Home() {
       {blogs && blogs.length ? <BlogMob blogs={blogs} /> : ""}
       <FaqHome />
       <NewsletterSubscribe />
-
 
       {/* <ChristmasBranch/> */}
       {/* <OfferSlider /> */}
@@ -96,7 +92,6 @@ export default function Home() {
 
       {/* <Dropdown2 /> */}
       {/* <PublicationAccordion/> */}
-
     </>
   );
 }

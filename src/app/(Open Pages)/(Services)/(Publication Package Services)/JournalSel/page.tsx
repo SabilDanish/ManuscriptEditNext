@@ -9,10 +9,10 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      {breadcrum(
+      {/* {breadcrum(
         "Services / Publication Package Services",
         "Journal Selection"
-      )}
+      )} */}
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">

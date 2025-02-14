@@ -3,9 +3,9 @@ import './ServicesNavbar2.css'
 
 function ServicesNavbar2() {
   const [navBarActive,setNavBarActive] = useState(false)
-  const handleClick = (e) => {
-    e.prevent.value()
-    setNavBarActive(true)
+  const handleClick = (e: any) => {
+    // e.prevent.value();
+    // setNavBarActive(true)
   }
   return (
     <div className='navbar2'>

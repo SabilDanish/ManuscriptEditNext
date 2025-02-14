@@ -3,7 +3,7 @@ import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 export default function Home() {
   return (
     <>
-    {breadcrum("Editor", "Editorial Panel")}
+    {/* {breadcrum("Editor", "Editorial Panel")} */}
      <div className="col-lg-10 col-md-10 col-sm-10 mt-50 mb-50 mx-auto d-flex1k">
 
 <div className="col-lg-4 col-md-4 col-sm-4 firstdivpanel">
