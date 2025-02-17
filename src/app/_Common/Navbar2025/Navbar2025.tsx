@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 
 function Navbar2025() {
   const [activeTab1, setActiveTab1] = useState("");
+  const [activeTab2, setActiveTab2] = useState(0);
   const [newNavBar2, setNewNavBar2] = useState(false);
   const [newNavBar1, setNewNavBar1] = useState(false);
   const [lastMenu, setLastMenu] = useState(false);
@@ -74,6 +75,8 @@ function Navbar2025() {
       window.removeEventListener("resize", test);
     };
   }, []);
+
+console.log(activeTab2)
 
   return (
     <>
@@ -217,7 +220,12 @@ function Navbar2025() {
           <ul>
             {lastMenu && menu[0]?.subMenu[lastMenuItems]?.subMenu
               ? menu[0].subMenu[lastMenuItems].subMenu.map((item, index) => (
-                  <li key={index}>
+                  <li key={index}
+                  className={setActiveTab2 === index ? '':'tabSelected2'}
+                  onClick={()=>
+                    setActiveTab2(index)
+                  }
+                  >
                     {item?.link ? (
                       <Link href={item.link}>{item.label}</Link>
                     ) : (

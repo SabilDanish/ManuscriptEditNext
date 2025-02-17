@@ -7,8 +7,8 @@
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 50px;
+  justify-content: space-around;
+  padding: 10px 30px;
   background-color: white;
   border-bottom: 2px solid #e0e0e0;
 }
@@ -25,7 +25,7 @@
 
 .nav-menu a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: #333;
   transition: color 0.3s ease-in-out;
@@ -43,7 +43,7 @@
   font-weight: normal;
 }
 
-.navbar2{
+.navbar2 {
   background-color: #2d42c6;
   text-align: center;
 }
@@ -58,8 +58,8 @@
 }
 
 .navbar2 ul li {
-  color:white;
-  padding: 10px;
+  color: white;
+  padding: 5px;
 }
 
 /* .navbar2 ul li:hover {
@@ -70,7 +70,8 @@
 
 .navbar2 ul li a {
   color: white !important ;
-  padding: 10px;
+  padding: 5px;
+  font-size: 14px;
 }
 
 .navbar2 ul li a:hover {
@@ -78,8 +79,7 @@
   text-decoration: none;
 }
 
-
-.navbar3{
+.navbar3 {
   background-color: rgb(22, 17, 160);
   text-align: center;
 }
@@ -94,7 +94,7 @@
 }
 
 .navbar3 ul li {
-  color:white;
+  color: white;
   padding: 10px;
 }
 
@@ -107,6 +107,7 @@
 .navbar3 ul li a {
   color: white !important ;
   padding: 10px;
+  font-size: 14px;
 }
 
 .navbar3 ul li a:hover {
@@ -121,6 +122,7 @@
   margin-right: 10px;
   border-radius: 8px;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .navButtonz:hover {
@@ -131,6 +133,7 @@
   border-radius: 8px;
   border: 2px solid #151130;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .tabSelected {
