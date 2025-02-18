@@ -13,8 +13,11 @@ import Dropdown2 from "../Dropdown2/Dropdown2.jsx";
 import FaqHome from "@/app/_Common/FaqHome/FaqHome";
 import { useEffect, useState } from "react";
 import PricingTable from "./PricingTableCurrency.jsx";
+import "./packageServ.css";
+import ReConstructive from "@/app/_Common/ReConstructive/ReConstructive";
+import NewsletterSubscribe from "@/app/_Common/SubsNewsletter/SubsNewsletter";
 
-import { motion } from 'framer-motion';
+
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
@@ -200,7 +203,10 @@ export default function Home() {
         </div>
       </div> */}
 
-    
+
+      <ReConstructive/>
+
+      
 
       <div className="container-fluid" style={{ marginTop: "40px" }}>
         <div className="row">
@@ -209,11 +215,13 @@ export default function Home() {
               className="pricing_single-box st-grid-price"
               style={{ position: "relative" }}
             >
-              {/* <div className="discount-sticker">35% OFF</div> */}
+              {/* Most Popular Tag */}
+              <div className="most-popular-tag">Most Popular</div>
+
               <div className="pricing-head">
                 <div className="pricing_title">
                   <center>
-                    <h4>Premium Plus Package</h4>
+                    <h4 style={{ marginTop: "40px" }}>Premium Plus Package</h4>
                   </center>
                 </div>
                 <div className="pricing_tk">
@@ -230,7 +238,7 @@ export default function Home() {
               </div>
               <div className="pricing_body">
                 <div
-                  className="featur_itmes "
+                  className="featur_itmes"
                   style={{ paddingLeft: "15px", paddingRight: "15px" }}
                 >
                   <ul>
@@ -253,11 +261,7 @@ export default function Home() {
                 className="pricing_button"
                 style={{ textAlign: "center", cursor: "pointer" }}
               >
-                <a
-                  onClick={() => {
-                    redirect("register");
-                  }}
-                >
+                <a onClick={() => redirect("register")}>
                   Purchase Now <i className="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -265,11 +269,7 @@ export default function Home() {
                 className="pricing_button"
                 style={{ textAlign: "center", cursor: "pointer" }}
               >
-                <a
-                  onClick={() => {
-                    redirect("quotation");
-                  }}
-                >
+                <a onClick={() => redirect("quotation")}>
                   Request a Quote <i className="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -299,7 +299,7 @@ export default function Home() {
               <div className="pricing-head">
                 <div className="pricing_title">
                   <center>
-                    <h4>Premium Package</h4>
+                    <h4 style={{ marginTop: "40px" }}>Premium Package</h4>
                   </center>
                 </div>
                 <div className="pricing_tk">
@@ -385,7 +385,7 @@ export default function Home() {
               <div className="pricing-head">
                 <div className="pricing_title">
                   <center>
-                    <h4>Advanced Package</h4>
+                    <h4 style={{ marginTop: "40px" }}>Advanced Package</h4>
                   </center>
                 </div>
                 <div className="pricing_tk">
@@ -467,7 +467,7 @@ export default function Home() {
               <div className="pricing-head">
                 <div className="pricing_title">
                   <center>
-                    <h4>Standard Package</h4>
+                    <h4 style={{ marginTop: "40px" }}>Standard Package</h4>
                   </center>
                 </div>
                 <div className="pricing_tk">
@@ -725,6 +725,10 @@ export default function Home() {
       {clientFeedback()}
       {/* {FAQ()} */}
       <FaqHome />
+
+<NewsletterSubscribe/>
+
+
     </>
   );
 }

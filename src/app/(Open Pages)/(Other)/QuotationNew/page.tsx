@@ -1,12 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../QuotationNew/quotationNew.css";
 
 export default function ProjectQuote() {
-  const [showInput, setShowInput] = useState(false);
   const [selectedGoal, setSelectedGoal] = useState("");
   const [selectedEditingOption, setSelectedEditingOption] = useState("");
+
+ 
+
+  useEffect(() => {
+    setSelectedEditingOption(""); // Reset editing option when goal changes
+  }, [selectedGoal]);
 
   const goals = [
     { text: "Editing Plans", emoji: "✍️" },
@@ -21,30 +26,25 @@ export default function ProjectQuote() {
     {
       text: "Proofreading",
       description:
-        "Essential Manuscript Editing is ideal for clients who want basic language checks to correct errors in spelling, grammar, and terminology.",
+        "Basic language checks for spelling, grammar, and terminology.",
     },
     {
       text: "Substantive Editing",
-      description:
-        "Advanced Structural Editing is suitable for clients needing improvements in logic, flow, and clarity along with basic editing.",
+      description: "Improves logic, flow, and clarity.",
     },
     {
       text: "Extensive Substantive Editing",
-      description:
-        "Premium Journal-Ready Editing is perfect for clients aiming for journal submission with tailored formatting and support for reviewer responses.",
+      description: "Journal-ready editing with tailored formatting.",
     },
     {
       text: "Scientific Impact Editing",
-      description:
-        "Scientific Impact Editing is designed for high-impact publications requiring comprehensive scientific reviews, re-editing support, and adherence to strict journal standards.",
+      description: "High-impact publications requiring scientific reviews.",
     },
     {
       text: "Thesis Editing",
-      description:
-        "Our Thesis Editing service provides comprehensive editing for academic theses and dissertations, ensuring clarity, coherence, and adherence to university formatting guidelines, while maintaining the academic integrity of your research.",
+      description: "Comprehensive editing for academic theses.",
     },
   ];
-
 
   const writingSupportOptions = [
     {
@@ -73,35 +73,119 @@ export default function ProjectQuote() {
         "Customized Writing Service is the best choice for large or complex manuscripts needing highly specialized support from initial drafting to final polishing.",
     },
   ];
-  
 
+  // 🔹 Object Mapping for Add-On Options (Avoids multiple `if` conditions)
+  const addOnOptions: any = {
+    Proofreading: [
+      {
+        text: "Basic Formatting Service",
+        description: "Apply standard formatting to meet guidelines.",
+      },
+      {
+        text: "Proofreading",
+        description: "Catch any remaining errors and typos.",
+      },
+    ],
+    "Substantive Editing": [
+      {
+        text: "Presentation Logic Enhancement",
+        description: "Improve logical flow and clarity.",
+      },
+      {
+        text: "Extended Word Count Reduction",
+        description: "Reduce word count while keeping key details.",
+      },
+    ],
+    "Extensive Substantive Editing": [
+      {
+        text: "Reviewer Response Management",
+        description: "Assist in drafting responses to reviewers.",
+      },
+      {
+        text: "Journal Submission Package",
+        description: "Includes journal selection and cover letter preparation.",
+      },
+    ],
+    "Scientific Impact Editing": [
+      {
+        text: "Journal Resubmission Support",
+        description: "Help with resubmission to different journals.",
+      },
+      {
+        text: "Scientific Data Review",
+        description: "Ensure scientific accuracy through validation.",
+      },
+    ],
+    "Thesis Editing": [
+      {
+        text: "Formatting and Citation Compliance",
+        description: "Ensure thesis meets university requirements.",
+      },
+      {
+        text: "Plagiarism Check",
+        description: "Detect plagiarism and provide a detailed report.",
+      },
+      {
+        text: "Figures, Tables Formatting",
+        description: "Format figures and tables to meet guidelines.",
+      },
+      {
+        text: "Extended Word Count Management",
+        description: "Adjust word count per university requirements.",
+      },
+    ],
+  };
 
-  const editingaddOnOptionsProof = [
-    {
-      text: "Basic Formatting Service",
-      description:
-        "Apply standard formatting to meet general manuscript guidelines.",
-    },
-    {
-      text: "Proofreading",
-      description:
-        "Detailed proofreading to catch any remaining errors and typos.",
-    },
-  ];
-
-  const editingaddOnOptionsSubs = [
-    {
-      text: "Presentation Logic Enhancement",
-      description:
-        "Improve the logical flow and presentation of content for better clarity.",
-    },
-    {
-      text: "Extended Word Count Reduction",
-      description:
-        "Reduce word count while preserving the core message and details.",
-    },
-  ];
-
+  const addOnOptionsWritingSupport: any = {
+    "Language Polishing": [
+      {
+        text: "Language Polishing",
+        description: "Enhance readability and ensure smooth narrative flow.",
+      },
+    ],
+    "Basic Formatting Service": [
+      {
+        text: "Basic Formatting Service",
+        description:
+          "Ensure your manuscript adheres to standard formatting requirements.",
+      },
+    ],
+    "Plagiarism Check & Report": [
+      {
+        text: "Plagiarism Check & Report",
+        description:
+          "Ensures your manuscript is free from plagiarism, with a detailed report highlighting areas of concern and improvement.",
+      },
+    ],
+    "Data Visualization & Graphical Abstracts": [
+      {
+        text: "Data Visualization & Graphical Abstracts",
+        description:
+          "Customized charts, graphs, and graphical abstracts tailored to meet journal submission requirements and enhance research presentation.",
+      },
+    ],
+    "Statistical Analysis Consultation": [
+      {
+        text: "Statistical Analysis Consultation",
+        description:
+          "Expert guidance on the statistical methods used in your research, ensuring accurate interpretation and presentation of results.",
+      },
+    ],
+    "Reviewer Response Drafting": [
+      {
+        text: "Reviewer Response Drafting",
+        description:
+          "Assistance in drafting professional and concise responses to peer reviewer comments for smoother manuscript acceptance.",
+      },
+    ],
+    "Journal Selection & Submission Service": [
+      {
+        text: "Journal Selection & Submission Service",
+        description:
+          "Helps identify the best-fit journals for your research and manage the entire submission process.",
+      },
+    ],
+  };
   return (
     <div className="container">
       <div className="row mt-4">
@@ -109,34 +193,8 @@ export default function ProjectQuote() {
           <h5>
             <strong>Submit your project details for an exact quote.</strong>
           </h5>
-          <div className="p-3 border mt-3 d-flex flex-column align-items-center">
-            <h6 className="text-center">Upload your document to be edited</h6>
-            <p className="text-center">
-              Upload manuscripts in .doc or .docx format to autocount words &
-              get an instant quote.
-            </p>
-            <input
-              type="file"
-              className="text-center"
-              style={{ width: "34%" }}
-            />
-            <span className="spanGap">
-              <input
-                type="checkbox"
-                onChange={(e) => setShowInput(e.target.checked)}
-              />
-              I want to enter the word count
-            </span>
-            {showInput && (
-              <input
-                type="number"
-                placeholder="Enter word count"
-                className="mt-2 form-control"
-                style={{ width: "50%" }}
-              />
-            )}
-          </div>
 
+          {/* Goals Selection */}
           <h5 style={{ marginTop: "30px" }}>Your Goals</h5>
           <div className="row">
             {goals.map((goal, index) => (
@@ -156,7 +214,7 @@ export default function ProjectQuote() {
             ))}
           </div>
 
-          {/* Additional options for Editing Plans */}
+          {/* Editing Plans */}
           {selectedGoal === "Editing Plans" && (
             <div className="mt-3">
               <h5>
@@ -189,8 +247,8 @@ export default function ProjectQuote() {
             </div>
           )}
 
-           {/* Additional options for writing Plans */}
-           {selectedGoal === "Writing Assistance Plans" && (
+          {/* writing Plans */}
+          {selectedGoal === "Writing Assistance Plans" && (
             <div className="mt-3">
               <h5>
                 I need detailed editing to enhance clarity, flow, and coherence
@@ -222,49 +280,40 @@ export default function ProjectQuote() {
             </div>
           )}
 
-          {/* Add-ons when "Proofreading" is selected */}
-          {selectedEditingOption === "Proofreading" && (
-            <div className="mt-3">
-              <h5>Add-Ons for Essential Manuscript Editing</h5>
-              {editingaddOnOptionsProof.map((addOn, index) => (
-                <div key={index} className="form-check gapping">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id={`addon${index}`}
+          {/* Dynamic Add-Ons */}
+          {selectedEditingOption &&
+            (addOnOptions[selectedEditingOption] ||
+              addOnOptionsWritingSupport[selectedEditingOption]) && (
+              <div className="mt-3">
+                <h5>Add-Ons for {selectedEditingOption}</h5>
+                {(
+                  addOnOptions[selectedEditingOption] ||
+                  addOnOptionsWritingSupport[selectedEditingOption]
+                ).map((addOn: any, index: any) => (
+
+      
+                  <div key={index} className="form-check gapping">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      id={`addon${index}`}
                   />
-                  <label className="form-check-label" htmlFor={`addon${index}`}>
-                    <p className="mb-0">
-                      <strong>{addOn.text}</strong>
-                    </p>
-                    <p className="mb-0">{addOn.description}</p>
-                  </label>
-                </div>
-              ))}
-            </div>
-          )}
-          {selectedEditingOption === "Substantive Editing" && (
-            <div className="mt-3">
-              <h5>Add-Ons for Essential Manuscript Editing</h5>
-              {editingaddOnOptionsSubs.map((addOn, index) => (
-                <div key={index} className="form-check gapping">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id={`addon${index}`}
-                  />
-                  <label className="form-check-label" htmlFor={`addon${index}`}>
-                    <p className="mb-0">
-                      <strong>{addOn.text}</strong>
-                    </p>
-                    <p className="mb-0">{addOn.description}</p>
-                  </label>
-                </div>
-              ))}
-            </div>
-          )}
+                    <label
+                      className="form-check-label"
+                      htmlFor={`addon${index}`}
+                    >
+                      <p className="mb-0">
+                        <strong>{addOn.text}</strong>
+                      </p>
+                      <p className="mb-0">{addOn.description}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
+            )}
         </div>
 
+        {/* Testimonials */}
         <div className="col-md-4 p-4">
           <h5>
             Hear from the authors who loved Our{" "}
