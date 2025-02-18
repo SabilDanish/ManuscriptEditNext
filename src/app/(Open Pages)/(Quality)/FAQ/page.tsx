@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
     {/* {<Metadata metaData={metaData} />} */}
-      {breadcrum("Quality", "Frequently Asked Questions")}
+      {/* {breadcrum("Quality", "Frequently Asked Questions")} */}
       <section id="specials" className="specials faq section-bg mt-3">
         <div className="container" data-aos="fade-up">
           <div className="row" data-aos="fade-up" data-aos-delay="100">

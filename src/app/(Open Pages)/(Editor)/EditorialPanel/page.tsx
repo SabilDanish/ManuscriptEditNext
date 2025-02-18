@@ -45,7 +45,7 @@ export default function Home() {
   };
   return (
     <>
-      {breadcrum("Editor", "Editorial Panel")}
+      {/* {breadcrum("Editor", "Editorial Panel")} */}
       {showModal && (
         <EditorModal modalData={modalData} setShowModal={setShowModal} />
       )}

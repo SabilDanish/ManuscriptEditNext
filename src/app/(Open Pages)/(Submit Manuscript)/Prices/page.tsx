@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <>
-      {breadcrum("Submit Manuscript", "Prices")}
+      {/* {breadcrum("Submit Manuscript", "Prices")} */}
 
       <section id="pricing" className="pricing section-area">
         <div className="container aos-init aos-animate" data-aos="fade-up">

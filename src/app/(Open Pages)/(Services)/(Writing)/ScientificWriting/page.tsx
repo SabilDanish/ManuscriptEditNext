@@ -8,7 +8,7 @@ import redirect from "@/app/_Common/_functionality/Redirect";
 export default function Home() {
   return (
     <>
-      {breadcrum("Services / Writing", "Scientific & Academic Writing")}
+      {/* {breadcrum("Services / Writing", "Scientific & Academic Writing")} */}
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">

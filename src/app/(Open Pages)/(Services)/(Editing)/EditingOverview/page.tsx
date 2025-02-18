@@ -15,13 +15,12 @@ import "../../../../_Common/getHelp/getHelp.css";
 import Dropdown2 from "@/app/_Common/Dropdown2/Dropdown2";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import { useEffect, useState } from "react";
-import ServicesNavbar1 from "@/app/_Common/ServicesNavbar/ServicesNavbar1";
+
 import ServicesNavbar2 from "@/app/_Common/ServicesNavbar/ServicesNavbar2";
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
-
   const [currency, setCurrency] = useState("");
   const LocationBasedPricing = () => {
     useEffect(() => {
@@ -59,12 +58,17 @@ export default function Home() {
         "English, editors, native English, substantive editing, proofreading, formatting, translation, scientific, research, proposals, grant applications, posters"
       )} */}
 
-      
-      <ServicesNavbar2 />
-      <ServicesNavbar1 />
-      
-      <section className="pt-5 pb-5">
-        {/* <div className="container mt-4" style={{ marginBottom: "50px",display:(currency==="INR")?"none":""  }}>
+      {/* <ServicesNavbar2 /> */}
+      {/* <ServicesNavbar1 /> */}
+
+      {/* <section className="pt-5 pb-5">
+        <div
+          className="container mt-4"
+          style={{
+            marginBottom: "50px",
+            display: currency === "INR" ? "none" : "",
+          }}
+        >
           <div className="table-responsive">
             <table className="table table-bordered table-striped">
               <thead className="table-dark">
@@ -123,7 +127,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container mt-4" style={{ marginBottom: "50px",display:(currency==="INR")?"":"none"}}>
+        <div
+          className="container mt-4"
+          style={{
+            marginBottom: "50px",
+            display: currency === "INR" ? "" : "none",
+          }}
+        >
           <div className="table-responsive">
             <table className="table table-bordered table-striped">
               <thead className="table-dark">
@@ -180,39 +190,10 @@ export default function Home() {
               </tbody>
             </table>
           </div>
-        </div> */}
-
-        <div className="row conrow">
-          <div className="col-md-12">
-            {/* <h3 className="pt-5">Editing Overview</h3> */}
-            <p className="pt-3">
-              Setting the stage for the importance of editing in the realm of
-              written communication. Introduction to the multifaceted nature of
-              editing and its impact on clarity and effectiveness.
-            </p>
-            {/* <div className="col-lg-3">
-              <Link href="https://wa.me/16469163476"> <button className="choose-plan my-3"> <img src="../images/WhatsApp_icon.png" alt="Snow" style={{width:"1.5rem",marginRight:"1rem"}}/>Talk To An Expert</button></Link>
-              </div> */}
-            {/* <div className="container" >
-          <div className="row">
-            <div className="col-lg-3 my-3">
-              <h2 style={{display:"flex", justifyContent:"start",alignItems:"center"}}>Not Sure?</h2>
-            </div>
-            <div className="col-lg-3">
-             <Link href="https://wa.me/16469163476"> <button className="choose-plan my-3"> <img src="../images/WhatsApp_icon.png" alt="Snow" style={{width:"1.5rem",marginRight:"1rem"}}/>Talk To An Expert</button></Link>
-            </div>
-          </div>
-        </div>   */}
-          </div>
-          {/* <div className="col-md-6">
-              {
-               
-              }
-            </div> */}
         </div>
-      </section>
+      </section> */}
       <section className="pb-5">
-        <>
+       
           <div className="row ServicesSection">
             {serviceData["Editing Packages"] &&
               serviceData["Editing Packages"].items &&
@@ -246,7 +227,7 @@ export default function Home() {
                 );
               })}
           </div>
-        </>
+        
       </section>
       <section className="pb-5">
         <div className="container">

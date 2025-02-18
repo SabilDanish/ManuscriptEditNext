@@ -8,7 +8,7 @@ import redirect from "@/app/_Common/_functionality/Redirect";
 export default function Home() {
   return (
     <>
-      {breadcrum("Services ", "Customized Services")}
+      {/* {breadcrum("Services ", "Customized Services")} */}
       {SpecializedArea(false)}
       <div className="brand_area pt-35 pb-15">
         <div className="container">

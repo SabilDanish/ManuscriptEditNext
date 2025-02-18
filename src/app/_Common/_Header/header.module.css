@@ -1,4 +1,4 @@
-.headerStyle {
+/* .headerStyle {
     font-size:13px;
     text-align:left;
     padding-left:15px;
@@ -11,7 +11,10 @@
 
 .mean-container .mean-nav ul {
     background: white !important;
+} */
+
+@media(min-width: 1022px) {
+  .oldMenu {
+    display: none !important;
+  }
 }
-
-
-

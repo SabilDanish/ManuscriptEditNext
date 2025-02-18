@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <>
       {<Metadata metaData={metaData} />}
-      {breadcrum("Services / Writing", "Writing Overview")}
+      {/* {breadcrum("Services / Writing", "Writing Overview")} */}
 
       {/* <div
         className="container mt-4"
@@ -139,7 +139,7 @@ export default function Home() {
         </div>
       </div> */}
 
-      <section className="pt-5 pb-5">
+      <section>
         {/* <div className="row conrow">
 						<div className="col-md-12">
 							<h3 className="pt-2 pb-3">Writing Overview</h3>
@@ -206,7 +206,7 @@ export default function Home() {
 
 			</section> */}
 
-      <div className="how_it_work style_three pt-0 pb-30">
+      <div className="how_it_work style_three pt-0 pb-30 mt-1">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">

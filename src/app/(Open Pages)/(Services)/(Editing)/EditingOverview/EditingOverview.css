@@ -4,7 +4,7 @@
   border-radius: 10px;
   margin-bottom: 15px;
 }
-.active {
+/* .active {
   background-color: #5161ce;
 }
 .active h4 {
@@ -12,7 +12,7 @@
 }
 .active p {
   color: #fff;
-}
+} */
 
 @media (min-width: 376px) and (max-width: 768px) {
   .carousel-item-custom {
