@@ -244,7 +244,7 @@ export default function RootLayout({
         <ToastContainer />
         {/* <header/> */}
         {/* {header()} */}
-        {/* <Header /> */}
+        <Header />
         <Navbar2025 />
         <Suspense
           fallback={

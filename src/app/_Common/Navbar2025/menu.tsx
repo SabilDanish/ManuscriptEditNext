@@ -1,4 +1,17 @@
-const menu = [
+interface SubMenuItem {
+  label: string;
+  link?: string;
+  subMenu?: SubMenuItem[];
+  
+}
+
+interface MenuItem {
+  label: string;
+  subMenu: SubMenuItem[];
+
+}
+
+const menu: MenuItem[]  = [
   {
     label: "SERVICES",
     subMenu: [  
@@ -20,6 +33,7 @@ const menu = [
         label: "Publication Support",
         link: "/PackageService",
         subMenu: [
+          { label: "Publication Packages", link: "/PackageService" },
           { label: "Journal Selection", link: "/JournalSel" },
           { label: "Journal Submission", link: "/JournalSub" },
           { label: "Peer Review & Pre Submission", link: "/PeerReview" },
@@ -34,6 +48,7 @@ const menu = [
         label: "Scientific / Academic Writing",
         link: "/Writing",
         subMenu: [
+          { label: "Writing Assistance", link: "/Writing" },
           { label: "Medical Writing Assistance", link: "/MedicalWrite" },
           { label: "Scientific & Academic Writing Assistance", link: "/ScientificWriting" },
           { label: "Technical Writing Assistance", link: "/TechnicalWriting" },
@@ -44,6 +59,7 @@ const menu = [
         label: "Research & Statistical Analysis",
         link: "/ResearchSupportOverview",
         subMenu: [
+          { label: "Research Support Overview", link: "/ResearchSupportOverview" },
           { label: "Statistical Analysis", link: "/StatisticalAnalysis" },
           { label: "Systematic Review", link: "/SystematicReview" },
           { label: "Meta Analysis", link: "/MetaAnalysis" },
@@ -52,6 +68,7 @@ const menu = [
       },
       {
         label: "Thesis & Dissertation Services",
+        link: "/PHDThesis",
         subMenu: [
           { label: "PhD Thesis", link: "/PHDThesis" },
           { label: "Master Thesis", link: "/MasterThesis" },
@@ -59,6 +76,7 @@ const menu = [
       },
       {
         label: "High-Impact Services",
+        link: "/PHDThesis",
         subMenu: [
           { label: "High-Impact Scientific Editing", link: "/PHDThesis" },
           { label: "High-Impact Journal Publication Support", link: "/MasterThesis" },
@@ -114,14 +132,7 @@ const menu = [
       { label: "Scholar Hangout", link: "https://scholar-hangout.manuscriptedit.com" },
     ],
   },
-  {
-    label: "SIGN UP | SIGN IN",
-    link: "https://secure.manuscriptedit.com/register",
-  },
-  {
-    label: "REQUEST A QUOTE",
-    link: "https://secure.manuscriptedit.com/quotation",
-  },
+  
 ];
 
 export default menu;

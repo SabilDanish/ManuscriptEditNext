@@ -7,14 +7,14 @@ import { map } from "jquery";
 import { useRouter } from "next/router";
 
 function Navbar2025() {
-  const [activeTab1, setActiveTab1] = useState("");
-  const [activeTab2, setActiveTab2] = useState(0);
-  const [newNavBar2, setNewNavBar2] = useState(false);
-  const [newNavBar1, setNewNavBar1] = useState(false);
-  const [lastMenu, setLastMenu] = useState(false);
-  const [lastMenuItems, setLastMenuItems] = useState(0);
+  const [activeTab1, setActiveTab1] = useState<string>("");
+  const [activeTab2, setActiveTab2] = useState<string>("");
+  const [newNavBar2, setNewNavBar2] = useState<boolean>(false);
+  const [newNavBar1, setNewNavBar1] = useState<boolean>(false);
+  const [lastMenu, setLastMenu] = useState<boolean>(false);
+  const [lastMenuItems, setLastMenuItems] = useState<number>(0);
 
-  const [mainNavItem, setMainNavItem] = useState(5);
+  const [mainNavItem, setMainNavItem] = useState<number>(5);
 
   useEffect(() => {
     const test = () => {
@@ -76,10 +76,95 @@ function Navbar2025() {
     };
   }, []);
 
-console.log(activeTab2)
-
   return (
-    <>
+    <div className="navbar2025">
+      <div className="header_top_menu pt-2 pb-2 bg_color">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-7 col-sm-7">
+              <div className="header_top_menu_address">
+                <div className="header_top_menu_address_inner">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i className="fa fa-phone"></i>+91-904-002-3003 (IN){" "}
+                        <i
+                          className="fa fa-phone"
+                          style={{ marginLeft: "8px" }}
+                        ></i>
+                        +91-923-730-4004 (IN){" "}
+                        <i
+                          className="fa fa-phone"
+                          style={{ marginLeft: "8px" }}
+                        ></i>
+                        +1 (646)916-3476 (USA)
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-sm-4">
+              <div className="header_top_menu_icon">
+                <div className="header_top_menu_icon_inner">
+                  <ul>
+                    <li>
+                      <Link
+                        href={"https://www.facebook.com/Manuscriptedit"}
+                        target="_blank"
+                      >
+                        <i className="fa fa-facebook"></i>
+                      </Link>
+                    </li>
+                    <li>
+                      <a
+                        href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit"
+                        target="_blank"
+                      >
+                        <i className="fa fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/manuscriptedit/"
+                        target="_blank"
+                      >
+                        <i className="fa fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.youtube.com/@manuscriptedit."
+                        target="_blank"
+                      >
+                        <i className="fa fa-youtube"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-1 col-sm-2">
+              <Link href={"/Discount"}>
+                <button
+                  className="BtnDiscount"
+                  style={{
+                    width: "200px",
+                    borderRadius: "6px",
+                    border: "none",
+                    color: "#5161ce",
+                    background: "white",
+                  }}
+                >
+                  Discount & Offers
+                </button>{" "}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <header className="nav-container">
         <div className="nav-logo logo">
           <Link href="/">
@@ -93,7 +178,8 @@ console.log(activeTab2)
               <Link
                 href="/EditingOverview"
                 onClick={() => {
-                  setActiveTab1(menu[0].subMenu[0].label);
+                  setActiveTab1(menu[0].subMenu[0]?.label || "");
+                  setActiveTab2(menu[0].subMenu[0]?.subMenu?.[0]?.label || "");
                   setNewNavBar2(true);
                   setNewNavBar1(true);
                   setMainNavItem(0);
@@ -108,7 +194,7 @@ console.log(activeTab2)
               <Link
                 href="/QualityDelivery"
                 onClick={() => {
-                  setActiveTab1(menu[1].subMenu[0].label);
+                  setActiveTab1(menu[1].subMenu[0]?.label || "");
                   setNewNavBar2(true);
                   setNewNavBar1(true);
                   setMainNavItem(1);
@@ -133,7 +219,7 @@ console.log(activeTab2)
               <Link
                 href="/EditorialPanel"
                 onClick={() => {
-                  setActiveTab1(menu[3].subMenu[0].label);
+                  setActiveTab1(menu[3].subMenu[0]?.label || "");
                   setNewNavBar2(true);
                   setNewNavBar1(true);
                   setMainNavItem(3);
@@ -148,7 +234,7 @@ console.log(activeTab2)
               <Link
                 href="/About"
                 onClick={() => {
-                  setActiveTab1(menu[4].subMenu[0].label);
+                  setActiveTab1(menu[4].subMenu[0]?.label || "");
                   setNewNavBar2(true);
                   setNewNavBar1(true);
                   setMainNavItem(4);
@@ -189,18 +275,19 @@ console.log(activeTab2)
                   <li
                     key={index}
                     className={
-                      activeTab1 === menu[mainNavItem].subMenu[index].label
+                      activeTab1 === menu[mainNavItem].subMenu[index]?.label
                         ? "tabSelected"
                         : ""
                     }
                     onClick={() => {
-                      setActiveTab1(menu[mainNavItem].subMenu[index].label);
+                      setActiveTab1(menu[mainNavItem].subMenu[index]?.label || "");
+                      setActiveTab2(menu[0].subMenu[index]?.subMenu?.[0]?.label || "");
                       setLastMenuItems(index);
                       setLastMenu(true);
                     }}
                   >
                     {menu[mainNavItem]?.subMenu[index]?.link ? (
-                      <Link href={menu[mainNavItem]?.subMenu[index]?.link}>
+                      <Link href={menu[mainNavItem]?.subMenu[index]?.link || ""}>
                         {menu[mainNavItem]?.subMenu[index]?.label}
                       </Link>
                     ) : (
@@ -217,14 +304,22 @@ console.log(activeTab2)
       </div>
       <div className="navbar3">
         <div className="container">
-          <ul>
+          <ul style={{ display: mainNavItem !== 0 ? "none" : "" }}>
             {lastMenu && menu[0]?.subMenu[lastMenuItems]?.subMenu
               ? menu[0].subMenu[lastMenuItems].subMenu.map((item, index) => (
-                  <li key={index}
-                  className={setActiveTab2 === index ? '':'tabSelected2'}
-                  onClick={()=>
-                    setActiveTab2(index)
-                  }
+                  <li
+                    key={index}
+                    className={
+                      activeTab2 ===
+                      (menu[0]?.subMenu[lastMenuItems]?.subMenu?.[index]?.label || "")
+                        ? "tabSelected2"
+                        : ""
+                    }
+                    onClick={() =>
+                      setActiveTab2(
+                        menu[0]?.subMenu[lastMenuItems]?.subMenu?.[index]?.label || ""
+                      )
+                    }
                   >
                     {item?.link ? (
                       <Link href={item.link}>{item.label}</Link>
@@ -237,7 +332,7 @@ console.log(activeTab2)
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

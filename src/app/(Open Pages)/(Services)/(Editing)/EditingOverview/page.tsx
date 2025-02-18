@@ -193,7 +193,7 @@ export default function Home() {
         </div>
       </section> */}
       <section className="pb-5">
-        <>
+       
           <div className="row ServicesSection">
             {serviceData["Editing Packages"] &&
               serviceData["Editing Packages"].items &&
@@ -227,7 +227,7 @@ export default function Home() {
                 );
               })}
           </div>
-        </>
+        
       </section>
       <section className="pb-5">
         <div className="container">

@@ -11,11 +11,10 @@ export default function Home() {
     <>
     {/* {<Metadata metaData={metaData} />} */}
     {/* {breadcrum("Quality", "Service Guarantee")} */}
-      <section className="pt-5 pb-5">
+      {/* <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              {/* <h3 className="pt-5">Quality Assurance Overview</h3> */}
               <p className="pt-3">
                 ASetting the stage for the importance of editing in the realm of
                 written communication. Introduction to the multifaceted nature
@@ -32,9 +31,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section id="onfocus" className="onfocus">
+      <section id="onfocus" className="onfocus py-2">
         <div className="container-fluid p-0" data-aos="fade-up">
           <div className="row g-0">
             <div className="col-lg-5 video-play position-relative">
