@@ -5,6 +5,8 @@ import redirect from "@/app/_Common/_functionality/Redirect";
 import { usePathname } from 'next/navigation'
 import { data } from '../../../../utils/metaFile.js'
 import Metadata from "@/app/Metadata";
+import Renovation from "@/app/_Common/Renovation/Renovation";
+import Dropdown2 from "@/app/_Common/Dropdown2/Dropdown2";
 
 const newData: {[key: string]: {[key: string]: string}} = data;
 
@@ -15,11 +17,11 @@ export default function Home() {
     <>
     {<Metadata metaData={metaData} />}
       {/* {breadcrum("Services / English Editing", "Proofreading")} */}
-      <section className="pt-5 pb-5">
+      {/* <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              {/* <h3 className="pt-5">Proofreading</h3> */}
+             
               <p className="pt-3">
                 Introduction to the critical role of proofreading in ensuring
                 polished and error-free written communication.
@@ -48,9 +50,36 @@ export default function Home() {
           </div>
           
         </div>
-      </section>
+      </section> */}
+
+      <Renovation/>
+
+      <div className="wcus-container">
+        <div className="wcus-client-reviews">
+          <h3 className="editing-overview-heading">Testimonial</h3>
+          {[
+            {
+              imgSrc: "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+              text: "The best editing service I've used. Got published in record time!",
+              name: "Dr. Emily Carter",
+            },
+            {
+              imgSrc: "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+              text: "Exceptional support from expert editors. Highly recommended!",
+              name: "Prof. John Williams",
+            },
+          ].map((review, index) => (
+            <div className="wcus-review" key={index}>
+              <img src={review.imgSrc} alt="Client" />
+              <p>
+                "{review.text}" - <strong>{review.name}</strong>
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
       
-      {FAQ()}
+      <Dropdown2 />
     </>
   );
 }
