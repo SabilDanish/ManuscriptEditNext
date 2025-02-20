@@ -1,3 +1,46 @@
+// import styles from "./Renovation.module.css";
+// import "./Renovation.css";
+
+// import HeroSection from "../HeroSection/HeroSection";
+// import SummarySection from "../SummarySection/SummarySection";
+// import IncludeSection from "../IncludeSection/IncludeSection";
+// import Process from "../Process/Process";
+
+// export default function ProofreadingServices() {
+//   const gap = {
+//     marginTop: "40px",
+//   };
+//   return (
+//     <div>
+//       <HeroSection>
+//         <section style={gap}>
+//           <div className={styles.textWrapper}>
+//             <h1 className={styles.heading}>
+//               Polish Your Research with Expert Proofreading Services
+//             </h1>
+//             <p className={styles.subtext}>
+//               Ensure your manuscript is free from grammar, punctuation, and
+//               spelling errors with professional proofreading tailored for
+//               academic and research documents.
+//             </p>
+//             <div className={styles.buttonGroup}>
+//               <button className="editing-overview-button-unique ">
+//                 Get Proofreading Now
+//               </button>
+//               <button className="editing-overview-button-unique ">
+//                 Request a Free Sample
+//               </button>
+//             </div>
+//           </div>
+//         </section>
+//       </HeroSection>
+//       <SummarySection />
+//       <IncludeSection />
+//       <Process />
+//     </div>
+//   );
+// }
+
 import styles from "./Renovation.module.css";
 import "./Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
