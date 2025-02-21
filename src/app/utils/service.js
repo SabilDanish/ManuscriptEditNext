@@ -10,6 +10,7 @@ export const serviceData = {
                     "Sentence Structure and Basic Terminology Check",
                     "Editing Certificate for Language Check",
                 ],
+             
                 link: "https://secure.manuscriptedit.com/estimate?test=2",
             },
             {
