@@ -11,7 +11,7 @@ const newData: { [key: string]: { [key: string]: string } } = data;
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "@/app/_Common/Dropdown2/Dropdown2.css"
+import "@/app/_Common/Dropdown2/Dropdown2.css";
 
 import {
   faFileUpload,
@@ -215,17 +215,25 @@ export default function Home() {
 
         {/* New Proofreading Details Section */}
         <section className={styles.proofreadingWrapper}>
-        <h2 className={styles.headingCenter}>
-        What Substantive Editing Does NOT Include:
-        </h2>
-        
+          <h2 className={styles.headingCenter}>
+            What Substantive Editing Does NOT Include:
+          </h2>
+
           <div className={styles.proofreadingBox}>
             <h3 className={styles.proofreadingSubheading}>🚫 Not Included</h3>
             <ul className={styles.proofreadingList}>
-              <li>❌New Research Content Addition – We do not add new data or findings.</li>
-              <li>❌Heavy Rewriting – We improve clarity but maintain original content intent.</li>
-              <li>❌ Formatting Adjustments – Journal-specific formatting is covered under our
-              Manuscript Formatting Service.</li>
+              <li>
+                ❌New Research Content Addition – We do not add new data or
+                findings.
+              </li>
+              <li>
+                ❌Heavy Rewriting – We improve clarity but maintain original
+                content intent.
+              </li>
+              <li>
+                ❌ Formatting Adjustments – Journal-specific formatting is
+                covered under our Manuscript Formatting Service.
+              </li>
             </ul>
           </div>
           <div className={styles.proofreadingBox}>
@@ -233,26 +241,33 @@ export default function Home() {
 
             <ul className={styles.proofreadingList}>
               <li>
-                ✅ Structural Refinement: Improves organization, logical flow, and readability of the manuscript.
+                ✅ Structural Refinement: Improves organization, logical flow,
+                and readability of the manuscript.
               </li>
               <li>
-                ✅  Content Enhancement: Refines arguments, eliminates ambiguities, and strengthens clarity.
-              </li>
-              <li>✅  Language Polishing: Ensures consistent tone, precise language, and audience-specific terminology.</li>
-              <li>
-                ✅  Guideline Compliance: Aligns formatting, style, and visual elements with journal or publisher requirements.
+                ✅ Content Enhancement: Refines arguments, eliminates
+                ambiguities, and strengthens clarity.
               </li>
               <li>
-                ✅  Reference Verification: Checks references for accuracy, completeness, and adherence to citation styles.
+                ✅ Language Polishing: Ensures consistent tone, precise
+                language, and audience-specific terminology.
+              </li>
+              <li>
+                ✅ Guideline Compliance: Aligns formatting, style, and visual
+                elements with journal or publisher requirements.
+              </li>
+              <li>
+                ✅ Reference Verification: Checks references for accuracy,
+                completeness, and adherence to citation styles.
               </li>
 
               <li>
-                ✅   Publication Readiness: Prepares the manuscript for peer review and maximizes acceptance potential.
+                ✅ Publication Readiness: Prepares the manuscript for peer
+                review and maximizes acceptance potential.
               </li>
             </ul>
           </div>
-        
-      </section>
+        </section>
         <div className={styles.processContainer}>
           <h2 className={styles.processTitle}>How It Works</h2>
           <div className={styles.processSteps1}>
@@ -385,28 +400,54 @@ export default function Home() {
           <div className="wcus-container">
             <div className="wcus-client-reviews">
               <h3 className="editing-overview-heading">Testimonial</h3>
-              {[
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                  text: "The best editing service I've used. Got published in record time!",
-                  name: "Dr. Emily Carter",
-                },
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                  text: "Exceptional support from expert editors. Highly recommended!",
-                  name: "Prof. John Williams",
-                },
-              ].map((review, index) => (
-                <div className="wcus-review" key={index}>
-                  <img src={review.imgSrc} alt="Client" />
-                  <p>
-                    "{review.text}" - <strong>{review.name}</strong>
-                  </p>
-                </div>
-              ))}
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                    text: "The best editing service I've used. Got published in record time!",
+                    name: "Dr. Emily Carter",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                    text: "Exceptional support from expert editors. Highly recommended!",
+                    name: "Prof. John Williams",
+                  },
+                  {
+                    imgSrc:
+                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
+            <h3><br />🏆 Rated 4.9 out of 5 by academic professionals, scientists, and publishing experts.<br /><br />
+📑 Trusted by universities, funding agencies, and research institutions.</h3>
+<div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/Testimonial/"
+                className="cta-button"
+              >
+               See More Reviews
+              </a>
+            </div>
+
+
           </div>
 
           <div className="container" style={{ marginTop: "3rem" }}>
