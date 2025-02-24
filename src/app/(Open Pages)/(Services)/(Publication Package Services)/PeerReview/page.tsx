@@ -61,9 +61,21 @@ export default function Home() {
         "Simply upload your manuscript, select the review service, and get expert feedback tailored for journal submission.",
     },
   ];
-  
+
   return (
     <>
+      <meta
+        name="title"
+        content="Peer Review & Pre-Submission Services – Improve Your Research Before Submission"
+      />
+      <meta
+        name="description"
+        content="Enhance your manuscript with expert peer review & pre-submission services. Get detailed reviewer comments, journal compliance checks, and higher acceptance rates!"
+      />
+      <meta
+        name="keywords"
+        content="Peer Review Services for Researchers, Pre-Submission Editing & Formatting, Improve Manuscript Before Journal Submission, Reviewer Response Assistance for Academic Papers, Journal Compliance Check for Research Manuscripts."
+      />
       <section style={{ marginTop: "40px" }}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>
@@ -79,13 +91,19 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <button
               className={styles.primaryButton}
-              onClick={() => (window.location.href = "https://secure.manuscriptedit.com/quotation")}
+              onClick={() =>
+                (window.location.href =
+                  "https://secure.manuscriptedit.com/quotation")
+              }
             >
               Get a Peer Review Now
             </button>
             <button
               className={styles.secondaryButton}
-              onClick={() => (window.location.href = "https://secure.manuscriptedit.com/quotation")}
+              onClick={() =>
+                (window.location.href =
+                  "https://secure.manuscriptedit.com/quotation")
+              }
             >
               Request a Free Consultation
             </button>
@@ -128,7 +146,10 @@ export default function Home() {
           </ul>
           <button
             className={styles.primaryButton}
-            onClick={() => (window.location.href = "https://secure.manuscriptedit.com/quotation")}
+            onClick={() =>
+              (window.location.href =
+                "https://secure.manuscriptedit.com/quotation")
+            }
           >
             Learn More About Our Review Process
           </button>
@@ -155,7 +176,7 @@ export default function Home() {
               <td>
                 General manuscript evaluation, Minor improvement suggestions
               </td>
-              <td>⏳ 3-5 Days</td>
+              <td>3-5 Days</td>
             </tr>
             <tr>
               <td>Advanced Peer Review</td>
@@ -163,32 +184,35 @@ export default function Home() {
               <td>
                 Detailed reviewer comments, Structural improvement suggestions
               </td>
-              <td>⏳ 5-7 Days</td>
+              <td>5-7 Days</td>
             </tr>
             <tr>
               <td>Journal-Specific Pre-Submission Check</td>
               <td>Researchers preparing final submission</td>
               <td>Compliance check, Formatting & structure verification</td>
-              <td>⏳ 3-5 Days</td>
+              <td>3-5 Days</td>
             </tr>
             <tr>
               <td>Reviewer Response Assistance</td>
               <td>Authors responding to journal reviewers</td>
               <td>Rewriting responses, Addressing critiques professionally</td>
-              <td>⏳ 4-6 Days</td>
+              <td>4-6 Days</td>
             </tr>
             <tr>
               <td>Resubmission Support</td>
               <td>Manuscripts previously rejected</td>
               <td>Addressing reviewer comments, Rewriting & restructuring</td>
-              <td>⏳ 7-10 Days</td>
+              <td>7-10 Days</td>
             </tr>
           </tbody>
         </table>
         <button
           className={styles.primaryButton}
           style={{ marginTop: "40px" }}
-          onClick={() => (window.location.href = "https://secure.manuscriptedit.com/quotationn")}
+          onClick={() =>
+            (window.location.href =
+              "https://secure.manuscriptedit.com/quotationn")
+          }
         >
           Compare Review & Pre-Submission Services
         </button>
@@ -308,145 +332,156 @@ export default function Home() {
         </div>
 
         <div className="cta-container">
-          <a href="https://secure.manuscriptedit.com/quotation" className="cta-button">
+          <a
+            href="https://secure.manuscriptedit.com/quotation"
+            className="cta-button"
+          >
             Request a Sample Review Report
           </a>
         </div>
       </section>
 
       <section className="pricing-turnaround-section">
-  <h2 className="pricing-turnaround-heading">
-  Advanced Review & Resubmission Support – Pricing and Turnaround Time
-  </h2>
+        <h2 className="pricing-turnaround-heading">
+          Advanced Review & Resubmission Support – Pricing and Turnaround Time
+        </h2>
 
-  <div className="pricing-details">
-    <div className="pricing-item">
-      <h3>Starting Price</h3>
-      <p className="pricing-text">$0.08 per word (Basic Review) – $0.15 per word (Advanced Review & Resubmission Support)</p>
-    </div>
-
-    <div className="delivery-item">
-      <h3>Turnaround Time</h3>
-      <p className="delivery-time">3 Days – 10 Days (Depending on service type)</p>
-    </div>
-  </div>
-
-  <div className="cta-container">
-    <a
-      href="https://secure.manuscriptedit.com/quotation"
-      className="cta-button"
-    >
-      Check Pricing and Get a Quote
-    </a>
-  </div>
-</section>
-<div className="wcus-container">
-            <div className="wcus-client-reviews">
-              <h3 className="editing-overview-heading">Testimonial</h3>
-              <div className="row d-flex justify-content-around">
-                {[
-                  {
-                    imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                    text: "The best editing service I've used. Got published in record time!",
-                    name: "Dr. Emily Carter",
-                  },
-                  {
-                    imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                    text: "Exceptional support from expert editors. Highly recommended!",
-                    name: "Prof. John Williams",
-                  },
-                  {
-                    imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
-                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
-                    name: "J Y",
-                  },
-                  {
-                    imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
-                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
-                    name: "Emily Selman",
-                  },
-                ].map((review, index) => (
-                  <div className="wcus-review col-lg-5" key={index}>
-                    <img src={review.imgSrc} alt="Client" />
-                    <p>
-                      "{review.text}" - <strong>{review.name}</strong>
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <h3><br />🏆 Rated 4.9 out of 5 by academic professionals, scientists, and publishing experts.<br /><br />
-📑 Trusted by universities, funding agencies, and research institutions.</h3>
-<div className="cta-container">
-              <a
-                href="https://manuscriptedit.com/Testimonial/"
-                className="cta-button"
-              >
-               See More Reviews
-              </a>
-            </div>
-
-
+        <div className="pricing-details">
+          <div className="pricing-item">
+            <h3>Starting Price</h3>
+            <p className="pricing-text">
+              $0.08 per word (Basic Review) – $0.15 per word (Advanced Review &
+              Resubmission Support)
+            </p>
           </div>
 
-          <div className="container" style={{ marginTop: "3rem" }}>
-  <div className="accordion__wrapper2">
-    <h1 className="accordion__title">
-      FAQs
-      <br />
-      <span style={{ fontSize: "1rem" }}>
-        Common Questions About Peer Review & Pre-Submission Services
-      </span>
-    </h1>
-
-    {accord2.map((faq, index) => (
-      <div
-        className="accordion"
-        key={index}
-        style={{
-          paddingBottom: "1rem",
-          marginBottom: "1rem",
-          color: "#494949",
-        }}
-      >
-        <div
-          className="accordion__header d-flex justify-content-between"
-          onClick={() => toggleAccordion(index)}
-          style={{ cursor: "pointer" }}
-        >
-          <h2 className="accordion__question">{faq.question}</h2>
-          <span>{openIndex === index ? "⮝" : "⮟"}</span>
+          <div className="delivery-item">
+            <h3>Turnaround Time</h3>
+            <p className="delivery-time">
+              3 Days – 10 Days (Depending on service type)
+            </p>
+          </div>
         </div>
 
-        <div
-          className="accordion__content"
-          style={{
-            height: openIndex === index ? "auto" : "0",
-            overflow: "hidden",
-            transition: "height 0.3s ease",
-          }}
-        >
-          <div
-            className="accordion__answer"
-            style={{
-              padding: "0",
-              paddingTop: "0.5rem",
-              marginBottom: "0",
-              backgroundColor: "#f0f8ff",
-            }}
-            dangerouslySetInnerHTML={{ __html: faq.answer }}
-          />
+        <div className="cta-container">
+          <a
+            href="https://secure.manuscriptedit.com/quotation"
+            className="cta-button"
+          >
+            Check Pricing and Get a Quote
+          </a>
+        </div>
+      </section>
+      <div className="wcus-container">
+        <div className="wcus-client-reviews">
+          <h3 className="editing-overview-heading">Testimonial</h3>
+          <div className="row d-flex justify-content-around">
+            {[
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                text: "The best editing service I've used. Got published in record time!",
+                name: "Dr. Emily Carter",
+              },
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                text: "Exceptional support from expert editors. Highly recommended!",
+                name: "Prof. John Williams",
+              },
+              {
+                imgSrc:
+                  "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                name: "J Y",
+              },
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                name: "Emily Selman",
+              },
+            ].map((review, index) => (
+              <div className="wcus-review col-lg-5" key={index}>
+                <img src={review.imgSrc} alt="Client" />
+                <p>
+                  "{review.text}" - <strong>{review.name}</strong>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <h3>
+          <br />
+          🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+          publishing experts.
+          <br />
+          <br />
+          📑 Trusted by universities, funding agencies, and research
+          institutions.
+        </h3>
+        <div className="cta-container">
+          <a
+            href="https://manuscriptedit.com/Testimonial/"
+            className="cta-button"
+          >
+            See More Reviews
+          </a>
         </div>
       </div>
-    ))}
-  </div>
 
-</div>
+      <div className="container" style={{ marginTop: "3rem" }}>
+        <div className="accordion__wrapper2">
+          <h1 className="accordion__title">
+            FAQs
+            <br />
+            <span style={{ fontSize: "1rem" }}>
+              Common Questions About Peer Review & Pre-Submission Services
+            </span>
+          </h1>
 
+          {accord2.map((faq, index) => (
+            <div
+              className="accordion"
+              key={index}
+              style={{
+                paddingBottom: "1rem",
+                marginBottom: "1rem",
+                color: "#494949",
+              }}
+            >
+              <div
+                className="accordion__header d-flex justify-content-between"
+                onClick={() => toggleAccordion(index)}
+                style={{ cursor: "pointer" }}
+              >
+                <h2 className="accordion__question">{faq.question}</h2>
+                <span>{openIndex === index ? "⮝" : "⮟"}</span>
+              </div>
+
+              <div
+                className="accordion__content"
+                style={{
+                  height: openIndex === index ? "auto" : "0",
+                  overflow: "hidden",
+                  transition: "height 0.3s ease",
+                }}
+              >
+                <div
+                  className="accordion__answer"
+                  style={{
+                    padding: "0",
+                    paddingTop: "0.5rem",
+                    marginBottom: "0",
+                    backgroundColor: "#f0f8ff",
+                  }}
+                  dangerouslySetInnerHTML={{ __html: faq.answer }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

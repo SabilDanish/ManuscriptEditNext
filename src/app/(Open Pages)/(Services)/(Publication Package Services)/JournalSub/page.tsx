@@ -49,6 +49,7 @@ export default function Home() {
     
   return (
    <>
+   
    <section style={{ marginTop: "40px" }}>
   <div className={styles.textWrapper}>
     <h1 className={styles.heading}>

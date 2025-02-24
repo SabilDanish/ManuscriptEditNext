@@ -59,6 +59,18 @@ export default function Home() {
 
   return (
     <>
+     <meta
+        name="title"
+        content="Journal Selection Services – Find the Best Journal for Your Research"
+      />
+      <meta
+        name="description"
+        content="Get expert journal selection assistance for faster acceptance. We recommend Scopus, PubMed, and Web of Science-indexed journals tailored to your research."
+      />
+      <meta
+        name="keywords"
+        content="Journal Selection Services for Research Papers, Find the Best Journal for Publication, Scopus & Web of Science Journal Recommendations, Academic Journal Matching & Submission Assistance."
+      />
       <section style={{ marginTop: "40px" }}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>

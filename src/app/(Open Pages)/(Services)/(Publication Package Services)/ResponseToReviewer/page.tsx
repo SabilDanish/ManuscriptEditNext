@@ -158,7 +158,7 @@ export default function Home() {
                 Polite, structured, and concise responses, Formatting according
                 to journal guidelines
               </td>
-              <td>⏳ 3-5 Days</td>
+              <td>3-5 Days</td>
             </tr>
             <tr>
               <td>Advanced Response Letter Writing</td>
@@ -167,7 +167,7 @@ export default function Home() {
                 Scientific justifications, Citation-backed explanations, Clear
                 rebuttal formatting
               </td>
-              <td>⏳ 5-7 Days</td>
+              <td>5-7 Days</td>
             </tr>
             <tr>
               <td>Reviewer Response & Manuscript Revision</td>
@@ -176,7 +176,7 @@ export default function Home() {
                 Integrated manuscript edits, Enhanced scientific clarity,
                 Compliance with reviewer requests
               </td>
-              <td>⏳ 5-10 Days</td>
+              <td>5-10 Days</td>
             </tr>
             <tr>
               <td>Resubmission & Editor Communication</td>
@@ -185,7 +185,7 @@ export default function Home() {
                 Cover letter assistance, Final compliance check, Editorial query
                 handling
               </td>
-              <td>⏳ 4-6 Days</td>
+              <td>4-6 Days</td>
             </tr>
             <tr>
               <td>Multiple Reviewer Response Assistance</td>
@@ -194,7 +194,7 @@ export default function Home() {
                 Multi-reviewer response coordination, Consistent argumentation
                 across responses
               </td>
-              <td>⏳ 7-10 Days</td>
+              <td>7-10 Days</td>
             </tr>
           </tbody>
         </table>
