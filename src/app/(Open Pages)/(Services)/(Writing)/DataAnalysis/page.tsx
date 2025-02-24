@@ -1,8 +1,14 @@
 "use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
+import FAQ from "@/app/_Common/_FAQ/FAQ";
+import Metadata from "@/app/Metadata";
+import { usePathname } from "next/navigation";
+import { data } from "../../../../utils/metaFile.js";
+import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+const newData: { [key: string]: { [key: string]: string } } = data;
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,62 +24,58 @@ import {
 import { useState } from "react";
 
 export default function Home() {
+  const pathName: string = usePathname()
+    .split("/")
+    .filter((val) => val)
+    .join("");
+  let metaData = newData[pathName];
   const steps = [
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
-      title: "Formulating Research Question & Objectives – Using PICO (Population, Intervention, Comparison, Outcome) framework.",
+      title: "Consultation & Project Scope Definition – Understanding research objectives & dataset complexity.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
-      title: "Systematic Database Search & Study Screening – Retrieving data from PubMed, Cochrane, Scopus, Embase, Google Scholar.",
+      title: "Data Collection & Cleaning – Preparing datasets for analysis by removing inconsistencies.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
-      title: "Data Extraction & Standardization – Extracting key variables for effect size calculation & heterogeneity assessment.",
+      title: "Applying Statistical & Computational Methods – Using software-based algorithms and models.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
-      title: "Statistical Modeling & Meta-Analysis – Using RevMan, R, Stata, and SPSS for effect size & forest plot generation.",
+      title: "Interpretation & Visualization – Generating graphs, charts, and detailed reports.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
-      title: "Writing, Formatting & Compliance Check – Delivering a publication-ready manuscript with statistical accuracy.",
+      title: "Final Review & Revisions – Ensuring statistical accuracy & research compliance.",
     },
   ];
   
 
   const accord2: { question: string; answer: string }[] = [
     {
-      question: "How do you ensure PRISMA compliance in meta-analyses?",
+      question: "What statistical tools do you use?",
       answer:
-        "We follow the PRISMA checklist, ensuring transparent reporting, structured methodology, and reproducibility.",
+        "We use SPSS, R, Python, SAS, MATLAB, Stata, NVivo, and other advanced tools.",
     },
     {
-      question: "Can you conduct advanced statistical modeling for my meta-analysis?",
+      question: "Can you handle large datasets for big data analysis?",
       answer:
-        "Yes! We use RevMan, R, Stata, SPSS, and Python for heterogeneity assessment, forest plots, and meta-regression.",
+        "Yes! We offer big data processing, visualization, and AI-powered insights.",
     },
     {
-      question: "Do you guarantee journal acceptance?",
+      question: "Do you provide raw data along with reports?",
       answer:
-        "While we enhance manuscript quality and compliance, final acceptance depends on journal peer review policies.",
-    },
-    {
-      question: "Can I request revisions after meta-analysis writing?",
-      answer:
-        "Yes, we offer free minor revisions within 14 days of report delivery.",
-    },
-    {
-      question: "How do I get started?",
-      answer:
-        "Simply upload your research question, and our meta-analysis experts will develop a structured, high-quality review.",
+        "Yes, we provide both the analyzed dataset and structured reports.",
     },
 ];
+
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -91,19 +93,19 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Meta-Analysis Writing – Evidence-Based, Statistical &
-              Journal-Ready
+              Professional Data Analysis Services – Statistical & Computational
+              Expertise
             </h1>
             <p className={styles.subtext}>
-              “Strengthen your research with a high-quality meta-analysis. Our
-              experts conduct statistical synthesis, effect size calculations,
-              and critical evaluation to generate robust, evidence-based
-              conclusions for publication in top-tier journals.”
+              “Transform raw data into meaningful insights with our expert data
+              analysis services. Our specialists use advanced statistical
+              techniques, machine learning, and quantitative methods to analyze
+              research data accurately and efficiently.”
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
                 <button className={styles.primaryButton}>
-                  Get a Meta-Analysis Written
+                  Remove AI Content Now
                 </button>
               </a>
 
@@ -118,36 +120,35 @@ export default function Home() {
 
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
+        
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>Key Benefits:</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Expert Biostatisticians & Medical Writers – PhD-level
-                researchers with expertise in systematic reviews & statistical
-                meta-analysis.
+                ✅ Expert Statisticians & Data Scientists – Our team includes
+                PhD-level statisticians, engineers, and data analysts.
               </li>
               <li>
-                ✅PRISMA & Cochrane-Compliant Methodology – Ensuring rigorous
-                selection, data synthesis, and critical appraisal of literature.
+                ✅Advanced Statistical Methods & Machine Learning – Application
+                of SPSS, R, Python, MATLAB, SAS, Stata, NVivo, and more.
               </li>
               <li>
-                ✅ Advanced Statistical Modeling & Effect Size Calculation –
-                Using RevMan, R, Stata, and SPSS for meta-analysis.
+                ✅ Data Integrity & Accuracy – Ensuring error-free, reliable
+                research results with robust statistical validation.
               </li>
               <li>
-                ✅ Journal-Ready Manuscripts – Structured for submission in BMJ,
-                The Lancet, JAMA, PLOS ONE, Cochrane Database, and Nature
-                Reviews.
+                ✅ Customized Data Reports & Visualization – Providing graphs,
+                tables, and interactive dashboards for clear presentation.
               </li>
               <li>
-                ✅ Confidential & Secure Data Handling – HIPAA/GDPR-compliant
-                services for patient safety and clinical data privacy.
+                ✅ Confidential & Secure Data Handling – Guaranteed 100% data
+                confidentiality with encrypted storage and processing.
               </li>
             </ul>
           </div>
 
           <section className={styles.proofreadingWrapper}>
-            <h2 className={styles.headingCenter}>Service Comparison Table</h2>
+            <h2 className={styles.headingCenter}>Our Data Analysis Services</h2>
             <table className="editing-overview-table">
               <thead>
                 <tr>
@@ -159,48 +160,50 @@ export default function Home() {
               </thead>
               <tbody>
                 <tr>
-                  <td>Meta-Analysis Writing</td>
-                  <td>Researchers, Clinicians, Academics</td>
+                  <td>Statistical Data Analysis</td>
+                  <td>Researchers & Academics</td>
                   <td>
-                    PRISMA &amp; Cochrane-compliant, Effect size &amp;
-                    heterogeneity analysis
+                    Hypothesis testing, Statistical modeling, Data
+                    interpretation
                   </td>
-                  <td>⏳ 12-20 Days</td>
+                  <td>⏳ 5-7 Days</td>
                 </tr>
                 <tr>
-                  <td>Statistical Data Analysis &amp; Modeling</td>
-                  <td>Healthcare &amp; Pharma</td>
+                  <td>Clinical Data Analysis</td>
+                  <td>Healthcare & Pharma</td>
                   <td>
-                    Fixed/random effects models, Bias &amp; subgroup analysis,
-                    Publication-ready graphs
-                  </td>
-                  <td>⏳ 12-25 Days</td>
-                </tr>
-                <tr>
-                  <td>Database Search &amp; Study Selection</td>
-                  <td>Researchers conducting meta-analyses</td>
-                  <td>
-                    Systematic literature screening, PubMed, Embase, Cochrane
-                    search
+                    Biostatistics, Clinical trial data validation, Drug efficacy
+                    studies
                   </td>
                   <td>⏳ 7-10 Days</td>
                 </tr>
                 <tr>
-                  <td>Critical Appraisal &amp; Bias Risk Assessment</td>
-                  <td>Evidence-Based Medicine</td>
+                  <td>Machine Learning & AI-Based Analysis</td>
+                  <td>AI & Big Data Research</td>
+                  <td>Predictive analytics, Data mining, Deep learning</td>
+                  <td>⏳ 7-12 Days</td>
+                </tr>
+                <tr>
+                  <td>Survey Data Analysis</td>
+                  <td>Market Researchers</td>
                   <td>
-                    GRADE, RoB 2, AMSTAR-2, Sensitivity analysis &amp;
-                    interpretation
+                    Qualitative & quantitative analysis, Sentiment analysis
+                  </td>
+                  <td>⏳ 5-7 Days</td>
+                </tr>
+                <tr>
+                  <td>Big Data Processing</td>
+                  <td>Businesses & Enterprises</td>
+                  <td>
+                    Data cleaning, Trend forecasting, Business intelligence
                   </td>
                   <td>⏳ 10-15 Days</td>
                 </tr>
                 <tr>
-                  <td>Journal Submission &amp; Peer Review Handling</td>
-                  <td>Authors preparing for publication</td>
-                  <td>
-                    Formatting &amp; compliance, Response to reviewer comments
-                  </td>
-                  <td>⏳ 7-10 Days</td>
+                  <td>Qualitative Research Analysis</td>
+                  <td>Social Science & Behavioral Studies</td>
+                  <td>NVivo-based thematic analysis, Text mining</td>
+                  <td>⏳ 6-9 Days</td>
                 </tr>
               </tbody>
             </table>
@@ -239,25 +242,24 @@ export default function Home() {
 
             <div className="before-after-example-content">
               <div className="before-example">
-                <h3>Before (Unstructured Literature Summary Without Quantitative Synthesis):</h3>
+                <h3>Before (Raw Data with No Structure):</h3>
                 <p className="before-text">
-                “Several studies have examined the effectiveness of Drug X for treating Disease Y. Some reported positive results, while others did not find significant differences.”
+                “Survey conducted on 1,500 participants, with responses collected on education preferences. Data in Excel sheets with no structure.”
                 </p>
               </div>
 
               <div className="after-example">
-                <h3>After (Professionally Written, PRISMA-Compliant Meta-Analysis):</h3>
+                <h3>After (Professional Data Analysis & Visualization):</h3>
                 <p className="after-text">
-                “A meta-analysis of 18 randomized controlled trials (n=7,000) assessing Drug X for Disease Y was conducted. The pooled effect size indicated a significant reduction in disease severity (SMD -0.75, 95% CI -0.50 to -1.00, ). No major publication bias was observed (Egger’s test, p=0.18).”
+                “The study analyzed survey responses from 1,500 participants using sentiment analysis and logistic regression. Findings indicate a 65% preference for online learning, with a correlation coefficient of 0.78 .”
                 </p>
               </div>
             </div>
 
+
             <div className="explanation">
               <p>
-              Meta-Analysis Writing ensures clarity, statistical rigor, and high-impact research synthesis.
-
-
+              Our plagiarism reduction ensures originality, proper citation, and journal compliance.
               </p>
             </div>
           </section>
@@ -270,22 +272,18 @@ export default function Home() {
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">
-                $0.18 per word (Basic Meta-Analysis) 
-                </p>
+                <p className="pricing-text">$0.12 per data point (Statistical Analysis) </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
-                <p className="delivery-time">
-                $0.30 per word (Advanced Statistical Modeling & Bias Assessment)
-                </p>
+                <p className="delivery-time">$0.20 per data point (Advanced Machine Learning)</p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                12 Days – 25 Days (Depending on complexity)
+                5 Days – 15 Days (Depending on complexity)
                 </p>
               </div>
             </div>

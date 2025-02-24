@@ -78,8 +78,7 @@ export default function Home() {
       answer:
         "No, our editors ensure that the original intent and meaning are preserved during the revision process.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -308,7 +307,7 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
               <button className={styles.primaryButton}>
-              [Start AI Reduction Now]
+                [Start AI Reduction Now]
               </button>
             </a>
           </div>
@@ -358,7 +357,7 @@ export default function Home() {
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                24-48 hours (additional fees apply)
+                  24-48 hours (additional fees apply)
                 </p>
               </div>
             </div>
