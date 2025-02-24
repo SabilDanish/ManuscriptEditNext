@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
@@ -8,379 +8,371 @@ import { serviceData } from "@/app/utils/service";
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import '../../../../_Common/getHelp/getHelp.css';
+import "../../../../_Common/getHelp/getHelp.css";
 import "./Statistical.css";
+import styles from "@/app/_Common/Renovation/Renovation.module.css";
+import "@/app/_Common/Renovation/Renovation.css";
+import "@/app/_Common/Dropdown2/Dropdown2.css";
+
+import {
+  faFileUpload,
+  faSearch,
+  faEdit,
+  faCheckCircle,
+  faRedo,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 export default function Home() {
+  const steps = [
+    {
+      stepss: "Step 1 ➔",
+      icon: faFileUpload,
+      title: "Understanding Research Objectives – Define statistical goals and variables.",
+    },
+    {
+      stepss: "Step 2 ➔",
+      icon: faSearch,
+      title: "Data Cleaning & Preparation – Remove inconsistencies, handle missing values.",
+    },
+    {
+      stepss: "Step 3 ➔",
+      icon: faEdit,
+      title: "Applying Statistical Models – Conduct hypothesis testing, regression, or multivariate analysis.",
+    },
+    {
+      stepss: "Step 4 ➔",
+      icon: faCheckCircle,
+      title: "Data Interpretation & Visualization – Generate statistical summaries, graphs, and tables.",
+    },
+    {
+      stepss: "Step 5 ➔",
+      icon: faCheckCircle,
+      title: "Review & Revisions – Final validation and refinements for publication.",
+    },
+  ];
+  
+
+  const accord2: { question: string; answer: string }[] = [
+    {
+      question: "What statistical tools do you use?",
+      answer:
+        "We use SPSS, R, Python, MATLAB, SAS, Stata, NVivo, and other advanced tools.",
+    },
+    {
+      question: "Can you help interpret my statistical results?",
+      answer:
+        "Yes! Our service includes detailed statistical interpretations and visualization.",
+    },
+    {
+      question: "Do you provide raw data along with the reports?",
+      answer:
+        "Yes, we provide both the analyzed dataset and structured reports.",
+    },
+    {
+      question: "What if I need modifications in the analysis?",
+      answer:
+        "We offer revisions and expert consultation to refine statistical findings.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply upload your dataset, and our statisticians will conduct in-depth analysis.",
+    },
+];
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const gap = {
+    marginTop: "40px",
+  };
   return (
     <>
-      {/* {breadcrum("Services / Writing", "Statistical Analysis")} */}
-      <section className="pt-5 pb-5">
-        
-          {/* <div className="row conrow">
-            <div className="col-md-12">
-              <h3 className="pt-2 pb-3"> Statistical Analysis</h3>
-              <p>
-                Statistical Analysis is a specialized service offered by
-                ManuscriptEdit, dedicated to helping clients derive meaningful
-                insights from data through rigorous statistical methods and
-                techniques. Whether it's for academic research, business
-                decision-making, or scientific investigation, ManuscriptEdit's
-                Statistical Analysis service provides comprehensive support
-                throughout the data analysis process.
-              </p>
-              <div className="em-about-icon-box2">
-                <div className="list-icon">
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6> Data Preparation</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6> Descriptive Statistics</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>Inferential Statistics</h6>
-                  </span>
-                </div>
+      <div>
+        <section style={gap}>
+          <div className={styles.textWrapper}>
+            <h1 className={styles.heading}>
+              &quot;Statistical Analysis Services – Data-Driven Accuracy &amp;
+              Scientific Rigor&quot;
+            </h1>
+            <p className={styles.subtext}>
+              &quot;Transform your raw data into statistically sound insights
+              with expert-led analysis. We apply advanced statistical techniques
+              to ensure precise, valid, and reproducible results.&quot;
+            </p>
+            <div className={styles.buttonGroup}>
+              <a href="https://secure.manuscriptedit.com/quotation">
+                <button className={styles.primaryButton}>
+                  Get Statistical Analysis Services
+                </button>
+              </a>
+
+              <a href="https://secure.manuscriptedit.com/quotation">
+                <button className={styles.secondaryButton}>
+                  Request a Free Sample
+                </button>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Proofreading Overview Section */}
+        <section className={styles.benefitsWrapper}>
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>Who Should Use This Service?</h2>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✅ Expert-Led Analysis – PhD statisticians specializing in
+                various disciplines.
+              </li>
+              <li>
+                ✅ Advanced Statistical Methods – ANOVA, Regression, Bayesian
+                Modeling, T-tests, and more.
+              </li>
+              <li>
+                ✅Data Accuracy &amp; Reliability – Ensuring statistical
+                validity and reproducibility.
+              </li>
+              <li>
+                ✅ Publication-Ready Outputs – Graphs, tables, and structured
+                interpretations.
+              </li>
+              <li>
+                ✅ Confidentiality Guaranteed – Secure handling of research data
+                with strict privacy policies.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* New Proofreading Details Section */}
+
+        <section className={styles.proofreadingWrapper}>
+          <h2 className={styles.headingCenter}>
+            Our Statistical Analysis Services
+          </h2>
+          <table className="editing-overview-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Best For</th>
+                <th>Key Features</th>
+                <th>Turnaround Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Descriptive Statistics</td>
+                <td>Summarizing and visualizing research data</td>
+                <td>Mean, median, variance, histograms</td>
+                <td>⏳ 3-5 Days</td>
+              </tr>
+              <tr>
+                <td>Inferential Statistics</td>
+                <td>Hypothesis testing and drawing conclusions</td>
+                <td>T-tests, Chi-square, ANOVA</td>
+                <td>⏳ 5-7 Days</td>
+              </tr>
+              <tr>
+                <td>Regression Analysis</td>
+                <td>Identifying relationships between variables</td>
+                <td>Linear, Logistic, Multiple Regression</td>
+                <td>⏳ 5-8 Days</td>
+              </tr>
+              <tr>
+                <td>Multivariate Analysis</td>
+                <td>Handling complex datasets</td>
+                <td>Factor analysis, PCA, MANOVA</td>
+                <td>⏳ 6-9 Days</td>
+              </tr>
+              <tr>
+                <td>Bayesian Statistics</td>
+                <td>Probabilistic modeling and decision-making</td>
+                <td>Bayesian inference, Markov Chains</td>
+                <td>⏳ 7-10 Days</td>
+              </tr>
+              <tr>
+                <td>Survival Analysis</td>
+                <td>Medical and clinical research data</td>
+                <td>Kaplan-Meier curves, Cox Regression</td>
+                <td>⏳ 7-12 Days</td>
+              </tr>
+              <tr>
+                <td>Time Series Analysis</td>
+                <td>Forecasting trends and patterns</td>
+                <td>ARIMA, GARCH, Exponential Smoothing</td>
+                <td>⏳ 7-10 Days</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <div className={styles.processContainer}>
+          <h2 className={styles.processTitle}>How It Works</h2>
+          <div className={styles.processSteps1}>
+            {steps.map((step, index) => (
+              <div key={index} className={styles.processStep}>
+                <h5 className={styles.stepHeading}>{step.stepss}</h5>
+                <FontAwesomeIcon
+                  icon={step.icon}
+                  size="3x"
+                  className={styles.stepIcon}
+                />
+                <h3 className={styles.stepDescription}>{step.title}</h3>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.buttonGroup}>
+            <a href="https://secure.manuscriptedit.com/quotation">
+              <button className={styles.primaryButton}>
+                [Start AI Reduction Now]
+              </button>
+            </a>
+          </div>
+
+          <section className="before-after-example-section">
+            <h2 className="before-after-example-heading">
+              Before and After Example
+            </h2>
+
+            <div className="before-after-example-content">
+              <div className="before-example">
+                <h3>Before (Raw Data with No Statistical Structure):</h3>
+                <p className="before-text">
+                &quot;Dataset contains patient outcomes across 10 hospitals but lacks structured statistical
+                interpretation.&quot;
+                </p>
+              </div>
+
+              <div className="after-example">
+                <h3>After (Expert Statistical Analysis &amp; Results Interpretation):</h3>
+                <p className="after-text">
+                &quot;A logistic regression model found a significant association (p&lt;0.05) between patient
+recovery rates and treatment type, with an odds ratio of 2.5, indicating a 2.5x higher
+likelihood of recovery in Group A patients.&quot;
+                </p>
               </div>
             </div>
-            
-          </div> */}
-        
-      </section>
+          </section>
 
+          <section className="pricing-turnaround-section">
+            <h2 className="pricing-turnaround-heading">
+              Pricing and Turnaround Time
+            </h2>
 
+            <div className="pricing-details">
+              <div className="pricing-item">
+                <h3>Starting Price</h3>
+                <p className="pricing-text">$0.12 per data point (Basic Statistical Analysis)</p>
+              </div>
 
-      <section className="pb-5">
-        <>
-          
-          <div className="row ServicesSection">
-              {
-                serviceData['Data Analysis Assistance'] && serviceData['Data Analysis Assistance'].items && serviceData['Data Analysis Assistance'].items.map(item => {
-                  const { title, features, description, link } = item;
-                  return (
+              <div className="delivery-item">
+                <h3>Standard Delivery</h3>
+                <p className="delivery-time">$0.20 per data point
+                (Advanced Statistical Modeling)</p>
+              </div>
 
-
-                    <div className="col-lg-3">
-                      <div className='carousel-item-custom'>
-                        <h2><FontAwesomeIcon icon={faServicestack} />{title}</h2>
-                        <p>{description}</p>
-                        <ul>
-                          {features.map((feature: any, index: number) => (
-                            <li key={index}>
-                              <FontAwesomeIcon icon={faCheck} style={{ marginRight: '8px' }} />
-                              {feature}
-                            </li>
-
-                          ))}
-                        </ul>
-
-                        <a href={link}>
-                          <button className="Know-More">Request a Quote</button>
-                        </a>
-                      </div>
-                    </div>
-
-
-
-
-
-                  )
-                })
-              }
-
-              
-
+              <div className="delivery-item">
+                <h3>Express Delivery</h3>
+                <p className="delivery-time">
+                3 – 12 Days (Based on complexity and dataset size)
+                </p>
+              </div>
             </div>
-          
 
+            <div className="cta-container">
+              <a
+                href="https://secure.manuscriptedit.com/quotation"
+                className="cta-button"
+              >
+                Check Pricing and Get a Quote
+              </a>
+            </div>
+          </section>
 
+          <div className="wcus-container">
+            <div className="wcus-client-reviews">
+              <h3 className="editing-overview-heading">Testimonial</h3>
+              {[
+                {
+                  imgSrc:
+                    "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                  text: "The best editing service I've used. Got published in record time!",
+                  name: "Dr. Emily Carter",
+                },
+                {
+                  imgSrc:
+                    "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                  text: "Exceptional support from expert editors. Highly recommended!",
+                  name: "Prof. John Williams",
+                },
+              ].map((review, index) => (
+                <div className="wcus-review" key={index}>
+                  <img src={review.imgSrc} alt="Client" />
+                  <p>
+                    "{review.text}" - <strong>{review.name}</strong>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        </>
+          <div className="container" style={{ marginTop: "3rem" }}>
+            <div className="accordion__wrapper2">
+            <h1 className="accordion__title">
+              Faq
+              </h1>
 
-      </section>
-
-
-
-
-
-
-      
-      <div className="tab_area bg_color2 pt-80 pb-100">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="tab_content">
-                <ul className="nav nav-tabs" role="tablist">
-                  <li className="nav-item active">
-                    <a
-                      className="nav-link "
-                      data-toggle="tab"
-                      href="#tabs-1"
-                      role="tab"
-                      aria-expanded="true"
-                    >
-                      What You Provide
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      data-toggle="tab"
-                      href="#tabs-2"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      What We Provide
-                    </a>
-                  </li>
-                </ul>
-                <div className="tab-content white_bg pt-1 pb-5 pl-4 pr-4">
+              {accord2.map((faq, index) => (
+                <div
+                  className="accordion"
+                  key={index}
+                  style={{
+                    paddingBottom: "1rem",
+                    marginBottom: "1rem",
+                    color: "#494949",
+                  }}
+                >
                   <div
-                    className="tab-pane mt-60 active"
-                    id="tabs-1"
-                    role="tabpanel"
+                    className="accordion__header"
+                    onClick={() => toggleAccordion(index)}
                   >
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>Topic.
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>Main
-                              objective.
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Primary
-                              and secondary endpoints.
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Raw data
-                              in excel sheet.
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <h2 className="accordion__question">{faq.question}</h2>
+                    {openIndex === index ? "⮝" : "⮟"}
+                    {/* <span className="accordion__icon">
+                <i
+                  className={`${openIndex === index ? "ri-subtract-fill" : "ri-add-line"}`}
+                ></i>
+              </span> */}
                   </div>
-                  <div className="tab-pane mt-60" id="tabs-2" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Results
-                              using SPSS software.
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Data
-                              analysis using the following methods (but not
-                              limited to them) as may be necessary depending on
-                              the research question being addressed:
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Normality
-                              test
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>
-                              Parametric/non-parametric analysis
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Student’s
-                              t-test/Mann-Whitney U test
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Kruskal–Wallis H test/Anova
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Pearson’s
-                              chi-square/ Fisher's exact test
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Correlation analysis
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Linear/logistic regression
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Survival
-                              analysis
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Cox
-                              regression
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Construction of tables and graphs.
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Interpretation of results.
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane mt-60" id="tabs-3" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div className="row">
-                          <div className="col-lg-12">
-                            <div
-                              className="about_icon_box wow fadeInUp animated"
-                              data-wow-delay="0.5s"
-                              style={{
-                                visibility: "visible",
-                                animationDelay: "0.5s",
-                                animationName: "fadeInUp",
-                              }}
-                            >
-                              <p>
-                                Documents for marketing communications are
-                                mainly related to advertising, product promotion
-                                and marketing. We offer writing service for the
-                                followings:
-                              </p>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Product catalogue
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Brochure
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Advertisements for your organization
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Newsletter
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i> Web
-                                  content
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  orporate presentation
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i> Case
-                                  studies
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Business proposal
-                                </span>
-                              </div>
-                              <h6 className="mb-3">During writing</h6>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Necessary clarification will be sought by our
-                                  expert technical writers
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Feedback on the 1st draft within 30 days of
-                                  delivery
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div
+                    className="accordion__content"
+                    style={{
+                      height: openIndex === index ? "auto" : "0",
+                    }}
+                  >
+                    <div
+                      className="accordion__answer"
+                      style={{
+                        padding: "0",
+                        paddingTop: "0.5rem",
+                        marginBottom: "0",
+                        backgroundColor: "#f0f8ff",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
                   </div>
                 </div>
-              </div>
-              <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
-              Request a Quote
-              </button>
-              <button onClick={() => {redirect('contact-us')}} className="btn btn-primary mt-3 mr-3">
-              Schedule a Call
-              </button>
+              ))}
             </div>
           </div>
         </div>
       </div>
-      {SpecializedArea(false)}
-      {ourProfessional()}
-      {howWeWork(2)}
     </>
   );
 }

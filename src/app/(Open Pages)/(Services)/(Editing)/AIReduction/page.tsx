@@ -34,51 +34,51 @@ export default function Home() {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
       title:
-        "Upload Your Document – Securely submit your non-English manuscript.",
+        "Upload Your Manuscript – Securely submit your document through our platform.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
       title:
-        "Subject-Matter Expert Translation – Assigned translator ensures accuracy.",
+        "AI Content Analysis – Advanced detection tools identify AI-generated sections.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
       title:
-        "Review & Proofreading – Translated document is refined for fluency.",
+        "Expert Human Revision – Professional editors rephrase identified content to ensure originality.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
       title:
-        "Final Delivery & Revisions – Receive a polished, publication-ready manuscript.",
+        "Receive Revised Manuscript – Obtain a polished document free from AI-generated text.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
-      title: "Optional Add-Ons – Choose copyediting or formatting if needed.",
+      title:
+        "Optional Revisions – Request minor adjustments within 14 days at no extra cost.",
     },
   ];
 
   const accord2: { question: string; answer: string }[] = [
     {
-      question: "Which languages do you support?",
+      question: "Why is removing AI-generated content important?",
       answer:
-        "We provide translations for Chinese, Japanese, Spanish, French, German, Russian, Portuguese, and more into English and vice versa.",
+        "Leading journals prohibit AI-generated text without consent, and its inclusion can be deemed scientific misconduct.",
     },
     {
-      question: "Who translates my document?",
+      question: "How do you detect AI-generated content?",
       answer:
-        "PhD-level subject-matter experts with academic and research experience.",
+        "We employ advanced detection tools capable of identifying AI-authored text with high accuracy.",
     },
     {
-      question: "Do you use AI for translation?",
+      question: "Will the meaning of my content change after AI reduction?",
       answer:
-        "No, all translations are done by human experts, ensuring accuracy and academic integrity.",
+        "No, our editors ensure that the original intent and meaning are preserved during the revision process.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -92,23 +92,21 @@ export default function Home() {
 
   return (
     <>
-      {<Metadata metaData={metaData} />}
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              &quot;Break Language Barriers – Translate Your Research for Global
-              Impact!&quot;
+              &quot;Ensure Authenticity with Our AI Reduction Service&quot;
             </h1>
             <p className={styles.subtext}>
-              &quot;Accurate, high-quality academic translation by
-              subject-matter experts to ensure your research reaches a global
-              audience with clarity and precision.&quot;
+              &quot;Enhance the credibility of your research by eliminating
+              AI-generated traces, aligning with stringent academic and
+              publication standards.&quot;
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
                 <button className={styles.primaryButton}>
-                  Get Translation Now
+                  Remove AI Content Now
                 </button>
               </a>
 
@@ -124,13 +122,14 @@ export default function Home() {
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>What is Translation Service?</h2>
+            <h2 className={styles.heading}>What is AI Reduction?</h2>
             <p className={styles.subtext}>
-              Translation Service ensures that your academic and research
-              documents are accurately translated while maintaining their
-              technical accuracy, academic tone, and cultural nuances. Our team
-              of PhD translators specializes in STEM and Non-STEM subjects,
-              ensuring discipline-specific accuracy.
+              AI Reduction involves the meticulous identification and removal of
+              AI-generated content from your manuscript, ensuring it reflects
+              original human authorship. This process is crucial as leading
+              scientific journals prohibit the use of AI-generated text without
+              explicit editorial consent, considering its inclusion without
+              approval as scientific misconduct.
             </p>
           </div>
 
@@ -138,16 +137,16 @@ export default function Home() {
             <h2 className={styles.heading}>Who Should Use This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ PhD &amp; MS Students – Convert theses and dissertations into
-                English for wider accessibility.
+                ✅ Researchers &amp; Academics – To comply with publication
+                standards and avoid potential retractions.
               </li>
               <li>
-                ✅ Doctors &amp; Academics – Prepare research papers, grant
-                proposals, and reports for international publication.
+                ✅ PhD &amp; MS Students – Ensuring theses and dissertations are
+                free from unauthorized AI content.
               </li>
               <li>
-                ✅ Researchers &amp; Institutions – Collaborate globally by
-                translating technical reports and academic materials.
+                ✅ Authors &amp; Writers – Maintaining originality and
+                credibility in their work.
               </li>
             </ul>
           </div>
@@ -156,52 +155,53 @@ export default function Home() {
             <h2 className={styles.heading}>Key Benefits:</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Maintains academic integrity, terminology, and formatting.
+                ✅ Compliance with Publication Standards – Aligns your
+                manuscript with journals&#39; strict guidelines against
+                AI-generated content.
               </li>
               <li>
-                ✅ Proofread and quality-checked to match publication standards.
+                ✅ Enhanced Credibility – Demonstrates commitment to authentic
+                research and writing practices.
               </li>
               <li>
-                ✅ Supports major languages including Chinese, Japanese,
-                Spanish, French, German, and more.
+                ✅ Risk Mitigation – Reduces the possibility of manuscript
+                rejection due to AI content detection.
               </li>
             </ul>
           </div>
 
           <section className={styles.proofreadingWrapper}>
             <h2 className={styles.headingCenter}>
-              When Should You Choose Translation Services?
+              When Should You Choose AI Reduction?
             </h2>
             <table className="editing-overview-table">
               <thead>
                 <tr>
                   <th>Your Document Status</th>
-                  <th>Best Service</th>
-                  <th>Why?</th>
+                  <th>Recommended Service</th>
+                  <th>Reason</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Manuscript in a non-English language</td>
-                  <td>Translation Service</td>
-                  <td>
-                    Converts it to academic English while maintaining accuracy.
-                  </td>
+                  <td>Contains AI-generated sections</td>
+                  <td>AI Reduction</td>
+                  <td>Ensures compliance with publication ethics.</td>
                 </tr>
                 <tr>
-                  <td>Needs improved readability post-translation</td>
+                  <td>High similarity index due to non-AI sources</td>
+                  <td>Plagiarism Check &amp; Reduction</td>
+                  <td>Addresses content originality concerns.</td>
+                </tr>
+                <tr>
+                  <td>Requires improvement in clarity and structure</td>
                   <td>Copyediting</td>
-                  <td>Enhances clarity and fluency of translated content.</td>
+                  <td>Enhances readability and coherence.</td>
                 </tr>
                 <tr>
-                  <td>Requires journal-specific formatting</td>
+                  <td>Needs formatting per specific guidelines</td>
                   <td>Formatting Service</td>
-                  <td>Aligns with submission guidelines.</td>
-                </tr>
-                <tr>
-                  <td>High similarity index detected</td>
-                  <td>Plagiarism Reduction</td>
-                  <td>Rewrites flagged content while retaining accuracy.</td>
+                  <td>Aligns document with required standards.</td>
                 </tr>
               </tbody>
             </table>
@@ -217,12 +217,18 @@ export default function Home() {
           <div className={styles.proofreadingBox}>
             <h3 className={styles.proofreadingSubheading}>🚫 Not Included</h3>
             <ul className={styles.proofreadingList}>
-              <li>❌No rewriting or paraphrasing for plagiarism reduction.</li>
               <li>
-                ❌No manuscript restructuring (offered under substantive
-                editing).
+                ❌Major Content Overhaul – Does not involve extensive rewriting
+                beyond AI content removal.
               </li>
-              <li>❌ No AI-generated translations – fully human-reviewed.</li>
+              <li>
+                ❌Plagiarism Detection – Separate service focusing on
+                non-AI-related content similarities.
+              </li>
+              <li>
+                ❌ Formatting Adjustments – Formatting services are available
+                separately.
+              </li>
             </ul>
           </div>
           <div className={styles.proofreadingBox}>
@@ -230,24 +236,58 @@ export default function Home() {
 
             <ul className={styles.proofreadingList}>
               <li>
-                ✅ Human Translation – AI-free translation done by
-                subject-matter experts.
+                ✅ Comprehensive AI Content Detection – Utilizing advanced tools
+                to identify AI- generated text within your document.
               </li>
               <li>
-                ✅ Academic Tone &amp; Style Retention – Ensures consistency
-                with research writing.
+                ✅Human-Led Content Rewriting – Expert editors rephrase or
+                replace AI-generated sections to ensure originality.
               </li>
               <li>
-                ✅ Terminology Accuracy – Discipline-specific language
-                refinement.
-              </li>
-              <li>
-                ✅ Formatting &amp; Structure Preservation – Keeps original
-                document formatting intact.
+                ✅ Detailed Report – Provides insights into detected AI content
+                and the modifications made.
               </li>
             </ul>
           </div>
         </section>
+
+        <section className={styles.proofreadingWrapper}>
+          <h2 className={styles.headingCenter}>
+            How AI Reduction Compares to Other Services
+          </h2>
+          <table className="editing-overview-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Scope</th>
+                <th>Ideal For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AI Reduction</td>
+                <td>Removes AI-generated content sections</td>
+                <td>Manuscripts with AI-authored content</td>
+              </tr>
+              <tr>
+                <td>Plagiarism Check &amp; Reduction</td>
+                <td>Identifies and reduces non-AI content similarities</td>
+                <td>Documents with potential unintentional plagiarism</td>
+              </tr>
+              <tr>
+                <td>Copyediting</td>
+                <td>Improves language, clarity, and flow</td>
+                <td>Well-structured drafts needing refinement</td>
+              </tr>
+              <tr>
+                <td>Substantive Editing</td>
+                <td>In-depth editing for content and structure</td>
+                <td>Early drafts requiring significant revisions</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <div className={styles.processContainer}>
           <h2 className={styles.processTitle}>How It Works</h2>
           <div className={styles.processSteps1}>
@@ -265,9 +305,9 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="">
+            <a href="https://secure.manuscriptedit.com/quotation">
               <button className={styles.primaryButton}>
-                Start Translation Now
+                [Start AI Reduction Now]
               </button>
             </a>
           </div>
@@ -279,21 +319,20 @@ export default function Home() {
 
             <div className="before-after-example-content">
               <div className="before-example">
-                <h3>Before (Original Manuscript in Spanish):</h3>
+                <h3>Before (With AI-Generated Content):</h3>
                 <p className="before-text">
-                  &quot;Los avances en inteligencia artificial han transformado
-                  la forma en que los médicos diagnostican enfermedades,
-                  mejorando significativamente la precisión de los
-                  diagnósticos.&quot;
+                  &quot;The study&#39;s outcomes were significantly impacted by
+                  the algorithm&#39;s performance, showcasing unprecedented
+                  accuracy levels.&quot;
                 </p>
               </div>
 
               <div className="after-example">
-                <h3>After (Translated into English by Expert Translator):</h3>
+                <h3>After (Post AI Reduction):</h3>
                 <p className="after-text">
-                  &quot;Advancements in artificial intelligence have
-                  revolutionized the way doctors diagnose diseases,
-                  significantly improving diagnostic accuracy.&quot;
+                  &quot;Our analysis revealed that the algorithm&#39;s
+                  performance markedly influenced the study&#39;s results,
+                  demonstrating exceptional accuracy.&quot;
                 </p>
               </div>
             </div>
@@ -307,26 +346,26 @@ export default function Home() {
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">$0.08 per word</p>
+                <p className="pricing-text">$0.06 per word</p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
-                <p className="delivery-time">4-7 business days</p>
+                <p className="delivery-time">3-5 business days</p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                  48-72 hours available at additional cost
+                  24-48 hours (additional fees apply)
                 </p>
               </div>
             </div>
 
-            <div className="cta-container">
+            <div className={styles.buttonGroup}>
               <a
                 href="https://secure.manuscriptedit.com/quotation"
-                className="cta-button"
+                className={styles.primaryButton}
               >
                 Check Pricing and Get a Quote
               </a>
@@ -362,7 +401,7 @@ export default function Home() {
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-            <h1 className="accordion__title">
+              <h1 className="accordion__title">
               Faq
               </h1>
 

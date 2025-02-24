@@ -25,7 +25,7 @@ const menu: MenuItem[]  = [
           { label: "Substantive Editing", link: "/SubEditing" },
           { label: "Extensive Substantive Editing", link: "/ExtensiveSubstantiveEditing" },
           { label: "Plagiarism Check and Reduction", link: "/PlagiarismCheckReduction" },
-          { label: "A.I Reduction", link: "/EditingOverview" },
+          { label: "A.I Reduction", link: "/AIReduction" },
           { label: "Translation Services", link: "/TranslationOverview" },
         ],
       },
@@ -63,7 +63,7 @@ const menu: MenuItem[]  = [
           { label: "Statistical Analysis", link: "/StatisticalAnalysis" },
           { label: "Systematic Review", link: "/SystematicReview" },
           { label: "Meta Analysis", link: "/MetaAnalysis" },
-          { label: "Data Analysis", link: "/MetaAnalysis" },
+          { label: "Data Analysis", link: "/DataAnalysis" },
         ],
       },
       {

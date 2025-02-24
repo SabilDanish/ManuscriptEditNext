@@ -120,13 +120,13 @@ export default function ProofreadingServices() {
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>Who Should Use This Service?</h2>
           <ul className={styles.benefitsList}>
-            <li>📌 PhD and MS students preparing theses and dissertations</li>
+            <li> ✅ PhD and MS students preparing theses and dissertations</li>
             <li>
-              📌 Doctors and academics submitting journal articles, conference
+            ✅ Doctors and academics submitting journal articles, conference
               papers, and grant proposals
             </li>
             <li>
-              📌 Researchers refining scientific and technical reports for
+            ✅ Researchers refining scientific and technical reports for
               publication
             </li>
           </ul>

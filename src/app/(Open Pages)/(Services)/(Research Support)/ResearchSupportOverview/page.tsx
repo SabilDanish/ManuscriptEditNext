@@ -4,6 +4,10 @@ import whyToChoose from "@/app/_Common/_WhyToChoose/WhyToChoose";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import styles from "@/app/_Common/Renovation/Renovation.module.css";
+import "@/app/_Common/Renovation/Renovation.css";
+
+import "@/app/_Common/Dropdown2/Dropdown2.css";
 
 export default function Home() {
   const [currency, setCurrency] = useState("");
@@ -27,702 +31,299 @@ export default function Home() {
   };
   LocationBasedPricing();
 
+  const gap = {
+    marginTop: "40px",
+  };
+
+  const services = [
+    {
+      service: "Research Proposal Writing",
+      bestFor: "Early-stage researchers",
+      features:
+        "Structured proposal development and hypothesis framing",
+    },
+    {
+      service: "Literature Review Assistance",
+      bestFor: "PhD & MS students",
+      features: "Comprehensive review with critical analysis",
+    },
+    {
+      service: "Research Methodology Support",
+      bestFor: "Researchers designing studies",
+      features: "Guidance on qualitative and quantitative methods",
+    },
+    {
+      service: "Data Collection & Analysis",
+      bestFor: "Researchers handling large datasets",
+      features:
+        "Statistical analysis with SPSS, R, MATLAB, and Python",
+    },
+    {
+      service: "Manuscript Writing & Development",
+      bestFor: "Authors preparing research for publication",
+      features: "End-to-end support from writing to final editing",
+    },
+  ];
+  const accord2: { question: string; answer: string }[] = [
+    {
+      question: "Do you provide end-to-end research support?",
+      answer:
+        "Yes! We assist with topic selection, literature review, methodology, and manuscript writing.",
+    },
+    {
+      question: "Can you help with statistical analysis?",
+      answer:
+        "Absolutely! We support SPSS, R, Python, MATLAB, and other data tools.",
+    },
+    {
+      question: "Do you offer PhD mentoring?",
+      answer:
+        "Yes, we provide mentorship for research planning, proposal writing, and thesis development.",
+    },
+];
+
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <>
-      {/* {breadcrum("Services / Research Support", "Research Support Overview")} */}
+      <section style={gap}>
+        <div className={styles.textWrapper}>
+          <h1 className={styles.heading}>
+            Research Support – Elevate Your Research with Expert Guidance
+          </h1>
+          <p className={styles.subtext}>
+            Welcome to ManuscriptEdit, your trusted partner in comprehensive
+            research support. We provide expert assistance at every stage of
+            your research journey, from topic selection to data analysis and
+            manuscript writing.
+          </p>
+        </div>
+      </section>
 
-      {/* <div
-        className="container mt-4"
-        style={{ display: currency === "INR" ? "none" : "" }}
-      >
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
+      <section className={styles.benefitsWrapper}>
+        <div className={styles.benefitsBox}>
+          <h2 className={styles.heading}>
+            Why Choose ManuscriptEdit for Research Support?
+          </h2>
+
+          <section className={styles.benefitsWrapper}>
+            <h4>Customized Research Assistance for Every Stage</h4>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✅ Support for early-stage research, literature review,
+                methodology, and data analysis.
+              </li>
+              <li>
+                ✅ Expert guidance in hypothesis framing, study design, and
+                statistical analysis.
+              </li>
+            </ul>
+          </section>
+
+          <section className={styles.benefitsWrapper}>
+            <h4>Expert-Led Research Development</h4>
+            <ul className={styles.benefitsList}>
+              <li>✅ PhD and subject-matter experts in various disciplines.</li>
+              <li>
+                ✅ Assistance with quantitative, qualitative, and mixed-method
+                research.
+              </li>
+            </ul>
+          </section>
+
+          <section className={styles.benefitsWrapper}>
+            <h4>Ethical &amp; Reliable Research Practices</h4>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✅ Ensures adherence to academic integrity and ethical
+                guidelines..
+              </li>
+              <li>
+                ✅ Plagiarism-free research support, maintaining originality.
+              </li>
+            </ul>
+          </section>
+
+          <section className={styles.benefitsWrapper}>
+            <h4>Data-Driven Insights &amp; Advanced Analysis</h4>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✅ Assistance with SPSS, MATLAB, R, Python, NVivo, and other
+                research tools.
+              </li>
+              <li>✅ Comprehensive data visualization and interpretation.</li>
+            </ul>
+          </section>
+
+          <section className={styles.benefitsWrapper}>
+            <h4>Proven Track Record in Research Success</h4>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✅ Supported thousands of researchers in producing high-quality
+                research.
+              </li>
+              <li>
+                ✅ Assisted in journal-ready manuscript preparation and
+                conference presentations.
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <section className={styles.benefitsWrapper}>
+        <div className="overflow-x-auto p-4">
+          <h2 className="text-xl font-semibold mb-4">
+            Our Research Support Services at a Glance
+          </h2>
+          <table className="min-w-full bg-white border border-gray-300">
+            <thead className="bg-gray-200">
               <tr>
-                <th>Service</th>
-                <th>Word Count Limit</th>
-                <th>Timeline</th>
-                <th>Pricing</th>
+                <th className="p-2 border">Service</th>
+                <th className="p-2 border">Best For</th>
+                <th className="p-2 border">Key Features</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Statistical Analysis</td>
-                <td>N/A</td>
-                <td>7–10 business days</td>
-                <td>$180 per project</td>
-              </tr>
-              <tr>
-                <td>Systematic Review</td>
-                <td>Up to 8,000 words</td>
-                <td>10–15 business days</td>
-                <td>Approximately $800</td>
-              </tr>
-              <tr>
-                <td>Meta-Analysis</td>
-                <td>Up to 10,000 words</td>
-                <td>15–20 business days</td>
-                <td>Approximately $1,200</td>
-              </tr>
+              {services.map((item, index) => (
+                <tr key={index} className="border">
+                  <td className="p-2 border">{item.service}</td>
+                  <td className="p-2 border">{item.bestFor}</td>
+                  <td className="p-2 border">{item.features}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
-        </div>
-      </div>
 
-      <div
-        className="container mt-4"
-        style={{ display: currency === "INR" ? "" : "none" }}
-      >
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
-              <tr>
-                <th>Service</th>
-                <th>Word Count Limit</th>
-                <th>Timeline</th>
-                <th>Pricing</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Statistical Analysis</td>
-                <td>N/A</td>
-                <td>7–10 business days</td>
-                <td>Price may vary (Contact us)</td>
-              </tr>
-              <tr>
-                <td>Systematic Review</td>
-                <td>Up to 8,000 words</td>
-                <td>10–15 business days</td>
-                <td>Price may vary (Contact us)</td>
-              </tr>
-              <tr>
-                <td>Meta-Analysis</td>
-                <td>Up to 10,000 words</td>
-                <td>15–20 business days</td>
-                <td>Price may vary (Contact us)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div> */}
-
-      <section className="pt-5 pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              {/* <h3 className="pt-2 pb-3">
-                Elevate Your Academic Journey with ManuscriptEdit
-              </h3> */}
-              <p>
-                Welcome to ManuscriptEdit, your trusted partner in navigating
-                the complexities of academic research. Whether you're embarking
-                on your research career or an established scholar seeking to
-                amplify your work's impact, ManuscriptEdit offers bespoke
-                support services tailored to your unique needs. Our dedicated
-                team empowers researchers with the tools, insights, and guidance
-                to excel, ensuring your academic endeavors reach their highest
-                potential.
-              </p>
-            </div>
-            <div className="col-md-6">
-              <img
-                src="/images/menuscimg/reach-support.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
-            </div>
+          <div className={styles.buttonGroup}>
+            <a href="https://secure.manuscriptedit.com/quotation"><button className={styles.primaryButton}>
+              Explore All Editing Services
+            </button></a>
+            
           </div>
         </div>
       </section>
-      <div className="service_area bg_color2 pt-50 pb-45">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="section_title text_center mb-55">
-                {/* <div className="section_sub_title uppercase mb-3">
-                  <h6>SERVICES</h6>
-                </div> */}
-                <div className="section_main_title">
-                  <h1> Our Services</h1>
-                </div>
-                <div className="em_bar">
-                  <div className="em_bar_bg"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-12">
-              <div
-                className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4"
-                style={{ height: "fit-content" }}
-              >
-                <div className="service_style_one_title mb-30">
-                  <h4>ESR Support</h4>
-                  <p>
-                    <br />
-                    ESR-Early Stage Researcher
-                  </p>
-                </div>
-                <div className="service_style_one_text">
-                  <div className="em-about-icon-box2">
-                    <div className="list-icon upper st-upper">
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Personalized guidance on selecting a compelling
-                              research topic.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Expert assistance in research design and grant
-                              writing.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
 
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Skill-building workshops tailored to early-stage
-                              researchers.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Navigate the research landscape with confidence
-                              and innovate.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"/EarlyStageResearchers"}>
-                    Read More <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"https://wa.me/919237304004"}>
-                    Talk to an expert <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"https://secure.manuscriptedit.com/register"}>
-                    Register to know more{" "}
-                    <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
-              <div
-                className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4"
-                style={{ height: "fit-content" }}
-              >
-                <div className="service_style_one_title mb-30">
-                  <h4>MCR Advancement</h4>
-                  <p>
-                    <br />
-                    MCR- Mid Carrer Research
-                  </p>
-                </div>
-                <div className="service_style_one_text">
-                  <div className="em-about-icon-box2">
-                    <div className="list-icon upper st-upper">
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Specialized support services for literature review
-                              mastery.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Advanced data analysis techniques to elevate your
-                              research.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Comprehensive research project management and
-                              manuscript development.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Stand out in the competitive academic arena with
-                              our expert guidance.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"/MidCareerResearchers"}>
-                    Read More <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"https://wa.me/919237304004"}>
-                    Talk to an expert <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"https://secure.manuscriptedit.com/register"}>
-                    Register to know more{" "}
-                    <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
-              <div
-                className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4"
-                style={{ height: "fit-content" }}
-              >
-                <div className="service_style_one_title mb-30">
-                  <h4> FER Support</h4>
-                  <p>
-                    <br />
-                    FER- Fully Experienced Researchers
-                  </p>
-                </div>
-                <div className="service_style_one_text">
-                  <div className="em-about-icon-box2">
-                    <div className="list-icon upper st-upper">
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Tailored services, including journal
-                              recommendation and submission guidance.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Pre-submission peer review to refine & strengthen
-                              your manuscript.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Research impact amplification to maximize audience
-                              impact.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Ensure your established research finds its perfect
-                              scholarly home.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"/FullyExperiencedResearchers"}>
-                    Read More <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"https://wa.me/919237304004"}>
-                    Talk to an expert <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"https://secure.manuscriptedit.com/register"}>
-                    Register to know more{" "}
-                    <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
-              <div
-                className="service_style_one text_left pt-40 pb-40 pl-3 pr-3 mb-4"
-                style={{ height: "fit-content" }}
-              >
-                <div className="service_style_one_title mb-30">
-                  <h4> Read Full RES</h4>
-                  <p>
-                    <br />
-                    RES- Research Enhancement Services
-                  </p>
-                </div>
-                <div className="service_style_one_text">
-                  <div className="em-about-icon-box2">
-                    <div className="list-icon upper st-upper">
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              {" "}
-                              Strategies to enhance research citation counts
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              {" "}
-                              Guidance on strategic publication planning for
-                              maximum impact.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Scholarly metrics monitoring to track and analyze
-                              research performance.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                      <span>
-                        <div className="row">
-                          <div
-                            className="col-1"
-                            style={{ paddingRight: "0px", textAlign: "center" }}
-                          >
-                            <i className="fa fa-check"></i>
-                          </div>
-                          <div
-                            className="col-11"
-                            style={{ paddingLeft: "0px" }}
-                          >
-                            <h6>
-                              Amplify your academic footprint with
-                              ManuscriptEdit's expertise.
-                            </h6>
-                          </div>
-                        </div>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"/ResearchEnhancementServices"}>
-                    Read More <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"https://wa.me/919237304004"}>
-                    Talk to an expert <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-                <div className="service_style_one_button pt-3">
-                  <Link href={"https://secure.manuscriptedit.com/register"}>
-                    Register to know more{" "}
-                    <i className="fa fa-long-arrow-right"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section className={styles.benefitsWrapper}>
+        <div className={styles.benefitsBox}>
+          <h2 className={styles.heading}>How We Ensure Quality in Research Support</h2>
+
+          <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
+            Structured & Tailored Research Guidance
+          </h4>
+          <ul className={styles.benefitsList}>
+            <li>
+              ✅ One-on-one consultations with research experts.
+            </li>
+            <li>
+              ✅ Assistance in refining research questions, study design, and data analysis.
+            </li>
+          </ul>
         </div>
-      </div>
-      <div></div>
+      </section>
 
-      {whyToChoose()}
-      <div className="accordion_area style-two upper1 pt-0 pb-100">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="section_title text_center mb-20">
-                <div className="section_main_title">
-                  <h1>FREQUENTLY ASKED QUESTIONS</h1>
-                </div>
-                <div className="em_bar">
-                  <div className="em_bar_bg"></div>
-                </div>
+      <section className={styles.benefitsWrapper}>
+        <div className={styles.benefitsBox}>
+          <h4 style={{ marginBottom: "30px" }}>
+            Compliance with Academic & Research Standards
+          </h4>
+          <ul className={styles.benefitsList}>
+            <li>
+              ✅ Follows ethical research principles aligned with COPE and ICMJE.
+            </li>
+            <li>
+              ✅ Formatting and reference management per APA, IEEE, and journal guidelines.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className={styles.benefitsWrapper}>
+        <div className={styles.benefitsBox}>
+          <h4 style={{ marginBottom: "30px" }}>
+            Transparent Communication & Real-Time Support
+          </h4>
+          <ul className={styles.benefitsList}>
+            <li>
+              ✅ Regular updates on research progress.
+            </li>
+            <li>
+              ✅ Direct collaboration with mentors, analysts, and academic consultants.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className={styles.benefitsWrapper}>
+        <div className={styles.benefitsBox}>
+          <h4 style={{ marginBottom: "30px" }}>
+            Who Benefits from Our Research Support?
+          </h4>
+          <ul className={styles.benefitsList}>
+            <li>
+              ✅ PhD & MS Students – Structured research guidance and methodology support.
+            </li>
+            <li>
+              ✅ Academic Researchers – Assistance in data analysis and manuscript writing.
+            </li>
+            <li>
+              ✅ Universities & Institutions – Collaborative research support services.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <div className="container" style={{ marginTop: "3rem" }}>
+        <div className="accordion__wrapper2">
+          <h1 className="accordion__title">FAQ</h1>
+
+          {accord2.map((faq, index) => (
+            <div
+              className="accordion"
+              key={index}
+              style={{
+                paddingBottom: "1rem",
+                marginBottom: "1rem",
+                color: "#494949",
+              }}
+            >
+              <div
+                className="accordion__header"
+                onClick={() => toggleAccordion(index)}
+              >
+                <h2 className="accordion__question">{faq.question}</h2>
+                {openIndex === index ? "⮝" : "⮟"}
+                {/* <span className="accordion__icon">
+                <i
+                  className={`${openIndex === index ? "ri-subtract-fill" : "ri-add-line"}`}
+                ></i>
+              </span> */}
               </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-2 col-md-2 pr-3"></div>
-            <div className="col-lg-8 col-md-8 pr-3">
-              <div className="tab_container pt-10 pb-50">
+              <div
+                className="accordion__content"
+                style={{
+                  height: openIndex === index ? "auto" : "0",
+                }}
+              >
                 <div
-                  id="tab1"
-                  className="tab_content wow fadeInUp animated"
-                  data-wow-delay=".5"
-                  style={{ visibility: "visible", animationName: "fadeInUp" }}
-                >
-                  <ul className="accordion">
-                    <li>
-                      <a className="active">
-                        What types of research support services does
-                        ManuscriptEdit offer?
-                      </a>
-                      <p>
-                        ManuscriptEdit offers various tailored research support
-                        services covering every academic stage. Our services
-                        include early-stage researcher support, mid-career
-                        researcher advancement, elite services for fully
-                        experienced researchers, and comprehensive research
-                        enhancement services to maximize the academic footprint
-                        of scholars across disciplines
-                      </p>
-                    </li>
-                    <li>
-                      <a>
-                        How can ManuscriptEdit help early-stage researchers find
-                        their research topic?
-                      </a>
-                      <p>
-                        Our Early Buds package is specifically designed to
-                        assist early-stage researchers in identifying compelling
-                        research topics. Through personalized consultations, our
-                        advisors help pinpoint innovative topics that align with
-                        your interests and have the potential for significant
-                        academic or real-world impact.
-                      </p>
-                    </li>
-                    <li>
-                      <a>
-                        Can ManuscriptEdit assist with grant proposal writing?
-                      </a>
-                      <p>
-                        Absolutely. ManuscriptEdit specializes in drafting
-                        persuasive grant proposals highlighting the significance
-                        and potential contributions of your research. Our team
-                        assists in narrative development, budget planning, and
-                        aligning proposals with funding body priorities to
-                        maximize your chances of securing financial support.
-                      </p>
-                    </li>
-                    <li>
-                      <a>
-                        Does ManuscriptEdit offer any training or workshops?
-                      </a>
-                      <p>
-                        Yes, we offer a variety of workshops and training
-                        sessions designed to enhance your academic skills. These
-                        include academic writing workshops, statistical
-                        analysis, and research methodology training to empower
-                        researchers to communicate their findings effectively
-                        and conduct rigorous research.
-                      </p>
-                    </li>
-                    <li>
-                      <a>
-                        How does the process of working with ManuscriptEdit
-                        begin?
-                      </a>
-                      <p>
-                        The process starts with an initial consultation where
-                        you discuss your needs and goals with one of our
-                        experts. Based on this discussion, we recommend the
-                        services that best suit your project. You can start by
-                        contacting us through Telegram, WhatsApp, or Email to
-                        schedule your consultation.
-                      </p>
-                    </li>
-                    <li>
-                      <a>
-                        How can I stay informed about the performance of my
-                        research after publication?
-                      </a>
-                      <p>
-                        ManuscriptEdit's Research Enhancement Services include
-                        scholarly metrics monitoring, allowing you to track your
-                        research performance across various metrics. This
-                        service helps you stay informed about your research's
-                        impact and make strategic decisions for future projects.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
+                  className="accordion__answer"
+                  style={{
+                    padding: "0",
+                    paddingTop: "0.5rem",
+                    marginBottom: "0",
+                    backgroundColor: "#f0f8ff",
+                  }}
+                  dangerouslySetInnerHTML={{ __html: faq.answer }}
+                />
               </div>
             </div>
-            <div className="col-lg-2 col-md-2 pr-3"></div>
-          </div>
+          ))}
         </div>
       </div>
     </>
