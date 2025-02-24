@@ -1,0 +1,24 @@
+.spanGap{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    margin-right: 40px;
+}
+
+.card label {
+    font-size: 40px;
+    text-align: center;
+}
+
+.card p {
+    text-align: center;
+}
+
+.gapping{
+    padding: 16px 30px;
+    border: 1px solid rgb(82, 177, 214);
+}
+
+label{
+    color: black;
+}

@@ -1,0 +1,241 @@
+
+  
+  .textWrapper {
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1A202C;
+  }
+  
+  .subtext {
+    color: #4A5568;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+  }
+  
+  .buttonGroup {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .primaryButton {
+    background-color: #2563EB;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .secondaryButton {
+    border: 2px solid #2563EB;
+    color: #2563EB;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .benefitsWrapper {
+    max-width: 60rem;
+    margin: 3rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .benefitsBox {
+    padding: 1.5rem;
+    flex: 1;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .benefitsList {
+    color: #4A5568;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .fastDeliveryBox {
+    padding: 1.5rem;
+    flex: 1;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .fastDeliveryContent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    color: #F59E0B;
+  }
+  
+  .fastDeliveryHeading {
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+  
+  .fastDeliveryText {
+    color: #4A5568;
+    font-size: 0.875rem;
+  }
+
+  .benefitsWrapper {
+    max-width: 60rem;
+    margin: 3rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .benefitsBox {
+    padding: 1.5rem;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: left;
+  }
+  
+  .benefitsList {
+    color: #4A5568;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .benefitsList li {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .proofreadingWrapper {
+    max-width: 60rem;
+    margin: 3rem auto;
+    text-align: center;
+  }
+  
+  .headingCenter {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #1A202C;
+    margin-bottom: 1.5rem;
+  }
+  
+  .proofreadingGrid {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .proofreadingBox {
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: left;
+  }
+  
+  .proofreadingSubheading {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2563EB;
+  }
+  
+  .proofreadingList {
+    list-style-type: none;
+    padding: 0;
+    color: #4A5568;
+  }
+  
+  .proofreadingList li {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .processContainer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 66px;
+  }
+  
+  .processTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .processSteps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .processStep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stepIcon {
+    color: #0f1e80; /* Customize this color */
+  }
+  
+  .stepTitle {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .stepDescription {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .processSteps {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .stepHeading {
+    color: #0f1e80;
+    margin-bottom: 18px;
+  }
+
+  
+  

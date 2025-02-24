@@ -10,7 +10,7 @@ export const serviceData = {
           "Sentence Structure and Basic Terminology Check",
           "Editing Certificate for Language Check",
         ],
-        keywords: [""],
+        keywords: "",
         link: "https://secure.manuscriptedit.com/estimate?test=2",
       },
       {
@@ -22,17 +22,22 @@ export const serviceData = {
           "Logical Structure Enhancement and Content Reorganization",
           "Advanced Terminology Check with Focus on Consistency",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=2",
       },
       {
         title: "Extentive Substantive Editing",
         description:
           "Tailored for clients targeting journal submissions, offering full formatting, response letter editing, and consistency checks.",
+        keywords:
+          "Extensive Substantive Editing, Research manuscript clarity improvement, Advanced academic editing services,Enhance manuscript structure for journal publication,Scientific editing for high-impact journals",
         features: [
           "Journal-Specific Formatting and Consistency Checks",
           "Reviewer Response Letter Editing",
           "Full Journal-Ready Presentation for Submission",
         ],
+
         link: "https://secure.manuscriptedit.com/estimate?test=2",
       },
       {
@@ -44,6 +49,8 @@ export const serviceData = {
           "Crosschecking Responses for Scientific Integrity",
           "Unlimited Re-Editing Support for 365 Days (up to 20% of Original Word Count)",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=2",
       },
     ],
@@ -59,6 +66,8 @@ export const serviceData = {
           "Proofreading for Language Errors (Grammar, Spelling, Punctuation)",
           "Formatting Based on General Academic Standards",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=4",
       },
       {
@@ -70,6 +79,8 @@ export const serviceData = {
           "In-Depth Support for Literature Review and Synthesizing Research Gaps",
           "Formatting Tailored to Thesis or Journal Guidelines",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=4",
       },
       {
@@ -81,6 +92,8 @@ export const serviceData = {
           "Advanced Proofreading and Revisions for Publication Standards",
           "Full Development of Literature Review with Systematic or Narrative Flow",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=4",
       },
       {
@@ -92,6 +105,8 @@ export const serviceData = {
           "Comprehensive Scientific Review with Detailed Feedback on Methods, Data Presentation, and Discussion Quality",
           "Strategic Editing of Reviewer Response Letters and Crosschecking for Consistency",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=4",
       },
       {
@@ -103,6 +118,8 @@ export const serviceData = {
           "Fully Customized Formatting and Style Based on Unique Guidelines or Multi-Journal Submissions",
           "Advanced Literature Review Support for Large-Scale Systematic or Narrative Reviews",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=4",
       },
     ],
@@ -118,6 +135,8 @@ export const serviceData = {
           "Descriptive Statistics (Mean, Median, Mode)",
           "Simple Trend Analysis & Visualization",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=1",
       },
       {
@@ -129,6 +148,8 @@ export const serviceData = {
           "Hypothesis Testing & Regression Analysis",
           "Advanced Data Visualizations (Graphs, Tables)",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=1",
       },
       {
@@ -140,6 +161,8 @@ export const serviceData = {
           "Publication-Level Statistical Analysis & Interpretation",
           "High-Quality Figures, Tables, and Journal-Ready Visualizations",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=1",
       },
       {
@@ -151,6 +174,8 @@ export const serviceData = {
           "High-Impact Statistical Models and In-Depth Validation",
           "Critical Data Interpretation Emphasizing Scientific Rigor",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=1",
       },
       {
@@ -162,6 +187,8 @@ export const serviceData = {
           "Custom Models Designed for Specialized Research Needs",
           "Customized Visualizations and Insights for Multi-Layered Analysis",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=1",
       },
     ],
@@ -175,6 +202,8 @@ export const serviceData = {
           "Data Analysis and Research Paper Writing",
           "Substantive Editing and Journal Selection",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=5",
       },
       {
@@ -184,6 +213,8 @@ export const serviceData = {
           "Journal Selection and Submission",
           "Response to Reviewers (One Response)",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=5",
       },
       {
@@ -193,6 +224,8 @@ export const serviceData = {
           "Journal Selection and Formatting",
           "Substantive Editing and Cover Letter Writing",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=5",
       },
       {
@@ -202,6 +235,8 @@ export const serviceData = {
           "Journal Selection and Submission",
           "Unlimited Assistance",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=5",
       },
     ],
@@ -217,6 +252,8 @@ export const serviceData = {
           "Systematic Study Selection with Predefined Criteria",
           "Structured Data Extraction and Qualitative Synthesis",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=3",
       },
       {
@@ -228,6 +265,8 @@ export const serviceData = {
           "Statistical Analysis and Meta-Analysis of Study Quality and Results",
           "Rigorous Quality Assessment with Statistical Weighting",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=3",
       },
       {
@@ -239,6 +278,8 @@ export const serviceData = {
           "Qualitative Synthesis with Thematic or Chronological Structuring",
           "Comprehensive Discussion of Trends and Gaps",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=3",
       },
       {
@@ -250,6 +291,8 @@ export const serviceData = {
           "Adherence to CARE Guidelines for Reporting",
           "Clinical Writing Focused on Diagnosis, Treatment, and Outcomes",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=3",
       },
       {
@@ -261,6 +304,8 @@ export const serviceData = {
           "Adherence to Case Series Reporting Guidelines",
           "In-Depth Comparison and Analysis Across Cases",
         ],
+        keywords: "",
+
         link: "https://secure.manuscriptedit.com/estimate?test=3",
       },
     ],

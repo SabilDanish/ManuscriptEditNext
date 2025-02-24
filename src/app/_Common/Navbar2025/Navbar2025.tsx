@@ -6,6 +6,7 @@ import menu from "./menu";
 import { map } from "jquery";
 import { useRouter } from "next/router";
 
+
 function Navbar2025() {
   const [activeTab1, setActiveTab1] = useState<string>("");
   const [activeTab2, setActiveTab2] = useState<string>("");
@@ -264,12 +265,12 @@ function Navbar2025() {
         </div>
       </header>
 
-      <div className="navbar2">
+      <div className="navbar2" >
         <div
-          className="container"
+          className="container-fluid"
           style={{ display: newNavBar2 ? "" : "none" }}
         >
-          <ul>
+          <ul className="ItemForHover" style={{alignItems:"center"}}>
             {mainNavItem !== 5
               ? menu[mainNavItem].subMenu.map((item, index) => (
                   <li
@@ -303,8 +304,8 @@ function Navbar2025() {
         </div>
       </div>
       <div className="navbar3">
-        <div className="container">
-          <ul style={{ display: mainNavItem !== 0 ? "none" : "" }}>
+        <div className="container-fluid">
+          <ul className="itemsForHover" style={{ display: mainNavItem !== 0 ? "none" : "" }}>
             {lastMenu && menu[0]?.subMenu[lastMenuItems]?.subMenu
               ? menu[0].subMenu[lastMenuItems].subMenu.map((item, index) => (
                   <li

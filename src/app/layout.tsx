@@ -32,6 +32,7 @@ import FloatingWp from "./_Common/FloatingWp/FloatingWp";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import ChritmasImage from "./_Common/Crirstmas/Crismas";
 import Navbar2025 from "./_Common/Navbar2025/Navbar2025";
+
 // import { DefaultSeo } from "next-seo";
 // import SEO from "../../next-seo.config";
 

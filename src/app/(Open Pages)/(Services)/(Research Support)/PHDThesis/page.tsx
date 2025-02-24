@@ -34,7 +34,7 @@ export default function Home() {
     <>
       {breadcrum("Services / Research Support", "Phd Thesis")}
 
-      <div className="container mt-4" style={{display:(currency==="INR")?"none":""}}>
+      {/* <div className="container mt-4" style={{display:(currency==="INR")?"none":""}}>
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="table-dark">
@@ -90,7 +90,7 @@ export default function Home() {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
 
       <section className="pt-5 pb-5">
         <div className="container">

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./ServicesNavbar1.css";
+import { BsJustify } from "react-icons/bs";
 
 const ServicesNavbar1: React.FC = () => {
   useEffect(() => {
@@ -63,6 +64,15 @@ const ServicesNavbar1: React.FC = () => {
       window.removeEventListener("resize", test);
     };
   }, []);
+
+
+  const NavbarAlign = {
+    display:"flex !important",
+   justifyContent:"center" ,
+   alignItems:"center"
+
+
+  }
 
   return (
     <nav

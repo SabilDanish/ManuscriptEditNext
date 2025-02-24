@@ -68,6 +68,8 @@
   .navbar2 {
     background-color: rgb(22, 17, 160);
     text-align: center;
+    
+
   }
 
   .navbar2 ul {
@@ -81,18 +83,17 @@
   .navbar2 ul li {
     color: white;
     padding: 5px;
+    text-decoration: none;
   }
 
   .navbar2 ul li a {
     color: white !important ;
     padding: 5px;
     font-size: 14px;
-  }
-
-  .navbar2 ul li a:hover {
-    font-weight: bold;
     text-decoration: none;
   }
+
+  
 
   .navbar3 {
     background-color: #2d42c6;
@@ -120,12 +121,12 @@
 
   .navbar3 ul li a {
     color: white !important ;
-    padding: 10px;
+    padding: 4px;
     font-size: 14px;
   }
 
   .navbar3 ul li a:hover {
-    font-weight: bold;
+    
     text-decoration: none;
   }
 
@@ -147,6 +148,25 @@
     box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.593);
     cursor: pointer;
   }
+
+  .ItemForHover li:hover {
+    background-color: rgb(53, 53, 244);
+    color: #0f1e80 !important;
+    margin: 5px 0px 5px 0px;
+    border-radius: 10px;
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.593);
+    cursor: pointer;
+  }
+
+  .itemsForHover li:hover{
+    background-color: rgb(64, 59, 224);
+    color: #0f1e80 !important;
+    margin: 5px 0px 5px 0px;
+    border-radius: 10px;
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.593);
+    cursor: pointer;
+  }
+  
 }
 
 @media only screen and (max-width: 991px) {
