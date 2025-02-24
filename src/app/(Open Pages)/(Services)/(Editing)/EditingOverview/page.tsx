@@ -117,6 +117,7 @@ export default function Home() {
 
   return (
     <>
+ {<Metadata metaData={metaData} />}
       <section style={gap}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>

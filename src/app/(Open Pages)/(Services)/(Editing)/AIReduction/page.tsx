@@ -362,10 +362,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="cta-container">
+            <div className={styles.buttonGroup}>
               <a
                 href="https://secure.manuscriptedit.com/quotation"
-                className="cta-button"
+                className={styles.primaryButton}
               >
                 Check Pricing and Get a Quote
               </a>
@@ -402,12 +402,7 @@ export default function Home() {
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
               <h1 className="accordion__title">
-                How can you prevent rejections?
-                <br />
-                <span style={{ fontSize: "1rem" }}>
-                  7 reasons why you get rejected mostly, and find out how
-                  Manuscriptedit services can help you out.
-                </span>
+              Faq
               </h1>
 
               {accord2.map((faq, index) => (

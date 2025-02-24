@@ -306,10 +306,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="cta-container">
+            <div className={styles.buttonGroup}>
               <a
                 href="https://secure.manuscriptedit.com/quotation"
-                className="cta-button"
+                className={styles.primaryButton}
               >
                 Check Pricing and Get a Quote
               </a>

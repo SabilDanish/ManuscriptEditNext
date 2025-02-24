@@ -12,7 +12,9 @@ import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
-const newData: { [key: string]: { [key: string]: string } } = data;
+const newData: {
+  [key: string]: { [key: string]: string } | string;
+} = data;
 import {
   faFileUpload,
   faSearch,
@@ -44,7 +46,8 @@ export default function Home() {
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
-      title: "Manuscript undergoes extensive revision for clarity, organization, and academic tone"
+      title:
+        "Manuscript undergoes extensive revision for clarity, organization, and academic tone",
     },
     {
       stepss: "Step 4 ➔",
@@ -59,33 +62,32 @@ export default function Home() {
   ];
 
   const accord2: { question: string; answer: string }[] = [
-  {
-    question: "How is Extensive Substantive Editing different from standard Substantive Editing?",
-    answer:
-      "Extensive Substantive Editing provides deeper revisions in terms of content structure, readability, and logical enhancement, making it ideal for manuscripts requiring significant refinement.",
-  },
-  {
-    question: "Do you modify research findings?",
-    answer:
-      "No, we enhance clarity and structure without altering the author’s original research data.",
-  },
-  {
-    question: "Can I request revisions after editing?",
-    answer:
-      "Yes, 14 days of free minor revisions are included.",
-  },
-  {
-    question: "Do you provide journal formatting along with editing?",
-    answer:
-      "Journal-specific formatting is covered under our Formatting Services, which can be availed separately.",
-  },
-  {
-    question: "How do I get started?",
-    answer:
-      "Simply upload your manuscript, and our editorial team will refine it for maximum clarity and impact.",
-  },
-];
-
+    {
+      question:
+        "How is Extensive Substantive Editing different from standard Substantive Editing?",
+      answer:
+        "Extensive Substantive Editing provides deeper revisions in terms of content structure, readability, and logical enhancement, making it ideal for manuscripts requiring significant refinement.",
+    },
+    {
+      question: "Do you modify research findings?",
+      answer:
+        "No, we enhance clarity and structure without altering the author’s original research data.",
+    },
+    {
+      question: "Can I request revisions after editing?",
+      answer: "Yes, 14 days of free minor revisions are included.",
+    },
+    {
+      question: "Do you provide journal formatting along with editing?",
+      answer:
+        "Journal-specific formatting is covered under our Formatting Services, which can be availed separately.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply upload your manuscript, and our editorial team will refine it for maximum clarity and impact.",
+    },
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -183,55 +185,57 @@ export default function Home() {
           <h2 className={styles.headingCenter}>
             What Does Extensive Substantive Editing Include?
           </h2>
-          
-            <div className={styles.proofreadingBox}>
-              <h3 className={styles.proofreadingSubheading}>🚫 Not Included</h3>
-              <ul className={styles.proofreadingList}>
-                <li>
-                  ❌ Major Content Addition – We refine, but do not add new data
-                  or research findings.
-                </li>
-                <li>
-                  ❌ Ghostwriting – Your manuscript remains authentically
-                  authored by you.
-                </li>
-                <li>
-                  ❌Formatting for Specific Journals – This is covered under our
-                  Formatting Services.
-                </li>
-              </ul>
-            </div>
-            <div className={styles.proofreadingBox}>
-              <h3 className={styles.proofreadingSubheading}>✔ Included</h3>
 
-              <ul className={styles.proofreadingList}>
-                <li>
-                  ✅ Comprehensive Structural Editing:Restructuring paragraphs
-                  for logical flow and clarity.
-                </li>
-                <li>
-                  ✅ Sentence-Level Refinement:Enhancing phrasing and
-                  eliminating ambiguity.
-                </li>
-                <li>
-                  ✅ Content Reorganization:Arranging ideas for improved
-                  readability and impact.
-                </li>
-                <li>
-                  ✅ Scientific &amp; Academic Language Polishing:Ensuring
-                  consistency, conciseness, and precision.
-                </li>
+          <div className={styles.proofreadingBox}>
+            <h3 className={styles.proofreadingSubheading}>🚫 Not Included</h3>
+            <ul className={styles.proofreadingList}>
+              <li>
+                ❌ Major Content Addition – We refine, but do not add new data
+                or research findings.
+              </li>
+              <li>
+                ❌ Ghostwriting – Your manuscript remains authentically authored
+                by you.
+              </li>
+              <li>
+                ❌Formatting for Specific Journals – This is covered under our
+                Formatting Services.
+              </li>
+            </ul>
+          </div>
+          <div className={styles.proofreadingBox}>
+            <h3 className={styles.proofreadingSubheading}>✔ Included</h3>
 
-                <li>
-                  ✅ Argument Strengthening:Strengthening claims with clear supporting evidence.
-                </li>
-              </ul>
-            </div>
-          
+            <ul className={styles.proofreadingList}>
+              <li>
+                ✅ Comprehensive Structural Editing:Restructuring paragraphs for
+                logical flow and clarity.
+              </li>
+              <li>
+                ✅ Sentence-Level Refinement:Enhancing phrasing and eliminating
+                ambiguity.
+              </li>
+              <li>
+                ✅ Content Reorganization:Arranging ideas for improved
+                readability and impact.
+              </li>
+              <li>
+                ✅ Scientific &amp; Academic Language Polishing:Ensuring
+                consistency, conciseness, and precision.
+              </li>
+
+              <li>
+                ✅ Argument Strengthening:Strengthening claims with clear
+                supporting evidence.
+              </li>
+            </ul>
+          </div>
         </section>
 
         <div className={styles.processContainer}>
-          <h2 className={styles.processTitle}>How the Extensive Substantive Editing Process Works</h2>
+          <h2 className={styles.processTitle}>
+            How the Extensive Substantive Editing Process Works
+          </h2>
           <div className={styles.processSteps1}>
             {steps.map((step, index) => (
               <div key={index} className={styles.processStep}>
@@ -254,7 +258,7 @@ export default function Home() {
 
           <section className="editing-overview-section">
             <h2 className="editing-overview-heading">
-            Why Choose Extensive Substantive Editing Over Other Services?
+              Why Choose Extensive Substantive Editing Over Other Services?
             </h2>
             <table className="editing-overview-table">
               <thead>
@@ -266,45 +270,26 @@ export default function Home() {
               </thead>
               <tbody>
                 <tr>
-                  <td>Minor language issues
-                  &amp; typos</td>
+                  <td>Minor language issues &amp; typos</td>
                   <td>Proofreading</td>
-                  <td>
-                  Ensures error-free final
-
-manuscript.
-                  </td>
+                  <td>Ensures error-free final manuscript.</td>
                 </tr>
                 <tr>
-                  <td>Need improved clarity &amp;
-                  readability</td>
+                  <td>Need improved clarity &amp; readability</td>
                   <td>Copyediting</td>
-                  <td>
-                  Enhances fluency and
-
-consistency.
-                  </td>
+                  <td>Enhances fluency and consistency.</td>
                 </tr>
                 <tr>
-                  <td>Requires in-depth
-                  restructuring</td>
+                  <td>Requires in-depth restructuring</td>
                   <td>Substantive Editing</td>
-                  <td>
-                  Strengthens logical flow &amp;
-
-coherence.
-                  </td>
+                  <td>Strengthens logical flow &amp; coherence.</td>
                 </tr>
 
                 <tr>
-                  <td>Extensive content
-                  revision required</td>
-                  <td>Extensive Substantive
-                  Editing</td>
+                  <td>Extensive content revision required</td>
+                  <td>Extensive Substantive Editing</td>
                   <td>
-                  Comprehensive
-improvement for high-
-impact publication.
+                    Comprehensive improvement for high- impact publication.
                   </td>
                 </tr>
               </tbody>
@@ -313,34 +298,37 @@ impact publication.
 
           <section className="before-after-example-section">
             <h2 className="before-after-example-heading">
-            Before &amp; After Extensive Substantive Editing – See the Difference
+              Before &amp; After Extensive Substantive Editing – See the
+              Difference
             </h2>
 
             <div className="before-after-example-content">
               <div className="before-example">
                 <h3>Before (Original Unedited Text):</h3>
                 <p className="before-text">
-                “This paper talk about artificial intelligence in healthcare. Many researchers claim
-that it can replace traditional methods, but still some doubts exist about the accuracy
-of AI models.”
+                  “This paper talk about artificial intelligence in healthcare.
+                  Many researchers claim that it can replace traditional
+                  methods, but still some doubts exist about the accuracy of AI
+                  models.”
                 </p>
               </div>
 
               <div className="after-example">
                 <h3>After (Edited for Clarity &amp; Logical Flow):</h3>
                 <p className="after-text">
-                “This study explores the role of artificial intelligence in healthcare applications. While
-AI models have shown potential in replacing traditional diagnostic methods,
-concerns regarding accuracy and reliability remain a subject of ongoing debate
-among researchers.”
+                  “This study explores the role of artificial intelligence in
+                  healthcare applications. While AI models have shown potential
+                  in replacing traditional diagnostic methods, concerns
+                  regarding accuracy and reliability remain a subject of ongoing
+                  debate among researchers.”
                 </p>
               </div>
             </div>
 
             <div className="explanation">
               <p>
-              Extensive Substantive Editing enhances structure, clarity, and the strength of
-              academic arguments.
+                Extensive Substantive Editing enhances structure, clarity, and
+                the strength of academic arguments.
               </p>
             </div>
           </section>
@@ -408,13 +396,8 @@ among researchers.”
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-              <h1 className="accordion__title">
-                How can you prevent rejections?
-                <br />
-                <span style={{ fontSize: "1rem" }}>
-                  7 reasons why you get rejected mostly, and find out how
-                  Manuscriptedit services can help you out.
-                </span>
+               <h1 className="accordion__title">
+              Faq
               </h1>
 
               {accord2.map((faq, index) => (

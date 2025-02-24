@@ -54,6 +54,18 @@ export default function Home() {
 
   return (
     <>
+      <meta
+        name="title"
+        content="ManuscriptEdit - Expert English Editing & Proofreading for Research Papers"
+      />
+      <meta
+        name="description"
+        content="Professional English editing, proofreading, and publication support for researchers, authors, and academics. Get high-quality manuscript editing, journal submission assistance, and research paper formatting from PhD experts. Fast turnaround and 100% quality guarantee."
+      />
+      <meta
+        name="keywords"
+        content="Research Paper Editing, Academic Editing Services, Scientific Manuscript Editing, English Proofreading Services, Journal Paper Editing, Publication Support Services, Editing Services for Researchers, Professional Academic Proofreading, Dissertation Editing Services, PhD Thesis Proofreading, Manuscript Formatting for Journals, High-Impact Journal Submission."
+      />
       <ToastContainer />
       <TopBannerForm />
       <WhyChooseUs />

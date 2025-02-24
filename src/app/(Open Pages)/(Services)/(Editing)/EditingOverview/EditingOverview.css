@@ -4,15 +4,6 @@
   border-radius: 10px;
   margin-bottom: 15px;
 }
-/* .active {
-  background-color: #5161ce;
-}
-.active h4 {
-  color: #fff;
-}
-.active p {
-  color: #fff;
-} */
 
 @media (min-width: 376px) and (max-width: 768px) {
   .carousel-item-custom {
@@ -43,5 +34,3 @@
     height: 450px !important;
   }
 }
-
-

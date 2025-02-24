@@ -37,10 +37,7 @@ export default function Home() {
         <div className="container-fluid p-0" data-aos="fade-up">
           <div className="row g-0">
             <div className="col-lg-5 video-play position-relative">
-              <a
-                href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-                className="glightbox play-btn"
-              ></a>
+              
             </div>
             <div className="col-lg-7" style={{ paddingLeft: "0px !important" }}>
               <div className="content d-flex flex-column justify-content-center h-100">

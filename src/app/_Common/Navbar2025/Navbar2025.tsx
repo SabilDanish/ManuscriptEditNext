@@ -6,6 +6,7 @@ import menu from "./menu";
 import { map } from "jquery";
 import { useRouter } from "next/router";
 
+
 function Navbar2025() {
   const [activeTab1, setActiveTab1] = useState<string>("");
   const [activeTab2, setActiveTab2] = useState<string>("");

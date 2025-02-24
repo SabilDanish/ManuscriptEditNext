@@ -63,7 +63,7 @@ const menu: MenuItem[]  = [
           { label: "Statistical Analysis", link: "/StatisticalAnalysis" },
           { label: "Systematic Review", link: "/SystematicReview" },
           { label: "Meta Analysis", link: "/MetaAnalysis" },
-          { label: "Data Analysis", link: "/MetaAnalysis" },
+          { label: "Data Analysis", link: "/DataAnalysis" },
         ],
       },
       {

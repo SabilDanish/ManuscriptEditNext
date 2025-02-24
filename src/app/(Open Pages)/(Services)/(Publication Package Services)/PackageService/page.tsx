@@ -16,8 +16,10 @@ import PricingTable from "./PricingTableCurrency.jsx";
 import "./packageServ.css";
 import ReConstructive from "@/app/_Common/ReConstructive/ReConstructive";
 import NewsletterSubscribe from "@/app/_Common/SubsNewsletter/SubsNewsletter";
+import styles from "@/app/_Common/Renovation/Renovation.module.css";
+import "@/app/_Common/Renovation/Renovation.css";
 
-
+import "@/app/_Common/Dropdown2/Dropdown2.css";
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
@@ -65,670 +67,312 @@ export default function Home() {
 
   console.log(tablePriceFromDB[0]);
 
+  const gap = {
+    marginTop: "40px",
+  };
+
+  const services = [
+    {
+      package: "Basic Publication Support",
+      bestFor: "First-time authors navigating journal submission",
+      features: "Journal selection, formatting, and basic submission support",
+    },
+    {
+      package: "Advanced Publication Package",
+      bestFor: "Researchers aiming for high-impact journals",
+      features:
+        "Comprehensive manuscript editing, peer review, and submission assistance",
+    },
+    {
+      package: "Premium Publication Package",
+      bestFor: "Authors targeting top-tier journals",
+      features:
+        "Scientific editing, peer review, journal selection, submission handling, and post-submission support",
+    },
+    {
+      package: "End-to-End Publication",
+      bestFor:
+        "Those needing full support from manuscript writing to publication",
+      features:
+        "Manuscript writing, editing, peer review, journal selection, submission, and more",
+    },
+  ];
+  const accord2: { question: string; answer: string }[] = [
+    {
+      question: "Do you guarantee publication?",
+      answer:
+        "No, but we significantly improve your manuscript’s quality and journal compatibility.",
+    },
+    {
+      question: "Can you help with manuscript revisions after submission?",
+      answer:
+        "Yes! We offer post-submission revision and rebuttal letter drafting.",
+    },
+    {
+      question: "Which disciplines do you cover?",
+      answer:
+        "We support STEM, Humanities, Life Sciences, Medical Research, and Social Sciences.",
+    },
+  ];
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <>
       {<Metadata metaData={metaData} />}
-      {/* {breadcrum(
-        "Services / Publication Package Services",
-        "Publication Package"
-      )} */}
 
-      {/* <div className="container mt-4" style={{display:(currency==="INR")?"none":""}}>
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
+      <section style={gap}>
+        <div className={styles.textWrapper}>
+          <h1 className={styles.heading}>
+            Publication Package – Your Path to Seamless Journal Submission
+          </h1>
+          <p className={styles.subtext}>
+            Welcome to ManuscriptEdit, your trusted partner in comprehensive
+            publication support. Our Publication Packages are designed to help
+            researchers navigate the submission process, ensuring their
+            manuscripts meet journal requirements and increase their chances of
+            acceptance.
+          </p>
+        </div>
+      </section>
+
+      <section className={styles.benefitsWrapper}>
+        <div className={styles.benefitsBox}>
+          <h2 className={styles.heading}>
+            Why Choose ManuscriptEdit for Publication Support?
+          </h2>
+
+          <section className={styles.benefitsWrapper}>
+            <h4>End-to-End Assistance for Hassle-Free Publishing</h4>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✅ Comprehensive support from manuscript preparation to final
+                submission.
+              </li>
+              <li>
+                ✅ Expert guidance on journal selection, formatting, and
+                submission strategies.
+              </li>
+            </ul>
+          </section>
+
+          <section className={styles.benefitsWrapper}>
+            <h4>Expert Consultation & Journal-Specific Compliance</h4>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✅ Align your manuscript with impactful journals in your field.
+              </li>
+              <li>
+                ✅ Compliance with Scopus, SCI, PubMed, and high-impact journal
+                guidelines.
+              </li>
+            </ul>
+          </section>
+
+          <section className={styles.benefitsWrapper}>
+            <h4>Ethical, Confidential & High-Quality Support</h4>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✅ Ethical publication practices ensuring compliance with COPE
+                and ICMJE guidelines.
+              </li>
+              <li>
+                ✅ Strict confidentiality measures to protect your research.
+              </li>
+            </ul>
+          </section>
+
+          <section className={styles.benefitsWrapper}>
+            <h4>Fast & Reliable Submission Process</h4>
+            <ul className={styles.benefitsList}>
+              <li>✅ Timely assistance to meet submission deadlines.</li>
+              <li>
+                ✅ Streamlined processes to reduce rejections and revisions.
+              </li>
+            </ul>
+          </section>
+
+          <section className={styles.benefitsWrapper}>
+            <h4>Global Recognition & Proven Track Record</h4>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✅ Supported 10,000+ authors across 100+ countries in publishing
+                successfully.
+              </li>
+              <li>
+                ✅ Experienced in helping researchers publish in Q1 and
+                high-impact journals.
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <section className={styles.benefitsWrapper}>
+        <div className="overflow-x-auto p-4">
+          <h2 className="text-xl font-semibold mb-4">
+            Our Publication Packages at a Glance
+          </h2>
+          <table className="min-w-full bg-white border border-gray-300">
+            <thead className="bg-gray-200">
               <tr>
-                <th>Service</th>
-                <th>Word Count Limit</th>
-                <th>Timeline</th>
-                <th>Pricing</th>
+                <th className="p-2 border">Package</th>
+                <th className="p-2 border">Best For</th>
+                <th className="p-2 border">Key Features</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Journal Selection</td>
-                <td>N/A</td>
-                <td>2–3 business days</td>
-                <td>$100 per service</td>
-              </tr>
-              <tr>
-                <td>Journal Submission</td>
-                <td>N/A</td>
-                <td>3–5 business days</td>
-                <td>$80 per service</td>
-              </tr>
-              <tr>
-                <td>Peer Review & Pre-Submission</td>
-                <td>Up to 4,000 words</td>
-                <td>3–4 business days</td>
-                <td>Approximately $360</td>
-              </tr>
-              <tr>
-                <td>Response to Reviewer</td>
-                <td>Up to 2,000 words</td>
-                <td>2–3 business days</td>
-                <td>Approximately $180</td>
-              </tr>
-              <tr>
-                <td>Poster Creation & Design</td>
-                <td>N/A</td>
-                <td>5–7 business days</td>
-                <td>$150 per poster</td>
-              </tr>
-              <tr>
-                <td>Formatting</td>
-                <td>Up to 6,000 words</td>
-                <td>1–2 business days</td>
-                <td>Approximately $90</td>
-              </tr>
-              <tr>
-                <td>Citation Booster</td>
-                <td>N/A</td>
-                <td>5–7 business days</td>
-                <td>Pricing may vary (Contact us)</td>
-              </tr>
-              <tr>
-                <td>Illustration Services</td>
-                <td>N/A</td>
-                <td>7–10 business days</td>
-                <td>Pricing may vary (Contact us)</td>
-              </tr>
+              {services.map((item, index) => (
+                <tr key={index} className="border">
+                  <td className="p-2 border">{item.package}</td>
+                  <td className="p-2 border">{item.bestFor}</td>
+                  <td className="p-2 border">{item.features}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
-        </div>
-      </div>
 
-      <div className="container mt-4" style={{display:(currency==="INR")?"":"none"}}>
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
-              <tr>
-                <th>Service</th>
-                <th>Word Count Limit</th>
-                <th>Timeline</th>
-                <th>Pricing</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Journal Selection</td>
-                <td>N/A</td>
-                <td>2–3 business days</td>
-                <td>12000 INR</td>
-              </tr>
-              <tr>
-                <td>Journal Submission</td>
-                <td>N/A</td>
-                <td>3–5 business days</td>
-                <td>6500 INR</td>
-              </tr>
-              <tr>
-                <td>Peer Review & Pre-Submission</td>
-                <td>Up to 4,000 words</td>
-                <td>3–4 business days</td>
-                <td>9000 INR</td>
-              </tr>
-              <tr>
-                <td>Response to Reviewer</td>
-                <td>Up to 2,000 words</td>
-                <td>2–3 business days</td>
-                <td>15200 INR</td>
-              </tr>
-              <tr>
-                <td>Poster Creation & Design</td>
-                <td>N/A</td>
-                <td>5–7 business days</td>
-                <td>9000 INR</td>
-              </tr>
-              <tr>
-                <td>Formatting</td>
-                <td>Up to 6,000 words</td>
-                <td>1–2 business days</td>
-                <td>6550 INR</td>
-              </tr>
-              <tr>
-                <td>Citation Booster</td>
-                <td>N/A</td>
-                <td>5–7 business days</td>
-                <td>Pricing may vary (Contact us)</td>
-              </tr>
-              <tr>
-                <td>Illustration Services</td>
-                <td>N/A</td>
-                <td>7–10 business days</td>
-                <td>Pricing may vary (Contact us)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div> */}
-
-
-      <ReConstructive/>
-
-      
-
-      <div className="container-fluid" style={{ marginTop: "40px" }}>
-        <div className="row">
-          <div className="col-lg-3 col-md-6">
-            <div
-              className="pricing_single-box st-grid-price"
-              style={{ position: "relative" }}
-            >
-              {/* Most Popular Tag */}
-              <div className="most-popular-tag">Most Popular</div>
-
-              <div className="pricing-head">
-                <div className="pricing_title">
-                  <center>
-                    <h4 style={{ marginTop: "40px" }}>Premium Plus Package</h4>
-                  </center>
-                </div>
-                <div className="pricing_tk">
-                  <center>
-                    <h2>
-                      <span className="dollar">
-                        <s></s> $2134 *
-                      </span>
-                      <span>30 Days</span>
-                    </h2>
-                  </center>
-                  <DiscountBanner />
-                </div>
-              </div>
-              <div className="pricing_body">
-                <div
-                  className="featur_itmes"
-                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
-                >
-                  <ul>
-                    <li>Peer Review Analysis</li>
-                    <li>Data Analysis</li>
-                    <li>Research Paper Writing</li>
-                    <li>Substantive Editing</li>
-                    <li>Journal Selection</li>
-                    <li>Target Journal Formatting</li>
-                    <li>Artwork Formatting</li>
-                    <li>Cover Letter Writing</li>
-                    <li>Journal Submission</li>
-                    <li>Response To Reviewer</li>
-                    <li>Plagiarism Check</li>
-                    <li>Unlimited Assistance *</li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                className="pricing_button"
-                style={{ textAlign: "center", cursor: "pointer" }}
-              >
-                <a onClick={() => redirect("register")}>
-                  Purchase Now <i className="bi bi-arrow-right"></i>
-                </a>
-              </div>
-              <div
-                className="pricing_button"
-                style={{ textAlign: "center", cursor: "pointer" }}
-              >
-                <a onClick={() => redirect("quotation")}>
-                  Request a Quote <i className="bi bi-arrow-right"></i>
-                </a>
-              </div>
-
-              <div
-                style={{
-                  textAlign: "center",
-                  marginTop: "15px",
-                  fontSize: "0.8rem",
-                  color: "#555",
-                }}
-              >
-                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
-                  *Terms and conditions applied.
-                </p>
-              </div>
-              <DiscountMessage />
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6">
-            <div
-              className="pricing_single-box st-grid-price"
-              style={{ position: "relative" }}
-            >
-              {/* <div className="discount-sticker">35% OFF</div> */}
-              <div className="pricing-head">
-                <div className="pricing_title">
-                  <center>
-                    <h4 style={{ marginTop: "40px" }}>Premium Package</h4>
-                  </center>
-                </div>
-                <div className="pricing_tk">
-                  <center>
-                    <h2>
-                      <span className="dollar">
-                        <s></s> $1534 *
-                      </span>
-                      <span>20 Days</span>
-                    </h2>
-                  </center>
-                  <DiscountBanner />
-                </div>
-              </div>
-              <div className="pricing_body">
-                <div
-                  className="featur_itmes "
-                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
-                >
-                  <ul>
-                    <li>Peer Review Analysis</li>
-                    <li>Substantive Editing</li>
-                    <li>Journal Selection</li>
-                    <li>Target Journal Formatting</li>
-                    <li>Artwork Formatting</li>
-                    <li>Cover Letter Writing</li>
-                    <li>Journal Submission</li>
-                    <li>
-                      Response to Reviewers* (*One response to reviewer free)
-                    </li>
-                    <li>Plagiarism Check</li>
-                    <li>Unlimited Assistance *</li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                className="pricing_button"
-                style={{ textAlign: "center", cursor: "pointer" }}
-              >
-                <a
-                  onClick={() => {
-                    redirect("register");
-                  }}
-                >
-                  Purchase Now <i className="bi bi-arrow-right"></i>
-                </a>
-              </div>
-              <div
-                className="pricing_button"
-                style={{ textAlign: "center", cursor: "pointer" }}
-              >
-                <a
-                  onClick={() => {
-                    redirect("quotation");
-                  }}
-                >
-                  Request a Quote <i className="bi bi-arrow-right"></i>
-                </a>
-              </div>
-
-              <div
-                style={{
-                  textAlign: "center",
-                  marginTop: "15px",
-                  fontSize: "0.8rem",
-                  color: "#555",
-                }}
-              >
-                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
-                  *Terms and conditions applied.
-                </p>
-              </div>
-              <DiscountMessage />
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6">
-            <div
-              className="pricing_single-box st-grid-price"
-              style={{ position: "relative" }}
-            >
-              {/* <div className="discount-sticker">35% OFF</div> */}
-              <div className="pricing-head">
-                <div className="pricing_title">
-                  <center>
-                    <h4 style={{ marginTop: "40px" }}>Advanced Package</h4>
-                  </center>
-                </div>
-                <div className="pricing_tk">
-                  <center>
-                    <h2>
-                      <span className="dollar">
-                        <s></s> $1134 *
-                      </span>
-                      <span>15 Days</span>
-                    </h2>
-                  </center>
-                  <DiscountBanner />
-                </div>
-              </div>
-              <div className="pricing_body">
-                <div
-                  className="featur_itmes "
-                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
-                >
-                  <ul>
-                    <li>Peer Review Analysis</li>
-                    <li>Substantive Editing</li>
-                    <li>Journal Selection</li>
-                    <li>Target Journal Formatting</li>
-                    <li>Cover Letter Writing</li>
-                    <li>Journal Submission</li>
-                    <li>Plagiarism Check</li>
-                    <li>Unlimited Assistance *</li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                className="pricing_button"
-                style={{ textAlign: "center", cursor: "pointer" }}
-              >
-                <a
-                  onClick={() => {
-                    redirect("register");
-                  }}
-                >
-                  Purchase Now <i className="bi bi-arrow-right"></i>
-                </a>
-              </div>
-              <div
-                className="pricing_button"
-                style={{ textAlign: "center", cursor: "pointer" }}
-              >
-                <a
-                  onClick={() => {
-                    redirect("quotation");
-                  }}
-                >
-                  Request a Quote <i className="bi bi-arrow-right"></i>
-                </a>
-              </div>
-
-              <div
-                style={{
-                  textAlign: "center",
-                  marginTop: "15px",
-                  fontSize: "0.8rem",
-                  color: "#555",
-                }}
-              >
-                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
-                  *Terms and conditions applied.
-                </p>
-              </div>
-              <DiscountMessage />
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6">
-            <div
-              className="pricing_single-box st-grid-price"
-              style={{ position: "relative" }}
-            >
-              {/* <div className="discount-sticker">35% OFF</div> */}
-              <div className="pricing-head">
-                <div className="pricing_title">
-                  <center>
-                    <h4 style={{ marginTop: "40px" }}>Standard Package</h4>
-                  </center>
-                </div>
-                <div className="pricing_tk">
-                  <center>
-                    <h2>
-                      <span className="dollar">
-                        <s>$867</s> $650 *
-                      </span>
-                      <span>10 Days</span>
-                    </h2>
-                  </center>
-                  <DiscountBanner />
-                </div>
-              </div>
-              <div className="pricing_body">
-                <div
-                  className="featur_itmes"
-                  style={{ paddingLeft: "15px", paddingRight: "15px" }}
-                >
-                  <ul>
-                    <li>Peer Review Analysis</li>
-                    <li>Journal Selection</li>
-                    <li>Target Journal Formatting</li>
-                    <li>Cover Letter Writing</li>
-                    <li>Journal Submission</li>
-                    <li>Unlimited Assistance *</li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                className="pricing_button"
-                style={{ textAlign: "center", cursor: "pointer" }}
-              >
-                <a
-                  onClick={() => {
-                    redirect("register");
-                  }}
-                >
-                  Purchase Now <i className="bi bi-arrow-right"></i>
-                </a>
-              </div>
-              <div
-                className="pricing_button"
-                style={{ textAlign: "center", cursor: "pointer" }}
-              >
-                <a
-                  onClick={() => {
-                    redirect("quotation");
-                  }}
-                >
-                  Request a Quote <i className="bi bi-arrow-right"></i>
-                </a>
-              </div>
-
-              <div
-                style={{
-                  textAlign: "center",
-                  marginTop: "15px",
-                  fontSize: "0.8rem",
-                  color: "#555",
-                }}
-              >
-                <p style={{ fontStyle: "italic", lineHeight: "1.5" }}>
-                  *Terms and conditions applied.
-                </p>
-              </div>
-
-              <DiscountMessage />
-            </div>
+          <div className={styles.buttonGroup}>
+            <a href="https://secure.manuscriptedit.com/quotation">
+              <button className={styles.primaryButton}>
+                Explore All Publication Packages
+              </button>
+            </a>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* 
-      
+      <section className={styles.benefitsWrapper}>
+        <div className={styles.benefitsBox}>
+          <h2 className={styles.heading}>
+            How We Ensure Quality in Publication Support
+          </h2>
 
-      
-     
-
-      <div className="container mt-4">
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
-              <tr>
-                <th>Service</th>
-                <th>Word Count Limit</th>
-                <th>Timeline</th>
-                <th>Pricing</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>High-Impact Scientific</td>
-                <td>Up to 4,000</td>
-                <td>6–8 business</td>
-                <td>Approximately</td>
-              </tr>
-              <tr>
-                <td>Editing</td>
-                <td>words</td>
-                <td>days</td>
-                <td>$720</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div className="container mt-4">
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
-              <tr>
-                <th>Service</th>
-                <th>Word Count Limit</th>
-                <th>Timeline</th>
-                <th>Pricing</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>High-Impact Journal Publication Support</td>
-                <td>N/A</td>
-                <td>Varies based on requirements</td>
-                <td>Custom pricing (Contact us)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className="container mt-4">
-          <h3>Notes</h3>
-          <ul>
+          <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
+            Structured & Efficient Publication Workflow
+          </h4>
+          <ul className={styles.benefitsList}>
             <li>
-              <strong>Pricing Flexibility:</strong> For services where pricing
-              may vary (group service), we encourage clients to contact us
-              directly to receive a tailored quote based on their specific
-              needs.
+              ✅ Journal Selection & Formatting – We recommend the most suitable
+              journals for your manuscript.
             </li>
             <li>
-              <strong>High-Impact Services:</strong> The addition of High-Impact
-              Scientific Editing and High-Impact Journal Publication Support
-              services caters to clients aiming for prestigious journal
-              publications, offering specialized assistance to enhance their
-              chances of acceptance.
+              ✅ Pre-Submission Peer Review – Feedback from experts to refine
+              your research.
             </li>
             <li>
-              By offering competitive pricing and specialized services, we aim
-              to provide exceptional value to our clients, ensuring high-quality
-              support throughout their research and publication journey.
+              ✅ Submission Management – Complete journal submission assistance.
+            </li>
+            <li>
+              ✅ Post-Submission Support – Handling reviewer comments and
+              resubmission.
             </li>
           </ul>
         </div>
-      </div> */}
+      </section>
 
-      {/* </div > */}
-      {/* </section > */}
-      {/* <div className="service_area style2 pt-0 pb-0">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6"></div>
-            <div className="col-lg-6">
-              <div className="section_title text_left mb-55">
-                <div className="section_main_title">
-                  <h1>Customized services</h1>
-                </div>
-                <div className="em_bar">
-                  <div className="em_bar_bg"></div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="service_single_thumb left">
-                <div className="single_service_inner_thumb">
-                  <img src="/images/service1.png" alt="" />
-                </div>
-                <div className="single_service_brg">
-                  <div className="single_service_brg_thumb rotateme">
-                    <img src="/images/service-rot.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 col-sm-6">
-              <div className="single_service">
-                <div className="single_service_inner">
-                  <div className="single_service_icon">
-                    <i className="fa fa-check"></i>
-                  </div>
-                  <div className="single_service_content">
-                    <h4>Pre-Submission Per Review</h4>
-                  </div>
-                </div>
-              </div>
-              <div className="single_service">
-                <div className="single_service_inner">
-                  <div className="single_service_icon">
-                    <i className="fa fa-check"></i>
-                  </div>
-                  <div className="single_service_content">
-                    <h4>Journal Selection</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div className="single_service">
-                <div className="single_service_inner">
-                  <div className="single_service_icon">
-                    <i className="fa fa-check"></i>
-                  </div>
-                  <div className="single_service_content">
-                    <h4>Substantive  Editing</h4>
-                  </div>
-                </div>
-              </div>
-              <div className="single_service">
-                <div className="single_service_inner">
-                  <div className="single_service_icon">
-                    <i className="fa fa-check"></i>
-                  </div>
-                  <div className="single_service_content">
-                    <h4>Formatting</h4>
-                  </div>
-                </div>
-              </div>
-              <div className="single_service">
-                <div className="single_service_inner">
-                  <div className="single_service_icon">
-                    <i className="fa fa-check"></i>
-                  </div>
-                  <div className="single_service_content">
-                    <h4>Submission Support</h4>
-                  </div>
-                </div>
-              </div>
-              <div className="single_service">
-                <div className="single_service_inner">
-                  <div className="single_service_icon">
-                    <i className="fa fa-check"></i>
-                  </div>
-                  <div className="single_service_content">
-                    <h4>Response to Reviewers</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section className={styles.benefitsWrapper}>
+        <div className={styles.benefitsBox}>
+          <h4 style={{ marginBottom: "30px" }}>
+            Compliance with International Publishing Standards
+          </h4>
+          <ul className={styles.benefitsList}>
+            <li>
+              ✅ Formatting compliance with APA, IEEE, Elsevier, Springer,
+              Wiley, and Nature guidelines.
+            </li>
+            <li>✅ Ensuring ethical and plagiarism-free publication.</li>
+          </ul>
         </div>
-      </div> */}
-      {SpecializedArea()}
-      {/* {ourProfessional()} */}
-      {clientFeedback()}
-      {/* {FAQ()} */}
-      <FaqHome />
+      </section>
 
-<NewsletterSubscribe/>
+      <section className={styles.benefitsWrapper}>
+        <div className={styles.benefitsBox}>
+          <h4 style={{ marginBottom: "30px" }}>
+            Transparent Communication & Personalized Assistance
+          </h4>
+          <ul className={styles.benefitsList}>
+            <li>
+              ✅ Direct collaboration with editors and publication specialists.
+            </li>
+            <li>✅ Step-by-step updates throughout the publication process.</li>
+          </ul>
+        </div>
+      </section>
 
+      <section className={styles.benefitsWrapper}>
+        <div className={styles.benefitsBox}>
+          <h4 style={{ marginBottom: "30px" }}>
+            Who Benefits from Our Publication Support?
+          </h4>
+          <ul className={styles.benefitsList}>
+            <li>
+              ✅ Early-Career Researchers – Assistance in navigating journal
+              submission.
+            </li>
+            <li>
+              ✅ Experienced Academics – Optimized publication strategies for
+              high-impact journals.
+            </li>
+            <li>
+              ✅ Institutions & Universities – Bulk publication support for
+              faculty and students.
+            </li>
+          </ul>
+        </div>
+      </section>
 
+      <div className="container" style={{ marginTop: "3rem" }}>
+        <div className="accordion__wrapper2">
+          <h1 className="accordion__title">FAQ</h1>
+
+          {accord2.map((faq, index) => (
+            <div
+              className="accordion"
+              key={index}
+              style={{
+                paddingBottom: "1rem",
+                marginBottom: "1rem",
+                color: "#494949",
+              }}
+            >
+              <div
+                className="accordion__header"
+                onClick={() => toggleAccordion(index)}
+              >
+                <h2 className="accordion__question">{faq.question}</h2>
+                {openIndex === index ? "⮝" : "⮟"}
+                {/* <span className="accordion__icon">
+                <i
+                  className={`${openIndex === index ? "ri-subtract-fill" : "ri-add-line"}`}
+                ></i>
+              </span> */}
+              </div>
+              <div
+                className="accordion__content"
+                style={{
+                  height: openIndex === index ? "auto" : "0",
+                }}
+              >
+                <div
+                  className="accordion__answer"
+                  style={{
+                    padding: "0",
+                    paddingTop: "0.5rem",
+                    marginBottom: "0",
+                    backgroundColor: "#f0f8ff",
+                  }}
+                  dangerouslySetInnerHTML={{ __html: faq.answer }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }
