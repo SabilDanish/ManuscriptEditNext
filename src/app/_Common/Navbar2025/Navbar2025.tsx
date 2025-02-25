@@ -7,6 +7,7 @@ import { map } from "jquery";
 import { useRouter } from "next/router";
 
 
+
 function Navbar2025() {
   const [activeTab1, setActiveTab1] = useState<string>("");
   const [activeTab2, setActiveTab2] = useState<string>("");
@@ -288,7 +289,7 @@ function Navbar2025() {
                     }}
                   >
                     {menu[mainNavItem]?.subMenu[index]?.link ? (
-                      <Link href={menu[mainNavItem]?.subMenu[index]?.link || ""}>
+                      <Link href={menu[mainNavItem]?.subMenu[index]?.link || ""} className="menuAnchor">
                         {menu[mainNavItem]?.subMenu[index]?.label}
                       </Link>
                     ) : (
@@ -323,7 +324,7 @@ function Navbar2025() {
                     }
                   >
                     {item?.link ? (
-                      <Link href={item.link}>{item.label}</Link>
+                      <Link href={item.link} className="menuAnchor">{item.label}</Link>
                     ) : (
                       <span>{item.label || "Invalid Link"}</span>
                     )}

@@ -22,30 +22,34 @@ export default function Home() {
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
-      title: "Formulating Research Question & Objectives – Using PICO (Population, Intervention, Comparison, Outcome) framework.",
+      title:
+        "Formulating Research Question & Objectives – Using PICO (Population, Intervention, Comparison, Outcome) framework.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
-      title: "Systematic Database Search & Study Screening – Retrieving data from PubMed, Cochrane, Scopus, Embase, Google Scholar.",
+      title:
+        "Systematic Database Search & Study Screening – Retrieving data from PubMed, Cochrane, Scopus, Embase, Google Scholar.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
-      title: "Data Extraction & Standardization – Extracting key variables for effect size calculation & heterogeneity assessment.",
+      title:
+        "Data Extraction & Standardization – Extracting key variables for effect size calculation & heterogeneity assessment.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
-      title: "Statistical Modeling & Meta-Analysis – Using RevMan, R, Stata, and SPSS for effect size & forest plot generation.",
+      title:
+        "Statistical Modeling & Meta-Analysis – Using RevMan, R, Stata, and SPSS for effect size & forest plot generation.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
-      title: "Writing, Formatting & Compliance Check – Delivering a publication-ready manuscript with statistical accuracy.",
+      title:
+        "Writing, Formatting & Compliance Check – Delivering a publication-ready manuscript with statistical accuracy.",
     },
   ];
-  
 
   const accord2: { question: string; answer: string }[] = [
     {
@@ -54,7 +58,8 @@ export default function Home() {
         "We follow the PRISMA checklist, ensuring transparent reporting, structured methodology, and reproducibility.",
     },
     {
-      question: "Can you conduct advanced statistical modeling for my meta-analysis?",
+      question:
+        "Can you conduct advanced statistical modeling for my meta-analysis?",
       answer:
         "Yes! We use RevMan, R, Stata, SPSS, and Python for heterogeneity assessment, forest plots, and meta-regression.",
     },
@@ -73,7 +78,7 @@ export default function Home() {
       answer:
         "Simply upload your research question, and our meta-analysis experts will develop a structured, high-quality review.",
     },
-];
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -165,7 +170,7 @@ export default function Home() {
                     PRISMA &amp; Cochrane-compliant, Effect size &amp;
                     heterogeneity analysis
                   </td>
-                  <td>⏳ 12-20 Days</td>
+                  <td> 12-20 Days</td>
                 </tr>
                 <tr>
                   <td>Statistical Data Analysis &amp; Modeling</td>
@@ -174,7 +179,7 @@ export default function Home() {
                     Fixed/random effects models, Bias &amp; subgroup analysis,
                     Publication-ready graphs
                   </td>
-                  <td>⏳ 12-25 Days</td>
+                  <td> 12-25 Days</td>
                 </tr>
                 <tr>
                   <td>Database Search &amp; Study Selection</td>
@@ -183,7 +188,7 @@ export default function Home() {
                     Systematic literature screening, PubMed, Embase, Cochrane
                     search
                   </td>
-                  <td>⏳ 7-10 Days</td>
+                  <td> 7-10 Days</td>
                 </tr>
                 <tr>
                   <td>Critical Appraisal &amp; Bias Risk Assessment</td>
@@ -192,7 +197,7 @@ export default function Home() {
                     GRADE, RoB 2, AMSTAR-2, Sensitivity analysis &amp;
                     interpretation
                   </td>
-                  <td>⏳ 10-15 Days</td>
+                  <td> 10-15 Days</td>
                 </tr>
                 <tr>
                   <td>Journal Submission &amp; Peer Review Handling</td>
@@ -200,7 +205,7 @@ export default function Home() {
                   <td>
                     Formatting &amp; compliance, Response to reviewer comments
                   </td>
-                  <td>⏳ 7-10 Days</td>
+                  <td> 7-10 Days</td>
                 </tr>
               </tbody>
             </table>
@@ -227,7 +232,7 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
               <button className={styles.primaryButton}>
-                [Start AI Reduction Now]
+                Start Your Meta Analysis Service Now
               </button>
             </a>
           </div>
@@ -239,25 +244,36 @@ export default function Home() {
 
             <div className="before-after-example-content">
               <div className="before-example">
-                <h3>Before (Unstructured Literature Summary Without Quantitative Synthesis):</h3>
+                <h3>
+                  Before (Unstructured Literature Summary Without Quantitative
+                  Synthesis):
+                </h3>
                 <p className="before-text">
-                “Several studies have examined the effectiveness of Drug X for treating Disease Y. Some reported positive results, while others did not find significant differences.”
+                  “Several studies have examined the effectiveness of Drug X for
+                  treating Disease Y. Some reported positive results, while
+                  others did not find significant differences.”
                 </p>
               </div>
 
               <div className="after-example">
-                <h3>After (Professionally Written, PRISMA-Compliant Meta-Analysis):</h3>
+                <h3>
+                  After (Professionally Written, PRISMA-Compliant
+                  Meta-Analysis):
+                </h3>
                 <p className="after-text">
-                “A meta-analysis of 18 randomized controlled trials (n=7,000) assessing Drug X for Disease Y was conducted. The pooled effect size indicated a significant reduction in disease severity (SMD -0.75, 95% CI -0.50 to -1.00, ). No major publication bias was observed (Egger’s test, p=0.18).”
+                  “A meta-analysis of 18 randomized controlled trials (n=7,000)
+                  assessing Drug X for Disease Y was conducted. The pooled
+                  effect size indicated a significant reduction in disease
+                  severity (SMD -0.75, 95% CI -0.50 to -1.00, ). No major
+                  publication bias was observed (Egger’s test, p=0.18).”
                 </p>
               </div>
             </div>
 
             <div className="explanation">
               <p>
-              Meta-Analysis Writing ensures clarity, statistical rigor, and high-impact research synthesis.
-
-
+                Meta-Analysis Writing ensures clarity, statistical rigor, and
+                high-impact research synthesis.
               </p>
             </div>
           </section>
@@ -271,21 +287,22 @@ export default function Home() {
               <div className="pricing-item">
                 <h3>Starting Price</h3>
                 <p className="pricing-text">
-                $0.18 per word (Basic Meta-Analysis) 
+                  $0.18 per word (Basic Meta-Analysis)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $0.30 per word (Advanced Statistical Modeling & Bias Assessment)
+                  $0.30 per word (Advanced Statistical Modeling & Bias
+                  Assessment)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                12 Days – 25 Days (Depending on complexity)
+                  12 Days – 25 Days (Depending on complexity)
                 </p>
               </div>
             </div>
@@ -303,35 +320,64 @@ export default function Home() {
           <div className="wcus-container">
             <div className="wcus-client-reviews">
               <h3 className="editing-overview-heading">Testimonial</h3>
-              {[
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                  text: "The best editing service I've used. Got published in record time!",
-                  name: "Dr. Emily Carter",
-                },
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                  text: "Exceptional support from expert editors. Highly recommended!",
-                  name: "Prof. John Williams",
-                },
-              ].map((review, index) => (
-                <div className="wcus-review" key={index}>
-                  <img src={review.imgSrc} alt="Client" />
-                  <p>
-                    "{review.text}" - <strong>{review.name}</strong>
-                  </p>
-                </div>
-              ))}
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                    text: "The best editing service I've used. Got published in record time!",
+                    name: "Dr. Emily Carter",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                    text: "Exceptional support from expert editors. Highly recommended!",
+                    name: "Prof. John Williams",
+                  },
+                  {
+                    imgSrc:
+                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/Testimonial/"
+                className="cta-button"
+              >
+                See More Reviews
+              </a>
             </div>
           </div>
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-            <h1 className="accordion__title">
-              Faq
-              </h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div

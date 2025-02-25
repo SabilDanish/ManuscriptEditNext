@@ -327,7 +327,7 @@ export default function Home() {
 
       <div className="container" style={{ marginTop: "3rem" }}>
         <div className="accordion__wrapper2">
-          <h1 className="accordion__title">FAQ</h1>
+          <h1 className="accordion__title">FAQs</h1>
 
           {accord2.map((faq, index) => (
             <div

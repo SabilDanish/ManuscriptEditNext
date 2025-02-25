@@ -28,30 +28,34 @@ export default function Home() {
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
-      title: "Understanding Research Objectives – Define statistical goals and variables.",
+      title:
+        "Understanding Research Objectives – Define statistical goals and variables.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
-      title: "Data Cleaning & Preparation – Remove inconsistencies, handle missing values.",
+      title:
+        "Data Cleaning & Preparation – Remove inconsistencies, handle missing values.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
-      title: "Applying Statistical Models – Conduct hypothesis testing, regression, or multivariate analysis.",
+      title:
+        "Applying Statistical Models – Conduct hypothesis testing, regression, or multivariate analysis.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
-      title: "Data Interpretation & Visualization – Generate statistical summaries, graphs, and tables.",
+      title:
+        "Data Interpretation & Visualization – Generate statistical summaries, graphs, and tables.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
-      title: "Review & Revisions – Final validation and refinements for publication.",
+      title:
+        "Review & Revisions – Final validation and refinements for publication.",
     },
   ];
-  
 
   const accord2: { question: string; answer: string }[] = [
     {
@@ -79,7 +83,7 @@ export default function Home() {
       answer:
         "Simply upload your dataset, and our statisticians will conduct in-depth analysis.",
     },
-];
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -169,43 +173,43 @@ export default function Home() {
                 <td>Descriptive Statistics</td>
                 <td>Summarizing and visualizing research data</td>
                 <td>Mean, median, variance, histograms</td>
-                <td>⏳ 3-5 Days</td>
+                <td> 3-5 Days</td>
               </tr>
               <tr>
                 <td>Inferential Statistics</td>
                 <td>Hypothesis testing and drawing conclusions</td>
                 <td>T-tests, Chi-square, ANOVA</td>
-                <td>⏳ 5-7 Days</td>
+                <td> 5-7 Days</td>
               </tr>
               <tr>
                 <td>Regression Analysis</td>
                 <td>Identifying relationships between variables</td>
                 <td>Linear, Logistic, Multiple Regression</td>
-                <td>⏳ 5-8 Days</td>
+                <td> 5-8 Days</td>
               </tr>
               <tr>
                 <td>Multivariate Analysis</td>
                 <td>Handling complex datasets</td>
                 <td>Factor analysis, PCA, MANOVA</td>
-                <td>⏳ 6-9 Days</td>
+                <td> 6-9 Days</td>
               </tr>
               <tr>
                 <td>Bayesian Statistics</td>
                 <td>Probabilistic modeling and decision-making</td>
                 <td>Bayesian inference, Markov Chains</td>
-                <td>⏳ 7-10 Days</td>
+                <td> 7-10 Days</td>
               </tr>
               <tr>
                 <td>Survival Analysis</td>
                 <td>Medical and clinical research data</td>
                 <td>Kaplan-Meier curves, Cox Regression</td>
-                <td>⏳ 7-12 Days</td>
+                <td> 7-12 Days</td>
               </tr>
               <tr>
                 <td>Time Series Analysis</td>
                 <td>Forecasting trends and patterns</td>
                 <td>ARIMA, GARCH, Exponential Smoothing</td>
-                <td>⏳ 7-10 Days</td>
+                <td> 7-10 Days</td>
               </tr>
             </tbody>
           </table>
@@ -230,7 +234,7 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
               <button className={styles.primaryButton}>
-                [Start AI Reduction Now]
+                Start Your Statistical Analysis Service Now
               </button>
             </a>
           </div>
@@ -244,17 +248,21 @@ export default function Home() {
               <div className="before-example">
                 <h3>Before (Raw Data with No Statistical Structure):</h3>
                 <p className="before-text">
-                &quot;Dataset contains patient outcomes across 10 hospitals but lacks structured statistical
-                interpretation.&quot;
+                  &quot;Dataset contains patient outcomes across 10 hospitals
+                  but lacks structured statistical interpretation.&quot;
                 </p>
               </div>
 
               <div className="after-example">
-                <h3>After (Expert Statistical Analysis &amp; Results Interpretation):</h3>
+                <h3>
+                  After (Expert Statistical Analysis &amp; Results
+                  Interpretation):
+                </h3>
                 <p className="after-text">
-                &quot;A logistic regression model found a significant association (p&lt;0.05) between patient
-recovery rates and treatment type, with an odds ratio of 2.5, indicating a 2.5x higher
-likelihood of recovery in Group A patients.&quot;
+                  &quot;A logistic regression model found a significant
+                  association (p&lt;0.05) between patient recovery rates and
+                  treatment type, with an odds ratio of 2.5, indicating a 2.5x
+                  higher likelihood of recovery in Group A patients.&quot;
                 </p>
               </div>
             </div>
@@ -268,19 +276,22 @@ likelihood of recovery in Group A patients.&quot;
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">$0.12 per data point (Basic Statistical Analysis)</p>
+                <p className="pricing-text">
+                  $0.12 per data point (Basic Statistical Analysis)
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
-                <p className="delivery-time">$0.20 per data point
-                (Advanced Statistical Modeling)</p>
+                <p className="delivery-time">
+                  $0.20 per data point (Advanced Statistical Modeling)
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                3 – 12 Days (Based on complexity and dataset size)
+                  3 – 12 Days (Based on complexity and dataset size)
                 </p>
               </div>
             </div>
@@ -298,35 +309,64 @@ likelihood of recovery in Group A patients.&quot;
           <div className="wcus-container">
             <div className="wcus-client-reviews">
               <h3 className="editing-overview-heading">Testimonial</h3>
-              {[
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                  text: "The best editing service I've used. Got published in record time!",
-                  name: "Dr. Emily Carter",
-                },
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                  text: "Exceptional support from expert editors. Highly recommended!",
-                  name: "Prof. John Williams",
-                },
-              ].map((review, index) => (
-                <div className="wcus-review" key={index}>
-                  <img src={review.imgSrc} alt="Client" />
-                  <p>
-                    "{review.text}" - <strong>{review.name}</strong>
-                  </p>
-                </div>
-              ))}
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                    text: "The best editing service I've used. Got published in record time!",
+                    name: "Dr. Emily Carter",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                    text: "Exceptional support from expert editors. Highly recommended!",
+                    name: "Prof. John Williams",
+                  },
+                  {
+                    imgSrc:
+                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/Testimonial/"
+                className="cta-button"
+              >
+                See More Reviews
+              </a>
             </div>
           </div>
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-            <h1 className="accordion__title">
-              Faq
-              </h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div

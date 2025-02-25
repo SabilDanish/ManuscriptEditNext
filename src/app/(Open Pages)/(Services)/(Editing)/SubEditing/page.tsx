@@ -436,25 +436,28 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <h3><br />🏆 Rated 4.9 out of 5 by academic professionals, scientists, and publishing experts.<br /><br />
-📑 Trusted by universities, funding agencies, and research institutions.</h3>
-<div className="cta-container">
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
               <a
                 href="https://manuscriptedit.com/Testimonial/"
                 className="cta-button"
               >
-               See More Reviews
+                See More Reviews
               </a>
             </div>
-
-
           </div>
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-            <h1 className="accordion__title">
-              Faq
-              </h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div

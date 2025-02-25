@@ -33,30 +33,34 @@ export default function Home() {
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
-      title: "Consultation & Project Scope Definition – Understanding research objectives & dataset complexity.",
+      title:
+        "Consultation & Project Scope Definition – Understanding research objectives & dataset complexity.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
-      title: "Data Collection & Cleaning – Preparing datasets for analysis by removing inconsistencies.",
+      title:
+        "Data Collection & Cleaning – Preparing datasets for analysis by removing inconsistencies.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
-      title: "Applying Statistical & Computational Methods – Using software-based algorithms and models.",
+      title:
+        "Applying Statistical & Computational Methods – Using software-based algorithms and models.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
-      title: "Interpretation & Visualization – Generating graphs, charts, and detailed reports.",
+      title:
+        "Interpretation & Visualization – Generating graphs, charts, and detailed reports.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
-      title: "Final Review & Revisions – Ensuring statistical accuracy & research compliance.",
+      title:
+        "Final Review & Revisions – Ensuring statistical accuracy & research compliance.",
     },
   ];
-  
 
   const accord2: { question: string; answer: string }[] = [
     {
@@ -74,8 +78,7 @@ export default function Home() {
       answer:
         "Yes, we provide both the analyzed dataset and structured reports.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -120,7 +123,6 @@ export default function Home() {
 
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
-        
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>Key Benefits:</h2>
             <ul className={styles.benefitsList}>
@@ -166,7 +168,7 @@ export default function Home() {
                     Hypothesis testing, Statistical modeling, Data
                     interpretation
                   </td>
-                  <td>⏳ 5-7 Days</td>
+                  <td> 5-7 Days</td>
                 </tr>
                 <tr>
                   <td>Clinical Data Analysis</td>
@@ -175,13 +177,13 @@ export default function Home() {
                     Biostatistics, Clinical trial data validation, Drug efficacy
                     studies
                   </td>
-                  <td>⏳ 7-10 Days</td>
+                  <td> 7-10 Days</td>
                 </tr>
                 <tr>
                   <td>Machine Learning & AI-Based Analysis</td>
                   <td>AI & Big Data Research</td>
                   <td>Predictive analytics, Data mining, Deep learning</td>
-                  <td>⏳ 7-12 Days</td>
+                  <td> 7-12 Days</td>
                 </tr>
                 <tr>
                   <td>Survey Data Analysis</td>
@@ -189,7 +191,7 @@ export default function Home() {
                   <td>
                     Qualitative & quantitative analysis, Sentiment analysis
                   </td>
-                  <td>⏳ 5-7 Days</td>
+                  <td> 5-7 Days</td>
                 </tr>
                 <tr>
                   <td>Big Data Processing</td>
@@ -197,13 +199,13 @@ export default function Home() {
                   <td>
                     Data cleaning, Trend forecasting, Business intelligence
                   </td>
-                  <td>⏳ 10-15 Days</td>
+                  <td> 10-15 Days</td>
                 </tr>
                 <tr>
                   <td>Qualitative Research Analysis</td>
                   <td>Social Science & Behavioral Studies</td>
                   <td>NVivo-based thematic analysis, Text mining</td>
-                  <td>⏳ 6-9 Days</td>
+                  <td> 6-9 Days</td>
                 </tr>
               </tbody>
             </table>
@@ -230,7 +232,7 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
               <button className={styles.primaryButton}>
-                [Start AI Reduction Now]
+                Start Your Data Analysis Service Now
               </button>
             </a>
           </div>
@@ -244,22 +246,27 @@ export default function Home() {
               <div className="before-example">
                 <h3>Before (Raw Data with No Structure):</h3>
                 <p className="before-text">
-                “Survey conducted on 1,500 participants, with responses collected on education preferences. Data in Excel sheets with no structure.”
+                  “Survey conducted on 1,500 participants, with responses
+                  collected on education preferences. Data in Excel sheets with
+                  no structure.”
                 </p>
               </div>
 
               <div className="after-example">
                 <h3>After (Professional Data Analysis & Visualization):</h3>
                 <p className="after-text">
-                “The study analyzed survey responses from 1,500 participants using sentiment analysis and logistic regression. Findings indicate a 65% preference for online learning, with a correlation coefficient of 0.78 .”
+                  “The study analyzed survey responses from 1,500 participants
+                  using sentiment analysis and logistic regression. Findings
+                  indicate a 65% preference for online learning, with a
+                  correlation coefficient of 0.78 .”
                 </p>
               </div>
             </div>
 
-
             <div className="explanation">
               <p>
-              Our plagiarism reduction ensures originality, proper citation, and journal compliance.
+                Our plagiarism reduction ensures originality, proper citation,
+                and journal compliance.
               </p>
             </div>
           </section>
@@ -272,18 +279,22 @@ export default function Home() {
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">$0.12 per data point (Statistical Analysis) </p>
+                <p className="pricing-text">
+                  $0.12 per data point (Statistical Analysis){" "}
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
-                <p className="delivery-time">$0.20 per data point (Advanced Machine Learning)</p>
+                <p className="delivery-time">
+                  $0.20 per data point (Advanced Machine Learning)
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                5 Days – 15 Days (Depending on complexity)
+                  5 Days – 15 Days (Depending on complexity)
                 </p>
               </div>
             </div>
@@ -301,35 +312,64 @@ export default function Home() {
           <div className="wcus-container">
             <div className="wcus-client-reviews">
               <h3 className="editing-overview-heading">Testimonial</h3>
-              {[
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                  text: "The best editing service I've used. Got published in record time!",
-                  name: "Dr. Emily Carter",
-                },
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                  text: "Exceptional support from expert editors. Highly recommended!",
-                  name: "Prof. John Williams",
-                },
-              ].map((review, index) => (
-                <div className="wcus-review" key={index}>
-                  <img src={review.imgSrc} alt="Client" />
-                  <p>
-                    "{review.text}" - <strong>{review.name}</strong>
-                  </p>
-                </div>
-              ))}
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                    text: "The best editing service I've used. Got published in record time!",
+                    name: "Dr. Emily Carter",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                    text: "Exceptional support from expert editors. Highly recommended!",
+                    name: "Prof. John Williams",
+                  },
+                  {
+                    imgSrc:
+                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/Testimonial/"
+                className="cta-button"
+              >
+                See More Reviews
+              </a>
             </div>
           </div>
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-            <h1 className="accordion__title">
-              Faq
-              </h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div

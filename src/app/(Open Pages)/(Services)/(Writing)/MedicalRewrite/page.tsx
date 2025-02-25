@@ -58,7 +58,7 @@ export default function Home() {
       title: "Free minor revisions within 14 days.",
     },
   ];
-  
+
   const accord2: { question: string; answer: string }[] = [
     {
       question: "How is Rewriting different from Copyediting?",
@@ -72,8 +72,7 @@ export default function Home() {
     },
     {
       question: "Can I request revisions after rewriting?",
-      answer:
-        "Yes, 14 days of free minor revisions are included.",
+      answer: "Yes, 14 days of free minor revisions are included.",
     },
     {
       question: "Do you offer formatting along with rewriting?",
@@ -85,8 +84,7 @@ export default function Home() {
       answer:
         "Simply upload your manuscript, and our editorial team will refine it for maximum clarity and impact.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -304,8 +302,8 @@ export default function Home() {
 
             <div className="explanation">
               <p>
-              Rewriting improves sentence flow, eliminates ambiguity, and enhances
-              readability.
+                Rewriting improves sentence flow, eliminates ambiguity, and
+                enhances readability.
               </p>
             </div>
           </section>
@@ -329,7 +327,7 @@ export default function Home() {
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                24-48 hours (additional cost applies)
+                  24-48 hours (additional cost applies)
                 </p>
               </div>
             </div>
@@ -373,9 +371,7 @@ export default function Home() {
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-              <h1 className="accordion__title">
-                FAQ
-              </h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div

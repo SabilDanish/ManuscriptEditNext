@@ -211,7 +211,7 @@ export default function Home() {
           style={{ marginTop: "40px" }}
           onClick={() =>
             (window.location.href =
-              "https://secure.manuscriptedit.com/quotationn")
+              "https://secure.manuscriptedit.com/quotation")
           }
         >
           Compare Review & Pre-Submission Services
@@ -290,9 +290,11 @@ export default function Home() {
         </div>
 
         <div className={styles.buttonGroup}>
+        <a href="https://secure.manuscriptedit.com/quotation">
           <button className={styles.primaryButton}>
             Start Your Peer Review Now
           </button>
+          </a>
         </div>
       </div>
 

@@ -95,10 +95,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-a {
+/* a {
   color: inherit;
   text-decoration: none;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -106,8 +106,7 @@ a {
   }
 }
 
-
-.DotLi{
+.DotLi {
   list-style-type: disc;
 }
 
@@ -115,9 +114,8 @@ a {
   outline: none;
 } */
 
-
-@media (max-width:768px){
-  .MainHighlighted{
+@media (max-width: 768px) {
+  .MainHighlighted {
     font-size: 10px !important ;
   }
 }

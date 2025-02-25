@@ -116,31 +116,31 @@ export default function Home() {
         <td>Full Journal Submission Service</td>
         <td>First-time authors & researchers</td>
         <td>Journal selection, Formatting, Cover letter writing, Submission tracking</td>
-        <td>⏳ 5-7 Days</td>
+        <td>5-7 Days</td>
       </tr>
       <tr>
         <td>Manuscript Formatting & Compliance Check</td>
         <td>Authors preparing for submission</td>
         <td>Journal-specific formatting, References & citations, Ethical compliance review</td>
-        <td>⏳ 3-5 Days</td>
+        <td>3-5 Days</td>
       </tr>
       <tr>
         <td>Cover Letter & Reviewer Response Drafting</td>
         <td>Researchers submitting to high-impact journals</td>
         <td>Persuasive cover letter, Reviewer response structuring, Scientific argumentation refinement</td>
-        <td>⏳ 4-6 Days</td>
+        <td>4-6 Days</td>
       </tr>
       <tr>
         <td>Multiple Journal Submissions & Resubmission Support</td>
         <td>Authors seeking alternative publication options</td>
         <td>Multi-journal submission, Resubmission after rejection, Compliance revisions</td>
-        <td>⏳ 7-10 Days</td>
+        <td>7-10 Days</td>
       </tr>
       <tr>
         <td>Submission Tracking & Peer Review Handling</td>
         <td>Researchers awaiting decision & revisions</td>
         <td>Reviewer comment analysis, Manuscript revision tracking, Editorial communication</td>
-        <td>⏳ Ongoing</td>
+        <td>Ongoing</td>
       </tr>
     </tbody>
   </table>
@@ -219,9 +219,11 @@ export default function Home() {
   </div>
 
   <div className={styles.buttonGroup}>
+  <a href="https://secure.manuscriptedit.com/quotation">
     <button className={styles.primaryButton}>
       Start Your Journal Submission Process
     </button>
+    </a>
   </div>
 </div>
 

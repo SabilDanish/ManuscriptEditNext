@@ -97,12 +97,14 @@ export default function ProofreadingServices() {
             and research documents.
           </p>
           <div className={styles.buttonGroup}>
-            <button className={styles.primaryButton}>
+            <a href="https://secure.manuscriptedit.com/quotation"> <button className={styles.primaryButton}>
               Get Proofreading Now
-            </button>
+            </button></a>
+            <a href="https://secure.manuscriptedit.com/quotation">
             <button className={styles.secondaryButton}>
               Request a Free Sample
             </button>
+            </a>
           </div>
         </div>
       </section>
@@ -198,7 +200,9 @@ export default function ProofreadingServices() {
         </div>
 
         <div className={styles.buttonGroup}>
-          <button className={styles.primaryButton}>Get Proofreading Now</button>
+        <a href="https://secure.manuscriptedit.com/quotation">
+        <button className={styles.primaryButton} >Get Proofreading Now</button>
+        </a>
         </div>
 
         <section className="editing-overview-section">
@@ -343,9 +347,11 @@ export default function ProofreadingServices() {
               If your manuscript needs deeper clarity improvements, consider
               Copyediting or Substantive Editing.
             </p>
+            <a href="https://secure.manuscriptedit.com/quotation">
             <button className="editing-overview-button-unique">
               Compare All Services
             </button>
+            </a>
           </div>
         </section>
       </div>

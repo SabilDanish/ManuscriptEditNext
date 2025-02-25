@@ -22,30 +22,35 @@ export default function Home() {
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
-      title: "Understanding Research & Illustration Needs – Reviewing manuscript, target journal, and design preferences.",
+      title:
+        "Understanding Research & Illustration Needs – Reviewing manuscript, target journal, and design preferences.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
-      title: "Scientific Figure Sketching & Concept Planning – Structuring raw data into a visually engaging format.",
+      title:
+        "Scientific Figure Sketching & Concept Planning – Structuring raw data into a visually engaging format.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
-      title: "Graphical Abstract & Data Visualization Design – Enhancing clarity with high-quality illustrations.",
+      title:
+        "Graphical Abstract & Data Visualization Design – Enhancing clarity with high-quality illustrations.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
-      title: "Quality Check, Formatting & Resolution Enhancement – Ensuring journal-compliant, high-resolution graphics.",
+      title:
+        "Quality Check, Formatting & Resolution Enhancement – Ensuring journal-compliant, high-resolution graphics.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
-      title: "Final Proofing & Submission-Ready Illustration Delivery – Providing print-ready, digital formats for research use.",
+      title:
+        "Final Proofing & Submission-Ready Illustration Delivery – Providing print-ready, digital formats for research use.",
     },
   ];
-  
+
   const accord2: { question: string; answer: string }[] = [
     {
       question: "What formats do you provide for illustrations?",
@@ -72,8 +77,7 @@ export default function Home() {
       answer:
         "Simply upload your research details, and our illustration experts will create a high-quality, publication-ready scientific figure.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -164,7 +168,7 @@ export default function Home() {
                     Custom-designed research abstracts, Clear & visually
                     engaging
                   </td>
-                  <td>⏳ 3-5 Days</td>
+                  <td> 3-5 Days</td>
                 </tr>
                 <tr>
                   <td>Scientific Figure & Data Visualization</td>
@@ -173,13 +177,13 @@ export default function Home() {
                     High-resolution graphs, charts, Data clarity & structured
                     layouts
                   </td>
-                  <td>⏳ 4-6 Days</td>
+                  <td> 4-6 Days</td>
                 </tr>
                 <tr>
                   <td>Custom Research Diagrams & Infographics</td>
                   <td>Authors presenting complex data</td>
                   <td>Process flow diagrams, Thematic illustrations</td>
-                  <td>⏳ 5-7 Days</td>
+                  <td> 5-7 Days</td>
                 </tr>
                 <tr>
                   <td>Medical & Life Sciences Illustration</td>
@@ -188,7 +192,7 @@ export default function Home() {
                     Anatomical & biological illustrations, HIPAA-compliant
                     medical graphics
                   </td>
-                  <td>⏳ 4-7 Days</td>
+                  <td> 4-7 Days</td>
                 </tr>
                 <tr>
                   <td>Conference & Presentation Figures</td>
@@ -196,7 +200,7 @@ export default function Home() {
                   <td>
                     Slide-ready, engaging visuals, PowerPoint & digital formats
                   </td>
-                  <td>⏳ 3-6 Days</td>
+                  <td> 3-6 Days</td>
                 </tr>
               </tbody>
             </table>
@@ -237,21 +241,25 @@ export default function Home() {
               <div className="before-example">
                 <h3>Before (Basic, Unstructured Diagram):</h3>
                 <p className="before-text">
-                “Our research model suggests that variable X influences variable Y, leading to an outcome Z.”
+                  “Our research model suggests that variable X influences
+                  variable Y, leading to an outcome Z.”
                 </p>
               </div>
 
               <div className="after-example">
                 <h3>After (Professionally Designed Scientific Figure):</h3>
                 <p className="after-text">
-                “A graphical representation of X-Y-Z interactions provides a clearer, more structured view of the research findings (Fig. 1).”
+                  “A graphical representation of X-Y-Z interactions provides a
+                  clearer, more structured view of the research findings (Fig.
+                  1).”
                 </p>
               </div>
             </div>
 
             <div className="explanation">
               <p>
-              Our expert illustrators ensure precise, structured, and journal-ready scientific visuals.
+                Our expert illustrators ensure precise, structured, and
+                journal-ready scientific visuals.
               </p>
             </div>
           </section>
@@ -264,22 +272,20 @@ export default function Home() {
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">
-                $100 (Basic Graphical Abstract) 
-                </p>
+                <p className="pricing-text">$100 (Basic Graphical Abstract)</p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $500 (Advanced Scientific Figure with Custom Illustrations)
+                  $500 (Advanced Scientific Figure with Custom Illustrations)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                3 Days – 10 Days (Depending on complexity)
+                  3 Days – 10 Days (Depending on complexity)
                 </p>
               </div>
             </div>
@@ -333,25 +339,25 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <h3><br />🏆 Rated 4.9 out of 5 by academic professionals, scientists, and publishing experts.<br /><br />
-📑 Trusted by universities, funding agencies, and research institutions.</h3>
-<div className="cta-container">
-              <a
-                href="/Testimonial"
-                className="cta-button"
-              >
-               See More Reviews
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a href="/Testimonial" className="cta-button">
+                See More Reviews
               </a>
             </div>
-
-
           </div>
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-            <h1 className="accordion__title">
-              Faq
-              </h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div

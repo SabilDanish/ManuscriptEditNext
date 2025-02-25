@@ -171,7 +171,7 @@ export default function Home() {
                     Font, margins, headings, tables, Standard citation
                     formatting
                   </td>
-                  <td>⏳ 3-5 Days</td>
+                  <td>3-5 Days</td>
                 </tr>
                 <tr>
                   <td>Advanced Formatting</td>
@@ -179,13 +179,13 @@ export default function Home() {
                   <td>
                     Journal-specific compliance, In-depth reference structuring
                   </td>
-                  <td>⏳ 5-7 Days</td>
+                  <td>5-7 Days</td>
                 </tr>
                 <tr>
                   <td>Journal-Specific Citation & Reference Formatting</td>
                   <td>Authors ensuring proper citations</td>
                   <td>APA, MLA, Vancouver, IEEE, Cross-referencing checks</td>
-                  <td>⏳ 3-5 Days</td>
+                  <td>3-5 Days</td>
                 </tr>
                 <tr>
                   <td>Figures, Tables & Graph Alignment</td>
@@ -194,7 +194,7 @@ export default function Home() {
                     Figure formatting, high-resolution adjustments, Caption &
                     table alignment
                   </td>
-                  <td>⏳ 4-6 Days</td>
+                  <td>4-6 Days</td>
                 </tr>
                 <tr>
                   <td>Journal Submission-Ready Package</td>
@@ -203,7 +203,7 @@ export default function Home() {
                     Cover letter formatting, Response to reviewer comments
                     formatting
                   </td>
-                  <td>⏳ 5-7 Days</td>
+                  <td>5-7 Days</td>
                 </tr>
               </tbody>
             </table>
@@ -358,7 +358,7 @@ export default function Home() {
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-              <h1 className="accordion__title">Faq</h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div

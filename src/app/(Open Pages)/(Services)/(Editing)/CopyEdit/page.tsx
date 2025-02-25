@@ -35,30 +35,34 @@ export default function Home() {
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
-      title: "Manuscript Review & Language Assessment – Evaluating clarity, grammar, consistency, and flow.",
+      title:
+        "Manuscript Review & Language Assessment – Evaluating clarity, grammar, consistency, and flow.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
-      title: "Copyediting by Subject-Matter Experts – Refining grammar, punctuation, and terminology consistency.",
+      title:
+        "Copyediting by Subject-Matter Experts – Refining grammar, punctuation, and terminology consistency.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
-      title: "Journal Formatting & Style Adaptation – Ensuring journal-specific compliance.",
+      title:
+        "Journal Formatting & Style Adaptation – Ensuring journal-specific compliance.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
-      title: "Final Proofreading & Quality Check – Eliminating remaining errors before submission.",
+      title:
+        "Final Proofreading & Quality Check – Eliminating remaining errors before submission.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
-      title: "Delivery of Ready-to-Submit Manuscript – Providing error-free, publication-ready documents.",
+      title:
+        "Delivery of Ready-to-Submit Manuscript – Providing error-free, publication-ready documents.",
     },
   ];
-  
 
   const accord2: { question: string; answer: string }[] = [
     {
@@ -86,8 +90,7 @@ export default function Home() {
       answer:
         "Simply upload your manuscript, and our copyediting experts will refine your research for submission.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -101,7 +104,7 @@ export default function Home() {
   return (
     <>
       {<Metadata metaData={metaData} />}
-      
+
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>
@@ -116,13 +119,17 @@ export default function Home() {
               linguistic accuracy for successful submission.”
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation"><button className={styles.primaryButton}>
-                Get a Free Copyediting Quote
-              </button></a>
-              
-              <a href="https://secure.manuscriptedit.com/quotation"><button className={styles.secondaryButton}>
-                Request a Free Sample
-              </button></a>
+              <a href="https://secure.manuscriptedit.com/quotation">
+                <button className={styles.primaryButton}>
+                  Get a Free Copyediting Quote
+                </button>
+              </a>
+
+              <a href="https://secure.manuscriptedit.com/quotation">
+                <button className={styles.secondaryButton}>
+                  Request a Free Sample
+                </button>
+              </a>
             </div>
           </div>
         </section>
@@ -178,7 +185,7 @@ export default function Home() {
                     <br />
                     Sentence restructuring
                   </td>
-                  <td>⏳ 3-5 Days</td>
+                  <td>3-5 Days</td>
                 </tr>
                 <tr>
                   <td>Advanced Copyediting</td>
@@ -188,7 +195,7 @@ export default function Home() {
                     <br />
                     Clarity enhancement & coherence check
                   </td>
-                  <td>⏳ 4-6 Days</td>
+                  <td>4-6 Days</td>
                 </tr>
                 <tr>
                   <td>Technical & Scientific Copyediting</td>
@@ -198,7 +205,7 @@ export default function Home() {
                     <br />
                     Journal-compliant structuring
                   </td>
-                  <td>⏳ 5-7 Days</td>
+                  <td>5-7 Days</td>
                 </tr>
                 <tr>
                   <td>Manuscript Formatting & Journal Compliance</td>
@@ -208,7 +215,7 @@ export default function Home() {
                     <br />
                     Reference structuring
                   </td>
-                  <td>⏳ 4-6 Days</td>
+                  <td>4-6 Days</td>
                 </tr>
                 <tr>
                   <td>Final Pre-Submission Copyediting</td>
@@ -218,14 +225,13 @@ export default function Home() {
                     <br />
                     Manuscript polishing
                   </td>
-                  <td>⏳ 5-7 Days</td>
+                  <td>5-7 Days</td>
                 </tr>
               </tbody>
             </table>
           </section>
         </section>
 
-       
         <div className={styles.processContainer}>
           <h2 className={styles.processTitle}>How It Works</h2>
           <div className={styles.processSteps1}>
@@ -244,40 +250,43 @@ export default function Home() {
 
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
-            <button className={styles.primaryButton}>
-            Start Your Copyediting Process
-            </button>
+              <button className={styles.primaryButton}>
+                Start Your Copyediting Process
+              </button>
             </a>
           </div>
 
-         
-
           <section className="before-after-example-section">
             <h2 className="before-after-example-heading">
-            Before & After Copyediting – See the Difference
+              Before & After Copyediting – See the Difference
             </h2>
 
             <div className="before-after-example-content">
               <div className="before-example">
                 <h3>Before (Raw, Unedited Manuscript):</h3>
                 <p className="before-text">
-                “The effects of the compound were interesting and may be useful in future. These results were observed in recent studies and are similar to previous research, which shows that this compound is applicable in different situations.”
-
-
+                  “The effects of the compound were interesting and may be
+                  useful in future. These results were observed in recent
+                  studies and are similar to previous research, which shows that
+                  this compound is applicable in different situations.”
                 </p>
               </div>
 
               <div className="after-example">
                 <h3>After (Professionally Edited for Clarity & Precision):</h3>
                 <p className="after-text">
-                “The observed effects of the compound indicate its potential applicability in future research. Our findings align with previous studies, confirming its effectiveness in diverse experimental conditions.”
+                  “The observed effects of the compound indicate its potential
+                  applicability in future research. Our findings align with
+                  previous studies, confirming its effectiveness in diverse
+                  experimental conditions.”
                 </p>
               </div>
             </div>
 
             <div className="explanation">
               <p>
-              Our expert copyediting ensures precise, structured, and journal-ready manuscripts.
+                Our expert copyediting ensures precise, structured, and
+                journal-ready manuscripts.
               </p>
             </div>
           </section>
@@ -290,18 +299,22 @@ export default function Home() {
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">$0.05 per word (Standard Copyediting) </p>
+                <p className="pricing-text">
+                  $0.05 per word (Standard Copyediting){" "}
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
-                <p className="delivery-time">$0.12 per word (Advanced Copyediting & Formatting)</p>
+                <p className="delivery-time">
+                  $0.12 per word (Advanced Copyediting & Formatting)
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                3 Days – 7 Days (Depending on manuscript complexity)
+                  3 Days – 7 Days (Depending on manuscript complexity)
                 </p>
               </div>
             </div>
@@ -319,35 +332,64 @@ export default function Home() {
           <div className="wcus-container">
             <div className="wcus-client-reviews">
               <h3 className="editing-overview-heading">Testimonial</h3>
-              {[
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                  text: "The best editing service I've used. Got published in record time!",
-                  name: "Dr. Emily Carter",
-                },
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                  text: "Exceptional support from expert editors. Highly recommended!",
-                  name: "Prof. John Williams",
-                },
-              ].map((review, index) => (
-                <div className="wcus-review" key={index}>
-                  <img src={review.imgSrc} alt="Client" />
-                  <p>
-                    "{review.text}" - <strong>{review.name}</strong>
-                  </p>
-                </div>
-              ))}
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                    text: "The best editing service I've used. Got published in record time!",
+                    name: "Dr. Emily Carter",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                    text: "Exceptional support from expert editors. Highly recommended!",
+                    name: "Prof. John Williams",
+                  },
+                  {
+                    imgSrc:
+                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/Testimonial/"
+                className="cta-button"
+              >
+                See More Reviews
+              </a>
             </div>
           </div>
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-              <h1 className="accordion__title">
-              FAQ
-              </h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div

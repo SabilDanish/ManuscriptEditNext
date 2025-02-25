@@ -49,7 +49,7 @@ const Dropdown2 = () => {
   return (
     <div className="container" style={{marginTop:"3rem"}}>
       <div className="accordion__wrapper2">
-        <h1 className="accordion__title">How can you prevent rejections?<br /><span style={{ fontSize: "1rem" }}>7 reasons why you get rejected mostly, and find out how Manuscriptedit services can help you out.</span></h1>
+        <h1 className="accordion__title">FAQs<br /><span style={{ fontSize: "1rem" }}></span></h1>
 
         {accord2.map((faq, index) => (
           <div className="accordion" key={index} style={{ paddingBottom: "1rem", marginBottom: "1rem", color: "#494949" }}>
@@ -59,11 +59,6 @@ const Dropdown2 = () => {
             >
               <h2 className="accordion__question">{faq.question}</h2>
               {openIndex === index ? "⮝" : "⮟"}
-              {/* <span className="accordion__icon">
-                <i
-                  className={`${openIndex === index ? "ri-subtract-fill" : "ri-add-line"}`}
-                ></i>
-              </span> */}
             </div>
             <div
               className="accordion__content"

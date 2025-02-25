@@ -17,63 +17,67 @@ import {
 import { useState } from "react";
 
 export default function Home() {
-    const steps = [
-        {
-          stepss: "Step 1 ➔",
-          icon: faFileUpload,
-          title: "Research Question Formulation – Defining the PICO (Population, Intervention, Comparison, Outcome) framework.",
-        },
-        {
-          stepss: "Step 2 ➔",
-          icon: faSearch,
-          title: "Database Search & Study Screening – Systematic search across PubMed, Cochrane, Scopus, Embase, Google Scholar.",
-        },
-        {
-          stepss: "Step 3 ➔",
-          icon: faEdit,
-          title: "Data Extraction & Evidence Synthesis – Summarizing clinical trials, observational studies, and qualitative research.",
-        },
-        {
-          stepss: "Step 4 ➔",
-          icon: faCheckCircle,
-          title: "Meta-Analysis (If Required) – Applying GRADE, RoB 2, and statistical modeling for pooled analysis.",
-        },
-        {
-          stepss: "Step 5 ➔",
-          icon: faCheckCircle,
-          title: "Writing, Formatting & Compliance Check – Delivering a publication-ready manuscript for submission.",
-        },
-      ];
-      
+  const steps = [
+    {
+      stepss: "Step 1 ➔",
+      icon: faFileUpload,
+      title:
+        "Research Question Formulation – Defining the PICO (Population, Intervention, Comparison, Outcome) framework.",
+    },
+    {
+      stepss: "Step 2 ➔",
+      icon: faSearch,
+      title:
+        "Database Search & Study Screening – Systematic search across PubMed, Cochrane, Scopus, Embase, Google Scholar.",
+    },
+    {
+      stepss: "Step 3 ➔",
+      icon: faEdit,
+      title:
+        "Data Extraction & Evidence Synthesis – Summarizing clinical trials, observational studies, and qualitative research.",
+    },
+    {
+      stepss: "Step 4 ➔",
+      icon: faCheckCircle,
+      title:
+        "Meta-Analysis (If Required) – Applying GRADE, RoB 2, and statistical modeling for pooled analysis.",
+    },
+    {
+      stepss: "Step 5 ➔",
+      icon: faCheckCircle,
+      title:
+        "Writing, Formatting & Compliance Check – Delivering a publication-ready manuscript for submission.",
+    },
+  ];
 
-      const accord2: { question: string; answer: string }[] = [
-        {
-          question: "How do you ensure PRISMA compliance in systematic reviews?",
-          answer:
-            "We follow the PRISMA checklist, ensuring transparent reporting, structured methodology, and reproducibility.",
-        },
-        {
-          question: "Can you handle large datasets for meta-analysis?",
-          answer:
-            "Yes! We use SPSS, RevMan, R, and Stata for meta-analytical studies and statistical modeling.",
-        },
-        {
-          question: "Do you guarantee journal acceptance?",
-          answer:
-            "While we enhance manuscript quality and compliance, final acceptance depends on journal peer review policies.",
-        },
-        {
-          question: "Can I request revisions after systematic review writing?",
-          answer:
-            "Yes, we offer free minor revisions within 14 days of report delivery.",
-        },
-        {
-          question: "How do I get started?",
-          answer:
-            "Simply upload your research question, and our systematic review experts will develop a structured, high-quality review.",
-        },
-    ];
-    
+  const accord2: { question: string; answer: string }[] = [
+    {
+      question: "How do you ensure PRISMA compliance in systematic reviews?",
+      answer:
+        "We follow the PRISMA checklist, ensuring transparent reporting, structured methodology, and reproducibility.",
+    },
+    {
+      question: "Can you handle large datasets for meta-analysis?",
+      answer:
+        "Yes! We use SPSS, RevMan, R, and Stata for meta-analytical studies and statistical modeling.",
+    },
+    {
+      question: "Do you guarantee journal acceptance?",
+      answer:
+        "While we enhance manuscript quality and compliance, final acceptance depends on journal peer review policies.",
+    },
+    {
+      question: "Can I request revisions after systematic review writing?",
+      answer:
+        "Yes, we offer free minor revisions within 14 days of report delivery.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply upload your research question, and our systematic review experts will develop a structured, high-quality review.",
+    },
+  ];
+
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
@@ -135,7 +139,7 @@ export default function Home() {
                   PRISMA &amp; Cochrane-compliant, Evidence-based literature
                   synthesis
                 </td>
-                <td>⏳ 10-15 Days</td>
+                <td> 10-15 Days</td>
               </tr>
               <tr>
                 <td>Meta-Analysis &amp; Statistical Review</td>
@@ -144,7 +148,7 @@ export default function Home() {
                   Advanced data synthesis, Subgroup analysis, Publication-ready
                   tables &amp; figures
                 </td>
-                <td>⏳ 12-20 Days</td>
+                <td> 12-20 Days</td>
               </tr>
               <tr>
                 <td>Database Search &amp; Study Selection</td>
@@ -153,7 +157,7 @@ export default function Home() {
                   PubMed, Embase, Scopus, Cochrane search, PRISMA-guided
                   screening
                 </td>
-                <td>⏳ 7-10 Days</td>
+                <td> 7-10 Days</td>
               </tr>
               <tr>
                 <td>Critical Appraisal &amp; Quality Assessment</td>
@@ -162,7 +166,7 @@ export default function Home() {
                   GRADE, RoB 2, and AMSTAR-2 evaluation, Bias &amp; risk
                   assessment
                 </td>
-                <td>⏳ 7-12 Days</td>
+                <td> 7-12 Days</td>
               </tr>
               <tr>
                 <td>Journal Submission &amp; Peer Review Handling</td>
@@ -170,7 +174,7 @@ export default function Home() {
                 <td>
                   Formatting &amp; compliance, Response to reviewer comments
                 </td>
-                <td>⏳ 7-10 Days</td>
+                <td> 7-10 Days</td>
               </tr>
             </tbody>
           </table>
@@ -196,7 +200,7 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
               <button className={styles.primaryButton}>
-                [Start AI Reduction Now]
+                Start Your Systematic Review Service Now
               </button>
             </a>
           </div>
@@ -209,26 +213,34 @@ export default function Home() {
             <div className="before-after-example-content">
               <div className="before-example">
                 <h3>
-                Before (Unstructured Literature Summary Without Analysis):
+                  Before (Unstructured Literature Summary Without Analysis):
                 </h3>
                 <p className="before-text">
-                “Several studies have examined the effectiveness of Drug A for treating Disease X. Some reported positive results, while others did not find significant differences.”
+                  “Several studies have examined the effectiveness of Drug A for
+                  treating Disease X. Some reported positive results, while
+                  others did not find significant differences.”
                 </p>
               </div>
 
               <div className="after-example">
                 <h3>
-                After (Professionally Written, PRISMA-Compliant Systematic Review):
+                  After (Professionally Written, PRISMA-Compliant Systematic
+                  Review):
                 </h3>
                 <p className="after-text">
-                “A systematic review of 15 randomized controlled trials (n=5,000) assessing Drug A for Disease X was conducted. Meta-analysis revealed a significant reduction in symptom severity (SMD -0.65, 95% CI -0.45 to -0.85), confirming efficacy in moderate cases.”
+                  “A systematic review of 15 randomized controlled trials
+                  (n=5,000) assessing Drug A for Disease X was conducted.
+                  Meta-analysis revealed a significant reduction in symptom
+                  severity (SMD -0.65, 95% CI -0.45 to -0.85), confirming
+                  efficacy in moderate cases.”
                 </p>
               </div>
             </div>
 
             <div className="explanation">
               <p>
-              Systematic Review Writing ensures clarity, scientific rigor, and high-impact research synthesis.
+                Systematic Review Writing ensures clarity, scientific rigor, and
+                high-impact research synthesis.
               </p>
             </div>
           </section>
@@ -242,21 +254,21 @@ export default function Home() {
               <div className="pricing-item">
                 <h3>Starting Price</h3>
                 <p className="pricing-text">
-                $0.15 per word (Basic Systematic Review) 
+                  $0.15 per word (Basic Systematic Review)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $0.25 per word (Meta-Analysis & Statistical Review)
+                  $0.25 per word (Meta-Analysis & Statistical Review)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                10 Days – 20 Days (Depending on complexity)
+                  10 Days – 20 Days (Depending on complexity)
                 </p>
               </div>
             </div>
@@ -274,35 +286,64 @@ export default function Home() {
           <div className="wcus-container">
             <div className="wcus-client-reviews">
               <h3 className="editing-overview-heading">Testimonial</h3>
-              {[
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                  text: "The best editing service I've used. Got published in record time!",
-                  name: "Dr. Emily Carter",
-                },
-                {
-                  imgSrc:
-                    "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                  text: "Exceptional support from expert editors. Highly recommended!",
-                  name: "Prof. John Williams",
-                },
-              ].map((review, index) => (
-                <div className="wcus-review" key={index}>
-                  <img src={review.imgSrc} alt="Client" />
-                  <p>
-                    "{review.text}" - <strong>{review.name}</strong>
-                  </p>
-                </div>
-              ))}
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                    text: "The best editing service I've used. Got published in record time!",
+                    name: "Dr. Emily Carter",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                    text: "Exceptional support from expert editors. Highly recommended!",
+                    name: "Prof. John Williams",
+                  },
+                  {
+                    imgSrc:
+                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/Testimonial/"
+                className="cta-button"
+              >
+                See More Reviews
+              </a>
             </div>
           </div>
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-            <h1 className="accordion__title">
-              Faq
-              </h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div

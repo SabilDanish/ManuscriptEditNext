@@ -284,9 +284,11 @@ export default function Home() {
         </div>
 
         <div className={styles.buttonGroup}>
+        <a href="https://secure.manuscriptedit.com/quotation">
           <button className={styles.primaryButton}>
             Start Your Reviewer Response Process
           </button>
+          </a>
         </div>
       </div>
 

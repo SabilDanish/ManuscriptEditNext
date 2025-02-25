@@ -94,7 +94,7 @@ const menu: MenuItem[]  = [
       { label: "Service Guarantee", link: "/QualityAssurance" },
       { label: "Editorial Process", link: "/Process" },
       { label: "Confidentiality", link: "/Security" },
-      { label: "Refund & Cancellation", link: "/Publishing" },
+      { label: "Refund & Cancellation", link: "/RefundAndCancellation" },
       { label: "Testimonial", link: "/Testimonial" },
     ],
   },

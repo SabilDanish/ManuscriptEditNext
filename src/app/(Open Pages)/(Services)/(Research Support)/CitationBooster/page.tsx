@@ -22,30 +22,34 @@ export default function Home() {
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
-      title: "Analyzing Citation Gaps & Research Visibility – Evaluating Google Scholar, Scopus, ORCID, and journal citations.",
+      title:
+        "Analyzing Citation Gaps & Research Visibility – Evaluating Google Scholar, Scopus, ORCID, and journal citations.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
-      title: "Metadata Optimization & DOI Structuring – Enhancing keywords, indexing, and research discoverability.",
+      title:
+        "Metadata Optimization & DOI Structuring – Enhancing keywords, indexing, and research discoverability.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
-      title: "Cross-Referencing & Collaborative Networking – Expanding citation reach through strategic collaborations.",
+      title:
+        "Cross-Referencing & Collaborative Networking – Expanding citation reach through strategic collaborations.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
-      title: "Academic SEO & Research Impact Strategies – Improving search rankings across scholarly databases.",
+      title:
+        "Academic SEO & Research Impact Strategies – Improving search rankings across scholarly databases.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
-      title: "Citation Tracking & Long-Term Growth Strategy – Monitoring citations and updating optimization techniques.",
+      title:
+        "Citation Tracking & Long-Term Growth Strategy – Monitoring citations and updating optimization techniques.",
     },
   ];
-  
 
   const accord2: { question: string; answer: string }[] = [
     {
@@ -73,8 +77,7 @@ export default function Home() {
       answer:
         "Simply upload your research details, and our citation experts will craft a personalized citation growth strategy.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -168,13 +171,13 @@ export default function Home() {
                     Profile creation & enhancement, Linking research papers to
                     citations
                   </td>
-                  <td>⏳ 3-5 Days</td>
+                  <td> 3-5 Days</td>
                 </tr>
                 <tr>
                   <td>Scopus & Web of Science Indexing Support</td>
                   <td>Authors targeting indexed journals</td>
                   <td>Optimized indexing, Research profile enhancement</td>
-                  <td>⏳ 5-7 Days</td>
+                  <td> 5-7 Days</td>
                 </tr>
                 <tr>
                   <td>Academic SEO & Metadata Optimization</td>
@@ -183,7 +186,7 @@ export default function Home() {
                     Keyword & metadata structuring, DOI linking &
                     cross-referencing
                   </td>
-                  <td>⏳ 4-6 Days</td>
+                  <td> 4-6 Days</td>
                 </tr>
                 <tr>
                   <td>Social & Academic Media Promotion</td>
@@ -192,7 +195,7 @@ export default function Home() {
                     Research promotion on LinkedIn, ResearchGate, and
                     Academia.edu, Research community engagement
                   </td>
-                  <td>⏳ 6-10 Days</td>
+                  <td> 6-10 Days</td>
                 </tr>
                 <tr>
                   <td>Citation Growth Monitoring & Impact Analysis</td>
@@ -200,7 +203,7 @@ export default function Home() {
                   <td>
                     Citation tracking, Strategy updates for maximum visibility
                   </td>
-                  <td>⏳ Ongoing</td>
+                  <td> Ongoing</td>
                 </tr>
               </tbody>
             </table>
@@ -227,35 +230,40 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
               <button className={styles.primaryButton}>
-                Start Your Scientific Illustration Project
+                Start Your Citation Growth Plan
               </button>
             </a>
           </div>
 
           <section className="before-after-example-section">
             <h2 className="before-after-example-heading">
-            Before & After Citation Booster – See the Difference
+              Before & After Citation Booster – See the Difference
             </h2>
 
             <div className="before-after-example-content">
               <div className="before-example">
                 <h3>Before (Low Research Visibility & Citation Count):</h3>
                 <p className="before-text">
-                “My research paper was published in a high-impact journal, but it struggled to gain citations despite being valuable to my field.”
+                  “My research paper was published in a high-impact journal, but
+                  it struggled to gain citations despite being valuable to my
+                  field.”
                 </p>
               </div>
 
               <div className="after-example">
                 <h3>After (Optimized Citation Growth Strategy):</h3>
                 <p className="after-text">
-                “After optimizing my Google Scholar and Scopus profile, along with metadata enhancement, my research gained 40+ citations in 6 months, significantly improving its impact factor!”
+                  “After optimizing my Google Scholar and Scopus profile, along
+                  with metadata enhancement, my research gained 40+ citations in
+                  6 months, significantly improving its impact factor!”
                 </p>
               </div>
             </div>
 
             <div className="explanation">
               <p>
-              Our expert citation optimization ensures increased discoverability and academic credibility.
+                Our expert citation optimization ensures increased
+                discoverability and academic credibility.
               </p>
             </div>
           </section>
@@ -268,20 +276,22 @@ export default function Home() {
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">$100 (Basic Citation Optimization) </p>
+                <p className="pricing-text">
+                  $100 (Basic Citation Optimization){" "}
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $500 (Full Citation Growth Package with Long-Term Tracking)
+                  $500 (Full Citation Growth Package with Long-Term Tracking)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                3 Days – 10 Days (Depending on research visibility needs)
+                  3 Days – 10 Days (Depending on research visibility needs)
                 </p>
               </div>
             </div>
@@ -353,10 +363,7 @@ export default function Home() {
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-              <h1 className="accordion__title">
-                Faq
-              
-              </h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div

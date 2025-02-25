@@ -233,12 +233,10 @@ export default function Home() {
   return (
     <>
     {<Metadata metaData={metaData} />}
-      {/* {breadcrum("Quality ", "Testimonials")} */}
-      <section className="pt-5 pb-5">
+      {/* <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              {/* <h3 className="pt-5">Testimonials Overview</h3> */}
               <p className="pt-3">
                 Setting the stage for the importance of editing in the realm of
                 written communication. Introduction to the multifaceted nature
@@ -250,7 +248,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section
         id="team"
         className="team section-bg"
@@ -264,7 +262,7 @@ export default function Home() {
             {/* <h2>Our Testimonials</h2> */}
           </div>
 
-          <Testimonial />
+          {/* <Testimonial /> */}
 
           <div className="row">
             {testimonials.map((_item: any, index: any) => {

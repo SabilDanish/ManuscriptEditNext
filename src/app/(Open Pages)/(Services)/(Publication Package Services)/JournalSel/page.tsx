@@ -166,19 +166,19 @@ export default function Home() {
               <td>Basic Journal Selection</td>
               <td>First-time authors & students</td>
               <td>3-5 journal recommendations, Scope & indexing check</td>
-              <td>⏳ 3-5 Days</td>
+              <td>3-5 Days</td>
             </tr>
             <tr>
               <td>Advanced Journal Selection</td>
               <td>Researchers & academics</td>
               <td>Q1/Q2 high-impact journals, Impact factor analysis</td>
-              <td>⏳ 5-7 Days</td>
+              <td>5-7 Days</td>
             </tr>
             <tr>
               <td>PubMed & Scopus-Indexed Journal Selection</td>
               <td>Medical & STEM researchers</td>
               <td>Compliance with PubMed & Scopus, Journal ranking analysis</td>
-              <td>⏳ 5-10 Days</td>
+              <td>5-10 Days</td>
             </tr>
             <tr>
               <td>Predatory Journal Screening</td>
@@ -187,7 +187,7 @@ export default function Home() {
                 Blacklist verification, Avoiding predatory & pay-to-publish
                 journals
               </td>
-              <td>⏳ 3-5 Days</td>
+              <td>3-5 Days</td>
             </tr>
             <tr>
               <td>Journal Submission Strategy & Formatting</td>
@@ -196,7 +196,7 @@ export default function Home() {
                 Formatting according to journal guidelines, Cover letter &
                 manuscript structuring
               </td>
-              <td>⏳ 5-7 Days</td>
+              <td>5-7 Days</td>
             </tr>
           </tbody>
         </table>
@@ -283,9 +283,11 @@ export default function Home() {
         </div>
 
         <div className={styles.buttonGroup}>
+        <a href="https://secure.manuscriptedit.com/quotation">
           <button className={styles.primaryButton}>
             Start Your Journal Selection Process
           </button>
+          </a>
         </div>
       </div>
 
