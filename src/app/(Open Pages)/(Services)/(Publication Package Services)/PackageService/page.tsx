@@ -148,7 +148,7 @@ export default function Home() {
               style={{ position: "relative" }}
             >
               {/* <div className="discount-sticker">35% OFF</div> */}
-              <div className="pricing-head">
+              <div className="pricing-head" id="PubliPackage">
                 <div className="pricing_title">
                   <center>
                     <h4>Premium Plus Package</h4>
@@ -576,7 +576,7 @@ export default function Home() {
           </table>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="#PubliPackage">
               <button className={styles.primaryButton}>
                 Explore All Publication Packages
               </button>
