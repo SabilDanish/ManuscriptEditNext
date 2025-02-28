@@ -138,14 +138,14 @@ export default function Home() {
             <h2 className={styles.heading}>Who Needs This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Researchers &amp; Academics revising manuscripts for journal
+                ✔ Researchers &amp; Academics revising manuscripts for journal
                 submission.
               </li>
               <li>
-                ✅ PhD Candidates improving dissertation clarity and coherence.
+                ✔ PhD Candidates improving dissertation clarity and coherence.
               </li>
               <li>
-                ✅ Authors &amp; Professionals refining reports, white papers,
+                ✔ Authors &amp; Professionals refining reports, white papers,
                 and technical content.
               </li>
             </ul>
@@ -156,9 +156,9 @@ export default function Home() {
               Key Benefits of Rewriting Services:
             </h2>
             <ul className={styles.benefitsList}>
-              <li>✅ Improves clarity, logical flow &amp; readability.</li>
-              <li>✅Restructures content while preserving original intent.</li>
-              <li>✅ Enhances academic tone &amp; language precision.</li>
+              <li>✔ Improves clarity, logical flow &amp; readability.</li>
+              <li>✔Restructures content while preserving original intent.</li>
+              <li>✔ Enhances academic tone &amp; language precision.</li>
             </ul>
           </div>
         </section>
@@ -189,24 +189,24 @@ export default function Home() {
 
             <ul className={styles.proofreadingList}>
               <li>
-                ✅ Sentence Reformation Rewriting sentences for better
+                ✔ Sentence Reformation Rewriting sentences for better
                 readability and impact.
               </li>
               <li>
-                ✅ Structural Improvement Adjusting paragraph flow for better
+                ✔ Structural Improvement Adjusting paragraph flow for better
                 logical coherence.
               </li>
               <li>
-                ✅ Academic Tone Refinement Ensuring appropriate terminology an
+                ✔ Academic Tone Refinement Ensuring appropriate terminology an
                 formal writing style.
               </li>
               <li>
-                ✅ Clarity &amp; Conciseness Removing redundancy and improving
+                ✔ Clarity &amp; Conciseness Removing redundancy and improving
                 sentence economy.
               </li>
 
               <li>
-                ✅ Grammar &amp; Syntax Correction Polishing language for
+                ✔ Grammar &amp; Syntax Correction Polishing language for
                 precision and fluency.
               </li>
             </ul>

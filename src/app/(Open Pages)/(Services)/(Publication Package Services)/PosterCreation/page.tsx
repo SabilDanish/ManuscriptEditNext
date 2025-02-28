@@ -83,8 +83,7 @@ export default function Home() {
       answer:
         "Simply upload your research details, and our design experts will craft a high-quality academic poster.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -137,30 +136,33 @@ export default function Home() {
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Custom Scientific & Academic Poster Design – Tailored for
+                ✔ Custom Scientific & Academic Poster Design – Tailored for
                 STEM, medical, social sciences, and business research.
               </li>
               <li>
-                ✅ High-Resolution & Print-Ready Formats – Delivered in PDF,
-                PPT, PNG, JPG, and AI formats.
+                ✔ High-Resolution & Print-Ready Formats – Delivered in PDF, PPT,
+                PNG, JPG, and AI formats.
               </li>
               <li>
-                ✅ Engaging Visual Elements & Graphics – Professionally designed
+                ✔ Engaging Visual Elements & Graphics – Professionally designed
                 charts, graphs, and infographics.
               </li>
               <li>
-                ✅ Compliant with Conference & Journal Guidelines – Ensuring
+                ✔ Compliant with Conference & Journal Guidelines – Ensuring
                 standard poster size, font, and layout recommendations.
               </li>
               <li>
-                ✅ Fast Turnaround & 100% Confidentiality – Secure, timely, and
+                ✔ Fast Turnaround & 100% Confidentiality – Secure, timely, and
                 plagiarism-free poster creation.
               </li>
             </ul>
           </div>
 
           <section className={styles.proofreadingWrapper}>
-            <h2 className={styles.headingCenter}>Scientific & Academic Poster Design Process – How We Create Impactful Posters</h2>
+            <h2 className={styles.headingCenter}>
+              Scientific & Academic Poster Design Process – How We Create
+              Impactful Posters
+            </h2>
             <table className="editing-overview-table">
               <thead>
                 <tr>
@@ -245,7 +247,7 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
               <button className={styles.primaryButton}>
-              Start Your Poster Design Project
+                Start Your Poster Design Project
               </button>
             </a>
           </div>
@@ -259,21 +261,27 @@ export default function Home() {
               <div className="before-example">
                 <h3>Before (Basic, Unstructured Poster):</h3>
                 <p className="before-text">
-                “Research on X shows that Y is highly influential in Z. The data shows a significant impact, and more research is needed to understand this effect further.”
+                  “Research on X shows that Y is highly influential in Z. The
+                  data shows a significant impact, and more research is needed
+                  to understand this effect further.”
                 </p>
               </div>
 
               <div className="after-example">
                 <h3>After (Professionally Designed Poster with Visuals):</h3>
                 <p className="after-text">
-                “The findings of this research demonstrate the influence of Y on Z, supported by a data-driven analysis (Fig. 1). This study provides new insights into X with potential future applications in [field].”
+                  “The findings of this research demonstrate the influence of Y
+                  on Z, supported by a data-driven analysis (Fig. 1). This study
+                  provides new insights into X with potential future
+                  applications in [field].”
                 </p>
               </div>
             </div>
 
             <div className="explanation">
               <p>
-              **Our expert designers transform raw research into a clear, engaging, and visually impactful poster.
+                **Our expert designers transform raw research into a clear,
+                engaging, and visually impactful poster.
               </p>
             </div>
           </section>
@@ -286,22 +294,21 @@ export default function Home() {
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">
-                $80 (Basic Poster) 
-                </p>
+                <p className="pricing-text">$80 (Basic Poster)</p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $250 (Advanced Scientific Poster with Illustrations & Infographics)
+                  $250 (Advanced Scientific Poster with Illustrations &
+                  Infographics)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                3 Days – 10 Days (Depending on complexity)
+                  3 Days – 10 Days (Depending on complexity)
                 </p>
               </div>
             </div>
@@ -317,62 +324,62 @@ export default function Home() {
           </section>
 
           <div className="wcus-container">
-        <div className="wcus-client-reviews">
-          <h3 className="editing-overview-heading">Testimonial</h3>
-          <div className="row d-flex justify-content-around">
-            {[
-              {
-                imgSrc:
-                  "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                text: "The best editing service I've used. Got published in record time!",
-                name: "Dr. Emily Carter",
-              },
-              {
-                imgSrc:
-                  "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                text: "Exceptional support from expert editors. Highly recommended!",
-                name: "Prof. John Williams",
-              },
-              {
-                imgSrc:
-                  "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
-                text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
-                name: "J Y",
-              },
-              {
-                imgSrc:
-                  "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
-                text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
-                name: "Emily Selman",
-              },
-            ].map((review, index) => (
-              <div className="wcus-review col-lg-5" key={index}>
-                <img src={review.imgSrc} alt="Client" />
-                <p>
-                  "{review.text}" - <strong>{review.name}</strong>
-                </p>
+            <div className="wcus-client-reviews">
+              <h3 className="editing-overview-heading">Testimonial</h3>
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                    text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
+                    name: "Firas obeidat",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                    text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
+                    name: "Lars-Ake",
+                  },
+                  {
+                    imgSrc:
+                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/Testimonial/"
+                className="cta-button"
+              >
+                See More Reviews
+              </a>
+            </div>
           </div>
-        </div>
-        <h3>
-          <br />
-          🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
-          publishing experts.
-          <br />
-          <br />
-          📑 Trusted by universities, funding agencies, and research
-          institutions.
-        </h3>
-        <div className="cta-container">
-          <a
-            href="https://manuscriptedit.com/Testimonial/"
-            className="cta-button"
-          >
-            See More Reviews
-          </a>
-        </div>
-      </div>
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">

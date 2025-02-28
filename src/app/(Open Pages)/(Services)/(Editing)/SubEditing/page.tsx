@@ -139,15 +139,15 @@ export default function Home() {
             <h2 className={styles.heading}>Who Needs This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Researchers &amp; Scientists preparing high-impact journal
+                ✔ Researchers &amp; Scientists preparing high-impact journal
                 submissions.
               </li>
               <li>
-                ✅ PhD Candidates &amp; Academics refining dissertations and
+                ✔ PhD Candidates &amp; Academics refining dissertations and
                 theses.
               </li>
               <li>
-                ✅ Authors of Technical &amp; Research Reports ensuring clarity
+                ✔ Authors of Technical &amp; Research Reports ensuring clarity
                 and precision.
               </li>
             </ul>
@@ -159,10 +159,10 @@ export default function Home() {
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Strengthens logical coherence &amp; manuscript structure.
+                ✔ Strengthens logical coherence &amp; manuscript structure.
               </li>
-              <li>✅ Enhances clarity, readability, and argumentation.</li>
-              <li>✅ Refines academic tone &amp; eliminates redundancies.</li>
+              <li>✔ Enhances clarity, readability, and argumentation.</li>
+              <li>✔ Refines academic tone &amp; eliminates redundancies.</li>
             </ul>
           </div>
 
@@ -241,29 +241,29 @@ export default function Home() {
 
             <ul className={styles.proofreadingList}>
               <li>
-                ✅ Structural Refinement: Improves organization, logical flow,
+                ✔ Structural Refinement: Improves organization, logical flow,
                 and readability of the manuscript.
               </li>
               <li>
-                ✅ Content Enhancement: Refines arguments, eliminates
+                ✔ Content Enhancement: Refines arguments, eliminates
                 ambiguities, and strengthens clarity.
               </li>
               <li>
-                ✅ Language Polishing: Ensures consistent tone, precise
-                language, and audience-specific terminology.
+                ✔ Language Polishing: Ensures consistent tone, precise language,
+                and audience-specific terminology.
               </li>
               <li>
-                ✅ Guideline Compliance: Aligns formatting, style, and visual
+                ✔ Guideline Compliance: Aligns formatting, style, and visual
                 elements with journal or publisher requirements.
               </li>
               <li>
-                ✅ Reference Verification: Checks references for accuracy,
+                ✔ Reference Verification: Checks references for accuracy,
                 completeness, and adherence to citation styles.
               </li>
 
               <li>
-                ✅ Publication Readiness: Prepares the manuscript for peer
-                review and maximizes acceptance potential.
+                ✔ Publication Readiness: Prepares the manuscript for peer review
+                and maximizes acceptance potential.
               </li>
             </ul>
           </div>
@@ -404,15 +404,15 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                    text: "The best editing service I've used. Got published in record time!",
-                    name: "Dr. Emily Carter",
+                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                    text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
+                    name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                    text: "Exceptional support from expert editors. Highly recommended!",
-                    name: "Prof. John Williams",
+                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                    text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
+                    name: "Lars-Ake",
                   },
                   {
                     imgSrc:

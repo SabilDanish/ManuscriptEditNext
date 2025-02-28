@@ -97,13 +97,16 @@ export default function ProofreadingServices() {
             and research documents.
           </p>
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation"> <button className={styles.primaryButton}>
-              Get Proofreading Now
-            </button></a>
             <a href="https://secure.manuscriptedit.com/quotation">
-            <button className={styles.secondaryButton}>
-              Request a Free Sample
-            </button>
+              {" "}
+              <button className={styles.primaryButton}>
+                Get Proofreading Now
+              </button>
+            </a>
+            <a href="https://secure.manuscriptedit.com/quotation">
+              <button className={styles.secondaryButton}>
+                Request a Free Sample
+              </button>
             </a>
           </div>
         </div>
@@ -122,13 +125,13 @@ export default function ProofreadingServices() {
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>Who Should Use This Service?</h2>
           <ul className={styles.benefitsList}>
-            <li> ✅ PhD and MS students preparing theses and dissertations</li>
+            <li> ✔ PhD and MS students preparing theses and dissertations</li>
             <li>
-            ✅ Doctors and academics submitting journal articles, conference
+              ✔ Doctors and academics submitting journal articles, conference
               papers, and grant proposals
             </li>
             <li>
-            ✅ Researchers refining scientific and technical reports for
+              ✔ Researchers refining scientific and technical reports for
               publication
             </li>
           </ul>
@@ -137,13 +140,11 @@ export default function ProofreadingServices() {
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>Key Benefits</h2>
           <ul className={styles.benefitsList}>
+            <li>✔ Eliminates grammar, punctuation, and typographical errors</li>
             <li>
-              ✅ Eliminates grammar, punctuation, and typographical errors
+              ✔ Focuses on language accuracy while maintaining academic voice
             </li>
-            <li>
-              ✅ Focuses on language accuracy while maintaining academic voice
-            </li>
-            <li>✅ Provides a fast turnaround to meet submission deadlines</li>
+            <li>✔ Provides a fast turnaround to meet submission deadlines</li>
           </ul>
         </div>
       </section>
@@ -166,16 +167,14 @@ export default function ProofreadingServices() {
             <h3 className={styles.proofreadingSubheading}>✔ Included</h3>
 
             <ul className={styles.proofreadingList}>
+              <li>✔ Correction of spelling, grammar, and punctuation errors</li>
               <li>
-                ✅ Correction of spelling, grammar, and punctuation errors
-              </li>
-              <li>
-                ✅ Fixing minor inconsistencies like verb tense and missing
+                ✔ Fixing minor inconsistencies like verb tense and missing
                 articles
               </li>
-              <li>✅ Ensuring proper word usage and sentence-level clarity</li>
+              <li>✔ Ensuring proper word usage and sentence-level clarity</li>
               <li>
-                ✅ Basic formatting consistency (capitalization, numbering)
+                ✔ Basic formatting consistency (capitalization, numbering)
               </li>
             </ul>
           </div>
@@ -200,9 +199,11 @@ export default function ProofreadingServices() {
         </div>
 
         <div className={styles.buttonGroup}>
-        <a href="https://secure.manuscriptedit.com/quotation">
-        <button className={styles.primaryButton} >Get Proofreading Now</button>
-        </a>
+          <a href="https://secure.manuscriptedit.com/quotation">
+            <button className={styles.primaryButton}>
+              Get Proofreading Now
+            </button>
+          </a>
         </div>
 
         <section className="editing-overview-section">
@@ -319,27 +320,27 @@ export default function ProofreadingServices() {
               <tbody>
                 <tr>
                   <td>Fixes grammar, punctuation, typos</td>
-                  <td>✅</td>
-                  <td>✅</td>
-                  <td>✅</td>
+                  <td>✔</td>
+                  <td>✔</td>
+                  <td>✔</td>
                 </tr>
                 <tr>
                   <td>Improves sentence structure & clarity</td>
                   <td>❌</td>
-                  <td>✅</td>
-                  <td>✅</td>
+                  <td>✔</td>
+                  <td>✔</td>
                 </tr>
                 <tr>
                   <td>Ensures logical flow & coherence</td>
                   <td>❌</td>
                   <td>❌</td>
-                  <td>✅</td>
+                  <td>✔</td>
                 </tr>
                 <tr>
                   <td>Heavy restructuring & rewriting</td>
                   <td>❌</td>
                   <td>❌</td>
-                  <td>✅</td>
+                  <td>✔</td>
                 </tr>
               </tbody>
             </table>
@@ -348,9 +349,9 @@ export default function ProofreadingServices() {
               Copyediting or Substantive Editing.
             </p>
             <a href="https://secure.manuscriptedit.com/quotation">
-            <button className="editing-overview-button-unique">
-              Compare All Services
-            </button>
+              <button className="editing-overview-button-unique">
+                Compare All Services
+              </button>
             </a>
           </div>
         </section>

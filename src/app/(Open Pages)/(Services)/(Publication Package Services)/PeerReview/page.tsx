@@ -124,23 +124,23 @@ export default function Home() {
           </p>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ Experienced Subject-Matter Experts – Reviewers with PhDs &
+              ✔ Experienced Subject-Matter Experts – Reviewers with PhDs &
               editorial experience in high-impact journals.
             </li>
             <li>
-              ✅ In-Depth Manuscript Evaluation – Assessing research clarity,
+              ✔ In-Depth Manuscript Evaluation – Assessing research clarity,
               originality, argument coherence, and presentation quality.
             </li>
             <li>
-              ✅ Journal-Specific Compliance – Checking word limits, reference
+              ✔ Journal-Specific Compliance – Checking word limits, reference
               formatting, and structural guidelines.
             </li>
             <li>
-              ✅ Constructive Reviewer Comments – Detailed suggestions for
+              ✔ Constructive Reviewer Comments – Detailed suggestions for
               strengthening weak arguments and improving clarity.
             </li>
             <li>
-              ✅ Faster Journal Acceptance – Identifying & fixing common
+              ✔ Faster Journal Acceptance – Identifying & fixing common
               rejection reasons before submission.
             </li>
           </ul>
@@ -290,10 +290,10 @@ export default function Home() {
         </div>
 
         <div className={styles.buttonGroup}>
-        <a href="https://secure.manuscriptedit.com/quotation">
-          <button className={styles.primaryButton}>
-            Start Your Peer Review Now
-          </button>
+          <a href="https://secure.manuscriptedit.com/quotation">
+            <button className={styles.primaryButton}>
+              Start Your Peer Review Now
+            </button>
           </a>
         </div>
       </div>

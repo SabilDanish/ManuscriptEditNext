@@ -39,8 +39,7 @@ export default function Home() {
     {
       service: "Research Proposal Writing",
       bestFor: "Early-stage researchers",
-      features:
-        "Structured proposal development and hypothesis framing",
+      features: "Structured proposal development and hypothesis framing",
     },
     {
       service: "Literature Review Assistance",
@@ -55,8 +54,7 @@ export default function Home() {
     {
       service: "Data Collection & Analysis",
       bestFor: "Researchers handling large datasets",
-      features:
-        "Statistical analysis with SPSS, R, MATLAB, and Python",
+      features: "Statistical analysis with SPSS, R, MATLAB, and Python",
     },
     {
       service: "Manuscript Writing & Development",
@@ -80,8 +78,7 @@ export default function Home() {
       answer:
         "Yes, we provide mentorship for research planning, proposal writing, and thesis development.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -115,11 +112,11 @@ export default function Home() {
             <h4>Customized Research Assistance for Every Stage</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Support for early-stage research, literature review,
+                ✔ Support for early-stage research, literature review,
                 methodology, and data analysis.
               </li>
               <li>
-                ✅ Expert guidance in hypothesis framing, study design, and
+                ✔ Expert guidance in hypothesis framing, study design, and
                 statistical analysis.
               </li>
             </ul>
@@ -128,9 +125,9 @@ export default function Home() {
           <section className={styles.benefitsWrapper}>
             <h4>Expert-Led Research Development</h4>
             <ul className={styles.benefitsList}>
-              <li>✅ PhD and subject-matter experts in various disciplines.</li>
+              <li>✔ PhD and subject-matter experts in various disciplines.</li>
               <li>
-                ✅ Assistance with quantitative, qualitative, and mixed-method
+                ✔ Assistance with quantitative, qualitative, and mixed-method
                 research.
               </li>
             </ul>
@@ -140,11 +137,11 @@ export default function Home() {
             <h4>Ethical &amp; Reliable Research Practices</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Ensures adherence to academic integrity and ethical
+                ✔ Ensures adherence to academic integrity and ethical
                 guidelines..
               </li>
               <li>
-                ✅ Plagiarism-free research support, maintaining originality.
+                ✔ Plagiarism-free research support, maintaining originality.
               </li>
             </ul>
           </section>
@@ -153,10 +150,10 @@ export default function Home() {
             <h4>Data-Driven Insights &amp; Advanced Analysis</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Assistance with SPSS, MATLAB, R, Python, NVivo, and other
+                ✔ Assistance with SPSS, MATLAB, R, Python, NVivo, and other
                 research tools.
               </li>
-              <li>✅ Comprehensive data visualization and interpretation.</li>
+              <li>✔ Comprehensive data visualization and interpretation.</li>
             </ul>
           </section>
 
@@ -164,11 +161,11 @@ export default function Home() {
             <h4>Proven Track Record in Research Success</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Supported thousands of researchers in producing high-quality
+                ✔ Supported thousands of researchers in producing high-quality
                 research.
               </li>
               <li>
-                ✅ Assisted in journal-ready manuscript preparation and
+                ✔ Assisted in journal-ready manuscript preparation and
                 conference presentations.
               </li>
             </ul>
@@ -201,27 +198,29 @@ export default function Home() {
           </table>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation"><button className={styles.primaryButton}>
-              Explore All Editing Services
-            </button></a>
-            
+            <a href="https://secure.manuscriptedit.com/quotation">
+              <button className={styles.primaryButton}>
+                Explore All Editing Services
+              </button>
+            </a>
           </div>
         </div>
       </section>
 
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
-          <h2 className={styles.heading}>How We Ensure Quality in Research Support</h2>
+          <h2 className={styles.heading}>
+            How We Ensure Quality in Research Support
+          </h2>
 
           <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
             Structured & Tailored Research Guidance
           </h4>
           <ul className={styles.benefitsList}>
+            <li>✔ One-on-one consultations with research experts.</li>
             <li>
-              ✅ One-on-one consultations with research experts.
-            </li>
-            <li>
-              ✅ Assistance in refining research questions, study design, and data analysis.
+              ✔ Assistance in refining research questions, study design, and
+              data analysis.
             </li>
           </ul>
         </div>
@@ -234,10 +233,11 @@ export default function Home() {
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ Follows ethical research principles aligned with COPE and ICMJE.
+              ✔ Follows ethical research principles aligned with COPE and ICMJE.
             </li>
             <li>
-              ✅ Formatting and reference management per APA, IEEE, and journal guidelines.
+              ✔ Formatting and reference management per APA, IEEE, and journal
+              guidelines.
             </li>
           </ul>
         </div>
@@ -249,11 +249,10 @@ export default function Home() {
             Transparent Communication & Real-Time Support
           </h4>
           <ul className={styles.benefitsList}>
+            <li>✔ Regular updates on research progress.</li>
             <li>
-              ✅ Regular updates on research progress.
-            </li>
-            <li>
-              ✅ Direct collaboration with mentors, analysts, and academic consultants.
+              ✔ Direct collaboration with mentors, analysts, and academic
+              consultants.
             </li>
           </ul>
         </div>
@@ -266,18 +265,20 @@ export default function Home() {
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ PhD & MS Students – Structured research guidance and methodology support.
+              ✔ PhD & MS Students – Structured research guidance and methodology
+              support.
             </li>
             <li>
-              ✅ Academic Researchers – Assistance in data analysis and manuscript writing.
+              ✔ Academic Researchers – Assistance in data analysis and
+              manuscript writing.
             </li>
             <li>
-              ✅ Universities & Institutions – Collaborative research support services.
+              ✔ Universities & Institutions – Collaborative research support
+              services.
             </li>
           </ul>
         </div>
       </section>
-
 
       <div className="container" style={{ marginTop: "3rem" }}>
         <div className="accordion__wrapper2">

@@ -170,7 +170,7 @@ function Navbar2025() {
       <header className="nav-container">
         <div className="nav-logo logo">
           <Link href="/">
-            <img src="/images/logoGif/Logo Animate_1.gif" alt="Company Logo" />
+            <img src="\images\logo16.png" alt="Company Logo" />
           </Link>
         </div>
 
@@ -207,15 +207,20 @@ function Navbar2025() {
                 QUALITY
               </Link>
             </li>
-            <li>
-              <a
+            <li><Link
+                href="/Prices"
                 onClick={() => {
-                  redirect("register");
+                  setActiveTab1(menu[2].subMenu[0]?.label || "");
+                  setNewNavBar2(true);
+                  setNewNavBar1(true);
+                  setMainNavItem(2);
+                  setLastMenu(false);
                 }}
-                href="#"
+                className={mainNavItem === 2 ? "nav-menuSelected" : ""}
               >
                 SUBMIT MANUSCRIPT
-              </a>
+              </Link>
+             
             </li>
             <li>
               <Link

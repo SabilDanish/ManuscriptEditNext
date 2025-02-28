@@ -22,30 +22,34 @@ export default function Home() {
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
-      title: "Manuscript Review & Journal Selection – Understanding the target journal’s submission guidelines.",
+      title:
+        "Manuscript Review & Journal Selection – Understanding the target journal’s submission guidelines.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
-      title: "Document Structuring & Formatting – Ensuring compliance with font, margins, sections, and figure placements.",
+      title:
+        "Document Structuring & Formatting – Ensuring compliance with font, margins, sections, and figure placements.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
-      title: "Reference & Citation Formatting – Adjusting APA, Harvard, Vancouver, IEEE, and other citation styles.",
+      title:
+        "Reference & Citation Formatting – Adjusting APA, Harvard, Vancouver, IEEE, and other citation styles.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
-      title: "Tables, Figures & Graphs Optimization – Aligning tables, equations, and illustrations as per journal requirements.",
+      title:
+        "Tables, Figures & Graphs Optimization – Aligning tables, equations, and illustrations as per journal requirements.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
-      title: "Final Compliance Check & Submission-Ready Formatting – Ensuring error-free, journal-ready document delivery.",
+      title:
+        "Final Compliance Check & Submission-Ready Formatting – Ensuring error-free, journal-ready document delivery.",
     },
   ];
-  
 
   const accord2: { question: string; answer: string }[] = [
     {
@@ -73,8 +77,7 @@ export default function Home() {
       answer:
         "Simply upload your manuscript, and our formatting experts will make it submission-ready.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -125,25 +128,24 @@ export default function Home() {
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Expert Formatting for All Major Journals – Compliance with
+                ✔ Expert Formatting for All Major Journals – Compliance with
                 Elsevier, Springer, Wiley, BMJ, PLOS ONE, Nature, IEEE, and
                 more.
               </li>
               <li>
-                ✅Accurate Citation & Reference Formatting – Supporting APA,
-                MLA, Chicago, Harvard, Vancouver, IEEE, and custom journal
-                styles.
+                ✔Accurate Citation & Reference Formatting – Supporting APA, MLA,
+                Chicago, Harvard, Vancouver, IEEE, and custom journal styles.
               </li>
               <li>
-                ✅ Error-Free Manuscript Structure & Layout – Ensuring proper
+                ✔ Error-Free Manuscript Structure & Layout – Ensuring proper
                 font, margins, headings, subheadings, and figure placement.
               </li>
               <li>
-                ✅ Tables, Figures & Equations Alignment – Correcting table
+                ✔ Tables, Figures & Equations Alignment – Correcting table
                 formatting, figure captions, and equation placement.
               </li>
               <li>
-                ✅Word Count, Section & Cover Letter Compliance – Adhering to
+                ✔Word Count, Section & Cover Letter Compliance – Adhering to
                 abstract length, body structure, and submission formatting
                 rules.
               </li>
@@ -237,28 +239,35 @@ export default function Home() {
 
           <section className="before-after-example-section">
             <h2 className="before-after-example-heading">
-            Before & After Journal Formatting – See the Difference
+              Before & After Journal Formatting – See the Difference
             </h2>
 
             <div className="before-after-example-content">
               <div className="before-example">
                 <h3>Before (Unformatted Manuscript with Submission Errors):</h3>
                 <p className="before-text">
-                “Title in incorrect font, double-spacing not applied, citations missing from references, figures placed incorrectly, and word count exceeding journal guidelines.”
+                  “Title in incorrect font, double-spacing not applied,
+                  citations missing from references, figures placed incorrectly,
+                  and word count exceeding journal guidelines.”
                 </p>
               </div>
 
               <div className="after-example">
-                <h3>After (Professionally Formatted, Submission-Ready Manuscript):</h3>
+                <h3>
+                  After (Professionally Formatted, Submission-Ready Manuscript):
+                </h3>
                 <p className="after-text">
-                “Manuscript formatted to IEEE guidelines, proper citations applied in APA style, tables aligned correctly, and structured for seamless journal submission.”
+                  “Manuscript formatted to IEEE guidelines, proper citations
+                  applied in APA style, tables aligned correctly, and structured
+                  for seamless journal submission.”
                 </p>
               </div>
             </div>
 
             <div className="explanation">
               <p>
-              Journal Formatting ensures compliance, professional presentation, and seamless submission.
+                Journal Formatting ensures compliance, professional
+                presentation, and seamless submission.
               </p>
             </div>
           </section>
@@ -272,21 +281,21 @@ export default function Home() {
               <div className="pricing-item">
                 <h3>Starting Price</h3>
                 <p className="pricing-text">
-                $0.08 per word (Basic Formatting)
+                  $0.08 per word (Basic Formatting)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $0.15 per word (Advanced Journal-Specific Formatting)
+                  $0.15 per word (Advanced Journal-Specific Formatting)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                3 Days – 7 Days (Depending on complexity)
+                  3 Days – 7 Days (Depending on complexity)
                 </p>
               </div>
             </div>

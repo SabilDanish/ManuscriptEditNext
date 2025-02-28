@@ -1,15 +1,15 @@
 import React from 'react';
-import testi1 from '../../utils/testi/aa.jpeg';
-import testi2 from '../../utils/testi/as.jpeg';
-import testi3 from '../../utils/testi/ad.jpeg';
-import testi4 from '../../utils/testi/af.jpeg';
-import testi5 from '../../utils/testi/ag.jpeg';
-import testi6 from '../../utils/testi/ah.jpeg';
-import testi7 from '../../utils/testi/aj.jpeg';
-import testi8 from '../../utils/testi/sa.jpeg';
-import testi9 from '../../utils/testi/ss.jpeg';
-import testi10 from '../../utils/testi/sd.jpeg';
-import testi11 from '../../utils/testi/sh.jpeg';
+import testi1 from '../../utils/testi/aa.jpg';
+import testi2 from '../../utils/testi/as.jpg';
+import testi3 from '../../utils/testi/ad.jpg';
+import testi4 from '../../utils/testi/af.jpg';
+import testi5 from '../../utils/testi/ag.jpg';
+import testi6 from '../../utils/testi/ah.jpg';
+import testi7 from '../../utils/testi/aj.jpg';
+import testi8 from '../../utils/testi/sa.jpg';
+import testi9 from '../../utils/testi/ss.jpg';
+import testi10 from '../../utils/testi/sd.jpg';
+import testi11 from '../../utils/testi/sh.jpg';
 import './Testimonial.css';
 
 const Testimonial = () => {

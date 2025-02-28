@@ -130,23 +130,23 @@ export default function Home() {
             <h2 className={styles.heading}>Who Should Use This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Expert-Led Analysis – PhD statisticians specializing in
+                ✔ Expert-Led Analysis – PhD statisticians specializing in
                 various disciplines.
               </li>
               <li>
-                ✅ Advanced Statistical Methods – ANOVA, Regression, Bayesian
+                ✔ Advanced Statistical Methods – ANOVA, Regression, Bayesian
                 Modeling, T-tests, and more.
               </li>
               <li>
-                ✅Data Accuracy &amp; Reliability – Ensuring statistical
-                validity and reproducibility.
+                ✔Data Accuracy &amp; Reliability – Ensuring statistical validity
+                and reproducibility.
               </li>
               <li>
-                ✅ Publication-Ready Outputs – Graphs, tables, and structured
+                ✔ Publication-Ready Outputs – Graphs, tables, and structured
                 interpretations.
               </li>
               <li>
-                ✅ Confidentiality Guaranteed – Secure handling of research data
+                ✔ Confidentiality Guaranteed – Secure handling of research data
                 with strict privacy policies.
               </li>
             </ul>
@@ -313,15 +313,15 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                    text: "The best editing service I've used. Got published in record time!",
-                    name: "Dr. Emily Carter",
+                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                    text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
+                    name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                    text: "Exceptional support from expert editors. Highly recommended!",
-                    name: "Prof. John Williams",
+                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                    text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
+                    name: "Lars-Ake",
                   },
                   {
                     imgSrc:

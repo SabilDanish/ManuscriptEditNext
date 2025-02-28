@@ -20,16 +20,14 @@ export default function IncludeSection() {
             <h3 className={styles.proofreadingSubheading}>✔ Included</h3>
 
             <ul className={styles.proofreadingList}>
+              <li>✔ Correction of spelling, grammar, and punctuation errors</li>
               <li>
-                ✅ Correction of spelling, grammar, and punctuation errors
-              </li>
-              <li>
-                ✅ Fixing minor inconsistencies like verb tense and missing
+                ✔ Fixing minor inconsistencies like verb tense and missing
                 articles
               </li>
-              <li>✅ Ensuring proper word usage and sentence-level clarity</li>
+              <li>✔ Ensuring proper word usage and sentence-level clarity</li>
               <li>
-                ✅ Basic formatting consistency (capitalization, numbering)
+                ✔ Basic formatting consistency (capitalization, numbering)
               </li>
             </ul>
           </div>

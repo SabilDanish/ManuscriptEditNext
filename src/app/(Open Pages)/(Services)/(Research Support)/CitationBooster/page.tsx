@@ -127,24 +127,24 @@ export default function Home() {
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Google Scholar & Scopus Citation Optimization – Increasing
+                ✔ Google Scholar & Scopus Citation Optimization – Increasing
                 research discoverability across indexing platforms.
               </li>
               <li>
-                ✅Metadata Enhancement for Academic Search Engines – Improving
+                ✔Metadata Enhancement for Academic Search Engines – Improving
                 journal indexing, DOI linking, and SEO visibility.
               </li>
               <li>
-                ✅ Cross-Referencing & Collaboration Strategies – Expanding
+                ✔ Cross-Referencing & Collaboration Strategies – Expanding
                 citation potential through networking and research impact
                 analysis.
               </li>
               <li>
-                ✅ Journal Visibility Enhancement – Ensuring papers are
-                optimally listed in high-traffic databases.
+                ✔ Journal Visibility Enhancement – Ensuring papers are optimally
+                listed in high-traffic databases.
               </li>
               <li>
-                ✅AI-Free, Ethical Citation Growth Strategies – 100% compliant
+                ✔AI-Free, Ethical Citation Growth Strategies – 100% compliant
                 with academic integrity guidelines.
               </li>
             </ul>

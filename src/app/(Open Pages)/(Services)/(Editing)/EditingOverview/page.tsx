@@ -117,7 +117,7 @@ export default function Home() {
 
   return (
     <>
- {<Metadata metaData={metaData} />}
+      {<Metadata metaData={metaData} />}
       <section style={gap}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>
@@ -142,11 +142,11 @@ export default function Home() {
             <h4>Tailored Services for Every Requirement</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Our offerings range from basic proofreading to advanced
+                ✔ Our offerings range from basic proofreading to advanced
                 substantive editing.
               </li>
               <li>
-                ✅ Customized solutions that meet journal and institutional
+                ✔ Customized solutions that meet journal and institutional
                 guidelines.
               </li>
             </ul>
@@ -156,11 +156,11 @@ export default function Home() {
             <h4>Ethical, Integrity-Driven Practices</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ All editing is conducted manually by experts to maintain
+                ✔ All editing is conducted manually by experts to maintain
                 academic and research integrity.
               </li>
               <li>
-                ✅ Full compliance with global publication ethics and
+                ✔ Full compliance with global publication ethics and
                 confidentiality standards.
               </li>
             </ul>
@@ -170,11 +170,11 @@ export default function Home() {
             <h4>Fast Turnaround with Uncompromised Quality</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Timely delivery of edited manuscripts with meticulous quality
+                ✔ Timely delivery of edited manuscripts with meticulous quality
                 checks.
               </li>
               <li>
-                ✅ Dedicated editorial processes to ensure consistency and
+                ✔ Dedicated editorial processes to ensure consistency and
                 accuracy.
               </li>
             </ul>
@@ -184,11 +184,10 @@ export default function Home() {
             <h4>Global Reach and Proven Results</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Trusted by researchers and institutions in over 100
-                countries.
+                ✔ Trusted by researchers and institutions in over 100 countries.
               </li>
               <li>
-                ✅ A track record of helping authors publish in high-impact
+                ✔ A track record of helping authors publish in high-impact
                 journals.
               </li>
             </ul>
@@ -198,15 +197,15 @@ export default function Home() {
             <h4>Global Reach and Proven Results</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ <strong>First-Time Authors:</strong> Receive guidance and
+                ✔ <strong>First-Time Authors:</strong> Receive guidance and
                 support to navigate publication challenges.
               </li>
               <li>
-                ✅ <strong>Experienced Researchers:</strong> Advanced editing to
+                ✔ <strong>Experienced Researchers:</strong> Advanced editing to
                 meet high-impact journal standards.
               </li>
               <li>
-                ✅ <strong>Institutions & Universities:</strong> Bulk editing
+                ✔ <strong>Institutions & Universities:</strong> Bulk editing
                 services tailored to the needs of faculty and students.
               </li>
             </ul>
@@ -252,14 +251,14 @@ export default function Home() {
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ Each manuscript undergoes an initial review by subject experts.
+              ✔ Each manuscript undergoes an initial review by subject experts.
             </li>
             <li>
-              ✅ A second round of checks ensures consistency, clarity, and
+              ✔ A second round of checks ensures consistency, clarity, and
               adherence to journal guidelines.
             </li>
             <li>
-              ✅ Final proofreading ensures polished, publication-ready output.
+              ✔ Final proofreading ensures polished, publication-ready output.
             </li>
           </ul>
         </div>
@@ -272,11 +271,11 @@ export default function Home() {
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ We align your manuscript with formatting and style standards
+              ✔ We align your manuscript with formatting and style standards
               (APA, MLA, IEEE, and others).
             </li>
             <li>
-              ✅ Focused on journal-specific compliance to improve acceptance
+              ✔ Focused on journal-specific compliance to improve acceptance
               rates.
             </li>
           </ul>
@@ -291,11 +290,11 @@ export default function Home() {
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅Authors receive detailed feedback on structure, language, and
+              ✔Authors receive detailed feedback on structure, language, and
               content improvements.
             </li>
             <li>
-              ✅ Open communication with editors ensures clarity and alignment
+              ✔ Open communication with editors ensures clarity and alignment
               with your objectives.
             </li>
           </ul>
@@ -310,15 +309,15 @@ export default function Home() {
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ First-Time Authors: Receive guidance and support to navigate
+              ✔ First-Time Authors: Receive guidance and support to navigate
               publication challenges.
             </li>
             <li>
-              ✅ Experienced Researchers: Advanced editing to meet high-impact
+              ✔ Experienced Researchers: Advanced editing to meet high-impact
               journal standards.
             </li>
             <li>
-              ✅ Institutions & Universities: Bulk editing services tailored to
+              ✔ Institutions & Universities: Bulk editing services tailored to
               the needs of faculty and students.
             </li>
           </ul>
