@@ -89,8 +89,7 @@ export default function Home() {
             and readability of research manuscripts.
           </p>
           <ul className={styles.benefitsList}>
-            <li>🔹 Founded in: [Year]</li>
-            <li>🔹 Headquarters: [City, Country]</li>
+            <li>🔹 Founded in: 2009</li>
             <li>
               🔹 Clients Served: 50,000+ researchers, institutions &
               universities globally

@@ -1,754 +1,445 @@
-'use client';
+"use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import { usePathname } from "next/navigation";
+import { data } from "../../../../utils/metaFile.js";
+import Metadata from "@/app/Metadata";
+import { serviceData } from "@/app/utils/service.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faServicestack } from "@fortawesome/free-brands-svg-icons";
+import styles from "@/app/_Common/Renovation/Renovation.module.css";
+import "@/app/_Common/Renovation/Renovation.css";
+
+import "@/app/_Common/Dropdown2/Dropdown2.css";
+
+import {
+  faFileUpload,
+  faSearch,
+  faEdit,
+  faCheckCircle,
+  faRedo,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+
+const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
+  const pathName: string = usePathname()
+    .split("/")
+    .filter((val) => val)
+    .join("");
+  let metaData = newData[pathName];
+  const steps = [
+    {
+      stepss: "Step 1 ➔",
+      icon: faFileUpload,
+      title:
+        "Understanding Research Scope & Requirements – Identifying the research question, objectives, and journal selection.",
+    },
+    {
+      stepss: "Step 2 ➔",
+      icon: faSearch,
+      title:
+        "Comprehensive Literature Review & Analysis – Integrating relevant references, background studies, and existing literature.",
+    },
+    {
+      stepss: "Step 3 ➔",
+      icon: faEdit,
+      title:
+        "Manuscript Writing & Structuring – Developing a logically structured, argument-driven document.",
+    },
+    {
+      stepss: "Step 4 ➔",
+      icon: faCheckCircle,
+      title:
+        "Formatting, Editing & Compliance Check – Ensuring APA, MLA, Chicago, Harvard, and journal-specific guidelines.",
+    },
+    {
+      stepss: "Step 5 ➔",
+      icon: faCheckCircle,
+      title:
+        "Final Review & Submission Readiness – Delivering a publication-ready document with journal-compliant formatting.",
+    },
+  ];
+
+  const accord2: { question: string; answer: string }[] = [
+    {
+      question: "What types of academic documents do you write?",
+      answer:
+        "We provide writing assistance for research papers, dissertations, theses, grant proposals, whitepapers, and technical reports.",
+    },
+    {
+      question: "Do you format academic papers for journal submission?",
+      answer:
+        "Yes! We ensure compliance with Elsevier, Springer, Wiley, BMJ, and PLOS submission guidelines.",
+    },
+    {
+      question: "Can I request plagiarism-free, original content?",
+      answer:
+        "Yes! All manuscripts are 100% original, checked through Turnitin and iThenticate for plagiarism.",
+    },
+    {
+      question: "Do you assist with rewriting rejected manuscripts?",
+      answer:
+        "Yes! We provide journal-specific manuscript restructuring, reviewer response assistance, and language polishing.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply upload your research details, and our academic writing experts will develop a structured, high-quality document.",
+    },
+];
+
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const gap = {
+    marginTop: "40px",
+  };
+
   return (
     <>
-      {/* {breadcrum("Services / Writing", "Scientific & Academic Writing")} */}
-      <section className="pt-5 pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              {/* <h3 className="pt-2 pb-3"> Scientific & Academic Writing</h3> */}
-              <p>
-                Scientific & Academic Writing is a specialized service offered
-                by ManuscriptEdit, tailored for researchers, academics, and
-                professionals in various scientific fields. This service assists
-                clients in effectively communicating their research findings,
-                theories, and academic insights through clear, concise, and
-                engaging writing.
-              </p>
-              <div className="em-about-icon-box2">
-                <div className="list-icon">
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6> RESEARCH PROPOSAL</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6> REVIEW ARTICLE</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6> BRIEF COMMUNICATION</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>ORIGINAL RESEARCH ARTICLE</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>CUSTOMIZED WRITING</h6>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <iframe width="100%" height="250px" title="Mastering the Editorial Process || From Submission to Perfection || ManuscriptEdit" src="https://youtube.com/embed/U5mb-cxljLk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+      {<Metadata metaData={metaData} />}
+      {/* {breadcrum("Services / Writing", "Medical Writing")} */}
+
+      <div>
+        <section style={gap}>
+          <div className={styles.textWrapper}>
+            <h1 className={styles.heading}>
+              Professional Academic & Scientific Writing Assistance –
+              Publication-Ready Research Papers
+            </h1>
+            <p className={styles.subtext}>
+              “Enhance your research with expert academic and scientific writing
+              assistance. Our subject-matter specialists provide error-free,
+              structured, and impactful manuscripts for journal submission,
+              dissertations, and grant applications.”
+            </p>
+            <div className={styles.buttonGroup}>
+              <a href="https://secure.manuscriptedit.com/quotation">
+                <button className={styles.primaryButton}>
+                  Get Writing Assistance
+                </button>
+              </a>
+
+              <a href="https://secure.manuscriptedit.com/quotation">
+                <button className={styles.secondaryButton}>
+                  Request a Free Consultation
+                </button>
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-      <div className="tab_area bg_color2 pt-80 pb-100">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="tab_content">
-                <ul className="nav nav-tabs" role="tablist">
-                  <li className="nav-item active">
-                    <a
-                      className="nav-link "
-                      data-toggle="tab"
-                      href="#tabs-1"
-                      role="tab"
-                      aria-expanded="true"
-                    >
-                      RESEARCH PROPOSAL
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      data-toggle="tab"
-                      href="#tabs-2"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      REVIEW ARTICLE
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      data-toggle="tab"
-                      href="#tabs-3"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      BRIEF COMMUNICATION
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      data-toggle="tab"
-                      href="#tabs-4"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      {" "}
-                      ORIGINAL RESEARCH{" "}
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      data-toggle="tab"
-                      href="#tabs-5"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      CUSTOMIZED WRITING
-                    </a>
-                  </li>
-                </ul>
-                <div className="tab-content white_bg pt-1 pb-5 pl-4 pr-4">
+        </section>
+
+        {/* Proofreading Overview Section */}
+        <section className={styles.benefitsWrapper}>
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>
+              Key Benefits of ManuscriptEdit’s Writing Assistance Services:
+            </h2>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✅ Expert Academic & Scientific Writers – PhD-level specialists
+                in STEM, humanities, social sciences, and medicine.
+              </li>
+              <li>
+                ✅ Journal-Specific Compliance – Formatting and structuring
+                manuscripts for Elsevier, Springer, Wiley, Nature, and
+                high-impact journals.
+              </li>
+              <li>
+                ✅ Plagiarism-Free & Citation-Optimized Content – Ensuring
+                original, properly referenced, and well-structured documents.
+              </li>
+              <li>
+                ✅ Customized Support for Manuscripts, Dissertations & Grants –
+                Tailored writing assistance for academic excellence and research
+                impact.
+              </li>
+              <li>
+                ✅ Confidential & Secure Services – 100% confidentiality, NDA
+                compliance, and secure data handling.
+              </li>
+            </ul>
+          </div>
+
+          <section className={styles.proofreadingWrapper}>
+            <h2 className={styles.headingCenter}>
+              Our Academic & Scientific Writing Services
+            </h2>
+            <table className="editing-overview-table">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Best For</th>
+                  <th>Key Features</th>
+                  <th>Turnaround Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Research Paper Writing</td>
+                  <td>Academics, Researchers</td>
+                  <td>
+                    High-impact journal manuscript writing, Structured,
+                    citation-optimized content
+                  </td>
+                  <td>⏳ 10-15 Days</td>
+                </tr>
+                <tr>
+                  <td>Thesis & Dissertation Writing</td>
+                  <td>Master’s & PhD Students</td>
+                  <td>
+                    University-compliant formatting, Comprehensive research
+                    structuring
+                  </td>
+                  <td>⏳ 15-25 Days</td>
+                </tr>
+                <tr>
+                  <td>Grant Proposal Writing</td>
+                  <td>Researchers & Institutions</td>
+                  <td>
+                    Persuasive & evidence-based proposals, Funding agency
+                    compliance
+                  </td>
+                  <td>⏳ 12-20 Days</td>
+                </tr>
+                <tr>
+                  <td>Conference Paper & Abstract Writing</td>
+                  <td>Presentations & Seminars</td>
+                  <td>
+                    Clear, concise abstracts, Conference-ready manuscripts
+                  </td>
+                  <td>⏳ 5-10 Days</td>
+                </tr>
+                <tr>
+                  <td>Technical & Scientific Report Writing</td>
+                  <td>Corporate & R&D Teams</td>
+                  <td>Structured industry reports, Data-driven analysis</td>
+                  <td>⏳ 7-12 Days</td>
+                </tr>
+                <tr>
+                  <td>Journal Response & Rewriting Assistance</td>
+                  <td>Resubmission & Peer Review</td>
+                  <td>
+                    Addressing reviewer comments, Improving research impact
+                  </td>
+                  <td>⏳ 7-10 Days</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <div className={styles.processContainer}>
+          <h2 className={styles.processTitle}>
+            Academic & Scientific Writing Process – How We Ensure Quality &
+            Compliance
+          </h2>
+          <div className={styles.processSteps1}>
+            {steps.map((step, index) => (
+              <div key={index} className={styles.processStep}>
+                <h5 className={styles.stepHeading}>{step.stepss}</h5>
+                <FontAwesomeIcon
+                  icon={step.icon}
+                  size="3x"
+                  className={styles.stepIcon}
+                />
+                <h3 className={styles.stepDescription}>{step.title}</h3>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.buttonGroup}>
+            <a href="https://secure.manuscriptedit.com/quotation">
+              <button className={styles.primaryButton}>
+              Start Your Writing Project
+              </button>
+            </a>
+          </div>
+
+          <section className="before-after-example-section">
+            <h2 className="before-after-example-heading">
+            Before & After Writing Assistance – See the Difference
+            </h2>
+
+            <div className="before-after-example-content">
+              <div className="before-example">
+                <h3>Before (Unstructured Research Manuscript Without Proper Formatting):</h3>
+                <p className="before-text">
+                “The study investigates the effects of drug X on disease Y. Results show some positive effects, but more research is needed. The sample size was 200, but some patients dropped out.”
+                </p>
+              </div>
+
+              <div className="after-example">
+                <h3>After (Professionally Written, Structured Manuscript):</h3>
+                <p className="after-text">
+                “This study evaluates the therapeutic effects of Drug X on Disease Y in a randomized, placebo-controlled trial involving 200 patients. Results indicate a significant improvement in clinical outcomes . Despite a dropout rate of 8%, findings remain statistically robust, warranting further investigation in larger cohorts.”
+                </p>
+              </div>
+            </div>
+
+            <div className="explanation">
+              <p>
+                Medical Writing ensures accuracy, compliance, and scientific
+                clarity.
+              </p>
+            </div>
+          </section>
+
+          <section className="pricing-turnaround-section">
+            <h2 className="pricing-turnaround-heading">
+              Pricing and Turnaround Time
+            </h2>
+
+            <div className="pricing-details">
+              <div className="pricing-item">
+                <h3>Starting Price</h3>
+                <p className="pricing-text">
+                $0.12 per word (Basic Academic Writing) 
+                </p>
+              </div>
+
+              <div className="delivery-item">
+                <h3>Standard Delivery</h3>
+                <p className="delivery-time">
+                $0.25 per word (Advanced Scientific Research Writing)
+                </p>
+              </div>
+
+              <div className="delivery-item">
+                <h3>Express Delivery</h3>
+                <p className="delivery-time">
+                  Turnaround Time: 10 Days – 25 Days (Depending on complexity)
+                </p>
+              </div>
+            </div>
+
+            <div className="cta-container">
+              <a
+                href="https://secure.manuscriptedit.com/quotation"
+                className="cta-button"
+              >
+                Check Pricing & Get a Quote
+              </a>
+            </div>
+          </section>
+
+          <div className="wcus-container">
+            <div className="wcus-client-reviews">
+              <h3 className="editing-overview-heading">Testimonial</h3>
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                    text: "The best editing service I've used. Got published in record time!",
+                    name: "Dr. Emily Carter",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                    text: "Exceptional support from expert editors. Highly recommended!",
+                    name: "Prof. John Williams",
+                  },
+                  {
+                    imgSrc:
+                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/Testimonial/"
+                className="cta-button"
+              >
+                See More Reviews
+              </a>
+            </div>
+          </div>
+
+          <div className="container" style={{ marginTop: "3rem" }}>
+            <div className="accordion__wrapper2">
+              <h1 className="accordion__title">FAQ</h1>
+
+              {accord2.map((faq, index) => (
+                <div
+                  className="accordion"
+                  key={index}
+                  style={{
+                    paddingBottom: "1rem",
+                    marginBottom: "1rem",
+                    color: "#494949",
+                  }}
+                >
                   <div
-                    className="tab-pane mt-60 active"
-                    id="tabs-1"
-                    role="tabpanel"
+                    className="accordion__header"
+                    onClick={() => toggleAccordion(index)}
                   >
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Specific
-                              Topic
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> A clear
-                              Research Question
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Main
-                              objective (why you want to do?)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Type of
-                              Study (prospective, retrospective...)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Methods
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Study
-                              Design (Exclusion and Inclusion criteria)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Investigations (what is to be done)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Involvement of other departments
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Suggest
-                              2-3 relevant articles
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Purpose
-                              of the proposal (PhD topic, grant application,
-                              etc.)
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What We Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Extensive
-                              literature survey
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Clearly
-                              identification of the objectives, justification
-                              and methodologies to be adopted in conducting the
-                              research
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Text with
-                              a good study design and method
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Emphasis
-                              on the existing gap in the literature and attempt
-                              to address the research problem
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> A
-                              proposal that stands out among several other
-                              applications to enhance its chances of being
-                              funded
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Compliance with the guidelines and formats of the
-                              funding agency as far as possible based on the
-                              information provided by you
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <h2 className="accordion__question">{faq.question}</h2>
+                    {openIndex === index ? "⮝" : "⮟"}
+                    {/* <span className="accordion__icon">
+                <i
+                  className={`${openIndex === index ? "ri-subtract-fill" : "ri-add-line"}`}
+                ></i>
+              </span> */}
                   </div>
-                  <div className="tab-pane mt-60" id="tabs-2" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Topic
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Broad
-                              Research Question
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Main
-                              Focus point
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Rough
-                              Outline
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Outcome
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Suggest
-                              2-3 significant references
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Suggest a
-                              target journal
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What We Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Extensive
-                              literature survey, screen and classify
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Project
-                              your research objective and the problem
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Writing
-                              the review based on your outline and organizing
-                              the content emphasizing the main "research
-                              question"
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Identifying the controversy in the literature
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>Clear
-                              representation of the present status of the field
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Formulating questions that need further research
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> List of
-                              references
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Formatting according to the target journal
-                              guidelines (optional)
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane mt-60" id="tabs-3" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div className="row">
-                          <div className="col-lg-6">
-                            <div
-                              className="about_icon_box wow fadeInUp animated"
-                              data-wow-delay="0.5s"
-                              style={{
-                                visibility: "visible",
-                                animationDelay: "0.5s",
-                                animationName: "fadeInUp",
-                              }}
-                            >
-                              <h5 className="mt-1 mb-4">What You Provide</h5>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>Cite
-                                  reasons for writing a short communication
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Urgency of publication/whether it's a very
-                                  significant or novel work/proof to show that
-                                  it is not an extension of any previous work
-                                  (Journal Editors ask these questions)
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Specific topic
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i> Main
-                                  objective/research question/hypothesis
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i> Key
-                                  results with interpretation
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>
-                                  Relevant figures/tables/images
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i> One
-                                  or two relevant article/s you want to discuss
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Suggest a target journal
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-lg-6">
-                            <div
-                              className="about_icon_box wow fadeInUp animated"
-                              data-wow-delay="0.5s"
-                              style={{
-                                visibility: "visible",
-                                animationDelay: "0.5s",
-                                animationName: "fadeInUp",
-                              }}
-                            >
-                              <h5 className="mt-1 mb-4">What We Provide</h5>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Extensive literature survey
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Writing Introduction
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i> List
-                                  of references
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Formatting according to the target journal
-                                  guidelines (optional)
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane mt-60" id="tabs-4" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Topic
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Main
-                              objective/Research question/Hypothesis
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Methods
-                              (in detail)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Data
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Statistical analysis (optional)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Relevant
-                              figures/images
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Treatment
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Follow up
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Outcome
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> 1 or 2
-                              relevant paper(s) you want to discuss
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What We Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>Extensive
-                              literature survey
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>Writing
-                              the full article
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>
-                              Construction of tables and figures if required
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>
-                              Statistical analysis (on request)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Formatting according to the target journal
-                              guidelines (optional)
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane mt-60" id="tabs-5" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Statistical analysis (SPSS)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Continuing medical application (CME)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Medical
-                              guideline document for physicians
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Medical
-                              procedures
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Training
-                              Manuals
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Regulatory writing
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> New Drug
-                              Application
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Clinical
-                              study report/documentation
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase I
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Clinical
-                              protocol
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase II
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase III
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase II
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase IV
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase IV
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Product
-                              Inserts
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What We Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Necessary
-                              clarification will be sought by our expert medical
-                              writers
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>Feedback
-                              on the 1st draft within 30 days of delivery
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div
+                    className="accordion__content"
+                    style={{
+                      height: openIndex === index ? "auto" : "0",
+                    }}
+                  >
+                    <div
+                      className="accordion__answer"
+                      style={{
+                        padding: "0",
+                        paddingTop: "0.5rem",
+                        marginBottom: "0",
+                        backgroundColor: "#f0f8ff",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
                   </div>
                 </div>
-              </div>
-              <button onClick={() => { redirect('register') }} className="btn btn-primary mt-3 mr-3">
-                Submit Manuscript
-              </button>
-              <button onClick={() => { redirect('contact-us') }} className="btn btn-primary mt-3 mr-3">
-                Schedule a Call
-              </button>
+              ))}
             </div>
           </div>
         </div>
       </div>
-      {SpecializedArea(false)}
-      {ourProfessional()}
-      {howWeWork(2)}
     </>
   );
 }

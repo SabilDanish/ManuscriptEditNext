@@ -112,12 +112,17 @@ export default function Home() {
               integrity of your research.”
             </p>
             <div className={styles.buttonGroup}>
-              <button className={styles.primaryButton}>
-                Get Rewriting Services Now
-              </button>
-              <button className={styles.secondaryButton}>
-                Request a Free Sample
-              </button>
+              <a href="https://secure.manuscriptedit.com/quotation">
+                <button className={styles.primaryButton}>
+                  Get Rewriting Services Now
+                </button>
+              </a>
+
+              <a href="https://secure.manuscriptedit.com/quotation">
+                <button className={styles.secondaryButton}>
+                  Request a Free Sample
+                </button>
+              </a>
             </div>
           </div>
         </section>
@@ -232,9 +237,11 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <button className={styles.primaryButton}>
-              Get Proofreading Now
-            </button>
+            <a href="https://secure.manuscriptedit.com/quotation">
+              <button className={styles.primaryButton}>
+                Get Rewriting service Now
+              </button>
+            </a>
           </div>
 
           <section className="editing-overview-section">
