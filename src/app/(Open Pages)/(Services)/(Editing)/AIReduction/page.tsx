@@ -137,15 +137,15 @@ export default function Home() {
             <h2 className={styles.heading}>Who Should Use This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Researchers &amp; Academics – To comply with publication
+                ✔ Researchers &amp; Academics – To comply with publication
                 standards and avoid potential retractions.
               </li>
               <li>
-                ✅ PhD &amp; MS Students – Ensuring theses and dissertations are
+                ✔ PhD &amp; MS Students – Ensuring theses and dissertations are
                 free from unauthorized AI content.
               </li>
               <li>
-                ✅ Authors &amp; Writers – Maintaining originality and
+                ✔ Authors &amp; Writers – Maintaining originality and
                 credibility in their work.
               </li>
             </ul>
@@ -155,16 +155,16 @@ export default function Home() {
             <h2 className={styles.heading}>Key Benefits:</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Compliance with Publication Standards – Aligns your
-                manuscript with journals&#39; strict guidelines against
-                AI-generated content.
+                ✔ Compliance with Publication Standards – Aligns your manuscript
+                with journals&#39; strict guidelines against AI-generated
+                content.
               </li>
               <li>
-                ✅ Enhanced Credibility – Demonstrates commitment to authentic
+                ✔ Enhanced Credibility – Demonstrates commitment to authentic
                 research and writing practices.
               </li>
               <li>
-                ✅ Risk Mitigation – Reduces the possibility of manuscript
+                ✔ Risk Mitigation – Reduces the possibility of manuscript
                 rejection due to AI content detection.
               </li>
             </ul>
@@ -236,15 +236,15 @@ export default function Home() {
 
             <ul className={styles.proofreadingList}>
               <li>
-                ✅ Comprehensive AI Content Detection – Utilizing advanced tools
+                ✔ Comprehensive AI Content Detection – Utilizing advanced tools
                 to identify AI- generated text within your document.
               </li>
               <li>
-                ✅Human-Led Content Rewriting – Expert editors rephrase or
+                ✔Human-Led Content Rewriting – Expert editors rephrase or
                 replace AI-generated sections to ensure originality.
               </li>
               <li>
-                ✅ Detailed Report – Provides insights into detected AI content
+                ✔ Detailed Report – Provides insights into detected AI content
                 and the modifications made.
               </li>
             </ul>
@@ -306,9 +306,7 @@ export default function Home() {
 
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
-              <button className={styles.primaryButton}>
-                Start  Now
-              </button>
+              <button className={styles.primaryButton}>Start Now</button>
             </a>
           </div>
 
@@ -379,15 +377,15 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                    text: "The best editing service I've used. Got published in record time!",
-                    name: "Dr. Emily Carter",
+                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                    text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
+                    name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                    text: "Exceptional support from expert editors. Highly recommended!",
-                    name: "Prof. John Williams",
+                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                    text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
+                    name: "Lars-Ake",
                   },
                   {
                     imgSrc:

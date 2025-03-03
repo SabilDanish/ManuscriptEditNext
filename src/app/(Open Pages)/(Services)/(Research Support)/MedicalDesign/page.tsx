@@ -124,24 +124,24 @@ export default function Home() {
             <h2 className={styles.heading}>Key Benefits:</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Custom Scientific & Academic Illustrations – Designed by PhD
+                ✔ Custom Scientific & Academic Illustrations – Designed by PhD
                 experts & professional illustrators.
               </li>
               <li>
-                ✅High-Resolution, Print-Ready Figures – Delivered in PNG, JPG,
+                ✔High-Resolution, Print-Ready Figures – Delivered in PNG, JPG,
                 TIFF, AI, and vector formats.
               </li>
               <li>
-                ✅ Graphical Abstracts & Research Diagrams – Professionally
+                ✔ Graphical Abstracts & Research Diagrams – Professionally
                 designed for journal submissions and conferences.
               </li>
               <li>
-                ✅ Journal-Specific Compliance & Formatting – Ensuring
+                ✔ Journal-Specific Compliance & Formatting – Ensuring
                 publication-ready graphics for Elsevier, Springer, Wiley, and
                 IEEE.
               </li>
               <li>
-                ✅ Confidential & Secure Illustration Handling – Ethical,
+                ✔ Confidential & Secure Illustration Handling – Ethical,
                 AI-free, and plagiarism-free artwork creation.
               </li>
             </ul>

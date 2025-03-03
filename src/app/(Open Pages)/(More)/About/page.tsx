@@ -16,8 +16,6 @@ export default function Home() {
     marginTop: "40px",
   };
 
- 
-
   const accord2: { question: string; answer: string }[] = [
     {
       question: "What kind of researchers do you support?",
@@ -44,8 +42,7 @@ export default function Home() {
       answer:
         "Simply upload your manuscript, and our experts will assist you in getting it submission-ready.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -139,23 +136,23 @@ export default function Home() {
           <h4 style={{ marginBottom: "30px" }}>Why Choose ManuscriptEdit?</h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ Expert-Driven Editing & Research Support – PhD-qualified
-              experts with deep domain expertise.
+              ✔ Expert-Driven Editing & Research Support – PhD-qualified experts
+              with deep domain expertise.
             </li>
             <li>
-              ✅ Journal-Specific Compliance – Formatting and structuring for
+              ✔ Journal-Specific Compliance – Formatting and structuring for
               Elsevier, Springer, Wiley, Nature, BMJ, and other top journals.
             </li>
             <li>
-              ✅ AI-Free, Human-Crafted Editing – High-quality manual editing,
+              ✔ AI-Free, Human-Crafted Editing – High-quality manual editing,
               proofreading, and peer review by industry experts
             </li>
             <li>
-              ✅ Fast Turnaround & Confidentiality – Timely delivery with strict
+              ✔ Fast Turnaround & Confidentiality – Timely delivery with strict
               data privacy & security protocols.
             </li>
             <li>
-              ✅ 99% Client Satisfaction Rate – Trusted by leading universities,
+              ✔ 99% Client Satisfaction Rate – Trusted by leading universities,
               researchers, and scientific institutions.
             </li>
           </ul>
@@ -246,16 +243,16 @@ export default function Home() {
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅Adhere to COPE (Committee on Publication Ethics) guidelines
+              ✔Adhere to COPE (Committee on Publication Ethics) guidelines
             </li>
             <li>
-              ✅ Do not engage in ghostwriting or unethical research practices
+              ✔ Do not engage in ghostwriting or unethical research practices
             </li>
             <li>
-              ✅ Maintain strict confidentiality & data security for all clients
+              ✔ Maintain strict confidentiality & data security for all clients
             </li>
             <li>
-              ✅ Ensure 100% originality in all editing, writing & consulting
+              ✔ Ensure 100% originality in all editing, writing & consulting
               services
             </li>
           </ul>

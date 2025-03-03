@@ -137,15 +137,15 @@ export default function Home() {
             <h2 className={styles.heading}>Who Should Use This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ PhD &amp; MS Students – Convert theses and dissertations into
+                ✔ PhD &amp; MS Students – Convert theses and dissertations into
                 English for wider accessibility.
               </li>
               <li>
-                ✅ Doctors &amp; Academics – Prepare research papers, grant
+                ✔ Doctors &amp; Academics – Prepare research papers, grant
                 proposals, and reports for international publication.
               </li>
               <li>
-                ✅ Researchers &amp; Institutions – Collaborate globally by
+                ✔ Researchers &amp; Institutions – Collaborate globally by
                 translating technical reports and academic materials.
               </li>
             </ul>
@@ -155,14 +155,14 @@ export default function Home() {
             <h2 className={styles.heading}>Key Benefits:</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Maintains academic integrity, terminology, and formatting.
+                ✔ Maintains academic integrity, terminology, and formatting.
               </li>
               <li>
-                ✅ Proofread and quality-checked to match publication standards.
+                ✔ Proofread and quality-checked to match publication standards.
               </li>
               <li>
-                ✅ Supports major languages including Chinese, Japanese,
-                Spanish, French, German, and more.
+                ✔ Supports major languages including Chinese, Japanese, Spanish,
+                French, German, and more.
               </li>
             </ul>
           </div>
@@ -229,19 +229,19 @@ export default function Home() {
 
             <ul className={styles.proofreadingList}>
               <li>
-                ✅ Human Translation – AI-free translation done by
-                subject-matter experts.
+                ✔ Human Translation – AI-free translation done by subject-matter
+                experts.
               </li>
               <li>
-                ✅ Academic Tone &amp; Style Retention – Ensures consistency
-                with research writing.
+                ✔ Academic Tone &amp; Style Retention – Ensures consistency with
+                research writing.
               </li>
               <li>
-                ✅ Terminology Accuracy – Discipline-specific language
+                ✔ Terminology Accuracy – Discipline-specific language
                 refinement.
               </li>
               <li>
-                ✅ Formatting &amp; Structure Preservation – Keeps original
+                ✔ Formatting &amp; Structure Preservation – Keeps original
                 document formatting intact.
               </li>
             </ul>
@@ -339,15 +339,15 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                    text: "The best editing service I've used. Got published in record time!",
-                    name: "Dr. Emily Carter",
+                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                    text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
+                    name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                    text: "Exceptional support from expert editors. Highly recommended!",
-                    name: "Prof. John Williams",
+                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                    text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
+                    name: "Lars-Ake",
                   },
                   {
                     imgSrc:

@@ -103,24 +103,24 @@ export default function Home() {
           </p>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ Expert Review Response Drafting – Ensuring clear, structured,
+              ✔ Expert Review Response Drafting – Ensuring clear, structured,
               and scientifically accurate responses.
             </li>
             <li>
-              ✅ Respectful & Persuasive Language – Addressing reviewers’
+              ✔ Respectful & Persuasive Language – Addressing reviewers’
               concerns professionally and effectively.
             </li>
             <li>
-              ✅ Journal-Specific Compliance – Adapting responses to Elsevier,
+              ✔ Journal-Specific Compliance – Adapting responses to Elsevier,
               Springer, Wiley, BMJ, PLOS ONE, IEEE, and other high-impact
               journals.
             </li>
             <li>
-              ✅ Manuscript Revision Support – Assisting with clarifications,
+              ✔ Manuscript Revision Support – Assisting with clarifications,
               rebuttals, and suggested modifications.
             </li>
             <li>
-              ✅ Fast Turnaround & Resubmission Tracking – Ensuring timely
+              ✔ Fast Turnaround & Resubmission Tracking – Ensuring timely
               responses to avoid unnecessary delays.
             </li>
           </ul>
@@ -284,10 +284,10 @@ export default function Home() {
         </div>
 
         <div className={styles.buttonGroup}>
-        <a href="https://secure.manuscriptedit.com/quotation">
-          <button className={styles.primaryButton}>
-            Start Your Reviewer Response Process
-          </button>
+          <a href="https://secure.manuscriptedit.com/quotation">
+            <button className={styles.primaryButton}>
+              Start Your Reviewer Response Process
+            </button>
           </a>
         </div>
       </div>

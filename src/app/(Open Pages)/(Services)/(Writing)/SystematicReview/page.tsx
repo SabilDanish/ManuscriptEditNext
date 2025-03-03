@@ -290,15 +290,15 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                    text: "The best editing service I've used. Got published in record time!",
-                    name: "Dr. Emily Carter",
+                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                    text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
+                    name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                    text: "Exceptional support from expert editors. Highly recommended!",
-                    name: "Prof. John Williams",
+                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                    text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
+                    name: "Lars-Ake",
                   },
                   {
                     imgSrc:

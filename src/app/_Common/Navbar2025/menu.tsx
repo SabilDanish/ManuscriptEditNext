@@ -101,8 +101,9 @@ const menu: MenuItem[]  = [
   {
     label: "SUBMIT MANUSCRIPT",
     subMenu: [
-      { label: "Submit Manuscript", link: "https://secure.manuscriptedit.com/register" },
+      
       { label: "Price Calculator", link: "/Prices" },
+      { label: "Submit Manuscript", link: "https://secure.manuscriptedit.com/register" },
       { label: "Quotation", link: "https://www.secure.manuscriptedit.com/quotation" },
       { label: "Payment Method", link: "/PaymentMethod" },
       { label: "Discount & Offers", link: "/Discount" },

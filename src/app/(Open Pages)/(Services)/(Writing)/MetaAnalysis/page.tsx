@@ -127,25 +127,25 @@ export default function Home() {
             <h2 className={styles.heading}>Key Benefits:</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Expert Biostatisticians & Medical Writers – PhD-level
+                ✔ Expert Biostatisticians & Medical Writers – PhD-level
                 researchers with expertise in systematic reviews & statistical
                 meta-analysis.
               </li>
               <li>
-                ✅PRISMA & Cochrane-Compliant Methodology – Ensuring rigorous
+                ✔PRISMA & Cochrane-Compliant Methodology – Ensuring rigorous
                 selection, data synthesis, and critical appraisal of literature.
               </li>
               <li>
-                ✅ Advanced Statistical Modeling & Effect Size Calculation –
+                ✔ Advanced Statistical Modeling & Effect Size Calculation –
                 Using RevMan, R, Stata, and SPSS for meta-analysis.
               </li>
               <li>
-                ✅ Journal-Ready Manuscripts – Structured for submission in BMJ,
+                ✔ Journal-Ready Manuscripts – Structured for submission in BMJ,
                 The Lancet, JAMA, PLOS ONE, Cochrane Database, and Nature
                 Reviews.
               </li>
               <li>
-                ✅ Confidential & Secure Data Handling – HIPAA/GDPR-compliant
+                ✔ Confidential & Secure Data Handling – HIPAA/GDPR-compliant
                 services for patient safety and clinical data privacy.
               </li>
             </ul>
@@ -324,15 +324,15 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                    text: "The best editing service I've used. Got published in record time!",
-                    name: "Dr. Emily Carter",
+                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                    text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
+                    name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                    text: "Exceptional support from expert editors. Highly recommended!",
-                    name: "Prof. John Williams",
+                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                    text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
+                    name: "Lars-Ake",
                   },
                   {
                     imgSrc:

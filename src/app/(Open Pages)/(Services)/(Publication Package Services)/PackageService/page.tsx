@@ -140,7 +140,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="container-fluid" style={{paddingTop: '2rem'}}>
+      <div className="container-fluid" style={{ paddingTop: "2rem" }}>
         <div className="row">
           <div className="col-lg-3 col-md-6">
             <div
@@ -489,11 +489,11 @@ export default function Home() {
             <h4>End-to-End Assistance for Hassle-Free Publishing</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Comprehensive support from manuscript preparation to final
+                ✔ Comprehensive support from manuscript preparation to final
                 submission.
               </li>
               <li>
-                ✅ Expert guidance on journal selection, formatting, and
+                ✔ Expert guidance on journal selection, formatting, and
                 submission strategies.
               </li>
             </ul>
@@ -503,10 +503,10 @@ export default function Home() {
             <h4>Expert Consultation & Journal-Specific Compliance</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Align your manuscript with impactful journals in your field.
+                ✔ Align your manuscript with impactful journals in your field.
               </li>
               <li>
-                ✅ Compliance with Scopus, SCI, PubMed, and high-impact journal
+                ✔ Compliance with Scopus, SCI, PubMed, and high-impact journal
                 guidelines.
               </li>
             </ul>
@@ -516,11 +516,11 @@ export default function Home() {
             <h4>Ethical, Confidential & High-Quality Support</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Ethical publication practices ensuring compliance with COPE
+                ✔ Ethical publication practices ensuring compliance with COPE
                 and ICMJE guidelines.
               </li>
               <li>
-                ✅ Strict confidentiality measures to protect your research.
+                ✔ Strict confidentiality measures to protect your research.
               </li>
             </ul>
           </section>
@@ -528,9 +528,9 @@ export default function Home() {
           <section className={styles.benefitsWrapper}>
             <h4>Fast & Reliable Submission Process</h4>
             <ul className={styles.benefitsList}>
-              <li>✅ Timely assistance to meet submission deadlines.</li>
+              <li>✔ Timely assistance to meet submission deadlines.</li>
               <li>
-                ✅ Streamlined processes to reduce rejections and revisions.
+                ✔ Streamlined processes to reduce rejections and revisions.
               </li>
             </ul>
           </section>
@@ -539,11 +539,11 @@ export default function Home() {
             <h4>Global Recognition & Proven Track Record</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Supported 10,000+ authors across 100+ countries in publishing
+                ✔ Supported 10,000+ authors across 100+ countries in publishing
                 successfully.
               </li>
               <li>
-                ✅ Experienced in helping researchers publish in Q1 and
+                ✔ Experienced in helping researchers publish in Q1 and
                 high-impact journals.
               </li>
             </ul>
@@ -596,18 +596,18 @@ export default function Home() {
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ Journal Selection & Formatting – We recommend the most suitable
+              ✔ Journal Selection & Formatting – We recommend the most suitable
               journals for your manuscript.
             </li>
             <li>
-              ✅ Pre-Submission Peer Review – Feedback from experts to refine
+              ✔ Pre-Submission Peer Review – Feedback from experts to refine
               your research.
             </li>
             <li>
-              ✅ Submission Management – Complete journal submission assistance.
+              ✔ Submission Management – Complete journal submission assistance.
             </li>
             <li>
-              ✅ Post-Submission Support – Handling reviewer comments and
+              ✔ Post-Submission Support – Handling reviewer comments and
               resubmission.
             </li>
           </ul>
@@ -621,10 +621,10 @@ export default function Home() {
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ Formatting compliance with APA, IEEE, Elsevier, Springer,
-              Wiley, and Nature guidelines.
+              ✔ Formatting compliance with APA, IEEE, Elsevier, Springer, Wiley,
+              and Nature guidelines.
             </li>
-            <li>✅ Ensuring ethical and plagiarism-free publication.</li>
+            <li>✔ Ensuring ethical and plagiarism-free publication.</li>
           </ul>
         </div>
       </section>
@@ -636,9 +636,9 @@ export default function Home() {
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ Direct collaboration with editors and publication specialists.
+              ✔ Direct collaboration with editors and publication specialists.
             </li>
-            <li>✅ Step-by-step updates throughout the publication process.</li>
+            <li>✔ Step-by-step updates throughout the publication process.</li>
           </ul>
         </div>
       </section>
@@ -650,15 +650,15 @@ export default function Home() {
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ Early-Career Researchers – Assistance in navigating journal
+              ✔ Early-Career Researchers – Assistance in navigating journal
               submission.
             </li>
             <li>
-              ✅ Experienced Academics – Optimized publication strategies for
+              ✔ Experienced Academics – Optimized publication strategies for
               high-impact journals.
             </li>
             <li>
-              ✅ Institutions & Universities – Bulk publication support for
+              ✔ Institutions & Universities – Bulk publication support for
               faculty and students.
             </li>
           </ul>

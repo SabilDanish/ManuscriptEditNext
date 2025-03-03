@@ -149,15 +149,14 @@ export default function Home() {
             <h2 className={styles.heading}>Who Needs This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Researchers &amp; Academics submitting to high-impact
+                ✔ Researchers &amp; Academics submitting to high-impact
                 journals.
               </li>
               <li>
-                ✅ PhD Candidates refining dissertations with extensive
-                feedback.
+                ✔ PhD Candidates refining dissertations with extensive feedback.
               </li>
               <li>
-                ✅ Authors Seeking Publication in Q1 &amp; Q2 Journals with
+                ✔ Authors Seeking Publication in Q1 &amp; Q2 Journals with
                 rigorous editorial standards.
               </li>
             </ul>
@@ -169,16 +168,15 @@ export default function Home() {
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Ensures structural coherence &amp; logical progression of
+                ✔ Ensures structural coherence &amp; logical progression of
                 research arguments.
               </li>
               <li>
-                ✅Enhances sentence-level clarity &amp; readability for a
+                ✔Enhances sentence-level clarity &amp; readability for a
                 scholarly audience.
               </li>
               <li>
-                ✅ Strengthens manuscript presentation to meet journal
-                standards.
+                ✔ Strengthens manuscript presentation to meet journal standards.
               </li>
             </ul>
           </div>
@@ -212,24 +210,24 @@ export default function Home() {
 
             <ul className={styles.proofreadingList}>
               <li>
-                ✅ Comprehensive Structural Editing:Restructuring paragraphs for
+                ✔ Comprehensive Structural Editing:Restructuring paragraphs for
                 logical flow and clarity.
               </li>
               <li>
-                ✅ Sentence-Level Refinement:Enhancing phrasing and eliminating
+                ✔ Sentence-Level Refinement:Enhancing phrasing and eliminating
                 ambiguity.
               </li>
               <li>
-                ✅ Content Reorganization:Arranging ideas for improved
+                ✔ Content Reorganization:Arranging ideas for improved
                 readability and impact.
               </li>
               <li>
-                ✅ Scientific &amp; Academic Language Polishing:Ensuring
+                ✔ Scientific &amp; Academic Language Polishing:Ensuring
                 consistency, conciseness, and precision.
               </li>
 
               <li>
-                ✅ Argument Strengthening:Strengthening claims with clear
+                ✔ Argument Strengthening:Strengthening claims with clear
                 supporting evidence.
               </li>
             </ul>
@@ -380,15 +378,15 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                    text: "The best editing service I've used. Got published in record time!",
-                    name: "Dr. Emily Carter",
+                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                    text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
+                    name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                    text: "Exceptional support from expert editors. Highly recommended!",
-                    name: "Prof. John Williams",
+                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                    text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
+                    name: "Lars-Ake",
                   },
                   {
                     imgSrc:

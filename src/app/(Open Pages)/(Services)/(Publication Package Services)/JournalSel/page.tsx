@@ -59,7 +59,7 @@ export default function Home() {
 
   return (
     <>
-     <meta
+      <meta
         name="title"
         content="Journal Selection Services – Find the Best Journal for Your Research"
       />
@@ -86,13 +86,19 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <button
               className={styles.primaryButton}
-              onClick={() => (window.location.href = "https://secure.manuscriptedit.com/quotation")}
+              onClick={() =>
+                (window.location.href =
+                  "https://secure.manuscriptedit.com/quotation")
+              }
             >
               Get Journal Selection Assistance
             </button>
             <button
               className={styles.secondaryButton}
-              onClick={() => (window.location.href = "https://secure.manuscriptedit.com/quotation")}
+              onClick={() =>
+                (window.location.href =
+                  "https://secure.manuscriptedit.com/quotation")
+              }
             >
               Request a Free Consultation
             </button>
@@ -117,30 +123,31 @@ export default function Home() {
           </p>
           <ul className={styles.benefitsList}>
             <li>
-              ✅ Expert Recommendation by PhD Specialists – Identifying journals
+              ✔ Expert Recommendation by PhD Specialists – Identifying journals
               indexed in Scopus, Web of Science, PubMed, and DOAJ.
             </li>
             <li>
-              ✅ Impact Factor & Q1/Q2 Ranking Analysis – Recommending journals
+              ✔ Impact Factor & Q1/Q2 Ranking Analysis – Recommending journals
               with high acceptance rates and strong citations.
             </li>
             <li>
-              ✅ Avoiding Predatory Journals – Screening journal legitimacy and
+              ✔ Avoiding Predatory Journals – Screening journal legitimacy and
               ethical publishing standards.
             </li>
             <li>
-              ✅ Customized Journal Shortlisting – Based on subject area,
+              ✔ Customized Journal Shortlisting – Based on subject area,
               manuscript type, and research scope.
             </li>
             <li>
-              ✅ Journal Submission Guidelines & Formatting – Ensuring
+              ✔ Journal Submission Guidelines & Formatting – Ensuring
               journal-specific compliance before submission.
             </li>
           </ul>
           <button
             className={styles.primaryButton}
             onClick={() =>
-              (window.location.href = "https://secure.manuscriptedit.com/quotation")
+              (window.location.href =
+                "https://secure.manuscriptedit.com/quotation")
             }
           >
             Learn More About Our Journal Selection Process
@@ -204,7 +211,8 @@ export default function Home() {
           className={styles.primaryButton}
           style={{ marginTop: "40px" }}
           onClick={() =>
-            (window.location.href = "https://secure.manuscriptedit.com/quotation")
+            (window.location.href =
+              "https://secure.manuscriptedit.com/quotation")
           }
         >
           Compare Journal Selection Services
@@ -283,10 +291,10 @@ export default function Home() {
         </div>
 
         <div className={styles.buttonGroup}>
-        <a href="https://secure.manuscriptedit.com/quotation">
-          <button className={styles.primaryButton}>
-            Start Your Journal Selection Process
-          </button>
+          <a href="https://secure.manuscriptedit.com/quotation">
+            <button className={styles.primaryButton}>
+              Start Your Journal Selection Process
+            </button>
           </a>
         </div>
       </div>
@@ -331,7 +339,10 @@ export default function Home() {
         </div>
 
         <div className="cta-container">
-          <a href="https://secure.manuscriptedit.com/quotation" className="cta-button">
+          <a
+            href="https://secure.manuscriptedit.com/quotation"
+            className="cta-button"
+          >
             Request a Sample Journal Recommendation
           </a>
         </div>

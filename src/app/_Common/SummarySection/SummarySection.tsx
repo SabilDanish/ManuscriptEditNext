@@ -15,13 +15,13 @@ export default function SummarySection() {
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>Who Should Use This Service?</h2>
           <ul className={styles.benefitsList}>
-            <li>✅ PhD and MS students preparing theses and dissertations</li>
+            <li>✔ PhD and MS students preparing theses and dissertations</li>
             <li>
-              ✅ Doctors and academics submitting journal articles, conference
+              ✔ Doctors and academics submitting journal articles, conference
               papers, and grant proposals
             </li>
             <li>
-              ✅ Researchers refining scientific and technical reports for
+              ✔ Researchers refining scientific and technical reports for
               publication
             </li>
           </ul>
@@ -30,13 +30,11 @@ export default function SummarySection() {
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>Key Benefits</h2>
           <ul className={styles.benefitsList}>
+            <li>✔ Eliminates grammar, punctuation, and typographical errors</li>
             <li>
-              ✅ Eliminates grammar, punctuation, and typographical errors
+              ✔ Focuses on language accuracy while maintaining academic voice
             </li>
-            <li>
-              ✅ Focuses on language accuracy while maintaining academic voice
-            </li>
-            <li>✅ Provides a fast turnaround to meet submission deadlines</li>
+            <li>✔ Provides a fast turnaround to meet submission deadlines</li>
           </ul>
         </div>
       </section>

@@ -9,37 +9,37 @@ import {
   faRedo,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Process (){
-     const steps = [
-        {
-          stepss: "Step 1 ➔",
-          icon: faFileUpload,
-          title: "Upload Your Document",
-          description: "Submit your manuscript via the secure portal.",
-        },
-        {
-          stepss: "Step 2 ➔",
-          icon: faSearch,
-          title: "Proofreaders Review It",
-          description: "Experts correct grammar, punctuation, and minor issues.",
-        },
-        {
-          stepss: "Step 3 ➔",
-          icon: faEdit,
-          title: "Receive Your Polished Manuscript",
-          description: "A clean, error-free document ready for submission.",
-        },
-        {
-          stepss: "Step 4 ➔",
-          icon: faCheckCircle,
-          title: "Optional Revisions",
-          description: "Free minor revisions available after delivery.",
-        },
-      ];
-    
-    return(
-        <>
-        <div className={styles.processContainer}>
+export default function Process() {
+  const steps = [
+    {
+      stepss: "Step 1 ➔",
+      icon: faFileUpload,
+      title: "Upload Your Document",
+      description: "Submit your manuscript via the secure portal.",
+    },
+    {
+      stepss: "Step 2 ➔",
+      icon: faSearch,
+      title: "Proofreaders Review It",
+      description: "Experts correct grammar, punctuation, and minor issues.",
+    },
+    {
+      stepss: "Step 3 ➔",
+      icon: faEdit,
+      title: "Receive Your Polished Manuscript",
+      description: "A clean, error-free document ready for submission.",
+    },
+    {
+      stepss: "Step 4 ➔",
+      icon: faCheckCircle,
+      title: "Optional Revisions",
+      description: "Free minor revisions available after delivery.",
+    },
+  ];
+
+  return (
+    <>
+      <div className={styles.processContainer}>
         <h2 className={styles.processTitle}>How It Works</h2>
         <div className={styles.processSteps}>
           {steps.map((step, index) => (
@@ -57,7 +57,9 @@ export default function Process (){
         </div>
 
         <div className={styles.buttonGroup}>
-          <button className="editing-overview-button-unique ">Get Proofreading Now</button>
+          <button className="editing-overview-button-unique ">
+            Get Proofreading Now
+          </button>
         </div>
 
         <section className="editing-overview-section">
@@ -174,27 +176,27 @@ export default function Process (){
               <tbody>
                 <tr>
                   <td>Fixes grammar, punctuation, typos</td>
-                  <td>✅</td>
-                  <td>✅</td>
-                  <td>✅</td>
+                  <td>✔</td>
+                  <td>✔</td>
+                  <td>✔</td>
                 </tr>
                 <tr>
                   <td>Improves sentence structure & clarity</td>
                   <td>❌</td>
-                  <td>✅</td>
-                  <td>✅</td>
+                  <td>✔</td>
+                  <td>✔</td>
                 </tr>
                 <tr>
                   <td>Ensures logical flow & coherence</td>
                   <td>❌</td>
                   <td>❌</td>
-                  <td>✅</td>
+                  <td>✔</td>
                 </tr>
                 <tr>
                   <td>Heavy restructuring & rewriting</td>
                   <td>❌</td>
                   <td>❌</td>
-                  <td>✅</td>
+                  <td>✔</td>
                 </tr>
               </tbody>
             </table>
@@ -203,7 +205,7 @@ export default function Process (){
               Copyediting or Substantive Editing.
             </p>
 
-            <div style={{display:"flex" , justifyContent:"center"}}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
               <button className="editing-overview-button-unique">
                 Compare All Services
               </button>
@@ -211,7 +213,6 @@ export default function Process (){
           </div>
         </section>
       </div>
-        
-        </>
-    )
+    </>
+  );
 }
