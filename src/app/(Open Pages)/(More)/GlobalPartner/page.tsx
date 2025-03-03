@@ -5,7 +5,7 @@ import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import { usePathname } from "next/navigation";
-import { data } from "../../../../utils/metaFile.js";
+// import { data } from "../../../../utils/metaFile.js";
 import Metadata from "@/app/Metadata";
 import { serviceData } from "@/app/utils/service.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -37,30 +37,34 @@ export default function Home() {
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
-      title: "Consultation & Project Scope Definition – Understand writing needs & target audience.",
+      title:
+        "Consultation & Project Scope Definition – Understand writing needs & target audience.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
-      title: "Data Collection & Research – Gathering evidence-based references.",
+      title:
+        "Data Collection & Research – Gathering evidence-based references.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
-      title: "Medical Writing & Drafting – Structured document creation by medical experts.",
+      title:
+        "Medical Writing & Drafting – Structured document creation by medical experts.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
-      title: "Review & Compliance Check – Ensuring adherence to medical writing standards.",
+      title:
+        "Review & Compliance Check – Ensuring adherence to medical writing standards.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
-      title: "Final Delivery & Revisions – Submission-ready medical content with free minor revisions.",
+      title:
+        "Final Delivery & Revisions – Submission-ready medical content with free minor revisions.",
     },
   ];
-  
 
   const accord2: { question: string; answer: string }[] = [
     {
@@ -80,16 +84,14 @@ export default function Home() {
     },
     {
       question: "Can I request revisions after medical writing?",
-      answer:
-        "Yes, 14 days of free minor revisions are included.",
+      answer: "Yes, 14 days of free minor revisions are included.",
     },
     {
       question: "How do I get started?",
       answer:
         "Simply upload your project details, and our expert medical writers will refine your manuscript.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -236,7 +238,7 @@ export default function Home() {
 
         <div className={styles.processContainer}>
           <h2 className={styles.processTitle}>
-          Medical Writing Process – How We Ensure Accuracy & Compliance
+            Medical Writing Process – How We Ensure Accuracy & Compliance
           </h2>
           <div className={styles.processSteps1}>
             {steps.map((step, index) => (
@@ -255,35 +257,41 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
               <button className={styles.primaryButton}>
-              Start Your Medical Writing Project
+                Start Your Medical Writing Project
               </button>
             </a>
           </div>
 
           <section className="before-after-example-section">
             <h2 className="before-after-example-heading">
-            Before & After Medical Writing – See the Difference
+              Before & After Medical Writing – See the Difference
             </h2>
 
             <div className="before-after-example-content">
               <div className="before-example">
                 <h3>Before (Raw Scientific Data with Unclear Structure):</h3>
                 <p className="before-text">
-                “This study about the new drug was done with 250 people. The drug had some side effects, but it also worked well in reducing symptoms.”
+                  “This study about the new drug was done with 250 people. The
+                  drug had some side effects, but it also worked well in
+                  reducing symptoms.”
                 </p>
               </div>
 
               <div className="after-example">
                 <h3>After (Professionally Written Clinical Report):</h3>
                 <p className="after-text">
-                “A randomized, placebo-controlled study was conducted with 250 participants to evaluate the efficacy and safety profile of [Drug Name]. The treatment demonstrated significant symptom reduction, with a manageable side effect profile.”
+                  “A randomized, placebo-controlled study was conducted with 250
+                  participants to evaluate the efficacy and safety profile of
+                  [Drug Name]. The treatment demonstrated significant symptom
+                  reduction, with a manageable side effect profile.”
                 </p>
               </div>
             </div>
 
             <div className="explanation">
               <p>
-              Medical Writing ensures accuracy, compliance, and scientific clarity.
+                Medical Writing ensures accuracy, compliance, and scientific
+                clarity.
               </p>
             </div>
           </section>
@@ -297,14 +305,14 @@ export default function Home() {
               <div className="pricing-item">
                 <h3>Starting Price</h3>
                 <p className="pricing-text">
-                $0.10 per word (Medical Blog Writing) 
+                  $0.10 per word (Medical Blog Writing)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $0.20 per word (Regulatory Writing)
+                  $0.20 per word (Regulatory Writing)
                 </p>
               </div>
 
