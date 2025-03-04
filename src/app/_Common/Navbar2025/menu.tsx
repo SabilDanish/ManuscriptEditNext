@@ -78,8 +78,8 @@ const menu: MenuItem[]  = [
         label: "High-Impact Services",
         link: "/PHDThesis",
         subMenu: [
-          { label: "High-Impact Scientific Editing", link: "/PHDThesis" },
-          { label: "High-Impact Journal Publication Support", link: "/MasterThesis" },
+          { label: "High-Impact Scientific Editing", link: "/HighImpact" },
+          { label: "High-Impact Journal Publication Support", link: "/HighImpactJournal" },
         ],
       },
     ],
