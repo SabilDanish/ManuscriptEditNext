@@ -285,7 +285,7 @@ high-impact journals of Q1 and Q2.</h5>
             <Link className="btn mt-12" href={"https://secure.manuscriptedit.com/advisory"} role="button" style={{ backgroundColor: "#151130", color: "white", marginTop: "1rem",marginLeft:"1rem" }}>For Indian Researchers →</Link>
           </div>
           <div className={`$"carouselItem" $"active" col-lg-6`}>
-            <img src="/images/flags/Ban_updates.png" className="carouselImage" alt="Banner 1" />
+            <img src="/images/flags/Ban_updates.jpg" className="carouselImage" alt="Banner 1" />
           </div>
         </div>
       </div>

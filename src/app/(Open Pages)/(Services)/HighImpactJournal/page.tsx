@@ -70,24 +70,29 @@ export default function Home() {
   const accord2: { question: string; answer: string }[] = [
     {
       question: "Do you guarantee publication?",
-      answer: "No, but we enhance manuscript quality, structure, and journal compatibility to improve acceptance chances."
+      answer:
+        "No, but we enhance manuscript quality, structure, and journal compatibility to improve acceptance chances.",
     },
     {
       question: "Which journals do you support?",
-      answer: "We provide support for Scopus, SCI, Web of Science, PubMed, and Q1/Q2 indexed journals across multiple disciplines."
+      answer:
+        "We provide support for Scopus, SCI, Web of Science, PubMed, and Q1/Q2 indexed journals across multiple disciplines.",
     },
     {
       question: "Do you offer pre-submission peer review?",
-      answer: "Yes! Our experts conduct a thorough review to strengthen your manuscript before submission."
+      answer:
+        "Yes! Our experts conduct a thorough review to strengthen your manuscript before submission.",
     },
     {
       question: "Can you assist with resubmission after rejection?",
-      answer: "Absolutely! We help with revisions, rebuttal letter drafting, and resubmission strategies."
+      answer:
+        "Absolutely! We help with revisions, rebuttal letter drafting, and resubmission strategies.",
     },
     {
       question: "What if my manuscript needs major revisions?",
-      answer: "We provide in-depth editing, reviewer comment analysis, and expert guidance for revisions."
-    }
+      answer:
+        "We provide in-depth editing, reviewer comment analysis, and expert guidance for revisions.",
+    },
   ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -325,22 +330,22 @@ export default function Home() {
               <div className="pricing-item">
                 <h3>Starting Price</h3>
                 <p className="pricing-text">
-                $250 per manuscript (Basic Submission Assistance)
+                  $250 per manuscript (Basic Submission Assistance)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $750 per
-                manuscript (Comprehensive Support)
+                  $750 per manuscript (Comprehensive Support)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                10 – 30 Days (Based on service level and manuscript complexity)
+                  10 – 30 Days (Based on service level and manuscript
+                  complexity)
                 </p>
               </div>
             </div>
@@ -362,25 +367,25 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                      " https://manuscriptedit.com/_next/static/media/aa.5d969f42.jpg",
                     text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
                     name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ss.a5f9add8.jpg",
                     text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
                     name: "Lars-Ake",
                   },
                   {
                     imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                     text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                     name: "J Y",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                     text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                     name: "Emily Selman",
                   },

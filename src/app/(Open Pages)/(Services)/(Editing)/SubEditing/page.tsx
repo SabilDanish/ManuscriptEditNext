@@ -103,14 +103,16 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Enhance Clarity & Strengthen Your Manuscript with Expert
+              Enhance Clarity &amp; Improve Your Manuscript with Expert
               Substantive Editing
             </h1>
             <p className={styles.subtext}>
-              Ensure your manuscript is logically structured, coherent, and
-              impactful with our expert-driven substantive editing services. Our
-              experienced editors refine your research by enhancing clarity,
-              improving logical flow, and ensuring academic rigor.
+              Ensure your manuscript is well structured, coherent, and impactful
+              with our expert substantive editing services. Our professional
+              editors refine your research by enhancing clarity, improving
+              logical flow, and ensuring academic rigor. Through high-quality
+              English editing and scientific editing services, we help you
+              achieve publication success in leading journals.
             </p>
             <div className={styles.buttonGroup}>
               <button className={styles.primaryButton}>
@@ -128,10 +130,13 @@ export default function Home() {
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>What is Substantive Editing?</h2>
             <p className={styles.subtext}>
-              Substantive editing is a comprehensive review that refines the
-              structure, logical flow, coherence, and clarity of a manuscript.
-              It is designed to improve the readability and academic depth of
-              research papers, dissertations, and journal submissions.
+              Substantive editing is a comprehensive editing service that
+              improves your manuscript&#39;s structure, logical flow, and
+              coherence. This process enhances the clarity, readability, and
+              academic depth of research papers, dissertations, and journal
+              submissions. Our expert editors ensure your scientific or academic
+              work meets the highest quality standards for successful
+              publication.
             </p>
           </div>
 
@@ -139,16 +144,16 @@ export default function Home() {
             <h2 className={styles.heading}>Who Needs This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Researchers &amp; Scientists preparing high-impact journal
-                submissions.
+                ✔ Researchers &amp; scientists preparing high-impact journal
+                submissions
               </li>
               <li>
-                ✔ PhD Candidates &amp; Academics refining dissertations and
-                theses.
+                ✔ PhD candidates &amp; academics refining dissertations and
+                theses
               </li>
               <li>
-                ✔ Authors of Technical &amp; Research Reports ensuring clarity
-                and precision.
+                ✔ Authors of technical &amp; research reports ensuring clarity
+                and precision
               </li>
             </ul>
           </div>
@@ -159,11 +164,21 @@ export default function Home() {
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Strengthens logical coherence &amp; manuscript structure.
+                <br /> ✔ Strengthens logical coherence &amp; manuscript
+                structure
               </li>
-              <li>✔ Enhances clarity, readability, and argumentation.</li>
-              <li>✔ Refines academic tone &amp; eliminates redundancies.</li>
+              <li>✔ Enhances clarity, readability, and argumentation</li>
+              <li>✔ Refines academic tone &amp; eliminates redundancies</li>
+              <li>
+                ✔ Ensures compliance with journal and publication guidelines
+              </li>
             </ul>
+            <p>
+              <br />
+              Improve the quality of your manuscript today with our expert
+              editing services and increase your chances for publication
+              success!
+            </p>
           </div>
 
           <section className={styles.proofreadingWrapper}>
@@ -404,25 +419,25 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                      " https://manuscriptedit.com/_next/static/media/aa.5d969f42.jpg",
                     text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
                     name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ss.a5f9add8.jpg",
                     text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
                     name: "Lars-Ake",
                   },
                   {
                     imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                     text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                     name: "J Y",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                     text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                     name: "Emily Selman",
                   },

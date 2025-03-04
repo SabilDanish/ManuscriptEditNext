@@ -76,7 +76,7 @@ const menu: MenuItem[]  = [
       },
       {
         label: "High-Impact Services",
-        link: "/PHDThesis",
+        link: "/HighImpact",
         subMenu: [
           { label: "High-Impact Scientific Editing", link: "/HighImpact" },
           { label: "High-Impact Journal Publication Support", link: "/HighImpactJournal" },

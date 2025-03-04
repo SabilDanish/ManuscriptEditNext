@@ -96,7 +96,7 @@ export default function Home() {
       answer:
         "Yes, our experts mentor scholars in structuring compelling research proposals.",
     },
-];
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -184,8 +184,7 @@ export default function Home() {
                 ethical standards.
               </li>
               <li>
-                ✔ Strict Confidentiality – Your work remains secure and
-                private.
+                ✔ Strict Confidentiality – Your work remains secure and private.
               </li>
             </ul>
           </div>
@@ -322,14 +321,15 @@ export default function Home() {
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">$0.08 per word (Writing Guidance)</p>
+                <p className="pricing-text">
+                  $0.08 per word (Writing Guidance)
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $0.15 per word
-                (Comprehensive Research Support)
+                  $0.15 per word (Comprehensive Research Support)
                 </p>
               </div>
 
@@ -370,13 +370,13 @@ export default function Home() {
                   },
                   {
                     imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                     text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                     name: "J Y",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                     text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                     name: "Emily Selman",
                   },

@@ -11,7 +11,7 @@ const experts = [
       'BSc and MSc degrees in Biomedical Engineering - University of Michigan.'
     ],
     image: '/images/ourprof/aa1.jpg',
-    flag: '/images/flags/1.jpeg'
+    flag: '/images/flags/1.jpg'
   },
   {
     name: 'Dr. D W',
@@ -21,7 +21,7 @@ const experts = [
       'BSc and MSc degrees in Clinical Medicine - University of Manchester.'
     ],
     image: '/images/ourprof/aa2.jpg',
-    flag: '/images/flags/2.jpeg'
+    flag: '/images/flags/2.jpg'
   },
   {
     name: 'Dr. S M',
@@ -31,7 +31,7 @@ const experts = [
       'BSc and MSc degrees in Cognitive Science - University of Southern California.'
     ],
     image: '/images/ourprof/aa3.jpg',
-    flag: '/images/flags/1.jpeg'
+    flag: '/images/flags/1.jpg'
   },
   {
     name: 'Dr. E J',
@@ -41,7 +41,7 @@ const experts = [
       'BSc and MSc degrees in Zoology - University of Cape Town.'
     ],
     image: '/images/ourprof/aa4.jpg',
-    flag: '/images/flags/3.png'
+    flag: '/images/flags/3.jpg'
   },
   {
     name: 'Dr. M A',
@@ -51,7 +51,7 @@ const experts = [
       'BSc and MSc degrees in Environmental Science - Cornell University.'
     ],
     image: '/images/ourprof/aa6.jpg',
-    flag: '/images/flags/1.jpeg'
+    flag: '/images/flags/1.jpg'
   },
   {
     name: 'Dr. L T',
@@ -61,7 +61,7 @@ const experts = [
       'BSc and MSc degrees in Health Sciences - University of Auckland.'
     ],
     image: '/images/ourprof/aa34.jpg',
-    flag: '/images/flags/5.png'
+    flag: '/images/flags/5.jpg'
   }
 ];
 

@@ -96,12 +96,12 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              &quot;Ensure Authenticity with Our AI Reduction Service&quot;
+            Ensure Originality with our AI Content Detection &amp; Removal Service
             </h1>
             <p className={styles.subtext}>
-              &quot;Enhance the credibility of your research by eliminating
-              AI-generated traces, aligning with stringent academic and
-              publication standards.&quot;
+            Enhance your research credibility by detecting and eliminating AI-generated content with our
+expert AI content detection service. Maintain academic integrity and align with the journal
+submission standards to avoid retractions and ensure manuscript originality.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -124,12 +124,10 @@ export default function Home() {
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>What is AI Reduction?</h2>
             <p className={styles.subtext}>
-              AI Reduction involves the meticulous identification and removal of
-              AI-generated content from your manuscript, ensuring it reflects
-              original human authorship. This process is crucial as leading
-              scientific journals prohibit the use of AI-generated text without
-              explicit editorial consent, considering its inclusion without
-              approval as scientific misconduct.
+            Our AI-generated content removal service meticulously identifies and eliminates AI-
+created text, ensuring research paper authenticity and compliance with leading academic
+standards. Top scientific journals prohibit AI-generated content without explicit consent, and
+failing to comply may lead to publication rejection or allegations of scientific misconduct.
             </p>
           </div>
 
@@ -137,35 +135,38 @@ export default function Home() {
             <h2 className={styles.heading}>Who Should Use This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Researchers &amp; Academics – To comply with publication
-                standards and avoid potential retractions.
+                ✔ Researchers &amp; Academics- Ensure compliance with strict publication support and
+                journal guidelines.
               </li>
               <li>
-                ✔ PhD &amp; MS Students – Ensuring theses and dissertations are
-                free from unauthorized AI content.
+                ✔ PhD &amp; MS students- Get an AI check for their thesis and dissertation to confirm
+                human authorship and avoid AI-generated content issues.
               </li>
               <li>
-                ✔ Authors &amp; Writers – Maintaining originality and
-                credibility in their work.
+                ✔ Authors &amp; Writers- Maintain content originality and credibility in academic and
+                professional writing.
               </li>
             </ul>
           </div>
 
           <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>Key Benefits:</h2>
+            <h2 className={styles.heading}>Key Benefits of Our AI Content Reduction Service:</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Compliance with Publication Standards – Aligns your manuscript
-                with journals&#39; strict guidelines against AI-generated
-                content.
+                ✔ AI Content Detection for Research Papers- Ensure 100% human-generated content
+                for successful journal submission.
               </li>
               <li>
-                ✔ Enhanced Credibility – Demonstrates commitment to authentic
-                research and writing practices.
+                ✔ Compliance with Publication Standards- Align your work with Elsevier, Springer,
+                Wiley, Scopus, and PubMed guidelines.
               </li>
               <li>
-                ✔ Risk Mitigation – Reduces the possibility of manuscript
-                rejection due to AI content detection.
+                ✔ Enhanced Credibility- Establish trust and demonstrate commitment to authentic
+                research and academic integrity.
+              </li>
+              <li>
+                ✔ Risk Mitigation &amp; journal Acceptance- Avoid manuscript rejection by eliminating
+                AI-generated traces.
               </li>
             </ul>
           </div>
@@ -377,25 +378,25 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                      " https://manuscriptedit.com/_next/static/media/aa.5d969f42.jpg",
                     text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
                     name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ss.a5f9add8.jpg",
                     text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
                     name: "Lars-Ake",
                   },
                   {
                     imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                     text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                     name: "J Y",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                     text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                     name: "Emily Selman",
                   },

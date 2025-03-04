@@ -1,23 +1,26 @@
-'use client';
+"use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import FAQ from "@/app/_Common/_FAQ/FAQ";
 import redirect from "@/app/_Common/_functionality/Redirect";
-import { usePathname } from 'next/navigation'
-import { data } from '../../../../utils/metaFile.js'
+import { usePathname } from "next/navigation";
+import { data } from "../../../../utils/metaFile.js";
 import Metadata from "@/app/Metadata";
 import Renovation from "@/app/_Common/Renovation/Renovation";
 import Dropdown2 from "@/app/_Common/Dropdown2/Dropdown2";
 
-const newData: {[key: string]: {[key: string]: string}} = data;
+const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
-  const pathName: string = usePathname().split("/").filter(val => val).join("")
-  let metaData = newData[pathName]
+  const pathName: string = usePathname()
+    .split("/")
+    .filter((val) => val)
+    .join("");
+  let metaData = newData[pathName];
   return (
     <>
-    {<Metadata metaData={metaData} />}
+      {<Metadata metaData={metaData} />}
 
-      <Renovation/>
+      <Renovation />
 
       <div className="wcus-container">
         <div className="wcus-client-reviews">
@@ -38,13 +41,13 @@ export default function Home() {
               },
               {
                 imgSrc:
-                  "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                  "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                 text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                 name: "J Y",
               },
               {
                 imgSrc:
-                  "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                  "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                 text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                 name: "Emily Selman",
               },
@@ -76,7 +79,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-      
+
       <Dropdown2 />
     </>
   );
