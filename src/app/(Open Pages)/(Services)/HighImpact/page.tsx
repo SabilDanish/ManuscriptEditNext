@@ -1,23 +1,16 @@
 "use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
-import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
+import FAQ from "@/app/_Common/_FAQ/FAQ";
+import Metadata from "@/app/Metadata";
+import { usePathname } from "next/navigation";
+// import { data } from "../../../../app/utils/metaFile";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import redirect from "@/app/_Common/_functionality/Redirect";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { data } from "../../../../utils/metaFile.js";
-import Metadata from "@/app/Metadata";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faServicestack } from "@fortawesome/free-brands-svg-icons";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { serviceData } from "@/app/utils/service.js";
-import "../../../../_Common/getHelp/getHelp.css";
-import "./writingOverview.css";
-import { useEffect, useState } from "react";
+// const newData: { [key: string]: { [key: string]: string } } = data;
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
 
 import {
@@ -27,76 +20,75 @@ import {
   faCheckCircle,
   faRedo,
 } from "@fortawesome/free-solid-svg-icons";
-
-const newData: { [key: string]: { [key: string]: string } } = data;
+import { useState } from "react";
 
 export default function Home() {
   const pathName: string = usePathname()
     .split("/")
     .filter((val) => val)
     .join("");
-  let metaData = newData[pathName];
-
+  //   let metaData = newData[pathName];
   const steps = [
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
       title:
-        "Understanding Your Requirements – Define objectives, target audience, and guidelines.",
+        "Scientific Review & Assessment – Evaluating manuscript strengths and areas for improvement.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
       title:
-        "Research & Content Structuring – Develop a logical flow with clear sections.",
+        "Language and Structural Editing – Refining clarity, scientific tone, and consistency.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
       title:
-        "Expert Feedback & Guidance – Receive mentorship on clarity, coherence, and writing style.",
+        "Terminology and Technical Accuracy Check – Ensuring discipline-specific precision and correctness.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
       title:
-        "Review, Editing & Refinement – Ensure structure and academic compliance.",
+        "Formatting & Compliance Review – Adjusting layout, citations, and references to journal standards.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
       title:
-        "Final Quality Check – Verify research integrity and ethical standards.",
+        "Final Proofreading & Quality Check – Verifying all changes and ensuring readiness for submission.",
     },
   ];
 
   const accord2: { question: string; answer: string }[] = [
     {
-      question: "Do you write research papers for scholars?",
+      question: "What is the difference between basic editing and high-impact scientific editing?",
       answer:
-        "No. We provide structured writing guidance and feedback to help scholars enhance their manuscripts while maintaining ethical research practices.",
+        "High-impact scientific editing focuses on technical precision, logical flow, and journal compliance beyond standard language editing.",
     },
     {
-      question: "Can you help with journal-specific formatting?",
+      question: "Do you guarantee acceptance in high-impact journals?",
       answer:
-        "Absolutely! We tailor manuscripts to meet journal guidelines and submission standards.",
+        "No, but we significantly improve manuscript quality to align with journal expectations.",
     },
     {
-      question: "Do you offer revisions?",
+      question: "Can you assist with reviewer comments and revisions?",
       answer:
-        "Yes! We provide free minor revisions within 14 days of delivery.",
+        "Yes, we provide post-submission editing and reviewer response assistance.",
     },
     {
-      question: "How do you ensure plagiarism-free content?",
+      question: "Which disciplines do you cover?",
       answer:
-        "We guide scholars on proper citation practices and ensure compliance with Turnitin-based originality checks.",
+        "We support STEM, Life Sciences, Medicine, Social Sciences, and Engineering.",
     },
     {
-      question: "Can you help with funding proposals?",
+      question: "How do I ensure my manuscript is formatted correctly for my target journal?",
       answer:
-        "Yes, our experts mentor scholars in structuring compelling research proposals.",
+        "Our experts ensure compliance with APA, MLA, IEEE, and journal-specific guidelines.",
     },
 ];
+
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -108,54 +100,30 @@ export default function Home() {
     marginTop: "40px",
   };
 
-  const [currency, setCurrency] = useState("");
-  const LocationBasedPricing = () => {
-    useEffect(() => {
-      fetch("https://www.secure.manuscriptedit.com/api/ip_api.php")
-        .then((response) => response.json())
-        .then((data) => {
-          const countryCode = data[0].countryCode;
-          if (countryCode === "IN") {
-            setCurrency("INR");
-          } else {
-            setCurrency("USD");
-          }
-        })
-        .catch((error) => {
-          console.error("Error fetching location:", error);
-        });
-    }, []);
-    return currency;
-  };
-  LocationBasedPricing();
-
   return (
     <>
-      {<Metadata metaData={metaData} />}
+      {/* {<Metadata metaData={metaData} />} */}
+      {/* {breadcrum("Services / English Editing", "Substantive editing")} */}
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Writing Assistance – Expert Guidance for Research
-              Excellence
+              High-Impact Scientific Editing – Elevate Your Research for
+              Top-Tier Journals
             </h1>
             <p className={styles.subtext}>
-              Refine your research writing with expert mentorship. We help
-              scholars enhance clarity, structure, and impact while maintaining
-              academic integrity.
+              Refine your manuscript with expert scientific editing to enhance
+              clarity, coherence, and publication readiness. Ensure compliance
+              with journal standards and increase acceptance rates in
+              high-impact journals.
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
-                <button className={styles.primaryButton}>
-                  [Get Writing Guidance Now]
-                </button>
-              </a>
-
-              <a href="https://secure.manuscriptedit.com/quotation">
-                <button className={styles.secondaryButton}>
-                  Request a Free Consultation
-                </button>
-              </a>
+              <button className={styles.primaryButton}>
+                Get Scientific Editing Now
+              </button>
+              <button className={styles.secondaryButton}>
+                Request a Free Sample
+              </button>
             </div>
           </div>
         </section>
@@ -164,90 +132,109 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Why Choose Our Writing Assistance Services?
+              What is High-Impact Scientific Editing?
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Expert-Led Research Guidance – PhD-level mentors across
-                disciplines.
+                ✔ Advanced language and technical editing for scientific
+                manuscripts.
               </li>
               <li>
-                ✔ Ethical Writing Support – Helping scholars improve structure,
-                clarity, and coherence.
+                ✔ Ensures clarity, coherence, and consistency in research
+                writing.
               </li>
               <li>
-                ✔ Tailored to Your Needs – Personalized feedback and research
-                support.
+                ✔ Aligns with Q1, Q2, Scopus, Web of Science, and PubMed journal
+                requirements.
               </li>
               <li>
-                ✔ Journal-Ready Writing – Ensuring compliance with academic and
-                ethical standards.
+                ✔ Includes terminology correction, scientific accuracy checks,
+                and structural improvement.
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>Who Should Use This Service?</h2>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✔ Researchers and Academics – Preparing manuscripts for
+                submission in high- impact journals.
               </li>
               <li>
-                ✔ Strict Confidentiality – Your work remains secure and
-                private.
+                ✔ PhD Scholars and Postdoctoral Fellows – Refining dissertations
+                and research papers.
+              </li>
+              <li>
+                ✔ Medical and Scientific Professionals – Ensuring technical
+                precision and readability in scientific manuscripts.
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>
+              Key Benefits of Substantive Editing:
+            </h2>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✔ Improves research clarity and readability for global
+                audiences.
+              </li>
+              <li>
+                ✔ Enhances logical flow and argumentation within the manuscript.
+              </li>
+              <li>
+                ✔ Corrects grammar, syntax, and scientific terminology errors.
+              </li>
+              <li>✔Aligns manuscript structure with journal requirements.</li>
+              <li>
+                ✔ Reduces rejection rates due to language or technical issues.
               </li>
             </ul>
           </div>
 
           <section className={styles.proofreadingWrapper}>
-            <h2 className={styles.headingCenter}>
-              Our Writing Assistance Services
-            </h2>
+            <h2 className={styles.headingCenter}>What This Service Includes</h2>
             <table className="editing-overview-table">
               <thead>
                 <tr>
-                  <th>Service</th>
-                  <th>Best For</th>
-                  <th>Key Features</th>
-                  <th>Turnaround Time</th>
+                  <th>Feature</th>
+                  <th>Description</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Research Paper Guidance</td>
-                  <td>Researchers & Academics</td>
-                  <td>Structuring, refining, and improving academic papers</td>
-                  <td> 10-15 Days</td>
+                  <td>Advanced Language Editing</td>
+                  <td>Improving grammar, syntax, and sentence clarity.</td>
                 </tr>
                 <tr>
-                  <td>Thesis & Dissertation Support</td>
-                  <td>PhD & MS Students</td>
+                  <td>Scientific Accuracy Review</td>
                   <td>
-                    Expert mentorship for logical structuring and coherence
+                    Ensuring proper terminology usage and technical consistency.
                   </td>
-                  <td> 15-30 Days</td>
                 </tr>
                 <tr>
-                  <td>Review & Narrative Writing Assistance</td>
-                  <td>Literature & Systematic Reviews</td>
-                  <td>Critical analysis and writing refinement</td>
-                  <td> 10-20 Days</td>
+                  <td>Logical Flow & Structure Enhancement</td>
+                  <td>Strengthening coherence and argumentation.</td>
                 </tr>
                 <tr>
-                  <td>Technical & White Paper Guidance</td>
-                  <td>Engineers, Scientists, Businesses</td>
+                  <td>Journal Formatting Compliance</td>
+                  <td>Aligning with specific submission requirements.</td>
+                </tr>
+                <tr>
+                  <td>Reference and Citation Check</td>
                   <td>
-                    Structuring research for technical and industry reports
+                    Ensuring correct formatting in APA, MLA, IEEE, and journal
+                    styles.
                   </td>
-                  <td> 7-14 Days</td>
                 </tr>
                 <tr>
-                  <td>Grant & Proposal Writing Support</td>
-                  <td>Researchers & Academicians</td>
+                  <td>Clarity and Readability Improvement</td>
                   <td>
-                    Helping scholars create compelling, well-organized proposals
+                    Simplifying complex sentences while maintaining technical
+                    depth.
                   </td>
-                  <td> 7-12 Days</td>
-                </tr>
-                <tr>
-                  <td>Book & Chapter Writing Assistance</td>
-                  <td>Scholars & Authors</td>
-                  <td>
-                    Academic books, book chapters, and structured content
-                    development
-                  </td>
-                  <td> 20-40 Days</td>
                 </tr>
               </tbody>
             </table>
@@ -255,9 +242,7 @@ export default function Home() {
         </section>
 
         <div className={styles.processContainer}>
-          <h2 className={styles.processTitle}>
-            Writing Process – Ensuring Quality &amp; Ethical Research Support
-          </h2>
+          <h2 className={styles.processTitle}>How It Works</h2>
           <div className={styles.processSteps1}>
             {steps.map((step, index) => (
               <div key={index} className={styles.processStep}>
@@ -273,44 +258,34 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
-              <button className={styles.primaryButton}>
-                Start Your Technical Writing Project
-              </button>
-            </a>
+            <button className={styles.primaryButton}>
+              Start Your Scientific Editing Project Today
+            </button>
           </div>
 
           <section className="before-after-example-section">
             <h2 className="before-after-example-heading">
-              Before &amp; After Writing Assistance – See the Difference
+              Before and After Example
             </h2>
 
             <div className="before-after-example-content">
               <div className="before-example">
-                <h3>Before (Unstructured Manuscript Draft):</h3>
-                <p className="before-text">
-                  The research focuses on AI applications, but lacks proper flow
-                  and citation integration. Some arguments appear unclear and
-                  disconnected.
-                </p>
+                <h3>Before (Original Unedited Text):</h3>
+                <ul className="before-text">
+                  <li>Manuscript contains language inconsistencies and unclear technical terms.</li>
+                  <li>Improper structuring leading to lack of coherence in argumentation.</li>
+                  <li>High risk of rejection due to readability and formatting issues.</li>
+                </ul>
               </div>
 
               <div className="after-example">
-                <h3>After (Expertly Structured &amp; Refined Manuscript):</h3>
-                <p className="after-text">
-                  This study explores AI applications in medical diagnostics,
-                  systematically presenting key advancements, supported by
-                  recent peer-reviewed literature. The paper integrates
-                  statistical findings to strengthen claims and ensure research
-                  coherence.
-                </p>
+                <h3>After (Edited for Clarity &amp; Logical Flow):</h3>
+                <ul className="after-text">
+                  <li>Refined, well-structured, and publication-ready manuscript.</li>
+                  <li>Stronger scientific clarity and coherence across all sections.</li>
+                  <li>Improved readability without altering technical accuracy.</li>
+                </ul>
               </div>
-            </div>
-
-            <div className="explanation">
-              <p>
-                Technical Writing ensures clarity, usability, and compliance.
-              </p>
             </div>
           </section>
 
@@ -322,21 +297,19 @@ export default function Home() {
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">$0.08 per word (Writing Guidance)</p>
+                <p className="pricing-text">$0.06 per word (Standard Scientific Editing)</p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
-                <p className="delivery-time">
-                $0.15 per word
-                (Comprehensive Research Support)
-                </p>
+                <p className="delivery-time">$0.12 per word
+                (Advanced Editing)</p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                  Turnaround Time: 7 – 30 Days (Based on complexity and length)
+                5 – 12 Days (Based on service level and manuscript complexity)
                 </p>
               </div>
             </div>
@@ -346,7 +319,7 @@ export default function Home() {
                 href="https://secure.manuscriptedit.com/quotation"
                 className="cta-button"
               >
-                Check Pricing & Get a Quote
+                Check Pricing and Get a Quote
               </a>
             </div>
           </section>
@@ -358,15 +331,15 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                    text: "The best editing service I've used. Got published in record time!",
-                    name: "Dr. Emily Carter",
+                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                    text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
+                    name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                    text: "Exceptional support from expert editors. Highly recommended!",
-                    name: "Prof. John Williams",
+                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                    text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
+                    name: "Lars-Ake",
                   },
                   {
                     imgSrc:
@@ -411,7 +384,7 @@ export default function Home() {
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-              <h1 className="accordion__title">FAQ</h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div

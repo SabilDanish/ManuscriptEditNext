@@ -1,23 +1,16 @@
 "use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
-import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
+import FAQ from "@/app/_Common/_FAQ/FAQ";
+import Metadata from "@/app/Metadata";
+import { usePathname } from "next/navigation";
+// import { data } from "../../../../app/utils/metaFile";
 import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import redirect from "@/app/_Common/_functionality/Redirect";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { data } from "../../../../utils/metaFile.js";
-import Metadata from "@/app/Metadata";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faServicestack } from "@fortawesome/free-brands-svg-icons";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { serviceData } from "@/app/utils/service.js";
-import "../../../../_Common/getHelp/getHelp.css";
-import "./writingOverview.css";
-import { useEffect, useState } from "react";
+// const newData: { [key: string]: { [key: string]: string } } = data;
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
 
 import {
@@ -27,76 +20,75 @@ import {
   faCheckCircle,
   faRedo,
 } from "@fortawesome/free-solid-svg-icons";
-
-const newData: { [key: string]: { [key: string]: string } } = data;
+import { useState } from "react";
 
 export default function Home() {
   const pathName: string = usePathname()
     .split("/")
     .filter((val) => val)
     .join("");
-  let metaData = newData[pathName];
-
+  //   let metaData = newData[pathName];
   const steps = [
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
       title:
-        "Understanding Your Requirements – Define objectives, target audience, and guidelines.",
+        "Journal Selection & Suitability Check – Identifying journals based on impact factor, scope, and indexing (Scopus, SCI, Web of Science, PubMed).",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
       title:
-        "Research & Content Structuring – Develop a logical flow with clear sections.",
+        "Manuscript Quality Assessment – Reviewing language, clarity, structure, and scientific rigor.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
       title:
-        "Expert Feedback & Guidance – Receive mentorship on clarity, coherence, and writing style.",
+        "Pre-Submission Review & Editing – Conducting peer-level review and refining writing quality.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
       title:
-        "Review, Editing & Refinement – Ensure structure and academic compliance.",
+        "Formatting & Compliance Checks – Ensuring manuscript aligns with journal submission criteria.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
       title:
-        "Final Quality Check – Verify research integrity and ethical standards.",
+        "Submission & Communication with Editors – Assisting in submission and addressing queries from journal editors.",
+    },
+    {
+      stepss: "Step 6 ➔",
+      icon: faCheckCircle,
+      title:
+        "Handling Reviewer Comments & Resubmission – Crafting detailed response letters and refining revisions for resubmission.",
     },
   ];
 
   const accord2: { question: string; answer: string }[] = [
     {
-      question: "Do you write research papers for scholars?",
-      answer:
-        "No. We provide structured writing guidance and feedback to help scholars enhance their manuscripts while maintaining ethical research practices.",
+      question: "Do you guarantee publication?",
+      answer: "No, but we enhance manuscript quality, structure, and journal compatibility to improve acceptance chances."
     },
     {
-      question: "Can you help with journal-specific formatting?",
-      answer:
-        "Absolutely! We tailor manuscripts to meet journal guidelines and submission standards.",
+      question: "Which journals do you support?",
+      answer: "We provide support for Scopus, SCI, Web of Science, PubMed, and Q1/Q2 indexed journals across multiple disciplines."
     },
     {
-      question: "Do you offer revisions?",
-      answer:
-        "Yes! We provide free minor revisions within 14 days of delivery.",
+      question: "Do you offer pre-submission peer review?",
+      answer: "Yes! Our experts conduct a thorough review to strengthen your manuscript before submission."
     },
     {
-      question: "How do you ensure plagiarism-free content?",
-      answer:
-        "We guide scholars on proper citation practices and ensure compliance with Turnitin-based originality checks.",
+      question: "Can you assist with resubmission after rejection?",
+      answer: "Absolutely! We help with revisions, rebuttal letter drafting, and resubmission strategies."
     },
     {
-      question: "Can you help with funding proposals?",
-      answer:
-        "Yes, our experts mentor scholars in structuring compelling research proposals.",
-    },
-];
+      question: "What if my manuscript needs major revisions?",
+      answer: "We provide in-depth editing, reviewer comment analysis, and expert guidance for revisions."
+    }
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -108,54 +100,30 @@ export default function Home() {
     marginTop: "40px",
   };
 
-  const [currency, setCurrency] = useState("");
-  const LocationBasedPricing = () => {
-    useEffect(() => {
-      fetch("https://www.secure.manuscriptedit.com/api/ip_api.php")
-        .then((response) => response.json())
-        .then((data) => {
-          const countryCode = data[0].countryCode;
-          if (countryCode === "IN") {
-            setCurrency("INR");
-          } else {
-            setCurrency("USD");
-          }
-        })
-        .catch((error) => {
-          console.error("Error fetching location:", error);
-        });
-    }, []);
-    return currency;
-  };
-  LocationBasedPricing();
-
   return (
     <>
-      {<Metadata metaData={metaData} />}
+      {/* {<Metadata metaData={metaData} />} */}
+      {/* {breadcrum("Services / English Editing", "Substantive editing")} */}
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Writing Assistance – Expert Guidance for Research
-              Excellence
+              High-Impact Journal Publication Support – Maximize Your Research
+              Visibility
             </h1>
             <p className={styles.subtext}>
-              Refine your research writing with expert mentorship. We help
-              scholars enhance clarity, structure, and impact while maintaining
-              academic integrity.
+              Ensure your research meets the highest publication standards with
+              expert guidance. We help scholars navigate the complex journal
+              submission process, improving acceptance rates in Q1 and
+              high-impact journals.
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
-                <button className={styles.primaryButton}>
-                  [Get Writing Guidance Now]
-                </button>
-              </a>
-
-              <a href="https://secure.manuscriptedit.com/quotation">
-                <button className={styles.secondaryButton}>
-                  Request a Free Consultation
-                </button>
-              </a>
+              <button className={styles.primaryButton}>
+                Get Publication Support
+              </button>
+              <button className={styles.secondaryButton}>
+                Request a Free Sample
+              </button>
             </div>
           </div>
         </section>
@@ -164,90 +132,120 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Why Choose Our Writing Assistance Services?
+              What is High-Impact Journal Publication Support?
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Expert-Led Research Guidance – PhD-level mentors across
-                disciplines.
+                ✔ A comprehensive service designed to help researchers publish
+                in Scopus, Web of Science, PubMed, and other high-impact indexed
+                journals.
               </li>
               <li>
-                ✔ Ethical Writing Support – Helping scholars improve structure,
-                clarity, and coherence.
+                ✔ Ensures manuscript compliance, submission readiness, and
+                strategic journal selection.
               </li>
               <li>
-                ✔ Tailored to Your Needs – Personalized feedback and research
-                support.
+                ✔ Includes pre-submission peer review, formatting, and response
+                to reviewer comments.
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>Who Should Use This Service?</h2>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✔ PhD and Postdoctoral Researchers – Looking to publish in
+                top-tier journals.
               </li>
               <li>
-                ✔ Journal-Ready Writing – Ensuring compliance with academic and
-                ethical standards.
+                ✔ Academic Professionals – Aiming for Q1/Q2 journal
+                publications.
               </li>
               <li>
-                ✔ Strict Confidentiality – Your work remains secure and
-                private.
+                ✔ Medical and Life Sciences Scholars – Requiring PubMed and
+                SCI-indexed journal support.
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>Key Benefits</h2>
+            <ul className={styles.benefitsList}>
+              <li>✔ Increases acceptance rates in impact-factor journals.</li>
+              <li>
+                ✔ Ensures compliance with journal formatting and submission
+                guidelines.
+              </li>
+              <li>
+                ✔ Reduces rejections due to technical errors and lack of journal
+                compatibility.
+              </li>
+              <li>✔ Provides expert review and feedback before submission.</li>
+              <li>
+                ✔ Strategic journal selection tailored to research scope and
+                impact goals.
               </li>
             </ul>
           </div>
 
           <section className={styles.proofreadingWrapper}>
-            <h2 className={styles.headingCenter}>
-              Our Writing Assistance Services
-            </h2>
+            <h2 className={styles.headingCenter}>What This Service Includes</h2>
             <table className="editing-overview-table">
               <thead>
                 <tr>
-                  <th>Service</th>
-                  <th>Best For</th>
-                  <th>Key Features</th>
-                  <th>Turnaround Time</th>
+                  <th>Feature</th>
+                  <th>Description</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Research Paper Guidance</td>
-                  <td>Researchers & Academics</td>
-                  <td>Structuring, refining, and improving academic papers</td>
-                  <td> 10-15 Days</td>
-                </tr>
-                <tr>
-                  <td>Thesis & Dissertation Support</td>
-                  <td>PhD & MS Students</td>
+                  <td>Journal Selection</td>
                   <td>
-                    Expert mentorship for logical structuring and coherence
+                    Identifying the most relevant Q1/Q2 indexed journals for
+                    submission.
                   </td>
-                  <td> 15-30 Days</td>
                 </tr>
                 <tr>
-                  <td>Review & Narrative Writing Assistance</td>
-                  <td>Literature & Systematic Reviews</td>
-                  <td>Critical analysis and writing refinement</td>
-                  <td> 10-20 Days</td>
-                </tr>
-                <tr>
-                  <td>Technical & White Paper Guidance</td>
-                  <td>Engineers, Scientists, Businesses</td>
+                  <td>Manuscript Formatting</td>
                   <td>
-                    Structuring research for technical and industry reports
+                    Ensuring compliance with journal-specific style, reference
+                    format, and structure.
                   </td>
-                  <td> 7-14 Days</td>
                 </tr>
                 <tr>
-                  <td>Grant & Proposal Writing Support</td>
-                  <td>Researchers & Academicians</td>
+                  <td>Pre-Submission Peer Review</td>
                   <td>
-                    Helping scholars create compelling, well-organized proposals
+                    Providing expert feedback to refine research quality and
+                    impact.
                   </td>
-                  <td> 7-12 Days</td>
                 </tr>
                 <tr>
-                  <td>Book & Chapter Writing Assistance</td>
-                  <td>Scholars & Authors</td>
+                  <td>Technical Review</td>
                   <td>
-                    Academic books, book chapters, and structured content
-                    development
+                    Checking for plagiarism, language, structure, and research
+                    clarity.
                   </td>
-                  <td> 20-40 Days</td>
+                </tr>
+                <tr>
+                  <td>Cover Letter & Abstract Refinement</td>
+                  <td>
+                    Strengthening submission documents to enhance editor
+                    acceptance.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Submission Support</td>
+                  <td>
+                    Assisting in journal submission, compliance checks, and
+                    manuscript tracking.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Reviewer Comment Response</td>
+                  <td>
+                    Helping to draft rebuttals and revisions for resubmission.
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -255,9 +253,7 @@ export default function Home() {
         </section>
 
         <div className={styles.processContainer}>
-          <h2 className={styles.processTitle}>
-            Writing Process – Ensuring Quality &amp; Ethical Research Support
-          </h2>
+          <h2 className={styles.processTitle}>How It Works</h2>
           <div className={styles.processSteps1}>
             {steps.map((step, index) => (
               <div key={index} className={styles.processStep}>
@@ -273,44 +269,50 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
-              <button className={styles.primaryButton}>
-                Start Your Technical Writing Project
-              </button>
-            </a>
+            <button className={styles.primaryButton}>
+              Start Your Publication Journey Today
+            </button>
           </div>
 
           <section className="before-after-example-section">
             <h2 className="before-after-example-heading">
-              Before &amp; After Writing Assistance – See the Difference
+              Before &amp; After Journal Submission Support – The Impact
             </h2>
 
             <div className="before-after-example-content">
               <div className="before-example">
-                <h3>Before (Unstructured Manuscript Draft):</h3>
-                <p className="before-text">
-                  The research focuses on AI applications, but lacks proper flow
-                  and citation integration. Some arguments appear unclear and
-                  disconnected.
-                </p>
+                <h3>Before Submission:</h3>
+                <ul className="before-text">
+                  <li>Manuscript lacks journal-specific formatting.</li>
+                  <li>Unclear cover letter and research scope alignment.</li>
+                  <li>Weak data interpretation and literature support.</li>
+                  <li>
+                    Higher risk of rejection due to minor language or technical
+                    errors.
+                  </li>
+                </ul>
               </div>
 
               <div className="after-example">
-                <h3>After (Expertly Structured &amp; Refined Manuscript):</h3>
-                <p className="after-text">
-                  This study explores AI applications in medical diagnostics,
-                  systematically presenting key advancements, supported by
-                  recent peer-reviewed literature. The paper integrates
-                  statistical findings to strengthen claims and ensure research
-                  coherence.
-                </p>
+                <h3>After (Edited for Clarity &amp; Logical Flow):</h3>
+                <ul className="after-text">
+                  <li>
+                    Manuscript optimized for journal scope and ready for
+                    submission.
+                  </li>
+                  <li>
+                    Well-structured cover letter and responses to reviewers.
+                  </li>
+                  <li>
+                    Research impact and clarity enhanced for high acceptance
+                    potential.
+                  </li>
+                  <li>
+                    Significant reduction in rejection risk due to compliance
+                    with journal requirements.
+                  </li>
+                </ul>
               </div>
-            </div>
-
-            <div className="explanation">
-              <p>
-                Technical Writing ensures clarity, usability, and compliance.
-              </p>
             </div>
           </section>
 
@@ -322,21 +324,23 @@ export default function Home() {
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">$0.08 per word (Writing Guidance)</p>
+                <p className="pricing-text">
+                $250 per manuscript (Basic Submission Assistance)
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $0.15 per word
-                (Comprehensive Research Support)
+                $750 per
+                manuscript (Comprehensive Support)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                  Turnaround Time: 7 – 30 Days (Based on complexity and length)
+                10 – 30 Days (Based on service level and manuscript complexity)
                 </p>
               </div>
             </div>
@@ -346,7 +350,7 @@ export default function Home() {
                 href="https://secure.manuscriptedit.com/quotation"
                 className="cta-button"
               >
-                Check Pricing & Get a Quote
+                Check Pricing and Get a Quote
               </a>
             </div>
           </section>
@@ -358,15 +362,15 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
-                    text: "The best editing service I've used. Got published in record time!",
-                    name: "Dr. Emily Carter",
+                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                    text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
+                    name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
-                    text: "Exceptional support from expert editors. Highly recommended!",
-                    name: "Prof. John Williams",
+                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                    text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
+                    name: "Lars-Ake",
                   },
                   {
                     imgSrc:
@@ -411,7 +415,7 @@ export default function Home() {
 
           <div className="container" style={{ marginTop: "3rem" }}>
             <div className="accordion__wrapper2">
-              <h1 className="accordion__title">FAQ</h1>
+              <h1 className="accordion__title">FAQs</h1>
 
               {accord2.map((faq, index) => (
                 <div
