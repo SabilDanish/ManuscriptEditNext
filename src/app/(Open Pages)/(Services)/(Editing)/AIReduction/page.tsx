@@ -218,11 +218,11 @@ export default function Home() {
             <h3 className={styles.proofreadingSubheading}>🚫 Not Included</h3>
             <ul className={styles.proofreadingList}>
               <li>
-                ❌Major Content Overhaul – Does not involve extensive rewriting
+                ❌ Major Content Overhaul – Does not involve extensive rewriting
                 beyond AI content removal.
               </li>
               <li>
-                ❌Plagiarism Detection – Separate service focusing on
+                ❌ Plagiarism Detection – Separate service focusing on
                 non-AI-related content similarities.
               </li>
               <li>
@@ -240,7 +240,7 @@ export default function Home() {
                 to identify AI- generated text within your document.
               </li>
               <li>
-                ✔Human-Led Content Rewriting – Expert editors rephrase or
+                ✔ Human-Led Content Rewriting – Expert editors rephrase or
                 replace AI-generated sections to ensure originality.
               </li>
               <li>

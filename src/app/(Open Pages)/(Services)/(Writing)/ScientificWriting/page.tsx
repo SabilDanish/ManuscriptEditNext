@@ -92,8 +92,7 @@ export default function Home() {
       answer:
         "Simply upload your research details, and our academic writing experts will develop a structured, high-quality document.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -147,25 +146,25 @@ export default function Home() {
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Expert Academic & Scientific Writers – PhD-level specialists
+                ✔ Expert Academic & Scientific Writers – PhD-level specialists
                 in STEM, humanities, social sciences, and medicine.
               </li>
               <li>
-                ✅ Journal-Specific Compliance – Formatting and structuring
+                ✔ Journal-Specific Compliance – Formatting and structuring
                 manuscripts for Elsevier, Springer, Wiley, Nature, and
                 high-impact journals.
               </li>
               <li>
-                ✅ Plagiarism-Free & Citation-Optimized Content – Ensuring
+                ✔ Plagiarism-Free & Citation-Optimized Content – Ensuring
                 original, properly referenced, and well-structured documents.
               </li>
               <li>
-                ✅ Customized Support for Manuscripts, Dissertations & Grants –
+                ✔ Customized Support for Manuscripts, Dissertations & Grants –
                 Tailored writing assistance for academic excellence and research
                 impact.
               </li>
               <li>
-                ✅ Confidential & Secure Services – 100% confidentiality, NDA
+                ✔ Confidential & Secure Services – 100% confidentiality, NDA
                 compliance, and secure data handling.
               </li>
             </ul>
@@ -192,7 +191,7 @@ export default function Home() {
                     High-impact journal manuscript writing, Structured,
                     citation-optimized content
                   </td>
-                  <td>⏳ 10-15 Days</td>
+                  <td> 10-15 Days</td>
                 </tr>
                 <tr>
                   <td>Thesis & Dissertation Writing</td>
@@ -201,7 +200,7 @@ export default function Home() {
                     University-compliant formatting, Comprehensive research
                     structuring
                   </td>
-                  <td>⏳ 15-25 Days</td>
+                  <td> 15-25 Days</td>
                 </tr>
                 <tr>
                   <td>Grant Proposal Writing</td>
@@ -210,7 +209,7 @@ export default function Home() {
                     Persuasive & evidence-based proposals, Funding agency
                     compliance
                   </td>
-                  <td>⏳ 12-20 Days</td>
+                  <td> 12-20 Days</td>
                 </tr>
                 <tr>
                   <td>Conference Paper & Abstract Writing</td>
@@ -218,13 +217,13 @@ export default function Home() {
                   <td>
                     Clear, concise abstracts, Conference-ready manuscripts
                   </td>
-                  <td>⏳ 5-10 Days</td>
+                  <td> 5-10 Days</td>
                 </tr>
                 <tr>
                   <td>Technical & Scientific Report Writing</td>
                   <td>Corporate & R&D Teams</td>
                   <td>Structured industry reports, Data-driven analysis</td>
-                  <td>⏳ 7-12 Days</td>
+                  <td> 7-12 Days</td>
                 </tr>
                 <tr>
                   <td>Journal Response & Rewriting Assistance</td>
@@ -232,7 +231,7 @@ export default function Home() {
                   <td>
                     Addressing reviewer comments, Improving research impact
                   </td>
-                  <td>⏳ 7-10 Days</td>
+                  <td> 7-10 Days</td>
                 </tr>
               </tbody>
             </table>
@@ -261,28 +260,39 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
               <button className={styles.primaryButton}>
-              Start Your Writing Project
+                Start Your Writing Project
               </button>
             </a>
           </div>
 
           <section className="before-after-example-section">
             <h2 className="before-after-example-heading">
-            Before & After Writing Assistance – See the Difference
+              Before & After Writing Assistance – See the Difference
             </h2>
 
             <div className="before-after-example-content">
               <div className="before-example">
-                <h3>Before (Unstructured Research Manuscript Without Proper Formatting):</h3>
+                <h3>
+                  Before (Unstructured Research Manuscript Without Proper
+                  Formatting):
+                </h3>
                 <p className="before-text">
-                “The study investigates the effects of drug X on disease Y. Results show some positive effects, but more research is needed. The sample size was 200, but some patients dropped out.”
+                  “The study investigates the effects of drug X on disease Y.
+                  Results show some positive effects, but more research is
+                  needed. The sample size was 200, but some patients dropped
+                  out.”
                 </p>
               </div>
 
               <div className="after-example">
                 <h3>After (Professionally Written, Structured Manuscript):</h3>
                 <p className="after-text">
-                “This study evaluates the therapeutic effects of Drug X on Disease Y in a randomized, placebo-controlled trial involving 200 patients. Results indicate a significant improvement in clinical outcomes . Despite a dropout rate of 8%, findings remain statistically robust, warranting further investigation in larger cohorts.”
+                  “This study evaluates the therapeutic effects of Drug X on
+                  Disease Y in a randomized, placebo-controlled trial involving
+                  200 patients. Results indicate a significant improvement in
+                  clinical outcomes . Despite a dropout rate of 8%, findings
+                  remain statistically robust, warranting further investigation
+                  in larger cohorts.”
                 </p>
               </div>
             </div>
@@ -304,14 +314,14 @@ export default function Home() {
               <div className="pricing-item">
                 <h3>Starting Price</h3>
                 <p className="pricing-text">
-                $0.12 per word (Basic Academic Writing) 
+                  $0.12 per word (Basic Academic Writing)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $0.25 per word (Advanced Scientific Research Writing)
+                  $0.25 per word (Advanced Scientific Research Writing)
                 </p>
               </div>
 

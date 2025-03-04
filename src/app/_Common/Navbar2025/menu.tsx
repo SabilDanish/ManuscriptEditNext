@@ -99,7 +99,7 @@ const menu: MenuItem[]  = [
     ],
   },
   {
-    label: "SUBMIT MANUSCRIPT",
+    label: "PRICE CALCULATOR",
     subMenu: [
       
       { label: "Price Calculator", link: "/Prices" },

@@ -147,23 +147,23 @@ export default function Home() {
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Expert Technical Writers – Engineers, IT specialists, and
+                ✔ Expert Technical Writers – Engineers, IT specialists, and
                 subject-matter experts with industry experience.
               </li>
               <li>
-                ✅ Clear & Structured Documentation – Ensuring easy readability
+                ✔ Clear & Structured Documentation – Ensuring easy readability
                 and usability for end users.
               </li>
               <li>
-                ✅ Industry-Specific Formatting – Adhering to IEEE, ISO, API,
-                and corporate technical documentation guidelines.
+                ✔ Industry-Specific Formatting – Adhering to IEEE, ISO, API, and
+                corporate technical documentation guidelines.
               </li>
               <li>
-                ✅ Technical Accuracy & Compliance – Fact-checked and verified
+                ✔ Technical Accuracy & Compliance – Fact-checked and verified
                 for scientific and engineering precision.
               </li>
               <li>
-                ✅ Fast Turnaround & Confidential Handling – Guaranteed data
+                ✔ Fast Turnaround & Confidential Handling – Guaranteed data
                 security & NDA protection for proprietary documents
               </li>
             </ul>
@@ -189,19 +189,19 @@ export default function Home() {
                   <td>
                     Step-by-step instructions, Clear, user-friendly formatting
                   </td>
-                  <td>⏳ 5-7 Days</td>
+                  <td> 5-7 Days</td>
                 </tr>
                 <tr>
                   <td>Whitepapers & Technical Reports</td>
                   <td>Research & Industry Papers</td>
                   <td>Data-driven insights, Industry compliance</td>
-                  <td>⏳ 7-10 Days</td>
+                  <td> 7-10 Days</td>
                 </tr>
                 <tr>
                   <td>Standard Operating Procedures (SOPs)</td>
                   <td>Businesses & Manufacturing</td>
                   <td>Regulatory compliance, Process flow documentation</td>
-                  <td>⏳ 6-9 Days</td>
+                  <td> 6-9 Days</td>
                 </tr>
                 <tr>
                   <td>API Documentation</td>
@@ -209,7 +209,7 @@ export default function Home() {
                   <td>
                     REST API & SDK documentation, Code examples & guidelines
                   </td>
-                  <td>⏳ 5-10 Days</td>
+                  <td> 5-10 Days</td>
                 </tr>
                 <tr>
                   <td>Technical Proposals & RFPs</td>
@@ -217,7 +217,7 @@ export default function Home() {
                   <td>
                     Persuasive & structured, Compliance with tender guidelines
                   </td>
-                  <td>⏳ 7-12 Days</td>
+                  <td> 7-12 Days</td>
                 </tr>
                 <tr>
                   <td>Patent Writing & Technical Descriptions</td>
@@ -226,7 +226,7 @@ export default function Home() {
                     Patent drafting & claims, Intellectual property
                     documentation
                   </td>
-                  <td>⏳ 10-15 Days</td>
+                  <td> 10-15 Days</td>
                 </tr>
               </tbody>
             </table>
