@@ -102,15 +102,14 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Scientific & Academic Poster Design – High-Impact
-              Visual Communication
+            Professional Scientific &amp; Academic Poster Design – High-Impact Research Presentations
             </h1>
             <p className={styles.subtext}>
-              “Transform your research findings into a compelling scientific
-              poster with our expert academic poster design services. We create
-              visually appealing, high-resolution, and journal-compliant
-              research posters for conferences, symposiums, and professional
-              presentations.”
+            Transform your research findings into a visually compelling scientific poster with our expert
+academic poster design services. We specialize in custom, high-resolution, and journal-
+compliant research posters tailored for conferences, symposiums, and professional
+presentations. We ensure your content is engaging, clear, and impactful, helping you
+effectively communicate your research.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -132,28 +131,28 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Key Benefits of ManuscriptEdit’s Copyediting Services:
+            Key Benefits of ManuscriptEdit’s Academic Poster Design Services:
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Custom Scientific & Academic Poster Design – Tailored for
-                STEM, medical, social sciences, and business research.
+                ✔ Custom Scientific &amp; Academic Poster Design – Perfect for STEM, medical, social
+                sciences, and business research presentations.
               </li>
               <li>
-                ✔ High-Resolution & Print-Ready Formats – Delivered in PDF, PPT,
-                PNG, JPG, and AI formats.
+                ✔ High-Resolution &amp; Print-Ready Formats – Delivered in PDF, PPT, PNG, JPG, and AI
+                formats for seamless printing and digital sharing.
               </li>
               <li>
-                ✔ Engaging Visual Elements & Graphics – Professionally designed
-                charts, graphs, and infographics.
+                ✔ Engaging Visual Elements &amp; Graphics – Professionally designed charts, infographics,
+                and illustrations for a clear and attractive presentation.
               </li>
               <li>
-                ✔ Compliant with Conference & Journal Guidelines – Ensuring
-                standard poster size, font, and layout recommendations.
+                ✔ Conference &amp; Journal Compliance – We ensure your research poster meets size, font,
+                and layout guidelines for academic conferences.
               </li>
               <li>
-                ✔ Fast Turnaround & 100% Confidentiality – Secure, timely, and
-                plagiarism-free poster creation.
+                ✔ Fast Turnaround &amp; 100% Confidentiality – Secure, plagiarism-free, and timely poster
+                creation for urgent conference submissions.
               </li>
             </ul>
           </div>

@@ -94,26 +94,25 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Journal Formatting – Get Your Manuscript
-              Submission-Ready
+            Professional Manuscript Formatting – Get Your Research Submission-Ready
+            Ensure your manuscript formatting aligns precisely with journal submission requirements.
             </h1>
             <p className={styles.subtext}>
-              “Ensure your manuscript is formatted precisely according to
-              journal guidelines. Our expert formatting service ensures
-              error-free citations, structured references, word count adherence,
-              figure/table alignment, and journal-compliant layout for seamless
-              submission.”
+            Our expert formatting services guarantee compliance with journal formatting guidelines,
+including reference and citation formatting and structured manuscript alignment, including
+figures and tables. We enhance language style, maintain word count limits, and ensure proper
+formatting as per target journal guidelines for a seamless publication process.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
                 <button className={styles.primaryButton}>
-                  Get Journal Formatting Assistance
+                Get Journal Formatting Assistance
                 </button>
               </a>
 
               <a href="https://secure.manuscriptedit.com/quotation">
                 <button className={styles.secondaryButton}>
-                  Request a Free Consultation
+                Request a Free Consultation
                 </button>
               </a>
             </div>
@@ -124,30 +123,28 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Key Benefits of ManuscriptEdit’s Journal Formatting Services:
+            Key Benefits of ManuscriptEdit’s Manuscript Formatting Services:
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Expert Formatting for All Major Journals – Compliance with
-                Elsevier, Springer, Wiley, BMJ, PLOS ONE, Nature, IEEE, and
-                more.
+                ✔ Expert Manuscript Formatting Assistance – Adherence to journal standards,
+                including Elsevier, Springer, Wiley, BMJ, PLOS ONE, Nature, IEEE, and more.
               </li>
               <li>
-                ✔Accurate Citation & Reference Formatting – Supporting APA, MLA,
-                Chicago, Harvard, Vancouver, IEEE, and custom journal styles.
+                ✔Precise Reference and Citation Formatting – Supporting APA, MLA, Chicago,
+                Harvard, Vancouver, IEEE, and custom journal styles.
               </li>
               <li>
-                ✔ Error-Free Manuscript Structure & Layout – Ensuring proper
-                font, margins, headings, subheadings, and figure placement.
+                ✔ Error-Free Manuscript Structure and Layout – Ensuring proper margins, headings,
+                subheadings, font consistency, and figure placement.
               </li>
               <li>
-                ✔ Tables, Figures & Equations Alignment – Correcting table
-                formatting, figure captions, and equation placement.
+                ✔ Tables, Figures &amp; Equations Alignment – Ensuring structured table formatting, figure
+                captions, and correct equation placement.
               </li>
               <li>
-                ✔Word Count, Section & Cover Letter Compliance – Adhering to
-                abstract length, body structure, and submission formatting
-                rules.
+                ✔ Comprehensive Manuscript Formatting Support – Checking word count adherence,
+                section structuring, cover letter formatting, and abstract length compliance.
               </li>
             </ul>
           </div>

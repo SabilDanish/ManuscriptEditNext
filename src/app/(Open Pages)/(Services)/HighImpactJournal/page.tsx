@@ -70,24 +70,29 @@ export default function Home() {
   const accord2: { question: string; answer: string }[] = [
     {
       question: "Do you guarantee publication?",
-      answer: "No, but we enhance manuscript quality, structure, and journal compatibility to improve acceptance chances."
+      answer:
+        "No, but we enhance manuscript quality, structure, and journal compatibility to improve acceptance chances.",
     },
     {
       question: "Which journals do you support?",
-      answer: "We provide support for Scopus, SCI, Web of Science, PubMed, and Q1/Q2 indexed journals across multiple disciplines."
+      answer:
+        "We provide support for Scopus, SCI, Web of Science, PubMed, and Q1/Q2 indexed journals across multiple disciplines.",
     },
     {
       question: "Do you offer pre-submission peer review?",
-      answer: "Yes! Our experts conduct a thorough review to strengthen your manuscript before submission."
+      answer:
+        "Yes! Our experts conduct a thorough review to strengthen your manuscript before submission.",
     },
     {
       question: "Can you assist with resubmission after rejection?",
-      answer: "Absolutely! We help with revisions, rebuttal letter drafting, and resubmission strategies."
+      answer:
+        "Absolutely! We help with revisions, rebuttal letter drafting, and resubmission strategies.",
     },
     {
       question: "What if my manuscript needs major revisions?",
-      answer: "We provide in-depth editing, reviewer comment analysis, and expert guidance for revisions."
-    }
+      answer:
+        "We provide in-depth editing, reviewer comment analysis, and expert guidance for revisions.",
+    },
   ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -108,14 +113,16 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              High-Impact Journal Publication Support – Maximize Your Research
-              Visibility
+              High-Impact Journal Publication Support – Increase Research
+              Visibility &amp; Acceptance Rates
             </h1>
             <p className={styles.subtext}>
-              Ensure your research meets the highest publication standards with
-              expert guidance. We help scholars navigate the complex journal
-              submission process, improving acceptance rates in Q1 and
-              high-impact journals.
+              Boost your research publication success with expert journal
+              submission support. Our high- impact journal publication services
+              ensure compliance with Q1, Q2, Scopus, Web of Science, and PubMed
+              journal standards. We help researchers navigate the complex
+              submission process, improving their chances of acceptance in
+              top-tier academic journals.
             </p>
             <div className={styles.buttonGroup}>
               <button className={styles.primaryButton}>
@@ -132,21 +139,22 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              What is High-Impact Journal Publication Support?
+            What is High-Impact Journal Publication Support?
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ A comprehensive service designed to help researchers publish
-                in Scopus, Web of Science, PubMed, and other high-impact indexed
-                journals.
+                ✔ Comprehensive Service – Ensures adherence to journal guidelines and submission
+                readiness
               </li>
               <li>
-                ✔ Ensures manuscript compliance, submission readiness, and
-                strategic journal selection.
+                ✔ Strategic Journal Selection – Identifies the best high-impact journals for your research
               </li>
               <li>
-                ✔ Includes pre-submission peer review, formatting, and response
-                to reviewer comments.
+                ✔ Pre-Submission Peer Review &amp; Formatting – Enhances manuscript structure and
+                readability
+              </li>
+              <li>
+                ✔ Reviewer Comment Response Assistance – Improves chances of publication success
               </li>
             </ul>
           </div>
@@ -155,36 +163,31 @@ export default function Home() {
             <h2 className={styles.heading}>Who Should Use This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ PhD and Postdoctoral Researchers – Looking to publish in
-                top-tier journals.
+                ✔ PhD &amp; Postdoctoral Researchers – Seeking Q1/Q2 journal publication
               </li>
               <li>
-                ✔ Academic Professionals – Aiming for Q1/Q2 journal
-                publications.
+                ✔ Academic &amp; Scientific Professionals – Looking for impact-factor journal submissions
               </li>
               <li>
-                ✔ Medical and Life Sciences Scholars – Requiring PubMed and
-                SCI-indexed journal support.
+                ✔ Medical &amp; Life Sciences Scholars – Requiring PubMed, SCI, and Scopus-indexed
+                journal support
               </li>
             </ul>
           </div>
 
           <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>Key Benefits</h2>
+            <h2 className={styles.heading}>Key Benefits of Expert Journal Publication Support:</h2>
             <ul className={styles.benefitsList}>
-              <li>✔ Increases acceptance rates in impact-factor journals.</li>
+              <li>✔ Higher Acceptance Rates in High-Impact Journals</li>
               <li>
-                ✔ Ensures compliance with journal formatting and submission
-                guidelines.
+                ✔ Compliance with Formatting &amp; Submission Guidelines
               </li>
               <li>
-                ✔ Reduces rejections due to technical errors and lack of journal
-                compatibility.
+                ✔ Error-Free Manuscript to Avoid Rejections
               </li>
-              <li>✔ Provides expert review and feedback before submission.</li>
+              <li>✔ Expert Feedback &amp; Peer Review Before Submission</li>
               <li>
-                ✔ Strategic journal selection tailored to research scope and
-                impact goals.
+                ✔ Tailored Journal Selection for Maximum Research Impact.
               </li>
             </ul>
           </div>
@@ -325,22 +328,22 @@ export default function Home() {
               <div className="pricing-item">
                 <h3>Starting Price</h3>
                 <p className="pricing-text">
-                $250 per manuscript (Basic Submission Assistance)
+                  $250 per manuscript (Basic Submission Assistance)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $750 per
-                manuscript (Comprehensive Support)
+                  $750 per manuscript (Comprehensive Support)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                10 – 30 Days (Based on service level and manuscript complexity)
+                  10 – 30 Days (Based on service level and manuscript
+                  complexity)
                 </p>
               </div>
             </div>

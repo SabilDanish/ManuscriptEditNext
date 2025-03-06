@@ -94,14 +94,16 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Boost Your Research Citations & Academic Impact
+              Maximize Research Citations &amp; Academic Visibility
             </h1>
             <p className={styles.subtext}>
-              “Increase the visibility and credibility of your research with our
-              expert-driven Citation Booster Services. We help researchers
-              optimize research discoverability, increase citations, and enhance
-              academic impact across Google Scholar, Scopus, and Web of
-              Science.”
+              Enhance the visibility, credibility, and impact of your research
+              with our expert Citation Booster Services. We assist researchers
+              in academic citation optimization, ensuring higher research
+              discoverability and increased citations across leading platforms
+              like Google Scholar, Scopus, and Web of Science. Our strategies
+              focus on SEO visibility, DOI linking, and journal indexing to
+              elevate your research impact.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -123,29 +125,28 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Key Benefits of ManuscriptEdit’s Citation Growth Services:
+            Key Benefits of ManuscriptEdit’s Citation Growth Services:
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Google Scholar & Scopus Citation Optimization – Increasing
-                research discoverability across indexing platforms.
+                ✔ Google Scholar &amp; Scopus Citation Optimization – Boost academic discoverability
+                across top indexing platforms.
               </li>
               <li>
-                ✔Metadata Enhancement for Academic Search Engines – Improving
-                journal indexing, DOI linking, and SEO visibility.
+                ✔ Metadata Enhancement for Academic Search Engines – Improve journal indexing,
+                DOI linking, and SEO ranking for greater exposure.
               </li>
               <li>
-                ✔ Cross-Referencing & Collaboration Strategies – Expanding
-                citation potential through networking and research impact
-                analysis.
+                ✔ Cross-Referencing &amp; Collaboration Strategies – Expand citation potential through
+                networking strategies and research impact analysis.
               </li>
               <li>
-                ✔ Journal Visibility Enhancement – Ensuring papers are optimally
-                listed in high-traffic databases.
+                ✔ Journal Visibility Enhancement – Ensure your paper is indexed in high-traffic
+                databases to maximize citations.
               </li>
               <li>
-                ✔AI-Free, Ethical Citation Growth Strategies – 100% compliant
-                with academic integrity guidelines.
+                ✔ AI-Free &amp; Ethical Citation Growth Strategies – 100% compliant with academic
+                integrity guidelines, ensuring credible research visibility.
               </li>
             </ul>
           </div>

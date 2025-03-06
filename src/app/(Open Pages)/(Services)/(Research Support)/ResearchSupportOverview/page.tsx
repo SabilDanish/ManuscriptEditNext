@@ -91,13 +91,16 @@ export default function Home() {
       <section style={gap}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>
-            Research Support – Elevate Your Research with Expert Guidance
+            Research Support- Elevate Your Research with Expert Statistical
+            Analysis &amp; Data Review
           </h1>
           <p className={styles.subtext}>
             Welcome to ManuscriptEdit, your trusted partner in comprehensive
             research support. We provide expert assistance at every stage of
-            your research journey, from topic selection to data analysis and
-            manuscript writing.
+            your research journey, from topic selection to statistical data
+            analysis and manuscript writing assistance. Our specialized experts
+            ensure that your research is well-structured, data-driven, and
+            impactful.
           </p>
         </div>
       </section>
@@ -105,19 +108,19 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>
-            Why Choose ManuscriptEdit for Research Support?
+          Why Choose ManuscriptEdit for Research Support?
           </h2>
 
           <section className={styles.benefitsWrapper}>
             <h4>Customized Research Assistance for Every Stage</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Support for early-stage research, literature review,
-                methodology, and data analysis.
+                ✔ Support for early-stage research, literature review, methodology, and statistical
+                analysis of research papers.
               </li>
               <li>
-                ✔ Expert guidance in hypothesis framing, study design, and
-                statistical analysis.
+                ✔ Expert guidance in hypothesis framing, study design, and statistical analysis services
+                to ensure accurate and reliable results.
               </li>
             </ul>
           </section>
@@ -125,10 +128,10 @@ export default function Home() {
           <section className={styles.benefitsWrapper}>
             <h4>Expert-Led Research Development</h4>
             <ul className={styles.benefitsList}>
-              <li>✔ PhD and subject-matter experts in various disciplines.</li>
+              <li>✔ PhD and subject-matter experts specializing in statistical analysis across fields.</li>
               <li>
-                ✔ Assistance with quantitative, qualitative, and mixed-method
-                research.
+                ✔ Assistance with quantitative, qualitative, and mixed-method research, helping you
+                strengthen your manuscript with precise data insights.
               </li>
             </ul>
           </section>
@@ -137,11 +140,11 @@ export default function Home() {
             <h4>Ethical &amp; Reliable Research Practices</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Ensures adherence to academic integrity and ethical
-                guidelines..
+                ✔ Ensuring adherence to academic integrity and ethical guidelines.
               </li>
               <li>
-                ✔ Plagiarism-free research support, maintaining originality.
+                ✔ Providing plagiarism-free research support, maintaining originality and compliance
+                with journal submission requirements.
               </li>
             </ul>
           </section>
@@ -150,23 +153,22 @@ export default function Home() {
             <h4>Data-Driven Insights &amp; Advanced Analysis</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Assistance with SPSS, MATLAB, R, Python, NVivo, and other
-                research tools.
+                ✔ Expertise in statistical review, stats analysis services, and tools like SPSS, MATLAB,
+                R, Python, and NVivo.
               </li>
-              <li>✔ Comprehensive data visualization and interpretation.</li>
+              <li>✔ Comprehensive data visualization and data interpretation</li>
             </ul>
           </section>
 
           <section className={styles.benefitsWrapper}>
-            <h4>Proven Track Record in Research Success</h4>
+            <h4>Proven Track record in Research Success</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Supported thousands of researchers in producing high-quality
-                research.
+                ✔ Successfully supported thousands of researchers in producing high-quality research
+                with robust statistical analysis.
               </li>
               <li>
-                ✔ Assisted in journal-ready manuscript preparation and
-                conference presentations.
+                ✔ Assisting in journal-ready manuscript preparation and conference presentations.
               </li>
             </ul>
           </section>
@@ -210,17 +212,18 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>
-            How We Ensure Quality in Research Support
+          How We Ensure Quality in Research Support with Expert Statistical Analysis
+          Structured &amp; Tailored Research Guidance
           </h2>
 
           <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
-            Structured & Tailored Research Guidance
+          Structured &amp; Tailored Research Guidance
           </h4>
           <ul className={styles.benefitsList}>
-            <li>✔ One-on-one consultations with research experts.</li>
+            <li>✔ One-on-one consultations with research experts for statistical analysis in research</li>
             <li>
-              ✔ Assistance in refining research questions, study design, and
-              data analysis.
+              ✔ Assistance in refining research questions, study designs, and statistical analysis of
+              research papers to ensure accuracy and reliability.
             </li>
           </ul>
         </div>
@@ -229,15 +232,16 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h4 style={{ marginBottom: "30px" }}>
-            Compliance with Academic & Research Standards
+          Compliance with Academic &amp; Research Standards
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ Follows ethical research principles aligned with COPE and ICMJE.
+              ✔ Adherence to ethical research principles, ensuring integrity with principles aligned
+              with COPE and ICMJE.
             </li>
             <li>
-              ✔ Formatting and reference management per APA, IEEE, and journal
-              guidelines.
+              ✔ Formatting and reference management per APA, IEEE, and journal submission
+              guidelines, aligning with high-quality statistical analysis service.
             </li>
           </ul>
         </div>
@@ -246,13 +250,13 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h4 style={{ marginBottom: "30px" }}>
-            Transparent Communication & Real-Time Support
+          Transparent Communication &amp; Real-Time Support
           </h4>
           <ul className={styles.benefitsList}>
-            <li>✔ Regular updates on research progress.</li>
+            <li>✔ Regular updates on statistical analysis and research progress.</li>
             <li>
-              ✔ Direct collaboration with mentors, analysts, and academic
-              consultants.
+              ✔ Direct collaboration with mentors, analysts, and statistical review experts for
+              statistical data analysis services.
             </li>
           </ul>
         </div>
@@ -261,19 +265,19 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h4 style={{ marginBottom: "30px" }}>
-            Who Benefits from Our Research Support?
+          Who Benefits from Our Research Support?
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ PhD & MS Students – Structured research guidance and methodology
-              support.
+              ✔ PhD &amp; MS Students- Structured guidance in methodology and statistical analysis
+              services.
             </li>
             <li>
-              ✔ Academic Researchers – Assistance in data analysis and
-              manuscript writing.
+              ✔ Academic Researchers- Assistance in statistical data analysis and manuscript
+              writing.
             </li>
             <li>
-              ✔ Universities & Institutions – Collaborative research support
+              ✔ Universities &amp; Institutions- Collaborative statistical analysis and research support
               services.
             </li>
           </ul>

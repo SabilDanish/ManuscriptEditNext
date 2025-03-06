@@ -96,7 +96,7 @@ export default function Home() {
       answer:
         "Yes, our experts mentor scholars in structuring compelling research proposals.",
     },
-];
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -136,18 +136,21 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Writing Assistance – Expert Guidance for Research
-              Excellence
+              Professional Research Writing Assistance Service- Expert Support
+              for Academic Success
             </h1>
             <p className={styles.subtext}>
-              Refine your research writing with expert mentorship. We help
-              scholars enhance clarity, structure, and impact while maintaining
-              academic integrity.
+              Enhance your research paper with expert academic writing
+              assistance and guidance from PhD-level mentors. We provide
+              professional academic writing assistance services, thesis
+              guidance, and manuscript editing services to help you improve
+              clarity, structure, and coherence while maintaining academic
+              integrity.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
                 <button className={styles.primaryButton}>
-                  [Get Writing Guidance Now]
+                  Get Writing Guidance Now
                 </button>
               </a>
 
@@ -164,30 +167,39 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Why Choose Our Writing Assistance Services?
+              Why Choose ManuscriptEdit’s Writing Assistance Services?
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Expert-Led Research Guidance – PhD-level mentors across
+                ✔ Academic and Research Experts- PhD-level Editors across
                 disciplines.
               </li>
               <li>
-                ✔ Ethical Writing Support – Helping scholars improve structure,
-                clarity, and coherence.
+                ✔ Ethical &amp; High-Quality Academic Writing Support- Helping
+                scholars improve clarity, coherence, and structure while
+                adhering to ethical guidelines.
               </li>
               <li>
-                ✔ Tailored to Your Needs – Personalized feedback and research
-                support.
+                ✔ Personalized Research Paper Assistance- Tailored feedback and
+                writing support.
               </li>
               <li>
-                ✔ Journal-Ready Writing – Ensuring compliance with academic and
-                ethical standards.
+                ✔ Journal Publication Support- With our writing assistance
+                services, prepare your paper for publication in high-impact
+                journals.
               </li>
               <li>
-                ✔ Strict Confidentiality – Your work remains secure and
-                private.
+                ✔ 100% Confidential &amp; Secure- Your research stays private,
+                secure, and plagiarism-free.
               </li>
             </ul>
+
+            <p style={{textAlign:"center" , marginTop:"20px"}}>
+              <strong>
+                Boost Your Chances of Getting Published with Expert Research
+                Writing Assistance!
+              </strong>
+            </p>
           </div>
 
           <section className={styles.proofreadingWrapper}>
@@ -322,14 +334,15 @@ export default function Home() {
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">$0.08 per word (Writing Guidance)</p>
+                <p className="pricing-text">
+                  $0.08 per word (Writing Guidance)
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $0.15 per word
-                (Comprehensive Research Support)
+                  $0.15 per word (Comprehensive Research Support)
                 </p>
               </div>
 

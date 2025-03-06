@@ -96,14 +96,17 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Data Analysis Services – Statistical & Computational
-              Expertise
+              Professional Data Analysis Services- Statistical &amp;
+              Computational Expertise
             </h1>
             <p className={styles.subtext}>
-              “Transform raw data into meaningful insights with our expert data
-              analysis services. Our specialists use advanced statistical
-              techniques, machine learning, and quantitative methods to analyze
-              research data accurately and efficiently.”
+              Transform raw data into meaningful insights with our expert data
+              analysis services. Our specialists excel in data editing, data
+              cleaning, and data testing, ensuring that your dataset is
+              error-free and ready for research. We apply advanced data analysis
+              plans using statistical techniques, machine learning, and
+              quantitative methods to help you effectively analyze complex data
+              while maintaining strict data confidentiality and security.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -127,24 +130,24 @@ export default function Home() {
             <h2 className={styles.heading}>Key Benefits:</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Expert Statisticians & Data Scientists – Our team includes
-                PhD-level statisticians, engineers, and data analysts.
+                ✅ Expert Data Analysts, Data Scientists & Statisticians – Our
+                team includes PhD-level statisticians, engineers, and analysts
+                specializing in data interpretation and complex data analysis.
               </li>
               <li>
-                ✔Advanced Statistical Methods & Machine Learning – Application
-                of SPSS, R, Python, MATLAB, SAS, Stata, NVivo, and more.
+                ✅ Comprehensive Data Analysis Plan – Utilizing SPSS, R, Python,
+                MATLAB, SAS, Stata, and NVivo to efficiently process and analyze
+                raw data.
               </li>
               <li>
-                ✔ Data Integrity & Accuracy – Ensuring error-free, reliable
-                research results with robust statistical validation.
+                ✅ Custom Data Reports & Visualization – Delivering clear,
+                easy-to-understand insights through graphs, tables, and
+                interactive dashboards.
               </li>
               <li>
-                ✔ Customized Data Reports & Visualization – Providing graphs,
-                tables, and interactive dashboards for clear presentation.
-              </li>
-              <li>
-                ✔ Confidential & Secure Data Handling – Guaranteed 100% data
-                confidentiality with encrypted storage and processing.
+                ✅ Confidential & Secure Data Handling – Guaranteed 100% data
+                security and confidentiality with encrypted storage and
+                processing.
               </li>
             </ul>
           </div>

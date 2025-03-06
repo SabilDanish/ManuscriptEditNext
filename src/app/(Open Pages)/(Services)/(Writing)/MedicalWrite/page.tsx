@@ -37,30 +37,34 @@ export default function Home() {
     {
       stepss: "Step 1 ➔",
       icon: faFileUpload,
-      title: "Consultation & Project Scope Definition – Understand writing needs & target audience.",
+      title:
+        "Consultation & Project Scope Definition – Understand writing needs & target audience.",
     },
     {
       stepss: "Step 2 ➔",
       icon: faSearch,
-      title: "Data Collection & Research – Gathering evidence-based references.",
+      title:
+        "Data Collection & Research – Gathering evidence-based references.",
     },
     {
       stepss: "Step 3 ➔",
       icon: faEdit,
-      title: "Medical Writing & Drafting – Structured document creation by medical experts.",
+      title:
+        "Medical Writing & Drafting – Structured document creation by medical experts.",
     },
     {
       stepss: "Step 4 ➔",
       icon: faCheckCircle,
-      title: "Review & Compliance Check – Ensuring adherence to medical writing standards.",
+      title:
+        "Review & Compliance Check – Ensuring adherence to medical writing standards.",
     },
     {
       stepss: "Step 5 ➔",
       icon: faCheckCircle,
-      title: "Final Delivery & Revisions – Submission-ready medical content with free minor revisions.",
+      title:
+        "Final Delivery & Revisions – Submission-ready medical content with free minor revisions.",
     },
   ];
-  
 
   const accord2: { question: string; answer: string }[] = [
     {
@@ -80,16 +84,14 @@ export default function Home() {
     },
     {
       question: "Can I request revisions after medical writing?",
-      answer:
-        "Yes, 14 days of free minor revisions are included.",
+      answer: "Yes, 14 days of free minor revisions are included.",
     },
     {
       question: "How do I get started?",
       answer:
         "Simply upload your project details, and our expert medical writers will refine your manuscript.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -110,15 +112,17 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Expert Medical Writing Services – Precision & Compliance for
-              Healthcare & Research
+              Expert Medical Writing Assistance Services- Compliance &amp;
+              Precision for Healthcare Research
             </h1>
             <p className={styles.subtext}>
-              “ManuscriptEdit provides professional medical writing services for
-              researchers, healthcare professionals, and pharmaceutical
-              companies. Our medical writers ensure accuracy, compliance, and
-              clarity in clinical research documents, regulatory submissions,
-              and scientific publications.”
+              Get professional medical writing assistance from PhD-level experts
+              specializing in clinical research documents, regulatory
+              submissions, and scientific publications. Our medical writing
+              assistance service ensures accuracy, clarity, and compliance with
+              ICH-GCP, FDA, EMA, and COPE guidelines- helping healthcare
+              professionals, researchers, and pharmaceutical companies publish
+              high-quality, evidence-based content.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -140,29 +144,30 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Key Benefits of ManuscriptEdit’s Plagiarism Services:
+              Key Benefits of ManuscriptEdit’s Medical Writting Services:
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✅ Expert Medical Writers – PhD-qualified writers with
-                backgrounds in medicine, life sciences, and healthcare.
+                ✅ PhD Medical Writers & Editors – Experts in medicine, life
+                sciences, and healthcare research.
               </li>
               <li>
-                ✅ Regulatory & Compliance Expertise – Ensuring compliance with
-                ICH-GCP, FDA, EMA, and COPE guidelines
+                ✅ Regulatory and Compliance Support – Ensuring adherence to
+                FDA, EMA, and ICH-GCP medical writing standards.
               </li>
               <li>
-                ✅ Accurate & Evidence-Based Content – Well-researched medical
-                content with proper citations and data integrity.
+                ✅ Evidence-Based Medical Content – High-quality research with
+                accurate citations and data integrity.
               </li>
               <li>
-                ✅ Custom Solutions for Healthcare & Pharma – Specialized
-                writing services for clinical trials, regulatory submissions,
+                ✅ Scientific & Clinical Writing Services – Custom solutions for
+                Healthcare & Pharma, with specialized writing assistance for
+                clinical trial documents, research papers, regulatory reports,
                 and journal publications.
               </li>
               <li>
                 ✅ Confidential & Secure Services – Guaranteed confidentiality
-                for proprietary research and clinical data.
+                for healthcare and pharmaceutical research.
               </li>
             </ul>
           </div>
@@ -236,7 +241,7 @@ export default function Home() {
 
         <div className={styles.processContainer}>
           <h2 className={styles.processTitle}>
-          Medical Writing Process – How We Ensure Accuracy & Compliance
+            Medical Writing Process – How We Ensure Accuracy & Compliance
           </h2>
           <div className={styles.processSteps1}>
             {steps.map((step, index) => (
@@ -255,35 +260,41 @@ export default function Home() {
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
               <button className={styles.primaryButton}>
-              Start Your Medical Writing Project
+                Start Your Medical Writing Project
               </button>
             </a>
           </div>
 
           <section className="before-after-example-section">
             <h2 className="before-after-example-heading">
-            Before & After Medical Writing – See the Difference
+              Before & After Medical Writing – See the Difference
             </h2>
 
             <div className="before-after-example-content">
               <div className="before-example">
                 <h3>Before (Raw Scientific Data with Unclear Structure):</h3>
                 <p className="before-text">
-                “This study about the new drug was done with 250 people. The drug had some side effects, but it also worked well in reducing symptoms.”
+                  “This study about the new drug was done with 250 people. The
+                  drug had some side effects, but it also worked well in
+                  reducing symptoms.”
                 </p>
               </div>
 
               <div className="after-example">
                 <h3>After (Professionally Written Clinical Report):</h3>
                 <p className="after-text">
-                “A randomized, placebo-controlled study was conducted with 250 participants to evaluate the efficacy and safety profile of [Drug Name]. The treatment demonstrated significant symptom reduction, with a manageable side effect profile.”
+                  “A randomized, placebo-controlled study was conducted with 250
+                  participants to evaluate the efficacy and safety profile of
+                  [Drug Name]. The treatment demonstrated significant symptom
+                  reduction, with a manageable side effect profile.”
                 </p>
               </div>
             </div>
 
             <div className="explanation">
               <p>
-              Medical Writing ensures accuracy, compliance, and scientific clarity.
+                Medical Writing ensures accuracy, compliance, and scientific
+                clarity.
               </p>
             </div>
           </section>
@@ -297,14 +308,14 @@ export default function Home() {
               <div className="pricing-item">
                 <h3>Starting Price</h3>
                 <p className="pricing-text">
-                $0.10 per word (Medical Blog Writing) 
+                  $0.10 per word (Medical Blog Writing)
                 </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
                 <p className="delivery-time">
-                $0.20 per word (Regulatory Writing)
+                  $0.20 per word (Regulatory Writing)
                 </p>
               </div>
 
