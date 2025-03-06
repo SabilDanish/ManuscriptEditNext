@@ -57,7 +57,7 @@ const HowItWorks = () => {
             <div className="col-lg-3 col-md-6 mb-4" key={step.id}>
               <div className="step text-center p-4">
                 <div className="icon mb-3">
-                  <img src={step.image} alt="#" />
+                  <img src={step.image} alt="#" width='100%' />
                 </div>
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>

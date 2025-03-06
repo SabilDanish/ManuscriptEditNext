@@ -8,7 +8,7 @@ import { serviceData } from "@/app/utils/service";
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../../../_Common/getHelp/getHelp.css";
+
 import "./Statistical.css";
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";

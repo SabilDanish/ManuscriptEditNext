@@ -5,7 +5,6 @@ import FAQ from "@/app/_Common/_FAQ/FAQ";
 import Metadata from "@/app/Metadata";
 import { usePathname } from "next/navigation";
 import { data } from "../../../../utils/metaFile.js";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 const newData: { [key: string]: { [key: string]: string } } = data;
@@ -109,13 +108,15 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-            Ensure Academic Integrity- Get a Comprehensive Plagiarism Check &amp; Report
+              Ensure Academic Integrity- Get a Comprehensive Plagiarism Check
+              &amp; Report
             </h1>
             <p className={styles.subtext}>
-              Enhance the originality of our research with our advanced Turnitin/iThenticate-powered
-plagiarism checker. Our high-accuracy plagiarism check for research papers ensures
-compliance with journal standards, safeguarding manuscript originality and academic
-integrity for successful publication.
+              Enhance the originality of our research with our advanced
+              Turnitin/iThenticate-powered plagiarism checker. Our high-accuracy
+              plagiarism check for research papers ensures compliance with
+              journal standards, safeguarding manuscript originality and
+              academic integrity for successful publication.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -133,35 +134,37 @@ integrity for successful publication.
           </div>
         </section>
 
-        {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-            Key Benefits of ManuscriptEdit’s Plagiarism Checker Services:
+              Key Benefits of ManuscriptEdit’s Plagiarism Checker Services:
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Advanced Plagiarism Detection with Turnitin/iThenticate- A reliable plagiarism
-checker for research papers, ensuring precise plagiarism detection for academic
-manuscripts.
+                ✔ Advanced Plagiarism Detection with Turnitin/iThenticate- A
+                reliable plagiarism checker for research papers, ensuring
+                precise plagiarism detection for academic manuscripts.
               </li>
               <li>
-                ✔ Comprehensive Plagiarism Check Report for Scientific Papers- Get a detailed
-similarity report &amp; expert feedback on plagiarism reports, including citations and
-paraphrasing issues.
+                ✔ Comprehensive Plagiarism Check Report for Scientific Papers-
+                Get a detailed similarity report &amp; expert feedback on
+                plagiarism reports, including citations and paraphrasing issues.
               </li>
               <li>
-                ✔ Manual Paraphrasing &amp; Citation Correction- Avoid plagiarism in research with
-                professional citation, maintaining research authenticity.
+                ✔ Manual Paraphrasing &amp; Citation Correction- Avoid
+                plagiarism in research with professional citation, maintaining
+                research authenticity.
               </li>
               <li>
-                ✔ Journal-Specific Compliance &amp; Publication Support- Our journal plagiarism
-checker services align with Elsevier, Springer, Wiley, Scopus, Web of Science, and
-PubMed guidelines for smooth journal submission.
+                ✔ Journal-Specific Compliance &amp; Publication Support- Our
+                journal plagiarism checker services align with Elsevier,
+                Springer, Wiley, Scopus, Web of Science, and PubMed guidelines
+                for smooth journal submission.
               </li>
               <li>
-                ✔ Confidential, secure &amp; Ethical Process- We guarantee a plagiarism-free manuscript
-                with complete privacy and publication support services for researchers.
+                ✔ Confidential, secure &amp; Ethical Process- We guarantee a
+                plagiarism-free manuscript with complete privacy and publication
+                support services for researchers.
               </li>
             </ul>
           </div>
@@ -317,6 +320,7 @@ PubMed guidelines for smooth journal submission.
                 </p>
               </div>
             </div>
+            
 
             <div className="cta-container">
               <a

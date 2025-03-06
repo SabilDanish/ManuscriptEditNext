@@ -7,15 +7,15 @@ import { faPen, faFileAlt, faCog,faPenNib, faMicroscope } from '@fortawesome/fre
 const getIconForCategory = (category: string) => {
   switch (category) {
     case 'English Editing':
-      return <FontAwesomeIcon icon={faPen} />; // Pencil icon for editing
+      return <FontAwesomeIcon icon={faPen} />;
     case 'Publication Support':
-      return <FontAwesomeIcon icon={faFileAlt} />; // File icon for publication support
+      return <FontAwesomeIcon icon={faFileAlt} />;
     case 'Scientific/Academic Writing':
-      return <FontAwesomeIcon icon={faPenNib} />; // Pen nib icon for academic writing
+      return <FontAwesomeIcon icon={faPenNib} />;
     case 'Research Support':
-      return <FontAwesomeIcon icon={faMicroscope} />; // Microscope icon for research
+      return <FontAwesomeIcon icon={faMicroscope} />;
     default:
-      return <FontAwesomeIcon icon={faCog} />; // Default icon
+      return <FontAwesomeIcon icon={faCog} />;
   }
 };
 

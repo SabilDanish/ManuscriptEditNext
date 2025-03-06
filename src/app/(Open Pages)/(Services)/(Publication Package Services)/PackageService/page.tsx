@@ -2,7 +2,6 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import FAQ from "@/app/_Common/_FAQ/FAQ";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import { usePathname } from "next/navigation";
@@ -128,14 +127,11 @@ export default function Home() {
       <section style={gap}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>
-            Publication Package – Your Path to Seamless Journal Submission
+          Publication Support Package – Your Gateway to Successful Journal Submission
           </h1>
           <p className={styles.subtext}>
-            Welcome to ManuscriptEdit, your trusted partner in comprehensive
-            publication support. Our Publication Packages are designed to help
-            researchers navigate the submission process, ensuring their
-            manuscripts meet journal requirements and increase their chances of
-            acceptance.
+          Welcome to ManuscriptEdit, your trusted partner in research paper publication support services. Our journal publication services are designed to help researchers easily navigate the journal submission process. We offer expert manuscript editing, plagiarism checks, and peer review to ensure your research meets stringent scientific editing services standards.<br/>
+          Additionally, our packages include journal selection, artwork formatting, graphical abstract creation, and illustration creation and formatting. This ensures that your manuscript aligns perfectly with the target journal's requirements, increasing your chances of acceptance.
           </p>
         </div>
       </section>
@@ -482,69 +478,67 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>
-            Why Choose ManuscriptEdit for Publication Support?
+          Why choose ManuscriptEdit for Research Paper Publication Support Services?
+
           </h2>
 
           <section className={styles.benefitsWrapper}>
-            <h4>End-to-End Assistance for Hassle-Free Publishing</h4>
+            <h4>Comprehensive Publication Support for Hassle-Free Journal Submission</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Comprehensive support from manuscript preparation to final
-                submission.
+                ✔ Full publication support, from manuscript editing to final journal submission.
               </li>
               <li>
-                ✔ Expert guidance on journal selection, formatting, and
-                submission strategies.
+                ✔ Expert guidance on journal selection, manuscript formatting and submission strategies.
               </li>
             </ul>
           </section>
 
           <section className={styles.benefitsWrapper}>
-            <h4>Expert Consultation & Journal-Specific Compliance</h4>
+            <h4>Expert Consultation & Journal Compliance Assistance
+            </h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Align your manuscript with impactful journals in your field.
+                ✔ Align your research with high-impact journals using our journal publication services.
               </li>
               <li>
-                ✔ Compliance with Scopus, SCI, PubMed, and high-impact journal
-                guidelines.
+                ✔ Compliance with Scopus, SCI, PubMed, and top scientific editing services standards.</li>
+            </ul>
+          </section>
+
+          <section className={styles.benefitsWrapper}>
+            <h4>
+            Ethical, Secure & High-Quality Support</h4>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✔ Adherence to ethical publication standards for compliance with COPE and ICMJE guidelines.
+              </li>
+              <li>
+                ✔ Ensuring confidentiality to protect your research integrity.
               </li>
             </ul>
           </section>
 
           <section className={styles.benefitsWrapper}>
-            <h4>Ethical, Confidential & High-Quality Support</h4>
+            <h4>Fast and Reliable Journal Submission Process
+            </h4>
             <ul className={styles.benefitsList}>
-              <li>
-                ✔ Ethical publication practices ensuring compliance with COPE
-                and ICMJE guidelines.
+              <li>✔ Timely assistance to meet crucial journal submission deadlines.
               </li>
               <li>
-                ✔ Strict confidentiality measures to protect your research.
+                ✔ Streamlined processes to minimize manuscript rejections and revisions.
               </li>
             </ul>
           </section>
 
           <section className={styles.benefitsWrapper}>
-            <h4>Fast & Reliable Submission Process</h4>
-            <ul className={styles.benefitsList}>
-              <li>✔ Timely assistance to meet submission deadlines.</li>
-              <li>
-                ✔ Streamlined processes to reduce rejections and revisions.
-              </li>
-            </ul>
-          </section>
-
-          <section className={styles.benefitsWrapper}>
-            <h4>Global Recognition & Proven Track Record</h4>
+            <h4>Global Recognition & Proven Success in Journal Publication Services</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Supported 10,000+ authors across 100+ countries in publishing
-                successfully.
+                ✔ Over 10,000+ authors across 100+ countries have benefited from our research paper publication support services.
               </li>
               <li>
-                ✔ Experienced in helping researchers publish in Q1 and
-                high-impact journals.
+                ✔ Expertise in helping researchers publish in Q1 journals with graphical abstract creation and illustration creation & formatting services.
               </li>
             </ul>
           </section>
@@ -588,27 +582,27 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>
-            How We Ensure Quality in Publication Support
+          How We Ensure Quality in Research Paper Publication Support Services
+
           </h2>
 
           <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
-            Structured & Efficient Publication Workflow
+          Structured & Efficient Journal Submission Workflow
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ Journal Selection & Formatting – We recommend the most suitable
-              journals for your manuscript.
+              ✔ Journal Selection & Manuscript Formatting – Recommending the most suitable journals and ensuring proper formatting for submission.
             </li>
             <li>
-              ✔ Pre-Submission Peer Review – Feedback from experts to refine
-              your research.
+              ✔ Pre-Submission Peer Review – Expert feedback to refine research quality.
             </li>
             <li>
-              ✔ Submission Management – Complete journal submission assistance.
+              ✔ Submission Management – Complete journal publication services for hassle-free submissions.
+
             </li>
             <li>
-              ✔ Post-Submission Support – Handling reviewer comments and
-              resubmission.
+              ✔ Post-Submission Support – Handling reviewer comments and revisions to improve acceptance rates.
+
             </li>
           </ul>
         </div>
@@ -617,14 +611,15 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h4 style={{ marginBottom: "30px" }}>
-            Compliance with International Publishing Standards
+          Compliance with International Publishing & Ethical Standards
+
           </h4>
           <ul className={styles.benefitsList}>
             <li>
               ✔ Formatting compliance with APA, IEEE, Elsevier, Springer, Wiley,
-              and Nature guidelines.
+              and Nature guidelines.Adherence to APA, IEEE, Elsevier, Springer, Wiley, and Nature guidelines for manuscript publication.
             </li>
-            <li>✔ Ensuring ethical and plagiarism-free publication.</li>
+            <li>✔ Ensuring ethical research integrity with plagiarism-free global publication standards.</li>
           </ul>
         </div>
       </section>
@@ -632,13 +627,13 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h4 style={{ marginBottom: "30px" }}>
-            Transparent Communication & Personalized Assistance
+          Transparent Communication & Personalized Assistance
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ Direct collaboration with editors and publication specialists.
+              ✔ Direct collaboration with editors and manuscript editing experts.
             </li>
-            <li>✔ Step-by-step updates throughout the publication process.</li>
+            <li>✔ Step-by-step updates to streamline the journal submission process.</li>
           </ul>
         </div>
       </section>
@@ -646,20 +641,17 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h4 style={{ marginBottom: "30px" }}>
-            Who Benefits from Our Publication Support?
+          Who Benefits from Our Journal Publication Services?
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ Early-Career Researchers – Assistance in navigating journal
-              submission.
+              ✔ Early-Career Researchers – Guidance on navigating research paper publication support services.
             </li>
             <li>
-              ✔ Experienced Academics – Optimized publication strategies for
-              high-impact journals.
+              ✔ Experienced Academics – Optimized strategies for publishing in high-impact journals.
             </li>
             <li>
-              ✔ Institutions & Universities – Bulk publication support for
-              faculty and students.
+              ✔ Institutions & Universities – Bulk publication support for faculty and students.
             </li>
           </ul>
         </div>

@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { serviceData } from "@/app/utils/service.js";
-import "../../../../_Common/getHelp/getHelp.css";
+
 import "./writingOverview.css";
 import { useEffect, useState } from "react";
 import styles from "@/app/_Common/Renovation/Renovation.module.css";

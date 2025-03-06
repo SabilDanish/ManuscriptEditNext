@@ -30,7 +30,7 @@ import Header from "./_Common/_Header/Header";
 import { DNA } from "react-loader-spinner";
 import FloatingWp from "./_Common/FloatingWp/FloatingWp";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import ChritmasImage from "./_Common/Crirstmas/Crismas";
+
 import Navbar2025 from "./_Common/Navbar2025/Navbar2025";
 import NavbarGap from "./_Common/NavbarGap/NavbarGap";
 
@@ -265,7 +265,7 @@ export default function RootLayout({
           {children}
         </Suspense>
         <FloatingWp />
-        <ChritmasImage />
+        
 
         {footer()}
         <noscript>

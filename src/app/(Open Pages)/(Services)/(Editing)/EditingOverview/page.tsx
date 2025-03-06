@@ -11,7 +11,7 @@ import { serviceData } from "../../../../utils/service.js";
 
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import "../../../../_Common/getHelp/getHelp.css";
+
 import Dropdown2 from "@/app/_Common/Dropdown2/Dropdown2";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import { useEffect, useState } from "react";

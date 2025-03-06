@@ -271,7 +271,7 @@ const TopBannerForm = () => {
       <div className="container" style={{marginBottom:"60px"}}>
         <div className="row" style={{justifyContent:"end"}}>
           <div className="col-lg-6">
-            <h4 style={{ fontWeight: "Bold", fontSize: "2rem", marginTop: "10%",}}>Get 
+            <h4 style={{ fontWeight: "Bold", fontSize: "2rem",}}>Get 
               <span style={{ fontSize: "2.5rem", color: "#6C070A", fontWeight: "800" }}> Manuscript</span> <br />Published with Confidence |<br/> Expert Manuscript Editing Services
             </h4>
             <h5 style={{ marginTop: "1rem" }}>From manuscript preparation to journal publication, our expert editors provide high-
