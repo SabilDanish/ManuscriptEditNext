@@ -74,14 +74,14 @@ export default function Home() {
       <section style={{ marginTop: "40px" }}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>
-            Find the Best Journal for Your Research – Expert Journal Selection
-            Assistance
+          Find the Best-Suited Journals for your Manuscript- Expert Journal Selection Service for
+          Publication
           </h1>
           <p className={styles.subtext}>
-            Maximize your chances of journal acceptance with our expert journal
-            selection service. Our specialists evaluate impact factor, indexing,
-            scope, and acceptance rates to identify the most suitable journals
-            for your manuscript.
+          Maximize your manuscript’s acceptance rate with our comprehensive journal selection
+service. Our specialists evaluate impact factors, indexing, and journal scope to identify the
+best-suited journals for your manuscript. We ensure compliance with journal submission
+guidelines and formatting, helping you navigate the publication support process seamlessly.
           </p>
           <div className={styles.buttonGroup}>
             <button
@@ -111,36 +111,38 @@ export default function Home() {
       >
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>
-            Why Choose Our Journal Selection Services?
+          Why Choose Our Journal Selection Services?
           </h2>
           <p className={styles.subtext}>
             <strong>
-              ManuscriptEdit’s Journal Selection Services provide researchers
-              with expert assistance to ensure that their work is submitted to
-              the most relevant and reputable journals. Our key benefits
-              include:
+            Our expert journal selection report provides researchers with professional guidance to
+            submit their work to the most relevant and high-impact journals. Our key benefits include:
             </strong>
           </p>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ Expert Recommendation by PhD Specialists – Identifying journals
-              indexed in Scopus, Web of Science, PubMed, and DOAJ.
+              ✔ Expert Journal Selection Assistance- Recommendations from PhD specialists to
+              identify journals indexed in Scopus, Web of Science, PubMed, and DOAJ.
             </li>
             <li>
-              ✔ Impact Factor & Q1/Q2 Ranking Analysis – Recommending journals
-              with high acceptance rates and strong citations.
+              ✔ Impact Factor &amp; Q1/Q2 Ranking Analysis- Selection of journals with high
+              acceptance rates and strong citations.
             </li>
             <li>
-              ✔ Avoiding Predatory Journals – Screening journal legitimacy and
-              ethical publishing standards.
+              ✔ Avoiding Predatory Journals- Ensuring journal legitimacy and adherence to ethical
+              publishing standards.
             </li>
             <li>
-              ✔ Customized Journal Shortlisting – Based on subject area,
+              ✔ Customized Journal Shortlisting- Tailored recommendations based on subject area,
               manuscript type, and research scope.
             </li>
             <li>
-              ✔ Journal Submission Guidelines & Formatting – Ensuring
-              journal-specific compliance before submission.
+              ✔ Manuscript Formatting as per Journal Guidelines- Compliance with journal-
+              specific requirements before submission.
+            </li>
+            <li>
+              ✔ Journal Submission Assistance- A step-by-step guide to ensure a smooth journal
+              submission process.
             </li>
           </ul>
           <button

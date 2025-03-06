@@ -94,14 +94,13 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Systematic Review Writing – Evidence-Based,
-              Structured & Journal-Ready
+            Professional Systematic Review Writing- Evidence-Based, structured &amp; Journal-Ready
             </h1>
             <p className={styles.subtext}>
-              “Strengthen your research with a comprehensive systematic review.
-              Our expert medical and scientific writers conduct thorough
-              literature analysis, data synthesis, and critical evaluation,
-              ensuring high-quality, journal-compliant systematic reviews.”
+            Strengthen your research paper with a comprehensive systematic review. Our expert medical
+and scientific writers specialize in statistical analysis, conducting thorough literature analysis,
+data synthesis, and critical evaluation to ensure high-quality, journal-compliant systematic
+reviews.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">

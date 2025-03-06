@@ -1,7 +1,7 @@
 "use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import { usePathname } from "next/navigation";
@@ -114,14 +114,15 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Technical Writing Services – Precision, Clarity &
-              Industry Compliance
+              Professional Technical Writing Assistance- Precision, Clarity
+              &amp; Industry Compliance
             </h1>
             <p className={styles.subtext}>
-              “Communicate complex technical information with clarity and
-              accuracy. Our expert technical writers create manuals,
-              whitepapers, user guides, reports, and technical documentation
-              tailored to industry standards.”
+              Get expert technical writing assistance for manuals, user guides,
+              reports, and technical documentation tailored to IEEE, ISO, API,
+              and corporate standards. Our expert technical writers ensure
+              clarity, accuracy, and compliance, making complex information easy
+              for end users to understand.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -147,24 +148,24 @@ export default function Home() {
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Expert Technical Writers – Engineers, IT specialists, and
-                subject-matter experts with industry experience.
+                ✅ Expert Technical Writers – Specialists in engineering, IT,
+                software, and industrial documentation.
               </li>
               <li>
-                ✔ Clear & Structured Documentation – Ensuring easy readability
-                and usability for end users.
+                ✅ Accurate & Well-Structured Content – Ensuring readability,
+                usability, and technical precision for end users.
               </li>
               <li>
-                ✔ Industry-Specific Formatting – Adhering to IEEE, ISO, API, and
-                corporate technical documentation guidelines.
+                ✅ Industry-Specific Formatting & Compliance – Adherence to
+                IEEE, ISO, API, and corporate standards.
               </li>
               <li>
-                ✔ Technical Accuracy & Compliance – Fact-checked and verified
-                for scientific and engineering precision.
+                ✅ Technical Documentation Services – User manuals, API
+                documentation, whitepapers, SOPs, and training guides.
               </li>
               <li>
-                ✔ Fast Turnaround & Confidential Handling – Guaranteed data
-                security & NDA protection for proprietary documents
+                ✅ Fast Turnaround & Secure Handling – NDA-compliant services
+                with confidential data protection.
               </li>
             </ul>
           </div>

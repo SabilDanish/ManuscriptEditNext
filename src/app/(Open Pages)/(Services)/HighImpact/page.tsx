@@ -109,14 +109,13 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              High-Impact Scientific Editing – Elevate Your Research for
-              Top-Tier Journals
+            High-Impact Scientific Editing – Elevate Your Research for Top-Tier Journals
             </h1>
             <p className={styles.subtext}>
-              Refine your manuscript with expert scientific editing to enhance
-              clarity, coherence, and publication readiness. Ensure compliance
-              with journal standards and increase acceptance rates in
-              high-impact journals.
+            Enhance your scientific manuscript with expert scientific editing services to improve clarity,
+coherence, and publication readiness. Our professional research editors ensure compliance
+with Q1, Q2, Scopus, Web of Science, and PubMed journal standards, boosting your
+acceptance rate in high-impact journals.
             </p>
             <div className={styles.buttonGroup}>
               <button className={styles.primaryButton}>
@@ -133,64 +132,60 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              What is High-Impact Scientific Editing?
+            What is High-Impact Scientific Editing?
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Advanced language and technical editing for scientific
-                manuscripts.
+                ✔ Advanced Technical Editing – Improves language, terminology, and structure for
+                research papers
               </li>
               <li>
-                ✔ Ensures clarity, coherence, and consistency in research
-                writing.
+                ✔ Scientific Clarity &amp; Readability – Enhances logical flow, coherence, and precision
               </li>
               <li>
-                ✔ Aligns with Q1, Q2, Scopus, Web of Science, and PubMed journal
-                requirements.
+                ✔ Journal Compliance Editing – Aligns with top academic journal requirements
               </li>
               <li>
-                ✔ Includes terminology correction, scientific accuracy checks,
-                and structural improvement.
+                ✔ Error-Free Research Papers – Corrects grammar, syntax, and scientific accuracy
               </li>
             </ul>
           </div>
 
           <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>Who Should Use This Service?</h2>
+            <h2 className={styles.heading}>Who Needs This Scientific Editing Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Researchers and Academics – Preparing manuscripts for
-                submission in high- impact journals.
+                ✔Researchers &amp; Academics – Preparing manuscripts for high-impact journal
+                submission
               </li>
               <li>
-                ✔ PhD Scholars and Postdoctoral Fellows – Refining dissertations
-                and research papers.
+                ✔ PhD Scholars &amp; Postdoctoral Fellows – Refining theses, dissertations, and research
+                papers
               </li>
               <li>
-                ✔ Medical and Scientific Professionals – Ensuring technical
-                precision and readability in scientific manuscripts.
+                ✔ Medical &amp; Scientific Professionals – Ensuring technical precision and scientific
+                readability
               </li>
             </ul>
           </div>
 
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Key Benefits of Substantive Editing:
+            Key Benefits of High-Impact Scientific Editing:
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Improves research clarity and readability for global
-                audiences.
+                ✔ Improves Research Clarity &amp; Global Readability
               </li>
               <li>
-                ✔ Enhances logical flow and argumentation within the manuscript.
+                ✔ Enhances Logical Flow &amp; Scientific Argumentation
               </li>
               <li>
-                ✔ Corrects grammar, syntax, and scientific terminology errors.
+                ✔ Eliminates Grammar, Syntax &amp; Terminology Errors
               </li>
-              <li>✔Aligns manuscript structure with journal requirements.</li>
+              <li>✔ Aligns Manuscript Structure with Journal Guidelines</li>
               <li>
-                ✔ Reduces rejection rates due to language or technical issues.
+                ✔ Reduces Rejection Rates Due to Language Issues
               </li>
             </ul>
           </div>

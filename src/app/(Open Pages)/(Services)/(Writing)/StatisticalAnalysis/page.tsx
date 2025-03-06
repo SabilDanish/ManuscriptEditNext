@@ -100,13 +100,14 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              &quot;Statistical Analysis Services – Data-Driven Accuracy &amp;
-              Scientific Rigor&quot;
+              Statistical Analysis Services- Data-Driven Accuracy &amp; Research
+              Excellence
             </h1>
             <p className={styles.subtext}>
-              &quot;Transform your raw data into statistically sound insights
-              with expert-led analysis. We apply advanced statistical techniques
-              to ensure precise, valid, and reproducible results.&quot;
+              Transform your raw data into scientifically validated insights
+              with our expert statistical analysis services. We employ advanced
+              methodologies to ensure precise, valid, and reproducible results
+              for statistical analysis in research.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -130,24 +131,26 @@ export default function Home() {
             <h2 className={styles.heading}>Who Should Use This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Expert-Led Analysis – PhD statisticians specializing in
-                various disciplines.
+                ✅ Expert-Led Analysis – PhD statisticians specializing in
+                statistical analysis across various fields.
               </li>
               <li>
-                ✔ Advanced Statistical Methods – ANOVA, Regression, Bayesian
-                Modeling, T-tests, and more.
+                ✅ Advanced Statistical Methods – Expertise in ANOVA,
+                Regression, Bayesian Modeling, T-tests, and more for
+                comprehensive data analysis.
               </li>
               <li>
-                ✔Data Accuracy &amp; Reliability – Ensuring statistical validity
-                and reproducibility.
+                ✅ Data Accuracy & Reliability – Ensuring valid, reproducible,
+                and high-impact research results with precise statistical
+                analysis.
               </li>
               <li>
-                ✔ Publication-Ready Outputs – Graphs, tables, and structured
-                interpretations.
+                ✅ Publication-Ready Outputs – Well-structured graphs, tables,
+                and interpretations tailored for research papers and journals.
               </li>
               <li>
-                ✔ Confidentiality Guaranteed – Secure handling of research data
-                with strict privacy policies.
+                ✅ Confidentiality Guaranteed – Secure handling of research data
+                with strict privacy policies to ensure complete data protection.
               </li>
             </ul>
           </div>

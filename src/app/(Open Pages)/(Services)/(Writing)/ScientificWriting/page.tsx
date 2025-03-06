@@ -1,7 +1,7 @@
 "use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import { usePathname } from "next/navigation";
@@ -113,14 +113,15 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Academic & Scientific Writing Assistance –
-              Publication-Ready Research Papers
+              Professional Scientific &amp; Academic Writing Assistance- Get
+              Your Research Paper Published
             </h1>
             <p className={styles.subtext}>
-              “Enhance your research with expert academic and scientific writing
-              assistance. Our subject-matter specialists provide error-free,
-              structured, and impactful manuscripts for journal submission,
-              dissertations, and grant applications.”
+              Enhance your research with expert academic and scientific writing
+              assistance. Our PhD- level subject matter experts provide
+              error-free, well-structured, and impactful research papers,
+              dissertations, and journal manuscripts tailored for high-impact
+              publications like Elsevier, Springer, Wiley, and Nature.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -146,26 +147,26 @@ export default function Home() {
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Expert Academic & Scientific Writers – PhD-level specialists
-                in STEM, humanities, social sciences, and medicine.
+                ✅ Expert PhD Academic & Scientific Writers – Specialists in
+                STEM, humanities, social sciences, and medicine.
               </li>
               <li>
-                ✔ Journal-Specific Compliance – Formatting and structuring
-                manuscripts for Elsevier, Springer, Wiley, Nature, and
-                high-impact journals.
+                ✅ Journal Manuscript Editing & Formatting – Ensuring compliance
+                with Elsevier, Springer, Wiley, and Nature journal submission
+                guidelines.
               </li>
               <li>
-                ✔ Plagiarism-Free & Citation-Optimized Content – Ensuring
-                original, properly referenced, and well-structured documents.
+                ✅ Plagiarism-Free & Citation-Optimized Research Papers –
+                Original, well-structured content with proper referencing in
+                APA, MLA, Chicago, and IEEE citation styles.
               </li>
               <li>
-                ✔ Customized Support for Manuscripts, Dissertations & Grants –
-                Tailored writing assistance for academic excellence and research
-                impact.
+                ✅ Dissertations & Thesis Writing Assistance – Tailored support
+                for PhD dissertations and academic research for excellence.
               </li>
               <li>
-                ✔ Confidential & Secure Services – 100% confidentiality, NDA
-                compliance, and secure data handling.
+                ✅ 100% Confidential & Secure – NDA-compliant services with
+                guaranteed data privacy and security.
               </li>
             </ul>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import { usePathname } from "next/navigation";
@@ -112,15 +112,17 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Expert Medical Writing Services – Precision & Compliance for
-              Healthcare & Research
+              Expert Medical Writing Assistance Services- Compliance &amp;
+              Precision for Healthcare Research
             </h1>
             <p className={styles.subtext}>
-              “ManuscriptEdit provides professional medical writing services for
-              researchers, healthcare professionals, and pharmaceutical
-              companies. Our medical writers ensure accuracy, compliance, and
-              clarity in clinical research documents, regulatory submissions,
-              and scientific publications.”
+              Get professional medical writing assistance from PhD-level experts
+              specializing in clinical research documents, regulatory
+              submissions, and scientific publications. Our medical writing
+              assistance service ensures accuracy, clarity, and compliance with
+              ICH-GCP, FDA, EMA, and COPE guidelines- helping healthcare
+              professionals, researchers, and pharmaceutical companies publish
+              high-quality, evidence-based content.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -142,29 +144,30 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Key Benefits of ManuscriptEdit’s Plagiarism Services:
+              Key Benefits of ManuscriptEdit’s Medical Writting Services:
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Expert Medical Writers – PhD-qualified writers with
-                backgrounds in medicine, life sciences, and healthcare.
+                ✅ PhD Medical Writers & Editors – Experts in medicine, life
+                sciences, and healthcare research.
               </li>
               <li>
-                ✔ Regulatory & Compliance Expertise – Ensuring compliance with
-                ICH-GCP, FDA, EMA, and COPE guidelines
+                ✅ Regulatory and Compliance Support – Ensuring adherence to
+                FDA, EMA, and ICH-GCP medical writing standards.
               </li>
               <li>
-                ✔ Accurate & Evidence-Based Content – Well-researched medical
-                content with proper citations and data integrity.
+                ✅ Evidence-Based Medical Content – High-quality research with
+                accurate citations and data integrity.
               </li>
               <li>
-                ✔ Custom Solutions for Healthcare & Pharma – Specialized writing
-                services for clinical trials, regulatory submissions, and
-                journal publications.
+                ✅ Scientific & Clinical Writing Services – Custom solutions for
+                Healthcare & Pharma, with specialized writing assistance for
+                clinical trial documents, research papers, regulatory reports,
+                and journal publications.
               </li>
               <li>
-                ✔ Confidential & Secure Services – Guaranteed confidentiality
-                for proprietary research and clinical data.
+                ✅ Confidential & Secure Services – Guaranteed confidentiality
+                for healthcare and pharmaceutical research.
               </li>
             </ul>
           </div>

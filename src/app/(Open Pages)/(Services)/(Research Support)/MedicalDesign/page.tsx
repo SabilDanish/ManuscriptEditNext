@@ -1,9 +1,5 @@
 "use client";
-import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
-import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
-import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
-import redirect from "@/app/_Common/_functionality/Redirect";
+
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -94,18 +90,20 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Scientific Illustration & Research Figure Design
+              Professional Scientific Illustration &amp; Figure Formatting –
+              High-Impact Visual Communication
             </h1>
             <p className={styles.subtext}>
-              “Enhance the impact of your research with custom scientific
-              illustrations, figures, and graphical abstracts. Our expert
-              designers create high-quality, journal-compliant visuals to
-              effectively communicate complex scientific concepts.”
+              “Enhance your research presentation with expert figure formatting
+              and scientific illustration services. Our professional
+              illustrators specialize in artwork creation and enhancement to
+              ensure editable illustrations that comply with journal
+              guidelines.”
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
                 <button className={styles.primaryButton}>
-                  Get a Free Illustration Quote
+                  Get a Free Artwork Formatting Quote
                 </button>
               </a>
 
@@ -121,28 +119,29 @@ export default function Home() {
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>Key Benefits:</h2>
+            <h2 className={styles.heading}>
+              Key Benefits of ManuscriptEdit’s Figure Formatting &amp; Artwork
+              Creation Services:
+            </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Custom Scientific & Academic Illustrations – Designed by PhD
-                experts & professional illustrators.
+                ✔ Scientific Illustration and Artwork Formatting Services –
+                Precise and detailed illustrations tailored for STEM, medical,
+                social sciences, and business research.
               </li>
               <li>
-                ✔High-Resolution, Print-Ready Figures – Delivered in PNG, JPG,
-                TIFF, AI, and vector formats.
+                ✔Professional Figure Formatting for Research Manuscripts –
+                Ensuring journal- compliant figures, graphs, and infographics
+                are delivered in PDF, PPT, PNG, and AI formats.
               </li>
               <li>
-                ✔ Graphical Abstracts & Research Diagrams – Professionally
-                designed for journal submissions and conferences.
+                ✔ Formatting Figures to Match Journal Guidelines – Ensuring
+                standard poster size, font, and layout recommendations comply
+                with specific submission requirements.
               </li>
               <li>
-                ✔ Journal-Specific Compliance & Formatting – Ensuring
-                publication-ready graphics for Elsevier, Springer, Wiley, and
-                IEEE.
-              </li>
-              <li>
-                ✔ Confidential & Secure Illustration Handling – Ethical,
-                AI-free, and plagiarism-free artwork creation.
+                ✔ Fast Turnaround &amp; 100% Confidentiality – Secure,
+                plagiarism-free artwork creation with timely delivery.
               </li>
             </ul>
           </div>

@@ -103,13 +103,13 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Expert Rewriting Services – Improve Clarity &amp; Precision
+            Professional Rewriting Services- Enhance Clarity, Flow &amp; Readability
             </h1>
             <p className={styles.subtext}>
-              “Transform your manuscript with professional rewriting services.
-              Our expert editors refine sentence structure, eliminate
-              redundancies, and enhance readability while maintaining the
-              integrity of your research.”
+            Looking to refine your research manuscript? Our expert academic rewriting services improve
+clarity, coherence, and logical flow while eliminating redundancies. We restructure and
+enhance content without altering your original meaning, ensuring publication-ready quality
+for journals, dissertations, and professional reports.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -132,10 +132,10 @@ export default function Home() {
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>What is Rewriting?</h2>
             <p className={styles.subtext}>
-              Rewriting involves comprehensive revision of your manuscript to
-              improve clarity, readability, and logical flow. Unlike simple
-              proofreading or copyediting, rewriting ensures that your content
-              is restructured and enhanced without altering its core meaning.
+            Academic rewriting involves a comprehensive manuscript revision to enhance readability,
+sentence structure, and content flow. Unlike proofreading or copyediting, rewriting ensures
+your content is logically structured, clear, and impactful, meeting journal and publication
+standards.
             </p>
           </div>
 
@@ -143,27 +143,25 @@ export default function Home() {
             <h2 className={styles.heading}>Who Needs This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Researchers &amp; Academics revising manuscripts for journal
-                submission.
+                ✔ Researchers &amp; Academics revising manuscripts for high-impact journals.
               </li>
               <li>
-                ✔ PhD Candidates improving dissertation clarity and coherence.
+                ✔ PhD candidates improving dissertation structure, clarity, and coherence.
               </li>
               <li>
-                ✔ Authors &amp; Professionals refining reports, white papers,
-                and technical content.
+                ✔ Authors &amp; Professionals refining white papers, reports, and technical documents.
               </li>
             </ul>
           </div>
 
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Key Benefits of Rewriting Services:
+            Key Benefits of Our Academic Rewriting Services:
             </h2>
             <ul className={styles.benefitsList}>
-              <li>✔ Improves clarity, logical flow &amp; readability.</li>
-              <li>✔Restructures content while preserving original intent.</li>
-              <li>✔ Enhances academic tone &amp; language precision.</li>
+              <li>✔ Enhances clarity, sentence structure, and readability for a stronger academic impact.</li>
+              <li>✔Improves manuscript organization while preserving the original meaning.</li>
+              <li>✔ Optimized for journal submissions with precise tone, grammar, and style.</li>
             </ul>
           </div>
         </section>
