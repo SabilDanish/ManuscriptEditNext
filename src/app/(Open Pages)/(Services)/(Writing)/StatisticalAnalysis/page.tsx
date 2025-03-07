@@ -1,7 +1,7 @@
 "use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import { serviceData } from "@/app/utils/service";

@@ -5,7 +5,7 @@ import FAQ from "@/app/_Common/_FAQ/FAQ";
 import Metadata from "@/app/Metadata";
 import { usePathname } from "next/navigation";
 import { data } from "../../../../utils/metaFile.js";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import Link from "next/link";

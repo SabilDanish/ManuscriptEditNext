@@ -5,7 +5,7 @@ import FAQ from "@/app/_Common/_FAQ/FAQ";
 import Metadata from "@/app/Metadata";
 import { usePathname } from "next/navigation";
 import { data } from "../../../../utils/metaFile.js";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import { useState } from "react";
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
