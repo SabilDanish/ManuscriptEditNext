@@ -48,6 +48,7 @@ const menu: MenuItem[]  = [
         label: "Scientific / Academic Writing",
         link: "/Writing",
         subMenu: [
+          { label: "Scientific / Academic Writing Overview ", link: "/scientificAcademicOverview" },
           { label: "Writing Assistance", link: "/Writing" },
           { label: "Medical Writing Assistance", link: "/MedicalWrite" },
           { label: "Scientific & Academic Writing Assistance", link: "/ScientificWriting" },
@@ -70,6 +71,7 @@ const menu: MenuItem[]  = [
         label: "Thesis & Dissertation Services",
         link: "/PHDThesis",
         subMenu: [
+          { label: "Thesis and Dissertation Overview", link: "/ThesisDissertOverview" },
           { label: "PhD Thesis", link: "/PHDThesis" },
           { label: "Master Thesis", link: "/MasterThesis" },
         ],
@@ -78,6 +80,7 @@ const menu: MenuItem[]  = [
         label: "High-Impact Services",
         link: "/PHDThesis",
         subMenu: [
+          { label: "High-Impact Journal Overview", link: "/HighImpactOverview" },
           { label: "High-Impact Scientific Editing", link: "/HighImpact" },
           { label: "High-Impact Journal Publication Support", link: "/HighImpactJournal" },
         ],
