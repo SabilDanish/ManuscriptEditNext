@@ -11,15 +11,17 @@ export default function Home() {
   const [wordCountStatement, setWordCountStatement] = useState<string | null>();
   const { isLoading, error, result, getPriceCalculator } = usePriceCalculator();
 
-  const serviceId8 = {};
+const serviceId8 = {
 
-  useEffect(() => {
-    setWordCountStatement("275");
+}
+
+  useEffect(()=>{
+    setWordCountStatement('275')
     getPriceCalculator({ word_count: 275 });
-  }, []);
+  },[])
 
   const calculateHandler = () => {
-    setWordCountStatement(wordCount);
+    setWordCountStatement(wordCount)
     getPriceCalculator({ word_count: wordCount });
   };
 
@@ -50,7 +52,7 @@ export default function Home() {
             >
               Word count
             </div>
-            <div className="col-lg-6" style={{ padding: 5 }}>
+            <div className="col-lg-6" style={{ padding: 5}}>
               <input
                 type="textbox"
                 id="wordC"
@@ -90,10 +92,9 @@ export default function Home() {
             ""
           )}
 
-          <h3 style={{ color: "black", marginBottom: "2rem" }}>
-            Prices for {wordCountStatement} words is:
-            <br />
-          </h3>
+
+        <h3 style={{color:'black',marginBottom:'2rem'}}>Prices for {wordCountStatement} words is:<br/></h3>
+
 
           <div className="row gy-4">
             {result && result.length
@@ -177,28 +178,6 @@ export default function Home() {
                 support@manuscriptedit.com
               </a>
             </p>
-          </div>
-
-          <div className="container">
-            <div className="col-lg-4 p-0" style={{backgroundColor:'white'}}>
-              <div style={{backgroundColor:'#43505c',width:'100%',padding: '1rem'}}>
-              <h5 style={{color:'white',textAlign:'center'}}>Extensive Substantive Editing</h5>
-              </div>
-              
-              <div style={{backgroundColor:'white'}}>
-                <p style={{backgroundColor:'grey',color:'white'}}>Price for '1' days delivery:</p>
-                <p style={{backgroundColor:'grey',color:'white'}}>Price for '2' days delivery:</p>
-                <p style={{backgroundColor:'grey',color:'white'}}>Price for '3' days delivery:</p>
-                <p style={{backgroundColor:'grey',color:'white'}}>Price for '5' days delivery:</p>
-                <p style={{backgroundColor:'grey',color:'white'}}>Price for '10' days delivery:</p>
-              </div>
-              <div>
-                <button style={{backgroundColor:'065424',color:'white'}}>Get Started</button>
-                <button style={{backgroundColor:'#1f5174',color:'white'}}>Get a price Quote</button>
-              </div>
-            </div>
-            <div className="col-lg-4"></div>
-            <div className="col-lg-4"></div>
           </div>
         </div>
       </section>
@@ -629,6 +608,291 @@ export default function Home() {
         </div>
       </section>
 
+      {/* <section id="pricing" className="pricing section-area">
+        <div className="container aos-init aos-animate" data-aos="fade-up">
+          <div
+            className="section-title aos-init aos-animate"
+            data-aos="fade-up"
+          >
+            <h2>Publication Support Package</h2>
+          </div>
+
+          <div className="row gy-4">
+            <div
+              className="col-lg-3 aos-init aos-animate"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div className="pricing-item">
+                <div className="pricing-header">
+                  <h3>Premium Plus Package</h3>
+                  <h4>
+                    <sup>$</sup>2134<span> / 30 Days</span>
+                  </h4>
+                </div>
+
+                <ul>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Data Analysis</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Research Paper Writing</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Substantive Editing</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Journal Selection</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Target Journal Formating</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Artwork Formating</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Journal Submission</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Response to Reviewer</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Peer Review Analysis</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Cover Letter Writing</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Plagiarism Check</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Unlimited Assistance</span>
+                  </li>
+                </ul>
+
+                <div className="text-center mt-auto">
+                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
+                    Order Now
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-3 aos-init aos-animate"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <div className="pricing-item">
+                <div className="pricing-header">
+                  <h3>
+                    Premium <br />
+                    Package
+                  </h3>
+                  <h4>
+                    <sup>$</sup>29<span> / 20 Days</span>
+                  </h4>
+                </div>
+
+                <ul>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Substantive Editing</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Journal Selection</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Target Journal Formatting</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Artwork Formatting</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Journal Submission</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Response to Reviewers</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Peer Review Analysis</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Cover Letter Writing</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Plagiarism Check</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Unlimited Assistance</span>
+                  </li>
+                </ul>
+
+                <div className="text-center mt-auto">
+                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
+                    Order Now
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-3 aos-init aos-animate"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+            >
+              <div className="pricing-item">
+                <div className="pricing-header">
+                  <h3>
+                    Advanced <br></br>
+                    Package
+                  </h3>
+                  <h4>
+                    <sup>$</sup>49<span> / 15 Days</span>
+                  </h4>
+                </div>
+
+                <ul>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Substantive Editing</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Journal Selection</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Target Journal Formatting</span>
+                  </li>
+                  <li>
+                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
+                    <span>Artwork Formatting</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Journal Submission</span>
+                  </li>
+                  <li>
+                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
+                    <span>Response to Reviewers</span>
+                  </li>
+                  <li>
+                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
+                    <span>Peer Review Analysis</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Cover Letter Writing</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Plagiarism Check</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Unlimited Assistance</span>
+                  </li>
+                </ul>
+
+                <div className="text-center mt-auto">
+                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
+                    Order Now
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-3 aos-init aos-animate"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+            >
+              <div className="pricing-item">
+                <div className="pricing-header">
+                  <h3>
+                    Standard<br></br>
+                    Package
+                  </h3>
+                  <h4>
+                    <sup>$</sup>49<span> / 10 Days</span>
+                  </h4>
+                </div>
+
+                <ul>
+                  <li>
+                    <i className="ri-close-line"></i>{" "}
+                    <span>Substantive Editing</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Journal Selection</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Target Journal Formatting</span>
+                  </li>
+                  <li>
+                    <i className="ri-close-line"></i>{" "}
+                    <span>Artwork Formatting</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Journal Submission</span>
+                  </li>
+                  <li>
+                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
+                    <span>Response to Reviewers</span>
+                  </li>
+                  <li>
+                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
+                    <span>Peer Review Analysis</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Cover Letter Writing</span>
+                  </li>
+                  <li>
+                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
+                    <span>Plagiarism Check</span>
+                  </li>
+                  <li>
+                    <i className="ri-check-double-line"></i>{" "}
+                    <span>Unlimited Assistance</span>
+                  </li>
+                </ul>
+
+                <div className="text-center mt-auto">
+                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
+                    Order Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-3 col-md-6">
