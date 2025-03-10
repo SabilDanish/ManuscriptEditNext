@@ -11,6 +11,10 @@ export default function Home() {
   const [wordCountStatement, setWordCountStatement] = useState<string | null>();
   const { isLoading, error, result, getPriceCalculator } = usePriceCalculator();
 
+const serviceId8 = {
+
+}
+
   useEffect(()=>{
     setWordCountStatement('275')
     getPriceCalculator({ word_count: 275 });
@@ -48,12 +52,12 @@ export default function Home() {
             >
               Word count
             </div>
-            <div className="col-lg-6" style={{ padding: 5 }}>
+            <div className="col-lg-6" style={{ padding: 5}}>
               <input
                 type="textbox"
                 id="wordC"
                 name="wordC"
-                placeholder="275"
+                placeholder=" 275"
                 style={{
                   width: "100%",
                   border: "1px solid #a7a7a7",
