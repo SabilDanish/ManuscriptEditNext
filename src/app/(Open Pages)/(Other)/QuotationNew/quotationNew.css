@@ -12,6 +12,9 @@
 
 .card p {
     text-align: center;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
 }
 
 .gapping{
@@ -22,3 +25,44 @@
 label{
     color: black;
 }
+
+strong {
+    color: rgb(52 119 145);
+}
+.cardGoal{
+    height: 161px;
+}
+.uploadContainer{
+    text-align: center;
+    margin-top: 30px;
+    border: 2px dotted rgb(52 119 145);
+    padding:10px ;
+}
+
+.shade{
+    box-shadow: 0px 4px 4px #5e8ede;
+    margin-bottom: 20px;
+}
+
+.Alignments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 11px;
+    margin-top: 15px;
+}
+
+.Sizy{
+    width: 30%;
+}
+
+.uploadContainer h5{
+margin-top: 20px;
+}
+
+.Decor{
+    padding: 20px;
+    border: 2px solid #3480ac;
+}
+
