@@ -22,11 +22,12 @@ import PublicationPackages from "./_Common/Publication_package/Publication_packa
 import ServiceList from "./_Common/_ServiceData/ServiceData";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 export default function Home() {
   SwiperCore.use([Autoplay]);
   const { loading, error, blogs } = useBlogs();
 
+
+  
   return (
     <>
       <meta
@@ -41,6 +42,35 @@ export default function Home() {
         name="keywords"
         content="Research Paper Editing, Academic Editing Services, Scientific Manuscript Editing, English Proofreading Services, Journal Paper Editing, Publication Support Services, Editing Services for Researchers, Professional Academic Proofreading, Dissertation Editing Services, PhD Thesis Proofreading, Manuscript Formatting for Journals, High-Impact Journal Submission."
       />
+      <meta
+        property="og:title"
+        content="ManuscriptEdit - Expert English Editing & Proofreading for Research Papers"
+      />
+      <meta
+        property="og:description"
+        content="Professional English editing, proofreading, and publication support for researchers, authors, and academics. Get high-quality manuscript editing, journal submission assistance, and research paper formatting from PhD experts. Fast turnaround and 100% quality guarantee."
+      />
+      <meta
+        property="og:image"
+        content="https://manuscriptedit.com/images/logo16.png"
+      />
+      <meta property="og:url" content="https://www.manuscriptedit.com" />
+      <meta property="og:type" content="website" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="ManuscriptEdit - Expert English Editing & Proofreading for Research Papers"
+      />
+      <meta
+        name="twitter:description"
+        content="Professional English editing, proofreading, and publication support for researchers, authors, and academics. Get high-quality manuscript editing, journal submission assistance, and research paper formatting from PhD experts. Fast turnaround and 100% quality guarantee."
+      />
+      <meta
+        name="twitter:image"
+        content="https://manuscriptedit.com/images/logo16.png"
+      />
+
       <ToastContainer />
       <TopBannerForm />
       <WhyChooseUs />
@@ -56,9 +86,6 @@ export default function Home() {
       {blogs && blogs.length ? <BlogMob blogs={blogs} /> : ""} */}
       <FaqHome />
       <NewsletterSubscribe />
-
- 
-
     </>
   );
 }

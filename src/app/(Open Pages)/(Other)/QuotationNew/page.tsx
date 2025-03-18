@@ -329,7 +329,7 @@ export default function ProjectQuote() {
                   <textarea
                     name="specificSubject"
                     className="form-control"
-                    rows="2"
+                    
                     placeholder="Enter ..."
                     value={formData.specificSubject}
                     onChange={handleChange}
@@ -384,7 +384,6 @@ export default function ProjectQuote() {
                 <textarea
                   name="editorInstruction"
                   className="form-control"
-                  rows="3"
                   placeholder="Enter ..."
                   value={formData.editorInstruction}
                   onChange={handleChange}
@@ -414,8 +413,6 @@ export default function ProjectQuote() {
               </button>
             </form>
           </div>
-
-          
         </div>
       </div>
     </div>
