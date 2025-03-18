@@ -1,18 +1,19 @@
+import Link from "next/link";
 import { Service } from "@/app/utils/interfaces";
 import { servicesData } from "@/app/utils/serviceData";
-import './ServiceData.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPen, faFileAlt, faCog,faPenNib, faMicroscope } from '@fortawesome/free-solid-svg-icons';
+import "./ServiceData.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen, faFileAlt, faCog, faPenNib, faMicroscope } from "@fortawesome/free-solid-svg-icons";
 
 const getIconForCategory = (category: string) => {
   switch (category) {
-    case 'English Editing':
+    case "English Editing":
       return <FontAwesomeIcon icon={faPen} />;
-    case 'Publication Support':
+    case "Publication Support":
       return <FontAwesomeIcon icon={faFileAlt} />;
-    case 'Scientific/Academic Writing':
+    case "Scientific / Academic Writing":
       return <FontAwesomeIcon icon={faPenNib} />;
-    case 'Research Support':
+    case "Research Support":
       return <FontAwesomeIcon icon={faMicroscope} />;
     default:
       return <FontAwesomeIcon icon={faCog} />;
@@ -22,22 +23,20 @@ const getIconForCategory = (category: string) => {
 const ServiceList: React.FC = () => {
   return (
     <div className="services-container">
-      <h2 className="text-center" style={{ marginBottom: "3rem !important", marginTop: '1rem !important' }}>
+      <h2 className="text-center" style={{ marginBottom: "3rem !important", marginTop: "1rem !important" }}>
         Our Services
       </h2>
       {servicesData.map((service: Service, index: number) => (
         <div key={index} className="service-category">
           <div className="category-title">
-            <div className="icon">
-              {getIconForCategory(service.category)}
-            </div>
+            <div className="icon">{getIconForCategory(service.category)}</div>
             <h3>{service.category}</h3>
           </div>
           <div className="sub-services">
-            {service.subServices.map((subService: string, idx: number) => (
-              <div key={idx} className="sub-service-item">
-                {subService}
-              </div>
+            {service.subServices.map((subService, idx) => (
+              <Link key={idx} href={subService.url}>
+                <div className="sub-service-item">{subService.name}</div>
+              </Link>
             ))}
           </div>
         </div>

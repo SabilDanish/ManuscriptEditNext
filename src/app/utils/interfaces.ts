@@ -32,8 +32,8 @@ export interface Editor {
 
 export interface Service {
     category: string;
-    subServices: string[];
-}
+    subServices: { name: string; url: string }[];
+  }
 
 export interface MainContextType {
     selectedAddons: string[];

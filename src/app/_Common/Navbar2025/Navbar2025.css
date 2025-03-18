@@ -110,6 +110,7 @@
 
   .navbar3 ul li {
     padding: 10px;
+    margin-top: 8px;
   }
 
   /* .navbar3 ul li:hover {
@@ -168,7 +169,6 @@
     color: #0f1e80 !important;
     border-radius: 10px 10px 0 0;
     cursor: pointer;
-    margin: 5px 0px 0px 0px;
 
   }
 
