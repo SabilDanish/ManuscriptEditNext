@@ -716,42 +716,86 @@ export default function ProjectQuote() {
                     <option value="bank">Bank Transfer</option>
                   </select>
                 </div>
-
-                {/* Row 3 - Editor Instructions */}
-                <div className="mb-3">
-                  <label className="form-label">Instruction for Editor</label>
-                  <textarea
-                    name="editorInstruction"
-                    className="form-control"
-                    placeholder="Enter ..."
-                    value={formData.editorInstruction}
-                    onChange={handleChange}
-                  ></textarea>
-                </div>
-
-                {/* Row 4 - Payment Mode */}
-                <div className="mb-3">
-                  <label className="form-label">Payment Mode</label>
-                  <br />
-                  <select
-                    name="paymentMode"
-                    className="form-select"
-                    value={formData.paymentMode}
-                    onChange={handleChange}
-                    style={{ width: "100%", height: "60px" }}
-                  >
-                    <option value="">--Select payment mode--</option>
-                    <option value="credit">Credit Card</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="bank">Bank Transfer</option>
-                  </select>
-                </div>
-
-                {/* Submit Button */}
                 <button type="submit" className="btn btn-primary">
                   Submit
                 </button>
               </form>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-md-4">
+          <div className="position-sticky" style={{ top: "20px" }}>
+            <div className="card border rounded shadow-sm p-3 summary-card">
+              <div className="card-body">
+                <h5 className="card-title border-bottom pb-2">Summary</h5>
+                <p className="mb-2">
+                  <strong>Selected Services:</strong> {selectedGoal}
+                </p>
+                <div className="mb-3">
+                  <strong>Selected Option:</strong>
+                  <p className="d-flex justify-content-between align-items-center border p-2 rounded mt-2">
+                    <span>{selectedOption || "None"}</span>
+                    <span className="fw-bold">
+                      ₹
+                      {selectedOption
+                        ? goalOptions[selectedGoal]?.find(
+                            (opt: any) => opt.text === selectedOption
+                          )?.price || "0"
+                        : "0"}
+                    </span>
+                  </p>
+                </div>
+
+                <div className="mb-3">
+                  <strong>Selected Add-Ons:</strong>
+                  {selectedAddOns.length > 0 && addOnOptions[selectedOption] ? (
+                    <table className="table table-sm table-borderless mt-2">
+                      <tbody>
+                        {addOnOptions[selectedOption]
+                          .filter((addOn: any) =>
+                            selectedAddOns.includes(addOn.text)
+                          )
+                          .map((addOn: any, index: any) => (
+                            <tr key={index}>
+                              <td>{addOn.text}</td>
+                              <td className="text-end fw-bold">
+                                ₹{addOn.price || "0"}
+                              </td>
+                            </tr>
+                          ))}
+                      </tbody>
+                    </table>
+                  ) : (
+                    <p className="border p-2 rounded mt-2 text-muted">0</p>
+                  )}
+                </div>
+
+                <div className="border-top pt-3 d-flex justify-content-between align-items-center">
+                  <h5 className="mb-0">Total:</h5>
+                  <p className="fw-bold fs-5 text-primary mb-0">
+                    ₹
+                    {(() => {
+                      const optionPrice =
+                        goalOptions[selectedGoal]?.find(
+                          (opt: any) => opt.text === selectedOption
+                        )?.price || 0;
+                      const addOnsTotal = addOnOptions[selectedOption]
+                        ? addOnOptions[selectedOption]
+                            .filter((addOn: any) =>
+                              selectedAddOns.includes(addOn.text)
+                            )
+                            .reduce(
+                              (sum: any, addOn: any) =>
+                                sum + (addOn.price || 0),
+                              0
+                            )
+                        : 0;
+                      return optionPrice + addOnsTotal;
+                    })()}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
