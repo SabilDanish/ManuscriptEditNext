@@ -14766,3 +14766,9 @@ button.btn.btn-primary {
     padding: 0 5px !important;
   }
 }
+
+.CookieConsent{
+  justify-content: space-around !important;
+  background-color: red;
+
+}

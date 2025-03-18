@@ -307,12 +307,13 @@ const ServiceAgreement = () => {
       <ul>
         <li>
           {" "}
-          1-7 Days Late: 10% of the total quotation amount  8-15 Days Late: 15%
-          of the total quotation amount
+          <strong>1-7 Days Late:</strong> 10% of the total quotation amount 
         </li>
-        <li>16-30 Days Late: 25%-30% of the total quotation amount</li>
+        <li><strong>8-15 Days Late:</strong> 15%
+        of the total quotation amount</li>
+        <li><strong>16-30 Days Late:</strong> 25%-30% of the total quotation amount</li>
         <li>
-          Over 30 Days Late: The order will be considered closed, and any
+         <strong> Over 30 Days Late:</strong> The order will be considered closed, and any
           outstanding balance will be immediately due. The client may be subject
           to additional collection actions.{" "}
         </li>
@@ -357,6 +358,80 @@ const ServiceAgreement = () => {
       writing, and ManuscriptEdit will engage in a resolution process. However,
       no refunds will be processed for partially completed or ongoing
       interlinked orders.
+
+
+
+
+      <h3>Interdependency of Orders and Payment Obligations</h3>
+      <ol>
+        <li><strong>Payment Compliance Across Multiple Orders:</strong><br />
+            If a client has placed multiple orders with ManuscriptEdit (Reseapro Scientific Services Pvt. Ltd.), all orders are considered interdependent for payment purposes. Failure to make full or partial payment for any one order may result in the suspension of ongoing and future services for all other pending orders until the outstanding dues are cleared.
+        </li>
+        <li><strong>Service Suspension for Non-Payment:</strong><br />
+            In case of non-payment of any order within the stipulated due date, ManuscriptEdit reserves the right to:
+            <ul>
+                <li>◦ Pause or delay the processing of other active or upcoming orders linked to the same client until the outstanding balance is settled.</li>
+                <li>◦ Withhold final delivery of all completed services until all payments are made in full.</li>
+                <li>◦ Refuse any new service requests from the client unless outstanding dues are cleared.</li>
+            </ul>
+        </li>
+        <li><strong>Delayed Payment Penalty on Multi-Order Clients:</strong><br />
+            If a client delays payment on any order beyond the agreed timeline, a penalty will be applied as follows:
+            <ul>
+                <li><strong>◦ 1-7 Days Late:</strong> 10% of the total outstanding amount.</li>
+                <li><strong>◦ 8-15 Days Late:</strong> 15% of the total outstanding amount.</li>
+                <li><strong>◦ 16-30 Days Late:</strong> 25%-30% of the total outstanding amount.</li>
+                <li><strong>◦ Beyond 30 Days:</strong> The order will be considered defaulted, and all services (current and future) will be terminated. Legal proceedings may be initiated to recover outstanding payments.</li>
+            </ul>
+        </li>
+        <li><strong>Order Termination Due to Prolonged Non-Payment:</strong><br />
+            If an invoice remains unpaid for more than 45 days, all associated services, including active and pending orders, will be terminated without further notice. Reactivation of terminated services will require full payment of the outstanding amount, plus a reactivation fee of USD 250 per order.
+        </li>
+        <li><strong>Chargeback Prevention and Legal Action:</strong><br />
+            Any chargeback attempt on a pending order will be considered a breach of contract. In such cases, ManuscriptEdit reserves the right to:
+            <ul>
+                <li>◦ Immediately terminate all active and pending services.</li>
+                <li>◦ Impose a 150% penalty on the chargeback amount.</li>
+                <li>◦ Initiate legal proceedings for service disruption and damages.</li>
+            </ul>
+        </li>
+        <li><strong>Legal Compliance and Jurisdiction:</strong><br />
+            This clause shall be governed under the Arbitration and Conciliation Act, 1996 and the Indian Contract Act, 1872, ensuring full legal enforceability. Any disputes shall be resolved in Bhubaneswar, Odisha, India under the jurisdiction of its courts.
+        </li>
+    </ol>
+
+    <h3>Offer-Based Payment Link and Mandatory Booking Fee Clause</h3>
+
+    <ol>
+        <li><strong>Payment Link Validity and Client Obligation:</strong><br />
+            When ManuscriptEdit (Reseapro Scientific Services Pvt. Ltd.) issues a payment link for an offered service or reserved slot, the client must complete the payment within the specified validity period as communicated at the time of offer. Failure to make the payment within the stipulated time will result in automatic expiration of the offer and cancellation of the reserved expert slot.
+        </li>
+        <li><strong>Mandatory Booking Fee for Unutilized Slots:</strong><br />
+            <ul>
+                <li>◦ If the client fails to complete the payment within the validity period, a non-refundable booking fee of 30% of the total quoted amount will be automatically applicable.</li>
+                <li>◦ This booking fee is imposed to compensate for expert slot reservations that led to the loss of service availability for other potential clients.</li>
+            </ul>
+        </li>
+        <li><strong>Reactivation of Expired Offers and Additional Charges:</strong><br />
+            <ul>
+                <li>◦ If the client wishes to reinitiate the order after expiration, they must pay the 30% booking fee plus the revised quotation (if applicable).</li>
+                <li>◦ ManuscriptEdit reserves the right to adjust the pricing in case of reactivation, depending on expert availability and workload.</li>
+            </ul>
+        </li>
+        <li><strong>Legal and Financial Accountability:</strong><br />
+            <ul>
+                <li>◦ Any attempt to dispute the booking fee after offer expiration shall be considered a breach of contract, and ManuscriptEdit reserves the right to pursue legal action to recover financial damages.</li>
+                <li>◦ This clause is legally binding under the Indian Contract Act, 1872, and any disputes shall be resolved in the courts of Bhubaneswar, Odisha, India.</li>
+            </ul>
+        </li>
+    </ol>
+
+
+
+
+
+
+
       <h3>Discounted Expert Booking is Non-Refundable:</h3>
       Payments made toward securing an expert under a discounted pricing
       structure are strictly non-refundable once the expert has been secured.
