@@ -5,21 +5,213 @@ import usePriceCalculator from "@/app/hooks/priceCalculator/usePriceCalculator";
 import { useEffect, useState } from "react";
 import { DNA } from "react-loader-spinner";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import Styles from "./price.module.css";
 
 export default function Home() {
-  const [wordCount, setWordCount] = useState<string | null>();
-  const [wordCountStatement, setWordCountStatement] = useState<string | null>();
+  const pricingData = [
+    {
+      id: 1,
+      service_id: 8,
+      gup: 8,
+      turnaround_time: 1,
+      price_pages: 22,
+      price_word: 0.094,
+      old_price: 0.044,
+      price_pages_jp: 3300,
+      price_word_jp: 14,
+      price_word_in: 3.9,
+    },
+    {
+      id: 2,
+      service_id: 8,
+      gup: 8,
+      turnaround_time: 2,
+      price_pages: 18,
+      price_word: 0.083,
+      old_price: 0.04,
+      price_pages_jp: 3025,
+      price_word_jp: 13,
+      price_word_in: 3.45,
+    },
+    {
+      id: 3,
+      service_id: 8,
+      gup: 8,
+      turnaround_time: 3,
+      price_pages: 17,
+      price_word: 0.069,
+      old_price: 0.037,
+      price_pages_jp: 2750,
+      price_word_jp: 12,
+      price_word_in: 2.86,
+    },
+    {
+      id: 4,
+      service_id: 8,
+      gup: 8,
+      turnaround_time: 5,
+      price_pages: 15,
+      price_word: 0.058,
+      old_price: 0.033,
+      price_pages_jp: 2475,
+      price_word_jp: 11,
+      price_word_in: 2.41,
+    },
+    {
+      id: 5,
+      service_id: 8,
+      gup: 8,
+      turnaround_time: 10,
+      price_pages: 13,
+      price_word: 0.047,
+      old_price: 0.03,
+      price_pages_jp: 2200,
+      price_word_jp: 10,
+      price_word_in: 1.95,
+    },
+  ];
+  const pricingData2 = [
+    {
+      id: 6,
+      service_id: 9,
+      gup: 9,
+      turnaround_time: 1,
+      price_pages: 13,
+      price_word: 0.069,
+      old_price: 0.037,
+      price_pages_jp: 2750,
+      price_word_jp: 12,
+      price_word_in: 2.86,
+    },
+    {
+      id: 7,
+      service_id: 9,
+      gup: 9,
+      turnaround_time: 2,
+      price_pages: 10,
+      price_word: 0.058,
+      old_price: 0.033,
+      price_pages_jp: 2475,
+      price_word_jp: 11,
+      price_word_in: 2.41,
+    },
+    {
+      id: 8,
+      service_id: 9,
+      gup: 9,
+      turnaround_time: 3,
+      price_pages: 9,
+      price_word: 0.047,
+      old_price: 0.03,
+      price_pages_jp: 2200,
+      price_word_jp: 10,
+      price_word_in: 1.95,
+    },
+    {
+      id: 9,
+      service_id: 9,
+      gup: 9,
+      turnaround_time: 5,
+      price_pages: 8,
+      price_word: 0.04,
+      old_price: 0.026,
+      price_pages_jp: 1925,
+      price_word_jp: 9,
+      price_word_in: 1.66,
+    },
+    {
+      id: 10,
+      service_id: 9,
+      gup: 9,
+      turnaround_time: 10,
+      price_pages: 7,
+      price_word: 0.032,
+      old_price: 0.022,
+      price_pages_jp: 1650,
+      price_word_jp: 8,
+      price_word_in: 1.33,
+    },
+  ];
+  const pricingData3 = [
+    {
+      id: 72,
+      service_id: 104,
+      gup: 104,
+      turnaround_time: 1,
+      price_pages: 19,
+      price_word: 0.083,
+      old_price: 0.04,
+      price_pages_jp: 0,
+      price_word_jp: 13,
+      price_word_in: 3.45,
+    },
+    {
+      id: 73,
+      service_id: 104,
+      gup: 104,
+      turnaround_time: 2,
+      price_pages: 16,
+      price_word: 0.069,
+      old_price: 0.037,
+      price_pages_jp: 0,
+      price_word_jp: 12,
+      price_word_in: 2.86,
+    },
+    {
+      id: 74,
+      service_id: 104,
+      gup: 104,
+      turnaround_time: 3,
+      price_pages: 13,
+      price_word: 0.058,
+      old_price: 0.033,
+      price_pages_jp: 0,
+      price_word_jp: 11,
+      price_word_in: 2.41,
+    },
+    {
+      id: 75,
+      service_id: 104,
+      gup: 104,
+      turnaround_time: 5,
+      price_pages: 12,
+      price_word: 0.047,
+      old_price: 0.047,
+      price_pages_jp: 0,
+      price_word_jp: 10,
+      price_word_in: 1.95,
+    },
+    {
+      id: 76,
+      service_id: 104,
+      gup: 104,
+      turnaround_time: 10,
+      price_pages: 11,
+      price_word: 0.04,
+      old_price: 0.026,
+      price_pages_jp: 0,
+      price_word_jp: 9,
+      price_word_in: 1.66,
+    },
+  ];
+
+  console.log(pricingData[0].price_word);
+
+  const [wordCount, setWordCount] = useState<any>(275);
+  const [wordCountStatement, setWordCountStatement] = useState();
   const { isLoading, error, result, getPriceCalculator } = usePriceCalculator();
+
+  console.log("wrd:", wordCount);
 
   const serviceId8 = {};
 
   useEffect(() => {
-    setWordCountStatement("275");
+    // setWordCountStatement(275);
     getPriceCalculator({ word_count: 275 });
   }, []);
 
   const calculateHandler = () => {
-    setWordCountStatement(wordCount);
+    // setWordCountStatement(wordCount);
     getPriceCalculator({ word_count: wordCount });
   };
 
@@ -52,7 +244,7 @@ export default function Home() {
             </div>
             <div className="col-lg-6" style={{ padding: 5 }}>
               <input
-                type="textbox"
+                type="number"
                 id="wordC"
                 name="wordC"
                 placeholder=" 275"
@@ -61,17 +253,18 @@ export default function Home() {
                   border: "1px solid #a7a7a7",
                   borderRadius: 0,
                   height: 40,
+                  paddingLeft:'1rem'
                 }}
                 onChange={(e) => {
                   setWordCount(e.target.value);
                 }}
               />
             </div>
-            <div className="col-lg-3" style={{ padding: 4 }}>
+            {/* <div className="col-lg-3" style={{ padding: 4 }}>
               <button className="btn" onClick={calculateHandler}>
                 Calculate
               </button>
-            </div>
+            </div> */}
             {/* </div> */}
           </div>
           {/* </div> */}
@@ -91,11 +284,11 @@ export default function Home() {
           )}
 
           <h3 style={{ color: "black", marginBottom: "2rem" }}>
-            Prices for {wordCountStatement} words is:
+            Prices for {wordCount} words is:
             <br />
           </h3>
 
-          <div className="row gy-4">
+          {/* <div className="row gy-4">
             {result && result.length
               ? result.map((price: any) => {
                   const { Header, Messages } = price;
@@ -164,6 +357,132 @@ export default function Home() {
                   );
                 })
               : ""}
+          </div> */}
+          
+
+          <div className="container-fluid">
+            <div className="row" style={{ gap: '2rem', justifyContent:'center' }}>
+              <div className={`col-lg-3 p-0 ${Styles.priceCalculatorTable}`}>
+                <div className={Styles.priceCalculatorTableHeader}>
+                  <h5>Extensive Substantive Editing</h5>
+                </div>
+
+                <div style={{ backgroundColor: "white" }}>
+                  <p
+                    style={{
+                      marginTop: "1rem",
+                    }}
+                  >
+                    Price for '1' days delivery : $
+                    {Math.floor(wordCount * pricingData[0].price_word)}
+                  </p>
+                  <p>
+                    Price for '2' days delivery : $
+                    {Math.floor(wordCount * pricingData[1].price_word)}
+                  </p>
+                  <p>
+                    Price for '3' days delivery : $
+                    {Math.floor(wordCount * pricingData[2].price_word)}
+                  </p>
+                  <p>
+                    Price for '5' days delivery : $
+                    {Math.floor(wordCount * pricingData[3].price_word)}
+                  </p>
+                  <p>
+                    Price for '10' days delivery : $
+                    {Math.floor(wordCount * pricingData[4].price_word)}
+                  </p>
+                </div>
+                <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
+                  <button className={Styles.getStartedButton}>
+                    Get Started
+                  </button>
+                  <button className={Styles.priceQuoteButton}>
+                    Get A Price Quote
+                  </button>
+                </div>
+              </div>
+              <div className={`col-lg-3 p-0 ${Styles.priceCalculatorTable}`}>
+                <div className={Styles.priceCalculatorTableHeader}>
+                  <h5>Substantive Editing<br/><br/></h5>
+                </div>
+
+                <div style={{ backgroundColor: "white" }}>
+                  <p
+                    style={{
+                      marginTop: "1rem",
+                    }}
+                  >
+                    Price for '1' days delivery : $
+                    {Math.floor(wordCount * pricingData3[0].price_word)}
+                  </p>
+                  <p>
+                    Price for '2' days delivery : $
+                    {Math.floor(wordCount * pricingData3[1].price_word)}
+                  </p>
+                  <p>
+                    Price for '3' days delivery : $
+                    {Math.floor(wordCount * pricingData3[2].price_word)}
+                  </p>
+                  <p>
+                    Price for '5' days delivery : $
+                    {Math.floor(wordCount * pricingData3[3].price_word)}
+                  </p>
+                  <p>
+                    Price for '10' days delivery : $
+                    {Math.floor(wordCount * pricingData3[4].price_word)}
+                  </p>
+                </div>
+                <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
+                  <button className={Styles.getStartedButton}>
+                    Get Started
+                  </button>
+                  <button className={Styles.priceQuoteButton}>
+                    Get A Price Quote
+                  </button>
+                </div>
+              </div>
+              <div className={`col-lg-3 p-0 ${Styles.priceCalculatorTable}`}>
+                <div className={Styles.priceCalculatorTableHeader}>
+                  <h5>Proofreading<br/><br/></h5>
+                </div>
+
+                <div style={{ backgroundColor: "white" }}>
+                  <p
+                    style={{
+                      marginTop: "1rem",
+                    }}
+                  >
+                    Price for '1' days delivery : $
+                    {Math.floor(wordCount * pricingData2[0].price_word)}
+                  </p>
+                  <p>
+                    Price for '2' days delivery : $
+                    {Math.floor(wordCount * pricingData2[1].price_word)}
+                  </p>
+                  <p>
+                    Price for '3' days delivery : $
+                    {Math.floor(wordCount * pricingData2[2].price_word)}
+                  </p>
+                  <p>
+                    Price for '5' days delivery : $
+                    {Math.floor(wordCount * pricingData2[3].price_word)}
+                  </p>
+                  <p>
+                    Price for '10' days delivery : $
+                    {Math.floor(wordCount * pricingData2[4].price_word)}
+                  </p>
+                </div>
+                <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
+                  <button className={Styles.getStartedButton}>
+                    Get Started
+                  </button>
+                  <button className={Styles.priceQuoteButton}>
+                    Get A Price Quote
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="col-lg-12 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
             <br />
@@ -177,28 +496,6 @@ export default function Home() {
                 support@manuscriptedit.com
               </a>
             </p>
-          </div>
-
-          <div className="container">
-            <div className="col-lg-4 p-0" style={{backgroundColor:'white'}}>
-              <div style={{backgroundColor:'#43505c',width:'100%',padding: '1rem'}}>
-              <h5 style={{color:'white',textAlign:'center'}}>Extensive Substantive Editing</h5>
-              </div>
-              
-              <div style={{backgroundColor:'white'}}>
-                <p style={{backgroundColor:'grey',color:'white'}}>Price for '1' days delivery:</p>
-                <p style={{backgroundColor:'grey',color:'white'}}>Price for '2' days delivery:</p>
-                <p style={{backgroundColor:'grey',color:'white'}}>Price for '3' days delivery:</p>
-                <p style={{backgroundColor:'grey',color:'white'}}>Price for '5' days delivery:</p>
-                <p style={{backgroundColor:'grey',color:'white'}}>Price for '10' days delivery:</p>
-              </div>
-              <div>
-                <button style={{backgroundColor:'065424',color:'white'}}>Get Started</button>
-                <button style={{backgroundColor:'#1f5174',color:'white'}}>Get a price Quote</button>
-              </div>
-            </div>
-            <div className="col-lg-4"></div>
-            <div className="col-lg-4"></div>
           </div>
         </div>
       </section>
