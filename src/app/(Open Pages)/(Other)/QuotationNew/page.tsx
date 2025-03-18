@@ -741,7 +741,7 @@ export default function ProjectQuote() {
                       ₹
                       {selectedOption
                         ? goalOptions[selectedGoal]?.find(
-                            (opt) => opt.text === selectedOption
+                            (opt:any) => opt.text === selectedOption
                           )?.price || "0"
                         : "0"}
                     </span>
@@ -754,10 +754,10 @@ export default function ProjectQuote() {
                     <table className="table table-sm table-borderless mt-2">
                       <tbody>
                         {addOnOptions[selectedOption]
-                          .filter((addOn) =>
+                          .filter((addOn:any) =>
                             selectedAddOns.includes(addOn.text)
                           )
-                          .map((addOn, index) => (
+                          .map((addOn:any, index:any) => (
                             <tr key={index}>
                               <td>{addOn.text}</td>
                               <td className="text-end fw-bold">
@@ -779,14 +779,14 @@ export default function ProjectQuote() {
                     {(() => {
                       const optionPrice =
                         goalOptions[selectedGoal]?.find(
-                          (opt) => opt.text === selectedOption
+                          (opt:any) => opt.text === selectedOption
                         )?.price || 0;
                       const addOnsTotal = addOnOptions[selectedOption]
                         ? addOnOptions[selectedOption]
-                            .filter((addOn) =>
+                            .filter((addOn:any) =>
                               selectedAddOns.includes(addOn.text)
                             )
-                            .reduce((sum, addOn) => sum + (addOn.price || 0), 0)
+                            .reduce((sum:any, addOn:any) => sum + (addOn.price || 0), 0)
                         : 0;
                       return optionPrice + addOnsTotal;
                     })()}

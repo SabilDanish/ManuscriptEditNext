@@ -82,6 +82,8 @@ export default function Home() {
       <FaqHome />
       <NewsletterSubscribe />
 
+      
+
       {/* <ChristmasBranch/> */}
       {/* <OfferSlider /> */}
 
