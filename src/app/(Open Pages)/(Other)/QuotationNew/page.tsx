@@ -10,6 +10,10 @@ export default function ProjectQuote() {
 
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
   const [formData, setFormData] = useState({
+    Name: "",
+    Email: "",
+    PhoneNum: "",
+    HearAbt: "",
     majorSubject: "",
     specificSubject: "",
     deliveryDate: "",
@@ -18,16 +22,17 @@ export default function ProjectQuote() {
     paymentMode: "",
   });
 
+  console.log(formData);
+
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
   };
-
   useEffect(() => {
     setSelectedOption(""); // Reset option when goal changes
   }, [selectedGoal]);
@@ -474,8 +479,11 @@ export default function ProjectQuote() {
   };
 
   return (
-    <div className="container">
-      <div className="row mt-4" style={{ justifyContent: "space-between" }}>
+    <div className="container sumcon">
+      <div
+        className="row mt-4 sumrow"
+        style={{ justifyContent: "space-between" }}
+      >
         <div className="col-md-8 p-4 border bg-light shade">
           <div>
             <h5>
@@ -609,11 +617,65 @@ export default function ProjectQuote() {
 
             <div className="container mt-4">
               <form onSubmit={handleSubmit}>
-                {/* Row 1 - Major Subject & Specific Subject */}
+                <div className="row mb-3">
+                  <div className="col-md-6">
+                    <label className="form-label">Name *</label>
+                    <input
+                      type="text"
+                      name="Name"
+                      className="form-control"
+                      placeholder="Name"
+                      value={formData.Name}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <label className="form-label">Email *</label>
+                    <input
+                      type="text"
+                      name="Email"
+                      className="form-control"
+                      placeholder="Email"
+                      value={formData.Email}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+
+                <div className="row mb-3">
+                  <div className="col-md-6">
+                    <label className="form-label">Phone Number *</label>
+                    <input
+                      type="Number"
+                      name="PhoneNum"
+                      className="form-control"
+                      value={formData.PhoneNum}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="col-md-6">
+                    <label className="form-label">
+                      How did you hear about us
+                    </label>
+                    <select
+                      name="HearAbt"
+                      className="form-select"
+                      value={formData.HearAbt}
+                      onChange={handleChange}
+                      style={{ width: "100%", height: "60px" }}
+                    >
+                      <option value="">-- Select --</option>
+                      <option value="LinkedIn">LinkedIn</option>
+                      <option value="OfficialSite">Official Site</option>
+                      <option value="Whatsapp">Whatsapp</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div className="row mb-3">
                   <div className="col-md-6">
                     <label className="form-label">Major Subject Type *</label>
-                    <br />
                     <select
                       name="majorSubject"
                       className="form-select"
@@ -621,12 +683,7 @@ export default function ProjectQuote() {
                       onChange={handleChange}
                       style={{ width: "100%", height: "60px" }}
                     >
-                      <option
-                        value=""
-                        style={{ width: "100%", height: "60px" }}
-                      >
-                        -- Select --
-                      </option>
+                      <option value="">-- Select --</option>
                       <option value="science">Science</option>
                       <option value="math">Math</option>
                       <option value="history">History</option>
@@ -646,7 +703,7 @@ export default function ProjectQuote() {
                   </div>
                 </div>
 
-                {/* Row 2 - Delivery Date & Preferred Language */}
+                {/* Delivery Date & Preferred Language */}
                 <div className="row mb-3">
                   <div className="col-md-6">
                     <label className="form-label">Delivery Date *</label>
@@ -666,6 +723,9 @@ export default function ProjectQuote() {
                         type="radio"
                         name="preferredLanguage"
                         value="American English"
+                        checked={
+                          formData.preferredLanguage === "American English"
+                        }
                         onChange={handleChange}
                       />
                       <label className="form-check-label">
@@ -678,6 +738,9 @@ export default function ProjectQuote() {
                         type="radio"
                         name="preferredLanguage"
                         value="British English"
+                        checked={
+                          formData.preferredLanguage === "British English"
+                        }
                         onChange={handleChange}
                       />
                       <label className="form-check-label">
@@ -687,7 +750,7 @@ export default function ProjectQuote() {
                   </div>
                 </div>
 
-                {/* Row 3 - Editor Instructions */}
+                {/* Editor Instructions */}
                 <div className="mb-3">
                   <label className="form-label">Instruction for Editor</label>
                   <textarea
@@ -699,10 +762,9 @@ export default function ProjectQuote() {
                   ></textarea>
                 </div>
 
-                {/* Row 4 - Payment Mode */}
+                {/* Payment Mode */}
                 <div className="mb-3">
                   <label className="form-label">Payment Mode</label>
-                  <br />
                   <select
                     name="paymentMode"
                     className="form-select"
@@ -718,16 +780,16 @@ export default function ProjectQuote() {
                 </div>
 
                 <button type="submit" className="btn btn-primary">
-                  Submit
+                  Submit & Register
                 </button>
               </form>
             </div>
           </div>
         </div>
 
-        <div className="col-md-4">
-          <div className="position-sticky" style={{ top: "20px" }}>
-            <div className="card border rounded shadow-sm p-3 summary-card">
+        <div className="col-md-4" style={{ position: "relative" }}>
+          <div className="summary-container">
+            <div className="card border rounded shadow-sm p-3">
               <div className="card-body">
                 <h5 className="card-title border-bottom pb-2">Summary</h5>
                 <p className="mb-2">
@@ -741,23 +803,22 @@ export default function ProjectQuote() {
                       ₹
                       {selectedOption
                         ? goalOptions[selectedGoal]?.find(
-                            (opt:any) => opt.text === selectedOption
+                            (opt: any) => opt.text === selectedOption
                           )?.price || "0"
                         : "0"}
                     </span>
                   </p>
                 </div>
-
                 <div className="mb-3">
                   <strong>Selected Add-Ons:</strong>
                   {selectedAddOns.length > 0 && addOnOptions[selectedOption] ? (
                     <table className="table table-sm table-borderless mt-2">
                       <tbody>
                         {addOnOptions[selectedOption]
-                          .filter((addOn:any) =>
+                          .filter((addOn: any) =>
                             selectedAddOns.includes(addOn.text)
                           )
-                          .map((addOn:any, index:any) => (
+                          .map((addOn: any, index: any) => (
                             <tr key={index}>
                               <td>{addOn.text}</td>
                               <td className="text-end fw-bold">
@@ -771,7 +832,6 @@ export default function ProjectQuote() {
                     <p className="border p-2 rounded mt-2 text-muted">0</p>
                   )}
                 </div>
-
                 <div className="border-top pt-3 d-flex justify-content-between align-items-center">
                   <h5 className="mb-0">Total:</h5>
                   <p className="fw-bold fs-5 text-primary mb-0">
@@ -779,14 +839,18 @@ export default function ProjectQuote() {
                     {(() => {
                       const optionPrice =
                         goalOptions[selectedGoal]?.find(
-                          (opt:any) => opt.text === selectedOption
+                          (opt: any) => opt.text === selectedOption
                         )?.price || 0;
                       const addOnsTotal = addOnOptions[selectedOption]
                         ? addOnOptions[selectedOption]
-                            .filter((addOn:any) =>
+                            .filter((addOn: any) =>
                               selectedAddOns.includes(addOn.text)
                             )
-                            .reduce((sum:any, addOn:any) => sum + (addOn.price || 0), 0)
+                            .reduce(
+                              (sum: any, addOn: any) =>
+                                sum + (addOn.price || 0),
+                              0
+                            )
                         : 0;
                       return optionPrice + addOnsTotal;
                     })()}
