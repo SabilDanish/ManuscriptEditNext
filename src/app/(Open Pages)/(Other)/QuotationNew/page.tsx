@@ -23,6 +23,7 @@ export default function ProjectQuote() {
   });
 
   console.log(formData);
+  
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -480,10 +481,7 @@ export default function ProjectQuote() {
 
   return (
     <div className="container sumcon">
-      <div
-        className="row mt-4 sumrow"
-        style={{ justifyContent: "space-between" }}
-      >
+      <div className="row mt-4 sumrow" style={{ justifyContent: "space-between" }}>
         <div className="col-md-8 p-4 border bg-light shade">
           <div>
             <h5>
@@ -786,9 +784,9 @@ export default function ProjectQuote() {
             </div>
           </div>
         </div>
-
-        <div className="col-md-4" style={{ position: "relative" }}>
-          <div className="summary-container">
+        
+        <div className="col-md-4" style={{position:"relative"}}>
+          <div className="summary-container" >
             <div className="card border rounded shadow-sm p-3">
               <div className="card-body">
                 <h5 className="card-title border-bottom pb-2">Summary</h5>
