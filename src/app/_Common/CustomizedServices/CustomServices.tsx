@@ -70,7 +70,7 @@ const CustomizedServices = () => {
       <h2 className="text-center Gappy">Customized Services</h2>
       <div className="service-cards">
         {services.map((service) => (
-          <Link href={service.url}>
+          <Link href={service.url} style={{textDecoration:'none'}}>
             <div key={service.id} className="service-card">
               <div className="icon">{service.icon}</div>
               <p>{service.title}</p>

@@ -54,11 +54,13 @@
     border-radius: 10px;
     box-shadow: 2px 2px 4px #5db9ff;
     transition: transform 0.2s;
+    text-decoration: none !important;
 }
 
 .sub-service-item:hover {
     transform: scale(1.05);
     /* Slight zoom on hover */
+    text-decoration: none !important;
 }
 
 

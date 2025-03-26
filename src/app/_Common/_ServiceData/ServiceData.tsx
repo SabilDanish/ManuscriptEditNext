@@ -34,7 +34,7 @@ const ServiceList: React.FC = () => {
           </div>
           <div className="sub-services">
             {service.subServices.map((subService, idx) => (
-              <Link key={idx} href={subService.url}>
+              <Link key={idx} href={subService.url} style={{textDecoration:'none'}}>
                 <div className="sub-service-item">{subService.name}</div>
               </Link>
             ))}
