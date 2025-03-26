@@ -15,8 +15,7 @@ import GetEvery from "./_Common/GetEvery/GetEvery";
 import SocialIcon from "./_Common/StickySocial/SocialIcons";
 import FAQ from "./_Common/_FAQ/FAQ";
 import FaqHome from "./_Common/FaqHome/FaqHome";
-import BlogMob from "./_Common/BlogMob/BlogMob";
-import BlogDesk from "./_Common/BlogDesk/BlogDesk";
+
 import Testimonial from "./_Common/Testimonial/testimonial";
 import Clients from "./_Common/Clients/Clients";
 import OurProfessional from "./_Common/_OurProfessional/OurProfessional";
@@ -44,6 +43,8 @@ import PublicationPackages from "./_Common/Publication_package/Publication_packa
 import ServiceList from "./_Common/_ServiceData/ServiceData";
 import ChristmasBranch from "./_Common/Chritmas-Branch/ChristmasBranch";
 import "bootstrap/dist/css/bootstrap.min.css";
+import AnimatioSection from "./_Common/AnimationSection/AnimationSection";
+import Bloggy from "./_Common/Bloggy/Bloggy";
 
 // import '../../public/js/vendor/jquery-3.2.1.min.js'
 // import '../../public/js/bootstrap.min.js'
@@ -68,6 +69,7 @@ export default function Home() {
       />
       <ToastContainer />
       <TopBannerForm />
+      <AnimatioSection/>
       <WhyChooseUs />
       <Clients />
       <PublicationPackages />
@@ -77,8 +79,9 @@ export default function Home() {
       <OurServices />
       <Experts />
       <Testimonial />
-      {blogs && blogs.length ? <BlogDesk blogs={blogs} /> : ""}
-      {blogs && blogs.length ? <BlogMob blogs={blogs} /> : ""}
+      <Bloggy/>
+      {/* {blogs && blogs.length ? <BlogDesk blogs={blogs} /> : ""}
+      {blogs && blogs.length ? <BlogMob blogs={blogs} /> : ""} */}
       <FaqHome />
       <NewsletterSubscribe />
 
