@@ -22,10 +22,17 @@ import PublicationPackages from "./_Common/Publication_package/Publication_packa
 import ServiceList from "./_Common/_ServiceData/ServiceData";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CookieConsent from "react-cookie-consent";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   SwiperCore.use([Autoplay]);
   const { loading, error, blogs } = useBlogs();
+
+  // useEffect(() => {
+  //   fetch("http://localhost:8081/backendtesting")
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // }, []);
 
   return (
     <>
@@ -55,7 +62,7 @@ export default function Home() {
           border: "none",
           cursor: "pointer",
           transition: "transform 0.2s ease",
-          marginBottom: "6rem",
+          // marginBottom: "6rem",
         }}
         declineButtonStyle={{
           background: "linear-gradient(135deg, #F44336, #e53935)",
@@ -66,7 +73,7 @@ export default function Home() {
           border: "none",
           cursor: "pointer",
           transition: "transform 0.2s ease",
-          marginBottom: "6rem",
+          // marginBottom: "6rem",
         }}
         expires={150}
         onAccept={() => {
