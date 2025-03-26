@@ -1,0 +1,28 @@
+.accordion-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.btn2 {
+  padding: 7px 50px;
+  cursor: pointer;
+}
+
+.btn2:hover {
+  background-color: antiquewhite;
+}
+
+.buttonSeeAll {
+  background: #151130;
+  padding: 10px 87px;
+  border-radius: 7px;
+  text-decoration: none;
+  color: white;
+}
+
+.buttonSeeAll:hover {
+  background: #5746ca;
+  padding: 10px 87px;
+  border-radius: 7px;
+  text-decoration: none;
+  color: white;
+}

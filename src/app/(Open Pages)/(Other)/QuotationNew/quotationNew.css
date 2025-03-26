@@ -66,3 +66,26 @@ margin-top: 20px;
     border: 2px solid #3480ac;
 }
 
+
+.summary-container{
+    position: fixed;
+    width: 350px;
+    z-index: -1;
+}
+
+
+@media(max-width:768px){
+    .summary-container{
+        position: relative;
+        width: 100%;
+    }
+    
+}
+
+
+
+
+
+  
+
+

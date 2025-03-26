@@ -70,11 +70,7 @@ const TopBannerForm = () => {
            
           </div>
           <div className={`$"carouselItem" $"active" col-lg-6`}>
-            <img
-              src="/images/flags/Ban_updates.jpg"
-              className="carouselImage"
-              alt="Banner 1"
-            />
+            <img src="/images/flags/Ban_updates.png" className="carouselImage" alt="Banner 1" style={{width:"100%"}}/>
           </div>
         </div>
       </div>
