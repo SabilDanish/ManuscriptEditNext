@@ -6,6 +6,8 @@ import { Autoplay } from "swiper/modules";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import FaqHome from "./_Common/FaqHome/FaqHome";
+// import BlogMob from "./_Common/BlogMob/BlogMob";
+// import BlogDesk from "./_Common/BlogDesk/BlogDesk";
 import Testimonial from "./_Common/Testimonial/testimonial";
 import Clients from "./_Common/Clients/Clients";
 import TopBannerForm from "./_Common/_TopBannerForm/TopBannerForm";
