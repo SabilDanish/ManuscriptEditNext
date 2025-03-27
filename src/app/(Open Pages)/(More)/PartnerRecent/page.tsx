@@ -27,7 +27,7 @@ export default function Home() {
     useEffect(() => {
         setAllPartner(prev => [...prev, ...partners])
     }, [partners])
-
+ 
 
 
     return (

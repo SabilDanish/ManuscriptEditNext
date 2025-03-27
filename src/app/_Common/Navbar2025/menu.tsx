@@ -46,7 +46,7 @@ const menu: MenuItem[]  = [
       },
       {
         label: "Scientific / Academic Writing",
-        link: "/Writing",
+        link: "/scientificAcademicOverview",
         subMenu: [
           { label: "Scientific / Academic Writing Overview ", link: "/scientificAcademicOverview" },
           { label: "Writing Assistance", link: "/Writing" },
@@ -69,7 +69,7 @@ const menu: MenuItem[]  = [
       },
       {
         label: "Thesis & Dissertation Services",
-        link: "/PHDThesis",
+        link: "/ThesisDissertOverview",
         subMenu: [
           { label: "Thesis and Dissertation Overview", link: "/ThesisDissertOverview" },
           { label: "PhD Thesis", link: "/PHDThesis" },
@@ -78,7 +78,7 @@ const menu: MenuItem[]  = [
       },
       {
         label: "High-Impact Services",
-        link: "/PHDThesis",
+        link: "/HighImpactOverview",
         subMenu: [
           { label: "High-Impact Journal Overview", link: "/HighImpactOverview" },
           { label: "High-Impact Scientific Editing", link: "/HighImpact" },
@@ -102,7 +102,7 @@ const menu: MenuItem[]  = [
     ],
   },
   {
-    label: "SUBMIT MANUSCRIPT",
+    label: "PRICE CALCULATOR",
     subMenu: [
       
       { label: "Price Calculator", link: "/Prices" },

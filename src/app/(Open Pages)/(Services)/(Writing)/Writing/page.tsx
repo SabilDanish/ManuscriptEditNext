@@ -2,7 +2,7 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { serviceData } from "@/app/utils/service.js";
-import "../../../../_Common/getHelp/getHelp.css";
+
 import "./writingOverview.css";
 import { useEffect, useState } from "react";
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
@@ -383,13 +383,13 @@ export default function Home() {
                   },
                   {
                     imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                     text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                     name: "J Y",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                     text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                     name: "Emily Selman",
                   },

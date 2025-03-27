@@ -89,12 +89,13 @@ export default function ProofreadingServices() {
       <section style={gap}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>
-            Polish Your Research with Expert Proofreading Services
+          Enhance Your Manuscript with Expert Proofreading and English Editing Services
           </h1>
           <p className={styles.subtext}>
-            Ensure your manuscript is free from grammar, punctuation, and
-            spelling errors with professional proofreading tailored for academic
-            and research documents.
+          Ensure your manuscript is free from grammar, punctuation, and typographical errors with
+our expert proofreading and English editing services. We provide high-quality language
+refinement tailored for research papers, scientific reports, and journal submissions, helping
+you meet the publication standards.
           </p>
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
@@ -115,36 +116,39 @@ export default function ProofreadingServices() {
       {/* Proofreading Overview Section */}
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
-          <h2 className={styles.heading}>What is Proofreading?</h2>
+          <h2 className={styles.heading}>Why choose Professional Proofreading?</h2>
           <p className={styles.subtext}>
-            Proofreading is the final stage of the editing process, ensuring
-            that your document is error-free before submission.
+          Proofreading is the final step in the editing process, ensuring that your academic or scientific
+document is error-free and publication-ready. High-quality proofreading improves clarity,
+consistency, and readability, increasing your chances of journal acceptance.
           </p>
         </div>
 
         <div className={styles.benefitsBox}>
-          <h2 className={styles.heading}>Who Should Use This Service?</h2>
+          <h2 className={styles.heading}>Who Benefits from this Service?</h2>
           <ul className={styles.benefitsList}>
-            <li> ✔ PhD and MS students preparing theses and dissertations</li>
+            <li> ✔ Researchers preparing manuscripts for journal publication</li>
             <li>
-              ✔ Doctors and academics submitting journal articles, conference
-              papers, and grant proposals
+              ✔ PhD and MS students working
             </li>
             <li>
-              ✔ Researchers refining scientific and technical reports for
-              publication
+              ✔ Academics and professionals submitting scientific reports, conference papers, and
+              grant proposals
+            </li>
+            <li>
+              ✔ Authors seeking editing services to refine their work before submission
             </li>
           </ul>
         </div>
 
         <div className={styles.benefitsBox}>
-          <h2 className={styles.heading}>Key Benefits</h2>
+          <h2 className={styles.heading}>Key benefits of our Proofreading Services</h2>
           <ul className={styles.benefitsList}>
             <li>✔ Eliminates grammar, punctuation, and typographical errors</li>
             <li>
-              ✔ Focuses on language accuracy while maintaining academic voice
+              ✔ Ensures language accuracy while maintaining an academic tone
             </li>
-            <li>✔ Provides a fast turnaround to meet submission deadlines</li>
+            <li>✔ Provides fast turnaround to meet journal submission deadlines</li>
           </ul>
         </div>
       </section>

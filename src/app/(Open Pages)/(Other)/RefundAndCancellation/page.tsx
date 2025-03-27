@@ -3,7 +3,7 @@ import Metadata from "@/app/Metadata";
 import { usePathname } from "next/navigation";
 import { data } from "../../../utils/metaFile.js";
 const newData: { [key: string]: { [key: string]: string } } = data;
-import "../../../_Common/Crirstmas/Cristamas.css"
+// import "../../../_Common/Crirstmas/Cristamas.css"
 
 export default function Home() {
   // const pathName: string = usePathname().split("/").filter(val => val).join("")

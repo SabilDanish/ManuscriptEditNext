@@ -218,7 +218,7 @@ function Navbar2025() {
                 }}
                 className={mainNavItem === 2 ? "nav-menuSelected" : ""}
               >
-                SUBMIT MANUSCRIPT
+                PRICE CALCULATOR
               </Link>
              
             </li>

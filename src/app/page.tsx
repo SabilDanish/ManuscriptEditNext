@@ -2,37 +2,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SwiperCore from "swiper";
-import clientFeedback from "./_Common/_ClientFeedback/ClientFeedback";
 import { Autoplay } from "swiper/modules";
-import ourProfessional from "./_Common/_OurProfessional/OurProfessional";
-import howWeWork from "./_Common/_HowWeWork/HowWeWork";
-import Link from "next/link";
-import redirect from "./_Common/_functionality/Redirect";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import GetHelp from "./_Common/getHelp/getHelp";
-import GetEvery from "./_Common/GetEvery/GetEvery";
-import SocialIcon from "./_Common/StickySocial/SocialIcons";
-import FAQ from "./_Common/_FAQ/FAQ";
 import FaqHome from "./_Common/FaqHome/FaqHome";
-
+// import BlogMob from "./_Common/BlogMob/BlogMob";
+// import BlogDesk from "./_Common/BlogDesk/BlogDesk";
 import Testimonial from "./_Common/Testimonial/testimonial";
 import Clients from "./_Common/Clients/Clients";
-import OurProfessional from "./_Common/_OurProfessional/OurProfessional";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import ourClientBanner from "./utils/images/Logos.jpg";
-import TrustedPartner from "./_Common/_TrustedPartner/TrustedPartner";
-import GetHelpMobile from "./_Common/_getHelpMobile/getHelpMobile";
 import TopBannerForm from "./_Common/_TopBannerForm/TopBannerForm";
-import EnquiryForm from "./_Common/_enquiryForm/EnquiryForm";
 import useBlogs from "./hooks/mainPage/useBlog";
-import CounterComponent from "./_Common/CounterUp/CounterUp";
-import UpcomingWebinar from "./_Common/upcomingWebinar/upcomingWebinar";
-import RadioSection from "./_Common/RadioSection/RadioSection";
-import OfferSlider from "./_Common/_OfferSlider/OfferSlider";
-import PublicationAccordion from "./_Common/AccordionLatest/Accordion";
-import Dropdown2 from "./_Common/Dropdown2/Dropdown2";
 import OurServices from "./_Common/_OurServices/OurServices";
 import HowItWorks from "./_Common/HowItWorks/HowItWorks";
 import CustomizedServices from "./_Common/CustomizedServices/CustomServices";
@@ -41,20 +20,104 @@ import NewsletterSubscribe from "./_Common/SubsNewsletter/SubsNewsletter";
 import Experts from "./_Common/ExpertCard/Experts";
 import PublicationPackages from "./_Common/Publication_package/Publication_package";
 import ServiceList from "./_Common/_ServiceData/ServiceData";
-import ChristmasBranch from "./_Common/Chritmas-Branch/ChristmasBranch";
 import "bootstrap/dist/css/bootstrap.min.css";
-import AnimatioSection from "./_Common/AnimationSection/AnimationSection";
+import CookieConsent from "react-cookie-consent";
+import { useEffect, useState } from "react";
+import AnimationSection from "./_Common/AnimationSection/AnimationSection";
 import Bloggy from "./_Common/Bloggy/Bloggy";
-
-// import '../../public/js/vendor/jquery-3.2.1.min.js'
-// import '../../public/js/bootstrap.min.js'
 
 export default function Home() {
   SwiperCore.use([Autoplay]);
   const { loading, error, blogs } = useBlogs();
 
+  // useEffect(() => {
+  //   fetch("http://localhost:8081/backendtesting")
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // }, []);
+
   return (
     <>
+      <CookieConsent
+        location="bottom"
+        buttonText="Accept"
+        declineButtonText="Decline"
+        enableDeclineButton
+        cookieName="myCookieConsent"
+        style={{
+          background: "rgba(0, 0, 0, 0.8)",
+          backdropFilter: "blur(10px)",
+          color: "#FFFFFF",
+          fontSize: "14px",
+          padding: "20px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-around",
+          flexWrap: "wrap",
+        }}
+        buttonStyle={{
+          background: "linear-gradient(135deg, #4CAF50, #45a049)",
+          color: "#FFFFFF",
+          fontSize: "14px",
+          padding: "10px 20px",
+          borderRadius: "25px",
+          border: "none",
+          cursor: "pointer",
+          transition: "transform 0.2s ease",
+          // marginBottom: "6rem",
+        }}
+        declineButtonStyle={{
+          background: "linear-gradient(135deg, #F44336, #e53935)",
+          color: "#FFFFFF",
+          fontSize: "14px",
+          padding: "10px 20px",
+          borderRadius: "25px",
+          border: "none",
+          cursor: "pointer",
+          transition: "transform 0.2s ease",
+          // marginBottom: "6rem",
+        }}
+        expires={150}
+        onAccept={() => {
+          console.log("Cookies accepted!");
+        }}
+        onDecline={() => {
+          console.log("Cookies declined!");
+        }}
+      >
+        <div
+          style={{
+            marginRight: "20px",
+            paddingBottom: "2rem",
+            alignItems: "center",
+          }}
+        >
+          <span
+            style={{
+              fontSize: "18px",
+              fontWeight: "bold",
+              display: "block",
+              marginBottom: "5px",
+            }}
+          >
+            This website uses cookies
+          </span>
+          <span>
+            We use cookies to personalise content and ads, to provide social
+            media features and to analyse our traffic. We also share information
+            about your use of our site with our social media, advertising and
+            analytics partners who may combine it with other information that
+            you’ve provided to them or that they’ve collected from your use of
+            their services.{" "}
+            {/* <a
+              href="/privacy-policy"
+              style={{ color: "#4CAF50", textDecoration: "underline" }}
+            >
+              Learn more
+            </a> */}
+          </span>
+        </div>
+      </CookieConsent>
       <meta
         name="title"
         content="ManuscriptEdit - Expert English Editing & Proofreading for Research Papers"
@@ -67,9 +130,37 @@ export default function Home() {
         name="keywords"
         content="Research Paper Editing, Academic Editing Services, Scientific Manuscript Editing, English Proofreading Services, Journal Paper Editing, Publication Support Services, Editing Services for Researchers, Professional Academic Proofreading, Dissertation Editing Services, PhD Thesis Proofreading, Manuscript Formatting for Journals, High-Impact Journal Submission."
       />
+      <meta
+        property="og:title"
+        content="ManuscriptEdit - Expert English Editing & Proofreading for Research Papers"
+      />
+      <meta
+        property="og:description"
+        content="Professional English editing, proofreading, and publication support for researchers, authors, and academics. Get high-quality manuscript editing, journal submission assistance, and research paper formatting from PhD experts. Fast turnaround and 100% quality guarantee."
+      />
+      <meta
+        property="og:image"
+        content="https://manuscriptedit.com/images/logo16.png"
+      />
+      <meta property="og:url" content="https://www.manuscriptedit.com" />
+      <meta property="og:type" content="website" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="ManuscriptEdit - Expert English Editing & Proofreading for Research Papers"
+      />
+      <meta
+        name="twitter:description"
+        content="Professional English editing, proofreading, and publication support for researchers, authors, and academics. Get high-quality manuscript editing, journal submission assistance, and research paper formatting from PhD experts. Fast turnaround and 100% quality guarantee."
+      />
+      <meta
+        name="twitter:image"
+        content="https://manuscriptedit.com/images/logo16.png"
+      />
       <ToastContainer />
       <TopBannerForm />
-      <AnimatioSection/>
+      <AnimationSection/>
       <WhyChooseUs />
       <Clients />
       <PublicationPackages />
@@ -84,31 +175,6 @@ export default function Home() {
       {blogs && blogs.length ? <BlogMob blogs={blogs} /> : ""} */}
       <FaqHome />
       <NewsletterSubscribe />
-
-      
-
-      {/* <ChristmasBranch/> */}
-      {/* <OfferSlider /> */}
-
-      {/* <RadioSection /> */}
-      {/* <GetHelpMobile /> */}
-      {/* <TrustedPartner/> */}
-
-      {/* End of Biswa's custom codes */}
-
-      {/* <SocialIcon /> */}
-      {/* <GetEvery /> */}
-      {/* <GetHelp /> */}
-
-      {/* <OurProfessional /> */}
-      {/* <UpcomingWebinar/> */}
-      {/* <CounterComponent /> */}
-
-      {/* <Experts/> */}
-      {/* <CustomizedServices/> */}
-
-      {/* <Dropdown2 /> */}
-      {/* <PublicationAccordion/> */}
     </>
   );
 }

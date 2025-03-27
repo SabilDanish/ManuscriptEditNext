@@ -776,7 +776,6 @@ export default function ProjectQuote() {
                     <option value="bank">Bank Transfer</option>
                   </select>
                 </div>
-
                 <button type="submit" className="btn btn-primary">
                   Submit & Register
                 </button>

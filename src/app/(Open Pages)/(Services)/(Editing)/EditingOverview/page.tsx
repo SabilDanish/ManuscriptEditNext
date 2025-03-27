@@ -11,7 +11,7 @@ import { serviceData } from "../../../../utils/service.js";
 
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import "../../../../_Common/getHelp/getHelp.css";
+
 import Dropdown2 from "@/app/_Common/Dropdown2/Dropdown2";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import { useEffect, useState } from "react";
@@ -121,13 +121,18 @@ export default function Home() {
       <section style={gap}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>
-            Your Path to Polished, Publication-Ready Manuscripts
+            Expert Scientific Editing &amp; High-Quality Manuscript Services
           </h1>
           <p className={styles.subtext}>
-            Welcome to ManuscriptEdit, your trusted partner in academic and
-            scientific editing. Our expert editors refine your manuscripts,
-            ensuring they meet the highest publication standards and clearly
-            communicate your research findings.
+            We at ManuscriptEdit, your trusted partner in scientific editing and
+            academic editing, with our team of expert editors provide
+            high-quality editing services to refine your manuscript, ensuring it
+            meets top journal and publication standards. We specialize in
+            research editing, academic editing, proofreading, formatting, and
+            language support through English editing services to enhance clarity
+            and impact. Whether you’re preparing for journal submission or need
+            scientific and academic compliance, our editing services guarantee
+            high-quality precision and excellence.
           </p>
         </div>
       </section>
@@ -135,78 +140,78 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>
-            Why Choose ManuscriptEdit for Editing?
+            Why Choose ManuscriptEdit for Editing Services?
           </h2>
 
           <section className={styles.benefitsWrapper}>
-            <h4>Tailored Services for Every Requirement</h4>
+            <h4>Tailored Editing Services for every Manuscript</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Our offerings range from basic proofreading to advanced
-                substantive editing.
+                ✔ Our editing services cover everything from proofreading to
+                advanced scientific editing.
               </li>
               <li>
-                ✔ Customized solutions that meet journal and institutional
-                guidelines.
+                ✔ Customized solutions to meet the journal and publication
+                guidelines for academic and research success.
               </li>
             </ul>
           </section>
 
           <section className={styles.benefitsWrapper}>
-            <h4>Ethical, Integrity-Driven Practices</h4>
+            <h4>Ethical and Quality driven Scientific Editing</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ All editing is conducted manually by experts to maintain
-                academic and research integrity.
+                ✔ Expert editors ensure high-quality manual editing for academic
+                and research integrity.
               </li>
               <li>
-                ✔ Full compliance with global publication ethics and
-                confidentiality standards.
+                ✔ Full compliance with publication ethics, confidentiality and
+                journal standards.
               </li>
             </ul>
           </section>
 
           <section className={styles.benefitsWrapper}>
-            <h4>Fast Turnaround with Uncompromised Quality</h4>
+            <h4>Fast Turnaround with High-Quality Editing Results</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Timely delivery of edited manuscripts with meticulous quality
-                checks.
+                ✔ Timely submission of manuscripts with quality checks to meet
+                journal standards.
               </li>
               <li>
-                ✔ Dedicated editorial processes to ensure consistency and
-                accuracy.
+                ✔ Dedicated English editing services to enhance clarity,
+                language, and impact.
               </li>
             </ul>
           </section>
 
           <section className={styles.benefitsWrapper}>
-            <h4>Global Reach and Proven Results</h4>
+            <h4>Global Reach with Proven Editing Expertise</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Trusted by researchers and institutions in over 100 countries.
+                ✔ Trusted by researchers and institutions in over 100+
+                countries.
               </li>
               <li>
-                ✔ A track record of helping authors publish in high-impact
-                journals.
+                ✔ A proven track record of helping authors publish in
+                high-impact journals.
               </li>
             </ul>
           </section>
 
           <section className={styles.benefitsWrapper}>
-            <h4>Global Reach and Proven Results</h4>
+            <h4>Expert Support for all Authors</h4>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ <strong>First-Time Authors:</strong> Receive guidance and
-                support to navigate publication challenges.
-              </li>
-              <li>
-                ✔ <strong>Experienced Researchers:</strong> Advanced editing to
-                meet high-impact journal standards.
-              </li>
-              <li>
-                ✔ <strong>Institutions & Universities:</strong> Bulk editing
-                services tailored to the needs of faculty and students.
+                Our editing services cater to a diverse range of authors,
+                including first-time researchers, experienced scholars, and
+                academic institutions seeking high-quality manuscript
+                improvements. Whether you need scientific editing, proofreading,
+                or formatting for journal submission, our expert editors ensure
+                publication-ready content that meets the highest quality
+                standards. We provide comprehensive support to enhance language
+                clarity, maintain compliance with journal guidelines, and boost
+                your chances for research publication success.
               </li>
             </ul>
           </section>
@@ -244,21 +249,22 @@ export default function Home() {
 
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
-          <h2 className={styles.heading}>How We Ensure Quality in Editing</h2>
+          <h2 className={styles.heading}>Ensuring High-Quality Editing Services for Research Publication</h2>
 
           <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
-            Rigorous, Multi-Layered Editing Process
+          Rigorous Multi-Layered Editing Process for Manuscripts
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ Each manuscript undergoes an initial review by subject experts.
+              ✔ Every manuscript undergoes an initial review by our expert editors in academic and
+              scientific editing.
             </li>
             <li>
-              ✔ A second round of checks ensures consistency, clarity, and
-              adherence to journal guidelines.
+              ✔ Multiple rounds of checks improve quality, language, formatting, and clarity to meet
+              journal and publication standards.
             </li>
             <li>
-              ✔ Final proofreading ensures polished, publication-ready output.
+              ✔ Proofreading ensures a polished, error-free and publication-ready final manuscript.
             </li>
           </ul>
         </div>
@@ -267,35 +273,16 @@ export default function Home() {
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h4 style={{ marginBottom: "30px" }}>
-            Compliance with International Standards
+          Compliance with International Journal Standards
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ We align your manuscript with formatting and style standards
-              (APA, MLA, IEEE, and others).
+              ✔ Alignment with APA, MLA, IEEE, and other formatting guidelines for manuscript
+              submission.
             </li>
             <li>
-              ✔ Focused on journal-specific compliance to improve acceptance
-              rates.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section className={styles.benefitsWrapper}>
-        <div className={styles.benefitsBox}>
-          <h4 style={{ marginBottom: "30px" }}>
-            {" "}
-            Collaborative and Transparent Approach
-          </h4>
-          <ul className={styles.benefitsList}>
-            <li>
-              ✔Authors receive detailed feedback on structure, language, and
-              content improvements.
-            </li>
-            <li>
-              ✔ Open communication with editors ensures clarity and alignment
-              with your objectives.
+              ✔ Editing services tailored for journal-specific compliance to enhance publication
+              acceptance rates.
             </li>
           </ul>
         </div>
@@ -305,20 +292,36 @@ export default function Home() {
         <div className={styles.benefitsBox}>
           <h4 style={{ marginBottom: "30px" }}>
             {" "}
-            Who Benefits from Our Editing Services?
+            Collaborative and Transparent Editing Approach
           </h4>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ First-Time Authors: Receive guidance and support to navigate
-              publication challenges.
+              ✔ Authors receive detailed feedback on structure, language, and content improvement.
             </li>
             <li>
-              ✔ Experienced Researchers: Advanced editing to meet high-impact
-              journal standards.
+              ✔ Direct support from expert editors ensures clarity and alignment with author and
+              journal objectives.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className={styles.benefitsWrapper}>
+        <div className={styles.benefitsBox}>
+          <h4 style={{ marginBottom: "30px" }}>
+            {" "}
+            Who Benefits from our Editing Services?
+          </h4>
+          <ul className={styles.benefitsList}>
+            <li>
+              ✔ First-Time Authors: Guidance for navigating editing and publication challenges.
             </li>
             <li>
-              ✔ Institutions & Universities: Bulk editing services tailored to
-              the needs of faculty and students.
+              ✔ Experienced Researchers: Advanced scientific editing for high-impact journal
+              submission.
+            </li>
+            <li>
+              ✔ Institutions and Universities: Bulk editing services for faculty and students.
             </li>
           </ul>
         </div>

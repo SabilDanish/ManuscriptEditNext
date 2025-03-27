@@ -5,7 +5,6 @@ import FAQ from "@/app/_Common/_FAQ/FAQ";
 import Metadata from "@/app/Metadata";
 import { usePathname } from "next/navigation";
 import { data } from "../../../../utils/metaFile.js";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 const newData: { [key: string]: { [key: string]: string } } = data;
@@ -109,19 +108,20 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Ensure Research Integrity – Get a Professional Plagiarism Check &
-              Reduction
+              Ensure Academic Integrity- Get a Comprehensive Plagiarism Check
+              &amp; Report
             </h1>
             <p className={styles.subtext}>
-              “Enhance the originality of your research with our
-              Turnitin/iThenticate-powered plagiarism detection and reduction
-              services. We ensure journal-compliant, plagiarism-free manuscripts
-              for successful submission.”
+              Enhance the originality of our research with our advanced
+              Turnitin/iThenticate-powered plagiarism checker. Our high-accuracy
+              plagiarism check for research papers ensures compliance with
+              journal standards, safeguarding manuscript originality and
+              academic integrity for successful publication.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
                 <button className={styles.primaryButton}>
-                  Check Plagiarism Now
+                  Check Your Plagiarism Now
                 </button>
               </a>
 
@@ -134,32 +134,37 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Key Benefits of ManuscriptEdit’s Plagiarism Services:
+              Key Benefits of ManuscriptEdit’s Plagiarism Checker Services:
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Turnitin/iThenticate-Powered Plagiarism Detection – Ensuring
-                high-accuracy similarity checks.
+                ✔ Advanced Plagiarism Detection with Turnitin/iThenticate- A
+                reliable plagiarism checker for research papers, ensuring
+                precise plagiarism detection for academic manuscripts.
               </li>
               <li>
-                ✔ Comprehensive Similarity Report & Analysis – Identifying
-                problematic sections, citations, and paraphrasing issues
+                ✔ Comprehensive Plagiarism Check Report for Scientific Papers-
+                Get a detailed similarity report &amp; expert feedback on
+                plagiarism reports, including citations and paraphrasing issues.
               </li>
               <li>
-                ✔ Manual Paraphrasing & Citation Correction – Reducing
-                plagiarism without altering research meaning.
+                ✔ Manual Paraphrasing &amp; Citation Correction- Avoid
+                plagiarism in research with professional citation, maintaining
+                research authenticity.
               </li>
               <li>
-                ✔ Journal-Specific Compliance – Aligning with Elsevier,
-                Springer, Wiley, Scopus, Web of Science, and PubMed guidelines.
+                ✔ Journal-Specific Compliance &amp; Publication Support- Our
+                journal plagiarism checker services align with Elsevier,
+                Springer, Wiley, Scopus, Web of Science, and PubMed guidelines
+                for smooth journal submission.
               </li>
               <li>
-                ✔ Confidential, Secure & Ethical Process – 100% privacy
-                protection with plagiarism-free guarantees.
+                ✔ Confidential, secure &amp; Ethical Process- We guarantee a
+                plagiarism-free manuscript with complete privacy and publication
+                support services for researchers.
               </li>
             </ul>
           </div>
@@ -315,6 +320,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
+            
 
             <div className="cta-container">
               <a
@@ -333,25 +339,25 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/aa.5d969f42.jpg",
                     text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
                     name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ss.a5f9add8.jpg",
                     text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
                     name: "Lars-Ake",
                   },
                   {
                     imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                     text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                     name: "J Y",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                     text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                     name: "Emily Selman",
                   },

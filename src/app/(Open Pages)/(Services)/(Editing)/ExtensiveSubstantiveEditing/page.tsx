@@ -5,7 +5,7 @@ import FAQ from "@/app/_Common/_FAQ/FAQ";
 import Metadata from "@/app/Metadata";
 import { usePathname } from "next/navigation";
 import { data } from "../../../../utils/metaFile.js";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import { useState } from "react";
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
@@ -106,14 +106,15 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Advanced Manuscript Refinement with Extensive Substantive Editing
+              Achieve High-Quality Manuscript Refinement with Extensive
+              Substantive Editing
             </h1>
             <p className={styles.subtext}>
-              Take your manuscript to the highest academic standards with our
-              Extensive Substantive Editing service. We provide in-depth
-              structural refinement, logical coherence enhancement, and
-              comprehensive content clarity improvements to maximize the impact
-              of your research.
+              Ensure your manuscript meets the highest academic and journal
+              standards with our expert- led editing services. Our English
+              editing and scientific editing specialists enhance your research
+              with in-depth structural improvements, logical flow enhancement,
+              and content clarity to maximize publication success.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -137,11 +138,11 @@ export default function Home() {
               What is Extensive Substantive Editing?
             </h2>
             <p className={styles.subtext}>
-              Extensive Substantive Editing is a high-level manuscript revision
-              service designed for authors who require in-depth structural,
-              clarity, and logical improvement. This service ensures stronger
-              argumentation, precise readability, and enhanced manuscript flow
-              for research papers, dissertations, and journal submissions.
+              Extensive substantive editing is a professional editing service
+              designed to refine your manuscript&#39;s language, formatting, and
+              structure. Our scientific and academic editors improve clarity,
+              coherence, and readability to meet journal submission and
+              publication requirements.
             </p>
           </div>
 
@@ -149,15 +150,16 @@ export default function Home() {
             <h2 className={styles.heading}>Who Needs This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Researchers &amp; Academics submitting to high-impact
-                journals.
+                ✔ Researchers &amp; academics preparing high-impact journal
+                submissions.
               </li>
               <li>
-                ✔ PhD Candidates refining dissertations with extensive feedback.
+                ✔ PhD candidates refining dissertations with extensive editorial
+                feedback.
               </li>
               <li>
-                ✔ Authors Seeking Publication in Q1 &amp; Q2 Journals with
-                rigorous editorial standards.
+                ✔ Authors seeking publication in Q1 &amp; Q2 journals with
+                rigorous editing services.
               </li>
             </ul>
           </div>
@@ -168,15 +170,19 @@ export default function Home() {
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Ensures structural coherence &amp; logical progression of
-                research arguments.
+                ✔ Enhances manuscript clarity, structure, and logical flow.
               </li>
               <li>
-                ✔Enhances sentence-level clarity &amp; readability for a
-                scholarly audience.
+                ✔ Ensures journal-specific formatting and compliance with
+                publication standards.
               </li>
               <li>
-                ✔ Strengthens manuscript presentation to meet journal standards.
+                ✔ Strengthens sentence-level readability for a scholarly
+                audience.
+              </li>
+              <li>
+                ✔ Improves scientific and academic rigor for successful
+                submission.
               </li>
             </ul>
           </div>
@@ -378,25 +384,25 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                      " https://manuscriptedit.com/_next/static/media/aa.5d969f42.jpg",
                     text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
                     name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ss.a5f9add8.jpg",
                     text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
                     name: "Lars-Ake",
                   },
                   {
                     imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                     text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                     name: "J Y",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                     text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                     name: "Emily Selman",
                   },

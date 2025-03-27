@@ -5,19 +5,213 @@ import usePriceCalculator from "@/app/hooks/priceCalculator/usePriceCalculator";
 import { useEffect, useState } from "react";
 import { DNA } from "react-loader-spinner";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import Styles from "./price.module.css";
 
 export default function Home() {
-  const [wordCount, setWordCount] = useState<string | null>();
-  const [wordCountStatement, setWordCountStatement] = useState<string | null>();
+  const pricingData = [
+    {
+      id: 1,
+      service_id: 8,
+      gup: 8,
+      turnaround_time: 1,
+      price_pages: 22,
+      price_word: 0.094,
+      old_price: 0.044,
+      price_pages_jp: 3300,
+      price_word_jp: 14,
+      price_word_in: 3.9,
+    },
+    {
+      id: 2,
+      service_id: 8,
+      gup: 8,
+      turnaround_time: 2,
+      price_pages: 18,
+      price_word: 0.083,
+      old_price: 0.04,
+      price_pages_jp: 3025,
+      price_word_jp: 13,
+      price_word_in: 3.45,
+    },
+    {
+      id: 3,
+      service_id: 8,
+      gup: 8,
+      turnaround_time: 3,
+      price_pages: 17,
+      price_word: 0.069,
+      old_price: 0.037,
+      price_pages_jp: 2750,
+      price_word_jp: 12,
+      price_word_in: 2.86,
+    },
+    {
+      id: 4,
+      service_id: 8,
+      gup: 8,
+      turnaround_time: 5,
+      price_pages: 15,
+      price_word: 0.058,
+      old_price: 0.033,
+      price_pages_jp: 2475,
+      price_word_jp: 11,
+      price_word_in: 2.41,
+    },
+    {
+      id: 5,
+      service_id: 8,
+      gup: 8,
+      turnaround_time: 10,
+      price_pages: 13,
+      price_word: 0.047,
+      old_price: 0.03,
+      price_pages_jp: 2200,
+      price_word_jp: 10,
+      price_word_in: 1.95,
+    },
+  ];
+  const pricingData2 = [
+    {
+      id: 6,
+      service_id: 9,
+      gup: 9,
+      turnaround_time: 1,
+      price_pages: 13,
+      price_word: 0.069,
+      old_price: 0.037,
+      price_pages_jp: 2750,
+      price_word_jp: 12,
+      price_word_in: 2.86,
+    },
+    {
+      id: 7,
+      service_id: 9,
+      gup: 9,
+      turnaround_time: 2,
+      price_pages: 10,
+      price_word: 0.058,
+      old_price: 0.033,
+      price_pages_jp: 2475,
+      price_word_jp: 11,
+      price_word_in: 2.41,
+    },
+    {
+      id: 8,
+      service_id: 9,
+      gup: 9,
+      turnaround_time: 3,
+      price_pages: 9,
+      price_word: 0.047,
+      old_price: 0.03,
+      price_pages_jp: 2200,
+      price_word_jp: 10,
+      price_word_in: 1.95,
+    },
+    {
+      id: 9,
+      service_id: 9,
+      gup: 9,
+      turnaround_time: 5,
+      price_pages: 8,
+      price_word: 0.04,
+      old_price: 0.026,
+      price_pages_jp: 1925,
+      price_word_jp: 9,
+      price_word_in: 1.66,
+    },
+    {
+      id: 10,
+      service_id: 9,
+      gup: 9,
+      turnaround_time: 10,
+      price_pages: 7,
+      price_word: 0.032,
+      old_price: 0.022,
+      price_pages_jp: 1650,
+      price_word_jp: 8,
+      price_word_in: 1.33,
+    },
+  ];
+  const pricingData3 = [
+    {
+      id: 72,
+      service_id: 104,
+      gup: 104,
+      turnaround_time: 1,
+      price_pages: 19,
+      price_word: 0.083,
+      old_price: 0.04,
+      price_pages_jp: 0,
+      price_word_jp: 13,
+      price_word_in: 3.45,
+    },
+    {
+      id: 73,
+      service_id: 104,
+      gup: 104,
+      turnaround_time: 2,
+      price_pages: 16,
+      price_word: 0.069,
+      old_price: 0.037,
+      price_pages_jp: 0,
+      price_word_jp: 12,
+      price_word_in: 2.86,
+    },
+    {
+      id: 74,
+      service_id: 104,
+      gup: 104,
+      turnaround_time: 3,
+      price_pages: 13,
+      price_word: 0.058,
+      old_price: 0.033,
+      price_pages_jp: 0,
+      price_word_jp: 11,
+      price_word_in: 2.41,
+    },
+    {
+      id: 75,
+      service_id: 104,
+      gup: 104,
+      turnaround_time: 5,
+      price_pages: 12,
+      price_word: 0.047,
+      old_price: 0.047,
+      price_pages_jp: 0,
+      price_word_jp: 10,
+      price_word_in: 1.95,
+    },
+    {
+      id: 76,
+      service_id: 104,
+      gup: 104,
+      turnaround_time: 10,
+      price_pages: 11,
+      price_word: 0.04,
+      old_price: 0.026,
+      price_pages_jp: 0,
+      price_word_jp: 9,
+      price_word_in: 1.66,
+    },
+  ];
+
+  console.log(pricingData[0].price_word);
+
+  const [wordCount, setWordCount] = useState<any>(275);
+  const [wordCountStatement, setWordCountStatement] = useState();
   const { isLoading, error, result, getPriceCalculator } = usePriceCalculator();
 
-  useEffect(()=>{
-    setWordCountStatement('275')
+  console.log("wrd:", wordCount);
+
+  const serviceId8 = {};
+
+  useEffect(() => {
+    // setWordCountStatement(275);
     getPriceCalculator({ word_count: 275 });
-  },[])
+  }, []);
 
   const calculateHandler = () => {
-    setWordCountStatement(wordCount)
+    // setWordCountStatement(wordCount);
     getPriceCalculator({ word_count: wordCount });
   };
 
@@ -50,26 +244,27 @@ export default function Home() {
             </div>
             <div className="col-lg-6" style={{ padding: 5 }}>
               <input
-                type="textbox"
+                type="number"
                 id="wordC"
                 name="wordC"
-                placeholder="275"
+                placeholder=" 275"
                 style={{
                   width: "100%",
                   border: "1px solid #a7a7a7",
                   borderRadius: 0,
                   height: 40,
+                  paddingLeft:'1rem'
                 }}
                 onChange={(e) => {
                   setWordCount(e.target.value);
                 }}
               />
             </div>
-            <div className="col-lg-3" style={{ padding: 4 }}>
+            {/* <div className="col-lg-3" style={{ padding: 4 }}>
               <button className="btn" onClick={calculateHandler}>
                 Calculate
               </button>
-            </div>
+            </div> */}
             {/* </div> */}
           </div>
           {/* </div> */}
@@ -88,11 +283,12 @@ export default function Home() {
             ""
           )}
 
+          <h3 style={{ color: "black", marginBottom: "2rem" }}>
+            Prices for {wordCount} words is:
+            <br />
+          </h3>
 
-        <h3 style={{color:'black',marginBottom:'2rem'}}>Prices for {wordCountStatement} words is:<br/></h3>
-
-
-          <div className="row gy-4">
+          {/* <div className="row gy-4">
             {result && result.length
               ? result.map((price: any) => {
                   const { Header, Messages } = price;
@@ -161,6 +357,132 @@ export default function Home() {
                   );
                 })
               : ""}
+          </div> */}
+          
+
+          <div className="container-fluid">
+            <div className="row" style={{ gap: '2rem', justifyContent:'center' }}>
+              <div className={`col-lg-3 p-0 ${Styles.priceCalculatorTable}`}>
+                <div className={Styles.priceCalculatorTableHeader}>
+                  <h5>Extensive Substantive Editing</h5>
+                </div>
+
+                <div style={{ backgroundColor: "white" }}>
+                  <p
+                    style={{
+                      marginTop: "1rem",
+                    }}
+                  >
+                    Price for '1' days delivery : $
+                    {Math.floor(wordCount * pricingData[0].price_word)}
+                  </p>
+                  <p>
+                    Price for '2' days delivery : $
+                    {Math.floor(wordCount * pricingData[1].price_word)}
+                  </p>
+                  <p>
+                    Price for '3' days delivery : $
+                    {Math.floor(wordCount * pricingData[2].price_word)}
+                  </p>
+                  <p>
+                    Price for '5' days delivery : $
+                    {Math.floor(wordCount * pricingData[3].price_word)}
+                  </p>
+                  <p>
+                    Price for '10' days delivery : $
+                    {Math.floor(wordCount * pricingData[4].price_word)}
+                  </p>
+                </div>
+                <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
+                  <button className={Styles.getStartedButton}>
+                    Get Started
+                  </button>
+                  <button className={Styles.priceQuoteButton}>
+                    Get A Price Quote
+                  </button>
+                </div>
+              </div>
+              <div className={`col-lg-3 p-0 ${Styles.priceCalculatorTable}`}>
+                <div className={Styles.priceCalculatorTableHeader}>
+                  <h5>Substantive Editing<br/><br/></h5>
+                </div>
+
+                <div style={{ backgroundColor: "white" }}>
+                  <p
+                    style={{
+                      marginTop: "1rem",
+                    }}
+                  >
+                    Price for '1' days delivery : $
+                    {Math.floor(wordCount * pricingData3[0].price_word)}
+                  </p>
+                  <p>
+                    Price for '2' days delivery : $
+                    {Math.floor(wordCount * pricingData3[1].price_word)}
+                  </p>
+                  <p>
+                    Price for '3' days delivery : $
+                    {Math.floor(wordCount * pricingData3[2].price_word)}
+                  </p>
+                  <p>
+                    Price for '5' days delivery : $
+                    {Math.floor(wordCount * pricingData3[3].price_word)}
+                  </p>
+                  <p>
+                    Price for '10' days delivery : $
+                    {Math.floor(wordCount * pricingData3[4].price_word)}
+                  </p>
+                </div>
+                <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
+                  <button className={Styles.getStartedButton}>
+                    Get Started
+                  </button>
+                  <button className={Styles.priceQuoteButton}>
+                    Get A Price Quote
+                  </button>
+                </div>
+              </div>
+              <div className={`col-lg-3 p-0 ${Styles.priceCalculatorTable}`}>
+                <div className={Styles.priceCalculatorTableHeader}>
+                  <h5>Proofreading<br/><br/></h5>
+                </div>
+
+                <div style={{ backgroundColor: "white" }}>
+                  <p
+                    style={{
+                      marginTop: "1rem",
+                    }}
+                  >
+                    Price for '1' days delivery : $
+                    {Math.floor(wordCount * pricingData2[0].price_word)}
+                  </p>
+                  <p>
+                    Price for '2' days delivery : $
+                    {Math.floor(wordCount * pricingData2[1].price_word)}
+                  </p>
+                  <p>
+                    Price for '3' days delivery : $
+                    {Math.floor(wordCount * pricingData2[2].price_word)}
+                  </p>
+                  <p>
+                    Price for '5' days delivery : $
+                    {Math.floor(wordCount * pricingData2[3].price_word)}
+                  </p>
+                  <p>
+                    Price for '10' days delivery : $
+                    {Math.floor(wordCount * pricingData2[4].price_word)}
+                  </p>
+                </div>
+                <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
+                  <button className={Styles.getStartedButton}>
+                    Get Started
+                  </button>
+                  <button className={Styles.priceQuoteButton}>
+                    Get A Price Quote
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="col-lg-12 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
             <br />
@@ -604,291 +926,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section id="pricing" className="pricing section-area">
-        <div className="container aos-init aos-animate" data-aos="fade-up">
-          <div
-            className="section-title aos-init aos-animate"
-            data-aos="fade-up"
-          >
-            <h2>Publication Support Package</h2>
-          </div>
-
-          <div className="row gy-4">
-            <div
-              className="col-lg-3 aos-init aos-animate"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div className="pricing-item">
-                <div className="pricing-header">
-                  <h3>Premium Plus Package</h3>
-                  <h4>
-                    <sup>$</sup>2134<span> / 30 Days</span>
-                  </h4>
-                </div>
-
-                <ul>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Data Analysis</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Research Paper Writing</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Substantive Editing</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Journal Selection</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Target Journal Formating</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Artwork Formating</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Journal Submission</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Response to Reviewer</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Peer Review Analysis</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Cover Letter Writing</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Plagiarism Check</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Unlimited Assistance</span>
-                  </li>
-                </ul>
-
-                <div className="text-center mt-auto">
-                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
-                    Order Now
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-3 aos-init aos-animate"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              <div className="pricing-item">
-                <div className="pricing-header">
-                  <h3>
-                    Premium <br />
-                    Package
-                  </h3>
-                  <h4>
-                    <sup>$</sup>29<span> / 20 Days</span>
-                  </h4>
-                </div>
-
-                <ul>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Substantive Editing</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Journal Selection</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Target Journal Formatting</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Artwork Formatting</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Journal Submission</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Response to Reviewers</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Peer Review Analysis</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Cover Letter Writing</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Plagiarism Check</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Unlimited Assistance</span>
-                  </li>
-                </ul>
-
-                <div className="text-center mt-auto">
-                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
-                    Order Now
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-3 aos-init aos-animate"
-              data-aos="zoom-in"
-              data-aos-delay="600"
-            >
-              <div className="pricing-item">
-                <div className="pricing-header">
-                  <h3>
-                    Advanced <br></br>
-                    Package
-                  </h3>
-                  <h4>
-                    <sup>$</sup>49<span> / 15 Days</span>
-                  </h4>
-                </div>
-
-                <ul>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Substantive Editing</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Journal Selection</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Target Journal Formatting</span>
-                  </li>
-                  <li>
-                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
-                    <span>Artwork Formatting</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Journal Submission</span>
-                  </li>
-                  <li>
-                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
-                    <span>Response to Reviewers</span>
-                  </li>
-                  <li>
-                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
-                    <span>Peer Review Analysis</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Cover Letter Writing</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Plagiarism Check</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Unlimited Assistance</span>
-                  </li>
-                </ul>
-
-                <div className="text-center mt-auto">
-                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
-                    Order Now
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-3 aos-init aos-animate"
-              data-aos="zoom-in"
-              data-aos-delay="600"
-            >
-              <div className="pricing-item">
-                <div className="pricing-header">
-                  <h3>
-                    Standard<br></br>
-                    Package
-                  </h3>
-                  <h4>
-                    <sup>$</sup>49<span> / 10 Days</span>
-                  </h4>
-                </div>
-
-                <ul>
-                  <li>
-                    <i className="ri-close-line"></i>{" "}
-                    <span>Substantive Editing</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Journal Selection</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Target Journal Formatting</span>
-                  </li>
-                  <li>
-                    <i className="ri-close-line"></i>{" "}
-                    <span>Artwork Formatting</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Journal Submission</span>
-                  </li>
-                  <li>
-                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
-                    <span>Response to Reviewers</span>
-                  </li>
-                  <li>
-                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
-                    <span>Peer Review Analysis</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Cover Letter Writing</span>
-                  </li>
-                  <li>
-                    <i className="ri-close-line" style={{ color: "red" }}></i>{" "}
-                    <span>Plagiarism Check</span>
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i>{" "}
-                    <span>Unlimited Assistance</span>
-                  </li>
-                </ul>
-
-                <div className="text-center mt-auto">
-                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
-                    Order Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-3 col-md-6">

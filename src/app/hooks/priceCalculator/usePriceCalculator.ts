@@ -7,6 +7,8 @@ const usePriceCalculator = () => {
     const [error, setError] = useState<string | null>(null);
     const [result,setResult] = useState<[]>([])
 
+  
+
     const getPriceCalculator = (body:any) => {
         setIsLoading(true);
         setError(null);

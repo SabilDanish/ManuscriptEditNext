@@ -1,7 +1,7 @@
 "use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import { usePathname } from "next/navigation";
@@ -192,7 +192,7 @@ export default function Home() {
                     High-impact journal manuscript writing, Structured,
                     citation-optimized content
                   </td>
-                  <td>⏳ 10-15 Days</td>
+                  <td> 10-15 Days</td>
                 </tr>
                 <tr>
                   <td>Thesis & Dissertation Writing</td>
@@ -201,7 +201,7 @@ export default function Home() {
                     University-compliant formatting, Comprehensive research
                     structuring
                   </td>
-                  <td>⏳ 15-25 Days</td>
+                  <td> 15-25 Days</td>
                 </tr>
                 <tr>
                   <td>Grant Proposal Writing</td>
@@ -210,7 +210,7 @@ export default function Home() {
                     Persuasive & evidence-based proposals, Funding agency
                     compliance
                   </td>
-                  <td>⏳ 12-20 Days</td>
+                  <td> 12-20 Days</td>
                 </tr>
                 <tr>
                   <td>Conference Paper & Abstract Writing</td>
@@ -218,13 +218,13 @@ export default function Home() {
                   <td>
                     Clear, concise abstracts, Conference-ready manuscripts
                   </td>
-                  <td>⏳ 5-10 Days</td>
+                  <td> 5-10 Days</td>
                 </tr>
                 <tr>
                   <td>Technical & Scientific Report Writing</td>
                   <td>Corporate & R&D Teams</td>
                   <td>Structured industry reports, Data-driven analysis</td>
-                  <td>⏳ 7-12 Days</td>
+                  <td> 7-12 Days</td>
                 </tr>
                 <tr>
                   <td>Journal Response & Rewriting Assistance</td>
@@ -232,7 +232,7 @@ export default function Home() {
                   <td>
                     Addressing reviewer comments, Improving research impact
                   </td>
-                  <td>⏳ 7-10 Days</td>
+                  <td> 7-10 Days</td>
                 </tr>
               </tbody>
             </table>
@@ -363,13 +363,13 @@ export default function Home() {
                   },
                   {
                     imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                     text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                     name: "J Y",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                     text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                     name: "Emily Selman",
                   },

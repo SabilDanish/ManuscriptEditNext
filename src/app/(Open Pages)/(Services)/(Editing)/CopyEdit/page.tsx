@@ -5,7 +5,7 @@ import FAQ from "@/app/_Common/_FAQ/FAQ";
 import Metadata from "@/app/Metadata";
 import { usePathname } from "next/navigation";
 import { data } from "../../../../utils/metaFile.js";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import Link from "next/link";
@@ -109,14 +109,27 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-              Professional Copyediting Services for Clear, Concise &
-              Publication-Ready Manuscripts
+              Professional Copyediting Services for High-Quality, Journal-Ready
+              Manuscripts
             </h1>
             <p className={styles.subtext}>
-              “Improve the clarity, coherence, and impact of your research paper
-              with our expert academic & scientific copyediting services. We
-              ensure journal-specific formatting, style consistency, and
-              linguistic accuracy for successful submission.”
+              “Enhance the quality and impact of your manuscript with our expert
+              copyediting services. Our scientific and academic editors ensure
+              precise language refinement, journal-specific formatting, and
+              compliance with the leading publication standards.”
+            </p>
+          </div>
+        </section>
+
+        <section className={styles.benefitsWrapper}>
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>
+              Why Choose Our Copyediting Services?
+            </h2>
+            <p>
+              Our editing services focus on clarity, coherence, and linguistic
+              accuracy to improve your research for successful submission in
+              high-impact journals.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -133,36 +146,39 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-              Key Benefits of ManuscriptEdit’s Copyediting Services:
+              Key Benefits of ManuscriptEdit’s Copyediting Services
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Manual Copyediting by PhD Experts – Ensuring scientific and
-                academic accuracy.
+                <br></br>✔ Manual Copyediting by PhD Experts- Ensures scientific
+                and academic accuracy
               </li>
               <li>
-                ✔ Grammar, Syntax & Style Enhancement – Refining sentence flow
-                and readability.
+                ✔ Grammar, syntax &amp; Style Enhancement- Refining sentence
+                flow and readability
               </li>
               <li>
-                ✔ Journal-Specific Formatting Compliance – Aligning with
-                Elsevier, Springer, Wiley, IEEE, and Scopus-indexed journal
-                guidelines.
+                ✔ Journal-Specific Formatting Compliance- Aligning with
+                Elsevier, Springer, Wiley, IEEE, and Scopus-indexed journals
               </li>
               <li>
-                ✔ Consistency in Terminology & Technical Language – Maintaining
-                discipline-specific terminology precision.
+                ✔ Consistency in Terminology &amp; Data Handling- Timely,
+                confidential, and Journal- compliant copyediting
               </li>
               <li>
-                ✔ Fast Turnaround & Secure Data Handling – Confidential, timely,
-                and journal-compliant copyediting.
+                ✔ Fast Turnaround &amp; Secure Data Handling- Timely,
+                confidential, and journal- compliant copyediting
               </li>
             </ul>
+            <p>
+              <br />
+              Achieve publication success with our expert editing services
+              tailored for scientific research and academic journals!
+            </p>
           </div>
 
           <section className={styles.proofreadingWrapper}>
@@ -336,25 +352,25 @@ export default function Home() {
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                      " https://manuscriptedit.com/_next/static/media/aa.5d969f42.jpg",
                     text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
                     name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ss.a5f9add8.jpg",
                     text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
                     name: "Lars-Ake",
                   },
                   {
                     imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                     text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                     name: "J Y",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                     text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                     name: "Emily Selman",
                   },

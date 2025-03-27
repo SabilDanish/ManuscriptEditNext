@@ -5,7 +5,7 @@ import FAQ from "@/app/_Common/_FAQ/FAQ";
 import Metadata from "@/app/Metadata";
 import { usePathname } from "next/navigation";
 // import { data } from "../../../../app/utils/metaFile";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import redirect from "@/app/_Common/_functionality/Redirect";
 // const newData: { [key: string]: { [key: string]: string } } = data;
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
@@ -63,7 +63,8 @@ export default function Home() {
 
   const accord2: { question: string; answer: string }[] = [
     {
-      question: "What is the difference between basic editing and high-impact scientific editing?",
+      question:
+        "What is the difference between basic editing and high-impact scientific editing?",
       answer:
         "High-impact scientific editing focuses on technical precision, logical flow, and journal compliance beyond standard language editing.",
     },
@@ -83,12 +84,12 @@ export default function Home() {
         "We support STEM, Life Sciences, Medicine, Social Sciences, and Engineering.",
     },
     {
-      question: "How do I ensure my manuscript is formatted correctly for my target journal?",
+      question:
+        "How do I ensure my manuscript is formatted correctly for my target journal?",
       answer:
         "Our experts ensure compliance with APA, MLA, IEEE, and journal-specific guidelines.",
     },
-];
-
+  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -267,18 +268,34 @@ acceptance rate in high-impact journals.
               <div className="before-example">
                 <h3>Before (Original Unedited Text):</h3>
                 <ul className="before-text">
-                  <li>Manuscript contains language inconsistencies and unclear technical terms.</li>
-                  <li>Improper structuring leading to lack of coherence in argumentation.</li>
-                  <li>High risk of rejection due to readability and formatting issues.</li>
+                  <li>
+                    Manuscript contains language inconsistencies and unclear
+                    technical terms.
+                  </li>
+                  <li>
+                    Improper structuring leading to lack of coherence in
+                    argumentation.
+                  </li>
+                  <li>
+                    High risk of rejection due to readability and formatting
+                    issues.
+                  </li>
                 </ul>
               </div>
 
               <div className="after-example">
                 <h3>After (Edited for Clarity &amp; Logical Flow):</h3>
                 <ul className="after-text">
-                  <li>Refined, well-structured, and publication-ready manuscript.</li>
-                  <li>Stronger scientific clarity and coherence across all sections.</li>
-                  <li>Improved readability without altering technical accuracy.</li>
+                  <li>
+                    Refined, well-structured, and publication-ready manuscript.
+                  </li>
+                  <li>
+                    Stronger scientific clarity and coherence across all
+                    sections.
+                  </li>
+                  <li>
+                    Improved readability without altering technical accuracy.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -292,19 +309,22 @@ acceptance rate in high-impact journals.
             <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
-                <p className="pricing-text">$0.06 per word (Standard Scientific Editing)</p>
+                <p className="pricing-text">
+                  $0.06 per word (Standard Scientific Editing)
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Standard Delivery</h3>
-                <p className="delivery-time">$0.12 per word
-                (Advanced Editing)</p>
+                <p className="delivery-time">
+                  $0.12 per word (Advanced Editing)
+                </p>
               </div>
 
               <div className="delivery-item">
                 <h3>Express Delivery</h3>
                 <p className="delivery-time">
-                5 – 12 Days (Based on service level and manuscript complexity)
+                  5 – 12 Days (Based on service level and manuscript complexity)
                 </p>
               </div>
             </div>
@@ -326,25 +346,25 @@ acceptance rate in high-impact journals.
                 {[
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/aa.ee410d80.jpeg",
+                      " https://manuscriptedit.com/_next/static/media/aa.5d969f42.jpg",
                     text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
                     name: "Firas obeidat",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ss.336d4741.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ss.a5f9add8.jpg",
                     text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
                     name: "Lars-Ake",
                   },
                   {
                     imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                     text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                     name: "J Y",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                     text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                     name: "Emily Selman",
                   },

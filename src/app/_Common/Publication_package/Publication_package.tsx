@@ -77,7 +77,7 @@ const PublicationPackages = () => {
     <>
       <div className="container" style={{ marginTop: "3rem" }}>
         <div className="row">
-          <div className="accordion__title">
+          <div className="accordion__title" style={{marginBottom:'20px'}}>
             <h2 className='accordion_title'>Choose Your Service Plan</h2>
           </div>
         </div>

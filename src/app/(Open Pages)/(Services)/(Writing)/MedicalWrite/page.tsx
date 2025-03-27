@@ -1,7 +1,7 @@
 "use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
 import { usePathname } from "next/navigation";
@@ -192,7 +192,7 @@ export default function Home() {
                   <td>
                     Clinical trial protocols, FDA/EMA regulatory submissions
                   </td>
-                  <td>⏳ 7-10 Days</td>
+                  <td> 7-10 Days</td>
                 </tr>
                 <tr>
                   <td>Scientific Manuscript Writing</td>
@@ -200,19 +200,19 @@ export default function Home() {
                   <td>
                     Research articles, Systematic reviews, Journal submissions
                   </td>
-                  <td>⏳ 5-7 Days</td>
+                  <td> 5-7 Days</td>
                 </tr>
                 <tr>
                   <td>Clinical Study Reports (CSR)</td>
                   <td>Clinical researchers</td>
                   <td>Study design & methodology, Safety & efficacy reports</td>
-                  <td>⏳ 7-12 Days</td>
+                  <td> 7-12 Days</td>
                 </tr>
                 <tr>
                   <td>Medical Literature Review</td>
                   <td>Medical researchers</td>
                   <td>Evidence-based literature synthesis, Meta-analyses</td>
-                  <td>⏳ 5-8 Days</td>
+                  <td> 5-8 Days</td>
                 </tr>
                 <tr>
                   <td>Case Reports & Case Series</td>
@@ -220,19 +220,19 @@ export default function Home() {
                   <td>
                     Detailed patient case studies, Journal-compliant format
                   </td>
-                  <td>⏳ 4-6 Days</td>
+                  <td> 4-6 Days</td>
                 </tr>
                 <tr>
                   <td>Regulatory Submission Dossiers</td>
                   <td>Pharma & medical device companies</td>
                   <td>IND, NDA, ANDA, CTD dossiers, Compliance with ICH-GCP</td>
-                  <td>⏳ 10-15 Days</td>
+                  <td> 10-15 Days</td>
                 </tr>
                 <tr>
                   <td>Medical Blog & Content Writing</td>
                   <td>Healthcare organizations</td>
                   <td>Patient education, Disease awareness articles</td>
-                  <td>⏳ 3-5 Days</td>
+                  <td> 3-5 Days</td>
                 </tr>
               </tbody>
             </table>
@@ -356,13 +356,13 @@ export default function Home() {
                   },
                   {
                     imgSrc:
-                      "	https://manuscriptedit.com/_next/static/media/ad.9cd4964a.jpeg",
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
                     text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
                     name: "J Y",
                   },
                   {
                     imgSrc:
-                      "https://manuscriptedit.com/_next/static/media/ag.4d10944f.jpeg",
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
                     text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
                     name: "Emily Selman",
                   },
