@@ -10,7 +10,7 @@ const TopBannerForm = () => {
     <>
       <div className="container" style={{ marginBottom: "60px" }}>
         <div className="row" style={{ justifyContent: "end" }}>
-          <div className="col-lg-6">
+          <div className="col-lg-6" >
             <h4 style={{ fontWeight: "Bold", fontSize: "2rem" }}>
               Get
               <span
@@ -69,7 +69,7 @@ const TopBannerForm = () => {
             </Link>
            
           </div>
-          <div className={`$"carouselItem" $"active" col-lg-6`}>
+          <div className={`$"carouselItem" $"active" col-lg-6`} style={{display:'flex' , justifyContent:'center' , alignItems:'center'}}>
             <img
               src="/images/flags/Ban_updates.jpg"
               className="carouselImage"
