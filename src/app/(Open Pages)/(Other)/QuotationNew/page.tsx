@@ -2,15 +2,18 @@
 
 import { useEffect, useState } from "react";
 import "../QuotationNew/quotationNew.css";
-import { goalOptions } from '@/app/utils/Quote';
-import { addOnOptions } from '@/app/utils/Quote';
-
+import { goalOptions } from "@/app/utils/Quote";
+import { addOnOptions } from "@/app/utils/Quote";
 
 export default function ProjectQuote() {
   const [selectedGoal, setSelectedGoal] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
   const [wordCount, setWordCount] = useState(false);
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  let TotallyTotal: any;
+
   const [formData, setFormData] = useState({
     Name: "",
     Email: "",
@@ -24,8 +27,8 @@ export default function ProjectQuote() {
     paymentMode: "",
   });
 
-  
- console.log("selectedAddOns:" , selectedAddOns)
+  //  console.log("selectedAddOns:" , selectedAddOns)
+
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -33,7 +36,7 @@ export default function ProjectQuote() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
+    // console.log("Form Data Submitted:", formData);
   };
   useEffect(() => {
     setSelectedOption(""); // Reset option when goal changes
@@ -53,9 +56,51 @@ export default function ProjectQuote() {
     { text: "Design and Image Polishing and Creation", emoji: "🎨" },
   ];
 
- 
+  // console.log("Form Data Submitted:", { formData });
 
- 
+  const [postVar, setPostVar] = useState({
+    service_type: "7",
+    service_name: "10",
+    add_ons: "2",
+    major_subject: "60",
+    specific_subject: " zoolozy and zoolozy",
+    delivery_date: "2025-04-16",
+    language: "english",
+    inst_for_editor: "Api testing",
+    word_count: "2000",
+    pay_mode: "debit",
+    file: "test.docs",
+    name: "iti",
+    email: "biswaranjan@reseapro.com",
+    phone: "6543213456",
+    user_find: "fb",
+    total_price: "332000",
+  });
+
+  useEffect(() => {
+    setPostVar({
+      service_type: "9",
+      service_name: "10",
+      add_ons: "2",
+      major_subject: formData.majorSubject,
+      specific_subject: formData.specificSubject,
+      delivery_date: formData.deliveryDate,
+      language: formData.preferredLanguage,
+      inst_for_editor: formData.editorInstruction,
+      word_count: "2000",
+      pay_mode: formData.paymentMode,
+      file: "test.docs",
+      name: formData.Name,
+      email: formData.Email,
+      phone: formData.PhoneNum,
+      user_find: formData.HearAbt,
+      total_price: String(totalPrice),
+    });
+  }, [formData]);
+
+  console.log("Final value:", postVar);
+  
+
   return (
     <div className="container sumcon">
       <div
@@ -123,7 +168,7 @@ export default function ProjectQuote() {
             {selectedGoal && goalOptions[selectedGoal] && (
               <div className="mt-3">
                 <h5>Choose a Service for {selectedGoal}</h5>
-               
+
                 {goalOptions[selectedGoal].map((option: any, idx: any) => (
                   <div key={idx} className="form-check gapping">
                     <input
@@ -396,7 +441,13 @@ export default function ProjectQuote() {
                             <tr key={index}>
                               <td>{addOn.text}</td>
                               <td className="text-end fw-bold">
-                              {addOn.price > 0 ? `₹${addOn.price}` : <h6 className="TableQuote">Price after discussion</h6>}
+                                {addOn.price > 0 ? (
+                                  `₹${addOn.price}`
+                                ) : (
+                                  <h6 className="TableQuote">
+                                    Price after discussion
+                                  </h6>
+                                )}
                               </td>
                             </tr>
                           ))}
@@ -426,9 +477,13 @@ export default function ProjectQuote() {
                               0
                             )
                         : 0;
-                      return optionPrice + addOnsTotal;
+                      TotallyTotal = optionPrice + addOnsTotal;
+
+                      return TotallyTotal;
                     })()}
+                    
                   </p>
+                  
                 </div>
               </div>
             </div>
