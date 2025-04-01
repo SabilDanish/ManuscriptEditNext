@@ -4,7 +4,6 @@
   text-align: center;
   border-radius: 10px;
   background-color: #fff;
-  min-height: 400px;
 }
 
 .blog-image {
@@ -46,7 +45,7 @@
   text-align: center;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #151130;
   color: white !important;
   text-decoration: none !important;
