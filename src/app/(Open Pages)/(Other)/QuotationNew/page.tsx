@@ -9,10 +9,10 @@ export default function ProjectQuote() {
   const [selectedGoal, setSelectedGoal] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
   const [wordCount, setWordCount] = useState(false);
+  const [manualWordCount, setManualWordCount] = useState("");
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
   const [totalPrice, setTotalPrice] = useState(0);
-
-  let TotallyTotal: any;
+  const [file, setFile] = useState<File | null>(null);
 
   const [formData, setFormData] = useState({
     Name: "",
@@ -26,21 +26,6 @@ export default function ProjectQuote() {
     editorInstruction: "",
     paymentMode: "",
   });
-
-  //  console.log("selectedAddOns:" , selectedAddOns)
-
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // console.log("Form Data Submitted:", formData);
-  };
-  useEffect(() => {
-    setSelectedOption(""); // Reset option when goal changes
-  }, [selectedGoal]);
 
   const goals = [
     { text: "Editing & Language Services", emoji: "✍️" },
@@ -56,50 +41,308 @@ export default function ProjectQuote() {
     { text: "Design and Image Polishing and Creation", emoji: "🎨" },
   ];
 
-  // console.log("Form Data Submitted:", { formData });
+  const mainServices = {
+    "Editing & Language Services": "355",
+    "Medical & Clinical Writing Services": "356",
+    "Regulatory Writing Support": "357",
+    "Scientific Communication Support": "358",
+    "Evidence Synthesis & Review Writing": "359",
+    "Scientific Publication Assistance": "360",
+    "Data & Statistical Support": "361",
+    "Journal Publication Support": "362",
+    "Manuscriptedit Packages": "363",
+    "Academic & Non-Scientific Writing": "364",
+    "Design and Image Polishing and Creation": "365",
+  };
 
-  const [postVar, setPostVar] = useState({
-    service_type: "7",
-    service_name: "10",
-    add_ons: "2",
-    major_subject: "60",
-    specific_subject: " zoolozy and zoolozy",
-    delivery_date: "2025-04-16",
-    language: "english",
-    inst_for_editor: "Api testing",
-    word_count: "2000",
-    pay_mode: "debit",
-    file: "test.docs",
-    name: "iti",
-    email: "biswaranjan@reseapro.com",
-    phone: "6543213456",
-    user_find: "fb",
-    total_price: "332000",
-  });
+  const subServices = {
+    "Substantive (Advanced) Editing": "366",
+    "Copyediting (Standard Editing)": "367",
+    Proofreading: "368",
+    "Journal Formatting & Style Editing": "369",
+    "Language Enhancement & Clarity Check": "370",
+    "Re-editing Support": "371",
+    "Reference & Citation Editing": "372",
+    "12 Hrs. Express Editing": "373",
+    "Extensive Substantive Editing": "374",
+    "Clinical Research Manuscript Writing": "375",
+    "Research Proposal & Protocol Development": "376",
+    "Patient & HCP Education Material": "377",
+    "Regulatory Document Preparation": "378",
+    "Compliance & Standards Alignment": "379",
+    "API Documentation": "380",
+    "Scientific Marketing & Promotional Content": "381",
+    "Conference Abstract & Presentation Writing": "382",
+    "Informational Publications": "383",
+    "Systematic Review Writing": "384",
+    "Narrative & Scoping Review Writing": "385",
+    "Case Report / Case Series Writing": "386",
+    "Creative & Narrative Writing": "387",
+    "Comprehensive Manuscript Writing": "388",
+    "Section-wise Scientific Writing": "389",
+    "Title, Abstract & Keyword Optimization": "390",
+    "Review Article & Short Communication Writing": "391",
+    "Supplementary Materials Preparation": "392",
+    "Commentaries & Opinion Article Writing": "393",
+    "Meta-analysis Writing & Execution": "394",
+    "Research Data Analysis & Interpretation": "395",
+    "End-to-End Journal Submission Support": "396",
+    "Journal Selection Assistance": "397",
+    "Cover Letter Preparation": "398",
+    "Response to Reviewer Comments": "399",
+    "Pre-Submission Peer Review": "400",
+    "Post-Submission Follow-up Support": "401",
+    "Fast Track Publication Consultation": "402",
+    "Basic Package": "403",
+    "Standard Package": "404",
+    "Advanced Package": "405",
+    "Premium Publication Package": "406",
+    "Reviewer Response Package": "407",
+    "Fast-Track Express Package": "408",
+    "Rejection Handling Package": "409",
+    "Custom Publication Package": "410",
+    "Advance Package": "411",
+    "Plagiarism Check & Report": "412",
+    "Academic Essay & Report Writing": "413",
+    "Academic Writing": "414",
+    "Thesis & Dissertation Writing Support": "415",
+    "Scientific Illustration Design": "416",
+    "Graph & Chart Enhancement": "417",
+    "Image Formatting & Conversion": "418",
+    "Poster Design & Development": "419",
+  };
+
+  const addOns = {
+    "Editing & Language Services": {
+      "Journal Formatting & Style Editing": "1",
+      "Reference & Citation Editing": "2",
+      "Language Enhancement & Clarity Check": "3",
+      "Plagiarism Check & Report": "4",
+    },
+    "Medical & Clinical Writing Services": {
+      "Patient & HCP Education Material": "5",
+      "Compliance & Standards Alignment": "6",
+      "Journal Selection Assistance": "7",
+    },
+    "Regulatory Writing Support": {
+      "Compliance & Standards Alignment": "8",
+      "Scientific Illustration Design": "9",
+      "End-to-End Journal Submission Support": "10",
+    },
+    "Scientific Communication Support": {
+      "Scientific Illustration Design": "11",
+      "Poster Design & Development": "12",
+      "Graph & Chart Enhancement": "13",
+    },
+    "Evidence Synthesis & Review Writing": {
+      "Meta-analysis Writing & Execution": "14",
+      "Reference & Citation Editing": "15",
+      "Scientific Illustration Design": "16",
+    },
+    "Scientific Publication Assistance": {
+      "Title, Abstract & Keyword Optimization": "17",
+      "Journal Formatting & Style Editing": "18",
+      "Pre-Submission Peer Review": "19",
+    },
+    "Data & Statistical Support": {
+      "Graph & Chart Enhancement": "20",
+      "Meta-analysis Writing": "21",
+      "Scientific Illustration Design": "22",
+    },
+    "Journal Publication Support": {
+      "Cover Letter Preparation": "23",
+      "Response to Reviewer Comments": "24",
+      "Fast Track Publication Consultation": "25",
+    },
+    "Manuscriptedit Packages": {
+      "Reviewer Response Package": "26",
+      "Rejection Handling Package": "27",
+      "Plagiarism Check & Report": "28",
+    },
+    "Academic & Non-Scientific Writing": {
+      "Plagiarism Check & Report": "29",
+      "Reference & Citation Editing": "30",
+      "Scientific Illustration Design": "31",
+    },
+    "Design and Image Polishing and Creation": {
+      "Image Formatting & Conversion": "32",
+      "Graph & Chart Enhancement": "33",
+      "Scientific Marketing & Promotional Content": "34",
+    },
+  };
+
+  // console.log(addOns[selectedGoal][selectedAddOns[1]])
+  for (let i = 0; i < selectedAddOns.length; i++) {
+    let j = selectedAddOns[i];
+    // console.log(addOns[selectedGoal][j]);
+  }
 
   useEffect(() => {
-    setPostVar({
-      service_type: "9",
-      service_name: "10",
-      add_ons: "2",
-      major_subject: formData.majorSubject,
+    const optionPrice =
+      goalOptions[selectedGoal]?.find((opt: any) => opt.text === selectedOption)
+        ?.price || 0;
+
+    const addOnsTotal = addOnOptions[selectedOption]
+      ? addOnOptions[selectedOption]
+          .filter((addOn: any) => selectedAddOns.includes(addOn.text))
+          .reduce((sum: any, addOn: any) => sum + (addOn.price || 0), 0)
+      : 0;
+
+    // Calculate the final total price
+    const calculatedTotal = optionPrice + addOnsTotal;
+    setTotalPrice(calculatedTotal);
+  }, [selectedGoal, selectedOption, selectedAddOns]);
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  useEffect(() => {
+    setSelectedOption(""); // Reset option when goal changes
+    setSelectedAddOns([]); // Reset add-ons when goal changes
+  }, [selectedGoal]);
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setFile(e.target.files[0]);
+    }
+  };
+
+  const mapServiceType = (goal: string): string => {
+    // Map the selected goal to the corresponding service_type value
+    const goalToServiceType: Record<string, string> = {
+      "Editing & Language Services": "1",
+      "Medical & Clinical Writing Services": "2",
+      "Regulatory Writing Support": "3",
+      "Scientific Communication Support": "4",
+      "Evidence Synthesis & Review Writing": "5",
+      "Scientific Publication Assistance": "6",
+      "Data & Statistical Support": "7",
+      "Journal Publication Support": "8",
+      "Manuscriptedit Packages": "9",
+      "Academic & Non-Scientific Writing": "10",
+      "Design and Image Polishing and Creation": "11",
+    };
+    return goalToServiceType[goal] || "0";
+  };
+
+  const mapServiceName = (option: string): string => {
+    // Map the selected option to the corresponding service_name value
+    // This would depend on your specific options and their mappings
+    // Example mapping - you'll need to adjust this based on your actual options
+    if (option.includes("Standard")) return "1";
+    if (option.includes("Advanced")) return "2";
+    if (option.includes("Premium")) return "3";
+    return "0";
+  };
+
+  const mapAddOns = (addOns: string[]): string => {
+    // Map selected add-ons to a comma-separated string of their codes
+    // Example mapping - adjust based on your actual add-ons
+    const addOnToCode: Record<string, string> = {
+      "Urgent Delivery": "1",
+      "Additional Revision": "2",
+      "Journal Formatting": "3",
+    };
+
+    return addOns.map((addOn) => addOnToCode[addOn] || "0").join(",");
+  };
+
+  const mapMajorSubject = (subject: string): string => {
+    // Map major subject to corresponding code
+    const subjectToCode: Record<string, string> = {
+      science: "60",
+      math: "61",
+      history: "62",
+    };
+    return subjectToCode[subject] || "60"; // default to 60 if not found
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Prepare the data in the required format
+    const postData = {
+      service_type: mapServiceType(selectedGoal),
+      service_name: mapServiceName(selectedOption),
+      add_ons: mapAddOns(selectedAddOns),
+      major_subject: mapMajorSubject(formData.majorSubject),
       specific_subject: formData.specificSubject,
       delivery_date: formData.deliveryDate,
-      language: formData.preferredLanguage,
+      language: formData.preferredLanguage.toLowerCase().replace(" ", "_"),
       inst_for_editor: formData.editorInstruction,
-      word_count: "2000",
+      word_count: manualWordCount || "0", // Use manual word count or default to "0"
       pay_mode: formData.paymentMode,
-      file: "test.docs",
+      file: file ? file.name : "no_file_uploaded.docs",
       name: formData.Name,
       email: formData.Email,
       phone: formData.PhoneNum,
       user_find: formData.HearAbt,
       total_price: String(totalPrice),
-    });
-  }, [formData]);
+    };
 
-  console.log("Final value:", postVar);
-  
+    console.log("Submitting data:", postData);
+
+    // try {
+    //   const response = await fetch(
+    //     "https://www.secure.manuscriptedit.com/api/submit_quotation_out.php",
+    //     {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify(postData),
+    //     }
+    //   );
+
+    //   if (!response.ok) {
+    //     throw new Error(`Error submitting quotation: ${response.statusText}`);
+    //   }
+
+    //   const { Message } = await response.json();
+    //   if (Message === "Data Saved Successfully") {
+    //     alert("Quotation submitted successfully!");
+    //     // Reset form if needed
+    //   } else {
+    //     alert("Something went wrong with the submission.");
+    //   }
+    // } catch (err: any) {
+    //   console.error("Error:", err.message);
+    //   alert("Failed to submit quotation. Please try again.");
+    // }
+    try {
+      const response = await fetch(
+        "https://www.secure.manuscriptedit.com/api/submit_quotation_out.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Error encountered: ${response.statusText}`);
+      }
+
+      const { Message } = await response.json();
+
+      if (Message === "Data Saved Successfully") {
+        alert("Quotation sent successfully.");
+      } else {
+        alert(
+          "There is a problem encountered while sending the data. Please try to resubmit."
+        );
+      }
+    } catch (err: any) {
+      console.error("Error encountered:", err.message);
+      alert(
+        "Error encountered while submitting the Quotation. Please try again."
+      );
+    }
+  };
 
   return (
     <div className="container sumcon">
@@ -120,13 +363,18 @@ export default function ProjectQuote() {
                 words & get an instant quote.
               </p>
 
-              <input type="file" className="Sizy" />
+              <input
+                type="file"
+                className="Sizy"
+                onChange={handleFileChange}
+                accept=".doc,.docx"
+              />
 
               <span className="Alignments">
                 <input
                   type="checkbox"
                   checked={wordCount}
-                  onClick={() => setWordCount(!wordCount)}
+                  onChange={() => setWordCount(!wordCount)}
                 />
                 <p style={{ marginBottom: "0px" }}>
                   I want to enter word count
@@ -138,6 +386,8 @@ export default function ProjectQuote() {
                   type="text"
                   className="form-control"
                   placeholder="e.g 2500"
+                  value={manualWordCount}
+                  onChange={(e) => setManualWordCount(e.target.value)}
                 />
               )}
             </div>
@@ -247,17 +497,19 @@ export default function ProjectQuote() {
                       placeholder="Name"
                       value={formData.Name}
                       onChange={handleChange}
+                      required
                     />
                   </div>
                   <div className="col-md-6">
                     <label className="form-label">Email *</label>
                     <input
-                      type="text"
+                      type="email"
                       name="Email"
                       className="form-control"
                       placeholder="Email"
                       value={formData.Email}
                       onChange={handleChange}
+                      required
                     />
                   </div>
                 </div>
@@ -266,11 +518,12 @@ export default function ProjectQuote() {
                   <div className="col-md-6">
                     <label className="form-label">Phone Number *</label>
                     <input
-                      type="Number"
+                      type="tel"
                       name="PhoneNum"
                       className="form-control"
                       value={formData.PhoneNum}
                       onChange={handleChange}
+                      required
                     />
                   </div>
 
@@ -284,11 +537,13 @@ export default function ProjectQuote() {
                       value={formData.HearAbt}
                       onChange={handleChange}
                       style={{ width: "100%", height: "60px" }}
+                      required
                     >
                       <option value="">-- Select --</option>
                       <option value="LinkedIn">LinkedIn</option>
                       <option value="OfficialSite">Official Site</option>
                       <option value="Whatsapp">Whatsapp</option>
+                      <option value="fb">Facebook</option>
                     </select>
                   </div>
                 </div>
@@ -302,6 +557,7 @@ export default function ProjectQuote() {
                       value={formData.majorSubject}
                       onChange={handleChange}
                       style={{ width: "100%", height: "60px" }}
+                      required
                     >
                       <option value="">-- Select --</option>
                       <option value="science">Science</option>
@@ -319,11 +575,11 @@ export default function ProjectQuote() {
                       placeholder="Enter ..."
                       value={formData.specificSubject}
                       onChange={handleChange}
+                      required
                     ></textarea>
                   </div>
                 </div>
 
-                {/* Delivery Date & Preferred Language */}
                 <div className="row mb-3">
                   <div className="col-md-6">
                     <label className="form-label">Delivery Date *</label>
@@ -333,6 +589,7 @@ export default function ProjectQuote() {
                       className="form-control"
                       value={formData.deliveryDate}
                       onChange={handleChange}
+                      required
                     />
                   </div>
                   <div className="col-md-6">
@@ -347,6 +604,7 @@ export default function ProjectQuote() {
                           formData.preferredLanguage === "American English"
                         }
                         onChange={handleChange}
+                        required
                       />
                       <label className="form-check-label">
                         American English
@@ -370,7 +628,6 @@ export default function ProjectQuote() {
                   </div>
                 </div>
 
-                {/* Editor Instructions */}
                 <div className="mb-3">
                   <label className="form-label">Instruction for Editor</label>
                   <textarea
@@ -382,7 +639,6 @@ export default function ProjectQuote() {
                   ></textarea>
                 </div>
 
-                {/* Payment Mode */}
                 <div className="mb-3">
                   <label className="form-label">Payment Mode</label>
                   <select
@@ -391,11 +647,13 @@ export default function ProjectQuote() {
                     value={formData.paymentMode}
                     onChange={handleChange}
                     style={{ width: "100%", height: "60px" }}
+                    required
                   >
                     <option value="">--Select payment mode--</option>
                     <option value="credit">Credit Card</option>
                     <option value="paypal">PayPal</option>
                     <option value="bank">Bank Transfer</option>
+                    <option value="debit">Debit Card</option>
                   </select>
                 </div>
                 <button type="submit" className="btn btn-primary">
@@ -460,30 +718,8 @@ export default function ProjectQuote() {
                 <div className="border-top pt-3 d-flex justify-content-between align-items-center">
                   <h5 className="mb-0">Total:</h5>
                   <p className="fw-bold fs-5 text-primary mb-0">
-                    ₹
-                    {(() => {
-                      const optionPrice =
-                        goalOptions[selectedGoal]?.find(
-                          (opt: any) => opt.text === selectedOption
-                        )?.price || 0;
-                      const addOnsTotal = addOnOptions[selectedOption]
-                        ? addOnOptions[selectedOption]
-                            .filter((addOn: any) =>
-                              selectedAddOns.includes(addOn.text)
-                            )
-                            .reduce(
-                              (sum: any, addOn: any) =>
-                                sum + (addOn.price || 0),
-                              0
-                            )
-                        : 0;
-                      TotallyTotal = optionPrice + addOnsTotal;
-
-                      return TotallyTotal;
-                    })()}
-                    
+                    ₹ {totalPrice}
                   </p>
-                  
                 </div>
               </div>
             </div>
