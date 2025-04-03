@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import "../QuotationNew/quotationNew.css";
-import { goalOptions } from '@/app/utils/Quote';
-import { addOnOptions } from '@/app/utils/Quote';
+import { goalOptions } from "@/app/utils/Quote";
+import { addOnOptions } from "@/app/utils/Quote";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 
 export default function ProjectQuote() {
@@ -24,8 +26,7 @@ export default function ProjectQuote() {
     paymentMode: "",
   });
 
-  
- console.log("selectedAddOns:" , selectedAddOns)
+  console.log("selectedGoal:", selectedGoal);
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -40,22 +41,19 @@ export default function ProjectQuote() {
   }, [selectedGoal]);
 
   const goals = [
-    { text: "Editing & Language Services", emoji: "✍️" },
-    { text: "Medical & Clinical Writing Services", emoji: "🩺" },
-    { text: "Regulatory Writing Support", emoji: "📜" },
-    { text: "Scientific Communication Support", emoji: "🔬" },
-    { text: "Evidence Synthesis & Review Writing", emoji: "📊" },
-    { text: "Scientific Publication Assistance", emoji: "📚" },
-    { text: "Data & Statistical Support", emoji: "📈" },
-    { text: "Journal Publication Support", emoji: "📰" },
-    { text: "Manuscriptedit Packages", emoji: "📄" },
-    { text: "Academic & Non-Scientific Writing", emoji: "📝" },
-    { text: "Design and Image Polishing and Creation", emoji: "🎨" },
+    { id: 355, text: "Editing & Language Services",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "✍️" },
+    { id: 356, text: "Medical & Clinical Writing Services",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "🩺" },
+    { id: 357, text: "Regulatory Writing Support",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📜" },
+    { id: 358, text: "Scientific Communication Support", Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "🔬" },
+    { id: 359, text: "Evidence Synthesis & Review Writing", Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📊" },
+    { id: 360, text: "Scientific Publication Assistance",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📚" },
+    { id: 361, text: "Data & Statistical Support",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📈" },
+    { id: 362, text: "Journal Publication Support",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📰" },
+    { id: 363, text: "Manuscriptedit Packages",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium' , emoji: "📄" },
+    { id: 364, text: "Academic & Non-Scientific Writing",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📝" },
+    { id: 365, text: "Design and Image Polishing and Creation",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "🎨" },
   ];
 
- 
-
- 
   return (
     <div className="container sumcon">
       <div
@@ -105,17 +103,24 @@ export default function ProjectQuote() {
                   className="col-lg-3"
                   style={{ marginBottom: "15px" }}
                 >
-                  <div className="card cardGoal text-center p-2">
+                  <label
+                    className="card cardGoal text-center p-3"
+                    data-tooltip-id={`tooltip-${index}`}
+                    data-tooltip-content={goal.Desc} 
+                  >
                     <input
                       type="radio"
                       name="goal"
-                      value={goal.text}
+                      value={goal.id}
                       onChange={() => setSelectedGoal(goal.text)}
                       checked={selectedGoal === goal.text}
                     />
-                    <label>{goal.emoji}</label>
-                    <p>{goal.text}</p>
-                  </div>
+                    <div className="icon-container">
+                      <span style={{fontSize:'30px'}}>{goal.emoji}</span>
+                    </div>
+                    <p className="title">{goal.text}</p>
+                  </label>
+                  <Tooltip id={`tooltip-${index}`} />
                 </div>
               ))}
             </div>
@@ -123,7 +128,7 @@ export default function ProjectQuote() {
             {selectedGoal && goalOptions[selectedGoal] && (
               <div className="mt-3">
                 <h5>Choose a Service for {selectedGoal}</h5>
-               
+
                 {goalOptions[selectedGoal].map((option: any, idx: any) => (
                   <div key={idx} className="form-check gapping">
                     <input
@@ -396,7 +401,13 @@ export default function ProjectQuote() {
                             <tr key={index}>
                               <td>{addOn.text}</td>
                               <td className="text-end fw-bold">
-                              {addOn.price > 0 ? `₹${addOn.price}` : <h6 className="TableQuote">Price after discussion</h6>}
+                                {addOn.price > 0 ? (
+                                  `₹${addOn.price}`
+                                ) : (
+                                  <h6 className="TableQuote">
+                                    Price after discussion
+                                  </h6>
+                                )}
                               </td>
                             </tr>
                           ))}
