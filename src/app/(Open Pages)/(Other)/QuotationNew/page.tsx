@@ -4,9 +4,12 @@ import { useEffect, useState } from "react";
 import "../QuotationNew/quotationNew.css";
 import { goalOptions } from "@/app/utils/Quote";
 import { addOnOptions } from "@/app/utils/Quote";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 export default function ProjectQuote() {
   const [selectedGoal, setSelectedGoal] = useState("");
+  const [hideGoalSection, setHideGoalSection] = useState(true);
   const [selectedOption, setSelectedOption] = useState("");
   const [wordCount, setWordCount] = useState(false);
   const [manualWordCount, setManualWordCount] = useState("");
@@ -28,17 +31,72 @@ export default function ProjectQuote() {
   });
 
   const goals = [
-    { text: "Editing & Language Services", emoji: "✍️" },
-    { text: "Medical & Clinical Writing Services", emoji: "🩺" },
-    { text: "Regulatory Writing Support", emoji: "📜" },
-    { text: "Scientific Communication Support", emoji: "🔬" },
-    { text: "Evidence Synthesis & Review Writing", emoji: "📊" },
-    { text: "Scientific Publication Assistance", emoji: "📚" },
-    { text: "Data & Statistical Support", emoji: "📈" },
-    { text: "Journal Publication Support", emoji: "📰" },
-    { text: "Manuscriptedit Packages", emoji: "📄" },
-    { text: "Academic & Non-Scientific Writing", emoji: "📝" },
-    { text: "Design and Image Polishing and Creation", emoji: "🎨" },
+    {
+      id: 355,
+      text: "Editing & Language Services",
+      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      emoji: "✍️",
+    },
+    {
+      id: 356,
+      text: "Medical & Clinical Writing Services",
+      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      emoji: "🩺",
+    },
+    {
+      id: 357,
+      text: "Regulatory Writing Support",
+      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      emoji: "📜",
+    },
+    {
+      id: 358,
+      text: "Scientific Communication Support",
+      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      emoji: "🔬",
+    },
+    {
+      id: 359,
+      text: "Evidence Synthesis & Review Writing",
+      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      emoji: "📊",
+    },
+    {
+      id: 360,
+      text: "Scientific Publication Assistance",
+      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      emoji: "📚",
+    },
+    {
+      id: 361,
+      text: "Data & Statistical Support",
+      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      emoji: "📈",
+    },
+    {
+      id: 362,
+      text: "Journal Publication Support",
+      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      emoji: "📰",
+    },
+    {
+      id: 363,
+      text: "Manuscriptedit Packages",
+      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium",
+      emoji: "📄",
+    },
+    {
+      id: 364,
+      text: "Academic & Non-Scientific Writing",
+      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      emoji: "📝",
+    },
+    {
+      id: 365,
+      text: "Design and Image Polishing and Creation",
+      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      emoji: "🎨",
+    },
   ];
 
   const mainServices = {
@@ -284,33 +342,6 @@ export default function ProjectQuote() {
 
     console.log("Submitting data:", postData);
 
-    // try {
-    //   const response = await fetch(
-    //     "https://www.secure.manuscriptedit.com/api/submit_quotation_out.php",
-    //     {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify(postData),
-    //     }
-    //   );
-
-    //   if (!response.ok) {
-    //     throw new Error(`Error submitting quotation: ${response.statusText}`);
-    //   }
-
-    //   const { Message } = await response.json();
-    //   if (Message === "Data Saved Successfully") {
-    //     alert("Quotation submitted successfully!");
-    //     // Reset form if needed
-    //   } else {
-    //     alert("Something went wrong with the submission.");
-    //   }
-    // } catch (err: any) {
-    //   console.error("Error:", err.message);
-    //   alert("Failed to submit quotation. Please try again.");
-    // }
     try {
       const response = await fetch(
         "https://www.secure.manuscriptedit.com/api/submit_quotation_out.php",
@@ -319,22 +350,20 @@ export default function ProjectQuote() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(postData),
         }
       );
 
       if (!response.ok) {
-        throw new Error(`Error encountered: ${response.statusText}`);
+        throw new Error(`Error submitting quotation: ${response.statusText}`);
       }
 
       const { Message } = await response.json();
-
       if (Message === "Data Saved Successfully") {
-        alert("Quotation sent successfully.");
+        alert("Quotation submitted successfully!");
+        // Reset form if needed
       } else {
-        alert(
-          "There is a problem encountered while sending the data. Please try to resubmit."
-        );
+        alert("Something went wrong with the submission.");
       }
     } catch (err: any) {
       console.error("Error encountered:", err.message);
@@ -342,7 +371,42 @@ export default function ProjectQuote() {
         "Error encountered while submitting the Quotation. Please try again."
       );
     }
+    // try {
+    //   const response = await fetch(
+    //     "https://www.secure.manuscriptedit.com/api/submit_quotation_out.php",
+    //     {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify(formData),
+    //     }
+    //   );
+
+    //   if (!response.ok) {
+    //     throw new Error(`Error encountered: ${response.statusText}`);
+    //   }
+
+    //   const { Message } = await response.json();
+
+    //   if (Message === "Data Saved Successfully") {
+    //     alert("Quotation sent successfully.");
+    //   } else {
+    //     alert(
+    //       "There is a problem encountered while sending the data. Please try to resubmit."
+    //     );
+    //   }
+    // } catch (err: any) {
+    //   console.error("Error encountered:", err.message);
+    //   alert(
+    //     "Error encountered while submitting the Quotation. Please try again."
+    //   );
+    // }
   };
+
+  // useEffect(()=>{
+  //   setHideGoalSection(!hideGoalSection)
+  // },[selectedGoal])
 
   return (
     <div className="container sumcon">
@@ -392,96 +456,184 @@ export default function ProjectQuote() {
               )}
             </div>
 
-            <h5 style={{ marginTop: "30px" }}>Your Goals</h5>
-            <div className="row">
-              {goals.map((goal, index) => (
-                <div
-                  key={index}
-                  className="col-lg-3"
-                  style={{ marginBottom: "15px" }}
-                >
-                  <div className="card cardGoal text-center p-2">
-                    <input
-                      type="radio"
-                      name="goal"
-                      value={goal.text}
-                      onChange={() => setSelectedGoal(goal.text)}
-                      checked={selectedGoal === goal.text}
-                    />
-                    <label>{goal.emoji}</label>
-                    <p>{goal.text}</p>
+            <div
+              style={{
+                marginTop: "2rem",
+                display: hideGoalSection ? "none" : "flex",
+                justifyContent: "space-between",
+                backgroundColor: "white",
+                padding: "1rem",
+                // boxShadow: "-1px 1px 4px black",
+                border: "1px solid #347791",
+                borderRadius: "10px",
+              }}
+            >
+              <h4>
+                <b>Selected Goal:</b> <br />
+                <span style={{ color: "#347791", fontSize: "1rem" }}>
+                  {selectedGoal}
+                </span>
+              </h4>
+              <button
+                className="btn btn-primary"
+                style={{
+                  height: "fit-content",
+                  boxShadow: "-1px 1px 4px black",
+                }}
+                onClick={() => {
+                  setHideGoalSection(true);
+                }}
+              >
+                View / Change Goal
+              </button>
+            </div>
+
+            <div style={{ display: hideGoalSection ? "" : "none" }}>
+              <h5 style={{ marginTop: "30px" }}>Your Goals</h5>
+              <div className="row">
+                {goals.map((goal, index) => (
+                  <div
+                    key={index}
+                    className="col-lg-3"
+                    style={{ marginBottom: "15px" }}
+                  >
+                    <label
+                      className="card cardGoal text-center p-3"
+                      data-tooltip-id={`tooltip-${index}`}
+                      data-tooltip-content={goal.Desc}
+                    >
+                      <input
+                        type="radio"
+                        name="goal"
+                        value={goal.id}
+                        onChange={() => {
+                          setSelectedGoal(goal.text);
+                          setHideGoalSection(false);
+                        }}
+                        checked={selectedGoal === goal.text}
+                      />
+                      <div className="icon-container">
+                        <span style={{ fontSize: "30px" }}>{goal.emoji}</span>
+                      </div>
+                      <p className="title">{goal.text}</p>
+                    </label>
+                    <Tooltip id={`tooltip-${index}`} />
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
             {selectedGoal && goalOptions[selectedGoal] && (
               <div className="mt-3">
-                <h5>Choose a Service for {selectedGoal}</h5>
+                <h5>Choose a Service for {selectedGoal} :</h5>
 
-                {goalOptions[selectedGoal].map((option: any, idx: any) => (
-                  <div key={idx} className="form-check gapping">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      id={`option${idx}`}
-                      name="goalOption"
-                      value={option.text}
-                      checked={selectedOption === option.text}
-                      onChange={(e) => setSelectedOption(e.target.value)}
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor={`option${idx}`}
-                    >
-                      <p className="mb-0">
-                        <strong>{option.text}</strong>
-                      </p>
-                      <p className="mb-0">{option.description}</p>
-                    </label>
-                    {selectedOption === option.text &&
-                      addOnOptions[selectedOption] && (
+                {/* Show all services if none selected */}
+                {!selectedOption &&
+                  goalOptions[selectedGoal].map((option: any, idx: any) => (
+                    <div key={idx} className="form-check gapping">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        id={`option${idx}`}
+                        name="goalOption"
+                        value={option.text}
+                        checked={selectedOption === option.text}
+                        onChange={(e) => setSelectedOption(e.target.value)}
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor={`option${idx}`}
+                      >
+                        <p className="mb-0">
+                          <strong>{option.text}</strong>
+                        </p>
+                        <p className="mb-0">{option.description}</p>
+                      </label>
+                    </div>
+                  ))}
+
+                {/* Show only selected service + add-ons + change button */}
+                {selectedOption &&
+                  goalOptions[selectedGoal]
+                    .filter((option: any) => option.text === selectedOption)
+                    .map((option: any, idx: any) => (
+                      <div key={idx} className="form-check gapping">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          id={`option${idx}`}
+                          name="goalOption"
+                          value={option.text}
+                          checked
+                          disabled
+                        />
+                        <label
+                          className="form-check-label"
+                          htmlFor={`option${idx}`}
+                        >
+                          <p className="mb-0">
+                            <strong>{option.text}</strong>
+                          </p>
+                          <p className="mb-0">{option.description}</p>
+                        </label>
+
+                        {addOnOptions[selectedOption] && (
+                          <div className="mt-3">
+                            <h5>Add-Ons for {selectedOption}</h5>
+                            {addOnOptions[selectedOption].map(
+                              (addOn: any, index: any) => (
+                                <div key={index} className="form-check gapping">
+                                  <input
+                                    className="form-check-input"
+                                    type="checkbox"
+                                    id={`addon${index}`}
+                                    checked={selectedAddOns.includes(
+                                      addOn.text
+                                    )}
+                                    onChange={(e) => {
+                                      if (e.target.checked) {
+                                        setSelectedAddOns([
+                                          ...selectedAddOns,
+                                          addOn.text,
+                                        ]);
+                                      } else {
+                                        setSelectedAddOns(
+                                          selectedAddOns.filter(
+                                            (item) => item !== addOn.text
+                                          )
+                                        );
+                                      }
+                                    }}
+                                  />
+                                  <label
+                                    className="form-check-label"
+                                    htmlFor={`addon${index}`}
+                                  >
+                                    <p className="mb-0">
+                                      <strong>{addOn.text}</strong>
+                                    </p>
+                                    <p className="mb-0">{addOn.description}</p>
+                                  </label>
+                                </div>
+                              )
+                            )}
+                          </div>
+                        )}
+
                         <div className="mt-3">
-                          <h5>Add-Ons for {selectedOption}</h5>
-                          {addOnOptions[selectedOption].map(
-                            (addOn: any, index: any) => (
-                              <div key={index} className="form-check gapping">
-                                <input
-                                  className="form-check-input"
-                                  type="checkbox"
-                                  id={`addon${index}`}
-                                  checked={selectedAddOns.includes(addOn.text)}
-                                  onChange={(e) => {
-                                    if (e.target.checked) {
-                                      setSelectedAddOns([
-                                        ...selectedAddOns,
-                                        addOn.text,
-                                      ]);
-                                    } else {
-                                      setSelectedAddOns(
-                                        selectedAddOns.filter(
-                                          (item) => item !== addOn.text
-                                        )
-                                      );
-                                    }
-                                  }}
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor={`addon${index}`}
-                                >
-                                  <p className="mb-0">
-                                    <strong>{addOn.text}</strong>
-                                  </p>
-                                  <p className="mb-0">{addOn.description}</p>
-                                </label>
-                              </div>
-                            )
-                          )}
+                          <button
+                            type="button"
+                            className="btn btn-primary"
+                            onClick={() => {
+                              setSelectedOption("");
+                              setSelectedAddOns([]);
+                            }}
+                          >
+                            View / Change Service
+                          </button>
                         </div>
-                      )}
-                  </div>
-                ))}
+                      </div>
+                    ))}
               </div>
             )}
 
@@ -670,7 +822,8 @@ export default function ProjectQuote() {
               <div className="card-body">
                 <h5 className="card-title border-bottom pb-2">Summary</h5>
                 <p className="mb-2">
-                  <strong>Selected Services:</strong> {selectedGoal}
+                  <strong>Selected Goal:</strong>
+                  <br></br> {selectedGoal}
                 </p>
                 <div className="mb-3">
                   <strong>Selected Option:</strong>

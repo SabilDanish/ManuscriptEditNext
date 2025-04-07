@@ -25,7 +25,6 @@ import CookieConsent from "react-cookie-consent";
 import { useEffect, useState } from "react";
 import AnimationSection from "./_Common/AnimationSection/AnimationSection";
 import Bloggy from "./_Common/Bloggy/Bloggy";
-
 export default function Home() {
   SwiperCore.use([Autoplay]);
   const { loading, error, blogs } = useBlogs();
@@ -160,7 +159,7 @@ export default function Home() {
       />
       <ToastContainer />
       <TopBannerForm />
-      <AnimationSection/>
+      <AnimationSection />
       <WhyChooseUs />
       <Clients />
       <PublicationPackages />
@@ -170,7 +169,7 @@ export default function Home() {
       <OurServices />
       <Experts />
       <Testimonial />
-      <Bloggy/>
+      <Bloggy />
       {/* {blogs && blogs.length ? <BlogDesk blogs={blogs} /> : ""}
       {blogs && blogs.length ? <BlogMob blogs={blogs} /> : ""} */}
       <FaqHome />
