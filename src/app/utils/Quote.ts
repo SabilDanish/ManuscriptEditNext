@@ -18,20 +18,20 @@ export const goalOptions: Record<string, GoalOption[]> = {
       text: "Extensive Substantive Editing",
       description:
         "In-depth editing for structure, clarity, logic, and scientific accuracy.",
-      price: 12920,
+      // price: 1000,
     },
     {
       id: "367",
       text: "Substantive Editing",
       description:
         "Grammar, punctuation, spelling, and sentence structure correction.",
-      price: 19465,
+      // price: 19465,
     },
     {
       id: "368",
       text: "Proofreading",
       description: "Final check for typos, formatting, and consistency.",
-      price: 12070,
+      // price: 12070,
     },
   ],
 

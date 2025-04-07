@@ -294,17 +294,16 @@ export default function ProjectQuote() {
     return subjectToCode[subject] || "60"; // default to 60 if not found
   };
 
-  useEffect(
-    () => {
-      const AddOnIds = selectedAddOns.map((val) => addOns[String(selectedGoal)][String(val)]);
-    },
-    [selectedAddOns]
-  );
+  // useEffect(() => {
+  //   const AddOnIds = selectedAddOns.map(
+  //     (val) => addOns[String(selectedGoal)][String(val)] 
+  //   );
+  // }, [selectedAddOns]);
 
   const handleSubmit = async (
     e: React.FormEvent,
     selectedGoal: any,
-    mainServices: string,
+    mainServices: any,
     subServices: any,
     selectedOption: any
   ) => {
@@ -314,7 +313,7 @@ export default function ProjectQuote() {
     const postData = {
       service_type: mainServices[selectedGoal],
       service_name: subServices[selectedOption],
-      add_ons: mapAddOns(selectedAddOns),
+      add_ons: '',
       major_subject: mapMajorSubject(formData.majorSubject),
       specific_subject: formData.specificSubject,
       delivery_date: formData.deliveryDate,
@@ -575,7 +574,8 @@ export default function ProjectQuote() {
             )}
 
             <div className="container mt-4">
-              <form onSubmit={handleSubmit}>
+            <form onSubmit={(e) => handleSubmit(e, selectedGoal, mainServices, subServices, selectedOption)}>
+
                 <div className="row mb-3">
                   <div className="col-md-6">
                     <label className="form-label">Name *</label>
