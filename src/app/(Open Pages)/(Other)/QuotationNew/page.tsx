@@ -294,18 +294,20 @@ export default function ProjectQuote() {
     return subjectToCode[subject] || "60"; // default to 60 if not found
   };
 
-  useEffect(() => {
-    const AddOnIds = selectedAddOns.map((val) => {
-      console.log(selectedGoal, val);
-      return addOns[String(selectedGoal)][String(val)];
-    });
-    console.log(
-      addOns["Data & Statistical Support"]["Graph & Chart Enhancement"]
-    );
-    console.log(AddOnIds);
-  }, [selectedAddOns]);
+  useEffect(
+    () => {
+      const AddOnIds = selectedAddOns.map((val) => addOns[String(selectedGoal)][String(val)]);
+    },
+    [selectedAddOns]
+  );
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (
+    e: React.FormEvent,
+    selectedGoal: any,
+    mainServices: string,
+    subServices: any,
+    selectedOption: any
+  ) => {
     e.preventDefault();
 
     // Prepare the data in the required format
@@ -359,37 +361,6 @@ export default function ProjectQuote() {
         "Error encountered while submitting the Quotation. Please try again."
       );
     }
-    // try {
-    //   const response = await fetch(
-    //     "https://www.secure.manuscriptedit.com/api/submit_quotation_out.php",
-    //     {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify(formData),
-    //     }
-    //   );
-
-    //   if (!response.ok) {
-    //     throw new Error(`Error encountered: ${response.statusText}`);
-    //   }
-
-    //   const { Message } = await response.json();
-
-    //   if (Message === "Data Saved Successfully") {
-    //     alert("Quotation sent successfully.");
-    //   } else {
-    //     alert(
-    //       "There is a problem encountered while sending the data. Please try to resubmit."
-    //     );
-    //   }
-    // } catch (err: any) {
-    //   console.error("Error encountered:", err.message);
-    //   alert(
-    //     "Error encountered while submitting the Quotation. Please try again."
-    //   );
-    // }
   };
 
   useEffect(() => {
