@@ -6,13 +6,11 @@ import { goalOptions } from "@/app/utils/Quote";
 import { addOnOptions } from "@/app/utils/Quote";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
-
-
 export default function ProjectQuote() {
   const [selectedGoal, setSelectedGoal] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
-  const [wordCount, setWordCount] = useState(false);
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
+
   const [formData, setFormData] = useState({
     Name: "",
     Email: "",
@@ -37,21 +35,76 @@ export default function ProjectQuote() {
     console.log("Form Data Submitted:", formData);
   };
   useEffect(() => {
-    setSelectedOption(""); // Reset option when goal changes
+    setSelectedOption("");
   }, [selectedGoal]);
 
   const goals = [
-    { id: 355, text: "Editing & Language Services",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "✍️" },
-    { id: 356, text: "Medical & Clinical Writing Services",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "🩺" },
-    { id: 357, text: "Regulatory Writing Support",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📜" },
-    { id: 358, text: "Scientific Communication Support", Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "🔬" },
-    { id: 359, text: "Evidence Synthesis & Review Writing", Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📊" },
-    { id: 360, text: "Scientific Publication Assistance",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📚" },
-    { id: 361, text: "Data & Statistical Support",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📈" },
-    { id: 362, text: "Journal Publication Support",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📰" },
-    { id: 363, text: "Manuscriptedit Packages",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium' , emoji: "📄" },
-    { id: 364, text: "Academic & Non-Scientific Writing",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "📝" },
-    { id: 365, text: "Design and Image Polishing and Creation",Desc:'Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ' , emoji: "🎨" },
+    {
+      id: 355,
+      text: "Editing & Language Services",
+      Desc: "Improve grammar, clarity, consistency, and readability of your manuscript for Scopus, PubMed, Web of Science.",
+      emoji: "✍️",
+    },
+    {
+      id: 356,
+      text: "Medical & Clinical Writing Services",
+      Desc: "Expertly crafted content for clinical trials, case reports, protocols, and other medical documentation, adhering to global standards.",
+      emoji: "🩺",
+    },
+    {
+      id: 357,
+      text: "Regulatory Writing Support",
+      Desc: "Precise, compliant regulatory documents including clinical study reports (CSRs), protocols, and submissions for FDA, EMA, etc.",
+      emoji: "📜",
+    },
+    {
+      id: 358,
+      text: "Scientific Communication Support",
+      Desc: "Visuals, infographics, and simplified summaries to enhance your research’s reach across scientific and non-scientific audiences.",
+      emoji: "🔬",
+    },
+    {
+      id: 359,
+      text: "Evidence Synthesis & Review Writing",
+      Desc: "Systematic reviews, meta-analyses, and literature reviews written following PRISMA or other applicable guidelines.",
+      emoji: "📊",
+    },
+    {
+      id: 360,
+      text: "Scientific Publication Assistance",
+      Desc: "End-to-end support for journal selection, cover letters, submission, peer-review handling, and resubmissions.",
+      emoji: "📚",
+    },
+    {
+      id: 361,
+      text: "Data & Statistical Support",
+      Desc: "Robust statistical analysis, data interpretation, visualizations, and guidance tailored to your research objectives.",
+      emoji: "📈",
+    },
+    {
+      id: 362,
+      text: "Journal Publication Support",
+      Desc: "Full-cycle manuscript submission and tracking service—from formatting to final upload—on your target journal’s portal.",
+      emoji: "📰",
+    },
+    {
+      id: 363,
+      text: "Manuscriptedit Packages",
+      Desc: "Customisable bundles for editing, writing, and publishing support—ideal for thesis, dissertations, or multi-step projects.",
+      emoji: "📄",
+    },
+    {
+      id: 364,
+      text: "Academic & Non-Scientific Writing",
+      Desc: "Support for essays, coursework, SOPs, reports, and business documents tailored for academic or professional use.",
+      emoji: "📝",
+    },
+    {
+      id: 365,
+      text: "Design and Image Polishing and Creation",
+      Desc: "High-resolution graphs, journal-compliant figures, scientific illustrations,and presentation design services.",
+      emoji: "🎨",
+    },
   ];
 
   return (
@@ -67,32 +120,27 @@ export default function ProjectQuote() {
             </h5>
 
             <div className="uploadContainer">
-              <h5>Upload your document to be edited</h5>
-              <p>
-                Upload manuscripts in .doc or .docx format to auto calculate
-                words & get an instant quote.
-              </p>
-
-              <input type="file" className="Sizy" />
-
               <span className="Alignments">
-                <input
-                  type="checkbox"
-                  checked={wordCount}
-                  onClick={() => setWordCount(!wordCount)}
-                />
-                <p style={{ marginBottom: "0px" }}>
-                  I want to enter word count
-                </p>
+                <h4 style={{ marginBottom: "0px" }}>Enter the word count</h4>
               </span>
 
-              {wordCount && (
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="e.g 2500"
-                />
-              )}
+              <input
+                type="text"
+                className="form-control"
+                placeholder="e.g 2500"
+              />
+
+              <select
+                className="form-control"
+                name="WrdCnt"
+                id="WrdCnt"
+                style={{ marginTop: "10px" }}
+              >
+                <option value="Trn_Ar10">Turn Around Time (10days)</option>
+                <option value="Trn_Ar5">Turn Around Time (5days)</option>
+                <option value="Trn_Ar3">Turn Around Time (3days)</option>
+                <option value="Trn_Ar2">Turn Around Time (2days)</option>
+              </select>
             </div>
 
             <h5 style={{ marginTop: "30px" }}>Your Goals</h5>
@@ -106,7 +154,7 @@ export default function ProjectQuote() {
                   <label
                     className="card cardGoal text-center p-3"
                     data-tooltip-id={`tooltip-${index}`}
-                    data-tooltip-content={goal.Desc} 
+                    data-tooltip-content={goal.Desc}
                   >
                     <input
                       type="radio"
@@ -116,11 +164,11 @@ export default function ProjectQuote() {
                       checked={selectedGoal === goal.text}
                     />
                     <div className="icon-container">
-                      <span style={{fontSize:'30px'}}>{goal.emoji}</span>
+                      <span style={{ fontSize: "30px" }}>{goal.emoji}</span>
                     </div>
                     <p className="title">{goal.text}</p>
                   </label>
-                  <Tooltip id={`tooltip-${index}`} />
+                  <Tooltip id={`tooltip-${index}`} style={{ zIndex: 9999 }} />
                 </div>
               ))}
             </div>
