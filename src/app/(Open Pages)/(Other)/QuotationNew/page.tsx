@@ -10,6 +10,45 @@ export default function ProjectQuote() {
   const [selectedGoal, setSelectedGoal] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
+  const [wordCount, setWordCount] = useState<number>(0);
+  const [turnaround, setTurnaround] = useState<string>("Trn_Ar10");
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPriceAddons, setTotalPriceAddOns] = useState(0);
+  const [optionTotalPrice, setOptionTotalPrice] = useState(0);
+
+  console.log(
+    "optionTotalPrice",
+    optionTotalPrice,
+    "totalPriceAddons",
+    totalPriceAddons,
+    "totalPrice",
+    totalPrice
+  );
+
+  useEffect(() => {
+    setSelectedAddOns([]);
+  }, [selectedOption]);
+  
+
+  
+  useEffect(() => {
+    const basePrice = wordCount * (turnaroundPrices[turnaround] || 0);
+    setTotalPrice(basePrice);
+
+    const addOnTotal = selectedAddOns.length * wordCount * AddonCommonPrice;
+    setTotalPriceAddOns(addOnTotal);
+
+    setOptionTotalPrice(basePrice + addOnTotal);
+  }, [wordCount, turnaround, selectedAddOns]);
+
+  const AddonCommonPrice = 0.1;
+
+  const turnaroundPrices: Record<string, number> = {
+    Trn_Ar10: 0.5, // 10 days
+    Trn_Ar5: 0.9, // 5 days
+    Trn_Ar3: 1.2, // 3 days
+    Trn_Ar2: 1.5, // 2 days
+  };
 
   const [formData, setFormData] = useState({
     Name: "",
@@ -125,9 +164,11 @@ export default function ProjectQuote() {
               </span>
 
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 placeholder="e.g 2500"
+                value={wordCount}
+                onChange={(e) => setWordCount(Number(e.target.value))}
               />
 
               <select
@@ -135,6 +176,8 @@ export default function ProjectQuote() {
                 name="WrdCnt"
                 id="WrdCnt"
                 style={{ marginTop: "10px" }}
+                value={turnaround}
+                onChange={(e) => setTurnaround(e.target.value)}
               >
                 <option value="Trn_Ar10">Turn Around Time (10days)</option>
                 <option value="Trn_Ar5">Turn Around Time (5days)</option>
@@ -431,14 +474,14 @@ export default function ProjectQuote() {
                       {selectedOption
                         ? goalOptions[selectedGoal]?.find(
                             (opt: any) => opt.text === selectedOption
-                          )?.price || "0"
+                          )?.price || totalPrice
                         : "0"}
                     </span>
                   </p>
                 </div>
                 <div className="mb-3">
                   <strong>Selected Add-Ons:</strong>
-                  {selectedAddOns.length > 0 && addOnOptions[selectedOption] ? (
+                  {/* {selectedAddOns.length > 0 && addOnOptions[selectedOption] ? (
                     <table className="table table-sm table-borderless mt-2">
                       <tbody>
                         {addOnOptions[selectedOption]
@@ -463,32 +506,31 @@ export default function ProjectQuote() {
                     </table>
                   ) : (
                     <p className="border p-2 rounded mt-2 text-muted">0</p>
+                  )} */}
+                  {selectedAddOns.length > 0 && (
+                    <div className="border-top pt-3">
+                      <table className="table table-sm table-borderless mt-2">
+                        <tbody>
+                          <tr>
+                            <td className="fw-bold">{` ${selectedAddOns}, `}</td>
+                            <td className="text-end fw-bold text-primary">
+                              ₹{totalPriceAddons.toFixed(2)}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   )}
                 </div>
-                <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                  <h5 className="mb-0">Total:</h5>
-                  <p className="fw-bold fs-5 text-primary mb-0">
-                    ₹
-                    {(() => {
-                      const optionPrice =
-                        goalOptions[selectedGoal]?.find(
-                          (opt: any) => opt.text === selectedOption
-                        )?.price || 0;
-                      const addOnsTotal = addOnOptions[selectedOption]
-                        ? addOnOptions[selectedOption]
-                            .filter((addOn: any) =>
-                              selectedAddOns.includes(addOn.text)
-                            )
-                            .reduce(
-                              (sum: any, addOn: any) =>
-                                sum + (addOn.price || 0),
-                              0
-                            )
-                        : 0;
-                      return optionPrice + addOnsTotal;
-                    })()}
-                  </p>
-                </div>
+
+                {selectedOption ? (
+                  <div className="border-top pt-3 d-flex justify-content-between align-items-center">
+                    <h5 className="mb-0">Total:</h5>
+                    <p className="fw-bold fs-5 text-primary mb-0">
+                      ₹{optionTotalPrice.toFixed(2)}
+                    </p>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>

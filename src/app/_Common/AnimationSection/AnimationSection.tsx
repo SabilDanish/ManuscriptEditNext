@@ -107,9 +107,9 @@ const AnimationSection = () => {
         ))}
       </Carousel>
 
-      <div style={{marginTop:"35px" , textAlign:"center"}}>
+      <div style={{ marginTop: "35px", textAlign: "center" }}>
         <Link className="buttonSeeAll" href="/AllPublications">
-          See All
+          See All →
         </Link>
       </div>
     </Container>

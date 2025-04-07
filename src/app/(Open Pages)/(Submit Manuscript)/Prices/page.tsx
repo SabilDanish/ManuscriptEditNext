@@ -253,7 +253,7 @@ export default function Home() {
                   border: "1px solid #a7a7a7",
                   borderRadius: 0,
                   height: 40,
-                  paddingLeft:'1rem'
+                  paddingLeft: "1rem",
                 }}
                 onChange={(e) => {
                   setWordCount(e.target.value);
@@ -358,10 +358,12 @@ export default function Home() {
                 })
               : ""}
           </div> */}
-          
 
           <div className="container-fluid">
-            <div className="row" style={{ gap: '2rem', justifyContent:'center' }}>
+            <div
+              className="row"
+              style={{ gap: "2rem", justifyContent: "center" }}
+            >
               <div className={`col-lg-3 p-0 ${Styles.priceCalculatorTable}`}>
                 <div className={Styles.priceCalculatorTableHeader}>
                   <h5>Extensive Substantive Editing</h5>
@@ -394,17 +396,33 @@ export default function Home() {
                   </p>
                 </div>
                 <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
-                  <button className={Styles.getStartedButton}>
+                  <button
+                    className={Styles.getStartedButton}
+                    onClick={() => {
+                      window.location.href =
+                        "https://secure.manuscriptedit.com/register";
+                    }}
+                  >
                     Get Started
                   </button>
-                  <button className={Styles.priceQuoteButton}>
+                  <button
+                    className={Styles.priceQuoteButton}
+                    onClick={() => {
+                      window.location.href =
+                        "https://secure.manuscriptedit.com/quotation";
+                    }}
+                  >
                     Get A Price Quote
                   </button>
                 </div>
               </div>
               <div className={`col-lg-3 p-0 ${Styles.priceCalculatorTable}`}>
                 <div className={Styles.priceCalculatorTableHeader}>
-                  <h5>Substantive Editing<br/><br/></h5>
+                  <h5>
+                    Substantive Editing
+                    <br />
+                    <br />
+                  </h5>
                 </div>
 
                 <div style={{ backgroundColor: "white" }}>
@@ -434,17 +452,33 @@ export default function Home() {
                   </p>
                 </div>
                 <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
-                  <button className={Styles.getStartedButton}>
+                  <button
+                    className={Styles.getStartedButton}
+                    onClick={() => {
+                      window.location.href =
+                        "https://secure.manuscriptedit.com/register";
+                    }}
+                  >
                     Get Started
                   </button>
-                  <button className={Styles.priceQuoteButton}>
+                  <button
+                    className={Styles.priceQuoteButton}
+                    onClick={() => {
+                      window.location.href =
+                        "https://secure.manuscriptedit.com/quotation";
+                    }}
+                  >
                     Get A Price Quote
                   </button>
                 </div>
               </div>
               <div className={`col-lg-3 p-0 ${Styles.priceCalculatorTable}`}>
                 <div className={Styles.priceCalculatorTableHeader}>
-                  <h5>Proofreading<br/><br/></h5>
+                  <h5>
+                    Proofreading
+                    <br />
+                    <br />
+                  </h5>
                 </div>
 
                 <div style={{ backgroundColor: "white" }}>
@@ -474,10 +508,22 @@ export default function Home() {
                   </p>
                 </div>
                 <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
-                  <button className={Styles.getStartedButton}>
+                  <button
+                    className={Styles.getStartedButton}
+                    onClick={() => {
+                      window.location.href =
+                        "https://secure.manuscriptedit.com/register";
+                    }}
+                  >
                     Get Started
                   </button>
-                  <button className={Styles.priceQuoteButton}>
+                  <button
+                    className={Styles.priceQuoteButton}
+                    onClick={() => {
+                      window.location.href =
+                        "https://secure.manuscriptedit.com/quotation";
+                    }}
+                  >
                     Get A Price Quote
                   </button>
                 </div>
