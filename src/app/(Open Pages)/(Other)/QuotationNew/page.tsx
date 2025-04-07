@@ -6,7 +6,6 @@ import { goalOptions } from "@/app/utils/Quote";
 import { addOnOptions } from "@/app/utils/Quote";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
-
 export default function ProjectQuote() {
   const [selectedGoal, setSelectedGoal] = useState("");
   const [hideGoalSection, setHideGoalSection] = useState(true);
@@ -404,9 +403,9 @@ export default function ProjectQuote() {
     // }
   };
 
-  // useEffect(()=>{
-  //   setHideGoalSection(!hideGoalSection)
-  // },[selectedGoal])
+  useEffect(() => {
+    setHideGoalSection(!hideGoalSection);
+  }, [selectedGoal]);
 
   return (
     <div className="container sumcon">
@@ -421,74 +420,55 @@ export default function ProjectQuote() {
             </h5>
 
             <div className="uploadContainer">
-              <h5>Upload your document to be edited</h5>
-              <p>
-                Upload manuscripts in .doc or .docx format to auto calculate
-                words & get an instant quote.
-              </p>
-
-              <input
-                type="file"
-                className="Sizy"
-                onChange={handleFileChange}
-                accept=".doc,.docx"
-              />
-
               <span className="Alignments">
-                <input
-                  type="checkbox"
-                  checked={wordCount}
-                  onChange={() => setWordCount(!wordCount)}
-                />
-                <p style={{ marginBottom: "0px" }}>
-                  I want to enter word count
-                </p>
+                <h4 style={{ marginBottom: "0px" }}>Enter the word count</h4>
               </span>
 
-              {wordCount && (
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="e.g 2500"
-                  value={manualWordCount}
-                  onChange={(e) => setManualWordCount(e.target.value)}
-                />
-              )}
-            </div>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="e.g 2500"
+              />
 
+              <select
+                className="form-control"
+                name="WrdCnt"
+                id="WrdCnt"
+                style={{ marginTop: "10px" }}
+              >
+                <option value="Trn_Ar10">Turn Around Time (10days)</option>
+                <option value="Trn_Ar5">Turn Around Time (5days)</option>
+                <option value="Trn_Ar3">Turn Around Time (3days)</option>
+                <option value="Trn_Ar2">Turn Around Time (2days)</option>
+              </select>
+            </div>
             <div
               style={{
                 marginTop: "2rem",
-                display: hideGoalSection ? "none" : "flex",
-                justifyContent: "space-between",
-                backgroundColor: "white",
+                display: hideGoalSection ? "" : "none",
+                border: "1px solid rgb(55, 151, 188)",
                 padding: "1rem",
-                // boxShadow: "-1px 1px 4px black",
-                border: "1px solid #347791",
-                borderRadius: "10px",
+                borderRadius: "5px",
               }}
             >
-              <h4>
-                <b>Selected Goal:</b> <br />
-                <span style={{ color: "#347791", fontSize: "1rem" }}>
-                  {selectedGoal}
-                </span>
-              </h4>
               <button
+                style={{ float: "right" }}
+                type="button"
                 className="btn btn-primary"
-                style={{
-                  height: "fit-content",
-                  boxShadow: "-1px 1px 4px black",
-                }}
                 onClick={() => {
-                  setHideGoalSection(true);
+                  setSelectedOption("");
+                  setSelectedAddOns([]);
+                  setHideGoalSection(!hideGoalSection);
                 }}
               >
                 View / Change Goal
               </button>
+              <h5>
+                Selected Goal: <br />
+                <span style={{ color: "#347791" }}>{selectedGoal}</span>
+              </h5>
             </div>
-
-            <div style={{ display: hideGoalSection ? "" : "none" }}>
+            <div style={{ display: hideGoalSection ? "none" : "" }}>
               <h5 style={{ marginTop: "30px" }}>Your Goals</h5>
               <div className="row">
                 {goals.map((goal, index) => (
@@ -506,10 +486,7 @@ export default function ProjectQuote() {
                         type="radio"
                         name="goal"
                         value={goal.id}
-                        onChange={() => {
-                          setSelectedGoal(goal.text);
-                          setHideGoalSection(false);
-                        }}
+                        onChange={() => setSelectedGoal(goal.text)}
                         checked={selectedGoal === goal.text}
                       />
                       <div className="icon-container">
@@ -517,7 +494,7 @@ export default function ProjectQuote() {
                       </div>
                       <p className="title">{goal.text}</p>
                     </label>
-                    <Tooltip id={`tooltip-${index}`} />
+                    <Tooltip id={`tooltip-${index}`} style={{ zIndex: 9999 }} />
                   </div>
                 ))}
               </div>
