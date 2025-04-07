@@ -284,28 +284,6 @@ export default function ProjectQuote() {
     return goalToServiceType[goal] || "0";
   };
 
-  const mapServiceName = (option: string): string => {
-    // Map the selected option to the corresponding service_name value
-    // This would depend on your specific options and their mappings
-    // Example mapping - you'll need to adjust this based on your actual options
-    if (option.includes("Standard")) return "1";
-    if (option.includes("Advanced")) return "2";
-    if (option.includes("Premium")) return "3";
-    return "0";
-  };
-
-  const mapAddOns = (addOns: string[]): string => {
-    // Map selected add-ons to a comma-separated string of their codes
-    // Example mapping - adjust based on your actual add-ons
-    const addOnToCode: Record<string, string> = {
-      "Urgent Delivery": "1",
-      "Additional Revision": "2",
-      "Journal Formatting": "3",
-    };
-
-    return addOns.map((addOn) => addOnToCode[addOn] || "0").join(",");
-  };
-
   const mapMajorSubject = (subject: string): string => {
     // Map major subject to corresponding code
     const subjectToCode: Record<string, string> = {
@@ -316,13 +294,24 @@ export default function ProjectQuote() {
     return subjectToCode[subject] || "60"; // default to 60 if not found
   };
 
+  useEffect(() => {
+    const AddOnIds = selectedAddOns.map((val) => {
+      console.log(selectedGoal, val);
+      return addOns[String(selectedGoal)][String(val)];
+    });
+    console.log(
+      addOns["Data & Statistical Support"]["Graph & Chart Enhancement"]
+    );
+    console.log(AddOnIds);
+  }, [selectedAddOns]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Prepare the data in the required format
     const postData = {
-      service_type: mapServiceType(selectedGoal),
-      service_name: mapServiceName(selectedOption),
+      service_type: mainServices[selectedGoal],
+      service_name: subServices[selectedOption],
       add_ons: mapAddOns(selectedAddOns),
       major_subject: mapMajorSubject(formData.majorSubject),
       specific_subject: formData.specificSubject,
