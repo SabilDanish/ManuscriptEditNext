@@ -7,17 +7,18 @@ import { addOnOptions } from "@/app/utils/Quote";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 export default function ProjectQuote() {
-  const [selectedGoal, setSelectedGoal] = useState("");
-  const [hideGoalSection, setHideGoalSection] = useState(true);
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedGoal, setSelectedGoal] = useState<any>("");
+  const [hideGoalSection, setHideGoalSection] = useState<any>(true);
+  const [selectedOption, setSelectedOption] = useState<any>("");
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
   const [file, setFile] = useState<File | null>(null);
   const [wordCount, setWordCount] = useState<number>(0);
   const [turnaround, setTurnaround] = useState<string>("Trn_Ar10");
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [totalPriceAddons, setTotalPriceAddOns] = useState(0);
-  const [optionTotalPrice, setOptionTotalPrice] = useState(0);
-  const [manualWordCount, setManualWordCount] = useState("");
+  const [totalPrice, setTotalPrice] = useState<any>(0);
+  const [totalPriceAddons, setTotalPriceAddOns] = useState<any>(0);
+  const [optionTotalPrice, setOptionTotalPrice] = useState<any>(0);
+  const [manualWordCount, setManualWordCount] = useState<any>("");
+  const [selectedAddOnsId, setSelectedAddOnsId] = useState<any>("");
 
   useEffect(() => {
     setSelectedAddOns([]);
@@ -139,9 +140,9 @@ export default function ProjectQuote() {
   };
 
   const subServices = {
-    "Substantive (Advanced) Editing": "366",
+    "Substantive Editing": "366",
     "Copyediting (Standard Editing)": "367",
-    Proofreading: "368",
+    "Proofreading": "368",
     "Journal Formatting & Style Editing": "369",
     "Language Enhancement & Clarity Check": "370",
     "Re-editing Support": "371",
@@ -195,12 +196,79 @@ export default function ProjectQuote() {
     "Poster Design & Development": "419",
   };
 
-  const addOns = {
+  const addOnsId: {
     "Editing & Language Services": {
-      "Journal Formatting & Style Editing": "1",
-      "Reference & Citation Editing": "2",
-      "Language Enhancement & Clarity Check": "3",
-      "Plagiarism Check & Report": "4",
+      "Peer Review Analysis": string;
+      "Data Analysis": string;
+      "Journal Selection": string;
+      "Target Journal Formatting": string;
+      "Artwork Formatting": string;
+      "Cover Letter Writing": string;
+      "Journal Submission": string;
+      "Response To Reviewer": string;
+      "Plagiarism Check": string;
+    };
+    "Medical & Clinical Writing Services": {
+      "Patient & HCP Education Material": string;
+      "Compliance & Standards Alignment": string;
+      "Journal Selection Assistance": string;
+    };
+    "Regulatory Writing Support": {
+      "Compliance & Standards Alignment": string;
+      "Scientific Illustration Design": string;
+      "End-to-End Journal Submission Support": string;
+    };
+    "Scientific Communication Support": {
+      "Scientific Illustration Design": string;
+      "Poster Design & Development": string;
+      "Graph & Chart Enhancement": string;
+    };
+    "Evidence Synthesis & Review Writing": {
+      "Meta-analysis Writing & Execution": string;
+      "Reference & Citation Editing": string;
+      "Scientific Illustration Design": string;
+    };
+    "Scientific Publication Assistance": {
+      "Title, Abstract & Keyword Optimization": string;
+      "Journal Formatting & Style Editing": string;
+      "Pre-Submission Peer Review": string;
+    };
+    "Data & Statistical Support": {
+      "Graph & Chart Enhancement": string;
+      "Meta-analysis Writing": string;
+      "Scientific Illustration Design": string;
+    };
+    "Journal Publication Support": {
+      "Cover Letter Preparation": string;
+      "Response to Reviewer Comments": string;
+      "Fast Track Publication Consultation": string;
+    };
+    "Manuscriptedit Packages": {
+      "Reviewer Response Package": string;
+      "Rejection Handling Package": string;
+      "Plagiarism Check & Report": string;
+    };
+    "Academic & Non-Scientific Writing": {
+      "Plagiarism Check & Report": string;
+      "Reference & Citation Editing": string;
+      "Scientific Illustration Design": string;
+    };
+    "Design and Image Polishing and Creation": {
+      "Image Formatting & Conversion": string;
+      "Graph & Chart Enhancement": string;
+      "Scientific Marketing & Promotional Content": string;
+    };
+  } = {
+    "Editing & Language Services": {
+      "Peer Review Analysis": "1",
+      "Data Analysis": "2",
+      "Journal Selection": "3",
+      "Target Journal Formatting": "4",
+      "Artwork Formatting": "35",
+      "Cover Letter Writing": "36",
+      "Journal Submission": "37",
+      "Response To Reviewer": "38",
+      "Plagiarism Check": "39",
     },
     "Medical & Clinical Writing Services": {
       "Patient & HCP Education Material": "5",
@@ -254,6 +322,40 @@ export default function ProjectQuote() {
     },
   };
 
+  const majorSubject = {
+    "Biological Sciences": "1",
+    "Engineering and Physical Sciences": "2",
+    "Social Science / Business Management / Others": "3",
+    "Agricultural Science": "4",
+    Biochemistry: "5",
+    Bioinformatics: "6",
+    Biotechnology: "7",
+    Botany: "8",
+    "Environmental Science": "9",
+    "Fisheries Science": "10",
+    "Genetics/Genomics": "11",
+    Immunology: "12",
+    Medicine: "13",
+    Microbiology: "14",
+    "Molecular Biology": "15",
+    "Pharmaceutical Sciences": "16",
+    Taxonomy: "17",
+    Zoology: "18",
+    Architecture: "19",
+    Chemistry: "20",
+    "Earth Sciences/Geology": "21",
+    Engineering: "22",
+    "Geographical/Environmental Sciences/Oceanology": "23",
+    Mathematics: "24",
+    Physics: "25",
+    "Astronomy and Planetary Science": "26",
+    Business: "27",
+    "Social Science": "28",
+    Others: "29",
+    Biology: "30",
+    "Coronary Artery Disease": "31",
+  };
+
   // console.log(addOns[selectedGoal][selectedAddOns[1]])
   for (let i = 0; i < selectedAddOns.length; i++) {
     let j = selectedAddOns[i];
@@ -282,8 +384,8 @@ export default function ProjectQuote() {
   };
 
   useEffect(() => {
-    setSelectedOption(""); // Reset option when goal changes
-    setSelectedAddOns([]); // Reset add-ons when goal changes
+    setSelectedOption("");
+    setSelectedAddOns([]);
   }, [selectedGoal]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -310,21 +412,13 @@ export default function ProjectQuote() {
     return goalToServiceType[goal] || "0";
   };
 
-  const mapMajorSubject = (subject: string): string => {
-    // Map major subject to corresponding code
-    const subjectToCode: Record<string, string> = {
-      science: "60",
-      math: "61",
-      history: "62",
-    };
-    return subjectToCode[subject] || "60"; // default to 60 if not found
-  };
-
-  // useEffect(() => {
-  //   const AddOnIds = selectedAddOns.map(
-  //     (val) => addOns[String(selectedGoal)][String(val)]
-  //   );
-  // }, [selectedAddOns]);
+  useEffect(() => {
+    let allSelectedAddOnsId = selectedAddOns.map(
+      (val) => addOnsId[selectedGoal][val]
+    );
+    const allSelectedAddOnsIds = allSelectedAddOnsId.join(",");
+    setSelectedAddOnsId(allSelectedAddOnsIds);
+  }, [selectedAddOns]);
 
   const handleSubmit = async (
     e: React.FormEvent,
@@ -336,16 +430,17 @@ export default function ProjectQuote() {
     e.preventDefault();
 
     // Prepare the data in the required format
+    // mapMajorSubject(formData.majorSubject)
     const postData = {
       service_type: mainServices[selectedGoal],
       service_name: subServices[selectedOption],
-      add_ons: "",
-      major_subject: mapMajorSubject(formData.majorSubject),
+      add_ons: selectedAddOnsId,
+      major_subject: "",
       specific_subject: formData.specificSubject,
       delivery_date: formData.deliveryDate,
       language: formData.preferredLanguage.toLowerCase().replace(" ", "_"),
       inst_for_editor: formData.editorInstruction,
-      word_count: manualWordCount || "0", // Use manual word count or default to "0"
+      word_count: manualWordCount || "0",
       pay_mode: formData.paymentMode,
       file: file ? file.name : "no_file_uploaded.docs",
       name: formData.Name,
@@ -688,9 +783,10 @@ export default function ProjectQuote() {
                       required
                     >
                       <option value="">-- Select --</option>
-                      <option value="science">Science</option>
+                      {/* <option value="science">Science</option>
                       <option value="math">Math</option>
-                      <option value="history">History</option>
+                      <option value="history">History</option> */}
+                      {/* {majorSubject} */}
                     </select>
                   </div>
                   <div className="col-md-6">
