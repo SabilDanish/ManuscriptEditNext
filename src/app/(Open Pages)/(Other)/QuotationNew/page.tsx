@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import "../QuotationNew/quotationNew.css";
 import { goalOptions } from "@/app/utils/Quote";
 import { addOnOptions } from "@/app/utils/Quote";
+import { addonturnaroundPrice } from "@/app/utils/Quote";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 export default function ProjectQuote() {
@@ -42,15 +43,32 @@ export default function ProjectQuote() {
   }, []);
 
   useEffect(() => {
-    const basePrice = wordCount * (turnaroundPrices[turnaround] || 0);
+    const numericWordCount = Number(wordCount);
+    let basePrice = 0;
+
+    if (selectedOption === "Extensive Substantive Editing") {
+      basePrice = numericWordCount * (turnaroundPrices[turnaround] || 0);
+    } else if (selectedOption === "Substantive Editing") {
+      basePrice = numericWordCount * (turnaroundPrices1[turnaround] || 0);
+    } else if (selectedOption === "Proofreading") {
+      basePrice = numericWordCount * (turnaroundPrices2[turnaround] || 0);
+    }
+
+    // Calculate add-on total individually
+    const addOnTotal = selectedAddOns.reduce((total, addOn) => {
+      const matchedAddOn = addonturnaroundPrice.find(
+        (item) => item.name === addOn
+      );
+      if (matchedAddOn) {
+        return total + numericWordCount * matchedAddOn.price;
+      }
+      return total;
+    }, 0);
+
     setTotalPrice(basePrice);
-
-    const addOnTotal = selectedAddOns.length * wordCount * AddonCommonPrice;
     setTotalPriceAddOns(addOnTotal);
-
     setOptionTotalPrice(basePrice + addOnTotal);
-  }, [wordCount, turnaround, selectedAddOns]);
-
+  }, [wordCount, turnaround, selectedAddOns, selectedOption]);
   const AddonCommonPrice = 0.1;
 
   const turnaroundPrices: Record<string, number> = {
