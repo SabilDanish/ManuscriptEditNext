@@ -157,7 +157,7 @@ export default function ProjectQuote() {
   const subServices = {
     "Substantive (Advanced) Editing": "366",
     "Copyediting (Standard Editing)": "367",
-    Proofreading: "368",
+    "Proofreading": "368",
     "Journal Formatting & Style Editing": "369",
     "Language Enhancement & Clarity Check": "370",
     "Re-editing Support": "371",
@@ -706,9 +706,10 @@ export default function ProjectQuote() {
                       required
                     >
                       <option value="">-- Select --</option>
-                      <option value="science">Science</option>
+                      {/* <option value="science">Science</option>
                       <option value="math">Math</option>
-                      <option value="history">History</option>
+                      <option value="history">History</option> */}
+                      {/* {majorSubject} */}
                     </select>
                   </div>
                   <div className="col-md-6">
