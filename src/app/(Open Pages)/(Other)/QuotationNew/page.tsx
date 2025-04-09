@@ -12,13 +12,15 @@ export default function ProjectQuote() {
   const [selectedOption, setSelectedOption] = useState<any>("");
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
   const [file, setFile] = useState<File | null>(null);
-  const [wordCount, setWordCount] = useState<number>(0);
+  const [wordCount, setWordCount] = useState<any>("");
   const [turnaround, setTurnaround] = useState<string>("Trn_Ar10");
   const [totalPrice, setTotalPrice] = useState<any>(0);
   const [totalPriceAddons, setTotalPriceAddOns] = useState<any>(0);
   const [optionTotalPrice, setOptionTotalPrice] = useState<any>(0);
   const [manualWordCount, setManualWordCount] = useState<any>("");
   const [selectedAddOnsId, setSelectedAddOnsId] = useState<any>("");
+  // const [selectedSubject, setSelectedSubject] = useState<string>('');
+  const [selectedSubSubject, setSelectedSubSubject] = useState<string>("");
 
   useEffect(() => {
     setSelectedAddOns([]);
@@ -37,10 +39,26 @@ export default function ProjectQuote() {
   const AddonCommonPrice = 0.1;
 
   const turnaroundPrices: Record<string, number> = {
-    Trn_Ar10: 0.5, // 10 days
-    Trn_Ar5: 0.9, // 5 days
-    Trn_Ar3: 1.2, // 3 days
-    Trn_Ar2: 1.5, // 2 days
+    Trn_Ar10: 0.047,
+    Trn_Ar5: 0.058,
+    Trn_Ar3: 0.069,
+    Trn_Ar2: 0.083,
+    Trn_Ar1: 0.094,
+  };
+  const turnaroundPrices1: Record<string, number> = {
+    Trn_Ar10: 0.032,
+    Trn_Ar5: 0.04,
+    Trn_Ar3: 0.047,
+    Trn_Ar2: 0.058,
+    Trn_Ar1: 0.069,
+  };
+
+  const turnaroundPrices2: Record<string, number> = {
+    Trn_Ar10: 0.04,
+    Trn_Ar5: 0.047,
+    Trn_Ar3: 0.058,
+    Trn_Ar2: 0.069,
+    Trn_Ar1: 0.083,
   };
 
   const [formData, setFormData] = useState({
@@ -56,71 +74,232 @@ export default function ProjectQuote() {
     paymentMode: "",
   });
 
+  const subjectsData = [
+    {
+      id: "1",
+      subject: "Biological Sciences",
+      sub_subjects: [
+        {
+          id: "4",
+          count: 1,
+          sub_name: "Agricultural Science",
+        },
+        {
+          id: "5",
+          count: 2,
+          sub_name: "Biochemistry",
+        },
+        {
+          id: "6",
+          count: 3,
+          sub_name: "Bioinformatics",
+        },
+        {
+          id: "7",
+          count: 4,
+          sub_name: "Biotechnology",
+        },
+        {
+          id: "8",
+          count: 5,
+          sub_name: "Botany",
+        },
+        {
+          id: "9",
+          count: 6,
+          sub_name: "Environmental Science",
+        },
+        {
+          id: "10",
+          count: 7,
+          sub_name: "Fisheries Science",
+        },
+        {
+          id: "11",
+          count: 8,
+          sub_name: "Genetics/Genomics",
+        },
+        {
+          id: "12",
+          count: 9,
+          sub_name: "Immunology",
+        },
+        {
+          id: "13",
+          count: 10,
+          sub_name: "Medicine",
+        },
+        {
+          id: "14",
+          count: 11,
+          sub_name: "Microbiology",
+        },
+        {
+          id: "15",
+          count: 12,
+          sub_name: "Molecular Biology",
+        },
+        {
+          id: "16",
+          count: 13,
+          sub_name: "Pharmaceutical Sciences",
+        },
+        {
+          id: "17",
+          count: 14,
+          sub_name: "Taxonomy",
+        },
+        {
+          id: "18",
+          count: 15,
+          sub_name: "Zoology",
+        },
+        {
+          id: "30",
+          count: 16,
+          sub_name: "Biology",
+        },
+        {
+          id: "31",
+          count: 17,
+          sub_name: "Coronary Artery Disease",
+        },
+      ],
+    },
+    {
+      id: "2",
+      subject: "Engineering and Physical Sciences",
+      sub_subjects: [
+        {
+          id: "19",
+          count: 1,
+          sub_name: "Architecture",
+        },
+        {
+          id: "20",
+          count: 2,
+          sub_name: "Chemistry",
+        },
+        {
+          id: "21",
+          count: 3,
+          sub_name: "Earth Sciences/Geology",
+        },
+        {
+          id: "22",
+          count: 4,
+          sub_name: "Engineering",
+        },
+        {
+          id: "23",
+          count: 5,
+          sub_name: "Geographical/Environmental Sciences/Oceanology ",
+        },
+        {
+          id: "24",
+          count: 6,
+          sub_name: "Mathematics",
+        },
+        {
+          id: "25",
+          count: 7,
+          sub_name: "Physics",
+        },
+        {
+          id: "26",
+          count: 8,
+          sub_name: "Astronomy and Planetary Science",
+        },
+      ],
+    },
+    {
+      id: "3",
+      subject: "Social Science / Business Management / Others",
+      sub_subjects: [
+        {
+          id: "27",
+          count: 1,
+          sub_name: "Business",
+        },
+        {
+          id: "28",
+          count: 2,
+          sub_name: "Social Science",
+        },
+        {
+          id: "29",
+          count: 3,
+          sub_name: "Others",
+        },
+      ],
+    },
+  ];
+
   const goals = [
     {
       id: 355,
       text: "Editing & Language Services",
-      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      Desc: "Improve grammar, clarity, consistency, and readability of your manuscript for Scopus, PubMed, Web of Science.",
       emoji: "✍️",
     },
     {
       id: 356,
       text: "Medical & Clinical Writing Services",
-      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      Desc: "Expertly crafted content for clinical trials, case reports, protocols, and other medical documentation, adhering to global standards.",
       emoji: "🩺",
     },
     {
       id: 357,
       text: "Regulatory Writing Support",
-      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      Desc: "Precise, compliant regulatory documents including clinical study reports (CSRs), protocols, and submissions for FDA, EMA, etc.",
       emoji: "📜",
     },
     {
       id: 358,
       text: "Scientific Communication Support",
-      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      Desc: "Visuals, infographics, and simplified summaries to enhance your research’s reach across scientific and non-scientific audiences.",
       emoji: "🔬",
     },
     {
       id: 359,
       text: "Evidence Synthesis & Review Writing",
-      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      Desc: "Systematic reviews, meta-analyses, and literature reviews written following PRISMA or other applicable guidelines.",
       emoji: "📊",
     },
     {
       id: 360,
       text: "Scientific Publication Assistance",
-      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      Desc: "End-to-end support for journal selection, cover letters, submission, peer-review handling, and resubmissions.",
       emoji: "📚",
     },
     {
       id: 361,
       text: "Data & Statistical Support",
-      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      Desc: "Robust statistical analysis, data interpretation, visualizations, and guidance tailored to your research objectives.",
       emoji: "📈",
     },
     {
       id: 362,
       text: "Journal Publication Support",
-      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      Desc: "Full-cycle manuscript submission and tracking service—from formatting to final upload—on your target journal’s portal.",
       emoji: "📰",
     },
     {
       id: 363,
       text: "Manuscriptedit Packages",
-      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium",
+      Desc: "Customisable bundles for editing, writing, and publishing support—ideal for thesis, dissertations, or multi-step projects.",
       emoji: "📄",
     },
     {
       id: 364,
       text: "Academic & Non-Scientific Writing",
-      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      Desc: "Support for essays, coursework, SOPs, reports, and business documents tailored for academic or professional use.",
       emoji: "📝",
     },
     {
       id: 365,
       text: "Design and Image Polishing and Creation",
-      Desc: "Lorem Ipsium lorem ipsium Lorem Ipsium lorem ipsium ",
+      Desc: "High-resolution graphs, journal-compliant figures, scientific illustrations,and presentation design services.",
       emoji: "🎨",
     },
   ];
@@ -142,7 +321,7 @@ export default function ProjectQuote() {
   const subServices = {
     "Substantive Editing": "366",
     "Copyediting (Standard Editing)": "367",
-    "Proofreading": "368",
+    Proofreading: "368",
     "Journal Formatting & Style Editing": "369",
     "Language Enhancement & Clarity Check": "370",
     "Re-editing Support": "371",
@@ -435,19 +614,19 @@ export default function ProjectQuote() {
       service_type: mainServices[selectedGoal],
       service_name: subServices[selectedOption],
       add_ons: selectedAddOnsId,
-      major_subject: "",
+      major_subject: formData.majorSubject,
       specific_subject: formData.specificSubject,
       delivery_date: formData.deliveryDate,
       language: formData.preferredLanguage.toLowerCase().replace(" ", "_"),
       inst_for_editor: formData.editorInstruction,
-      word_count: manualWordCount || "0",
+      word_count: wordCount || "0",
       pay_mode: formData.paymentMode,
       file: file ? file.name : "no_file_uploaded.docs",
       name: formData.Name,
       email: formData.Email,
       phone: formData.PhoneNum,
       user_find: formData.HearAbt,
-      total_price: String(totalPrice),
+      total_price: String(optionTotalPrice),
     };
 
     console.log("Submitting data:", postData);
@@ -499,33 +678,6 @@ export default function ProjectQuote() {
               <strong>Submit your project details for an exact quote.</strong>
             </h5>
 
-            <div className="uploadContainer">
-              <span className="Alignments">
-                <h4 style={{ marginBottom: "0px" }}>Enter the word count</h4>
-              </span>
-
-              <input
-                type="number"
-                className="form-control"
-                placeholder="e.g 2500"
-                value={wordCount}
-                onChange={(e) => setWordCount(Number(e.target.value))}
-              />
-
-              <select
-                className="form-control"
-                name="WrdCnt"
-                id="WrdCnt"
-                style={{ marginTop: "10px" }}
-                value={turnaround}
-                onChange={(e) => setTurnaround(e.target.value)}
-              >
-                <option value="Trn_Ar10">Turn Around Time (10days)</option>
-                <option value="Trn_Ar5">Turn Around Time (5days)</option>
-                <option value="Trn_Ar3">Turn Around Time (3days)</option>
-                <option value="Trn_Ar2">Turn Around Time (2days)</option>
-              </select>
-            </div>
             <div
               style={{
                 marginTop: "2rem",
@@ -697,7 +849,36 @@ export default function ProjectQuote() {
                     ))}
               </div>
             )}
+            <div className="uploadContainer">
+              <span className="Alignments">
+                <h4 style={{ marginBottom: "0px" }}>Enter the word count *</h4>
+              </span>
 
+              <input
+                type="number"
+                name="wordCount"
+                className="form-control"
+                placeholder="Enter word count *" // <-- set a placeholder text or leave it blank
+                value={wordCount}
+                onChange={(e) => setWordCount(e.target.value)}
+                required
+              />
+
+              <select
+                className="form-control"
+                name="WrdCnt"
+                id="WrdCnt"
+                style={{ marginTop: "10px" }}
+                value={turnaround}
+                onChange={(e) => setTurnaround(e.target.value)}
+              >
+                <option value="Trn_Ar10">Turn Around Time (10days)</option>
+                <option value="Trn_Ar5">Turn Around Time (5days)</option>
+                <option value="Trn_Ar3">Turn Around Time (3days)</option>
+                <option value="Trn_Ar2">Turn Around Time (2days)</option>
+                <option value="Trn_Ar1">Turn Around Time (1day)</option>
+              </select>
+            </div>
             <div className="container mt-4">
               <form
                 onSubmit={(e) =>
@@ -783,11 +964,32 @@ export default function ProjectQuote() {
                       required
                     >
                       <option value="">-- Select --</option>
-                      {/* <option value="science">Science</option>
-                      <option value="math">Math</option>
-                      <option value="history">History</option> */}
-                      {/* {majorSubject} */}
+                      {subjectsData.map((subject) => (
+                        <optgroup key={subject.id} label={subject.subject}>
+                          {subject.sub_subjects.map((subSubject) => (
+                            <option key={subSubject.id} value={subSubject.id}>
+                              {subSubject.sub_name}
+                            </option>
+                          ))}
+                        </optgroup>
+                      ))}
                     </select>
+                    {/* <select
+                      value={selectedSubSubject}
+                      onChange={(e) => setSelectedSubSubject(e.target.value)}
+                      className="form-control"
+                    >
+                      <option value="">Select a subject/sub-subject</option>
+                      {subjectsData.map((subject) => (
+                        <optgroup key={subject.id} label={subject.subject}>
+                          {subject.sub_subjects.map((subSubject) => (
+                            <option key={subSubject.id} value={subSubject.id}>
+                              {subSubject.sub_name}
+                            </option>
+                          ))}
+                        </optgroup>
+                      ))}
+                    </select> */}
                   </div>
                   <div className="col-md-6">
                     <label className="form-label">
@@ -902,7 +1104,7 @@ export default function ProjectQuote() {
                   <p className="d-flex justify-content-between align-items-center border p-2 rounded mt-2">
                     <span>{selectedOption || "None"}</span>
                     <span className="fw-bold">
-                      ₹
+                      $
                       {selectedOption
                         ? goalOptions[selectedGoal]?.find(
                             (opt: any) => opt.text === selectedOption
@@ -947,7 +1149,7 @@ export default function ProjectQuote() {
                           <tr>
                             <td className="fw-bold">{` ${selectedAddOns}, `}</td>
                             <td className="text-end fw-bold text-primary">
-                              ₹{totalPriceAddons.toFixed(2)}
+                              ${totalPriceAddons.toFixed(2)}
                             </td>
                           </tr>
                         </tbody>
@@ -959,7 +1161,7 @@ export default function ProjectQuote() {
                   <div className="border-top pt-3 d-flex justify-content-between align-items-center">
                     <h5 className="mb-0">Total:</h5>
                     <p className="fw-bold fs-5 text-primary mb-0">
-                      ₹{optionTotalPrice.toFixed(2)}
+                      ${optionTotalPrice.toFixed(2)}
                     </p>
                   </div>
                 ) : null}
