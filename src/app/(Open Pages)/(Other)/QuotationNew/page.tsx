@@ -22,9 +22,27 @@ export default function ProjectQuote() {
   // const [selectedSubject, setSelectedSubject] = useState<string>('');
   const [selectedSubSubject, setSelectedSubSubject] = useState<string>("");
 
+  console.log("selectedOption:" , selectedOption)
+
   useEffect(() => {
     setSelectedAddOns([]);
   }, [selectedOption]);
+
+  useEffect(() => {
+    let a = localStorage.getItem("SelectedServiceFromPriceCalculator");
+    console.log("SelectedServiceFromPriceCalculator", a);
+    // localStorage.removeItem("SelectedServiceFromPriceCalculator");
+    if (a === "Extensive Substantive Editing") {
+      setSelectedGoal("Editing & Language Services");
+      setSelectedOption(a);
+    } else if (a === "Substantive Editing") {
+      setSelectedGoal("Editing & Language Services");
+      setSelectedOption(a);
+    } else if (a === "Proofreading") {
+      setSelectedGoal("Editing & Language Services");
+      setSelectedOption(a);
+    }
+  }, []);
 
   useEffect(() => {
     const basePrice = wordCount * (turnaroundPrices[turnaround] || 0);
@@ -593,7 +611,7 @@ export default function ProjectQuote() {
 
   useEffect(() => {
     let allSelectedAddOnsId = selectedAddOns.map(
-      (val) => addOnsId[selectedGoal][val]
+      (val) => (addOnsId as any)[selectedGoal][val]
     );
     const allSelectedAddOnsIds = allSelectedAddOnsId.join(",");
     setSelectedAddOnsId(allSelectedAddOnsIds);
@@ -705,7 +723,7 @@ export default function ProjectQuote() {
               </h5>
             </div>
             <div style={{ display: hideGoalSection ? "none" : "" }}>
-              <h5 style={{ marginTop: "30px" }}>Your Goals</h5>
+              <h5 style={{ marginTop: "30px" }}>Select Your Goals</h5>
               <div className="row">
                 {goals.map((goal, index) => (
                   <div
@@ -1103,14 +1121,19 @@ export default function ProjectQuote() {
                   <strong>Selected Option:</strong>
                   <p className="d-flex justify-content-between align-items-center border p-2 rounded mt-2">
                     <span>{selectedOption || "None"}</span>
-                    <span className="fw-bold">
-                      $
-                      {selectedOption
-                        ? goalOptions[selectedGoal]?.find(
-                            (opt: any) => opt.text === selectedOption
-                          )?.price || totalPrice
-                        : "0"}
-                    </span>
+                    {selectedGoal === "Editing & Language Services" &&
+                      (optionTotalPrice != 0 ? (
+                        <span className="fw-bold">
+                          $
+                          {selectedOption
+                            ? goalOptions[selectedGoal]?.find(
+                                (opt: any) => opt.text === selectedOption
+                              )?.price || totalPrice
+                            : "0"}
+                        </span>
+                      ) : (
+                        ""
+                      ))}
                   </p>
                 </div>
                 <div className="mb-3">
@@ -1148,23 +1171,47 @@ export default function ProjectQuote() {
                         <tbody>
                           <tr>
                             <td className="fw-bold">{` ${selectedAddOns}, `}</td>
-                            <td className="text-end fw-bold text-primary">
-                              ${totalPriceAddons.toFixed(2)}
-                            </td>
+                            {selectedGoal === "Editing & Language Services" &&
+                              (optionTotalPrice != 0 ? (
+                                <td className="text-end fw-bold text-primary">
+                                  ${totalPriceAddons.toFixed(2)}
+                                </td>
+                              ) : (
+                                ""
+                              ))}
                           </tr>
                         </tbody>
                       </table>
                     </div>
                   )}
                 </div>
-                {selectedOption ? (
-                  <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                    <h5 className="mb-0">Total:</h5>
-                    <p className="fw-bold fs-5 text-primary mb-0">
-                      ${optionTotalPrice.toFixed(2)}
-                    </p>
-                  </div>
-                ) : null}
+                <div>
+                  {selectedGoal === "Editing & Language Services" ? (
+                    optionTotalPrice != 0 ? (
+                      <div className="border-top pt-3 d-flex justify-content-between align-items-center">
+                        <h5 className="mb-0">Total:</h5>
+                        <p className="fw-bold fs-5 text-primary mb-0">
+                          ${optionTotalPrice.toFixed(2)}
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="border-top pt-3 d-flex justify-content-between align-items-center">
+                        <p className="mb-0">
+                          Please enter word count for pricing.
+                        </p>
+                      </div>
+                    )
+                  ) : (
+                    selectedGoal && (
+                      <div className="border-top pt-3 d-flex justify-content-between align-items-center">
+                        <p className="mb-0">
+                          For the selected service, pricing depends on
+                          data/manuscript's complexity
+                        </p>
+                      </div>
+                    )
+                  )}
+                </div>
               </div>
             </div>
           </div>

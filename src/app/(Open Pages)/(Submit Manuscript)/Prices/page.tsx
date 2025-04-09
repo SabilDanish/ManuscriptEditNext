@@ -407,9 +407,14 @@ export default function Home() {
                   </button>
                   <button
                     className={Styles.priceQuoteButton}
-                    onClick={() => {
-                      window.location.href =
-                        "https://secure.manuscriptedit.com/quotation";
+                    // onClick={() => {
+                    //   window.location.href =
+                    //     "https://secure.manuscriptedit.com/quotation";
+                    // }}
+
+                    onClick={() => {             
+                      localStorage.setItem("SelectedServiceFromPriceCalculator", "Extensive Substantive Editing");
+                      window.location.href = '/QuotationNew';
                     }}
                   >
                     Get A Price Quote
@@ -463,9 +468,9 @@ export default function Home() {
                   </button>
                   <button
                     className={Styles.priceQuoteButton}
-                    onClick={() => {
-                      window.location.href =
-                        "https://secure.manuscriptedit.com/quotation";
+                    onClick={() => {             
+                      localStorage.setItem("SelectedServiceFromPriceCalculator", "Substantive Editing");
+                      window.location.href = '/QuotationNew';
                     }}
                   >
                     Get A Price Quote
@@ -519,9 +524,9 @@ export default function Home() {
                   </button>
                   <button
                     className={Styles.priceQuoteButton}
-                    onClick={() => {
-                      window.location.href =
-                        "https://secure.manuscriptedit.com/quotation";
+                    onClick={() => {             
+                      localStorage.setItem("SelectedServiceFromPriceCalculator", "Proofreading");
+                      window.location.href = '/QuotationNew';
                     }}
                   >
                     Get A Price Quote
