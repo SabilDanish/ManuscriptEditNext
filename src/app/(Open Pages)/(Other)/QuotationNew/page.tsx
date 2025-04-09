@@ -22,25 +22,22 @@ export default function ProjectQuote() {
   // const [selectedSubject, setSelectedSubject] = useState<string>('');
   const [selectedSubSubject, setSelectedSubSubject] = useState<string>("");
 
-  console.log("selectedOption:" , selectedOption)
-
   useEffect(() => {
     setSelectedAddOns([]);
   }, [selectedOption]);
 
   useEffect(() => {
     let a = localStorage.getItem("SelectedServiceFromPriceCalculator");
+    setSelectedOption(a);
+    console.log("selectedOption:", selectedOption);
     console.log("SelectedServiceFromPriceCalculator", a);
-    // localStorage.removeItem("SelectedServiceFromPriceCalculator");
+    localStorage.removeItem("SelectedServiceFromPriceCalculator");
     if (a === "Extensive Substantive Editing") {
       setSelectedGoal("Editing & Language Services");
-      setSelectedOption(a);
     } else if (a === "Substantive Editing") {
       setSelectedGoal("Editing & Language Services");
-      setSelectedOption(a);
     } else if (a === "Proofreading") {
       setSelectedGoal("Editing & Language Services");
-      setSelectedOption(a);
     }
   }, []);
 
