@@ -35,6 +35,8 @@ export const goalOptions: Record<string, GoalOption[]> = {
     },
   ],
 
+ 
+
   "Medical & Clinical Writing Services": [
     {
       id: "375",
@@ -1236,6 +1238,18 @@ export const addOnOptions: Record<string, AddOns[]> = {
     },
   ],
 };
+
+export const addonturnaroundPrice = [
+  { name: "Peer Review Analysis", price: 0.08 },
+  { name: "Data Analysis", price: 0.12 },
+  { name: "Journal Selection", price: 80 },
+  { name: "Target Journal Formatting", price: 0.08 },
+  { name: "Artwork Formatting", price: 0.08 },
+  { name: "Cover Letter Writing", price: 0.08 },
+  { name: "Journal Submission", price: 120 },
+  { name: "Response To Reviewer", price: 100 },
+  { name: "Plagiarism Check", price: 0.05 },
+];
 
 const pricingDataExSubs = [
   {

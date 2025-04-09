@@ -4,36 +4,66 @@ import { useEffect, useState } from "react";
 import "../QuotationNew/quotationNew.css";
 import { goalOptions } from "@/app/utils/Quote";
 import { addOnOptions } from "@/app/utils/Quote";
+import { addonturnaroundPrice } from "@/app/utils/Quote";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 export default function ProjectQuote() {
-  const [selectedGoal, setSelectedGoal] = useState("");
-  const [hideGoalSection, setHideGoalSection] = useState(true);
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedGoal, setSelectedGoal] = useState<any>("");
+  const [hideGoalSection, setHideGoalSection] = useState<any>(true);
+  const [selectedOption, setSelectedOption] = useState<any>("");
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
   const [file, setFile] = useState<File | null>(null);
   const [wordCount, setWordCount] = useState<any>("");
   const [turnaround, setTurnaround] = useState<string>("Trn_Ar10");
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [totalPriceAddons, setTotalPriceAddOns] = useState(0);
-  const [optionTotalPrice, setOptionTotalPrice] = useState(0);
-  const [manualWordCount, setManualWordCount] = useState("");
-  const [optionprice2 , setOptionPrice2] = useState(0)
+  const [totalPrice, setTotalPrice] = useState<any>(0);
+  const [totalPriceAddons, setTotalPriceAddOns] = useState<any>(0);
+  const [optionTotalPrice, setOptionTotalPrice] = useState<any>(0);
+  const [manualWordCount, setManualWordCount] = useState<any>("");
+  const [selectedAddOnsId, setSelectedAddOnsId] = useState<any>("");
+  // const [selectedSubject, setSelectedSubject] = useState<string>('');
+  const [selectedSubSubject, setSelectedSubSubject] = useState<string>("");
 
-  console.log("totalPrice" , totalPrice ,"totalPriceAddons" , totalPriceAddons ,"optionTotalPrice" , optionTotalPrice,"optionprice2" , optionprice2  )
+  console.log(
+    "selectedGoal:",
+    selectedGoal,
+    "selectedOption",
+    selectedOption,
+    "selectedAddOns",
+    selectedAddOns
+  );
 
   useEffect(() => {
-    const basePrice = wordCount * (turnaroundPrices[turnaround] || 0);
+    setSelectedAddOns([]);
+    setWordCount("");
+  }, [selectedOption]);
+
+  useEffect(() => {
+    const numericWordCount = Number(wordCount);
+    let basePrice = 0;
+
+    if (selectedOption === "Extensive Substantive Editing") {
+      basePrice = numericWordCount * (turnaroundPrices[turnaround] || 0);
+    } else if (selectedOption === "Substantive Editing") {
+      basePrice = numericWordCount * (turnaroundPrices1[turnaround] || 0);
+    } else if (selectedOption === "Proofreading") {
+      basePrice = numericWordCount * (turnaroundPrices2[turnaround] || 0);
+    }
+
+    // Calculate add-on total individually
+    const addOnTotal = selectedAddOns.reduce((total, addOn) => {
+      const matchedAddOn = addonturnaroundPrice.find(
+        (item) => item.name === addOn
+      );
+      if (matchedAddOn) {
+        return total + numericWordCount * matchedAddOn.price;
+      }
+      return total;
+    }, 0);
+
     setTotalPrice(basePrice);
-
-    const addOnTotal = selectedAddOns.length * wordCount * AddonCommonPrice;
     setTotalPriceAddOns(addOnTotal);
-
     setOptionTotalPrice(basePrice + addOnTotal);
-  }, [wordCount, turnaround, selectedAddOns]);
-  
-
-  const AddonCommonPrice = 0.1;
+  }, [wordCount, turnaround, selectedAddOns, selectedOption]);
 
   const turnaroundPrices: Record<string, number> = {
     Trn_Ar10: 0.047,
@@ -70,6 +100,167 @@ export default function ProjectQuote() {
     editorInstruction: "",
     paymentMode: "",
   });
+
+  const subjectsData = [
+    {
+      id: "1",
+      subject: "Biological Sciences",
+      sub_subjects: [
+        {
+          id: "4",
+          count: 1,
+          sub_name: "Agricultural Science",
+        },
+        {
+          id: "5",
+          count: 2,
+          sub_name: "Biochemistry",
+        },
+        {
+          id: "6",
+          count: 3,
+          sub_name: "Bioinformatics",
+        },
+        {
+          id: "7",
+          count: 4,
+          sub_name: "Biotechnology",
+        },
+        {
+          id: "8",
+          count: 5,
+          sub_name: "Botany",
+        },
+        {
+          id: "9",
+          count: 6,
+          sub_name: "Environmental Science",
+        },
+        {
+          id: "10",
+          count: 7,
+          sub_name: "Fisheries Science",
+        },
+        {
+          id: "11",
+          count: 8,
+          sub_name: "Genetics/Genomics",
+        },
+        {
+          id: "12",
+          count: 9,
+          sub_name: "Immunology",
+        },
+        {
+          id: "13",
+          count: 10,
+          sub_name: "Medicine",
+        },
+        {
+          id: "14",
+          count: 11,
+          sub_name: "Microbiology",
+        },
+        {
+          id: "15",
+          count: 12,
+          sub_name: "Molecular Biology",
+        },
+        {
+          id: "16",
+          count: 13,
+          sub_name: "Pharmaceutical Sciences",
+        },
+        {
+          id: "17",
+          count: 14,
+          sub_name: "Taxonomy",
+        },
+        {
+          id: "18",
+          count: 15,
+          sub_name: "Zoology",
+        },
+        {
+          id: "30",
+          count: 16,
+          sub_name: "Biology",
+        },
+        {
+          id: "31",
+          count: 17,
+          sub_name: "Coronary Artery Disease",
+        },
+      ],
+    },
+    {
+      id: "2",
+      subject: "Engineering and Physical Sciences",
+      sub_subjects: [
+        {
+          id: "19",
+          count: 1,
+          sub_name: "Architecture",
+        },
+        {
+          id: "20",
+          count: 2,
+          sub_name: "Chemistry",
+        },
+        {
+          id: "21",
+          count: 3,
+          sub_name: "Earth Sciences/Geology",
+        },
+        {
+          id: "22",
+          count: 4,
+          sub_name: "Engineering",
+        },
+        {
+          id: "23",
+          count: 5,
+          sub_name: "Geographical/Environmental Sciences/Oceanology ",
+        },
+        {
+          id: "24",
+          count: 6,
+          sub_name: "Mathematics",
+        },
+        {
+          id: "25",
+          count: 7,
+          sub_name: "Physics",
+        },
+        {
+          id: "26",
+          count: 8,
+          sub_name: "Astronomy and Planetary Science",
+        },
+      ],
+    },
+    {
+      id: "3",
+      subject: "Social Science / Business Management / Others",
+      sub_subjects: [
+        {
+          id: "27",
+          count: 1,
+          sub_name: "Business",
+        },
+        {
+          id: "28",
+          count: 2,
+          sub_name: "Social Science",
+        },
+        {
+          id: "29",
+          count: 3,
+          sub_name: "Others",
+        },
+      ],
+    },
+  ];
 
   const goals = [
     {
@@ -155,9 +346,9 @@ export default function ProjectQuote() {
   };
 
   const subServices = {
-    "Substantive (Advanced) Editing": "366",
+    "Substantive Editing": "366",
     "Copyediting (Standard Editing)": "367",
-    "Proofreading": "368",
+    Proofreading: "368",
     "Journal Formatting & Style Editing": "369",
     "Language Enhancement & Clarity Check": "370",
     "Re-editing Support": "371",
@@ -211,12 +402,79 @@ export default function ProjectQuote() {
     "Poster Design & Development": "419",
   };
 
-  const addOns = {
+  const addOnsId: {
     "Editing & Language Services": {
-      "Journal Formatting & Style Editing": "1",
-      "Reference & Citation Editing": "2",
-      "Language Enhancement & Clarity Check": "3",
-      "Plagiarism Check & Report": "4",
+      "Peer Review Analysis": string;
+      "Data Analysis": string;
+      "Journal Selection": string;
+      "Target Journal Formatting": string;
+      "Artwork Formatting": string;
+      "Cover Letter Writing": string;
+      "Journal Submission": string;
+      "Response To Reviewer": string;
+      "Plagiarism Check": string;
+    };
+    "Medical & Clinical Writing Services": {
+      "Patient & HCP Education Material": string;
+      "Compliance & Standards Alignment": string;
+      "Journal Selection Assistance": string;
+    };
+    "Regulatory Writing Support": {
+      "Compliance & Standards Alignment": string;
+      "Scientific Illustration Design": string;
+      "End-to-End Journal Submission Support": string;
+    };
+    "Scientific Communication Support": {
+      "Scientific Illustration Design": string;
+      "Poster Design & Development": string;
+      "Graph & Chart Enhancement": string;
+    };
+    "Evidence Synthesis & Review Writing": {
+      "Meta-analysis Writing & Execution": string;
+      "Reference & Citation Editing": string;
+      "Scientific Illustration Design": string;
+    };
+    "Scientific Publication Assistance": {
+      "Title, Abstract & Keyword Optimization": string;
+      "Journal Formatting & Style Editing": string;
+      "Pre-Submission Peer Review": string;
+    };
+    "Data & Statistical Support": {
+      "Graph & Chart Enhancement": string;
+      "Meta-analysis Writing": string;
+      "Scientific Illustration Design": string;
+    };
+    "Journal Publication Support": {
+      "Cover Letter Preparation": string;
+      "Response to Reviewer Comments": string;
+      "Fast Track Publication Consultation": string;
+    };
+    "Manuscriptedit Packages": {
+      "Reviewer Response Package": string;
+      "Rejection Handling Package": string;
+      "Plagiarism Check & Report": string;
+    };
+    "Academic & Non-Scientific Writing": {
+      "Plagiarism Check & Report": string;
+      "Reference & Citation Editing": string;
+      "Scientific Illustration Design": string;
+    };
+    "Design and Image Polishing and Creation": {
+      "Image Formatting & Conversion": string;
+      "Graph & Chart Enhancement": string;
+      "Scientific Marketing & Promotional Content": string;
+    };
+  } = {
+    "Editing & Language Services": {
+      "Peer Review Analysis": "1",
+      "Data Analysis": "2",
+      "Journal Selection": "3",
+      "Target Journal Formatting": "4",
+      "Artwork Formatting": "35",
+      "Cover Letter Writing": "36",
+      "Journal Submission": "37",
+      "Response To Reviewer": "38",
+      "Plagiarism Check": "39",
     },
     "Medical & Clinical Writing Services": {
       "Patient & HCP Education Material": "5",
@@ -270,6 +528,40 @@ export default function ProjectQuote() {
     },
   };
 
+  const majorSubject = {
+    "Biological Sciences": "1",
+    "Engineering and Physical Sciences": "2",
+    "Social Science / Business Management / Others": "3",
+    "Agricultural Science": "4",
+    Biochemistry: "5",
+    Bioinformatics: "6",
+    Biotechnology: "7",
+    Botany: "8",
+    "Environmental Science": "9",
+    "Fisheries Science": "10",
+    "Genetics/Genomics": "11",
+    Immunology: "12",
+    Medicine: "13",
+    Microbiology: "14",
+    "Molecular Biology": "15",
+    "Pharmaceutical Sciences": "16",
+    Taxonomy: "17",
+    Zoology: "18",
+    Architecture: "19",
+    Chemistry: "20",
+    "Earth Sciences/Geology": "21",
+    Engineering: "22",
+    "Geographical/Environmental Sciences/Oceanology": "23",
+    Mathematics: "24",
+    Physics: "25",
+    "Astronomy and Planetary Science": "26",
+    Business: "27",
+    "Social Science": "28",
+    Others: "29",
+    Biology: "30",
+    "Coronary Artery Disease": "31",
+  };
+
   // console.log(addOns[selectedGoal][selectedAddOns[1]])
   for (let i = 0; i < selectedAddOns.length; i++) {
     let j = selectedAddOns[i];
@@ -298,8 +590,7 @@ export default function ProjectQuote() {
   };
 
   useEffect(() => {
-    setSelectedOption(""); // Reset option when goal changes
-    setSelectedAddOns([]); // Reset add-ons when goal changes
+    setSelectedOption("");
   }, [selectedGoal]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -326,21 +617,13 @@ export default function ProjectQuote() {
     return goalToServiceType[goal] || "0";
   };
 
-  const mapMajorSubject = (subject: string): string => {
-    // Map major subject to corresponding code
-    const subjectToCode: Record<string, string> = {
-      science: "60",
-      math: "61",
-      history: "62",
-    };
-    return subjectToCode[subject] || "60"; // default to 60 if not found
-  };
-
-  // useEffect(() => {
-  //   const AddOnIds = selectedAddOns.map(
-  //     (val) => addOns[String(selectedGoal)][String(val)]
-  //   );
-  // }, [selectedAddOns]);
+  useEffect(() => {
+    let allSelectedAddOnsId = selectedAddOns.map(
+      (val) => (addOnsId as any)[selectedGoal][val]
+    );
+    const allSelectedAddOnsIds = allSelectedAddOnsId.join(",");
+    setSelectedAddOnsId(allSelectedAddOnsIds);
+  }, [selectedAddOns]);
 
   const handleSubmit = async (
     e: React.FormEvent,
@@ -352,26 +635,47 @@ export default function ProjectQuote() {
     e.preventDefault();
 
     // Prepare the data in the required format
+    // mapMajorSubject(formData.majorSubject)
     const postData = {
       service_type: mainServices[selectedGoal],
       service_name: subServices[selectedOption],
-      add_ons: "",
-      major_subject: mapMajorSubject(formData.majorSubject),
+      add_ons: selectedAddOnsId,
+      major_subject: formData.majorSubject,
       specific_subject: formData.specificSubject,
       delivery_date: formData.deliveryDate,
       language: formData.preferredLanguage.toLowerCase().replace(" ", "_"),
       inst_for_editor: formData.editorInstruction,
-      word_count: manualWordCount || "0", // Use manual word count or default to "0"
+      word_count: wordCount || "0",
       pay_mode: formData.paymentMode,
       file: file ? file.name : "no_file_uploaded.docs",
       name: formData.Name,
       email: formData.Email,
       phone: formData.PhoneNum,
       user_find: formData.HearAbt,
-      total_price: String(totalPrice),
+      total_price: String(optionTotalPrice),
     };
 
     console.log("Submitting data:", postData);
+
+    // 2. After successful submission — RESET EVERYTHING:
+    setSelectedGoal("");
+    setSelectedOption("");
+    setSelectedAddOns([]);
+    setWordCount("");
+    setTurnaround("Trn_Ar10"); // or your default turnaround
+    setFormData({
+      Name: "",
+      Email: "",
+      PhoneNum: "",
+      HearAbt: "",
+      majorSubject: "",
+      specificSubject: "",
+      deliveryDate: "",
+      preferredLanguage: "",
+      editorInstruction: "",
+      paymentMode: "",
+    });
+    setHideGoalSection(false); // to show the goal options again
 
     try {
       const response = await fetch(
@@ -420,35 +724,6 @@ export default function ProjectQuote() {
               <strong>Submit your project details for an exact quote.</strong>
             </h5>
 
-            <div className="uploadContainer">
-              <span className="Alignments">
-                <h4 style={{ marginBottom: "0px" }}>Enter the word count</h4>
-              </span>
-
-              <input
-                type="number"
-                name="wordCount"
-                className="form-control"
-                placeholder="Enter word count" // <-- set a placeholder text or leave it blank
-                value={wordCount}
-                onChange={(e) => setWordCount(e.target.value)}
-              />
-
-              <select
-                className="form-control"
-                name="WrdCnt"
-                id="WrdCnt"
-                style={{ marginTop: "10px" }}
-                value={turnaround}
-                onChange={(e) => setTurnaround(e.target.value)}
-              >
-                <option value="Trn_Ar10">Turn Around Time (10days)</option>
-                <option value="Trn_Ar5">Turn Around Time (5days)</option>
-                <option value="Trn_Ar3">Turn Around Time (3days)</option>
-                <option value="Trn_Ar2">Turn Around Time (2days)</option>
-                <option value="Trn_Ar1">Turn Around Time (1day)</option>
-              </select>
-            </div>
             <div
               style={{
                 marginTop: "2rem",
@@ -620,7 +895,36 @@ export default function ProjectQuote() {
                     ))}
               </div>
             )}
+            <div className="uploadContainer">
+              <span className="Alignments">
+                <h4 style={{ marginBottom: "0px" }}>Enter the word count *</h4>
+              </span>
 
+              <input
+                type="number"
+                name="wordCount"
+                className="form-control"
+                placeholder="Enter word count *" // <-- set a placeholder text or leave it blank
+                value={wordCount}
+                onChange={(e) => setWordCount(e.target.value)}
+                required
+              />
+
+              <select
+                className="form-control"
+                name="WrdCnt"
+                id="WrdCnt"
+                style={{ marginTop: "10px" }}
+                value={turnaround}
+                onChange={(e) => setTurnaround(e.target.value)}
+              >
+                <option value="Trn_Ar10">Turn Around Time (10days)</option>
+                <option value="Trn_Ar5">Turn Around Time (5days)</option>
+                <option value="Trn_Ar3">Turn Around Time (3days)</option>
+                <option value="Trn_Ar2">Turn Around Time (2days)</option>
+                <option value="Trn_Ar1">Turn Around Time (1day)</option>
+              </select>
+            </div>
             <div className="container mt-4">
               <form
                 onSubmit={(e) =>
@@ -706,11 +1010,32 @@ export default function ProjectQuote() {
                       required
                     >
                       <option value="">-- Select --</option>
-                      {/* <option value="science">Science</option>
-                      <option value="math">Math</option>
-                      <option value="history">History</option> */}
-                      {/* {majorSubject} */}
+                      {subjectsData.map((subject) => (
+                        <optgroup key={subject.id} label={subject.subject}>
+                          {subject.sub_subjects.map((subSubject) => (
+                            <option key={subSubject.id} value={subSubject.id}>
+                              {subSubject.sub_name}
+                            </option>
+                          ))}
+                        </optgroup>
+                      ))}
                     </select>
+                    {/* <select
+                      value={selectedSubSubject}
+                      onChange={(e) => setSelectedSubSubject(e.target.value)}
+                      className="form-control"
+                    >
+                      <option value="">Select a subject/sub-subject</option>
+                      {subjectsData.map((subject) => (
+                        <optgroup key={subject.id} label={subject.subject}>
+                          {subject.sub_subjects.map((subSubject) => (
+                            <option key={subSubject.id} value={subSubject.id}>
+                              {subSubject.sub_name}
+                            </option>
+                          ))}
+                        </optgroup>
+                      ))}
+                    </select> */}
                   </div>
                   <div className="col-md-6">
                     <label className="form-label">
