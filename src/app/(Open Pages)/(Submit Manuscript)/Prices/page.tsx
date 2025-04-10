@@ -412,9 +412,17 @@ export default function Home() {
                     //     "https://secure.manuscriptedit.com/quotation";
                     // }}
 
-                    onClick={() => {             
-                      localStorage.setItem("SelectedServiceFromPriceCalculator", "Extensive Substantive Editing");
-                      window.location.href = '/QuotationNew';
+                    onClick={() => {
+                      localStorage.setItem(
+                        "SelectedServiceFromPriceCalculator",
+                        "Extensive Substantive Editing"
+                      );
+
+                      localStorage.setItem(
+                        "SelectedWordCountFromPriceCalculator",
+                        wordCount
+                      );
+                      window.location.href = "/QuotationNew";
                     }}
                   >
                     Get A Price Quote
@@ -468,9 +476,16 @@ export default function Home() {
                   </button>
                   <button
                     className={Styles.priceQuoteButton}
-                    onClick={() => {             
-                      localStorage.setItem("SelectedServiceFromPriceCalculator", "Substantive Editing");
-                      window.location.href = '/QuotationNew';
+                    onClick={() => {
+                      localStorage.setItem(
+                        "SelectedServiceFromPriceCalculator",
+                        "Substantive Editing"
+                      );
+                      localStorage.setItem(
+                        "SelectedWordCountFromPriceCalculator",
+                        wordCount
+                      );
+                      window.location.href = "/QuotationNew";
                     }}
                   >
                     Get A Price Quote
@@ -524,9 +539,16 @@ export default function Home() {
                   </button>
                   <button
                     className={Styles.priceQuoteButton}
-                    onClick={() => {             
-                      localStorage.setItem("SelectedServiceFromPriceCalculator", "Proofreading");
-                      window.location.href = '/QuotationNew';
+                    onClick={() => {
+                      localStorage.setItem(
+                        "SelectedServiceFromPriceCalculator",
+                        "Proofreading"
+                      );
+                      localStorage.setItem(
+                        "SelectedWordCountFromPriceCalculator",
+                        wordCount
+                      );
+                      window.location.href = "/QuotationNew";
                     }}
                   >
                     Get A Price Quote

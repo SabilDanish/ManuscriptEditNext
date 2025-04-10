@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "../QuotationNew/quotationNew.css";
 import { goalOptions } from "@/app/utils/Quote";
 import { addOnOptions } from "@/app/utils/Quote";
@@ -22,25 +22,34 @@ export default function ProjectQuote() {
   const [selectedAddOnsId, setSelectedAddOnsId] = useState<any>("");
   // const [selectedSubject, setSelectedSubject] = useState<string>('');
   const [selectedSubSubject, setSelectedSubSubject] = useState<string>("");
+  const [valFromLocalStorage, setValFromLocalStorage] = useState<any>("");
+
+  useEffect(() => {
+    setValFromLocalStorage(
+      localStorage.getItem("SelectedServiceFromPriceCalculator")
+    );
+    setWordCount(localStorage.getItem("SelectedWordCountFromPriceCalculator"));
+  }, []);
+  // console.log("wordCount is:", wordCount);
+  useEffect(() => {
+    if (valFromLocalStorage === "Extensive Substantive Editing") {
+      setSelectedGoal("Editing & Language Services");
+    } else if (valFromLocalStorage === "Substantive Editing") {
+      setSelectedGoal("Editing & Language Services");
+    } else if (valFromLocalStorage === "Proofreading") {
+      setSelectedGoal("Editing & Language Services");
+    }
+  }, [valFromLocalStorage]);
+
+  useEffect(() => {
+    setTimeout(() => setSelectedOption(valFromLocalStorage), 100);
+  }, [valFromLocalStorage]);
+
+  // console.log("afterUseEffect", valFromLocalStorage);
 
   useEffect(() => {
     setSelectedAddOns([]);
   }, [selectedOption]);
-
-  useEffect(() => {
-    let a = localStorage.getItem("SelectedServiceFromPriceCalculator");
-    setSelectedOption(a);
-    console.log("selectedOption:", selectedOption);
-    console.log("SelectedServiceFromPriceCalculator", a);
-    localStorage.removeItem("SelectedServiceFromPriceCalculator");
-    if (a === "Extensive Substantive Editing") {
-      setSelectedGoal("Editing & Language Services");
-    } else if (a === "Substantive Editing") {
-      setSelectedGoal("Editing & Language Services");
-    } else if (a === "Proofreading") {
-      setSelectedGoal("Editing & Language Services");
-    }
-  }, []);
 
   useEffect(() => {
     const numericWordCount = Number(wordCount);
@@ -59,11 +68,19 @@ export default function ProjectQuote() {
       const matchedAddOn = addonturnaroundPrice.find(
         (item) => item.name === addOn
       );
+
+      console.log("check this out", matchedAddOn);
       if (matchedAddOn) {
-        return total + numericWordCount * matchedAddOn.price;
+        if (matchedAddOn.price < 1) {
+          return total + numericWordCount * matchedAddOn.price;
+        } else {
+          return total + matchedAddOn.price;
+        }
       }
       return total;
     }, 0);
+
+    console.log("the base price", basePrice);
 
     setTotalPrice(basePrice);
     setTotalPriceAddOns(addOnTotal);
@@ -584,10 +601,6 @@ export default function ProjectQuote() {
           .filter((addOn: any) => selectedAddOns.includes(addOn.text))
           .reduce((sum: any, addOn: any) => sum + (addOn.price || 0), 0)
       : 0;
-
-    // Calculate the final total price
-    const calculatedTotal = optionPrice + addOnsTotal;
-    setTotalPrice(calculatedTotal);
   }, [selectedGoal, selectedOption, selectedAddOns]);
 
   const handleChange = (e: any) => {
@@ -662,7 +675,27 @@ export default function ProjectQuote() {
       total_price: String(optionTotalPrice),
     };
 
-    console.log("Submitting data:", postData);
+    // 2. After successful submission — RESET EVERYTHING:
+    setSelectedGoal("");
+    setSelectedOption("");
+    setSelectedAddOns([]);
+    setWordCount("");
+    setTurnaround("Trn_Ar10"); // or your default turnaround
+    setFormData({
+      Name: "",
+      Email: "",
+      PhoneNum: "",
+      HearAbt: "",
+      majorSubject: "",
+      specificSubject: "",
+      deliveryDate: "",
+      preferredLanguage: "",
+      editorInstruction: "",
+      paymentMode: "",
+    });
+    setHideGoalSection(false); // to show the goal options again
+
+    // console.log("Submitting data:", postData);
 
     try {
       const response = await fetch(
@@ -683,7 +716,7 @@ export default function ProjectQuote() {
       const { Message } = await response.json();
       if (Message === "Data Saved Successfully") {
         alert("Quotation submitted successfully!");
-        // Reset form if needed
+        window.location.href = "https://secure.manuscriptedit.com/register";
       } else {
         alert("Something went wrong with the submission.");
       }
@@ -710,7 +743,36 @@ export default function ProjectQuote() {
             <h5>
               <strong>Submit your project details for an exact quote.</strong>
             </h5>
+            <div className="uploadContainer">
+              <span className="Alignments">
+                <h4 style={{ marginBottom: "0px" }}>Enter the word count *</h4>
+              </span>
 
+              <input
+                type="number"
+                name="wordCount"
+                className="form-control"
+                placeholder="Enter word count *" // <-- set a placeholder text or leave it blank
+                value={wordCount}
+                onChange={(e) => setWordCount(e.target.value)}
+                required
+              />
+
+              <select
+                className="form-control"
+                name="WrdCnt"
+                id="WrdCnt"
+                style={{ marginTop: "10px" }}
+                value={turnaround}
+                onChange={(e) => setTurnaround(e.target.value)}
+              >
+                <option value="Trn_Ar10">Turn Around Time (10days)</option>
+                <option value="Trn_Ar5">Turn Around Time (5days)</option>
+                <option value="Trn_Ar3">Turn Around Time (3days)</option>
+                <option value="Trn_Ar2">Turn Around Time (2days)</option>
+                <option value="Trn_Ar1">Turn Around Time (1day)</option>
+              </select>
+            </div>
             <div
               style={{
                 marginTop: "2rem",
@@ -784,7 +846,14 @@ export default function ProjectQuote() {
                         name="goalOption"
                         value={option.text}
                         checked={selectedOption === option.text}
-                        onChange={(e) => setSelectedOption(e.target.value)}
+                        onChange={(e) => {
+                          setSelectedOption(e.target.value);
+                          // console.log(
+                          //   "targetValue",
+                          //   e.target.value,
+                          //   e.target.value
+                          // );
+                        }}
                       />
                       <label
                         className="form-check-label"
@@ -882,36 +951,7 @@ export default function ProjectQuote() {
                     ))}
               </div>
             )}
-            <div className="uploadContainer">
-              <span className="Alignments">
-                <h4 style={{ marginBottom: "0px" }}>Enter the word count *</h4>
-              </span>
 
-              <input
-                type="number"
-                name="wordCount"
-                className="form-control"
-                placeholder="Enter word count *" // <-- set a placeholder text or leave it blank
-                value={wordCount}
-                onChange={(e) => setWordCount(e.target.value)}
-                required
-              />
-
-              <select
-                className="form-control"
-                name="WrdCnt"
-                id="WrdCnt"
-                style={{ marginTop: "10px" }}
-                value={turnaround}
-                onChange={(e) => setTurnaround(e.target.value)}
-              >
-                <option value="Trn_Ar10">Turn Around Time (10days)</option>
-                <option value="Trn_Ar5">Turn Around Time (5days)</option>
-                <option value="Trn_Ar3">Turn Around Time (3days)</option>
-                <option value="Trn_Ar2">Turn Around Time (2days)</option>
-                <option value="Trn_Ar1">Turn Around Time (1day)</option>
-              </select>
-            </div>
             <div className="container mt-4">
               <form
                 onSubmit={(e) =>
