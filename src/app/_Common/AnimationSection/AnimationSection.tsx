@@ -50,6 +50,15 @@ const journals = [
     impactFactor: "1.8",
     link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5530057/",
   },
+  {
+    id: 6,
+    logo: "/images/BloggyImage/SpringerNature.jpg",
+    name: "International Ophthalmology",
+    title:
+      "Comprehensive assessment of glaucoma in patients with high myopia: a systematic...",
+    impactFactor: "1.4",
+    link: "https://link.springer.com/article/10.1007/s10792-024-03321-4",
+  },
 ];
 
 const AnimationSection = () => {
