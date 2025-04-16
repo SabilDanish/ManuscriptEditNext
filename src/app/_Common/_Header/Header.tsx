@@ -533,7 +533,7 @@ export default function Header() {
                       className="dtbtn"
                       onClick={() => {
                         window.location.href =
-                          "https://secure.manuscriptedit.com/quotation";
+                          "/QuotationNew";
                       }}
                       href="#"
                     >
@@ -972,7 +972,7 @@ export default function Header() {
                     onClick={() => {
                       // redirect("register");
                       window.location.href =
-                        "https://secure.manuscriptedit.com/quotation";
+                        "/QuotationNew";
                     }}
                     href="#"
                   >

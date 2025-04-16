@@ -263,7 +263,7 @@ function Navbar2025() {
             Sign Up | Sign In
           </Link>
           <Link
-            href="https://secure.manuscriptedit.com/quotation"
+            href="/QuotationNew"
             className="navButtonz"
           >
             Request A Quote

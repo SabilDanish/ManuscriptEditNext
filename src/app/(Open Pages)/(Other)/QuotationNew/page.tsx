@@ -30,7 +30,7 @@ export default function ProjectQuote() {
     );
     setWordCount(localStorage.getItem("SelectedWordCountFromPriceCalculator"));
   }, []);
-  // console.log("wordCount is:", wordCount);
+  // console.log("wordCount is:", wordCount);d
   useEffect(() => {
     if (valFromLocalStorage === "Extensive Substantive Editing") {
       setSelectedGoal("Editing & Language Services");
@@ -1183,7 +1183,7 @@ export default function ProjectQuote() {
                           {selectedOption
                             ? goalOptions[selectedGoal]?.find(
                                 (opt: any) => opt.text === selectedOption
-                              )?.price || totalPrice
+                              )?.price || totalPrice.toFixed(2)
                             : "0"}
                         </span>
                       ) : (
