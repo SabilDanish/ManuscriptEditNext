@@ -24,6 +24,17 @@ export default function ProjectQuote() {
   const [selectedSubSubject, setSelectedSubSubject] = useState<string>("");
   const [valFromLocalStorage, setValFromLocalStorage] = useState<any>("");
 
+  console.log(
+    "totalPrice",
+    totalPrice,
+    "totalPriceAddons",
+    totalPriceAddons,
+    "optionTotalPrice",
+    optionTotalPrice,
+    "selectedAddOns",
+    selectedAddOns
+  );
+
   useEffect(() => {
     setValFromLocalStorage(
       localStorage.getItem("SelectedServiceFromPriceCalculator")
@@ -733,45 +744,60 @@ export default function ProjectQuote() {
   }, [selectedGoal]);
 
   return (
-    <div className="container sumcon">
-      <div
-        className="row mt-4 sumrow"
-        style={{ justifyContent: "space-between" }}
-      >
+    <div className="container">
+      <div className="row mt-4 ">
         <div className="col-md-8 p-4 border bg-light shade">
           <div>
             <h5>
               <strong>Submit your project details for an exact quote.</strong>
             </h5>
             <div className="uploadContainer">
-              <span className="Alignments">
-                <h4 style={{ marginBottom: "0px" }}>Enter the word count *</h4>
-              </span>
+              <div className="row Alignments">
+                <div className="col-lg-4">
+                  <strong>
+                    <p style={{ marginBottom: "0px" }}>
+                      Enter the word count *
+                    </p>
+                  </strong>
+                </div>
 
-              <input
-                type="number"
-                name="wordCount"
-                className="form-control"
-                placeholder="Enter word count *" // <-- set a placeholder text or leave it blank
-                value={wordCount}
-                onChange={(e) => setWordCount(e.target.value)}
-                required
-              />
+                <div className="col-lg-7">
+                  <input
+                    type="number"
+                    name="wordCount"
+                    className="form-control"
+                    placeholder="Enter word count *" // <-- set a placeholder text or leave it blank
+                    value={wordCount}
+                    onChange={(e) => setWordCount(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
 
-              <select
-                className="form-control"
-                name="WrdCnt"
-                id="WrdCnt"
-                style={{ marginTop: "10px" }}
-                value={turnaround}
-                onChange={(e) => setTurnaround(e.target.value)}
-              >
-                <option value="Trn_Ar10">Turn Around Time (10days)</option>
-                <option value="Trn_Ar5">Turn Around Time (5days)</option>
-                <option value="Trn_Ar3">Turn Around Time (3days)</option>
-                <option value="Trn_Ar2">Turn Around Time (2days)</option>
-                <option value="Trn_Ar1">Turn Around Time (1day)</option>
-              </select>
+              <div className="row Alignments">
+                <div className="col-lg-4">
+                  <strong>
+                    <p style={{ marginBottom: "0px" }}>Turn Around Time *</p>
+                  </strong>
+                </div>
+
+                <div className="col-lg-7">
+                  <select
+                    className="form-control"
+                    name="WrdCnt"
+                    id="WrdCnt"
+                    style={{ marginTop: "10px" }}
+                    value={turnaround}
+                    onChange={(e) => setTurnaround(e.target.value)}
+                  >
+                    <option value="Trn_Ar10">10days</option>
+                    <option value="Trn_Ar5">5days</option>
+                    <option value="Trn_Ar3">3days</option>
+                    <option value="Trn_Ar2">2days</option>
+                    <option value="Trn_Ar1">1day</option>
+                  </select>
+                </div>
+              </div>
             </div>
             <div
               style={{
@@ -1163,17 +1189,17 @@ export default function ProjectQuote() {
           </div>
         </div>
 
-        <div className="col-md-4" style={{ position: "relative" }}>
+        <div className="col-md-4">
           <div className="summary-container">
-            <div className="card border rounded shadow-sm p-3">
+            <div className="card border rounded shadow-sm p-3 card_holderHeight scrollable-summary">
               <div className="card-body">
                 <h5 className="card-title border-bottom pb-2">Summary</h5>
-                <p className="mb-2">
-                  <strong>Selected Goal:</strong>
-                  <br></br> {selectedGoal}
+                <p className="mb-2 text-left">
+                  <strong>Category:</strong> &nbsp;
+                  {selectedGoal}
                 </p>
                 <div className="mb-3">
-                  <strong>Selected Option:</strong>
+                  <strong>Service:</strong>
                   <p className="d-flex justify-content-between align-items-center border p-2 rounded mt-2">
                     <span>{selectedOption || "None"}</span>
                     {selectedGoal === "Editing & Language Services" &&
@@ -1220,24 +1246,37 @@ export default function ProjectQuote() {
                     <p className="border p-2 rounded mt-2 text-muted">0</p>
                   )} */}
 
-                  {selectedAddOns.length > 0 && (
+                  {selectedAddOns.length > 0 ? (
                     <div className="border-top pt-3">
                       <table className="table table-sm table-borderless mt-2">
                         <tbody>
-                          <tr>
-                            <td className="fw-bold">{` ${selectedAddOns}, `}</td>
-                            {selectedGoal === "Editing & Language Services" &&
-                              (optionTotalPrice != 0 ? (
-                                <td className="text-end fw-bold text-primary">
-                                  ${totalPriceAddons.toFixed(2)}
-                                </td>
-                              ) : (
-                                ""
-                              ))}
-                          </tr>
+                          {addonturnaroundPrice
+                            .filter((addOn) =>
+                              selectedAddOns.includes(addOn.name)
+                            )
+                            .map((addOn, index) => {
+                              const isPerWord = addOn.price < 1;
+                              const calculatedPrice = isPerWord
+                                ? addOn.price * wordCount
+                                : addOn.price;
+
+                              return (
+                                <tr key={index}>
+                                  <td className="fw-bold">{addOn.name}</td>
+                                  <td className="text-end fw-bold">
+                                    ${calculatedPrice.toFixed(2)}
+                                    {isPerWord && (
+                                      <span className="text-muted"> </span>
+                                    )}
+                                  </td>
+                                </tr>
+                              );
+                            })}
                         </tbody>
                       </table>
                     </div>
+                  ) : (
+                    <p className="border p-2 rounded mt-2 text-muted">0</p>
                   )}
                 </div>
                 <div>

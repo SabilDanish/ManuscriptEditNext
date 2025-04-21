@@ -68,11 +68,14 @@ strong {
 
 .summary-container {
   position: fixed;
-  bottom: 2rem;
   width: 350px;
   z-index: -1;
   box-shadow: 0px 0px 10px #3480ac;
   border-radius: 10px;
+}
+
+.card_holderHeight{
+  min-height: 20vh;
 }
 
 @media (max-width: 768px) {
@@ -89,4 +92,18 @@ strong {
 .distance {
   display: flex;
   justify-content: space-between;
+}
+
+.summary-container {
+  position: fixed;
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  height: calc(100vh - 180px); /* Leaves space for margin/padding */
+  overflow: hidden; /* Don't scroll the container itself */
+}
+
+.scrollable-summary {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 6px; /* Prevent scrollbar overlapping content */
 }
