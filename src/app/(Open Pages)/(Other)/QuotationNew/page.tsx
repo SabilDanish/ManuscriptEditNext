@@ -818,15 +818,15 @@ export default function ProjectQuote() {
                   setHideGoalSection(!hideGoalSection);
                 }}
               >
-                View / Change Goal
+                View All / Change Category
               </button>
               <h5>
-                Selected Goal: <br />
+                Select A Category : <br />
                 <span style={{ color: "#347791" }}>{selectedGoal}</span>
               </h5>
             </div>
             <div style={{ display: hideGoalSection ? "none" : "" }}>
-              <h5 style={{ marginTop: "30px" }}>Select Your Goals</h5>
+              <h5 style={{ marginTop: "30px" }}>Select A Category :</h5>
               <div className="row">
                 {goals.map((goal, index) => (
                   <div
@@ -859,7 +859,7 @@ export default function ProjectQuote() {
 
             {selectedGoal && goalOptions[selectedGoal] && (
               <div className="mt-3">
-                <h5>Choose a Service for {selectedGoal} :</h5>
+                <h5>Choose A Service:</h5>
 
                 {/* Show all services if none selected */}
                 {!selectedOption &&
@@ -1194,9 +1194,9 @@ export default function ProjectQuote() {
             <div className="card border rounded shadow-sm p-3 card_holderHeight scrollable-summary">
               <div className="card-body">
                 <h5 className="card-title border-bottom pb-2">Summary</h5>
-                <p className="mb-2 text-left">
-                  <strong>Category:</strong> &nbsp;
-                  {selectedGoal}
+                <p className="mb-2">
+                  <strong>Category :</strong>
+                  <br></br> {selectedGoal}
                 </p>
                 <div className="mb-3">
                   <strong>Service:</strong>

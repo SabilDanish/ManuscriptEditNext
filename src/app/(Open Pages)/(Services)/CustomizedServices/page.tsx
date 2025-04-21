@@ -447,7 +447,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-lg-12">
-            <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
+            <button onClick={() => window.location.href = "/QuotationNew"} className="btn btn-primary mt-3 mr-3">
               Request a Quote
               </button>
               <button onClick={() => {redirect('contact-us')}} className="btn btn-primary mt-3 mr-3">

@@ -200,9 +200,8 @@ export default function Home() {
                 style={{ textAlign: "center", cursor: "pointer" }}
               >
                 <a
-                  onClick={() => {
-                    redirect("quotation");
-                  }}
+                  onClick={() => window.location.href = "/QuotationNew"
+                  }
                 >
                   Request a Quote <i className="bi bi-arrow-right"></i>
                 </a>
@@ -286,9 +285,7 @@ export default function Home() {
                 style={{ textAlign: "center", cursor: "pointer" }}
               >
                 <a
-                  onClick={() => {
-                    redirect("quotation");
-                  }}
+                  onClick={() => window.location.href = "/QuotationNew"}
                 >
                   Request a Quote <i className="bi bi-arrow-right"></i>
                 </a>
@@ -368,9 +365,7 @@ export default function Home() {
                 style={{ textAlign: "center", cursor: "pointer" }}
               >
                 <a
-                  onClick={() => {
-                    redirect("quotation");
-                  }}
+                  onClick={() => window.location.href = "/QuotationNew"}
                 >
                   Request a Quote <i className="bi bi-arrow-right"></i>
                 </a>
@@ -448,9 +443,7 @@ export default function Home() {
                 style={{ textAlign: "center", cursor: "pointer" }}
               >
                 <a
-                  onClick={() => {
-                    redirect("quotation");
-                  }}
+                  onClick={() => window.location.href = "/QuotationNew"}
                 >
                   Request a Quote <i className="bi bi-arrow-right"></i>
                 </a>

@@ -57,7 +57,7 @@ export default function Home() {
                   <h6> Answering Feedbacks</h6>
                 </span>
               </div>
-              <button onClick={() => push('https://secure.manuscriptedit.com/quotation')} className="btn btn-primary mt-3 mr-3">
+              <button onClick={() => window.location.href = "/QuotationNew"} className="btn btn-primary mt-3 mr-3">
                 Request a Quote
               </button>
             </div>

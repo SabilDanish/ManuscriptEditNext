@@ -924,11 +924,11 @@ export default function Home() {
                       </p>
                     </div>
                     <a
-                      href="https://secure.manuscriptedit.com/register"
-                      className="btn-learn-more"
-                    >
-                      Request a Quote
-                    </a>
+                  onClick={() => window.location.href = "/QuotationNew"}
+                  className="btn-learn-more"
+                >
+                  Request a Quote <i className="bi bi-arrow-right"></i>
+                </a>
                   </div>
                   <div
                     className="col-lg-6 pt-4 pt-lg-0 aos-init aos-animate"

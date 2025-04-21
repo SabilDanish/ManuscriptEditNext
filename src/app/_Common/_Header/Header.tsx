@@ -532,8 +532,7 @@ export default function Header() {
                     <a
                       className="dtbtn"
                       onClick={() => {
-                        window.location.href =
-                          "/QuotationNew";
+                        window.location.href = "/QuotationNew";
                       }}
                       href="#"
                     >
@@ -971,8 +970,7 @@ export default function Header() {
                     className="dtbtn"
                     onClick={() => {
                       // redirect("register");
-                      window.location.href =
-                        "/QuotationNew";
+                      window.location.href = "/QuotationNew";
                     }}
                     href="#"
                   >
