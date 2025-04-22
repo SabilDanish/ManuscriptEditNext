@@ -1211,7 +1211,9 @@ export default function ProjectQuote() {
                 </div>
                 <div className="mb-3">
                   <strong>Selected Add-Ons:</strong>
-                  {/* {selectedAddOns.length > 0 && addOnOptions[selectedOption] ? (
+                  {selectedGoal != "Editing & Language Services" &&
+                  selectedAddOns.length > 0 &&
+                  addOnOptions[selectedOption] ? (
                     <table className="table table-sm table-borderless mt-2">
                       <tbody>
                         {addOnOptions[selectedOption]
@@ -1225,9 +1227,7 @@ export default function ProjectQuote() {
                                 {addOn.price > 0 ? (
                                   `₹${addOn.price}`
                                 ) : (
-                                  <h6 className="TableQuote">
-                                    Price after discussion
-                                  </h6>
+                                  <h6 className="TableQuote"></h6>
                                 )}
                               </td>
                             </tr>
@@ -1235,11 +1235,12 @@ export default function ProjectQuote() {
                       </tbody>
                     </table>
                   ) : (
-                    <p className="border p-2 rounded mt-2 text-muted">0</p>
-                  )} */}
+                    <></>
+                  )}
 
-                  {selectedAddOns.length > 0 ? (
-                    <div className="border-top pt-3">
+                  {selectedGoal === "Editing & Language Services" &&
+                  selectedAddOns.length > 0 ? (
+                    <div className="pt-3">
                       <table className="table table-sm table-borderless mt-2">
                         <tbody>
                           {addonturnaroundPrice
@@ -1268,7 +1269,7 @@ export default function ProjectQuote() {
                       </table>
                     </div>
                   ) : (
-                    <p className="border p-2 rounded mt-2 text-muted">0</p>
+                    <></>
                   )}
                 </div>
                 <div>

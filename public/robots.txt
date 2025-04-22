@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://manuscriptedit.com
+
+# Sitemaps
+Sitemap: https://manuscriptedit.com/sitemap.xml
