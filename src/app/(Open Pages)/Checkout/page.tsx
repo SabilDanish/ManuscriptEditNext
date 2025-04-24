@@ -37,6 +37,39 @@ interface PriceDetails {
 }
 
 function page() {
+  //Below useEffect is for dummy data for api integration
+
+  // useEffect(() => {
+  //   localStorage.setItem(
+  //     "priceDetails",
+  //     JSON.stringify({
+  //       content_file: "https://example.com/content.pdf",
+  //       cur_type: "USD",
+  //       delivery_date: "2023-12-15",
+  //       figure_file: "https://example.com/figure.png",
+  //       inst_for_editor: "Please review carefully and suggest improvements",
+  //       journal_guideline: "APA 7th Edition",
+  //       journal_name: "International Journal of Science",
+  //       journal_url: "https://example.com/journal",
+  //       language: "English",
+  //       maj_serv_area: "Medical Sciences",
+  //       order_id: "ORDER13889",
+  //       service_cat: "Manuscript Editing",
+  //       service_details: "Full manuscript editing with formatting",
+  //       service_type: "Premium Editing",
+  //       specific_sub: "Cardiology",
+  //       status: "pending / Pay Now",
+  //       submit_date: "2023-12-01",
+  //       table_file: "https://example.com/table.xlsx",
+  //       total_price: "32899",
+  //       turn_ar_time: "14",
+  //       user_name: "John Doe",
+  //       word_count: "4500",
+  //     })
+  //   );
+  // }, []);
+
+
   // Step 2: Use the PriceDetails interface in useState
   const [priceDetails, setPriceDetails] = useState<PriceDetails | null>(null);
 
@@ -50,6 +83,30 @@ function page() {
       setPriceDetails(parsedPriceDetails); // Set the parsed data to the state
     }
   }, []);
+
+  const handleSubmit = async () => {
+  console.log(Math.random())
+    try {
+      // Construct the URL directly without state
+      const apiUrl = `https://www.secure.manuscriptedit.com/api/send_order_mail_for_payment.php?order_id=${priceDetails?.order_id}&price=${priceDetails?.total_price}`;
+
+      const response = await fetch(apiUrl);
+
+      // Check if response is OK (status 200-299)
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log("Success:", data);
+    } catch (error) {
+      console.error("Failed to submit:", error);
+    }
+
+    // const apiUrl = `https://www.secure.manuscriptedit.com/api/send_order_mail_for_payment.php?order_id=${priceDetails?.order_id}&price=${priceDetails?.total_price}`;
+    // window.location.href = apiUrl;
+    window.location.href = "https://manuscriptedit.com/AuthorDashboard/";
+  };
 
   return (
     // <div>
@@ -218,7 +275,10 @@ function page() {
               </div>
 
               <div className="text-center">
-                <button className="btn btn-primary btn-lg">
+                <button
+                  className="btn btn-primary btn-lg"
+                  onClick={handleSubmit}
+                >
                   {priceDetails.status === "pending / Pay Now"
                     ? "Pay Now"
                     : "View Invoice"}
