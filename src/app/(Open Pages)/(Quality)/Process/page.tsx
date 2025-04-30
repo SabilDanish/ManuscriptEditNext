@@ -5,6 +5,8 @@ import Metadata from "@/app/Metadata";
 import { usePathname } from 'next/navigation'
 import { data } from '../../../utils/metaFile.js'
 import { useRouter } from 'next/navigation';
+import Head from "next/head";
+
 
 const newData: {[key: string]: {[key: string]: string}} = data;
 
@@ -15,6 +17,12 @@ export default function Home() {
   const { push } = useRouter();
   return (
     <>
+    <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/Process/"
+        />
+      </Head>
       {/* {<Metadata metaData={metaData} />} */}
       {/* {breadcrum("Quality", "Editorial Processes")} */}
       <section className="pt-5 pb-5">

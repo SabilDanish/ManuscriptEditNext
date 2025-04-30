@@ -12,6 +12,7 @@ import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
+import Head from "next/head";
 
 import {
   faFileUpload,
@@ -102,6 +103,12 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/PlagiarismCheckReduction/"
+        />
+      </Head>
       {<Metadata metaData={metaData} />}
 
       <div>
@@ -320,7 +327,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            
 
             <div className="cta-container">
               <a

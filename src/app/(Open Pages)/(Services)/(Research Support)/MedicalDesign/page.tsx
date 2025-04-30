@@ -12,6 +12,7 @@ import {
   faRedo,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function Home() {
   const steps = [
@@ -86,6 +87,12 @@ export default function Home() {
   };
   return (
     <>
+    <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/MedicalDesign/"
+        />
+      </Head>
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>

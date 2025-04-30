@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { serviceData } from "@/app/utils/service.js";
+import Head from "next/head";
 
 import "./writingOverview.css";
 import { useEffect, useState } from "react";
@@ -131,6 +132,12 @@ export default function Home() {
 
   return (
     <>
+    <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/Writing/"
+        />
+      </Head>
       {<Metadata metaData={metaData} />}
       <div>
         <section style={gap}>

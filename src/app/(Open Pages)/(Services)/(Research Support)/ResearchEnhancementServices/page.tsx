@@ -1,8 +1,15 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/ResearchEnhancementServices"
+        />
+      </Head>
       {breadcrum(
         "Services / Research Support",
         "Research Enhancement Services"
@@ -63,11 +70,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                      
-                        Research Impact Analysis
-                      
-                    </h4>
+                    <h4 className="pb-2">Research Impact Analysis</h4>
                     <p>
                       Gain deep insights into the influence of your work with
                       our comprehensive impact assessments.
@@ -91,11 +94,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                     
-                        Post-Publication Assistance
-                   
-                    </h4>
+                    <h4 className="pb-2">Post-Publication Assistance</h4>
                     <p>
                       Extend the lifecycle of your research with our
                       post-publication support, ensuring continued application.
@@ -119,9 +118,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                     Citation Enhancement
-                    </h4>
+                    <h4 className="pb-2">Citation Enhancement</h4>
                     <p>
                       Elevate your research's prominence in academic discourse
                       through strategic citation enhancement techniques.
@@ -163,11 +160,7 @@ export default function Home() {
               >
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                     
-                        Career Advancement Guidance
-                      
-                    </h4>
+                    <h4 className="pb-2">Career Advancement Guidance</h4>
                     <p>
                       Chart a course for career growth with our personalized
                       academic career counseling.
@@ -191,11 +184,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                      
-                        Publication Impact Planning
-                     
-                    </h4>
+                    <h4 className="pb-2">Publication Impact Planning</h4>
                     <p>
                       Strategically plan your publications to maximize impact
                       with our expert guidance.
@@ -219,11 +208,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                     
-                        Scholarly Metrics Monitoring
-                      
-                    </h4>
+                    <h4 className="pb-2">Scholarly Metrics Monitoring</h4>
                     <p>
                       Stay informed of your research performance with our
                       meticulous tracking and analysis.
@@ -247,9 +232,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                    Beyond Publication
-                    </h4>
+                    <h4 className="pb-2">Beyond Publication</h4>
                     <p>
                       We understand that publication is just the beginning.{" "}
                     </p>

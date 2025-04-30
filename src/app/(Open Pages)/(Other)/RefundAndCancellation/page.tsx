@@ -4,12 +4,19 @@ import { usePathname } from "next/navigation";
 import { data } from "../../../utils/metaFile.js";
 const newData: { [key: string]: { [key: string]: string } } = data;
 // import "../../../_Common/Crirstmas/Cristamas.css"
+import Head from "next/head";
 
 export default function Home() {
   // const pathName: string = usePathname().split("/").filter(val => val).join("")
   // let metaData = newData[pathName]
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/RefundAndCancellation/"
+        />
+      </Head>
       {/* {<Metadata metaData={metaData} />} */}
       {/* {breadcrum("", "Refund & Cancellation")} */}
       <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
@@ -30,11 +37,9 @@ export default function Home() {
               background: "#fff",
               borderRadius: "8px",
               boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              paddingTop:"20px",
+              paddingTop: "20px",
             }}
           >
-            
-            
             <p>
               At ManuscriptEdit.com, we are dedicated to delivering the highest
               quality editorial and publication support services to help you
@@ -45,7 +50,6 @@ export default function Home() {
               and the effort of our experts.
             </p>
 
-            
             <p>Refunds are considered under the following conditions:</p>
             <ul>
               <li>
@@ -79,7 +83,6 @@ export default function Home() {
               </li>
             </ul>
 
-            
             <p>Refunds will not be issued under the following circumstances:</p>
             <ul>
               <li>
@@ -131,7 +134,6 @@ export default function Home() {
               efficiently.
             </p>
 
-            
             <ol>
               <li>
                 <strong>Submit a Detailed Request:</strong> Email{" "}
@@ -159,7 +161,6 @@ export default function Home() {
               </li>
             </ol>
 
-            
             <ul>
               <li>
                 <strong>Expert Involvement:</strong> Refunds consider the
@@ -179,7 +180,6 @@ export default function Home() {
               </li>
             </ul>
 
-            
             <p>
               If you have any questions or need assistance with our refund
               process, please contact us:
@@ -194,7 +194,6 @@ export default function Home() {
                   support@manuscriptedit.com
                 </a>
               </li>
-             
             </ul>
             <p>
               Thank you for choosing ManuscriptEdit.com. We are committed to

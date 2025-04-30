@@ -970,16 +970,19 @@ export const addOnOptions: Record<string, AddOns[]> = {
       id: "26",
       text: "Reviewer Response Package",
       description: "Add expert help post-review.",
+      price:30
     },
     {
       id: "27",
       text: "Rejection Handling Package",
       description: "Rework paper for alternative journal.",
+      price:40
     },
     {
       id: "28",
       text: "Plagiarism Check & Report",
       description: "Validate originality.",
+      price:50
     },
   ],
   "Advanced Package": [

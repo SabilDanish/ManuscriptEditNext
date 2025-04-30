@@ -8,6 +8,7 @@ import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
+import Head from "next/head";
 import {
   faFileUpload,
   faSearch,
@@ -90,29 +91,38 @@ export default function Home() {
   };
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/Formatting"
+        />
+      </Head>
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-            Professional Manuscript Formatting – Get Your Research Submission-Ready
-            Ensure your manuscript formatting aligns precisely with journal submission requirements.
+              Professional Manuscript Formatting – Get Your Research
+              Submission-Ready Ensure your manuscript formatting aligns
+              precisely with journal submission requirements.
             </h1>
             <p className={styles.subtext}>
-            Our expert formatting services guarantee compliance with journal formatting guidelines,
-including reference and citation formatting and structured manuscript alignment, including
-figures and tables. We enhance language style, maintain word count limits, and ensure proper
-formatting as per target journal guidelines for a seamless publication process.
+              Our expert formatting services guarantee compliance with journal
+              formatting guidelines, including reference and citation formatting
+              and structured manuscript alignment, including figures and tables.
+              We enhance language style, maintain word count limits, and ensure
+              proper formatting as per target journal guidelines for a seamless
+              publication process.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
                 <button className={styles.primaryButton}>
-                Get Journal Formatting Assistance
+                  Get Journal Formatting Assistance
                 </button>
               </a>
 
               <a href="https://secure.manuscriptedit.com/quotation">
                 <button className={styles.secondaryButton}>
-                Request a Free Consultation
+                  Request a Free Consultation
                 </button>
               </a>
             </div>
@@ -123,28 +133,33 @@ formatting as per target journal guidelines for a seamless publication process.
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-            Key Benefits of ManuscriptEdit’s Manuscript Formatting Services:
+              Key Benefits of ManuscriptEdit’s Manuscript Formatting Services:
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Expert Manuscript Formatting Assistance – Adherence to journal standards,
-                including Elsevier, Springer, Wiley, BMJ, PLOS ONE, Nature, IEEE, and more.
+                ✔ Expert Manuscript Formatting Assistance – Adherence to journal
+                standards, including Elsevier, Springer, Wiley, BMJ, PLOS ONE,
+                Nature, IEEE, and more.
               </li>
               <li>
-                ✔Precise Reference and Citation Formatting – Supporting APA, MLA, Chicago,
-                Harvard, Vancouver, IEEE, and custom journal styles.
+                ✔Precise Reference and Citation Formatting – Supporting APA,
+                MLA, Chicago, Harvard, Vancouver, IEEE, and custom journal
+                styles.
               </li>
               <li>
-                ✔ Error-Free Manuscript Structure and Layout – Ensuring proper margins, headings,
-                subheadings, font consistency, and figure placement.
+                ✔ Error-Free Manuscript Structure and Layout – Ensuring proper
+                margins, headings, subheadings, font consistency, and figure
+                placement.
               </li>
               <li>
-                ✔ Tables, Figures &amp; Equations Alignment – Ensuring structured table formatting, figure
-                captions, and correct equation placement.
+                ✔ Tables, Figures &amp; Equations Alignment – Ensuring
+                structured table formatting, figure captions, and correct
+                equation placement.
               </li>
               <li>
-                ✔ Comprehensive Manuscript Formatting Support – Checking word count adherence,
-                section structuring, cover letter formatting, and abstract length compliance.
+                ✔ Comprehensive Manuscript Formatting Support – Checking word
+                count adherence, section structuring, cover letter formatting,
+                and abstract length compliance.
               </li>
             </ul>
           </div>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
+import Head from "next/head";
 
 import "@/app/_Common/Dropdown2/Dropdown2.css";
 
@@ -88,6 +89,12 @@ export default function Home() {
 
   return (
     <>
+    <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/ResearchSupportOverview/"
+        />
+      </Head>
       <section style={gap}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>

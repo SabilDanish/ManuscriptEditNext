@@ -5,6 +5,7 @@ import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
+import Head from "next/head";
 
 import {
   faFileUpload,
@@ -102,6 +103,12 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/PHDThesis/"
+        />
+      </Head>
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>
@@ -195,7 +202,10 @@ export default function Home() {
         {/* New Proofreading Details Section */}
         <div className={styles.processContainer}>
           <h2 className={styles.processTitle}>How It Works</h2>
-          <div className={styles.processSteps1} style={{gridTemplateColumns: "repeat(4, 1fr)"}}>
+          <div
+            className={styles.processSteps1}
+            style={{ gridTemplateColumns: "repeat(4, 1fr)" }}
+          >
             {steps.map((step, index) => (
               <div key={index} className={styles.processStep}>
                 <h5 className={styles.stepHeading}>{step.stepss}</h5>

@@ -72,6 +72,12 @@ export default function ProjectQuote() {
       basePrice = numericWordCount * (turnaroundPrices1[turnaround] || 0);
     } else if (selectedOption === "Proofreading") {
       basePrice = numericWordCount * (turnaroundPrices2[turnaround] || 0);
+    } else if (selectedOption === "Standard Package") {
+      basePrice = 200; // Replace with your actual fixed price
+    } else if (selectedOption === "Advanced Package") {
+      basePrice = 350; // Replace with your actual fixed price
+    } else if (selectedOption === "Premium Publication Package") {
+      basePrice = 500; // Replace with your actual fixed price
     }
 
     // Calculate add-on total individually
@@ -1202,8 +1208,9 @@ export default function ProjectQuote() {
                   <strong>Service:</strong>
                   <p className="d-flex justify-content-between align-items-center border p-2 rounded mt-2">
                     <span>{selectedOption || "None"}</span>
-                    {selectedGoal === "Editing & Language Services" &&
-                      (optionTotalPrice != 0 ? (
+                    {(selectedGoal === "Editing & Language Services" ||
+                      selectedGoal === "Manuscriptedit Packages") &&
+                      (optionTotalPrice !== 0 ? (
                         <span className="fw-bold">
                           $
                           {selectedOption
@@ -1219,6 +1226,7 @@ export default function ProjectQuote() {
                 </div>
                 <div className="mb-3">
                   <strong>Selected Add-Ons:</strong>
+
                   {/* {selectedAddOns.length > 0 && addOnOptions[selectedOption] ? (
                     <table className="table table-sm table-borderless mt-2">
                       <tbody>
@@ -1280,7 +1288,8 @@ export default function ProjectQuote() {
                   )}
                 </div>
                 <div>
-                  {selectedGoal === "Editing & Language Services" ? (
+                  {selectedGoal === "Editing & Language Services" ||
+                  selectedGoal === "Manuscriptedit Packages" ? (
                     optionTotalPrice != 0 ? (
                       <div className="border-top pt-3 d-flex justify-content-between align-items-center">
                         <h5 className="mb-0">Total:</h5>

@@ -8,6 +8,8 @@ export default function Home() {
 
   const {loading,news} = useFetchNews()
 
+  console.log("news" , news)
+
   return (
     <>
     {/* {breadcrum("More", "News & Conferences")} */}

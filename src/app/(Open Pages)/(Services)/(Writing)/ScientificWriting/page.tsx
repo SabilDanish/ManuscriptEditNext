@@ -13,6 +13,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
+import Head from "next/head";
 
 import "@/app/_Common/Dropdown2/Dropdown2.css";
 
@@ -106,6 +107,12 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/ScientificWriting/"
+        />
+      </Head>
       {<Metadata metaData={metaData} />}
       {/* {breadcrum("Services / Writing", "Medical Writing")} */}
 
