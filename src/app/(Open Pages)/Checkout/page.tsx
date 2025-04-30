@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // For icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFile,
   faClock,
@@ -10,7 +10,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-// Step 1: Define an interface for priceDetails
 interface PriceDetails {
   content_file: any | null;
   cur_type: string | null;
@@ -31,7 +30,7 @@ interface PriceDetails {
   submit_date: string;
   table_file: string | null;
   total_price: string;
-  turn_ar_time: string;
+  turn_ar_time: string; 
   user_name: string;
   word_count: string;
 }
@@ -69,57 +68,44 @@ function page() {
   //   );
   // }, []);
 
-
-  // Step 2: Use the PriceDetails interface in useState
   const [priceDetails, setPriceDetails] = useState<PriceDetails | null>(null);
+  const [popup, setPopup] = useState("");
 
   useEffect(() => {
-    // Retrieve the price details from localStorage
     const storedPriceDetails = localStorage.getItem("priceDetails");
 
     if (storedPriceDetails) {
-      // Parse the JSON data from localStorage
       const parsedPriceDetails: PriceDetails = JSON.parse(storedPriceDetails);
-      setPriceDetails(parsedPriceDetails); // Set the parsed data to the state
+      setPriceDetails(parsedPriceDetails);
     }
   }, []);
 
   const handleSubmit = async () => {
-  console.log(Math.random())
+    console.log(Math.random());
     try {
-      // Construct the URL directly without state
       const apiUrl = `https://www.secure.manuscriptedit.com/api/send_order_mail_for_payment.php?order_id=${priceDetails?.order_id}&price=${priceDetails?.total_price}`;
 
-      const response = await fetch(apiUrl);
+      const response = await fetch(apiUrl, {
+        cache: "no-store",
+      });
 
-      // Check if response is OK (status 200-299)
       if (!response.ok) {
+        setPopup("fail");
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
       console.log("Success:", data);
+      setPopup("success");
+      window.location.href = "https://manuscriptedit.com/AuthorDashboard";
     } catch (error) {
       console.error("Failed to submit:", error);
+      setPopup("fail");
     }
-
-    // const apiUrl = `https://www.secure.manuscriptedit.com/api/send_order_mail_for_payment.php?order_id=${priceDetails?.order_id}&price=${priceDetails?.total_price}`;
-    // window.location.href = apiUrl;
-    window.location.href = "https://manuscriptedit.com/AuthorDashboard/";
+    
   };
 
   return (
-    // <div>
-    //   <h1>Checkout</h1>
-    //   {priceDetails ? (
-    //     <div>
-    //       <p>Product: {priceDetails.product}</p>
-    //       <p>Amount: ${priceDetails.amount}</p>
-    //     </div>
-    //   ) : (
-    //     <p>Loading price details...</p>
-    //   )}
-    // </div>
     <div>
       {priceDetails ? (
         <div className="container my-5">
@@ -283,6 +269,24 @@ function page() {
                     ? "Pay Now"
                     : "View Invoice"}
                 </button>
+                <center>
+                  <div
+                    className="alert alert-primary col-lg-6"
+                    role="alert"
+                    style={{ display: popup === "success" ? "block" : "none" }}
+                  >
+                    Your request is submitted successfully!
+                  </div>
+                </center>
+                <center>
+                  <div
+                    className="alert alert-danger col-lg-6"
+                    role="alert"
+                    style={{ display: popup === "fail" ? "block" : "none" }}
+                  >
+                    Oops! Something went wrong. Please try again.
+                  </div>
+                </center>
               </div>
             </div>
           </div>

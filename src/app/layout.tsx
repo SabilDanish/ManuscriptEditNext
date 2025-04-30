@@ -66,10 +66,10 @@ export default function RootLayout({
           Manuscriptedit - Expert Scientific Journal Publication Services
         </title>
         <link href="/img/manu.ico" rel="icon"></link>
-        <link
+        {/* <link
           rel="canonical"
           href="https://manuscriptedit.com/PackageService/"
-        />
+        /> */}
         <meta
           name="google-site-verification"
           content="70JSDkkRBc9H-NNFHJMmgPVrZCV_JUqnDogS_tZnHD8"
