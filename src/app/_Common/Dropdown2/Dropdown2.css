@@ -87,3 +87,49 @@
 }
 
 
+.info-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.info-box {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-box {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.right-box {
+  background-color: #5c80eb;
+  padding: 40px;
+}
+
+.info-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.light-text {
+  color: #fff;
+}
+
+.info-list {
+  font-size: 16px;
+  line-height: 1.8;
+  padding-left: 20px;
+  list-style-type: disclosure-closed;
+}
+
+.dark-list {
+  color: #3a1c00;
+}
+
+.light-list {
+  color: #fff;
+}
+
+
+

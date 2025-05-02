@@ -137,6 +137,89 @@ export default function Home() {
         </div>
       </section>
 
+
+      <div className="editing-services-container">
+      <div className="service-column">
+        <h3>Proofreading</h3>
+        <ul>
+          <li>✔ Thorough reading of manuscript.</li>
+          <li>✔ Spotting all errors.</li>
+          <li>✔ Review capitalization and punctuation.</li>
+          <li>✔ Check for spelling, grammar, and typos.</li>
+          <li>✔ Remove redundancies.</li>
+          <li>✔ Rectify improper word usage.</li>
+        </ul>
+        <div className="free-label">You receive for free</div>
+        <ul className="freebies">
+          <li>✔ Native English Editing Certificate</li>
+          <li>✔ 2 round of free re-editing</li>
+          <li>✔ 2 round of chat communication with Expert</li>
+        </ul>
+        <button className="check-price"><a href="/ProofReading">Check Price</a></button>
+      </div>
+
+      <div className="service-column">
+        <h3>Substantive Editing</h3>
+        <ul>
+          <li>✔ All included in <span className="link-text">Proof reading</span></li>
+          <li>✔ Verify scientific terminology, units, symbols, and variables.</li>
+          <li>✔ Rephrase & revise sentences for clarity and word choice.</li>
+          <li>✔ Remove repetitions for logical presentation.</li>
+          <li>✔ Editing by Subject matter expert</li>
+        </ul>
+        <div className="free-label">You receive for free</div>
+        <ul className="freebies">
+          <li>✔ Target Journal Formatting</li>
+          <li>✔ Plagiarism report (Turnitin) 1 time</li>
+          <li>✔ Cover Letter Creation</li>
+          <li>✔ Unlimited round of re-editing</li>
+          <li>✔ Unlimited round of communication with Subject Experts</li>
+          <li>✔ Subject matter Expert dedicated to your manuscript</li>
+        </ul>
+        <button className="check-price"><a href="/SubEditing">Check Price</a></button>
+      </div>
+
+      <div className="service-column">
+        <h3>Extensive Substantive Editing</h3>
+        <ul>
+          <li>✔ All included in <span className="link-text">Substantive Editing</span></li>
+          <li>✔ Editing and review by two Subject matter expert</li>
+          <li>✔ Rephrase & revise paragraphs for clarity and word choice.</li>
+          <li>✔ Improve organization</li>
+          <li>✔ Adjust writing style for consistency and logic</li>
+          <li>✔ Fact-check statements for scientific accuracy.</li>
+        </ul>
+        <div className="free-label">You receive for free</div>
+        <ul className="freebies">
+          <li>✔ Pre Submission Peer review report</li>
+          <li>✔ Free response letter cross check</li>
+          <li>✔ Peer reviewers from Top Journals as reviewers for your manuscript.</li>
+          <li>✔ unlimited round of plagiarism check</li>
+        </ul>
+        <button className="check-price"><a href="/ExtensiveSubstantiveEditing">Check Price</a></button>
+      </div>
+
+      <div className="service-column">
+        <h3>Other Services</h3>
+        <ul className="other-services">
+          <li>✔ 90Language Translation</li>
+          <li>✔ Copy editing</li>
+          <li>✔ Thesis Editing</li>
+          <li>✔ Dissertation Editing</li>
+          <li>✔ Book Editing</li>
+          <li>✔ Manual Editing</li>
+          <li>✔ Indexing</li>
+          <li>✔ Cover Page Design</li>
+          <li>✔ Type Setting</li>
+          <li>✔ Image Quality Enhancement</li>
+          <li>✔ Image Recreation</li>
+          <li>✔ Camera Ready Formatting</li>
+          <li>✔ Journal Cover Page Design</li>
+        </ul>
+        <button className="check-price"><a href="/QuotationNew">Check Price</a></button>
+      </div>
+    </div>
+
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>

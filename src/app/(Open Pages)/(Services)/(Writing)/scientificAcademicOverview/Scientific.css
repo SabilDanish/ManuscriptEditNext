@@ -1,0 +1,15 @@
+/* components/WritingServicesSection.module.css */
+
+.leftPane {
+  background-color: #329b8f;
+  min-height: 100%;
+}
+
+.iconBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  cursor: pointer;
+}

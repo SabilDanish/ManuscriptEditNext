@@ -1,19 +1,12 @@
 "use client";
-import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
-import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
+
 // import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
-import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
-import redirect from "@/app/_Common/_functionality/Redirect";
 import { usePathname } from "next/navigation";
 import { data } from "../../../../utils/metaFile.js";
 import Metadata from "@/app/Metadata";
-import { serviceData } from "@/app/utils/service.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
-
 import "@/app/_Common/Dropdown2/Dropdown2.css";
 
 import {
@@ -24,6 +17,8 @@ import {
   faRedo,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import ReviewArticle from "@/app/_Common/DependentTabSec/DependentTabSec";
+
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
@@ -139,6 +134,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+
+        <ReviewArticle />
 
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>

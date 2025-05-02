@@ -24,6 +24,7 @@ import {
   faRedo,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import DependantTabTech from "@/app/_Common/DependantTabTech/DependantTabTech";
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
@@ -139,6 +140,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <DependantTabTech/>
 
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>

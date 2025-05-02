@@ -8,6 +8,7 @@ import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Head from "next/head";
 import {
   faCheckCircle,
   faEdit,
@@ -54,6 +55,12 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/ResponseToReviewer/"
+        />
+      </Head>
       <section style={{ marginTop: "40px" }}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>

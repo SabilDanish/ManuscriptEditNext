@@ -103,13 +103,15 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-            Professional Rewriting Services- Enhance Clarity, Flow &amp; Readability
+              Professional Rewriting Services- Enhance Clarity, Flow &amp;
+              Readability
             </h1>
             <p className={styles.subtext}>
-            Looking to refine your research manuscript? Our expert academic rewriting services improve
-clarity, coherence, and logical flow while eliminating redundancies. We restructure and
-enhance content without altering your original meaning, ensuring publication-ready quality
-for journals, dissertations, and professional reports.
+              Looking to refine your research manuscript? Our expert academic
+              rewriting services improve clarity, coherence, and logical flow
+              while eliminating redundancies. We restructure and enhance content
+              without altering your original meaning, ensuring publication-ready
+              quality for journals, dissertations, and professional reports.
             </p>
             <div className={styles.buttonGroup}>
               <a href="https://secure.manuscriptedit.com/quotation">
@@ -127,15 +129,53 @@ for journals, dissertations, and professional reports.
           </div>
         </section>
 
+        <section className="info-section">
+          <div className="container">
+            <div className="row info-box">
+              <div className="col-lg-6 left-box">
+                <h6 className="info-title">When To Seek</h6>
+                <ul className="info-list dark-list">
+                  <li>Major part of writing is completed</li>
+                  <li>
+                    Need to add some more facts (background, literature,
+                    discussion)
+                  </li>
+                  <li>Increasing or reducing word counts</li>
+                  <li>Need major reorganization of the content</li>
+                  <li>Polishing of languages</li>
+                </ul>
+              </div>
+              <div className="col-lg-6 right-box">
+                <h6 className="info-title light-text">What To Expect</h6>
+                <ul className="info-list light-list">
+                  <li>Identifying and filling the missing part</li>
+                  <li>
+                    Thorough literature review to look for the additional fact
+                    and checking the authenticity of existing facts
+                  </li>
+                  <li>Document of recommended word count</li>
+                  <li>Ensure logical flow throughout the content</li>
+                  <li>
+                    Lucid presentation in easily understandable error-free
+                    English (American/British)
+                  </li>
+                  <li>Ensure adherence to the desired format</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>What is Rewriting?</h2>
             <p className={styles.subtext}>
-            Academic rewriting involves a comprehensive manuscript revision to enhance readability,
-sentence structure, and content flow. Unlike proofreading or copyediting, rewriting ensures
-your content is logically structured, clear, and impactful, meeting journal and publication
-standards.
+              Academic rewriting involves a comprehensive manuscript revision to
+              enhance readability, sentence structure, and content flow. Unlike
+              proofreading or copyediting, rewriting ensures your content is
+              logically structured, clear, and impactful, meeting journal and
+              publication standards.
             </p>
           </div>
 
@@ -143,25 +183,37 @@ standards.
             <h2 className={styles.heading}>Who Needs This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Researchers &amp; Academics revising manuscripts for high-impact journals.
+                ✔ Researchers &amp; Academics revising manuscripts for
+                high-impact journals.
               </li>
               <li>
-                ✔ PhD candidates improving dissertation structure, clarity, and coherence.
+                ✔ PhD candidates improving dissertation structure, clarity, and
+                coherence.
               </li>
               <li>
-                ✔ Authors &amp; Professionals refining white papers, reports, and technical documents.
+                ✔ Authors &amp; Professionals refining white papers, reports,
+                and technical documents.
               </li>
             </ul>
           </div>
 
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-            Key Benefits of Our Academic Rewriting Services:
+              Key Benefits of Our Academic Rewriting Services:
             </h2>
             <ul className={styles.benefitsList}>
-              <li>✔ Enhances clarity, sentence structure, and readability for a stronger academic impact.</li>
-              <li>✔Improves manuscript organization while preserving the original meaning.</li>
-              <li>✔ Optimized for journal submissions with precise tone, grammar, and style.</li>
+              <li>
+                ✔ Enhances clarity, sentence structure, and readability for a
+                stronger academic impact.
+              </li>
+              <li>
+                ✔Improves manuscript organization while preserving the original
+                meaning.
+              </li>
+              <li>
+                ✔ Optimized for journal submissions with precise tone, grammar,
+                and style.
+              </li>
             </ul>
           </div>
         </section>

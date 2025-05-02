@@ -1,0 +1,59 @@
+.container {
+    margin: 30px 0px;
+  }
+  
+  .sidebar {
+    background-color: #001f3f;
+    color: white;
+    padding: 20px 10px;
+  }
+  
+  .contactBox {
+    background-color: #01172f;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .contactBox a {
+    color: #66ccff;
+    text-decoration: none;
+  }
+  
+  .activeTab {
+    background-color: #00a5a5 !important;
+    color: white !important;
+  }
+  
+  .inactiveTab {
+    background-color: #01172f !important;
+    color: white !important;
+  }
+  
+  .content {
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .checklist {
+    padding-left: 20px;
+  }
+  
+  .checklist li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 25px;
+  }
+  
+  .checklist li::before {
+    content: '✔';
+    color: darkred;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  

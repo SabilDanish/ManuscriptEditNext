@@ -1,5 +1,6 @@
 import React from "react";
 import "./ServiceAgreement.css";
+import Head from "next/head";
 
 const ServiceAgreement = () => {
   return (
@@ -41,7 +42,7 @@ const ServiceAgreement = () => {
         forth the rights and obligations of the Clients with respect to its use
         of services of Reseapro using the service interface{" "}
         <a href="HTTPS://WWW.MANUSCRIPTEDIT.COM" target="_blank">
-          https://www.manuscriptedit.com
+          HTTPS://WWW.MANUSCRIPTEDIT.COM
         </a>
         . By Clicking "Accept", "Finish", "Continue" or a similar
         Acknowledgement with respect to using the Services of Reseapro, the
@@ -1312,3 +1313,4 @@ const ServiceAgreement = () => {
 };
 
 export default ServiceAgreement;
+

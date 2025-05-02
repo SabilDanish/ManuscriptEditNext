@@ -7,6 +7,7 @@ import { DNA } from "react-loader-spinner";
 import { Editor } from "@/app/utils/interfaces";
 import EditorModal from "@/app/_Common/_Modals/EditorModal/EditorModal";
 import defaultImage from "../../../utils/testi/2.jpg";
+import Head from "next/head";
 
 export default function Home() {
   const [limit, setLimit] = useState(20);
@@ -45,6 +46,13 @@ export default function Home() {
   };
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/EditorialPanel/"
+        />
+      </Head>
+
       {/* {breadcrum("Editor", "Editorial Panel")} */}
       {showModal && (
         <EditorModal modalData={modalData} setShowModal={setShowModal} />

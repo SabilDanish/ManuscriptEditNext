@@ -24,6 +24,17 @@ export default function ProjectQuote() {
   const [selectedSubSubject, setSelectedSubSubject] = useState<string>("");
   const [valFromLocalStorage, setValFromLocalStorage] = useState<any>("");
 
+  console.log(
+    "totalPrice",
+    totalPrice,
+    "totalPriceAddons",
+    totalPriceAddons,
+    "optionTotalPrice",
+    optionTotalPrice,
+    "selectedAddOns",
+    selectedAddOns
+  );
+
   useEffect(() => {
     setValFromLocalStorage(
       localStorage.getItem("SelectedServiceFromPriceCalculator")
@@ -61,6 +72,12 @@ export default function ProjectQuote() {
       basePrice = numericWordCount * (turnaroundPrices1[turnaround] || 0);
     } else if (selectedOption === "Proofreading") {
       basePrice = numericWordCount * (turnaroundPrices2[turnaround] || 0);
+    } else if (selectedOption === "Standard Package") {
+      basePrice = 200; // Replace with your actual fixed price
+    } else if (selectedOption === "Advanced Package") {
+      basePrice = 350; // Replace with your actual fixed price
+    } else if (selectedOption === "Premium Publication Package") {
+      basePrice = 500; // Replace with your actual fixed price
     }
 
     // Calculate add-on total individually
@@ -734,11 +751,8 @@ export default function ProjectQuote() {
   }, [selectedGoal]);
 
   return (
-    <div className="container sumcon">
-      <div
-        className="row mt-4 sumrow"
-        style={{ justifyContent: "space-between" }}
-      >
+    <div className="container">
+      <div className="row mt-4 ">
         <div className="col-md-8 p-4 border bg-light shade">
           <div>
             <h5>
@@ -1182,9 +1196,9 @@ export default function ProjectQuote() {
           </div>
         </div>
 
-        <div className="col-md-4" style={{ position: "relative" }}>
+        <div className="col-md-4">
           <div className="summary-container">
-            <div className="card border rounded shadow-sm p-3">
+            <div className="card border rounded shadow-sm p-3 card_holderHeight scrollable-summary">
               <div className="card-body">
                 <h5 className="card-title border-bottom pb-2">Summary</h5>
                 <p className="mb-2">
@@ -1192,11 +1206,12 @@ export default function ProjectQuote() {
                   <br></br> {selectedGoal}
                 </p>
                 <div className="mb-3">
-                  <strong>Selected Option:</strong>
+                  <strong>Service:</strong>
                   <p className="d-flex justify-content-between align-items-center border p-2 rounded mt-2">
                     <span>{selectedOption || "None"}</span>
-                    {selectedGoal === "Editing & Language Services" &&
-                      (optionTotalPrice != 0 ? (
+                    {(selectedGoal === "Editing & Language Services" ||
+                      selectedGoal === "Manuscriptedit Packages") &&
+                      (optionTotalPrice !== 0 ? (
                         <span className="fw-bold">
                           $
                           {selectedOption
@@ -1274,7 +1289,8 @@ export default function ProjectQuote() {
                   )}
                 </div>
                 <div>
-                  {selectedGoal === "Editing & Language Services" ? (
+                  {selectedGoal === "Editing & Language Services" ||
+                  selectedGoal === "Manuscriptedit Packages" ? (
                     optionTotalPrice != 0 ? (
                       <div className="border-top pt-3 d-flex justify-content-between align-items-center">
                         <h5 className="mb-0">Total:</h5>

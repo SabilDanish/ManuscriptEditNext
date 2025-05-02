@@ -1,7 +1,8 @@
 .changeColor {
-    background-color: #02163b;
+    background-color: #255ec8;
     animation-name: example;
     animation-duration: 0.5s;
+    color: #fbffdf;
   }
   
   .changeColor2 {

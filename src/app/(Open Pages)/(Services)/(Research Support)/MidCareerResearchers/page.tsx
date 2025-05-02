@@ -1,8 +1,15 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+    <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/MidCareerResearchers/"
+        />
+      </Head>
       {breadcrum("Services / Research Support", "Mid Career Researchers")}
       <section className="pt-5 pb-5">
         <div className="container">
