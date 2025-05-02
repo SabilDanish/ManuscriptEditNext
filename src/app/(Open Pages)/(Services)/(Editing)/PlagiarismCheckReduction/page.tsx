@@ -13,6 +13,7 @@ import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
 import Head from "next/head";
+import "./Plagarism.css"
 
 import {
   faFileUpload,
@@ -140,6 +141,41 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <div
+          className="proofreading-container container"
+          style={{ marginTop: "40px" }}
+        >
+          <div className="proofreading-tab">Plagiarism check report.</div>
+
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-lg-6">
+                <ul className="service-list">
+                  <li>✓ Identify significant overlaps in text with published and in-press articles.</li>
+                  <li>✓ Reduction or elimination of plagiarized text.</li>
+                  <li>✓ Ensuring no extent of overlap in text.</li>
+                </ul>
+              </div>
+              <div className="col-lg-6">
+                <h4>What You Provide</h4>
+                <ul className="service-list">
+                  <li>
+                    ✓ Manuscript in Microsoft word file.
+                  </li>
+                </ul>
+              </div>
+              <button className="submit-btn">
+                <a
+                  href="https://secure.manuscriptedit.com/register"
+                  style={{ color: "white" }}
+                >
+                  Submit Manuscript Now
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
 
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>

@@ -14,6 +14,7 @@ import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
+import "./CopyEdit.css"
 
 import {
   faFileUpload,
@@ -120,6 +121,34 @@ export default function Home() {
             </p>
           </div>
         </section>
+
+
+        <div className="proofreading-container container">
+        <div className="proofreading-tab">What does Copyediting cover?</div>
+
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              <ul className="service-list">
+                <li>✓ Thorough and comprehensive proofreading of the manuscript.</li>
+                <li>✓ Checking the manuscript's English language for spelling, vocabulary, grammar and punctuation.</li>
+                <li>✓ Checking for the consistency in writing style (capitalization, American/British Eng).</li>
+                
+              </ul>
+
+              <button className="submit-btn"><a href="https://secure.manuscriptedit.com/register" style={{color:'white'}}>Submit Manuscript Now</a></button>
+            </div>
+
+            <div className="col-lg-6">
+              <ul className="service-list">
+              <li>✓  Checking for consistent use of abbreviations.</li>
+                <li>✓ Checking the manuscript for consistency in referencing style.</li>
+                <li>✓ Rephrasing and revising the sentences for better clarity.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>

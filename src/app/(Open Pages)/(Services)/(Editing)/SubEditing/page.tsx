@@ -12,6 +12,7 @@ import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
+import "./SubEdit.css";
 
 import {
   faFileUpload,
@@ -124,6 +125,49 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <div
+          className="proofreading-container container"
+          style={{ marginTop: "40px" }}
+        >
+          <div className="proofreading-tab">Substantive editing</div>
+
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-lg-6">
+                <ul className="service-list">
+                  <li>✓ Thorough reading of manuscript.</li>
+                  <li>✓ Spotting all errors.</li>
+                  <li>✓ Review capitalization and punctuation.</li>
+                  <li>✓ Check for spelling, grammar, and typos.</li>
+                  <li>✓ Remove redundancies</li>
+                </ul>
+              </div>
+              <div className="col-lg-6">
+                <ul className="service-list">
+                  <li>✓ Rectify improper word usage.</li>
+                  <li>
+                    ✓ Verify scientific terminology, units, symbols, and
+                    variables.
+                  </li>
+                  <li>
+                    ✓ Rephrase & revise sentences for clarity and word choice.
+                  </li>
+                  <li>✓ Remove repetitions for logical presentation.</li>
+                  <li>✓ Editing by Subject matter expert</li>
+                </ul>
+                <button className="submit-btn">
+                  <a
+                    href="https://secure.manuscriptedit.com/register"
+                    style={{ color: "white" }}
+                  >
+                    Submit Manuscript Now
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>

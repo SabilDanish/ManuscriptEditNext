@@ -7,6 +7,7 @@ import { data } from "../../../../utils/metaFile.js";
 import Metadata from "@/app/Metadata";
 import Renovation from "@/app/_Common/Renovation/Renovation";
 import Dropdown2 from "@/app/_Common/Dropdown2/Dropdown2";
+import "./Proofreading.css";
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
@@ -19,6 +20,8 @@ export default function Home() {
   return (
     <>
       {<Metadata metaData={metaData} />}
+
+     
 
       <Renovation />
 

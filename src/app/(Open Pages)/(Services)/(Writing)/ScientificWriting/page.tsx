@@ -25,6 +25,7 @@ import {
   faRedo,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import DependentSecForScientific from "@/app/_Common/DependentSecForScientific/DependentSecForScientific";
 
 const newData: { [key: string]: { [key: string]: string } } = data;
 
@@ -146,6 +147,7 @@ export default function Home() {
           </div>
         </section>
 
+        <DependentSecForScientific />
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>

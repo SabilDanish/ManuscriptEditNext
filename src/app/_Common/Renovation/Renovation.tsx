@@ -43,6 +43,8 @@
 
 import styles from "./Renovation.module.css";
 import "./Renovation.css";
+import "@/app/(Open Pages)/(Services)/(Editing)/ProofReading/Proofreading.css";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFileUpload,
@@ -51,6 +53,7 @@ import {
   faCheckCircle,
   faRedo,
 } from "@fortawesome/free-solid-svg-icons";
+import DependantTabSampleWorks from "../DependantTabSampleWorks/DependantTabSampleWorks";
 
 export default function ProofreadingServices() {
   const steps = [
@@ -89,13 +92,15 @@ export default function ProofreadingServices() {
       <section style={gap}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>
-          Enhance Your Manuscript with Expert Proofreading and English Editing Services
+            Enhance Your Manuscript with Expert Proofreading and English Editing
+            Services
           </h1>
           <p className={styles.subtext}>
-          Ensure your manuscript is free from grammar, punctuation, and typographical errors with
-our expert proofreading and English editing services. We provide high-quality language
-refinement tailored for research papers, scientific reports, and journal submissions, helping
-you meet the publication standards.
+            Ensure your manuscript is free from grammar, punctuation, and
+            typographical errors with our expert proofreading and English
+            editing services. We provide high-quality language refinement
+            tailored for research papers, scientific reports, and journal
+            submissions, helping you meet the publication standards.
           </p>
           <div className={styles.buttonGroup}>
             <a href="https://secure.manuscriptedit.com/quotation">
@@ -113,42 +118,100 @@ you meet the publication standards.
         </div>
       </section>
 
+      <div
+        className="proofreading-container container"
+        style={{ marginTop: "40px" }}
+      >
+        <div className="proofreading-tab">Proofreading</div>
+
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-5">
+              <ul className="service-list">
+                <li>✓ Thorough reading of manuscript.</li>
+                <li>✓ Spotting all errors.</li>
+                <li>✓ Review capitalization and punctuation.</li>
+                <li>✓ Check for spelling, grammar, and typos.</li>
+                <li>✓ Remove redundancies</li>
+                <li>✓ Rectify improper word usage.</li>
+              </ul>
+            </div>
+
+            <div className="col-lg-5">
+              <div className="free-section">
+                <span className="free-label">You receive for free</span>
+                <ul className="free-list">
+                  <li>✓ Native English Editing Certificate</li>
+                  <li>✓ 2 round of free re-editing</li>
+                  <li>✓ 2 round of chat communication with Expert</li>
+                </ul>
+              </div>
+
+              <button className="submit-btn">
+                <a
+                  href="https://secure.manuscriptedit.com/register"
+                  style={{ color: "white" }}
+                >
+                  Submit Manuscript Now
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container" style={{ marginTop: "40px" }}>
+        <section>
+          <DependantTabSampleWorks />
+        </section>
+      </div>
+
       {/* Proofreading Overview Section */}
       <section className={styles.benefitsWrapper}>
         <div className={styles.benefitsBox}>
-          <h2 className={styles.heading}>Why choose Professional Proofreading?</h2>
+          <h2 className={styles.heading}>
+            Why choose Professional Proofreading?
+          </h2>
           <p className={styles.subtext}>
-          Proofreading is the final step in the editing process, ensuring that your academic or scientific
-document is error-free and publication-ready. High-quality proofreading improves clarity,
-consistency, and readability, increasing your chances of journal acceptance.
+            Proofreading is the final step in the editing process, ensuring that
+            your academic or scientific document is error-free and
+            publication-ready. High-quality proofreading improves clarity,
+            consistency, and readability, increasing your chances of journal
+            acceptance.
           </p>
         </div>
 
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>Who Benefits from this Service?</h2>
           <ul className={styles.benefitsList}>
-            <li> ✔ Researchers preparing manuscripts for journal publication</li>
             <li>
-              ✔ PhD and MS students working
+              {" "}
+              ✔ Researchers preparing manuscripts for journal publication
+            </li>
+            <li>✔ PhD and MS students working</li>
+            <li>
+              ✔ Academics and professionals submitting scientific reports,
+              conference papers, and grant proposals
             </li>
             <li>
-              ✔ Academics and professionals submitting scientific reports, conference papers, and
-              grant proposals
-            </li>
-            <li>
-              ✔ Authors seeking editing services to refine their work before submission
+              ✔ Authors seeking editing services to refine their work before
+              submission
             </li>
           </ul>
         </div>
 
         <div className={styles.benefitsBox}>
-          <h2 className={styles.heading}>Key benefits of our Proofreading Services</h2>
+          <h2 className={styles.heading}>
+            Key benefits of our Proofreading Services
+          </h2>
           <ul className={styles.benefitsList}>
             <li>✔ Eliminates grammar, punctuation, and typographical errors</li>
             <li>
               ✔ Ensures language accuracy while maintaining an academic tone
             </li>
-            <li>✔ Provides fast turnaround to meet journal submission deadlines</li>
+            <li>
+              ✔ Provides fast turnaround to meet journal submission deadlines
+            </li>
           </ul>
         </div>
       </section>

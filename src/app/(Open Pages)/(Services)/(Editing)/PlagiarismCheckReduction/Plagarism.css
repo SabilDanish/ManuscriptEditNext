@@ -1,0 +1,71 @@
+/* styles/globals.css */
+
+.proofreading-container {
+    border: 1px solid #dcdcdc;
+    padding: 20px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+  
+  .proofreading-tab {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #fff;
+    border: 1px solid #3399ff;
+    padding: 4px 8px;
+    color: #3399ff;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .service-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .service-list li {
+    margin: 6px 0;
+    color: #333;
+  }
+  
+  .free-section {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .free-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .free-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .free-list li {
+    margin: 6px 0;
+    color: #333;
+  }
+  
+  .submit-btn {
+    background-color: #2563eb;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 300px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2563eb;
+  }
+  

@@ -3,16 +3,21 @@
 import { useEffect, useState } from "react";
 import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
+import medicalIcon from "@/app/utils/LogosForIcons/medical.png";
+import rewritingIcon from "@/app/utils/LogosForIcons/rewrite.png";
+import scientificIcon from "@/app/utils/LogosForIcons/scientific.png";
+import technicalIcon from "@/app/utils/LogosForIcons/technical.png";
+import "@/app/(Open Pages)/(Services)/(Writing)/scientificAcademicOverview/Scientific.css";
 
 import {
   faFileUpload,
   faSearch,
   faEdit,
   faCheckCircle,
-  faRedo,
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function Home() {
   const steps = [
@@ -98,7 +103,7 @@ export default function Home() {
 
   return (
     <>
-      <div style={{marginBottom:"50px"}}>
+      <div style={{ marginBottom: "50px" }}>
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
@@ -114,6 +119,82 @@ export default function Home() {
               diverse disciplines, we help you navigate the complexities of
               scholarly publishing with confidence.
             </p>
+          </div>
+        </section>
+
+        <section className="container-fluid d-flex flex-wrap p-0 justify-content-center" style={{marginTop:"30px"}}>
+          <div className="col-md-3" style={{padding:"20px", color:"aliceblue" , background:"#3f79ad"}}>
+            <h5 style={{color:"aliceblue"}}>We help you engage with the reader</h5>
+            <p>You have the ideas, we have the writing expertise to express those ideas in words. Our cohesive team of writers are equipped to handle all your writing needs by relying on trustworthy sources and meticulous research.</p>
+            <div style={{textAlign:"center"}}><a href="/QuotationNew" style={{padding:"9px",background:"aliceblue",borderRadius:"6px"}}>Request a quote</a></div>
+            
+          </div>
+
+          <div className="col-md-6 d-flex justify-content-around align-items-center flex-wrap bg-light p-4">
+            <div className="iconBlock text-center">
+              <img
+                src={medicalIcon.src}
+                alt="Medical Writing"
+                width={100}
+                height={100}
+              />
+              <p className="text-primary fw-bold mt-2">
+                <a
+                  href="/MedicalWrite"
+                  className="text-decoration-none text-primary"
+                >
+                  Medical Writing
+                </a>
+              </p>
+            </div>
+            <div className="iconBlock text-center">
+              <img
+                src={scientificIcon.src}
+                alt="Scientific Writing"
+                width={100}
+                height={100}
+              />
+              <p className="text-primary fw-bold mt-2">
+                <a
+                  href="/ScientificWriting"
+                  className="text-decoration-none text-primary"
+                >
+                  Scientific Writing
+                </a>
+              </p>
+            </div>
+            <div className="iconBlock text-center">
+              <img
+                src={technicalIcon.src}
+                alt="Technical Writing"
+                width={100}
+                height={100}
+              />
+              <p className="text-primary fw-bold mt-2">
+                <a
+                  href="/TechnicalWriting"
+                  className="text-decoration-none text-primary"
+                >
+                  Technical Writing
+                </a>
+              </p>
+            </div>
+            <div className="iconBlock text-center">
+              <img
+                src={rewritingIcon.src}
+                alt="ReWriting"
+                width={100}
+                height={100}
+              />
+              <p className="text-primary fw-bold mt-2">
+                <a
+                  href="/MedicalRewrite"
+                  className="text-decoration-none text-primary"
+                >
+                  ReWriting
+                </a>
+              </p>
+            </div>
           </div>
         </section>
 
@@ -402,21 +483,19 @@ export default function Home() {
 
             <ul className={styles.benefitsList}>
               <li>
-                Researchers: Research writing assistance
-                services, including manuscript editing services, research paper
-                assistance, and grant proposal writing to help researchers
-                publish in high-impact journal publications.
+                Researchers: Research writing assistance services, including
+                manuscript editing services, research paper assistance, and
+                grant proposal writing to help researchers publish in
+                high-impact journal publications.
               </li>
               <li>
-                Healthcare Professionals: Medical writing
-                assistance services cover clinical research documentation,
-                regulatory submissions, and Continuing Medical Education (CME)
-                content.
+                Healthcare Professionals: Medical writing assistance services
+                cover clinical research documentation, regulatory submissions,
+                and Continuing Medical Education (CME) content.
               </li>
               <li>
-                Institutions & Universities: Academic writing
-                assistance services, offering writing support for faculty and
-                students.
+                Institutions & Universities: Academic writing assistance
+                services, offering writing support for faculty and students.
               </li>
             </ul>
           </div>
