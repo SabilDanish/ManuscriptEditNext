@@ -680,6 +680,7 @@ export default function ProjectQuote() {
     setSelectedOption("");
     setSelectedAddOns([]);
     setWordCount("");
+    setFile(null)
     setTurnaround("Trn_Ar10"); // or your default turnaround
     setFormData({
       Name: "",
