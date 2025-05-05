@@ -11,17 +11,15 @@ export default function Home() {
   const [wordCountStatement, setWordCountStatement] = useState<string | null>();
   const { isLoading, error, result, getPriceCalculator } = usePriceCalculator();
 
-const serviceId8 = {
+  const serviceId8 = {};
 
-}
-
-  useEffect(()=>{
-    setWordCountStatement('275')
+  useEffect(() => {
+    setWordCountStatement("275");
     getPriceCalculator({ word_count: 275 });
-  },[])
+  }, []);
 
   const calculateHandler = () => {
-    setWordCountStatement(wordCount)
+    setWordCountStatement(wordCount);
     getPriceCalculator({ word_count: wordCount });
   };
 
@@ -52,7 +50,7 @@ const serviceId8 = {
             >
               Word count
             </div>
-            <div className="col-lg-6" style={{ padding: 5}}>
+            <div className="col-lg-6" style={{ padding: 5 }}>
               <input
                 type="textbox"
                 id="wordC"
@@ -92,9 +90,10 @@ const serviceId8 = {
             ""
           )}
 
-
-        <h3 style={{color:'black',marginBottom:'2rem'}}>Prices for {wordCountStatement} words is:<br/></h3>
-
+          <h3 style={{ color: "black", marginBottom: "2rem" }}>
+            Prices for {wordCountStatement} words is:
+            <br />
+          </h3>
 
           <div className="row gy-4">
             {result && result.length
@@ -142,7 +141,7 @@ const serviceId8 = {
                         <div style={{ marginTop: 12, textAlign: "center" }}>
                           <a
                             className="btn btn-danger"
-                            href="https://secure.manuscriptedit.com/register"
+                            href="https://manuscriptedit.com/AuthorDashboard/"
                             style={{ padding: 10 }}
                           >
                             Get Started
@@ -150,7 +149,7 @@ const serviceId8 = {
                           &nbsp;&nbsp;
                           <a
                             className="btn"
-                            href="https://secure.manuscriptedit.com/register"
+                            href="https://manuscriptedit.com/AuthorDashboard/"
                             style={{
                               color: "#FFF",
                               backgroundColor: "#1f5174",
@@ -532,11 +531,9 @@ const serviceId8 = {
                         without worrying about the security of their ideas.
                       </p>
                     </div>
-                    <a
-                  onClick={() => window.location.href = "/QuotationNew"}
-                >
-                  Request a Quote <i className="bi bi-arrow-right"></i>
-                </a>
+                    <a onClick={() => (window.location.href = "/QuotationNew")}>
+                      Request a Quote <i className="bi bi-arrow-right"></i>
+                    </a>
                   </div>
                   <div
                     className="col-lg-6 pt-4 pt-lg-0 aos-init aos-animate"
@@ -682,7 +679,7 @@ const serviceId8 = {
                 </ul>
 
                 <div className="text-center mt-auto">
-                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
+                  <a href="https://manuscriptedit.com/AuthorDashboard/" className="buy-btn">
                     Order Now
                   </a>
                 </div>
@@ -749,7 +746,7 @@ const serviceId8 = {
                 </ul>
 
                 <div className="text-center mt-auto">
-                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
+                  <a href="https://manuscriptedit.com/AuthorDashboard/" className="buy-btn">
                     Order Now
                   </a>
                 </div>
@@ -816,7 +813,7 @@ const serviceId8 = {
                 </ul>
 
                 <div className="text-center mt-auto">
-                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
+                  <a href="https://manuscriptedit.com/AuthorDashboard/" className="buy-btn">
                     Order Now
                   </a>
                 </div>
@@ -883,7 +880,7 @@ const serviceId8 = {
                 </ul>
 
                 <div className="text-center mt-auto">
-                  <a href="https://secure.manuscriptedit.com/register" className="buy-btn">
+                  <a href="https://manuscriptedit.com/AuthorDashboard/" className="buy-btn">
                     Order Now
                   </a>
                 </div>

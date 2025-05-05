@@ -334,7 +334,7 @@ export default function Home() {
                         <div style={{ marginTop: 12, textAlign: "center" }}>
                           <a
                             className="btn btn-danger"
-                            href="https://secure.manuscriptedit.com/register"
+                            href="https://manuscriptedit.com/AuthorDashboard/"
                             style={{ padding: 10 }}
                           >
                             Get Started
@@ -342,7 +342,7 @@ export default function Home() {
                           &nbsp;&nbsp;
                           <a
                             className="btn"
-                            href="https://secure.manuscriptedit.com/register"
+                            href="https://manuscriptedit.com/AuthorDashboard/"
                             style={{
                               color: "#FFF",
                               backgroundColor: "#1f5174",
@@ -400,7 +400,7 @@ export default function Home() {
                     className={Styles.getStartedButton}
                     onClick={() => {
                       window.location.href =
-                        "https://secure.manuscriptedit.com/register";
+                        "https://manuscriptedit.com/AuthorDashboard/";
                     }}
                   >
                     Get Started
@@ -469,7 +469,7 @@ export default function Home() {
                     className={Styles.getStartedButton}
                     onClick={() => {
                       window.location.href =
-                        "https://secure.manuscriptedit.com/register";
+                        "https://manuscriptedit.com/AuthorDashboard/";
                     }}
                   >
                     Get Started
@@ -532,7 +532,7 @@ export default function Home() {
                     className={Styles.getStartedButton}
                     onClick={() => {
                       window.location.href =
-                        "https://secure.manuscriptedit.com/register";
+                        "https://manuscriptedit.com/AuthorDashboard/";
                     }}
                   >
                     Get Started
@@ -924,11 +924,11 @@ export default function Home() {
                       </p>
                     </div>
                     <a
-                  onClick={() => window.location.href = "/QuotationNew"}
-                  className="btn-learn-more"
-                >
-                  Request a Quote <i className="bi bi-arrow-right"></i>
-                </a>
+                      onClick={() => (window.location.href = "/QuotationNew")}
+                      className="btn-learn-more"
+                    >
+                      Request a Quote <i className="bi bi-arrow-right"></i>
+                    </a>
                   </div>
                   <div
                     className="col-lg-6 pt-4 pt-lg-0 aos-init aos-animate"

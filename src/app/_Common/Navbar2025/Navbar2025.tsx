@@ -6,8 +6,6 @@ import menu from "./menu";
 import { map } from "jquery";
 import { useRouter } from "next/router";
 
-
-
 function Navbar2025() {
   const [activeTab1, setActiveTab1] = useState<string>("");
   const [activeTab2, setActiveTab2] = useState<string>("");
@@ -207,7 +205,8 @@ function Navbar2025() {
                 QUALITY
               </Link>
             </li>
-            <li><Link
+            <li>
+              <Link
                 href="/Prices"
                 onClick={() => {
                   setActiveTab1(menu[2].subMenu[0]?.label || "");
@@ -220,7 +219,6 @@ function Navbar2025() {
               >
                 PRICE CALCULATOR
               </Link>
-             
             </li>
             <li>
               <Link
@@ -257,26 +255,23 @@ function Navbar2025() {
 
         <div className="nav-buttons">
           <Link
-            href="https://secure.manuscriptedit.com/register"
+            href="https://manuscriptedit.com/AuthorDashboard/"
             className="navButtonz"
           >
             Sign Up | Sign In
           </Link>
-          <Link
-            href="/QuotationNew"
-            className="navButtonz"
-          >
+          <Link href="/QuotationNew" className="navButtonz">
             Request A Quote
           </Link>
         </div>
       </header>
 
-      <div className="navbar2" >
+      <div className="navbar2">
         <div
           className="container-fluid"
           style={{ display: newNavBar2 ? "" : "none" }}
         >
-          <ul className="ItemForHover" style={{alignItems:"center"}}>
+          <ul className="ItemForHover" style={{ alignItems: "center" }}>
             {mainNavItem !== 5
               ? menu[mainNavItem].subMenu.map((item, index) => (
                   <li
@@ -287,14 +282,21 @@ function Navbar2025() {
                         : ""
                     }
                     onClick={() => {
-                      setActiveTab1(menu[mainNavItem].subMenu[index]?.label || "");
-                      setActiveTab2(menu[0].subMenu[index]?.subMenu?.[0]?.label || "");
+                      setActiveTab1(
+                        menu[mainNavItem].subMenu[index]?.label || ""
+                      );
+                      setActiveTab2(
+                        menu[0].subMenu[index]?.subMenu?.[0]?.label || ""
+                      );
                       setLastMenuItems(index);
                       setLastMenu(true);
                     }}
                   >
                     {menu[mainNavItem]?.subMenu[index]?.link ? (
-                      <Link href={menu[mainNavItem]?.subMenu[index]?.link || ""} className="menuAnchor">
+                      <Link
+                        href={menu[mainNavItem]?.subMenu[index]?.link || ""}
+                        className="menuAnchor"
+                      >
                         {menu[mainNavItem]?.subMenu[index]?.label}
                       </Link>
                     ) : (
@@ -311,25 +313,32 @@ function Navbar2025() {
       </div>
       <div className="navbar3">
         <div className="container-fluid">
-          <ul className="itemsForHover" style={{ display: mainNavItem !== 0 ? "none" : "" }}>
+          <ul
+            className="itemsForHover"
+            style={{ display: mainNavItem !== 0 ? "none" : "" }}
+          >
             {lastMenu && menu[0]?.subMenu[lastMenuItems]?.subMenu
               ? menu[0].subMenu[lastMenuItems].subMenu.map((item, index) => (
                   <li
                     key={index}
                     className={
                       activeTab2 ===
-                      (menu[0]?.subMenu[lastMenuItems]?.subMenu?.[index]?.label || "")
+                      (menu[0]?.subMenu[lastMenuItems]?.subMenu?.[index]
+                        ?.label || "")
                         ? "tabSelected2"
                         : ""
                     }
                     onClick={() =>
                       setActiveTab2(
-                        menu[0]?.subMenu[lastMenuItems]?.subMenu?.[index]?.label || ""
+                        menu[0]?.subMenu[lastMenuItems]?.subMenu?.[index]
+                          ?.label || ""
                       )
                     }
                   >
                     {item?.link ? (
-                      <Link href={item.link} className="menuAnchor">{item.label}</Link>
+                      <Link href={item.link} className="menuAnchor">
+                        {item.label}
+                      </Link>
                     ) : (
                       <span>{item.label || "Invalid Link"}</span>
                     )}

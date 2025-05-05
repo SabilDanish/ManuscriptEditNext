@@ -113,7 +113,7 @@ const Webinar = () => {
               </div>
 
               <div className="form-group">
-                <Link href={"https://secure.manuscriptedit.com/register"}>
+                <Link href={"https://manuscriptedit.com/AuthorDashboard/"}>
                   <button className="webButton">Log In</button>
                 </Link>
                 <hr />
@@ -226,7 +226,7 @@ const Webinar = () => {
                 <hr />
                 <p style={{ textAlign: "center", cursor: "pointer" }}>
                   Have an account?{" "}
-                  <Link href={"https://secure.manuscriptedit.com/register"}>
+                  <Link href={"https://manuscriptedit.com/AuthorDashboard/"}>
                     <span className="webspan">Log In</span>
                   </Link>
                 </p>

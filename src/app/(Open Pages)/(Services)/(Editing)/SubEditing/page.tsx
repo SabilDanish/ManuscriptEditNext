@@ -158,7 +158,7 @@ export default function Home() {
                 </ul>
                 <button className="submit-btn">
                   <a
-                    href="https://secure.manuscriptedit.com/register"
+                    href="https://manuscriptedit.com/AuthorDashboard/"
                     style={{ color: "white" }}
                   >
                     Submit Manuscript Now

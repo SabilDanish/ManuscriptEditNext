@@ -13,7 +13,7 @@ import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
 import Head from "next/head";
-import "./Plagarism.css"
+import "./Plagarism.css";
 
 import {
   faFileUpload,
@@ -152,7 +152,10 @@ export default function Home() {
             <div className="row justify-content-center">
               <div className="col-lg-6">
                 <ul className="service-list">
-                  <li>✓ Identify significant overlaps in text with published and in-press articles.</li>
+                  <li>
+                    ✓ Identify significant overlaps in text with published and
+                    in-press articles.
+                  </li>
                   <li>✓ Reduction or elimination of plagiarized text.</li>
                   <li>✓ Ensuring no extent of overlap in text.</li>
                 </ul>
@@ -160,14 +163,12 @@ export default function Home() {
               <div className="col-lg-6">
                 <h4>What You Provide</h4>
                 <ul className="service-list">
-                  <li>
-                    ✓ Manuscript in Microsoft word file.
-                  </li>
+                  <li>✓ Manuscript in Microsoft word file.</li>
                 </ul>
               </div>
               <button className="submit-btn">
                 <a
-                  href="https://secure.manuscriptedit.com/register"
+                  href="https://manuscriptedit.com/AuthorDashboard/"
                   style={{ color: "white" }}
                 >
                   Submit Manuscript Now

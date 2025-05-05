@@ -697,7 +697,7 @@ export default function ProjectQuote() {
     setSelectedOption("");
     setSelectedAddOns([]);
     setWordCount("");
-    setFile(null)
+    setFile(null);
     setTurnaround("Trn_Ar10"); // or your default turnaround
     setFormData({
       Name: "",
@@ -734,7 +734,7 @@ export default function ProjectQuote() {
       const { Message } = await response.json();
       if (Message === "Data Saved Successfully") {
         alert("Quotation submitted successfully!");
-        window.location.href = "https://secure.manuscriptedit.com/register";
+        window.location.href = "https://manuscriptedit.com/AuthorDashboard/";
       } else {
         alert("Something went wrong with the submission.");
       }

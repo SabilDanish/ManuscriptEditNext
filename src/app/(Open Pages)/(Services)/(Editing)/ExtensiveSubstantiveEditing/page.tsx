@@ -167,7 +167,7 @@ export default function Home() {
               </div>
               <button className="submit-btn">
                 <a
-                  href="https://secure.manuscriptedit.com/register"
+                  href="https://manuscriptedit.com/AuthorDashboard/"
                   style={{ color: "white" }}
                 >
                   Submit Manuscript Now
@@ -177,7 +177,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container" style={{marginTop:'40px'}}>
+        <div className="container" style={{ marginTop: "40px" }}>
           <DependantTabExtensiveSub />
         </div>
 

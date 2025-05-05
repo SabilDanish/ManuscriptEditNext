@@ -520,7 +520,7 @@ export default function Header() {
                       className="dtbtn"
                       onClick={() => {
                         window.location.href =
-                          "https://secure.manuscriptedit.com/register";
+                          "https://manuscriptedit.com/AuthorDashboard/";
                       }}
                       href="#"
                     >
@@ -959,7 +959,7 @@ export default function Header() {
                 <div className="donate-btn-header">
                   <a
                     className="dtbtn"
-                    href="https://secure.manuscriptedit.com/register"
+                    href="https://manuscriptedit.com/AuthorDashboard/"
                   >
                     Sign Up | Sign In
                   </a>
