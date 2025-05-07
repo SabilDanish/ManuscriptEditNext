@@ -198,7 +198,10 @@ export default function Home() {
         {/* New Proofreading Details Section */}
         <div className={styles.processContainer}>
           <h2 className={styles.processTitle}>How It Works</h2>
-          <div className={styles.processSteps1} style={{gridTemplateColumns: "repeat(4, 1fr)"}}>
+          <div
+            className={styles.processSteps1}
+            style={{ gridTemplateColumns: "repeat(4, 1fr)" }}
+          >
             {steps.map((step, index) => (
               <div key={index} className={styles.processStep}>
                 <h5 className={styles.stepHeading}>{step.stepss}</h5>
@@ -213,7 +216,7 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>
                 Start Your Master Thesis Service Now
               </button>

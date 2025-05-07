@@ -409,7 +409,7 @@ export default function Home() {
                     className={Styles.priceQuoteButton}
                     // onClick={() => {
                     //   window.location.href =
-                    //     "https://secure.manuscriptedit.com/quotation";
+                    //     "https://manuscriptedit.com/QuotationNew/";
                     // }}
 
                     onClick={() => {

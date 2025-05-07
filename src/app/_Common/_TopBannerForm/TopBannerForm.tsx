@@ -10,7 +10,7 @@ const TopBannerForm = () => {
     <>
       <div className="container" style={{ marginBottom: "60px" }}>
         <div className="row" style={{ justifyContent: "end" }}>
-          <div className="col-lg-6" >
+          <div className="col-lg-6">
             <h4 style={{ fontWeight: "Bold", fontSize: "2rem" }}>
               Get
               <span
@@ -45,7 +45,7 @@ const TopBannerForm = () => {
             </h5>
             <Link
               className="btn mt-12"
-              href={"https://secure.manuscriptedit.com/quotation"}
+              href={"https://manuscriptedit.com/QuotationNew/"}
               role="button"
               style={{
                 backgroundColor: "#151130",
@@ -58,18 +58,25 @@ const TopBannerForm = () => {
             <Link
               className="btn mt-12"
               href={"https://secure.manuscriptedit.com/advisory"}
-              role="button" 
+              role="button"
               style={{
                 backgroundColor: "#151130",
                 color: "white",
                 marginTop: "1rem",
                 marginLeft: "1rem",
               }}
-            >For Indian Researchers →
+            >
+              For Indian Researchers →
             </Link>
-           
           </div>
-          <div className={`$"carouselItem" $"active" col-lg-6`} style={{display:'flex' , justifyContent:'center' , alignItems:'center'}}>
+          <div
+            className={`$"carouselItem" $"active" col-lg-6`}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <img
               src="/images/flags/Ban_updates.jpg"
               className="carouselImage"

@@ -132,11 +132,8 @@ export default function Home() {
 
   return (
     <>
-    <Head>
-        <link
-          rel="canonical"
-          href="https://manuscriptedit.com/Writing/"
-        />
+      <Head>
+        <link rel="canonical" href="https://manuscriptedit.com/Writing/" />
       </Head>
       {<Metadata metaData={metaData} />}
       <div>
@@ -155,13 +152,13 @@ export default function Home() {
               integrity.
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.primaryButton}>
                   Get Writing Guidance Now
                 </button>
               </a>
 
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.secondaryButton}>
                   Request a Free Consultation
                 </button>
@@ -201,7 +198,7 @@ export default function Home() {
               </li>
             </ul>
 
-            <p style={{textAlign:"center" , marginTop:"20px"}}>
+            <p style={{ textAlign: "center", marginTop: "20px" }}>
               <strong>
                 Boost Your Chances of Getting Published with Expert Research
                 Writing Assistance!
@@ -292,7 +289,7 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>
                 Start Your Technical Writing Project
               </button>
@@ -363,7 +360,7 @@ export default function Home() {
 
             <div className="cta-container">
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className="cta-button"
               >
                 Check Pricing & Get a Quote

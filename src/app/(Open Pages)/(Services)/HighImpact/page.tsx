@@ -109,13 +109,15 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-            High-Impact Scientific Editing – Elevate Your Research for Top-Tier Journals
+              High-Impact Scientific Editing – Elevate Your Research for
+              Top-Tier Journals
             </h1>
             <p className={styles.subtext}>
-            Enhance your scientific manuscript with expert scientific editing services to improve clarity,
-coherence, and publication readiness. Our professional research editors ensure compliance
-with Q1, Q2, Scopus, Web of Science, and PubMed journal standards, boosting your
-acceptance rate in high-impact journals.
+              Enhance your scientific manuscript with expert scientific editing
+              services to improve clarity, coherence, and publication readiness.
+              Our professional research editors ensure compliance with Q1, Q2,
+              Scopus, Web of Science, and PubMed journal standards, boosting
+              your acceptance rate in high-impact journals.
             </p>
             <div className={styles.buttonGroup}>
               <button className={styles.primaryButton}>
@@ -132,61 +134,58 @@ acceptance rate in high-impact journals.
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-            What is High-Impact Scientific Editing?
+              What is High-Impact Scientific Editing?
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Advanced Technical Editing – Improves language, terminology, and structure for
-                research papers
+                ✔ Advanced Technical Editing – Improves language, terminology,
+                and structure for research papers
               </li>
               <li>
-                ✔ Scientific Clarity &amp; Readability – Enhances logical flow, coherence, and precision
+                ✔ Scientific Clarity &amp; Readability – Enhances logical flow,
+                coherence, and precision
               </li>
               <li>
-                ✔ Journal Compliance Editing – Aligns with top academic journal requirements
+                ✔ Journal Compliance Editing – Aligns with top academic journal
+                requirements
               </li>
               <li>
-                ✔ Error-Free Research Papers – Corrects grammar, syntax, and scientific accuracy
-              </li>
-            </ul>
-          </div>
-
-          <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>Who Needs This Scientific Editing Service?</h2>
-            <ul className={styles.benefitsList}>
-              <li>
-                ✔Researchers &amp; Academics – Preparing manuscripts for high-impact journal
-                submission
-              </li>
-              <li>
-                ✔ PhD Scholars &amp; Postdoctoral Fellows – Refining theses, dissertations, and research
-                papers
-              </li>
-              <li>
-                ✔ Medical &amp; Scientific Professionals – Ensuring technical precision and scientific
-                readability
+                ✔ Error-Free Research Papers – Corrects grammar, syntax, and
+                scientific accuracy
               </li>
             </ul>
           </div>
 
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-            Key Benefits of High-Impact Scientific Editing:
+              Who Needs This Scientific Editing Service?
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Improves Research Clarity &amp; Global Readability
+                ✔Researchers &amp; Academics – Preparing manuscripts for
+                high-impact journal submission
               </li>
               <li>
-                ✔ Enhances Logical Flow &amp; Scientific Argumentation
+                ✔ PhD Scholars &amp; Postdoctoral Fellows – Refining theses,
+                dissertations, and research papers
               </li>
               <li>
-                ✔ Eliminates Grammar, Syntax &amp; Terminology Errors
+                ✔ Medical &amp; Scientific Professionals – Ensuring technical
+                precision and scientific readability
               </li>
+            </ul>
+          </div>
+
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>
+              Key Benefits of High-Impact Scientific Editing:
+            </h2>
+            <ul className={styles.benefitsList}>
+              <li>✔ Improves Research Clarity &amp; Global Readability</li>
+              <li>✔ Enhances Logical Flow &amp; Scientific Argumentation</li>
+              <li>✔ Eliminates Grammar, Syntax &amp; Terminology Errors</li>
               <li>✔ Aligns Manuscript Structure with Journal Guidelines</li>
-              <li>
-                ✔ Reduces Rejection Rates Due to Language Issues
-              </li>
+              <li>✔ Reduces Rejection Rates Due to Language Issues</li>
             </ul>
           </div>
 
@@ -331,7 +330,7 @@ acceptance rate in high-impact journals.
 
             <div className="cta-container">
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className="cta-button"
               >
                 Check Pricing and Get a Quote

@@ -105,13 +105,13 @@ export default function Home() {
               audience with clarity and precision.&quot;
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.primaryButton}>
                   Get Translation Now
                 </button>
               </a>
 
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.secondaryButton}>
                   Request a Free Sample
                 </button>
@@ -264,7 +264,7 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>
                 Start Translation Now
               </button>
@@ -324,7 +324,7 @@ export default function Home() {
 
             <div className="cta-container">
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className="cta-button"
               >
                 Check Pricing and Get a Quote

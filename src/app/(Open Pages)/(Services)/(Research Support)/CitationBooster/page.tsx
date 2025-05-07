@@ -106,13 +106,13 @@ export default function Home() {
               elevate your research impact.
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.primaryButton}>
                   Boost My Citations Now
                 </button>
               </a>
 
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.secondaryButton}>
                   Speak with a Citation Expert
                 </button>
@@ -125,28 +125,31 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-            Key Benefits of ManuscriptEdit’s Citation Growth Services:
+              Key Benefits of ManuscriptEdit’s Citation Growth Services:
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Google Scholar &amp; Scopus Citation Optimization – Boost academic discoverability
-                across top indexing platforms.
+                ✔ Google Scholar &amp; Scopus Citation Optimization – Boost
+                academic discoverability across top indexing platforms.
               </li>
               <li>
-                ✔ Metadata Enhancement for Academic Search Engines – Improve journal indexing,
-                DOI linking, and SEO ranking for greater exposure.
+                ✔ Metadata Enhancement for Academic Search Engines – Improve
+                journal indexing, DOI linking, and SEO ranking for greater
+                exposure.
               </li>
               <li>
-                ✔ Cross-Referencing &amp; Collaboration Strategies – Expand citation potential through
-                networking strategies and research impact analysis.
+                ✔ Cross-Referencing &amp; Collaboration Strategies – Expand
+                citation potential through networking strategies and research
+                impact analysis.
               </li>
               <li>
-                ✔ Journal Visibility Enhancement – Ensure your paper is indexed in high-traffic
-                databases to maximize citations.
+                ✔ Journal Visibility Enhancement – Ensure your paper is indexed
+                in high-traffic databases to maximize citations.
               </li>
               <li>
-                ✔ AI-Free &amp; Ethical Citation Growth Strategies – 100% compliant with academic
-                integrity guidelines, ensuring credible research visibility.
+                ✔ AI-Free &amp; Ethical Citation Growth Strategies – 100%
+                compliant with academic integrity guidelines, ensuring credible
+                research visibility.
               </li>
             </ul>
           </div>
@@ -229,7 +232,7 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>
                 Start Your Citation Growth Plan
               </button>
@@ -299,7 +302,7 @@ export default function Home() {
 
             <div className="cta-container">
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className="cta-button"
               >
                 Check Pricing & Get a Quote

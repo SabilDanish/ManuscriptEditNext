@@ -165,9 +165,12 @@ export default function Home() {
         </section>
 
         <div className="container mx-auto p-4">
-        <h2 className={styles.heading} style={{marginBottom:"30px" , textAlign:"center"}}>
-        Our High-Impact Services at a Glance
-            </h2>
+          <h2
+            className={styles.heading}
+            style={{ marginBottom: "30px", textAlign: "center" }}
+          >
+            Our High-Impact Services at a Glance
+          </h2>
           <table className="min-w-full bg-white border border-gray-300 shadow-md">
             <thead>
               <tr className="bg-gray-200 text-left">
@@ -223,7 +226,7 @@ export default function Home() {
           </table>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.secondaryButton}>
                 Let Us Help You Achieve Thesis Success
               </button>

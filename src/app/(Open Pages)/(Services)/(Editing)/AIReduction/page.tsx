@@ -96,21 +96,23 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-            Ensure Originality with our AI Content Detection &amp; Removal Service
+              Ensure Originality with our AI Content Detection &amp; Removal
+              Service
             </h1>
             <p className={styles.subtext}>
-            Enhance your research credibility by detecting and eliminating AI-generated content with our
-expert AI content detection service. Maintain academic integrity and align with the journal
-submission standards to avoid retractions and ensure manuscript originality.
+              Enhance your research credibility by detecting and eliminating
+              AI-generated content with our expert AI content detection service.
+              Maintain academic integrity and align with the journal submission
+              standards to avoid retractions and ensure manuscript originality.
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.primaryButton}>
                   Remove AI Content Now
                 </button>
               </a>
 
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.secondaryButton}>
                   Request a Free Sample
                 </button>
@@ -124,10 +126,12 @@ submission standards to avoid retractions and ensure manuscript originality.
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>What is AI Reduction?</h2>
             <p className={styles.subtext}>
-            Our AI-generated content removal service meticulously identifies and eliminates AI-
-created text, ensuring research paper authenticity and compliance with leading academic
-standards. Top scientific journals prohibit AI-generated content without explicit consent, and
-failing to comply may lead to publication rejection or allegations of scientific misconduct.
+              Our AI-generated content removal service meticulously identifies
+              and eliminates AI- created text, ensuring research paper
+              authenticity and compliance with leading academic standards. Top
+              scientific journals prohibit AI-generated content without explicit
+              consent, and failing to comply may lead to publication rejection
+              or allegations of scientific misconduct.
             </p>
           </div>
 
@@ -135,38 +139,41 @@ failing to comply may lead to publication rejection or allegations of scientific
             <h2 className={styles.heading}>Who Should Use This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Researchers &amp; Academics- Ensure compliance with strict publication support and
-                journal guidelines.
+                ✔ Researchers &amp; Academics- Ensure compliance with strict
+                publication support and journal guidelines.
               </li>
               <li>
-                ✔ PhD &amp; MS students- Get an AI check for their thesis and dissertation to confirm
-                human authorship and avoid AI-generated content issues.
+                ✔ PhD &amp; MS students- Get an AI check for their thesis and
+                dissertation to confirm human authorship and avoid AI-generated
+                content issues.
               </li>
               <li>
-                ✔ Authors &amp; Writers- Maintain content originality and credibility in academic and
-                professional writing.
+                ✔ Authors &amp; Writers- Maintain content originality and
+                credibility in academic and professional writing.
               </li>
             </ul>
           </div>
 
           <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>Key Benefits of Our AI Content Reduction Service:</h2>
+            <h2 className={styles.heading}>
+              Key Benefits of Our AI Content Reduction Service:
+            </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ AI Content Detection for Research Papers- Ensure 100% human-generated content
-                for successful journal submission.
+                ✔ AI Content Detection for Research Papers- Ensure 100%
+                human-generated content for successful journal submission.
               </li>
               <li>
-                ✔ Compliance with Publication Standards- Align your work with Elsevier, Springer,
-                Wiley, Scopus, and PubMed guidelines.
+                ✔ Compliance with Publication Standards- Align your work with
+                Elsevier, Springer, Wiley, Scopus, and PubMed guidelines.
               </li>
               <li>
-                ✔ Enhanced Credibility- Establish trust and demonstrate commitment to authentic
-                research and academic integrity.
+                ✔ Enhanced Credibility- Establish trust and demonstrate
+                commitment to authentic research and academic integrity.
               </li>
               <li>
-                ✔ Risk Mitigation &amp; journal Acceptance- Avoid manuscript rejection by eliminating
-                AI-generated traces.
+                ✔ Risk Mitigation &amp; journal Acceptance- Avoid manuscript
+                rejection by eliminating AI-generated traces.
               </li>
             </ul>
           </div>
@@ -306,7 +313,7 @@ failing to comply may lead to publication rejection or allegations of scientific
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>Start Now</button>
             </a>
           </div>
@@ -363,7 +370,7 @@ failing to comply may lead to publication rejection or allegations of scientific
 
             <div className={styles.buttonGroup}>
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className={styles.primaryButton}
               >
                 Check Pricing and Get a Quote

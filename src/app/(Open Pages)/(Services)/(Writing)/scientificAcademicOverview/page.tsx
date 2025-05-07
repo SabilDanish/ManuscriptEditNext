@@ -122,12 +122,39 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container-fluid d-flex flex-wrap p-0 justify-content-center" style={{marginTop:"30px"}}>
-          <div className="col-md-3" style={{padding:"20px", color:"aliceblue" , background:"#3f79ad"}}>
-            <h5 style={{color:"aliceblue"}}>We help you engage with the reader</h5>
-            <p>You have the ideas, we have the writing expertise to express those ideas in words. Our cohesive team of writers are equipped to handle all your writing needs by relying on trustworthy sources and meticulous research.</p>
-            <div style={{textAlign:"center"}}><a href="/QuotationNew" style={{padding:"9px",background:"aliceblue",borderRadius:"6px"}}>Request a quote</a></div>
-            
+        <section
+          className="container-fluid d-flex flex-wrap p-0 justify-content-center"
+          style={{ marginTop: "30px" }}
+        >
+          <div
+            className="col-md-3"
+            style={{
+              padding: "20px",
+              color: "aliceblue",
+              background: "#3f79ad",
+            }}
+          >
+            <h5 style={{ color: "aliceblue" }}>
+              We help you engage with the reader
+            </h5>
+            <p>
+              You have the ideas, we have the writing expertise to express those
+              ideas in words. Our cohesive team of writers are equipped to
+              handle all your writing needs by relying on trustworthy sources
+              and meticulous research.
+            </p>
+            <div style={{ textAlign: "center" }}>
+              <a
+                href="/QuotationNew"
+                style={{
+                  padding: "9px",
+                  background: "aliceblue",
+                  borderRadius: "6px",
+                }}
+              >
+                Request a quote
+              </a>
+            </div>
           </div>
 
           <div className="col-md-6 d-flex justify-content-around align-items-center flex-wrap bg-light p-4">
@@ -340,7 +367,7 @@ export default function Home() {
           </table>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.secondaryButton}>
                 Start Your Writing Journey Today
               </button>
@@ -416,7 +443,7 @@ export default function Home() {
         </section>
 
         <div className={styles.buttonGroup}>
-          <a href="https://secure.manuscriptedit.com/quotation">
+          <a href="https://manuscriptedit.com/QuotationNew/">
             <button className={styles.secondaryButton}>
               Learn More About Medical Writing
             </button>

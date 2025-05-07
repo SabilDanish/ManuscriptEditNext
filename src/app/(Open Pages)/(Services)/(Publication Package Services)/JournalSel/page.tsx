@@ -74,21 +74,23 @@ export default function Home() {
       <section style={{ marginTop: "40px" }}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>
-          Find the Best-Suited Journals for your Manuscript- Expert Journal Selection Service for
-          Publication
+            Find the Best-Suited Journals for your Manuscript- Expert Journal
+            Selection Service for Publication
           </h1>
           <p className={styles.subtext}>
-          Maximize your manuscript’s acceptance rate with our comprehensive journal selection
-service. Our specialists evaluate impact factors, indexing, and journal scope to identify the
-best-suited journals for your manuscript. We ensure compliance with journal submission
-guidelines and formatting, helping you navigate the publication support process seamlessly.
+            Maximize your manuscript’s acceptance rate with our comprehensive
+            journal selection service. Our specialists evaluate impact factors,
+            indexing, and journal scope to identify the best-suited journals for
+            your manuscript. We ensure compliance with journal submission
+            guidelines and formatting, helping you navigate the publication
+            support process seamlessly.
           </p>
           <div className={styles.buttonGroup}>
             <button
               className={styles.primaryButton}
               onClick={() =>
                 (window.location.href =
-                  "https://secure.manuscriptedit.com/quotation")
+                  "https://manuscriptedit.com/QuotationNew/")
               }
             >
               Get Journal Selection Assistance
@@ -97,7 +99,7 @@ guidelines and formatting, helping you navigate the publication support process 
               className={styles.secondaryButton}
               onClick={() =>
                 (window.location.href =
-                  "https://secure.manuscriptedit.com/quotation")
+                  "https://manuscriptedit.com/QuotationNew/")
               }
             >
               Request a Free Consultation
@@ -111,45 +113,47 @@ guidelines and formatting, helping you navigate the publication support process 
       >
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>
-          Why Choose Our Journal Selection Services?
+            Why Choose Our Journal Selection Services?
           </h2>
           <p className={styles.subtext}>
             <strong>
-            Our expert journal selection report provides researchers with professional guidance to
-            submit their work to the most relevant and high-impact journals. Our key benefits include:
+              Our expert journal selection report provides researchers with
+              professional guidance to submit their work to the most relevant
+              and high-impact journals. Our key benefits include:
             </strong>
           </p>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ Expert Journal Selection Assistance- Recommendations from PhD specialists to
-              identify journals indexed in Scopus, Web of Science, PubMed, and DOAJ.
+              ✔ Expert Journal Selection Assistance- Recommendations from PhD
+              specialists to identify journals indexed in Scopus, Web of
+              Science, PubMed, and DOAJ.
             </li>
             <li>
-              ✔ Impact Factor &amp; Q1/Q2 Ranking Analysis- Selection of journals with high
-              acceptance rates and strong citations.
+              ✔ Impact Factor &amp; Q1/Q2 Ranking Analysis- Selection of
+              journals with high acceptance rates and strong citations.
             </li>
             <li>
-              ✔ Avoiding Predatory Journals- Ensuring journal legitimacy and adherence to ethical
-              publishing standards.
+              ✔ Avoiding Predatory Journals- Ensuring journal legitimacy and
+              adherence to ethical publishing standards.
             </li>
             <li>
-              ✔ Customized Journal Shortlisting- Tailored recommendations based on subject area,
-              manuscript type, and research scope.
+              ✔ Customized Journal Shortlisting- Tailored recommendations based
+              on subject area, manuscript type, and research scope.
             </li>
             <li>
-              ✔ Manuscript Formatting as per Journal Guidelines- Compliance with journal-
-              specific requirements before submission.
+              ✔ Manuscript Formatting as per Journal Guidelines- Compliance with
+              journal- specific requirements before submission.
             </li>
             <li>
-              ✔ Journal Submission Assistance- A step-by-step guide to ensure a smooth journal
-              submission process.
+              ✔ Journal Submission Assistance- A step-by-step guide to ensure a
+              smooth journal submission process.
             </li>
           </ul>
           <button
             className={styles.primaryButton}
             onClick={() =>
               (window.location.href =
-                "https://secure.manuscriptedit.com/quotation")
+                "https://manuscriptedit.com/QuotationNew/")
             }
           >
             Learn More About Our Journal Selection Process
@@ -213,8 +217,7 @@ guidelines and formatting, helping you navigate the publication support process 
           className={styles.primaryButton}
           style={{ marginTop: "40px" }}
           onClick={() =>
-            (window.location.href =
-              "https://secure.manuscriptedit.com/quotation")
+            (window.location.href = "https://manuscriptedit.com/QuotationNew/")
           }
         >
           Compare Journal Selection Services
@@ -293,7 +296,7 @@ guidelines and formatting, helping you navigate the publication support process 
         </div>
 
         <div className={styles.buttonGroup}>
-          <a href="https://secure.manuscriptedit.com/quotation">
+          <a href="https://manuscriptedit.com/QuotationNew/">
             <button className={styles.primaryButton}>
               Start Your Journal Selection Process
             </button>
@@ -342,7 +345,7 @@ guidelines and formatting, helping you navigate the publication support process 
 
         <div className="cta-container">
           <a
-            href="https://secure.manuscriptedit.com/quotation"
+            href="https://manuscriptedit.com/QuotationNew/"
             className="cta-button"
           >
             Request a Sample Journal Recommendation
@@ -374,7 +377,7 @@ guidelines and formatting, helping you navigate the publication support process 
 
         <div className="cta-container">
           <a
-            href="https://secure.manuscriptedit.com/quotation"
+            href="https://manuscriptedit.com/QuotationNew/"
             className="cta-button"
           >
             Check Pricing and Get a Quote

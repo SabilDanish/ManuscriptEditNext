@@ -78,7 +78,7 @@ export default function Home() {
               className={styles.primaryButton}
               onClick={() =>
                 (window.location.href =
-                  "https://secure.manuscriptedit.com/quotation")
+                  "https://manuscriptedit.com/QuotationNew/")
               }
             >
               Get Reviewer Response Assistance
@@ -87,7 +87,7 @@ export default function Home() {
               className={styles.secondaryButton}
               onClick={() =>
                 (window.location.href =
-                  "https://secure.manuscriptedit.com/quotation")
+                  "https://manuscriptedit.com/QuotationNew/")
               }
             >
               Request a Free Consultation
@@ -136,7 +136,7 @@ export default function Home() {
             style={{ marginTop: "1.5rem" }}
             onClick={() =>
               (window.location.href =
-                "https://secure.manuscriptedit.com/quotation")
+                "https://manuscriptedit.com/QuotationNew/")
             }
           >
             Learn More About Our Response to Reviewers Process
@@ -209,8 +209,7 @@ export default function Home() {
           className={styles.primaryButton}
           style={{ marginTop: "40px" }}
           onClick={() =>
-            (window.location.href =
-              "https://secure.manuscriptedit.com/quotation")
+            (window.location.href = "https://manuscriptedit.com/QuotationNew/")
           }
         >
           Compare Reviewer Response Services
@@ -291,7 +290,7 @@ export default function Home() {
         </div>
 
         <div className={styles.buttonGroup}>
-          <a href="https://secure.manuscriptedit.com/quotation">
+          <a href="https://manuscriptedit.com/QuotationNew/">
             <button className={styles.primaryButton}>
               Start Your Reviewer Response Process
             </button>
@@ -338,7 +337,7 @@ export default function Home() {
 
         <div className="cta-container">
           <a
-            href="https://secure.manuscriptedit.com/quotation"
+            href="https://manuscriptedit.com/QuotationNew/"
             className="cta-button"
           >
             Request a Sample Reviewer Response Letter
@@ -370,7 +369,7 @@ export default function Home() {
 
         <div className="cta-container">
           <a
-            href="https://secure.manuscriptedit.com/quotation"
+            href="https://manuscriptedit.com/QuotationNew/"
             className="cta-button"
           >
             Check Pricing and Get a Quote

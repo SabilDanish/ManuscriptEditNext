@@ -102,23 +102,26 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-            Professional Scientific &amp; Academic Poster Design – High-Impact Research Presentations
+              Professional Scientific &amp; Academic Poster Design – High-Impact
+              Research Presentations
             </h1>
             <p className={styles.subtext}>
-            Transform your research findings into a visually compelling scientific poster with our expert
-academic poster design services. We specialize in custom, high-resolution, and journal-
-compliant research posters tailored for conferences, symposiums, and professional
-presentations. We ensure your content is engaging, clear, and impactful, helping you
-effectively communicate your research.
+              Transform your research findings into a visually compelling
+              scientific poster with our expert academic poster design services.
+              We specialize in custom, high-resolution, and journal- compliant
+              research posters tailored for conferences, symposiums, and
+              professional presentations. We ensure your content is engaging,
+              clear, and impactful, helping you effectively communicate your
+              research.
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.primaryButton}>
                   Get a Free Poster Design Quote
                 </button>
               </a>
 
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.secondaryButton}>
                   Speak with a Design Expert
                 </button>
@@ -131,28 +134,33 @@ effectively communicate your research.
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-            Key Benefits of ManuscriptEdit’s Academic Poster Design Services:
+              Key Benefits of ManuscriptEdit’s Academic Poster Design Services:
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Custom Scientific &amp; Academic Poster Design – Perfect for STEM, medical, social
-                sciences, and business research presentations.
+                ✔ Custom Scientific &amp; Academic Poster Design – Perfect for
+                STEM, medical, social sciences, and business research
+                presentations.
               </li>
               <li>
-                ✔ High-Resolution &amp; Print-Ready Formats – Delivered in PDF, PPT, PNG, JPG, and AI
-                formats for seamless printing and digital sharing.
+                ✔ High-Resolution &amp; Print-Ready Formats – Delivered in PDF,
+                PPT, PNG, JPG, and AI formats for seamless printing and digital
+                sharing.
               </li>
               <li>
-                ✔ Engaging Visual Elements &amp; Graphics – Professionally designed charts, infographics,
-                and illustrations for a clear and attractive presentation.
+                ✔ Engaging Visual Elements &amp; Graphics – Professionally
+                designed charts, infographics, and illustrations for a clear and
+                attractive presentation.
               </li>
               <li>
-                ✔ Conference &amp; Journal Compliance – We ensure your research poster meets size, font,
-                and layout guidelines for academic conferences.
+                ✔ Conference &amp; Journal Compliance – We ensure your research
+                poster meets size, font, and layout guidelines for academic
+                conferences.
               </li>
               <li>
-                ✔ Fast Turnaround &amp; 100% Confidentiality – Secure, plagiarism-free, and timely poster
-                creation for urgent conference submissions.
+                ✔ Fast Turnaround &amp; 100% Confidentiality – Secure,
+                plagiarism-free, and timely poster creation for urgent
+                conference submissions.
               </li>
             </ul>
           </div>
@@ -244,7 +252,7 @@ effectively communicate your research.
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>
                 Start Your Poster Design Project
               </button>
@@ -314,7 +322,7 @@ effectively communicate your research.
 
             <div className="cta-container">
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className="cta-button"
               >
                 Check Pricing & Get a Quote

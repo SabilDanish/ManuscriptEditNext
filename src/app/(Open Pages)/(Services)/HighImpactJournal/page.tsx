@@ -139,22 +139,24 @@ export default function Home() {
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>
-            What is High-Impact Journal Publication Support?
+              What is High-Impact Journal Publication Support?
             </h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ Comprehensive Service – Ensures adherence to journal guidelines and submission
-                readiness
+                ✔ Comprehensive Service – Ensures adherence to journal
+                guidelines and submission readiness
               </li>
               <li>
-                ✔ Strategic Journal Selection – Identifies the best high-impact journals for your research
+                ✔ Strategic Journal Selection – Identifies the best high-impact
+                journals for your research
               </li>
               <li>
-                ✔ Pre-Submission Peer Review &amp; Formatting – Enhances manuscript structure and
-                readability
+                ✔ Pre-Submission Peer Review &amp; Formatting – Enhances
+                manuscript structure and readability
               </li>
               <li>
-                ✔ Reviewer Comment Response Assistance – Improves chances of publication success
+                ✔ Reviewer Comment Response Assistance – Improves chances of
+                publication success
               </li>
             </ul>
           </div>
@@ -163,32 +165,30 @@ export default function Home() {
             <h2 className={styles.heading}>Who Should Use This Service?</h2>
             <ul className={styles.benefitsList}>
               <li>
-                ✔ PhD &amp; Postdoctoral Researchers – Seeking Q1/Q2 journal publication
+                ✔ PhD &amp; Postdoctoral Researchers – Seeking Q1/Q2 journal
+                publication
               </li>
               <li>
-                ✔ Academic &amp; Scientific Professionals – Looking for impact-factor journal submissions
+                ✔ Academic &amp; Scientific Professionals – Looking for
+                impact-factor journal submissions
               </li>
               <li>
-                ✔ Medical &amp; Life Sciences Scholars – Requiring PubMed, SCI, and Scopus-indexed
-                journal support
+                ✔ Medical &amp; Life Sciences Scholars – Requiring PubMed, SCI,
+                and Scopus-indexed journal support
               </li>
             </ul>
           </div>
 
           <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>Key Benefits of Expert Journal Publication Support:</h2>
+            <h2 className={styles.heading}>
+              Key Benefits of Expert Journal Publication Support:
+            </h2>
             <ul className={styles.benefitsList}>
               <li>✔ Higher Acceptance Rates in High-Impact Journals</li>
-              <li>
-                ✔ Compliance with Formatting &amp; Submission Guidelines
-              </li>
-              <li>
-                ✔ Error-Free Manuscript to Avoid Rejections
-              </li>
+              <li>✔ Compliance with Formatting &amp; Submission Guidelines</li>
+              <li>✔ Error-Free Manuscript to Avoid Rejections</li>
               <li>✔ Expert Feedback &amp; Peer Review Before Submission</li>
-              <li>
-                ✔ Tailored Journal Selection for Maximum Research Impact.
-              </li>
+              <li>✔ Tailored Journal Selection for Maximum Research Impact.</li>
             </ul>
           </div>
 
@@ -350,7 +350,7 @@ export default function Home() {
 
             <div className="cta-container">
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className="cta-button"
               >
                 Check Pricing and Get a Quote

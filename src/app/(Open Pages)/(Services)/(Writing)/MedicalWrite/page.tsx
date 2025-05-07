@@ -19,7 +19,6 @@ import {
 import { useState } from "react";
 import ReviewArticle from "@/app/_Common/DependentTabSec/DependentTabSec";
 
-
 const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
@@ -120,13 +119,13 @@ export default function Home() {
               high-quality, evidence-based content.
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.primaryButton}>
                   Get Medical Writing Services
                 </button>
               </a>
 
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.secondaryButton}>
                   Request a Free Consultation
                 </button>
@@ -134,7 +133,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
 
         <ReviewArticle />
 
@@ -256,7 +254,7 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>
                 Start Your Medical Writing Project
               </button>
@@ -327,7 +325,7 @@ export default function Home() {
 
             <div className="cta-container">
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className="cta-button"
               >
                 Check Pricing & Get a Quote

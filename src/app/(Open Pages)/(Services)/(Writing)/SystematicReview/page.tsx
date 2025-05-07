@@ -94,22 +94,24 @@ export default function Home() {
         <section style={gap}>
           <div className={styles.textWrapper}>
             <h1 className={styles.heading}>
-            Professional Systematic Review Writing- Evidence-Based, structured &amp; Journal-Ready
+              Professional Systematic Review Writing- Evidence-Based, structured
+              &amp; Journal-Ready
             </h1>
             <p className={styles.subtext}>
-            Strengthen your research paper with a comprehensive systematic review. Our expert medical
-and scientific writers specialize in statistical analysis, conducting thorough literature analysis,
-data synthesis, and critical evaluation to ensure high-quality, journal-compliant systematic
-reviews.
+              Strengthen your research paper with a comprehensive systematic
+              review. Our expert medical and scientific writers specialize in
+              statistical analysis, conducting thorough literature analysis,
+              data synthesis, and critical evaluation to ensure high-quality,
+              journal-compliant systematic reviews.
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.primaryButton}>
                   Get a Systematic Review Written
                 </button>
               </a>
 
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.secondaryButton}>
                   Request a Free Consultation
                 </button>
@@ -197,7 +199,7 @@ reviews.
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>
                 Start Your Systematic Review Service Now
               </button>
@@ -274,7 +276,7 @@ reviews.
 
             <div className="cta-container">
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className="cta-button"
               >
                 Check Pricing & Get a Quote

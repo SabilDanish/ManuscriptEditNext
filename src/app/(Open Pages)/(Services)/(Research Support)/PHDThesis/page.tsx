@@ -104,10 +104,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link
-          rel="canonical"
-          href="https://manuscriptedit.com/PHDThesis/"
-        />
+        <link rel="canonical" href="https://manuscriptedit.com/PHDThesis/" />
       </Head>
       <div>
         <section style={gap}>
@@ -220,7 +217,7 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>
                 Start Your Phd Thesis Service Now
               </button>

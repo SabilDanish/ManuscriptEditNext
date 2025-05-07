@@ -57,20 +57,23 @@ export default function Home() {
       <section style={{ marginTop: "40px" }}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>
-          Hassle-Free Journal Submission Service- Submit Your Research with Confidence
+            Hassle-Free Journal Submission Service- Submit Your Research with
+            Confidence
           </h1>
           <p className={styles.subtext}>
-          Increase your chances of journal acceptance with our expert journal submission service. We
-handle journal selection and manuscript formatting according to the journal guidelines.
-Our cover letter drafting, reviewer responses, and submission process ensure that your
-research reaches the right audience with compliance and precision.
+            Increase your chances of journal acceptance with our expert journal
+            submission service. We handle journal selection and manuscript
+            formatting according to the journal guidelines. Our cover letter
+            drafting, reviewer responses, and submission process ensure that
+            your research reaches the right audience with compliance and
+            precision.
           </p>
           <div className={styles.buttonGroup}>
             <button
               className={styles.primaryButton}
               onClick={() =>
                 (window.location.href =
-                  "https://secure.manuscriptedit.com/quotation")
+                  "https://manuscriptedit.com/QuotationNew/")
               }
             >
               Get Journal Submission Assistance
@@ -79,7 +82,7 @@ research reaches the right audience with compliance and precision.
               className={styles.secondaryButton}
               onClick={() =>
                 (window.location.href =
-                  "https://secure.manuscriptedit.com/quotation")
+                  "https://manuscriptedit.com/QuotationNew/")
               }
             >
               Request a Free Consultation
@@ -90,42 +93,43 @@ research reaches the right audience with compliance and precision.
       <section className={styles.benefitsWrapper} style={{ marginTop: "40px" }}>
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>
-          Why Choose Our Journal Submission Service?
+            Why Choose Our Journal Submission Service?
           </h2>
           <p className={styles.subtext}>
             <strong>
-            ManuscriptEdit’s Journal Submission Services offers end-to-end assistance to streamline
-your journal submission process to the right journal and maximize your success. Our key
-benefits include:
+              ManuscriptEdit’s Journal Submission Services offers end-to-end
+              assistance to streamline your journal submission process to the
+              right journal and maximize your success. Our key benefits include:
             </strong>
           </p>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ Expert Journal Submission Assistance- Ensuring flawless submission with all
-              journal submission requirements met.
+              ✔ Expert Journal Submission Assistance- Ensuring flawless
+              submission with all journal submission requirements met.
             </li>
             <li>
-              ✔ Cover letter &amp; Manuscript Formatting- Professionally crafted cover letters and
-              journal-specific formatted manuscripts.
+              ✔ Cover letter &amp; Manuscript Formatting- Professionally crafted
+              cover letters and journal-specific formatted manuscripts.
             </li>
             <li>
-              ✔ Submission to High-Impact Journals- Including Scopus, Web of Science, PubMed,
-              Elsevier, Springer, Wiley &amp; more.
+              ✔ Submission to High-Impact Journals- Including Scopus, Web of
+              Science, PubMed, Elsevier, Springer, Wiley &amp; more.
             </li>
             <li>
-              ✔ Peer Review &amp; Reviewer Response Handling- Managing editorial communication
-              and reviewer comments.
+              ✔ Peer Review &amp; Reviewer Response Handling- Managing editorial
+              communication and reviewer comments.
             </li>
             <li>
-              ✔ Fast-Track Manuscript Submission- Increasing manuscript acceptance chances
-              with complete submission compliance for high-impact journals.
+              ✔ Fast-Track Manuscript Submission- Increasing manuscript
+              acceptance chances with complete submission compliance for
+              high-impact journals.
             </li>
           </ul>
           <button
             className={styles.primaryButton}
             onClick={() =>
               (window.location.href =
-                "https://secure.manuscriptedit.com/quotation")
+                "https://manuscriptedit.com/QuotationNew/")
             }
           >
             Learn More About Our Submission Process
@@ -197,8 +201,7 @@ benefits include:
           className={styles.primaryButton}
           style={{ marginTop: "40px" }}
           onClick={() =>
-            (window.location.href =
-              "https://secure.manuscriptedit.com/quotation")
+            (window.location.href = "https://manuscriptedit.com/QuotationNew/")
           }
         >
           Compare Journal Submission Services
@@ -276,7 +279,7 @@ benefits include:
         </div>
 
         <div className={styles.buttonGroup}>
-          <a href="https://secure.manuscriptedit.com/quotation">
+          <a href="https://manuscriptedit.com/QuotationNew/">
             <button className={styles.primaryButton}>
               Start Your Journal Submission Process
             </button>
@@ -322,7 +325,7 @@ benefits include:
 
         <div className="cta-container">
           <a
-            href="https://secure.manuscriptedit.com/quotation"
+            href="https://manuscriptedit.com/QuotationNew/"
             className="cta-button"
           >
             Request a Sample Submission Package
@@ -355,7 +358,7 @@ benefits include:
 
         <div className="cta-container">
           <a
-            href="https://secure.manuscriptedit.com/quotation"
+            href="https://manuscriptedit.com/QuotationNew/"
             className="cta-button"
           >
             Check Pricing and Get a Quote

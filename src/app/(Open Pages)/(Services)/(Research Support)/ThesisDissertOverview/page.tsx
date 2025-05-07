@@ -225,9 +225,9 @@ export default function Home() {
           </table>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.secondaryButton}>
-              Let Us Help You Achieve Thesis Success
+                Let Us Help You Achieve Thesis Success
               </button>
             </a>
           </div>

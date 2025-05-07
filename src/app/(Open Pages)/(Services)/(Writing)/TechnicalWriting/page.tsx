@@ -126,13 +126,13 @@ export default function Home() {
               for end users to understand.
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.primaryButton}>
                   Get Technical Writing Services
                 </button>
               </a>
 
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.secondaryButton}>
                   Request a Free Consultation
                 </button>
@@ -141,7 +141,7 @@ export default function Home() {
           </div>
         </section>
 
-        <DependantTabTech/>
+        <DependantTabTech />
 
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
@@ -256,7 +256,7 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>
                 Start Your Technical Writing Project
               </button>
@@ -328,7 +328,7 @@ export default function Home() {
 
             <div className="cta-container">
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className="cta-button"
               >
                 Check Pricing & Get a Quote
