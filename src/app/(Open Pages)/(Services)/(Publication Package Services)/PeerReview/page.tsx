@@ -357,15 +357,14 @@ export default function Home() {
           <div className="pricing-item">
             <h3>Starting Price</h3>
             <p className="pricing-text">
-              $0.08 per word (Basic Review) – $0.15 per word (Advanced Review &
-              Resubmission Support)
+            Price per Assignment in USD: $475
             </p>
           </div>
 
           <div className="delivery-item">
             <h3>Turnaround Time</h3>
             <p className="delivery-time">
-              3 Days – 10 Days (Depending on service type)
+            Turnaround Time in Days : 10
             </p>
           </div>
         </div>

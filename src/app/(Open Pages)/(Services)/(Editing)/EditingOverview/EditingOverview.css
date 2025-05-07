@@ -55,12 +55,12 @@
   background-color: #fff8f0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  height: 100vh;
+  height: 87vh;
 }
 
 .service-column h3 {
   text-align: center;
-  color: #b50000;
+  color: #070361;
   font-size: 20px;
   margin-bottom: 15px;
 }
@@ -99,8 +99,7 @@
 }
 
 .check-price {
-  background-color: #f4b400;
-  color: #000;
+  background-color: #2563eb;
   padding: 10px 20px;
   border: none;
   font-weight: bold;
@@ -109,9 +108,38 @@
   margin-top: 15px;
   position: absolute;
   bottom: 21px;
+  left: 21%;
 }
 
-.check-price:hover {
-  background-color: #e3a800;
+.check-price a {
+  color: aliceblue;
 }
 
+.service-column h3{
+  background-color:#d1d8eb;
+  padding: 10px;
+}
+
+@media(min-width:1200px){
+  .service-column{
+    height: 600px !important;
+  }
+}
+
+@media(max-width:1200px){
+  .service-column{
+    height: 500px !important;
+  }
+}
+
+.card-title{
+  background-color: #d1d8eb;
+  padding: 10px;
+  color: #070361;
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #111;
+}

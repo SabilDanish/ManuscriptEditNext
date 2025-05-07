@@ -20,6 +20,7 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import FormattingPricingTable from "@/app/_Common/JSRTable/JSRTable";
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -358,22 +359,23 @@ export default function Home() {
           Journal Selection Assistance – Pricing and Turnaround Time
         </h2>
 
-        <div className="pricing-details">
+        {/* <div className="pricing-details">
           <div className="pricing-item">
             <h3>Starting Price</h3>
             <p className="pricing-text">
-              $80 (Basic Journal Selection) – $250 (Advanced Impact Factor &
-              Submission Strategy Analysis)
+            Price per Assignment in USD : $350
             </p>
           </div>
 
           <div className="delivery-item">
             <h3>Turnaround Time</h3>
             <p className="delivery-time">
-              3 Days – 10 Days (Depending on service type)
+            Turnaround Time in Days : 5 
             </p>
           </div>
-        </div>
+        </div> */}
+
+        <FormattingPricingTable/>
 
         <div className="cta-container">
           <a

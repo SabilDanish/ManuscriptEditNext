@@ -116,9 +116,11 @@ export default function Home() {
               achieve publication success in leading journals.
             </p>
             <div className={styles.buttonGroup}>
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>
                 Get Substantive Editing Now
               </button>
+              </a>
               <button className={styles.secondaryButton}>
                 Request a Free Sample
               </button>

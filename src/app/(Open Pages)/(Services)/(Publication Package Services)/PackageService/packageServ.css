@@ -5,7 +5,7 @@ h2 {
   
   p {
     font-size: 16px;
-    color: #555;
+
     margin-bottom: 20px;
   }
   
@@ -23,5 +23,12 @@ h2 {
     border-radius: 20px;
     text-transform: uppercase;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-title{
+    background-color: #d1d8eb;
+    padding: 10px;
+    color: #070361;
+    border-radius: 5px;
   }
   

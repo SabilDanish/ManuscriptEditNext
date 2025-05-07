@@ -20,6 +20,7 @@ import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
+import HeroSec from "@/app/utils/LogosForIcons/9876334.jpg";
 
 import ServicesNavbar2 from "@/app/_Common/ServicesNavbar/ServicesNavbar2";
 
@@ -118,186 +119,236 @@ export default function Home() {
   return (
     <>
       {<Metadata metaData={metaData} />}
-      <section style={gap}>
-        <div className={styles.textWrapper}>
-          <h1 className={styles.heading}>
-            Expert Scientific Editing &amp; High-Quality Manuscript Services
-          </h1>
-          <p className={styles.subtext}>
-            We at ManuscriptEdit, your trusted partner in scientific editing and
-            academic editing, with our team of expert editors provide
-            high-quality editing services to refine your manuscript, ensuring it
-            meets top journal and publication standards. We specialize in
-            research editing, academic editing, proofreading, formatting, and
-            language support through English editing services to enhance clarity
-            and impact. Whether you’re preparing for journal submission or need
-            scientific and academic compliance, our editing services guarantee
-            high-quality precision and excellence.
-          </p>
+
+      <section className="pb-4">
+        <div className="container">
+          <div className="row justify-content-between align-items-center">
+            {/* Text Section */}
+            <div className="col-lg-8 mb-4 mb-lg-0">
+              <div className="p-3 bg-white  rounded-4">
+                <h2 className="fw-bold  mb-4">
+                  Expert Scientific Editing &amp; High-Quality Manuscript
+                  Services
+                </h2>
+                <p className="text-muted fs-5">
+                  We at <strong>ManuscriptEdit</strong>, your trusted partner in
+                  scientific and academic editing, provide high-quality services
+                  through our team of expert editors. We specialize in
+                  <strong>
+                    {" "}
+                    research editing, academic editing, proofreading, formatting
+                  </strong>
+                  , and <strong>English language support</strong> to ensure your
+                  manuscript meets top journal and publication standards.
+                  Whether for journal submission or academic compliance, our
+                  services guarantee clarity, precision, and excellence.
+                </p>
+              </div>
+            </div>
+
+            {/* Image Section */}
+            <div className="col-lg-4 text-center">
+              <img
+                src={HeroSec.src}
+                alt="Editing Services"
+                className="img-fluid rounded-4 shadow-sm"
+                style={{ maxWidth: "90%" }}
+              />
+            </div>
+          </div>
         </div>
       </section>
 
+      <div className="container editing-services-container">
+        <div className="service-column">
+          <h3>Proofreading</h3>
+          <ul>
+            <li>✔ Thorough reading of manuscript.</li>
+            <li>✔ Spotting all errors.</li>
+            <li>✔ Review capitalization and punctuation.</li>
+            <li>✔ Check for spelling, grammar, and typos.</li>
+            <li>✔ Remove redundancies.</li>
+            <li>✔ Rectify improper word usage.</li>
+          </ul>
+         
+          <button className="check-price">
+            <a href="/ProofReading">Check Price</a>
+          </button>
+        </div>
 
-      <div className="editing-services-container">
-      <div className="service-column">
-        <h3>Proofreading</h3>
-        <ul>
-          <li>✔ Thorough reading of manuscript.</li>
-          <li>✔ Spotting all errors.</li>
-          <li>✔ Review capitalization and punctuation.</li>
-          <li>✔ Check for spelling, grammar, and typos.</li>
-          <li>✔ Remove redundancies.</li>
-          <li>✔ Rectify improper word usage.</li>
-        </ul>
-        <div className="free-label">You receive for free</div>
-        <ul className="freebies">
-          <li>✔ Native English Editing Certificate</li>
-          <li>✔ 2 round of free re-editing</li>
-          <li>✔ 2 round of chat communication with Expert</li>
-        </ul>
-        <button className="check-price"><a href="/ProofReading">Check Price</a></button>
+        <div className="service-column">
+          <h3>Substantive Editing</h3>
+          <ul>
+            <li>
+              ✔ All included in <span className="link-text">Proofreading</span>
+            </li>
+            <li>
+              ✔ Verify scientific terminology, units, symbols, and variables.
+            </li>
+            <li>✔ Rephrase & revise sentences for clarity and word choice.</li>
+            <li>✔ Remove repetitions for logical presentation.</li>
+            <li>✔ Editing by Subject matter expert</li>
+          </ul>
+         
+          <button className="check-price">
+            <a href="/SubEditing">Check Price</a>
+          </button>
+        </div>
+
+        <div className="service-column">
+          <h3>Extensive Substantive Editing</h3>
+          <ul>
+            <li>
+              ✔ All included in{" "}
+              <span className="link-text">Substantive Editing</span>
+            </li>
+            <li>✔ Editing and review by two Subject matter expert</li>
+            <li>✔ Rephrase & revise paragraphs for clarity and word choice.</li>
+            <li>✔ Improve organization</li>
+            <li>✔ Adjust writing style for consistency and logic</li>
+            <li>✔ Fact-check statements for scientific accuracy.</li>
+          </ul>
+          
+          <button className="check-price">
+            <a href="/ExtensiveSubstantiveEditing">Check Price</a>
+          </button>
+        </div>
+
+        <div className="service-column">
+          <h3>Other Services</h3>
+          <ul className="other-services">
+            <li>✔ 90Language Translation</li>
+            <li>✔ Copy editing</li>
+            <li>✔ Thesis Editing</li>
+            <li>✔ Dissertation Editing</li>
+            <li>✔ Book Editing</li>
+            <li>✔ Manual Editing</li>
+            <li>✔ Indexing</li>
+            <li>✔ Cover Page Design</li>
+            <li>✔ Type Setting</li>
+            <li>✔ Image Quality Enhancement</li>
+            <li>✔ Image Recreation</li>
+            <li>✔ Camera Ready Formatting</li>
+            <li>✔ Journal Cover Page Design</li>
+          </ul>
+          <button className="check-price">
+            <a href="/QuotationNew">Check Price</a>
+          </button>
+        </div>
       </div>
 
-      <div className="service-column">
-        <h3>Substantive Editing</h3>
-        <ul>
-          <li>✔ All included in <span className="link-text">Proof reading</span></li>
-          <li>✔ Verify scientific terminology, units, symbols, and variables.</li>
-          <li>✔ Rephrase & revise sentences for clarity and word choice.</li>
-          <li>✔ Remove repetitions for logical presentation.</li>
-          <li>✔ Editing by Subject matter expert</li>
-        </ul>
-        <div className="free-label">You receive for free</div>
-        <ul className="freebies">
-          <li>✔ Target Journal Formatting</li>
-          <li>✔ Plagiarism report (Turnitin) 1 time</li>
-          <li>✔ Cover Letter Creation</li>
-          <li>✔ Unlimited round of re-editing</li>
-          <li>✔ Unlimited round of communication with Subject Experts</li>
-          <li>✔ Subject matter Expert dedicated to your manuscript</li>
-        </ul>
-        <button className="check-price"><a href="/SubEditing">Check Price</a></button>
-      </div>
-
-      <div className="service-column">
-        <h3>Extensive Substantive Editing</h3>
-        <ul>
-          <li>✔ All included in <span className="link-text">Substantive Editing</span></li>
-          <li>✔ Editing and review by two Subject matter expert</li>
-          <li>✔ Rephrase & revise paragraphs for clarity and word choice.</li>
-          <li>✔ Improve organization</li>
-          <li>✔ Adjust writing style for consistency and logic</li>
-          <li>✔ Fact-check statements for scientific accuracy.</li>
-        </ul>
-        <div className="free-label">You receive for free</div>
-        <ul className="freebies">
-          <li>✔ Pre Submission Peer review report</li>
-          <li>✔ Free response letter cross check</li>
-          <li>✔ Peer reviewers from Top Journals as reviewers for your manuscript.</li>
-          <li>✔ unlimited round of plagiarism check</li>
-        </ul>
-        <button className="check-price"><a href="/ExtensiveSubstantiveEditing">Check Price</a></button>
-      </div>
-
-      <div className="service-column">
-        <h3>Other Services</h3>
-        <ul className="other-services">
-          <li>✔ 90Language Translation</li>
-          <li>✔ Copy editing</li>
-          <li>✔ Thesis Editing</li>
-          <li>✔ Dissertation Editing</li>
-          <li>✔ Book Editing</li>
-          <li>✔ Manual Editing</li>
-          <li>✔ Indexing</li>
-          <li>✔ Cover Page Design</li>
-          <li>✔ Type Setting</li>
-          <li>✔ Image Quality Enhancement</li>
-          <li>✔ Image Recreation</li>
-          <li>✔ Camera Ready Formatting</li>
-          <li>✔ Journal Cover Page Design</li>
-        </ul>
-        <button className="check-price"><a href="/QuotationNew">Check Price</a></button>
-      </div>
-    </div>
-
-      <section className={styles.benefitsWrapper}>
-        <div className={styles.benefitsBox}>
-          <h2 className={styles.heading}>
+      <section className="py-5 bg-light">
+        <div className="container">
+          <h2 className="text-center mb-5">
             Why Choose ManuscriptEdit for Editing Services?
           </h2>
 
-          <section className={styles.benefitsWrapper}>
-            <h4>Tailored Editing Services for every Manuscript</h4>
-            <ul className={styles.benefitsList}>
-              <li>
-                ✔ Our editing services cover everything from proofreading to
-                advanced scientific editing.
-              </li>
-              <li>
-                ✔ Customized solutions to meet the journal and publication
-                guidelines for academic and research success.
-              </li>
-            </ul>
-          </section>
+          <div className="row">
+            {/* 1st Benefit */}
+            <div className="col-lg-6 mb-5">
+              <div className="card h-100 shadow-sm border-0 p-4 ">
+                <div className="card-body">
+                  <h3 className="card-title">
+                    Tailored Editing Services for Every Manuscript
+                  </h3>
+                  <ul className="list-unstyled mt-3">
+                    <li>
+                      ✔ Our editing services cover everything from proofreading
+                      to advanced scientific editing.
+                    </li>
+                    <li>
+                      ✔ Customized solutions to meet the journal and publication
+                      guidelines for academic and research success.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-          <section className={styles.benefitsWrapper}>
-            <h4>Ethical and Quality driven Scientific Editing</h4>
-            <ul className={styles.benefitsList}>
-              <li>
-                ✔ Expert editors ensure high-quality manual editing for academic
-                and research integrity.
-              </li>
-              <li>
-                ✔ Full compliance with publication ethics, confidentiality and
-                journal standards.
-              </li>
-            </ul>
-          </section>
+            {/* 2nd Benefit */}
+            <div className="col-lg-6 mb-5">
+              <div className="card h-100 shadow-sm border-0 p-4">
+                <div className="card-body">
+                  <h3 className="card-title">
+                    Ethical and Quality-driven Scientific Editing
+                  </h3>
+                  <ul className="list-unstyled mt-3">
+                    <li>
+                      ✔ Expert editors ensure high-quality manual editing for
+                      academic and research integrity.
+                    </li>
+                    <li>
+                      ✔ Full compliance with publication ethics, confidentiality
+                      and journal standards.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-          <section className={styles.benefitsWrapper}>
-            <h4>Fast Turnaround with High-Quality Editing Results</h4>
-            <ul className={styles.benefitsList}>
-              <li>
-                ✔ Timely submission of manuscripts with quality checks to meet
-                journal standards.
-              </li>
-              <li>
-                ✔ Dedicated English editing services to enhance clarity,
-                language, and impact.
-              </li>
-            </ul>
-          </section>
+            {/* 3rd Benefit */}
+            <div className="col-lg-6">
+              <div className="card h-100 shadow-sm border-0 p-4">
+                <div className="card-body">
+                  <h3 className="card-title">
+                    Fast Turnaround with High-Quality Editing Results
+                  </h3>
+                  <ul className="list-unstyled mt-3">
+                    <li>
+                      ✔ Timely submission of manuscripts with quality checks to
+                      meet journal standards.
+                    </li>
+                    <li>
+                      ✔ Dedicated English editing services to enhance clarity,
+                      language, and impact.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-          <section className={styles.benefitsWrapper}>
-            <h4>Global Reach with Proven Editing Expertise</h4>
-            <ul className={styles.benefitsList}>
-              <li>
-                ✔ Trusted by researchers and institutions in over 100+
-                countries.
-              </li>
-              <li>
-                ✔ A proven track record of helping authors publish in
-                high-impact journals.
-              </li>
-            </ul>
-          </section>
+            {/* 4th Benefit */}
+            <div className="col-lg-6">
+              <div className="card h-100 shadow-sm border-0 p-4">
+                <div className="card-body">
+                  <h3 className="card-title">
+                    Global Reach with Proven Editing Expertise
+                  </h3>
+                  <ul className="list-unstyled mt-3">
+                    <li>
+                      ✔ Trusted by researchers and institutions in over 100+
+                      countries.
+                    </li>
+                    <li>
+                      ✔ A proven track record of helping authors publish in
+                      high-impact journals.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <section className={styles.benefitsWrapper}>
-            <h4>Expert Support for all Authors</h4>
-            <ul className={styles.benefitsList}>
-              <li>
-                Our editing services cater to a diverse range of authors,
-                including first-time researchers, experienced scholars, and
-                academic institutions seeking high-quality manuscript
-                improvements. Whether you need scientific editing, proofreading,
-                or formatting for journal submission, our expert editors ensure
-                publication-ready content that meets the highest quality
-                standards. We provide comprehensive support to enhance language
-                clarity, maintain compliance with journal guidelines, and boost
-                your chances for research publication success.
-              </li>
-            </ul>
-          </section>
+          {/* Final Benefit (full width) */}
+          <div className="mt-5">
+            <div className="card shadow-sm border-0">
+              <div className="card-body">
+                <h3 className="card-title">Expert Support for All Authors</h3>
+                <p className="mt-3 mb-0">
+                  Our editing services cater to a diverse range of authors,
+                  including first-time researchers, experienced scholars, and
+                  academic institutions seeking high-quality manuscript
+                  improvements. Whether you need scientific editing,
+                  proofreading, or formatting for journal submission, our expert
+                  editors ensure publication-ready content that meets the
+                  highest quality standards. We provide comprehensive support to
+                  enhance language clarity, maintain compliance with journal
+                  guidelines, and boost your chances for research publication
+                  success.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -330,83 +381,105 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.benefitsWrapper}>
-        <div className={styles.benefitsBox}>
-          <h2 className={styles.heading}>Ensuring High-Quality Editing Services for Research Publication</h2>
+      <section className="py-5 bg-light">
+        <div className="container">
+          <h2 className="text-center mb-5">
+            Ensuring High-Quality Editing Services for Research Publication
+          </h2>
 
-          <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
-          Rigorous Multi-Layered Editing Process for Manuscripts
-          </h4>
-          <ul className={styles.benefitsList}>
-            <li>
-              ✔ Every manuscript undergoes an initial review by our expert editors in academic and
-              scientific editing.
-            </li>
-            <li>
-              ✔ Multiple rounds of checks improve quality, language, formatting, and clarity to meet
-              journal and publication standards.
-            </li>
-            <li>
-              ✔ Proofreading ensures a polished, error-free and publication-ready final manuscript.
-            </li>
-          </ul>
-        </div>
-      </section>
+          <div className="row g-4">
+            <div className="col-lg-6 mb-4">
+              <div className="card h-100 shadow-sm border-0 p-4">
+                <div className="card-body">
+                  <h3 className="card-title mb-4">
+                    Rigorous Multi-Layered Editing Process for Manuscripts
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Every manuscript undergoes an initial review by our
+                      expert editors in academic and scientific editing.
+                    </li>
+                    <li>
+                      ✔ Multiple rounds of checks improve quality, language,
+                      formatting, and clarity to meet journal and publication
+                      standards.
+                    </li>
+                    <li>
+                      ✔ Proofreading ensures a polished, error-free and
+                      publication-ready final manuscript.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-      <section className={styles.benefitsWrapper}>
-        <div className={styles.benefitsBox}>
-          <h4 style={{ marginBottom: "30px" }}>
-          Compliance with International Journal Standards
-          </h4>
-          <ul className={styles.benefitsList}>
-            <li>
-              ✔ Alignment with APA, MLA, IEEE, and other formatting guidelines for manuscript
-              submission.
-            </li>
-            <li>
-              ✔ Editing services tailored for journal-specific compliance to enhance publication
-              acceptance rates.
-            </li>
-          </ul>
-        </div>
-      </section>
+            {/* 2. Compliance with International Journal Standards */}
+            <div className="col-lg-6 mb-4">
+              <div className="card h-100 shadow-sm border-0 p-4">
+                <div className="card-body">
+                  <h3 className="card-title mb-4">
+                    Compliance with International Journal Standards
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Alignment with APA, MLA, IEEE, and other formatting
+                      guidelines for manuscript submission.
+                    </li>
+                    <li>
+                      ✔ Editing services tailored for journal-specific
+                      compliance to enhance publication acceptance rates.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-      <section className={styles.benefitsWrapper}>
-        <div className={styles.benefitsBox}>
-          <h4 style={{ marginBottom: "30px" }}>
-            {" "}
-            Collaborative and Transparent Editing Approach
-          </h4>
-          <ul className={styles.benefitsList}>
-            <li>
-              ✔ Authors receive detailed feedback on structure, language, and content improvement.
-            </li>
-            <li>
-              ✔ Direct support from expert editors ensures clarity and alignment with author and
-              journal objectives.
-            </li>
-          </ul>
-        </div>
-      </section>
+            {/* 3. Collaborative and Transparent Editing Approach */}
+            <div className="col-lg-6">
+              <div className="card h-100 shadow-sm border-0 p-4">
+                <div className="card-body">
+                  <h3 className="card-title mb-4">
+                    Collaborative and Transparent Editing Approach
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Authors receive detailed feedback on structure,
+                      language, and content improvement.
+                    </li>
+                    <li>
+                      ✔ Direct support from expert editors ensures clarity and
+                      alignment with author and journal objectives.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-      <section className={styles.benefitsWrapper}>
-        <div className={styles.benefitsBox}>
-          <h4 style={{ marginBottom: "30px" }}>
-            {" "}
-            Who Benefits from our Editing Services?
-          </h4>
-          <ul className={styles.benefitsList}>
-            <li>
-              ✔ First-Time Authors: Guidance for navigating editing and publication challenges.
-            </li>
-            <li>
-              ✔ Experienced Researchers: Advanced scientific editing for high-impact journal
-              submission.
-            </li>
-            <li>
-              ✔ Institutions and Universities: Bulk editing services for faculty and students.
-            </li>
-          </ul>
+            {/* 4. Who Benefits from our Editing Services? */}
+            <div className="col-lg-6">
+              <div className="card h-100 shadow-sm border-0 p-4">
+                <div className="card-body">
+                  <h3 className="card-title mb-4">
+                    Who Benefits from our Editing Services?
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ First-Time Authors: Guidance for navigating editing and
+                      publication challenges.
+                    </li>
+                    <li>
+                      ✔ Experienced Researchers: Advanced scientific editing for
+                      high-impact journal submission.
+                    </li>
+                    <li>
+                      ✔ Institutions and Universities: Bulk editing services for
+                      faculty and students.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

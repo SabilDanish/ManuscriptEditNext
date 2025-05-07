@@ -183,13 +183,13 @@ export default function Home() {
 
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
-          <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>
+          <div className="benefits-box">
+            <h2 className="benefits-heading">
               What is Extensive Substantive Editing?
             </h2>
-            <p className={styles.subtext}>
+            <p className="benefits-subtext">
               Extensive substantive editing is a professional editing service
-              designed to refine your manuscript&#39;s language, formatting, and
+              designed to refine your manuscript's language, formatting, and
               structure. Our scientific and academic editors improve clarity,
               coherence, and readability to meet journal submission and
               publication requirements.
