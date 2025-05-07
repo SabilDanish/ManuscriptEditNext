@@ -151,7 +151,7 @@ export default function Process() {
 
           <div className="cta-container">
             <a
-              href="https://secure.manuscriptedit.com/quotation"
+              href="https://manuscriptedit.com/QuotationNew/"
               className="editing-overview-button-unique"
             >
               Check Pricing and Get a Quote

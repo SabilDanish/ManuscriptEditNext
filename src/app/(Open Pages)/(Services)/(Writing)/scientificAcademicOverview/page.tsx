@@ -10,6 +10,7 @@ import rewritingIcon from "@/app/utils/LogosForIcons/rewrite.png";
 import scientificIcon from "@/app/utils/LogosForIcons/scientific.png";
 import technicalIcon from "@/app/utils/LogosForIcons/technical.png";
 import "@/app/(Open Pages)/(Services)/(Writing)/scientificAcademicOverview/Scientific.css";
+import ScientificImg from "@/app/utils/LogosForIcons/Scientific Academic.jpg"
 
 import {
   faFileUpload,
@@ -20,6 +21,7 @@ import {
 import Link from "next/link";
 
 export default function Home() {
+
   const steps = [
     {
       stepss: "Step 1 ➔",
@@ -104,30 +106,79 @@ export default function Home() {
   return (
     <>
       <div style={{ marginBottom: "50px" }}>
-        <section style={gap}>
-          <div className={styles.textWrapper}>
-            <h1 className={styles.heading}>
-              Professional Writing Assistance for Academic, Scientific, and
-              Medical Research
-            </h1>
-            <p className={styles.subtext}>
-              At ManuscriptEdit, we provide top-tier Research Writing Assistance
-              Services tailored to meet the needs of researchers, scholars, and
-              professionals. Our expert support ensures that your manuscripts,
-              research papers, and academic writing are clear, impactful, and
-              publication-ready. With a team of research experts specializing in
-              diverse disciplines, we help you navigate the complexities of
-              scholarly publishing with confidence.
-            </p>
+        <section>
+          <div className="container">
+            <div className="row justify-content-between align-items-center">
+              {/* Text Section */}
+              <div className="col-lg-8 mb-4 mb-lg-0">
+                <div className="p-4 bg-white rounded-4 ">
+                  <h2 className="fw-bold mb-3">
+                    Professional Writing Assistance for Academic, Scientific,
+                    and Medical Research
+                  </h2>
+                  <p className="text-muted fs-5">
+                    At <strong>ManuscriptEdit</strong>, we provide top-tier
+                    Research Writing Assistance Services tailored to meet the
+                    needs of researchers, scholars, and professionals. Our
+                    expert support ensures that your manuscripts, research
+                    papers, and academic writing are clear, impactful, and
+                    publication-ready. With a team of research experts
+                    specializing in diverse disciplines, we help you navigate
+                    the complexities of scholarly publishing with confidence.
+                  </p>
+                </div>
+              </div>
+
+              {/* Optional Image Section */}
+              <div className="col-lg-4 text-center">
+                <img
+                  src={ScientificImg.src}
+                  alt="Writing Assistance"
+                  className="img-fluid rounded-4 shadow-sm"
+                  style={{ maxWidth: "90%" }}
+                />
+              </div>
+            </div>
           </div>
         </section>
 
-        <section className="container-fluid d-flex flex-wrap p-0 justify-content-center" style={{marginTop:"30px"}}>
-          <div className="col-md-3" style={{padding:"20px", color:"aliceblue" , background:"#3f79ad"}}>
-            <h5 style={{color:"aliceblue"}}>We help you engage with the reader</h5>
-            <p>You have the ideas, we have the writing expertise to express those ideas in words. Our cohesive team of writers are equipped to handle all your writing needs by relying on trustworthy sources and meticulous research.</p>
-            <div style={{textAlign:"center"}}><a href="/QuotationNew" style={{padding:"9px",background:"aliceblue",borderRadius:"6px"}}>Request a quote</a></div>
-            
+
+
+        
+
+        <section
+          className="container-fluid d-flex flex-wrap p-0 justify-content-center"
+          style={{ marginTop: "30px" }}
+        >
+          <div
+            className="col-md-3"
+            style={{
+              padding: "20px",
+              color: "aliceblue",
+              background: "#3f79ad",
+            }}
+          >
+            <h5 style={{ color: "aliceblue" }}>
+              We help you engage with the reader
+            </h5>
+            <p>
+              You have the ideas, we have the writing expertise to express those
+              ideas in words. Our cohesive team of writers are equipped to
+              handle all your writing needs by relying on trustworthy sources
+              and meticulous research.
+            </p>
+            <div style={{ textAlign: "center" }}>
+              <a
+                href="/QuotationNew"
+                style={{
+                  padding: "9px",
+                  background: "aliceblue",
+                  borderRadius: "6px",
+                }}
+              >
+                Request a quote
+              </a>
+            </div>
           </div>
 
           <div className="col-md-6 d-flex justify-content-around align-items-center flex-wrap bg-light p-4">
@@ -198,76 +249,97 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.benefitsWrapper}>
-          <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>
+        <section className="py-5 bg-light">
+          <div className="container">
+            <h2 className="text-center mb-5">
               Why Choose ManuscriptEdit for Academic, Scientific, and Medical
               Writing?
             </h2>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Expert Support Across Disciplines</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Our expert writers hold advanced qualifications (PhD,
-                  Master’s) and domain-specific expertise.
-                </li>
-                <li>
-                  ✔ High-quality academic writing support across life sciences,
-                  STEM, clinical research, humanities, and social sciences.
-                </li>
-              </ul>
-            </section>
+            <div className="row g-4">
+              {/* Expert Support Across Disciplines */}
+              <div className="col-lg-6 mb-4 mb-4">
+                <div className="card  h-100 border-0 shadow-sm p-4">
+                  <h3 className="mb-4 card-title ">
+                    Expert Support Across Disciplines
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Our expert writers hold advanced qualifications (PhD,
+                      Master’s) and domain-specific expertise.
+                    </li>
+                    <li>
+                      ✔ High-quality academic writing support across life
+                      sciences, STEM, clinical research, humanities, and social
+                      sciences.
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Comprehensive Writing Assistance Services</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Specialized academic writing assistance services, including
-                  thesis writing solutions, manuscript writing assistance,
-                  grants, technical documents, clinical study reports,
-                  regulatory submissions, and research paper writing assistance.
-                </li>
-                <li>
-                  ✔ Our expertise services extend to systematic reviews,
-                  meta-analyses, and literature reviews.
-                </li>
-              </ul>
-            </section>
+              {/* Comprehensive Writing Assistance Services */}
+              <div className="col-lg-6 mb-4 mb-4">
+                <div className="card h-100 border-0 shadow-sm p-4">
+                  <h3 className="mb-4 card-title">
+                    Comprehensive Writing Assistance Services
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Specialized academic writing assistance including thesis
+                      writing, manuscript support, grants, technical documents,
+                      clinical study reports, regulatory submissions, and
+                      research papers.
+                    </li>
+                    <li>
+                      ✔ Expertise in systematic reviews, meta-analyses, and
+                      literature reviews.
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Journal Publication Support & Editing Services</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Our writing support ensures compliance with journal
-                  guidelines for high-impact journals, including Scopus, Web of
-                  Science, and PubMed.
-                </li>
-                <li>
-                  ✔ Refine language, structure, and clarity to enhance journal
-                  publication acceptance rates.
-                </li>
-                <li>
-                  ✔ Tailored journal publication support to help you meet
-                  rigorous submission standards.
-                </li>
-              </ul>
-            </section>
+              {/* Journal Publication Support */}
+              <div className="col-lg-6 mb-4 mb-4">
+                <div className="card h-100 border-0 shadow-sm p-4">
+                  <h3 className="mb-4 card-title">
+                    Journal Publication Support & Editing Services
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Writing support ensures compliance with journal
+                      guidelines for high-impact journals like Scopus, Web of
+                      Science, and PubMed.
+                    </li>
+                    <li>
+                      ✔ Refine language, structure, and clarity to enhance
+                      journal acceptance rates.
+                    </li>
+                    <li>
+                      ✔ Tailored support to meet rigorous submission standards.
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Ethical Research Practices & Originality</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Guaranteed 100% plagiarism-free content while adhering to
-                  the highest ethical research standards.
-                </li>
-                <li>
-                  ✔ Your research remains confidential, ensuring secure handling
-                  of sensitive scientific publications and medical writing
-                  assistance services.
-                </li>
-              </ul>
-            </section>
+              {/* Ethical Research Practices */}
+              <div className="col-lg-6 mb-4 mb-4">
+                <div className="card h-100 border-0 shadow-sm p-4">
+                  <h3 className="mb-4 card-title">
+                    Ethical Research Practices & Originality
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Guaranteed 100% plagiarism-free content with strict
+                      adherence to ethical standards.
+                    </li>
+                    <li>
+                      ✔ Confidential handling of sensitive research and medical
+                      writing content.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -340,7 +412,7 @@ export default function Home() {
           </table>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.secondaryButton}>
                 Start Your Writing Journey Today
               </button>
@@ -348,133 +420,161 @@ export default function Home() {
           </div>
         </div>
 
-        <section className={styles.benefitsWrapper}>
-          <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>
+        <section className="py-5 bg-white">
+          <div className="container">
+            <h2 className="text-center mb-5">
               Dedicated Medical Writing Services
             </h2>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Clinical Research & Medical Writing Assistance</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Clinical trial protocols, investigator brochures, and
-                  clinical study reports (CSRs), focusing on accuracy and
-                  compliance.
-                </li>
-                <li>
-                  ✔ Preparing summary documents for regulatory compliance (FDA,
-                  EMA).
-                </li>
-              </ul>
-            </section>
+            <div className="row g-4">
+              {/* Clinical Research */}
+              <div className="col-lg-6 mb-4">
+                <div className="card border-0 shadow-sm h-100 p-4">
+                  <h3 className="mb-3 card-title">
+                    Clinical Research & Medical Writing Assistance
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Clinical trial protocols, investigator brochures, and
+                      CSRs with focus on accuracy and compliance.
+                    </li>
+                    <li>
+                      ✔ Preparing summary documents for FDA and EMA regulatory
+                      compliance.
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Regulatory Writing & Submission Support</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Developing INDs, NDAs, and CTD submissions with meticulous
-                  attention to detail.
-                </li>
-                <li>
-                  ✔ Our medical writing assistance service ensures that all
-                  regulatory documents comply with international guidelines,
-                  including ICH-GCP, maximizing approval success.
-                </li>
-              </ul>
-            </section>
+              {/* Regulatory Writing */}
+              <div className="col-lg-6 mb-4">
+                <div className="card border-0 shadow-sm h-100 p-4">
+                  <h3 className="mb-3 card-title">
+                    Regulatory Writing & Submission Support
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ INDs, NDAs, and CTD submissions developed with
+                      meticulous attention to detail.
+                    </li>
+                    <li>
+                      ✔ Fully compliant with ICH-GCP and international
+                      guidelines to maximize approval success.
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Medical Communication & Education</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Crafting Continuing Medical Education (CME) materials for
-                  healthcare professionals.
-                </li>
-                <li>
-                  ✔ Creating engaging patient education resources, scientific
-                  posters, and other knowledge-sharing documents to enhance
-                  medical communication.
-                </li>
-              </ul>
-            </section>
+              {/* Medical Communication */}
+              <div className="col-lg-6 mb-4">
+                <div className="card border-0 shadow-sm h-100 p-4">
+                  <h3 className="mb-3 card-title">Medical Communication & Education</h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Creating CME materials for healthcare professionals.
+                    </li>
+                    <li>
+                      ✔ Engaging patient education resources, scientific
+                      posters, and educational documents.
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Literature Support & Research Paper Assistance</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Systematic literature reviews and narrative analyses for
-                  clinical publications.
-                </li>
-                <li>
-                  ✔ Preparing abstracts and conference presentations for
-                  high-impact journal publications.
-                </li>
-              </ul>
-            </section>
+              {/* Literature Support */}
+              <div className="col-lg-6 mb-4">
+                <div className="card border-0 shadow-sm h-100 p-4">
+                  <h3 className="mb-3 card-title">
+                    Literature Support & Research Paper Assistance
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Systematic literature reviews and narrative analyses for
+                      publications.
+                    </li>
+                    <li>
+                      ✔ Abstract and presentation preparation for high-impact
+                      journals and conferences.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-5">
+              <a
+                href="https://manuscriptedit.com/QuotationNew/"
+                className="btn btn-outline-primary btn-lg"
+              >
+                Learn More About Medical Writing
+              </a>
+            </div>
           </div>
         </section>
 
-        <div className={styles.buttonGroup}>
-          <a href="https://secure.manuscriptedit.com/quotation">
-            <button className={styles.secondaryButton}>
-              Learn More About Medical Writing
-            </button>
-          </a>
-        </div>
+        <section className="py-5 bg-light">
+          <div className="container">
+            <h2 className="text-center mb-5">
+              How We Ensure Quality in Writing
+            </h2>
 
-        <section className={styles.benefitsWrapper}>
-          <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>How We Ensure Quality in Writing</h2>
+            <div className="row g-4">
+              {/* Multi-Layered Review */}
+              <div className="col-lg-6 mb-4">
+                <div className="card border-0 shadow-sm h-100 p-4">
+                  <h3 className="mb-3 card-title">Multi-Layered Review Process</h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Expert-led writing and editing tailored to your target
+                      audience.
+                    </li>
+                    <li>
+                      ✔ Comprehensive quality checks to improve clarity,
+                      consistency, and journal impact.
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Multi-Layered Review Process</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Research experts provide expert-led writing and editing
-                  tailored to your target audience.
-                </li>
-                <li>
-                  ✔ Comprehensive quality checks to enhance clarity,
-                  consistency, and coherence, refining content for high-impact
-                  journals.
-                </li>
-              </ul>
-            </section>
+              {/* Global Compliance */}
+              <div className="col-lg-6 mb-4">
+                <div className="card border-0 shadow-sm h-100 p-4">
+                  <h3 className="mb-3 card-title">Compliance with Global Standards</h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Full compliance with global publication, research, and
+                      regulatory standards.
+                    </li>
+                    <li>
+                      ✔ Manuscript formatting and editing for both medical and
+                      academic needs.
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Compliance with Global Standards</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Our medical writing assistance service ensures full
-                  adherence to guidelines for journal publication, clinical
-                  research, and regulatory approvals.
-                </li>
-                <li>
-                  ✔ Expertise in academic writing assistance services, providing
-                  manuscript formatting and editing services for medical and
-                  academic needs.
-                </li>
-              </ul>
-            </section>
-
-            <section className={styles.benefitsWrapper}>
-              <h4>Personalized Support for Your Research Needs</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Writing assistance services that prioritize close
-                  collaboration with authors, ensuring that their objectives
-                  align with the final output.
-                </li>
-                <li>
-                  ✔ Our writing support includes detailed feedback to enhance
-                  content quality and research impact of the manuscript for
-                  high-impact journal publication.
-                </li>
-              </ul>
-            </section>
+              {/* Personalized Support */}
+              <div className="col-lg-6 mb-4">
+                <div className="card border-0 shadow-sm h-100 p-4">
+                  <h3 className="mb-3 card-title">
+                    Personalized Support for Your Research Needs
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Close collaboration to align writing with your research
+                      objectives.
+                    </li>
+                    <li>
+                      ✔ Detailed feedback to enhance quality and boost journal
+                      impact.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
+
         <section className={styles.benefitsWrapper}>
           <div className={styles.benefitsBox}>
             <h2 className={styles.heading}>

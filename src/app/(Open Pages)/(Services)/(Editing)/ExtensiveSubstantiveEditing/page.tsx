@@ -120,12 +120,12 @@ export default function Home() {
               and content clarity to maximize publication success.
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.primaryButton}>
                   Get Extensive Substantive Editing Now
                 </button>
               </a>
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.secondaryButton}>
                   Request a Free Sample
                 </button>
@@ -183,13 +183,13 @@ export default function Home() {
 
         {/* Proofreading Overview Section */}
         <section className={styles.benefitsWrapper}>
-          <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>
+          <div className="benefits-box">
+            <h2 className="benefits-heading">
               What is Extensive Substantive Editing?
             </h2>
-            <p className={styles.subtext}>
+            <p className="benefits-subtext">
               Extensive substantive editing is a professional editing service
-              designed to refine your manuscript&#39;s language, formatting, and
+              designed to refine your manuscript's language, formatting, and
               structure. Our scientific and academic editors improve clarity,
               coherence, and readability to meet journal submission and
               publication requirements.
@@ -309,7 +309,7 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>
                 Get Proofreading Now
               </button>
@@ -419,7 +419,7 @@ export default function Home() {
 
             <div className="cta-container">
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className="cta-button"
               >
                 Check Pricing and Get a Quote

@@ -70,7 +70,7 @@ research reaches the right audience with compliance and precision.
               className={styles.primaryButton}
               onClick={() =>
                 (window.location.href =
-                  "https://secure.manuscriptedit.com/quotation")
+                  "https://manuscriptedit.com/QuotationNew/")
               }
             >
               Get Journal Submission Assistance
@@ -79,7 +79,7 @@ research reaches the right audience with compliance and precision.
               className={styles.secondaryButton}
               onClick={() =>
                 (window.location.href =
-                  "https://secure.manuscriptedit.com/quotation")
+                  "https://manuscriptedit.com/QuotationNew/")
               }
             >
               Request a Free Consultation
@@ -125,7 +125,7 @@ benefits include:
             className={styles.primaryButton}
             onClick={() =>
               (window.location.href =
-                "https://secure.manuscriptedit.com/quotation")
+                "https://manuscriptedit.com/QuotationNew/")
             }
           >
             Learn More About Our Submission Process
@@ -198,7 +198,7 @@ benefits include:
           style={{ marginTop: "40px" }}
           onClick={() =>
             (window.location.href =
-              "https://secure.manuscriptedit.com/quotation")
+              "https://manuscriptedit.com/QuotationNew/")
           }
         >
           Compare Journal Submission Services
@@ -276,7 +276,7 @@ benefits include:
         </div>
 
         <div className={styles.buttonGroup}>
-          <a href="https://secure.manuscriptedit.com/quotation">
+          <a href="https://manuscriptedit.com/QuotationNew/">
             <button className={styles.primaryButton}>
               Start Your Journal Submission Process
             </button>
@@ -322,7 +322,7 @@ benefits include:
 
         <div className="cta-container">
           <a
-            href="https://secure.manuscriptedit.com/quotation"
+            href="https://manuscriptedit.com/QuotationNew/"
             className="cta-button"
           >
             Request a Sample Submission Package
@@ -355,7 +355,7 @@ benefits include:
 
         <div className="cta-container">
           <a
-            href="https://secure.manuscriptedit.com/quotation"
+            href="https://manuscriptedit.com/QuotationNew/"
             className="cta-button"
           >
             Check Pricing and Get a Quote

@@ -103,13 +103,13 @@ export default function ProofreadingServices() {
             submissions, helping you meet the publication standards.
           </p>
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               {" "}
               <button className={styles.primaryButton}>
                 Get Proofreading Now
               </button>
             </a>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.secondaryButton}>
                 Request a Free Sample
               </button>
@@ -266,7 +266,7 @@ export default function ProofreadingServices() {
         </div>
 
         <div className={styles.buttonGroup}>
-          <a href="https://secure.manuscriptedit.com/quotation">
+          <a href="https://manuscriptedit.com/QuotationNew/">
             <button className={styles.primaryButton}>
               Get Proofreading Now
             </button>
@@ -362,7 +362,7 @@ export default function ProofreadingServices() {
 
           <div className="cta-container">
             <a
-              href="https://secure.manuscriptedit.com/quotation"
+              href="https://manuscriptedit.com/QuotationNew/"
               className="cta-button"
             >
               Check Pricing and Get a Quote
@@ -415,7 +415,7 @@ export default function ProofreadingServices() {
               If your manuscript needs deeper clarity improvements, consider
               Copyediting or Substantive Editing.
             </p>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className="editing-overview-button-unique">
                 Compare All Services
               </button>

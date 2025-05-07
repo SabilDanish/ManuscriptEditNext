@@ -6,7 +6,7 @@ const nextConfig = {
         return [
           {
             source: '/abc',
-            destination: 'https://secure.manuscriptedit.com/quotation',
+            destination: 'https://manuscriptedit.com/QuotationNew/',
             permanent: false,
             basePath: false
           },

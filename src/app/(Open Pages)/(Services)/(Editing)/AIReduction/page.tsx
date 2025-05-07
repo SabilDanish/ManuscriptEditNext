@@ -104,13 +104,13 @@ expert AI content detection service. Maintain academic integrity and align with 
 submission standards to avoid retractions and ensure manuscript originality.
             </p>
             <div className={styles.buttonGroup}>
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.primaryButton}>
                   Remove AI Content Now
                 </button>
               </a>
 
-              <a href="https://secure.manuscriptedit.com/quotation">
+              <a href="https://manuscriptedit.com/QuotationNew/">
                 <button className={styles.secondaryButton}>
                   Request a Free Sample
                 </button>
@@ -306,7 +306,7 @@ failing to comply may lead to publication rejection or allegations of scientific
           </div>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.primaryButton}>Start Now</button>
             </a>
           </div>
@@ -363,7 +363,7 @@ failing to comply may lead to publication rejection or allegations of scientific
 
             <div className={styles.buttonGroup}>
               <a
-                href="https://secure.manuscriptedit.com/quotation"
+                href="https://manuscriptedit.com/QuotationNew/"
                 className={styles.primaryButton}
               >
                 Check Pricing and Get a Quote

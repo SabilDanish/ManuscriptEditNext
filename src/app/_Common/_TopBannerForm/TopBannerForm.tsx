@@ -45,7 +45,7 @@ const TopBannerForm = () => {
             </h5>
             <Link
               className="btn mt-12"
-              href={"https://secure.manuscriptedit.com/quotation"}
+              href={"https://manuscriptedit.com/QuotationNew/"}
               role="button"
               style={{
                 backgroundColor: "#151130",

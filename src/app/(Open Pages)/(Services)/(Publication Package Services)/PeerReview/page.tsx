@@ -79,21 +79,22 @@ export default function Home() {
       <section style={{ marginTop: "40px" }}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>
-          Expert Pre-Submission &amp; Peer Review Services – Strengthen Your Research Before Journal
-          Submission
+            Expert Pre-Submission &amp; Peer Review Services – Strengthen Your
+            Research Before Journal Submission
           </h1>
           <p className={styles.subtext}>
-          Maximize your chances of journal acceptance with our comprehensive manuscript
-evaluation and peer review services. Our expert reviewers provide objective technical
-reviews with suggestions for improvement to enhance your manuscript&#39;s clarity, originality,
-and journal compliance before submission.
+            Maximize your chances of journal acceptance with our comprehensive
+            manuscript evaluation and peer review services. Our expert reviewers
+            provide objective technical reviews with suggestions for improvement
+            to enhance your manuscript&#39;s clarity, originality, and journal
+            compliance before submission.
           </p>
           <div className={styles.buttonGroup}>
             <button
               className={styles.primaryButton}
               onClick={() =>
                 (window.location.href =
-                  "https://secure.manuscriptedit.com/quotation")
+                  "https://manuscriptedit.com/QuotationNew/")
               }
             >
               Get a Peer Review Now
@@ -102,7 +103,7 @@ and journal compliance before submission.
               className={styles.secondaryButton}
               onClick={() =>
                 (window.location.href =
-                  "https://secure.manuscriptedit.com/quotation")
+                  "https://manuscriptedit.com/QuotationNew/")
               }
             >
               Request a Free Consultation
@@ -113,45 +114,47 @@ and journal compliance before submission.
       <section className={styles.benefitsWrapper} style={{ marginTop: "40px" }}>
         <div className={styles.benefitsBox}>
           <h2 className={styles.heading}>
-          Why Choose Our Pre-Submission &amp; Peer Review Services?
+            Why Choose Our Pre-Submission &amp; Peer Review Services?
           </h2>
           <p className={styles.subtext}>
             <strong>
-            At ManuscriptEdit, our pre-submission peer review services ensure your manuscript is
-            optimized for successful journal submission. Our key benefits include:
+              At ManuscriptEdit, our pre-submission peer review services ensure
+              your manuscript is optimized for successful journal submission.
+              Our key benefits include:
             </strong>
           </p>
           <ul className={styles.benefitsList}>
             <li>
-              ✔ Subject Expert Review – PhD-level reviewers with editorial expertise in high-impact
-              journals.
+              ✔ Subject Expert Review – PhD-level reviewers with editorial
+              expertise in high-impact journals.
             </li>
             <li>
-              ✔ Detailed Manuscript Assessment by Subject Experts – Evaluating research clarity,
-              originality, argument coherence, and presentation quality.
+              ✔ Detailed Manuscript Assessment by Subject Experts – Evaluating
+              research clarity, originality, argument coherence, and
+              presentation quality.
             </li>
             <li>
-              ✔ Journal-Specific Compliance – Ensuring adherence to word limits, formatting, and
-              structural guidelines.
+              ✔ Journal-Specific Compliance – Ensuring adherence to word limits,
+              formatting, and structural guidelines.
             </li>
             <li>
-              ✔ Constructive Reviewer Feedback – In-depth suggestions to improve manuscript
-              quality prior to submission.
+              ✔ Constructive Reviewer Feedback – In-depth suggestions to improve
+              manuscript quality prior to submission.
             </li>
             <li>
-              ✔ Identify Technical Gaps Before Journal Submission – Addressing weak arguments,
-              missing data, and logical inconsistencies.
+              ✔ Identify Technical Gaps Before Journal Submission – Addressing
+              weak arguments, missing data, and logical inconsistencies.
             </li>
             <li>
-              ✔ Minimize Risk of Manuscript Rejection – Fixing common rejection reasons before
-              submission.
+              ✔ Minimize Risk of Manuscript Rejection – Fixing common rejection
+              reasons before submission.
             </li>
           </ul>
           <button
             className={styles.primaryButton}
             onClick={() =>
               (window.location.href =
-                "https://secure.manuscriptedit.com/quotation")
+                "https://manuscriptedit.com/QuotationNew/")
             }
           >
             Learn More About Our Review Process
@@ -214,7 +217,7 @@ and journal compliance before submission.
           style={{ marginTop: "40px" }}
           onClick={() =>
             (window.location.href =
-              "https://secure.manuscriptedit.com/quotation")
+              "https://manuscriptedit.com/QuotationNew/")
           }
         >
           Compare Review & Pre-Submission Services
@@ -293,7 +296,7 @@ and journal compliance before submission.
         </div>
 
         <div className={styles.buttonGroup}>
-          <a href="https://secure.manuscriptedit.com/quotation">
+          <a href="https://manuscriptedit.com/QuotationNew/">
             <button className={styles.primaryButton}>
               Start Your Peer Review Now
             </button>
@@ -338,7 +341,7 @@ and journal compliance before submission.
 
         <div className="cta-container">
           <a
-            href="https://secure.manuscriptedit.com/quotation"
+            href="https://manuscriptedit.com/QuotationNew/"
             className="cta-button"
           >
             Request a Sample Review Report
@@ -355,22 +358,21 @@ and journal compliance before submission.
           <div className="pricing-item">
             <h3>Starting Price</h3>
             <p className="pricing-text">
-              $0.08 per word (Basic Review) – $0.15 per word (Advanced Review &
-              Resubmission Support)
+            Price per Assignment in USD: $475
             </p>
           </div>
 
           <div className="delivery-item">
             <h3>Turnaround Time</h3>
             <p className="delivery-time">
-              3 Days – 10 Days (Depending on service type)
+            Turnaround Time in Days : 10
             </p>
           </div>
         </div>
 
         <div className="cta-container">
           <a
-            href="https://secure.manuscriptedit.com/quotation"
+            href="https://manuscriptedit.com/QuotationNew/"
             className="cta-button"
           >
             Check Pricing and Get a Quote

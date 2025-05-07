@@ -402,4 +402,15 @@
     color: #007bff;
   }
 
+  .card-title {
+    background-color: #d1d8eb;
+    padding: 10px;
+    color: #070361;
+    border-radius: 5px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #111;
+}
   

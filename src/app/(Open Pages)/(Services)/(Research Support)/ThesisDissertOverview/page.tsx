@@ -5,6 +5,7 @@ import styles from "@/app/_Common/Renovation/Renovation.module.css";
 import "@/app/_Common/Renovation/Renovation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@/app/_Common/Dropdown2/Dropdown2.css";
+import ThesisOverView from "@/app/utils/LogosForIcons/Thesis & Dissertation Service.jpg"
 
 import {
   faFileUpload,
@@ -99,71 +100,105 @@ export default function Home() {
   return (
     <>
       <div>
-        <section style={gap}>
-          <div className={styles.textWrapper}>
-            <p className={styles.subtext}>
-              At ManuscriptEdit, we are committed to providing high-quality
-              academic writing support, whether you need dissertation editing
-              services, thesis formatting, or research paper assistance. We
-              provide expert thesis and dissertation assistance services to help
-              researchers and students craft well-structured, high-quality
-              academic work. Our expert support ensures your thesis meets
-              university standards and aligns with academic integrity
-              principles.
-            </p>
+        <section>
+          <div className="container">
+            <div className="row justify-content-between align-items-center">
+              {/* Text Section */}
+              <div className="col-lg-8 mb-4 mb-lg-0">
+                <div className="p-4 bg-white rounded-4 ">
+                  <p className="text-muted fs-5">
+                    At <strong>ManuscriptEdit</strong>, we are committed to
+                    providing high-quality academic writing support, whether you
+                    need dissertation editing services, thesis formatting, or
+                    research paper assistance. We provide expert thesis and
+                    dissertation assistance services to help researchers and
+                    students craft well-structured, high-quality academic work.
+                    Our expert support ensures your thesis meets university
+                    standards and aligns with academic integrity principles.
+                  </p>
+                </div>
+              </div>
+
+              {/* Optional Image Section */}
+              <div className="col-lg-4 text-center">
+                <img
+                  src={ThesisOverView.src}
+                  alt="#"
+                  className="img-fluid rounded-4 rounded shadow-sm"
+                  style={{ maxWidth: "90%" }}
+                />
+              </div>
+            </div>
           </div>
         </section>
 
-        <section className={styles.benefitsWrapper}>
-          <div className={styles.benefitsBox}>
-            <h2 className={styles.heading}>
+        <section className="py-5 bg-light">
+          <div className="container">
+            <h2 className="text-center mb-5">
               Why Choose ManuscriptEdit for Thesis & Dissertation Services?
             </h2>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Expert Academic Assistance</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Work with highly qualified editors specializing in thesis
-                  formatting and dissertation editing services, ensuring your
-                  work meets institutional guidelines.
-                </li>
-                <li>
-                  ✔ Subject-specific experts provide academic writing assistance
-                  tailored to your research area, ensuring accuracy, clarity,
-                  and alignment with research objectives.
-                </li>
-              </ul>
-            </section>
+            <div className="row g-4">
+              {/* Expert Academic Assistance */}
+              <div className="col-lg-6 mb-4">
+                <div className="card h-100 border-0 shadow-sm p-4">
+                  <h3 className="mb-4 card-title">
+                    Expert Academic Assistance
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Work with highly qualified editors specializing in
+                      thesis formatting and dissertation editing services,
+                      ensuring your work meets institutional guidelines.
+                    </li>
+                    <li>
+                      ✔ Subject-specific experts provide academic writing
+                      assistance tailored to your research area, ensuring
+                      accuracy, clarity, and alignment with research objectives.
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Comprehensive Support from Start to Finish</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Thesis guidance at every stage, from research proposals to
-                  final submission.
-                </li>
-                <li>
-                  ✔ Manuscript editing services ensure proper formatting,
-                  structure, and clarity, meeting the specific requirements of
-                  universities and high-impact journals.
-                </li>
-              </ul>
-            </section>
+              {/* Comprehensive Support from Start to Finish */}
+              <div className="col-lg-6 mb-4">
+                <div className="card h-100 border-0 shadow-sm p-4">
+                  <h3 className="mb-4 card-title">
+                    Comprehensive Support from Start to Finish
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Thesis guidance at every stage, from research proposals
+                      to final submission.
+                    </li>
+                    <li>
+                      ✔ Manuscript editing services ensure proper formatting,
+                      structure, and clarity, meeting the specific requirements
+                      of universities and high-impact journals.
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <section className={styles.benefitsWrapper}>
-              <h4>Originality & Academic Integrity</h4>
-              <ul className={styles.benefitsList}>
-                <li>
-                  ✔ Plagiarism-free content in manuscripts through detailed
-                  originality checks.
-                </li>
-                <li>
-                  ✔ Writing assistance services include proper citation support,
-                  helping you adhere to ethical research practices.
-                </li>
-              </ul>
-            </section>
+              {/* Originality & Academic Integrity */}
+              <div className="col-lg-6 mb-4">
+                <div className="card h-100 border-0 shadow-sm p-4">
+                  <h3 className="mb-4 card-title">
+                    Originality & Academic Integrity
+                  </h3>
+                  <ul className="list-unstyled">
+                    <li>
+                      ✔ Plagiarism-free content in manuscripts through detailed
+                      originality checks.
+                    </li>
+                    <li>
+                      ✔ Writing assistance services include proper citation
+                      support, helping you adhere to ethical research practices.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -225,9 +260,9 @@ export default function Home() {
           </table>
 
           <div className={styles.buttonGroup}>
-            <a href="https://secure.manuscriptedit.com/quotation">
+            <a href="https://manuscriptedit.com/QuotationNew/">
               <button className={styles.secondaryButton}>
-              Let Us Help You Achieve Thesis Success
+                Let Us Help You Achieve Thesis Success
               </button>
             </a>
           </div>
