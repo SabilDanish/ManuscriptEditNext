@@ -177,7 +177,7 @@ export default function Home() {
               </p>
               <p>
                 If you have any queries about our services, please contact us by
-                phone, fax or e-mail to
+                phone, fax or e-mail to &nbsp;
                 <a href="">support@manuscriptedit.com</a> .
               </p>
             </div>

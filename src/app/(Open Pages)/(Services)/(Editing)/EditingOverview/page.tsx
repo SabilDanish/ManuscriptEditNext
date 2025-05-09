@@ -118,7 +118,15 @@ export default function Home() {
 
   return (
     <>
-      {<Metadata metaData={metaData} />}
+      {/* {<Metadata metaData={metaData} />} */}
+      <meta
+        name="title"
+        content="Scientific Manuscript Editing Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Comprehensive scientific manuscript editing to polish language, structure, and clarity."
+      />
 
       <section className="pb-4">
         <div className="container">
@@ -374,7 +382,9 @@ export default function Home() {
           </table>
 
           <div className={styles.buttonGroup}>
-            <button className={styles.primaryButton}>
+            <button className={styles.primaryButton} onClick={() =>
+                (window.location.href = "/QuotationNew")
+              }>
               Explore All Editing Services
             </button>
           </div>

@@ -104,7 +104,16 @@ export default function Home() {
   };
   return (
     <>
-      {<Metadata metaData={metaData} />}
+      {/* {<Metadata metaData={metaData} />} */}
+
+      <meta
+        name="title"
+        content="Academic Copyediting Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Expert academic copyediting for grammar, consistency, and journal style compliance."
+      />
 
       <div>
         <section style={gap}>

@@ -17,6 +17,7 @@ import {
   faRedo,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import FormattingPricingTable from "@/app/_Common/JSRTable/JSRTable";
 
 export default function Home() {
   const steps = [
@@ -286,7 +287,7 @@ export default function Home() {
               Pricing and Turnaround Time
             </h2>
 
-            <div className="pricing-details">
+            {/* <div className="pricing-details">
               <div className="pricing-item">
                 <h3>Starting Price</h3>
                 <p className="pricing-text">
@@ -307,8 +308,8 @@ export default function Home() {
                   3 Days – 7 Days (Depending on complexity)
                 </p>
               </div>
-            </div>
-
+            </div>  */}
+ <FormattingPricingTable/>
             <div className="cta-container">
               <a
                 href="https://manuscriptedit.com/QuotationNew/"

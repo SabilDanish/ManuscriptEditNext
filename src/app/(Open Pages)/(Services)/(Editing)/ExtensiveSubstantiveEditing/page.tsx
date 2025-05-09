@@ -102,8 +102,17 @@ export default function Home() {
   };
   return (
     <>
-      {<Metadata metaData={metaData} />}
+      {/* {<Metadata metaData={metaData} />} */}
       {/* {breadcrum("Services / English Editing", "Extensive Substantive Editing")} */}
+
+      <meta
+        name="title"
+        content="Comprehensive Substantive Editing | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Full-scale substantive editing for logical flow, methodology accuracy, and impact."
+      />
 
       <div>
         <section style={gap}>

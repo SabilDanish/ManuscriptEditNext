@@ -19,8 +19,16 @@ export default function Home() {
   let metaData = newData[pathName];
   return (
     <>
-      {<Metadata metaData={metaData} />}
+      {/* {<Metadata metaData={metaData} />} */}
 
+      <meta
+        name="title"
+        content="Scientific Proofreading Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Accurate scientific proofreading to eliminate errors and improve readability."
+      />
      
 
       <Renovation />

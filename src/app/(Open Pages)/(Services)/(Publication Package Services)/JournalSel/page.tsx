@@ -91,7 +91,7 @@ export default function Home() {
               className={styles.primaryButton}
               onClick={() =>
                 (window.location.href =
-                  "https://manuscriptedit.com/QuotationNew/")
+                  "https://manuscriptedit.com/QuotationNew")
               }
             >
               Get Journal Selection Assistance
@@ -359,7 +359,7 @@ export default function Home() {
           Journal Selection Assistance – Pricing and Turnaround Time
         </h2>
 
-        {/* <div className="pricing-details">
+        <div className="pricing-details">
           <div className="pricing-item">
             <h3>Starting Price</h3>
             <p className="pricing-text">
@@ -369,13 +369,13 @@ export default function Home() {
 
           <div className="delivery-item">
             <h3>Turnaround Time</h3>
-            <p className="delivery-time">
+            <p className="delivery-time"> 
             Turnaround Time in Days : 5 
             </p>
           </div>
-        </div> */}
+        </div>
 
-        <FormattingPricingTable/>
+        {/* <FormattingPricingTable/> */}
 
         <div className="cta-container">
           <a
