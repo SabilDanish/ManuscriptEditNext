@@ -119,7 +119,7 @@ export default function Home() {
   return (
     <>
       {/* {<Metadata metaData={metaData} />} */}
-      <meta
+      <meta 
         name="title"
         content="Scientific Manuscript Editing Services | ManuscriptEdit"
       />

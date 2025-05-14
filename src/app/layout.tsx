@@ -62,9 +62,7 @@ export default function RootLayout({
     <html lang="en">
       {/* <DefaultSeo {...SEO}/> */}
       <head>
-        <title>
-          Manuscriptedit - Expert Scientific Journal Publication Services
-        </title>
+        
         <link href="/img/manu.ico" rel="icon"></link>
       
         {/* <link

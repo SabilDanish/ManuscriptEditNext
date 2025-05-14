@@ -117,6 +117,7 @@ export default function Home() {
           </span>
         </div>
       </CookieConsent>
+      
       <meta
         name="title"
         content="ManuscriptEdit - Expert English Editing & Proofreading for Research Papers"
