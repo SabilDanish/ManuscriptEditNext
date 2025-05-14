@@ -54,10 +54,7 @@
   border: 6px double #c78082;
 }
 
-h2 {
-  color: #c78082;
-  font-weight: 700;
-}
+
 
 .loader-container {
   display: flex;

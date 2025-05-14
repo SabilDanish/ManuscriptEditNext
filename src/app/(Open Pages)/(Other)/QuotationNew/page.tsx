@@ -14,7 +14,17 @@ import captchaImg4 from "../../../../../public/assets/captcheImages/25p2m.png";
 import captchaImg5 from "../../../../../public/assets/captcheImages/2cegf.png";
 import Link from "next/link";
 import SignUpAgreement from "./SignUpAgreement";
-import { subjectsData,majorSubject,addOnsId,subServices,mainServices,goals,turnaroundPrices2,turnaroundPrices1,turnaroundPrices } from "./dataObjects";
+import {
+  subjectsData,
+  majorSubject,
+  addOnsId,
+  subServices,
+  mainServices,
+  goals,
+  turnaroundPrices2,
+  turnaroundPrices1,
+  turnaroundPrices,
+} from "./dataObjects";
 
 export default function ProjectQuote() {
   const [selectedGoal, setSelectedGoal] = useState<any>("");
@@ -33,14 +43,31 @@ export default function ProjectQuote() {
   const [selectedSubSubject, setSelectedSubSubject] = useState<string>("");
   const [valFromLocalStorage, setValFromLocalStorage] = useState<any>("");
   const [showModal, setShowModal] = useState(false);
-
   const [isChecked, setIsChecked] = useState(false);
   const [isChecked2, setIsChecked2] = useState(false);
   const [captchaName, setCaptchaName] = useState("");
   const [captchaImage, setCaptchaImage] = useState(captchaImg3);
   const [captchaCode, setCaptchaCode] = useState("25257");
   let [changeCaptcha, setChangeCaptcha] = useState(false);
+  const [countries, setCountries] = useState<Country[]>([]);
 
+  type Country = {
+    id: string;
+    country: string;
+  };
+
+  useEffect(() => {
+    fetch("https://www.secure.manuscriptedit.com/api/get_all_country_list.php")
+      .then((response) => response.json())
+      .then((data: any) => {
+        setCountries(data);
+        console.log("data.country", data);
+      })
+      .catch((error) => {
+        console.error("Error fetching country list:", error);
+      });
+  }, []);
+  console.log("countires", countries);
   const captchaObj = [
     { image: captchaImg1, code: "22d5n" },
     { image: captchaImg2, code: "2356g" },
@@ -153,6 +180,7 @@ export default function ProjectQuote() {
     Email: "",
     PhoneNum: "",
     HearAbt: "",
+    country: "",
     majorSubject: "",
     specificSubject: "",
     deliveryDate: "",
@@ -262,27 +290,29 @@ export default function ProjectQuote() {
       phone: formData.PhoneNum,
       user_find: formData.HearAbt,
       total_price: String(optionTotalPrice),
+      country: formData.country,
     };
 
     // 2. After successful submission — RESET EVERYTHING:
-    setSelectedGoal("");
-    setSelectedOption("");
-    setSelectedAddOns([]);
-    setWordCount("");
-    setFile(null);
-    setTurnaround("Trn_Ar10"); // or your default turnaround
-    setFormData({
-      Name: "",
-      Email: "",
-      PhoneNum: "",
-      HearAbt: "",
-      majorSubject: "",
-      specificSubject: "",
-      deliveryDate: "",
-      preferredLanguage: "",
-      editorInstruction: "",
-      paymentMode: "",
-    });
+    // setSelectedGoal("");
+    // setSelectedOption("");
+    // setSelectedAddOns([]);
+    // setWordCount("");
+    // setFile(null);
+    // setTurnaround("Trn_Ar10"); // or your default turnaround
+    // setFormData({
+    //   Name: "",
+    //   Email: "",
+    //   PhoneNum: "",
+    //   HearAbt: "",
+    //   country:"",
+    //   majorSubject: "",
+    //   specificSubject: "",
+    //   deliveryDate: "",
+    //   preferredLanguage: "",
+    //   editorInstruction: "",
+    //   paymentMode: "",
+    // });
     setHideGoalSection(false); // to show the goal options again
 
     // console.log("Submitting data:", postData);
@@ -607,6 +637,28 @@ export default function ProjectQuote() {
                       onChange={handleChange}
                       required
                     />
+                  </div>
+
+                  <div className="col-md-6">
+                    <label className="form-label">Country *</label>
+                    <select
+                      name="country"
+                      className="form-select"
+                      value={formData.country}
+                      onChange={handleChange}
+                      style={{ width: "100%", height: "60px" }}
+                      required
+                    >
+                      <option value="">-- Select --</option>
+                      {countries.map((c: any, i) => (
+                        <option
+                          key={countries[i].country}
+                          value={countries[i].id}
+                        >
+                          {countries[i].country}
+                        </option>
+                      ))}
+                    </select>
                   </div>
 
                   <div className="col-md-6">
