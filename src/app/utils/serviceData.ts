@@ -6,9 +6,9 @@ export const servicesData: Service[] = [
     subServices: [
       { name: "Editing Overview", url: "/EditingOverview" },
       { name: "Proofreading", url: "/ProofReading" },
-      { name: "Substantive Editing", url: "/CopyEdit" },
-      { name: "Extensive Substantive Editing", url: "/SubEditing" },
-      { name: "Copyediting", url: "/ExtensiveSubstantiveEditing" },
+      { name: "Substantive Editing", url: "/SubEditing" },
+      { name: "Extensive Substantive Editing", url: "/ExtensiveSubstantiveEditing" },
+      { name: "Copyediting", url: "/CopyEdit" },
       { name: "Plagiarism Check", url: "/PlagiarismCheckReduction" },
       { name: "Translation Services", url: "/TranslationOverview" }
     ]
@@ -22,7 +22,7 @@ export const servicesData: Service[] = [
       { name: "Response to Reviewer", url: "/ResponseToReviewer" },
       { name: "Peer Review & Pre Submission", url: "/PeerReview" },
       { name: "Poster Creation & Design", url: "/PosterCreation" },
-      { name: "Formatting", url: "/MedicalDesign" }
+      { name: "Formatting", url: "/Formatting" }
     ]
   },
   {
