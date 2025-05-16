@@ -92,6 +92,15 @@ export default function Home() {
 
   return (
     <>
+
+    <meta
+        name="title"
+        content="AI-Detection Reduction Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Specialist AI-detection reduction to safeguard manuscript authenticity."
+      />
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>

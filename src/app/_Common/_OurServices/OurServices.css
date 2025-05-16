@@ -200,3 +200,15 @@
         justify-content: center;
     }
 }
+
+@media(max-width:768px){
+    .accordion__title{
+        margin-top: 0px !important;
+        margin-bottom: 30px !important;
+    }
+
+    #mobile-view{
+margin-bottom: 0px !important;
+    }
+    
+}

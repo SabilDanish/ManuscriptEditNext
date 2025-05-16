@@ -1,18 +1,21 @@
 import React, { useState } from "react";
-import "./Faq.css"; 
-const faqs: {question: string, answer: string}[] = [
+import "./Faq.css";
+const faqs: { question: string; answer: string }[] = [
   {
-    question: "ManuscriptEdit has different packages for Publication Support. Do these packages guarantee publication?",
+    question:
+      "ManuscriptEdit has different packages for Publication Support. Do these packages guarantee publication?",
     answer:
       "We offer four packages under 'Publication Support' - Premium, Advanced , Standard and Premium Plus. Depending on your need either you choose one of them or we can also suggest. Publishing depends on many factors. The quality of research work is the most important criterion. Apart from this, journal's editors and reviewers take decision based on several other factors. For example, if the journal office receives two manuscripts related to the similar field, and if they have some rule that they can publish one article on a particular field per issue, then either they will suggest you to look for another journal or they will delay the publication. Therefore, we cannot guarantee publication if you avail our packages. However, the expert team at ManuscriptEdit will assist you to shape up your manuscript in such a way which maximizes the chance of publication.",
   },
   {
-    question: "Can you reformat my manuscript that complies with the journal requirement?",
+    question:
+      "Can you reformat my manuscript that complies with the journal requirement?",
     answer:
       "Yes, under the 'Target Journal Formatting' service we format your manuscript following the guidelines provided by the particular journal.",
   },
   {
-    question: "Do you correct or format artwork under any of the Publication Support packages?",
+    question:
+      "Do you correct or format artwork under any of the Publication Support packages?",
     answer:
       "No, the correction or reformatting of artwork does not include in any of the packages. We have customized 'Illustration and Enhancement Services' under which you can avail different services related to artwork.",
   },
@@ -23,7 +26,8 @@ const faqs: {question: string, answer: string}[] = [
   },
 
   {
-    question: "Can I send my manuscripts to all the recommended journals simultaneously?",
+    question:
+      "Can I send my manuscripts to all the recommended journals simultaneously?",
     answer:
       "No, you cannot. At a time, you can submit your manuscript to a single journal.",
   },
@@ -32,14 +36,14 @@ const faqs: {question: string, answer: string}[] = [
 const FaqHome = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (index:number) => {
+  const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container">
       <div className="accordion__wrapper">
-        <h2 className="text-center marginBotm">Frequently Asked Questions</h2>
+        <h2 className="text-center mt-3 mb-4">Frequently Asked Questions</h2>
         {faqs.map((faq, index) => (
           <div className="accordion" key={index}>
             <div
@@ -50,9 +54,7 @@ const FaqHome = () => {
               <span className="accordion__icon">
                 <i
                   className={
-                    openIndex === index
-                      ? "ri-subtract-fill"
-                      : "ri-add-line"
+                    openIndex === index ? "ri-subtract-fill" : "ri-add-line"
                   }
                 ></i>
               </span>
@@ -60,7 +62,8 @@ const FaqHome = () => {
             <div
               className="accordion__content"
               style={{
-                height: openIndex === index ? "auto" : "0",
+                maxHeight: openIndex === index ? "1000px" : "0", // use a large enough max-height
+                padding: openIndex === index ? "1rem 0" : "0",
               }}
             >
               <p className="accordion__answer">{faq.answer}</p>

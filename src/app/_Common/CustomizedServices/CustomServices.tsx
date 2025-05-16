@@ -66,7 +66,7 @@ const services = [
 
 const CustomizedServices = () => {
   return (
-    <div className="customized-services">
+    <div className="container">
       <h2 className="text-center Gappy">Customized Services</h2>
       <div className="service-cards">
         {services.map((service) => (

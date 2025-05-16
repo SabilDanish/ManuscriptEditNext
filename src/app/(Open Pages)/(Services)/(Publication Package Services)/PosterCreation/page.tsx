@@ -98,6 +98,15 @@ export default function Home() {
     <>
       {<Metadata metaData={metaData} />}
 
+      <meta
+        name="title"
+        content="Scientific Poster Design Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Custom scientific poster design for conferences and academic presentations."
+      />
+
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>

@@ -90,6 +90,18 @@ export default function Home() {
   };
   return (
     <>
+
+<meta
+        name="title"
+        content="Reference & Citation Formatting | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Expert reference formatting (APA, Vancouver, Harvard) for flawless bibliographies."
+      />
+
+
+
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>

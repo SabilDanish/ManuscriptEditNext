@@ -1,7 +1,8 @@
 import React from "react";
+import "./NavbarGap.css"
 const NavbarGap = () => {
     return (
-<div style={{marginTop:"50px"}}></div>
+<div className="NavyGap" style={{marginTop:"50px"}}></div>
     )
     
 }

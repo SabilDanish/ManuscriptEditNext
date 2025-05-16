@@ -66,16 +66,13 @@ export default function Home() {
     <>
       <meta
         name="title"
-        content="Peer Review & Pre-Submission Services – Improve Your Research Before Submission"
+        content="Peer Review Coordination Services | ManuscriptEdit"
       />
       <meta
         name="description"
-        content="Enhance your manuscript with expert peer review & pre-submission services. Get detailed reviewer comments, journal compliance checks, and higher acceptance rates!"
+        content="End-to-end peer review management to streamline feedback and revisions."
       />
-      <meta
-        name="keywords"
-        content="Peer Review Services for Researchers, Pre-Submission Editing & Formatting, Improve Manuscript Before Journal Submission, Reviewer Response Assistance for Academic Papers, Journal Compliance Check for Research Manuscripts."
-      />
+    
       <section style={{ marginTop: "40px" }}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>

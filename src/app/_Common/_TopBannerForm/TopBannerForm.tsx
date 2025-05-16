@@ -8,7 +8,7 @@ import Link from "next/link";
 const TopBannerForm = () => {
   return (
     <>
-      <div className="container" style={{ marginBottom: "60px" }}>
+      <div className="container mob_conti" style={{ marginBottom: "0px" , paddingLeft:"20px" , paddingRight:'20px' }}>
         <div className="row" style={{ justifyContent: "end" }}>
           <div className="col-lg-6">
             <h4 style={{ fontWeight: "Bold", fontSize: "2rem" }}>
@@ -55,7 +55,7 @@ const TopBannerForm = () => {
             >
               Submit Manuscript →
             </Link>
-            <Link
+            {/* <Link
               className="btn mt-12"
               href={"https://secure.manuscriptedit.com/advisory"}
               role="button"
@@ -67,7 +67,7 @@ const TopBannerForm = () => {
               }}
             >
               For Indian Researchers →
-            </Link>
+            </Link> */}
           </div>
           <div
             className={`$"carouselItem" $"active" col-lg-6`}
@@ -78,7 +78,7 @@ const TopBannerForm = () => {
             }}
           >
             <img
-              src="/images/flags/Ban_updates.jpg"
+              src="/images/flags/Ban_updates_no_shadow.png"
               className="carouselImage"
               alt="Banner 1"
             />
