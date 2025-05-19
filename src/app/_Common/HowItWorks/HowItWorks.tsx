@@ -58,8 +58,9 @@ const HowItWorks = () => {
               <div className="step text-center p-4">
                 <div className="icon mb-3">
                   <img src={step.image} alt="#" width='100%' />
+                  <h3>{step.title}</h3>
                 </div>
-                <h3>{step.title}</h3>
+                
                 <p>{step.description}</p>
                
               </div>

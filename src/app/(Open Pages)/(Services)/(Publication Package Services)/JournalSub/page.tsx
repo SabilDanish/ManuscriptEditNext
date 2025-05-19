@@ -54,6 +54,15 @@ export default function Home() {
 
   return (
     <>
+
+    <meta
+        name="title"
+        content="Journal Submission Support | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Full support for journal submission, cover letters & manuscript tracking."
+      />
       <section style={{ marginTop: "40px" }}>
         <div className={styles.textWrapper}>
           <h1 className={styles.heading}>

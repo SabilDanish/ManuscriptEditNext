@@ -55,6 +55,14 @@ export default function Home() {
 
   return (
     <>
+    <meta
+        name="title"
+        content="Response to Reviewer Letter Editing | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Precision editing of response-to-reviewer letters for clear, persuasive "
+      />
       <Head>
         <link
           rel="canonical"

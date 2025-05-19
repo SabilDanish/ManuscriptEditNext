@@ -92,6 +92,15 @@ export default function Home() {
   };
   return (
     <>
+
+    <meta
+        name="title"
+        content="Journal Formatting Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Accurate journal formatting (AMA, APA, IEEE) to meet publisher guidelines."
+      />
       <Head>
         <link rel="canonical" href="https://manuscriptedit.com/Formatting" />
       </Head>

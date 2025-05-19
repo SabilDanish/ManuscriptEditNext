@@ -65,14 +65,15 @@
   }
   
   .accordion__answer {
-    padding: 2rem 0;
+    padding-left: 9px;
   }
   
   .accordion__content {
-    overflow: hidden;
-    height: 0;
-    transition: var(--transition);
-  }
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
   
   @media screen and (min-width: 580px) {
     .accordion__wrapper {

@@ -88,7 +88,7 @@ const Clients = () => {
 
   return (
     <>
-      <div className="companies-journals-container">
+      <div className="container companies-journals-container">
         <div className="tabs clients-tab">
           <button
             className={activeTab === "companies" ? "active" : ""}

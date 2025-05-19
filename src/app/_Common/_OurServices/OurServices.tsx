@@ -49,7 +49,7 @@ export default function OurServices() {
     return (
         <>
             <div className="container">
-                <div className="text-center accordion__title" style={{ marginTop: "40px" }}>
+                <div className="text-center accordion__title mb-3" style={{ marginTop: "40px" }}>
                     <h2>Subject Areas</h2>
                 </div>
             </div>

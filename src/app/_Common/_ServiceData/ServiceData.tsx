@@ -22,8 +22,8 @@ const getIconForCategory = (category: string) => {
 
 const ServiceList: React.FC = () => {
   return (
-    <div className="services-container">
-      <h2 className="text-center" style={{ marginBottom: "3rem !important", marginTop: "1rem !important" }}>
+    <div className="container">
+      <h2 className="text-center mb-3" style={{marginTop: "1rem !important" }}>
         Our Services
       </h2>
       {servicesData.map((service: Service, index: number) => (

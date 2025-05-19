@@ -91,6 +91,14 @@ export default function Home() {
 
   return (
     <>
+    <meta
+        name="title"
+        content="Scientific Translation Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Professional scientific translation for accurate, peer-review ready manuscripts."
+      />
       {<Metadata metaData={metaData} />}
       <div>
         <section style={gap}>

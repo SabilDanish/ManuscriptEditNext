@@ -74,8 +74,8 @@ const AnimationSection = () => {
   }
 
   return (
-    <Container className="mt-4 mb-4">
-      <h2 className="accordion-title">Recent Publications</h2>
+    <Container className="mt-4 mb-5">
+      <h2 className="accordion-title mb-3">Recent Publications</h2>
       <Carousel activeIndex={index} onSelect={handleSelect} interval={4000}>
         {slides.map((slide, slideIndex) => (
           <Carousel.Item key={slideIndex}>
@@ -116,7 +116,7 @@ const AnimationSection = () => {
         ))}
       </Carousel>
 
-      <div style={{ marginTop: "35px", textAlign: "center" }}>
+      <div className="mb-3" style={{ marginTop: "35px", textAlign: "center" }}>
         <Link className="buttonSeeAll" href="/AllPublications">
           See All →
         </Link>

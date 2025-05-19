@@ -62,11 +62,11 @@ export default function Home() {
     <>
       <meta
         name="title"
-        content="Journal Selection Services – Find the Best Journal for Your Research"
+        content="Journal Selection Consulting | ManuscriptEdit"
       />
       <meta
         name="description"
-        content="Get expert journal selection assistance for faster acceptance. We recommend Scopus, PubMed, and Web of Science-indexed journals tailored to your research."
+        content="Expert journal selection to target high-impact, Scopus-indexed publications."
       />
       <meta
         name="keywords"

@@ -17,10 +17,10 @@ const Testimonial = () => {
     <>
       <div className="container unique-testimonial-section">
         <h3 className="unique-testimonial-title mb-3" style={{ color: '#21252c' }}>Testimonials</h3>
-        <h2 className="unique-testimonial-heading mb-5">We have worked with thousands of amazing people</h2>
+        <h2 className="unique-testimonial-heading mb-3">We have worked with thousands of amazing people</h2>
 
         <div className="row">
-          <div className="col-lg-3 d-flex flex-column mt-5">
+          <div className="col-lg-3 d-flex flex-column ">
             <div className="card unique-testimonial-card">
               <p className="unique-testimonial-content">"Thank you for your comments and corrections of my paper- it is done in much more professional way."</p>
 
