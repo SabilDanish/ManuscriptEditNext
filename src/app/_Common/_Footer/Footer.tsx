@@ -10,6 +10,9 @@ export default function footer() {
   const textColor = { color: "white" };
 
   const { isLoading, error, acceptNewsLetter } = useEmail();
+
+  // let dateYear = new Date("year")
+
   return (
     <>
       {/* <div className="subscribe_area bg_color pt-30 pb-45">
@@ -60,10 +63,8 @@ export default function footer() {
             <div className="row">
               {/* English Editing Section */}
               <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
-                
-                <h4 style={{paddingRight:'98px'}}>Editing Overview</h4>
-                
-                
+                <h4 style={{ paddingRight: "98px" }}>Editing Overview</h4>
+
                 <ul>
                   <li>
                     <a href="/EditingOverview">Editing Overview</a>
@@ -95,7 +96,7 @@ export default function footer() {
 
               {/* Publication Support Section */}
               <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
-                <h4 style={{paddingRight:'98px'}}>Publication Support</h4>
+                <h4 style={{ paddingRight: "98px" }}>Publication Support</h4>
                 <ul>
                   <li>
                     <a href="/PackageService">Publication Package</a>
@@ -123,7 +124,9 @@ export default function footer() {
 
               {/* Scientific/Academic Writing Section */}
               <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
-                <h4 style={{paddingRight:'44px'}}>Scientific / Academic Writing</h4>
+                <h4 style={{ paddingRight: "44px" }}>
+                  Scientific / Academic Writing
+                </h4>
                 <ul>
                   <li>
                     <a href="/Writing">Writing Overview</a>
@@ -156,15 +159,15 @@ export default function footer() {
 
               {/* Research Enhancement Services Section */}
               <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
-                <h4 style={{paddingRight:'98px'}}>Research Support</h4>
+                <h4 style={{ paddingRight: "98px" }}>Research Support</h4>
                 <ul>
                   <li>
-                    <a href="/ResearchSupportOverview">Research Support Overview</a>
+                    <a href="/ResearchSupportOverview">
+                      Research Support Overview
+                    </a>
                   </li>
                   <li>
-                    <a href="/EarlyStageResearchers">
-                      Early Stage Researchers
-                    </a>
+                    <a href="/EarlyStageResearchers">Early Stage Researchers</a>
                   </li>
                   <li>
                     <a href="/MidCareerResearchers">Mid-Career Researchers</a>
@@ -201,109 +204,62 @@ export default function footer() {
           </div>
         </footer>
 
-        {/* <div
-          className="container-fluid"
-          style={{ display: "flex", justifyContent: "center" }}
-        >
-          <div className="Breaaker"></div>
-        </div> */}
+        
+        <div className="container widget widgets-company-info" style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+          <div className="footer-bottom-logo " style={{ textAlign: "center" }}>
+            <img
+              src="/images/New_Reseapro_Scientific_Final-removebg-preview.png"
+              alt="#"
+              style={{ width: "12rem" }}
+            />
+          </div>
+          <div className="company-info-desc"></div>
 
-        <div className="container-fluid">
-          <div className="row" style={{ justifyContent: "center" }}>
-            <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="widget widgets-company-info">
-                <div
-                  className="footer-bottom-logo "
-                  style={{ textAlign: "center" }}
-                >
-                  <img
-                    src="/images/New_Reseapro_Scientific_Final-removebg-preview.png"
-                    alt="#"
-                    style={{ width: "80%" }}
-                  />
-                </div>
-                <div className="company-info-desc"></div>
-
-                <div
-                  className="follow-company-info pt-3"
-                  style={{ display: "flex", justifyContent: "center" }}
-                >
-                  <div className="follow-company-text mr-3">
-                    <a href="#">
-                      <p>Follow Us</p>
-                    </a>
-                  </div>
-                  <div className="follow-company-icon">
-                    <a
-                      href="https://www.facebook.com/Manuscriptedit"
-                      target="_blank"
-                    >
-                      <i className="fa fa-facebook"></i>
-                    </a>
-                    <a
-                      href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit"
-                      target="_blank"
-                    >
-                      <i className="fa fa-twitter"></i>
-                    </a>
-                    <a
-                      href="https://www.instagram.com/manuscriptedit/"
-                      target="_blank"
-                    >
-                      <i className="fa fa-instagram"></i>
-                    </a>
-                    <a
-                      href="https://www.youtube.com/@manuscriptedit."
-                      target="_blank"
-                    >
-                      <i className="fa fa-youtube-play"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* <div className="widget widgets-company-info">
-                <div className="d-flex flex-column footer-services">
-                  <span className="widget-title pb-2 ">Our Services</span>
-
-                  <Link style={textColor} href={"/EditingOverview"}>
-                    English Editing
-                  </Link>
-
-                  <Link style={textColor} href={"/PackageService"}>
-                    Publication Support
-                  </Link>
-
-                  <Link style={textColor} href={"/Writing"}>
-                    Writing & Rewriting
-                  </Link>
-
-                  <Link style={textColor} href={"/ResearchSupportOverview"}>
-                    Research Support
-                  </Link>
-
-                  <Link style={textColor} href={"/CustomizedServices"}>
-                    Customized Services
-                  </Link>
-
-                  <a
-                    style={textColor}
-                    onClick={() => {
-                      redirect("corporate");
-                    }}
-                    href="#"
-                  >
-                    Corporate Services
-                  </a>
-                </div>
-              </div> */}
+          <div
+            className="follow-company-info"
+            style={{ display: "flex", justifyContent: "center", }}
+          >
+            <div className="follow-company-icon" style={{paddingRight:'2rem'}}>
+              <a href="https://www.facebook.com/Manuscriptedit" target="_blank">
+                <i className="fa fa-facebook"></i>
+              </a>
+              <a
+                href="https://x.com/i/flow/login?redirect_after_login=%2Fmanuscriptedit"
+                target="_blank"
+              >
+                <i className="bi bi-twitter-x"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/manuscriptedit/"
+                target="_blank"
+              >
+                <i className="fa fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.linkedin.com/company/manuscriptedit"
+                target="_blank"
+              >
+                <i className="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@manuscriptedit."
+                target="_blank"
+              >
+                <i className="fa fa-youtube-play"></i>
+              </a>
             </div>
-            <div className="col-lg-9 col-md-12 col-sm-12">
+          </div>
+        </div>
+        <div className="container">
+          <div className="row" style={{ justifyContent: "center" }}>
+            <div className="col-lg-3 col-md-6 col-sm-12"></div>
+            <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="row ">
                 <div className="col-12 pb-4"></div>
                 <div className="col-12">
                   <div className="widget widgets-company-info">
                     <div style={{ fontSize: 14 }} className="row rowCentroid">
-                      <div className="col-md-4 footerSeperator4">
+                      <div className="col-md-4">
                         <div>
                           <h5 style={{ color: "#FFFFFF" }}>
                             <b>KYOTO, JAPAN</b>
@@ -333,8 +289,8 @@ export default function footer() {
                       <div className="col-md-4 ">
                         <div style={{ paddingLeft: 15 }} className="row">
                           <div
-                            className="col-12 footerSeperator5"
-                            style={{ border: "1px solid grey" }}
+                            className="col-12"
+                            
                           >
                             <h5 style={{ color: "#FFFFFF" }}>
                               <b>NC, DURHAM, USA</b>
@@ -351,8 +307,8 @@ export default function footer() {
                             </p>
                           </div>
                         </div>
-                        <div style={{ paddingLeft: 15 }} className="row">
-                          <div className="col-12 footerSeperate">
+                        <div style={{ paddingLeft: 15,marginTop: 15,marginBottom: 15 }} className="row">
+                          <div className="col-12">
                             <h5 style={{ color: "#FFFFFF" }}>
                               <b>BHUBANESWAR, INDIA</b>
                             </h5>
@@ -371,8 +327,14 @@ export default function footer() {
                         </div>
                       </div>
                       <div className="col-md-4">
-                        <div style={{ paddingLeft: 15 }} className="row">
-                          <div className="col-12 footerSeperator1">
+                        <div
+                          style={{
+                            paddingLeft: 15,
+                            marginBottom: 15,
+                          }}
+                          className="row"
+                        >
+                          <div className="col-12">
                             <h5 style={{ color: "#FFFFFF" }}>
                               <b>MAIDSTONE, UK</b>
                             </h5>
@@ -388,8 +350,15 @@ export default function footer() {
                             </p>
                           </div>
                         </div>
-                        <div style={{ paddingLeft: 15 }} className="row">
-                          <div className="col-12 footerSeperator2">
+                        <div
+                          style={{
+                            paddingLeft: 15,
+                            marginTop: 15,
+                            marginBottom: 15,
+                          }}
+                          className="row"
+                        >
+                          <div className="col-12 ">
                             <h5 style={{ color: "#FFFFFF" }}>
                               <b>BANGALORE, INDIA</b>
                             </h5>
@@ -413,101 +382,14 @@ export default function footer() {
             </div>
           </div>
 
-          {/* <div
-            className="footer container-fluid"
-            style={{ padding: "20px 60px" }}
-          >
-            <div className="container-fluid">
-              <div className="row">
-                <div className="col-lg-6 mb-3">
-                  <h4>About ManuscriptEdit</h4>
-                  <p>
-                    We are a trusted name in author services for the global
-                    research community. Since 2005, we have worked with
-                    researchers in more than 125 countries, improving the
-                    communication of their research and helping them achieve
-                    successful publication. Globally, we are a preferred partner
-                    for leading publishers, societies, and universities. We have
-                    offices in Tokyo, Seoul, Beijing, Shanghai, Istanbul, and
-                    New York. We operate globally with regional teams supporting
-                    researchers locally.
-                  </p>
-
-                  <h5>FOLLOW US</h5>
-                  <div className="social-icons">
-                    <a
-                      href="#"
-                      style={{ marginRight: "15px", fontSize: "20px" }}
-                    >
-                      <i className="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                    <a
-                      href="#"
-                      style={{ marginRight: "15px", fontSize: "20px" }}
-                    >
-                      <i className="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                    <a
-                      href="#"
-                      style={{ marginRight: "15px", fontSize: "20px" }}
-                    >
-                      <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a
-                      href="#"
-                      style={{ marginRight: "15px", fontSize: "20px" }}
-                    >
-                      <i className="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
-
-                
-                <div className="col-lg-3 mb-3">
-                  <h4>Quick links</h4>
-                 
-                  <ul>
-                    <li>
-                      <a href="#">Quality & Delivery</a>
-                    </li>
-                    <li>
-                      <a href="#">How We Work</a>
-                    </li>
-                    <li>
-                      <a href="#">Service Guarantee</a>
-                    </li>
-                    <li>
-                      <a href="#">Faqs</a>
-                    </li>
-                    <li>
-                      <a href="#">Contact Us</a>
-                    </li>
-                  </ul>
-                </div>
-
-                
-                <div className="col-lg-3 mb-3">
-                  <h4>CONTACT US</h4>
-                  <p>
-                    Monday-Friday: 4:00-18:00
-                    <br />
-                    Email:{" "}
-                    <a href="mailto:orders@enago.com">orders@enago.com</a>
-                    <br />
-                    Tel: +1 980-294-0834
-                    <br />
-                    New Jersey, USA
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
           <div className="row footer-bottom mt-70 pt-3 pb-1">
             <div className="col-lg-4 col-md-4">
               <div className="footer-bottom-content">
                 <div className="footer-bottom-content-copy">
-                  <p>© 2024 ManuscriptEdit. All Rights Reserved. </p>
+                  <p>
+                    © {new Date().getFullYear()} ManuscriptEdit. All Rights
+                    Reserved.{" "}
+                  </p>
                 </div>
               </div>
             </div>
@@ -521,13 +403,13 @@ export default function footer() {
                     Privacy Policy
                   </Link>
 
-                  <Link href={"/TermsOfService"}>Terms & Conditions</Link>
+                  <Link className="absod" href={"/TermsOfService"}>
+                    Terms & Conditions{" "}
+                  </Link>
 
-                  <Link
-                    href={'/Service-Agreement'}
-                  >
+                  <Link className="absody" href={"/Service-Agreement"}>
                     {" "}
-                    / Service Agreement
+                    Service Agreement
                   </Link>
                 </div>
               </div>
