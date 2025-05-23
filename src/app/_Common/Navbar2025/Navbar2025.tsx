@@ -104,7 +104,7 @@ function Navbar2025() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-5 col-sm-4">
+            <div className="col-lg-2 col-sm-2">
               <div className="header_top_menu_icon">
                 <div className="header_top_menu_icon_inner">
                   <ul>
@@ -145,7 +145,7 @@ function Navbar2025() {
               </div>
             </div>
 
-            {/* <div className="col-lg-1 col-sm-2">
+            <div className="col-lg-3 col-sm-2" style={{display:'flex' , justifyContent:'end'}}>
               <Link href={"/Discount"}>
                 <button
                   className="BtnDiscount"
@@ -160,7 +160,7 @@ function Navbar2025() {
                   Discount & Offers
                 </button>{" "}
               </Link>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

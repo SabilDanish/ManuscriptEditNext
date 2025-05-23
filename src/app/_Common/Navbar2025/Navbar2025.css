@@ -182,6 +182,10 @@
   }
 }
 
+.carouselImage {
+    width: 88%;
+}
+
 /* .navbar2025 {
   position: fixed;
   width: 100%;
