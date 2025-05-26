@@ -33,9 +33,10 @@
     margin: 0 auto 20px;
   }
   
-  .step h3 {
+  .icon h3 {
     font-size: 1.2em;
     margin-bottom: 10px !important;
+    color:black;
   }
   
   .step p {

@@ -12733,6 +12733,7 @@ span.chose-icon2 {
 
 .accordion-area .absod {
   padding: 0;
+  
 }
 
 .panel-heading.mb-3 a i {
@@ -14672,6 +14673,19 @@ a.social-icon-color3 {
 .footer-bottom-right-text .absod {
   margin-right: 30px;
   position: relative;
+  text-decoration: none;
+}
+.footer-bottom-right-text .absody {
+  margin-right: 30px;
+  position: relative;
+  text-decoration: none;
+  
+}
+.footer-bottom-right-text .absod:hover {
+ text-decoration: underline;
+}
+.footer-bottom-right-text .absody:hover {
+text-decoration: underline; 
 }
 
 .footer-bottom-right-text .absod::before {
