@@ -1,35 +1,67 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
+import "./Discount.css"
 
 export default function Home() {
   return (
     <>
-    {/* {breadcrum("Submit Manuscript", "Discount")} */}
+      {/* {breadcrum("Submit Manuscript", "Discount")} */}
 
-    <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
-     <div className="formmm" style={{margin: 0, padding: 25}}>
-         <div className="col-lg-12 col-md-12 col-sm-12">
-             <img  src="/images/Get-published.jpg" alt="" style={{width:'100%'}}/>
-         </div>
-         <div className="col-lg-12 col-md-12 col-sm-12 d-flex950">
-             <div className="col-lg-6 col-md-6 col-sm-6" style={{marginTop:'2rem'}}>
-                 <h4><strong>Halloween Sale Ends in 3 Days – Save 60%* on Publication Support Package!</strong></h4>
-                 <p className="pt-3">
-                 Our Halloween Sale was a big hit, and due to popular demand, we’re extending it for 5 more days! Now you have an extra chance to enjoy 60%* OFF on our premium publication services.
-                 </p>
-                 <p>
-                 If you’re ready to publish your research in a top journal, now is the time to act with our season’s best offer, ending November 7th.
-                 </p>
-                 <h4 style={{marginTop:'2rem'}}><strong>Validity:</strong></h4>
-                 <p>The offer is valid till Nov 7, 2024</p>
-             </div>
-             <div className="col-lg-6 col-md-6 col-sm-6 pt-30">
+      <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
+        <div className="formmm" style={{ margin: 0, padding: 25 }}>
+          <div className="col-lg-12 col-md-12 col-sm-12">
+            <img
+              src="/img/technologies/Offer & Discount - Peer Review (2).jpg"
+              alt=""
+              style={{ width: "100%" }}
+            />
+          </div>
+
+          <div
+            className="col-lg-12 col-md-12 col-sm-12"
+            style={{ marginTop: "2rem" }}
+          >
+            <h4>
+              <strong>Limited-Time Pre-Submission Offer!</strong>
+            </h4>
+            <h5 className="pt-2">
+              <strong>
+              Get 60% OFF on our PEER REVIEW & JOURNAL SELECTION GUIDANCE package – now only $189 (originally $475)
+              </strong>
+            </h5>
+            <ul className="pt-3 sideLeft">
+              <li>✔ Expert Peer Review Guidance</li>
+              <li>✔ Tailored Target Journal Selection</li>
+              <li>✔ AI & Plagiarism Check Reports</li>
+            </ul>
+            <p className="pt-3">
+              <strong>⭐⭐⭐⭐⭐ Rated by researchers worldwide</strong>
+            </p>
+
+            <ul className="sideLeft">
+              <li>
+               ✔ Perfect for researchers looking to publish faster and more
+                confidently.
+              </li>
+              <li>✔ Don’t miss this deal – upgrade your manuscript today!</li>
+            </ul>
+
+            <a
+              href="https://www.manuscriptedit.com/PeerReview/"
+              className="btn btn-primary mt-3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            Boost My Manuscript
+            </a>
+          </div>
+
+          {/* <div className="col-lg-6 col-md-6 col-sm-6 pt-30">
              <img  src="/images/Scr111.png" alt="" style={{width:'100%'}}/>
-             </div>
-         </div>
-     </div>
- </div>
+             </div> */}
+        </div>
+      </div>
 
-    {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
+      {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm d-flex" style={{margin: 0, padding: 25}}>
          <div className="row rowflex">
              <div className="col-md-6 pb-2">
@@ -64,9 +96,7 @@ export default function Home() {
      </div>
  </div> */}
 
-
-
- {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
+      {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm" style={{margin: 0, padding: 25}}>
          <div className="col-lg-12 col-md-12 col-sm-12">
              <img  src="/images/disc15.jpg" alt=""/>

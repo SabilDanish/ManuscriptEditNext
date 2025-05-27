@@ -10649,7 +10649,7 @@ h2.cntr-sb-title {
 }
 
 .pricing-head {
-  padding: 0 0 30px;
+  padding: 0 0 10px;
   border-bottom: 1px solid rgba(30, 30, 30, 0.1);
 }
 
@@ -10687,6 +10687,7 @@ span.dollar {
   position: relative;
   transition: 0.5s;
   font-size: 13px;
+  line-height: 17px;
 }
 
 .featur_itmes ul li:before {
@@ -10716,7 +10717,7 @@ li.color-op {
   border-radius: 28px;
   background-color: #ffffff;
   border: 1px solid rgba(30, 30, 30, 0.1);
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .pricing_button a:before {
@@ -16433,7 +16434,7 @@ button.btn.btn-primary {
 }
 
 .featur_itmes {
-  height: 480px;
+  min-height: 390px;
   padding: 0px 32px;
 }
 
