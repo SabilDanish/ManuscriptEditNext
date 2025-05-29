@@ -232,7 +232,7 @@ export default function Home() {
             {/* <div className="d-flex justify-content-center"> */}
             {/* <div id="inpSec" style={{ width: "60%", padding: "15px 0" }}> */}
             <div
-              className="col-lg-3"
+              className="col-lg-3 text-right"
               style={{
                 padding: 13,
                 fontWeight: "bold",
@@ -247,7 +247,7 @@ export default function Home() {
                 type="number"
                 id="wordC"
                 name="wordC"
-                placeholder=" 275"
+                placeholder="Enter Your Word Count"
                 style={{
                   width: "100%",
                   border: "1px solid #a7a7a7",
@@ -283,10 +283,10 @@ export default function Home() {
             ""
           )}
 
-          <h3 style={{ color: "black", marginBottom: "2rem" }}>
-            Prices for {wordCount} words is:
+          <center><h3 style={{ color: "black", marginBottom: "2rem" }}>
+            Prices for <span style={{fontWeight:'bold'}}>{wordCount}</span> words is:
             <br />
-          </h3>
+          </h3></center>
 
           {/* <div className="row gy-4">
             {result && result.length

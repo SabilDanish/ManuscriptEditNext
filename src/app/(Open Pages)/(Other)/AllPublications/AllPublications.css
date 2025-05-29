@@ -1,12 +1,13 @@
 .publication-container {
     width: 90%;
-    margin: 20px auto;
+    margin: 2px auto;
     text-align: center;
     font-family: Arial, sans-serif;
+    margin-bottom: 50px;
   }
   
   h2 {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-size: 24px;
     color: #333;
   }
@@ -51,3 +52,5 @@
     }
   }
   
+ 
+

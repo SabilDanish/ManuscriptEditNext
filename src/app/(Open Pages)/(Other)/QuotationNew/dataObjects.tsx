@@ -167,19 +167,20 @@ export const turnaroundPrices: Record<string, number> = {
   Trn_Ar1: 0.094,
 };
 export const turnaroundPrices1: Record<string, number> = {
-  Trn_Ar10: 0.032,
-  Trn_Ar5: 0.04,
-  Trn_Ar3: 0.047,
-  Trn_Ar2: 0.058,
-  Trn_Ar1: 0.069,
-};
-
-export const turnaroundPrices2: Record<string, number> = {
-  Trn_Ar10: 0.04,
+ 
+    Trn_Ar10: 0.04,
   Trn_Ar5: 0.047,
   Trn_Ar3: 0.058,
   Trn_Ar2: 0.069,
   Trn_Ar1: 0.083,
+};
+
+export const turnaroundPrices2: Record<string, number> = {
+ Trn_Ar10: 0.032,
+  Trn_Ar5: 0.04,
+  Trn_Ar3: 0.047,
+  Trn_Ar2: 0.058,
+  Trn_Ar1: 0.069,
 };
 
 export const goals = [
