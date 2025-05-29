@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
-import Style from "./header.module.css";
+import "./header.css";
 import redirect, { redirectSameTab } from "../_functionality/Redirect";
 // import { useRef } from "react";
 import { useRouter } from "next/navigation";
+import Style from "./header.module.css"
 
 export default function Header() {
   const router = useRouter();

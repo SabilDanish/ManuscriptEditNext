@@ -61,7 +61,7 @@ export default function Home() {
       />
       <meta
         name="description"
-        content="Precision editing of response-to-reviewer letters for clear, persuasive "
+        content="Precision editing of response-to-reviewer letters for clear, persuasive rebuttals."
       />
       <Head>
         <link

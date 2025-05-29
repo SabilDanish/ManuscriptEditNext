@@ -93,6 +93,14 @@ export default function Home() {
 
   return (
     <>
+    <meta
+        name="title"
+        content="Meta-Analysis Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Rigorous meta-analysis with statistical pooling and interpretive insights."
+      />
       <Head>
         <link rel="canonical" href="https://manuscriptedit.com/MetaAnalysis/" />
       </Head>

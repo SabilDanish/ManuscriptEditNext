@@ -96,6 +96,14 @@ export default function Home() {
   };
   return (
     <>
+    <meta
+        name="title"
+        content="Biostatistical Analysis Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Comprehensive biostatistical analysis for robust results and publication-ready data."
+      />
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>

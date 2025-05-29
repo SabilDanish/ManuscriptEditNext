@@ -90,6 +90,14 @@ export default function Home() {
 
   return (
     <>
+    <meta
+        name="title"
+        content="Systematic Review Writing Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Expert systematic review protocol development and manuscript drafting."
+      />
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>

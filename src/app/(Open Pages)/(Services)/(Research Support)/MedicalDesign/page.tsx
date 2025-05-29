@@ -93,6 +93,14 @@ export default function Home() {
           href="https://manuscriptedit.com/MedicalDesign/"
         />
       </Head>
+      <meta
+        name="title"
+        content="Medical Illustration & Design | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="High-quality medical illustrations and design for papers and presentations."
+      />
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>
