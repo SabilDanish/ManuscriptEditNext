@@ -109,6 +109,14 @@ export default function Home() {
     <>
       {/* {<Metadata metaData={metaData} />} */}
       {/* {breadcrum("Services / English Editing", "Substantive editing")} */}
+      <meta
+        name="title"
+        content="High-Impact Journal Publication Support | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Strategic support for publishing in high-impact, peer-reviewed journals."
+      />
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>

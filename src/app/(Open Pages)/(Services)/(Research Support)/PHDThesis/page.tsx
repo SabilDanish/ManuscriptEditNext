@@ -103,6 +103,14 @@ export default function Home() {
 
   return (
     <>
+    <meta
+        name="title"
+        content="PhD Thesis Editing Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="End-to-end PhD thesis editing, formatting & journal-ready chapter polishing."
+      />
       <Head>
         <link rel="canonical" href="https://manuscriptedit.com/PHDThesis/" />
       </Head>

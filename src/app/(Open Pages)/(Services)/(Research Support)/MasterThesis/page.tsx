@@ -103,6 +103,14 @@ export default function Home() {
 
   return (
     <>
+    <meta
+        name="title"
+        content="Master Thesis Editing Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Professional master’s thesis editing and language enhancement for clarity."
+      />
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>

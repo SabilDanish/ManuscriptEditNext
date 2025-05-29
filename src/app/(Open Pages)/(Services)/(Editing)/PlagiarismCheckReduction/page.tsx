@@ -112,6 +112,16 @@ export default function Home() {
       </Head>
       {<Metadata metaData={metaData} />}
 
+      
+      <meta
+        name="title"
+        content="Plagiarism Check & Reduction Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Advanced plagiarism detection and reduction to ensure originality and compliance."
+      />
+
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>

@@ -92,6 +92,14 @@ export default function Home() {
 
   return (
     <>
+      <meta
+        name="title"
+        content="Machine Learning Data Analysis | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Advanced ML-driven data analysis for accurate predictions and insights."
+      />
       <div>
         <section style={gap}>
           <div className={styles.textWrapper}>
