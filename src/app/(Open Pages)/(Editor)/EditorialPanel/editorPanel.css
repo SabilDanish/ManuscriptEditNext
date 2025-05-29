@@ -1,36 +1,86 @@
 #ediCat .nme {
-    background-color: #ddc587;
-    color: #FFFFFF;
-    border: 2px solid #FFFFFF;
-    text-align: center;
-    padding: 20px;
-    font-weight: bold;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
 }
 
 #ediCat .me {
-    background-color: #ededed;
-    border: 2px solid #FFFFFF;
-    text-align: center;
-    padding: 20px;
-    font-weight: bold;
-    color: #4f4f4f;
+  border: 2px solid #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 #ediIcon .detail {
-    width: 70%;
+  width: 100%;
 }
 
-.nmEditor{
-    border: 0px solid rgb(193, 193, 193);
-    padding: 0px;
-    text-align: center;
+.nmEditor {
+  border: 0px solid rgb(193, 193, 193);
+  padding: 0px;
+  text-align: center;
 }
 
 .row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.divSeperate {
+  padding: 5px;
+  box-shadow: 0px 1px 4px #af4f4f;
+  margin-bottom: 43px;
+}
+
+.btn {
+  color: #5161ce;
+  padding: 1px;
+}
+
+.modal-body p {
+  background: #ebdddd;
+  text-align: justify !important;
+  padding: 21px;
+  border-radius: 14px;
+}
+
+.modal-content {
+  border: 6px double #c78082;
+}
+
+
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust based on your layout */
+}
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Optional: adds a semi-transparent background */
+  z-index: 9999; /* Ensures the overlay is above other content */
+}
+
+.modal-body img {
+  width: 150px;
 }

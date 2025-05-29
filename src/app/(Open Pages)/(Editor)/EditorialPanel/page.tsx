@@ -5,13 +5,17 @@ import { useEffect, useState } from "react";
 import useFetchEditors from "@/app/hooks/editor/useEditorProfile";
 import { DNA } from "react-loader-spinner";
 import { Editor } from "@/app/utils/interfaces";
-
+import EditorModal from "@/app/_Common/_Modals/EditorModal/EditorModal";
+import defaultImage from "../../../utils/testi/2.jpg";
+import Head from "next/head";
 
 export default function Home() {
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(20);
   const [offset, setOffset] = useState(0);
   const [type, setType] = useState("");
   const [allEditor, setAllEditor] = useState<Editor[]>([]);
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [modalData, setModalData] = useState<any>();
   const { loading, error, editors } = useFetchEditors(type, limit, offset);
 
   useEffect(() => {
@@ -28,136 +32,131 @@ export default function Home() {
   useEffect(() => {
     setAllEditor((prev) => [...prev, ...editors]);
   }, [editors]);
-  console.log({editors,type})
+
+  const modalHandler = (e: any) => {
+    const id = e.target.className.split(" ")[1];
+    const filteredData = allEditor.filter((editor) => editor.id === id)[0];
+    setModalData(filteredData);
+    setShowModal(true);
+  };
+
+  const handleError = (e: any) => {
+    e.target.src =
+      "https://gravatar.com/avatar/0cb77b3b53fdfa2cbaa9e2ae3a9fe042?s=400&d=mp&r=x";
+  };
   return (
     <>
-      {breadcrum("Editor", "Editorial Panel")}
+      <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/EditorialPanel/"
+        />
+      </Head>
+
+      {/* {breadcrum("Editor", "Editorial Panel")} */}
+      {showModal && (
+        <EditorModal modalData={modalData} setShowModal={setShowModal} />
+      )}
       <div className="col-lg-10 col-md-10 col-sm-10 mt-50 mb-50 mx-auto d-flex1k">
         {loading && !allEditor.length && (
-          <DNA
-            visible={true}
-            height="80"
-            width="80"
-            ariaLabel="dna-loading"
-            wrapperStyle={{}}
-            wrapperClass="dna-wrapper"
-          />
+          <div className="loader-overlay">
+            <DNA
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="dna-loading"
+              wrapperStyle={{}}
+              wrapperClass="dna-wrapper"
+            />
+          </div>
         )}
         <div className="container">
           <div id="ediCat" className="row">
             <div
               className="col-lg-6"
-              style={{ padding: "0px", cursor: "pointer" }}
+              style={{
+                padding: "0px",
+                cursor: "pointer",
+                backgroundColor: type === "nonmed" ? "#5161ce" : "#ddc587",
+              }}
               onClick={() => {
-                setAllEditor([])
-                setType("nonmed")
+                setAllEditor([]);
+                setType("nonmed");
               }}
             >
               <div className="nme">NON MEDICAL EDITORS PROFILE</div>
             </div>
             <div
               className="col-lg-6"
-              style={{ padding: "0px", cursor: "pointer" }}
+              style={{
+                padding: "0px",
+                cursor: "pointer",
+                backgroundColor: type === "med" ? "#5161ce" : "#ddc587",
+              }}
               onClick={() => {
-                setAllEditor([])
-                setType("med")
+                setAllEditor([]);
+                setType("med");
               }}
             >
               <div className="me">MEDICAL EDITORS PROFILE</div>
             </div>
           </div>
-        </div>
 
-        <br></br>
-        <div
-          className="container nmEditor"
-          style={{
-            border: "0px solid rgb(193, 193, 193)",
-            padding: "0px",
-            textAlign: "center",
-          }}
-        >
-          <div id="ediIcon" className="row" style={{ margin: "20px 0px" }}>
-            {allEditor &&
-              allEditor.length &&
-              allEditor.map((editor) => {
-                const { ediImg, ediName } = editor;
-                return (
-                  <div
-                    className="col-lg-2 col-md-4 col-sm-4 col-xs-4"
-                    style={{ border: "0 solid #022039" }}
-                  >
-                    <div style={{ padding: "5px" }}>
-                      <div style={{ textAlign: "center" }}>
-                        <img
-                          src={ediImg}
-                          className="img-fluid"
-                          style={{
-                            borderRadius: "18%",
-                            width: "100px",
-                            height: "100px",
-                          }}
-                          alt="Doctor"
-                        />
-                      </div>
-                      <div className="titl">
-                        <div className="name">{ediName}</div>
-                        <div style={{ textAlign: "center" }} className="detail">
-                          <button className="btn">View Details</button>
+          <br></br>
+          <div
+            className="container nmEditor"
+            style={{
+              border: "0px solid rgb(193, 193, 193)",
+              padding: "0px",
+              textAlign: "center",
+            }}
+          >
+            <div id="ediIcon" className="row" style={{ margin: "20px 0px" }}>
+              {allEditor && allEditor.length
+                ? allEditor.map((editor) => {
+                    const { ediImg, ediName, id } = editor;
+                    return (
+                      <div
+                        className="col-lg-2 col-md-4 col-sm-4 col-xs-4 "
+                        style={{ border: "0 solid #022039" }}
+                        key={id}
+                      >
+                        <div className="divSeperate" style={{ padding: "5px" }}>
+                          <div style={{ textAlign: "center" }}>
+                            <img
+                              src={ediImg}
+                              className="img-fluid"
+                              style={{
+                                borderRadius: "18%",
+                                width: "100px",
+                                height: "100px",
+                              }}
+                              alt="Doctor"
+                              onError={handleError}
+                            />
+                          </div>
+                          <div className="titl">
+                            <div className="name">{ediName}</div>
+                            <div
+                              style={{ textAlign: "center" }}
+                              className="detail"
+                            >
+                              <button
+                                className={`btn ${id}`}
+                                onClick={(e) => modalHandler(e)}
+                              >
+                                View Details
+                              </button>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                );
-              })}
+                    );
+                  })
+                : ""}
+            </div>
           </div>
         </div>
-
-        {/* <div className="col-lg-4 col-md-4 col-sm-4 firstdivpanel">
-                    <p>
-                        We have the most capable and qualified scientists, doctors, researchers, medical professionals and English
-                        editors with excellent writing and editing skills in our editorial panel to perform editing and
-                        proofreading. Each editor has completed or attended a PhD, MS, MD, MCh, DS or equivalent course at a top
-                        university and has a proven record of publishing research papers in peer-reviewed international journals
-                        and has experience in AMA, MLA and APA style formatting. To meet the continuous increase in demand for
-                        manuscript editing by researchers in all scientific fields, we recruit editors continuously and carefully
-                        after thorough evaluation of their bio-data, English writing and editing skills and scientific credentials.
-                    </p>
-                </div>
-
-                <div className="col-lg-8 col-md-8 col-sm-8 seconddivpanel">
-                    <ul>
-                        <li className="pb-15">
-                            ManuscriptEdit has a wide panel of editors with advanced degrees (doctoral and post-doctoral level) in
-                            their area of specialization
-                        </li>
-                        <li className="pb-15">
-                            Our editorial panel consists of experts from all disciplines of science, engineering, fisheries,
-                            forestry, medicine, business, agriculture, art, culture, history, economics and politics, from all over
-                            the world.
-                        </li>
-                        <li className="pb-15">
-                            They are also full time professionals, scientists and researchers at research institutes and
-                            universities.
-                        </li>
-                        <li className="pb-15">
-                            The editors have vast experience in publishing their research findings in peer reviewed international
-                            journals. Some of them have published in journals with impact factors more than 20.0.
-                        </li>
-                        <li className="pb-15">
-                            The publications of some of our editors have appeared in the "Science Direct Top 25 articles" in their
-                            respective subject fields. They are also winners of many international scientific and research awards
-                            (e.g. NASA Technology Brief Award).
-                        </li>
-                        <li className="pb-15">
-                            Many of them are associated with scientific and academic journals as editors and peer- reviewers.
-                        </li>
-                        <li className="pb-15">
-                            We ensure that your work will be edited by an editor from top universities with the most relevant
-                            scientific background in your field of study.
-                        </li>
-                    </ul>
-                </div> */}
       </div>
     </>
   );

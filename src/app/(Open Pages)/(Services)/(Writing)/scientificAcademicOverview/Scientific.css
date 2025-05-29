@@ -1,0 +1,26 @@
+/* components/WritingServicesSection.module.css */
+
+.leftPane {
+  background-color: #329b8f;
+  min-height: 100%;
+}
+
+.iconBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.card-title{
+  background-color: #d1d8eb;
+  padding: 10px;
+  color: #070361;
+  border-radius: 5px;
+}
+h2 {
+  font-size: 24px;
+  color: #111;
+}

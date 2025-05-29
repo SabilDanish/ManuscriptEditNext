@@ -3,10 +3,17 @@ import styles from "./Breadcrum.module.css";
 
 export default function breadcrum(
     path:string,
-    header:string
+    header:string,
+    description:string='',
+    keywords:string=''
 ) {
     return (
       <>
+      {/* <Head>
+        <title>{header}</title>
+        <meta name="description" content={description}/>
+        <meta name="keywords" content={keywords} />
+      </Head> */}
       <section className={styles['bg-inner']}>
     <div className="container">
         <div className="row">
@@ -17,6 +24,7 @@ export default function breadcrum(
         </div>
     </div>
 </section>
+
       </>
     );
 }

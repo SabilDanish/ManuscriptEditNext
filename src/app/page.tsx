@@ -2,466 +2,179 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SwiperCore from "swiper";
-import clientFeedback from "./_Common/_ClientFeedback/ClientFeedback";
 import { Autoplay } from "swiper/modules";
-import ourProfessional from "./_Common/_OurProfessional/OurProfessional";
-import howWeWork from "./_Common/_HowWeWork/HowWeWork";
-import Link from "next/link";
-import redirect from "./_Common/_functionality/Redirect";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { useRouter } from 'next/navigation';
-import { useEffect } from "react";
-
-// import '../../public/js/vendor/jquery-3.2.1.min.js'
-// import '../../public/js/bootstrap.min.js'
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import FaqHome from "./_Common/FaqHome/FaqHome";
+// import BlogMob from "./_Common/BlogMob/BlogMob";
+// import BlogDesk from "./_Common/BlogDesk/BlogDesk";
+import Testimonial from "./_Common/Testimonial/testimonial";
+import Clients from "./_Common/Clients/Clients";
+import TopBannerForm from "./_Common/_TopBannerForm/TopBannerForm";
+import useBlogs from "./hooks/mainPage/useBlog";
+import OurServices from "./_Common/_OurServices/OurServices";
+import HowItWorks from "./_Common/HowItWorks/HowItWorks";
+import CustomizedServices from "./_Common/CustomizedServices/CustomServices";
+import WhyChooseUs from "./_Common/WhyChooseUs/WhyChooseUs";
+import NewsletterSubscribe from "./_Common/SubsNewsletter/SubsNewsletter";
+import Experts from "./_Common/ExpertCard/Experts";
+import PublicationPackages from "./_Common/Publication_package/Publication_package";
+import ServiceList from "./_Common/_ServiceData/ServiceData";
+import "bootstrap/dist/css/bootstrap.min.css";
+import CookieConsent from "react-cookie-consent";
+import { useEffect, useState } from "react";
+import AnimationSection from "./_Common/AnimationSection/AnimationSection";
+import Bloggy from "./_Common/Bloggy/Bloggy";
 export default function Home() {
   SwiperCore.use([Autoplay]);
-  const router = useRouter();
+  const { loading, error, blogs } = useBlogs();
 
-  useEffect(() => {
-    const storedDataString = sessionStorage.getItem('userId');
-    console.log({storedDataString})
+  // useEffect(() => {
+  //   fetch("http://localhost:8081/backendtesting")
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // }, []);
 
-    if (!storedDataString) {
-      // Redirect to /Auth page if storedData does not exist
-      router.push('/Auth');
-    }
-  }, []);
   return (
     <>
-      <ToastContainer />
-      <Swiper
-        // install Swiper modules
-        spaceBetween={10}
-        slidesPerView={1}
-        loop={true}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
+      <CookieConsent
+        location="bottom"
+        buttonText="Accept"
+        declineButtonText="Decline"
+        enableDeclineButton
+        cookieName="myCookieConsent"
+        style={{
+          background: "rgba(0, 0, 0, 0.8)",
+          backdropFilter: "blur(10px)",
+          color: "#FFFFFF",
+          fontSize: "14px",
+          padding: "20px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-around",
+          flexWrap: "wrap",
         }}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
+        buttonStyle={{
+          background: "linear-gradient(135deg, #4CAF50, #45a049)",
+          color: "#FFFFFF",
+          fontSize: "14px",
+          padding: "10px 20px",
+          borderRadius: "25px",
+          border: "none",
+          cursor: "pointer",
+          transition: "transform 0.2s ease",
+          // marginBottom: "6rem",
+        }}
+        declineButtonStyle={{
+          background: "linear-gradient(135deg, #F44336, #e53935)",
+          color: "#FFFFFF",
+          fontSize: "14px",
+          padding: "10px 20px",
+          borderRadius: "25px",
+          border: "none",
+          cursor: "pointer",
+          transition: "transform 0.2s ease",
+          // marginBottom: "6rem",
+        }}
+        expires={150}
+        onAccept={() => {
+          console.log("Cookies accepted!");
+        }}
+        onDecline={() => {
+          console.log("Cookies declined!");
+        }}
       >
-        <SwiperSlide>
-          <img className="silder-banner" src="/images/BANNER1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="silder-banner" src="/images/BANNER2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="silder-banner" src="/images/BANNER3.jpg" />
-        </SwiperSlide>
-      </Swiper>
-
-      <div className="flipbox_area top_feature mt-3">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-              <Link href={"/EditingOverview"}>
-                <div className="techno_flipbox mb-30">
-                  <div className="techno_flipbox_font">
-                    <div className="techno_flipbox_inner">
-                      <div className="techno_flipbox_icon">
-                        <div className="icon">
-                          <i className="flaticon-global-1"></i>
-                        </div>
-                      </div>
-                      <div className="flipbox_title">
-                        <h3>English Editing</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="techno_flipbox_back">
-                    <div className="techno_flipbox_inner">
-                      <div className="flipbox_title">
-                        <h3>English Editing</h3>
-                      </div>
-                      <div className="flipbox_desc">
-                        <p>
-                          Our services help you navigate the complex world of
-                          academic publishing
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-              <Link href={"/PackageService"}>
-                <div className="techno_flipbox mb-30">
-                  <div className="techno_flipbox_font">
-                    <div className="techno_flipbox_inner">
-                      <div className="techno_flipbox_icon">
-                        <div className="icon">
-                          <i className="flaticon-data"></i>
-                        </div>
-                      </div>
-                      <div className="flipbox_title">
-                        <h3>Publication Support</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="techno_flipbox_back">
-                    <div className="techno_flipbox_inner">
-                      <div className="flipbox_title">
-                        <h3>Publication Support</h3>
-                      </div>
-                      <div className="flipbox_desc">
-                        <p>
-                          Our services help you navigate the complex world of
-                          academic publishing
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-              <Link href={"/Writing"}>
-                <div className="techno_flipbox mb-30">
-                  <div className="techno_flipbox_font">
-                    <div className="techno_flipbox_inner">
-                      <div className="techno_flipbox_icon">
-                        <div className="icon">
-                          <i className="flaticon-interaction"></i>
-                        </div>
-                      </div>
-                      <div className="flipbox_title">
-                        <h3>Writing &amp; Rewriting</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="techno_flipbox_back">
-                    <div className="techno_flipbox_inner">
-                      <div className="flipbox_title">
-                        <h3>Writing &amp; Rewriting</h3>
-                      </div>
-                      <div className="flipbox_desc">
-                        <p>
-                          Our services help you navigate the complex world of
-                          academic publishing
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-              <Link href={"/ResearchSupportOverview"}>
-                <div className="techno_flipbox mb-30">
-                  <div className="techno_flipbox_font">
-                    <div className="techno_flipbox_inner">
-                      <div className="techno_flipbox_icon">
-                        <div className="icon">
-                          <i className="flaticon-developer"></i>
-                        </div>
-                      </div>
-                      <div className="flipbox_title">
-                        <h3>Research Support </h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="techno_flipbox_back">
-                    <div className="techno_flipbox_inner">
-                      <div className="flipbox_title">
-                        <h3>Research Support </h3>
-                      </div>
-                      <div className="flipbox_desc">
-                        <p>
-                          Our services help you navigate the complex world of
-                          academic publishing
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-              <Link href={"/CustomizedServices"}>
-                <div className="techno_flipbox mb-30">
-                  <div className="techno_flipbox_font">
-                    <div className="techno_flipbox_inner">
-                      <div className="techno_flipbox_icon">
-                        <div className="icon">
-                          <i className="flaticon-developer"></i>
-                        </div>
-                      </div>
-                      <div className="flipbox_title">
-                        <h3>Customized Services </h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="techno_flipbox_back">
-                    <div className="techno_flipbox_inner">
-                      <div className="flipbox_title">
-                        <h3>Customized Services</h3>
-                      </div>
-                      <div className="flipbox_desc">
-                        <p>
-                          Our services help you navigate the complex world of
-                          academic publishing
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-              <a
-                onClick={() => {
-                  redirect("corporate");
-                }}
-              >
-                <div className="techno_flipbox mb-30">
-                  <div className="techno_flipbox_font">
-                    <div className="techno_flipbox_inner">
-                      <div className="techno_flipbox_icon">
-                        <div className="icon">
-                          <i className="flaticon-developer"></i>
-                        </div>
-                      </div>
-                      <div className="flipbox_title">
-                        <h3>Corporate Services </h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="techno_flipbox_back">
-                    <div className="techno_flipbox_inner">
-                      <div className="flipbox_title">
-                        <h3>Corporate Services </h3>
-                      </div>
-                      <div className="flipbox_desc">
-                        <p>
-                          Our services help you navigate the complex world of
-                          academic publishing
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-              <Link href={"/PHDThesis"}>
-                <div className="techno_flipbox mb-30">
-                  <div className="techno_flipbox_font">
-                    <div className="techno_flipbox_inner">
-                      <div className="techno_flipbox_icon">
-                        <div className="icon">
-                          <i className="flaticon-developer"></i>
-                        </div>
-                      </div>
-                      <div className="flipbox_title">
-                        <h3>PhD Research and Thesis Help </h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="techno_flipbox_back">
-                    <div className="techno_flipbox_inner">
-                      <div className="flipbox_title">
-                        <h3>PhD Research and Thesis Help</h3>
-                      </div>
-                      <div className="flipbox_desc">
-                        <p>
-                          Unlock the full potential of your PhD research with
-                          tailored assistance every step of the way.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-              <Link href={"/MasterThesis"}>
-                <div className="techno_flipbox mb-30">
-                  <div className="techno_flipbox_font">
-                    <div className="techno_flipbox_inner">
-                      <div className="techno_flipbox_icon">
-                        <div className="icon">
-                          <i className="flaticon-developer"></i>
-                        </div>
-                      </div>
-                      <div className="flipbox_title">
-                        <h3>Masters Thesis Help</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="techno_flipbox_back">
-                    <div className="techno_flipbox_inner">
-                      <div className="flipbox_title">
-                        <h3>Masters Thesis Help </h3>
-                      </div>
-                      <div className="flipbox_desc">
-                        <p>
-                          Achieve mastery in your field with professional thesis
-                          writing and editing services from ManuscriptEdit.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
+        <div
+          style={{
+            marginRight: "20px",
+            paddingBottom: "2rem",
+            alignItems: "center",
+          }}
+        >
+          <span
+            style={{
+              fontSize: "18px",
+              fontWeight: "bold",
+              display: "block",
+              marginBottom: "5px",
+            }}
+          >
+            This website uses cookies
+          </span>
+          <span>
+            We use cookies to personalise content and ads, to provide social
+            media features and to analyse our traffic. We also share information
+            about your use of our site with our social media, advertising and
+            analytics partners who may combine it with other information that
+            you’ve provided to them or that they’ve collected from your use of
+            their services.{" "}
+            {/* <a
+              href="/privacy-policy"
+              style={{ color: "#4CAF50", textDecoration: "underline" }}
+            >
+              Learn more
+            </a> */}
+          </span>
         </div>
-      </div>
+      </CookieConsent>
+      
+      <meta
+        name="title"
+        content="ManuscriptEdit - Expert English Editing & Proofreading for Research Papers"
+      />
+      <meta
+        name="description"
+        content="Professional English editing, proofreading, and publication support for researchers, authors, and academics. Get high-quality manuscript editing, journal submission assistance, and research paper formatting from PhD experts. Fast turnaround and 100% quality guarantee."
+      />
+      <meta
+        name="keywords"
+        content="Research Paper Editing, Academic Editing Services, Scientific Manuscript Editing, English Proofreading Services, Journal Paper Editing, Publication Support Services, Editing Services for Researchers, Professional Academic Proofreading, Dissertation Editing Services, PhD Thesis Proofreading, Manuscript Formatting for Journals, High-Impact Journal Submission."
+      />
+      <meta
+        property="og:title"
+        content="ManuscriptEdit - Expert English Editing & Proofreading for Research Papers"
+      />
+      <meta
+        property="og:description"
+        content="Professional English editing, proofreading, and publication support for researchers, authors, and academics. Get high-quality manuscript editing, journal submission assistance, and research paper formatting from PhD experts. Fast turnaround and 100% quality guarantee."
+      />
+      <meta
+        property="og:image"
+        content="https://manuscriptedit.com/images/logo16.png"
+      />
+      <meta property="og:url" content="https://www.manuscriptedit.com" />
+      <meta property="og:type" content="website" />
 
-      {/* <div className="how_it_work pt-50 pb-65">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="section_title text_center mb-60 mt-3">
-                <div className="section_sub_title uppercase mb-3">
-                  <h6>FEATURES CASE</h6>
-                </div>
-                <div className="section_main_title">
-                  <h1>Our Working Process</h1>
-                </div>
-                <div className="em_bar">
-                  <div className="em_bar_bg"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="single_it_work mb-4">
-                <div className="single_it_work_content pl-2 pr-2">
-                  <div className="single_it_work_content_list pb-5">
-                    <span>1</span>
-                  </div>
-                  <div className="single_work_content_title pb-2">
-                    <h4>Select A Project</h4>
-                  </div>
-                  <div className="single_it_work_content_text pt-1">
-                    <p>
-                      We have the technology and industry expertise to develop
-                      solutions that can connect people and businesses across
-                      variety of mobile devices.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="single_it_work mb-4">
-                <div className="single_it_work_content pl-2 pr-2">
-                  <div className="single_it_work_content_list pb-5">
-                    <span>2</span>
-                  </div>
-                  <div className="single_work_content_title pb-2">
-                    <h4>Project Analysis</h4>
-                  </div>
-                  <div className="single_it_work_content_text pt-1">
-                    <p>
-                      We have the technology and industry expertise to develop
-                      solutions that can connect people and businesses across
-                      variety of mobile devices.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="single_it_work mb-4">
-                <div className="single_it_work_content pl-2 pr-2">
-                  <div className="single_it_work_content_list three pb-5">
-                    <span>3</span>
-                  </div>
-                  <div className="single_work_content_title pb-2">
-                    <h4>Deliver Result</h4>
-                  </div>
-                  <div className="single_it_work_content_text pt-1">
-                    <p>
-                      We have the technology and industry expertise to develop
-                      solutions that can connect people and businesses across
-                      variety of mobile devices.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-      {ourProfessional()}
-      {/* <div className="counter_area">
-        <div className="container">
-          <div className="row cntr_bg_up nagative_margin pt-50 pb-45">
-            <div className="col-lg-3 col-md-6 col-sm-12 d-flex mt-3 justify-content-center">
-              <img src="images/A1.png" width="100px" height="100px" alt="" />
-              <div className="single_counter text_center mb-4">
-                <div className="countr_text">
-                  <h1>
-                    <span className="counter">230</span>
-                    <span>+</span>{" "}
-                  </h1>
-                </div>
-                <div className="counter_desc">
-                  <h5>ACTIVE CLIENTS</h5>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 d-flex mt-3 justify-content-center">
-              <img src="images/A2.png" width="100px" height="100px" alt="" />
-              <div className="single_counter text_center mb-4">
-                <div className="countr_text">
-                  <h1>
-                    <span className="counter">95</span>
-                    <span>+</span>{" "}
-                  </h1>
-                </div>
-                <div className="counter_desc">
-                  <h5>TEAM ADVISORS</h5>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 d-flex mt-3 justify-content-center">
-              <img src="images/A3.png" width="100px" height="100px" alt="" />
-              <div className="single_counter text_center mb-4">
-                <div className="countr_text">
-                  <h1>
-                    <span className="counter">820</span>
-                    <span>+</span>{" "}
-                  </h1>
-                </div>
-                <div className="counter_desc">
-                  <h5>
-                    &nbsp;&nbsp;&nbsp;&nbsp;PROJECTS &nbsp;&nbsp;&nbsp;&nbsp;
-                  </h5>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 d-flex mt-3 justify-content-center">
-              <img src="images/A4.png" width="100px" height="100px" alt="" />
-              <div className="single_counter text_center mb-4">
-                <div className="countr_text">
-                  <h1>
-                    <span className="counter">14</span>
-                    <span>+</span>{" "}
-                  </h1>
-                </div>
-                <div className="counter_desc">
-                  <h5>GLORIOUS YEARS</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {howWeWork(3)}
-
-      {clientFeedback()}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="ManuscriptEdit - Expert English Editing & Proofreading for Research Papers"
+      />
+      <meta
+        name="twitter:description"
+        content="Professional English editing, proofreading, and publication support for researchers, authors, and academics. Get high-quality manuscript editing, journal submission assistance, and research paper formatting from PhD experts. Fast turnaround and 100% quality guarantee."
+      />
+      <meta
+        name="twitter:image"
+        content="https://manuscriptedit.com/images/logo16.png"
+      />
+      <ToastContainer />
+      <TopBannerForm />
+      <AnimationSection />
+      <WhyChooseUs />
+      <Clients />
+      <PublicationPackages />
+      <HowItWorks />
+      <CustomizedServices />
+      <ServiceList />
+      <OurServices />
+      <Experts />
+      <Testimonial />
+      <Bloggy />
+      {/* {blogs && blogs.length ? <BlogDesk blogs={blogs} /> : ""}
+      {blogs && blogs.length ? <BlogMob blogs={blogs} /> : ""} */}
+      <FaqHome />
+      <NewsletterSubscribe />
     </>
   );
 }

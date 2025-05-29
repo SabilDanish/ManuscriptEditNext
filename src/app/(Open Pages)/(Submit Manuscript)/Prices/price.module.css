@@ -1,0 +1,46 @@
+.priceCalculatorTable {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -2px 2px 8px #5161ce;
+}
+
+.priceCalculatorTableHeader {
+  background-color: #43505c;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.priceCalculatorTableHeader h5 {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  text-align: center ;
+  align-items: center;
+  justify-content: center;
+}
+
+.priceCalculatorTable p {
+  background-color: grey;
+  padding: 0.5rem;
+  width: 90%;
+  text-align: center;
+  margin-left: 5%;
+  border-radius: 4px;
+  color: white;
+}
+
+.getStartedButton {
+  background-color: #065424;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.priceQuoteButton {
+  background-color: #09314e;
+  color: white;
+  margin-left: 5px;
+  padding: 0.5rem;
+  border-radius: 5px;
+}

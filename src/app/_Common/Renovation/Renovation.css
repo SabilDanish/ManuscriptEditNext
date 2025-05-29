@@ -1,0 +1,416 @@
+.pricing-turnaround-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1100px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Heading */
+  .pricing-turnaround-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Pricing and Delivery Information */
+  .pricing-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .pricing-item, .delivery-item {
+    flex: 1;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+  }
+  
+  .pricing-item h3, .delivery-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .pricing-text, .delivery-time {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* CTA Button */
+  .cta-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .pricing-details {
+      flex-direction: column;
+    }
+  
+    .pricing-item, .delivery-item {
+      margin-bottom: 20px;
+    }
+  
+    .pricing-turnaround-section {
+      padding: 20px;
+    }
+  
+    .pricing-turnaround-heading {
+      font-size: 1.5rem;
+    }
+  }
+  /* Before and After Example Section */
+  .before-after-example-section {
+    background-color: #f7f7f7;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1100px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Heading */
+  .before-after-example-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Before and After Content */
+  .before-after-example-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .before-example, .after-example {
+    flex: 1;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .before-text, .after-text {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  .before-text {
+    border-color: #f5c6cb;
+    background-color: #f8d7da;
+  }
+  
+  .after-text {
+    border-color: #c3e6cb;
+    background-color: #d4edda;
+  }
+  
+  /* Explanation Section */
+  .explanation {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .before-after-example-content {
+      flex-direction: column;
+    }
+  
+    .before-text, .after-text {
+      margin-bottom: 10px;
+    }
+  
+    .before-after-example-section {
+      padding: 20px;
+    }
+  
+    .before-after-example-heading {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Editing Overview Section */
+  .editing-overview-section {
+    background-color: #f4f7f6;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1100px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Heading */
+  .editing-overview-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Table Styling */
+  .editing-overview-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  
+  .editing-overview-table th, .editing-overview-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .editing-overview-table th {
+    background-color: #2c3e50;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .editing-overview-table td {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .editing-overview-table tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  
+  .editing-overview-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .editing-overview-section {
+      padding: 20px;
+    }
+  
+    .editing-overview-heading {
+      font-size: 1.5rem;
+    }
+  
+    .editing-overview-table th, .editing-overview-table td {
+      padding: 10px;
+    }
+  }
+
+
+  .editing-overview-section-unique {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .editing-overview-container-unique {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .editing-overview-title-unique {
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .editing-overview-table-unique {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .editing-overview-table-unique th,
+  .editing-overview-table-unique td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .editing-overview-table-unique th {
+    background-color: #007BFF;
+    color: #ffffff;
+  }
+  
+  .editing-overview-table-unique tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .editing-overview-table-unique tr:hover {
+    background-color: #ddd;
+  }
+  
+  .editing-overview-description-unique {
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .editing-overview-button-unique {
+
+    padding: 10px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .editing-overview-button-unique:hover {
+    background-color: #0056b3;
+  }
+
+  .cta-button:hover{
+    color: white;
+    text-decoration: none;
+  }
+
+  .wcus-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .wcus-title {
+    font-size: 26px;
+    color: #111;
+    margin-bottom: 10px;
+  }
+  
+  .wcus-subtext {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .wcus-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .wcus-benefit-item {
+    flex: 1 1 calc(50% - 10px);
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .wcus-benefit-item i {
+    font-size: 22px;
+    color: #007bff;
+    margin-right: 10px;
+  }
+  
+  .wcus-client-reviews {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .wcus-reviews-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .wcus-review {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #fdf7f3;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wcus-review img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .wcus-review p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .wcus-live-counter {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  .card-title {
+    background-color: #d1d8eb;
+    padding: 10px;
+    color: #070361;
+    border-radius: 5px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #111;
+}
+  

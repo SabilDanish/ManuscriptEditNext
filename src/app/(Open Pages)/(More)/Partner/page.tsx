@@ -10,7 +10,7 @@ export default function Home() {
 
  <div className="col-lg-8 col-md-8 col-sm-8 pt-3 mb-5 mx-auto dflex573">
      <div className="col-lg-4 col-md-4 col-sm-4 card">
-         <img className="imgcenter" src="images/jor-min.jpeg" alt=""/>
+         <img className="imgcenter" src="images/jor-min.jpeg" alt="#"/>
      </div>
      <div className="col-lg-8 col-md-8 col-sm-8 card">
          <div className="card-body">

@@ -1,21 +1,30 @@
+"use client"
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../../utils/metaFile.js'
+import Metadata from "@/app/Metadata";
+
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
+  const pathName: string = usePathname().split("/").filter(val => val).join("")
+  let metaData = newData[pathName]
   return (
     <>
-    {breadcrum("Services / Research Support", "Fully Experienced Researchers")}
+    {<Metadata metaData={metaData} />}
+    {/* {breadcrum("Services / Research Support", "Fully Experienced Researchers")} */}
       <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">
+              {/* <h3 className="pt-2 pb-3">
                 Tailored Support for Fully Experienced Researchers - Strategize,
                 Submit, Succeed
-              </h3>
+              </h3> */}
               <p>
                 At the pinnacle of academic achievement, established researchers
                 like you require bespoke services that comprehend the nuances of
-                your work. Manuscriptedit.com is dedicated to providing that
+                your work. ManuscriptEdit.com is dedicated to providing that
                 elite level of support, ensuring your continued success and
                 impact in the scholarly community.
               </p>
@@ -438,7 +447,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a>
-                        How can Manuscriptedit.com help increase the impact of
+                        How can ManuscriptEdit.com help increase the impact of
                         my research?
                       </a>
                       <p>
@@ -461,7 +470,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a>
-                        How does Manuscriptedit.com help with peer review
+                        How does ManuscriptEdit.com help with peer review
                         preparation?
                       </a>
                       <p>

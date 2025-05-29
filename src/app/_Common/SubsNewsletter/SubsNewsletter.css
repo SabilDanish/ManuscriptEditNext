@@ -1,0 +1,58 @@
+.newsletter-section {
+  background-color: #151130; /* Navy blue background */
+  color: white;
+  padding: 20px;
+  border: 1px solid #0f2a51;
+}
+
+.subscribe-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.subscribe-input {
+  display: flex;
+  width: 100%;
+}
+
+.email-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.subscribe-button {
+  background-color: #5161ce; /* Green color for the button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.subscribe-button:hover {
+  background-color: #761408; /* Darker green on hover */
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  color: white;
+  background-color: #0f2a51; /* Light navy background for icons */
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  background-color: #1a345a; /* Darker navy on hover */
+}

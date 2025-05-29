@@ -1,14 +1,20 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
+import Metadata from "@/app/Metadata";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../utils/metaFile.js'
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
+  // const pathName: string = usePathname().split("/").filter(val => val).join("")
+  // let metaData = newData[pathName]
   return (
     <>
-    {breadcrum("Quality", "Quality Assurance")}
-      <section className="pt-5 pb-5">
+    {/* {<Metadata metaData={metaData} />} */}
+    {/* {breadcrum("Quality", "Service Guarantee")} */}
+      {/* <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-5">Quality Assurance Overview</h3>
               <p className="pt-3">
                 ASetting the stage for the importance of editing in the realm of
                 written communication. Introduction to the multifaceted nature
@@ -25,16 +31,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section id="onfocus" className="onfocus">
+      <section id="onfocus" className="onfocus py-2">
         <div className="container-fluid p-0" data-aos="fade-up">
           <div className="row g-0">
             <div className="col-lg-5 video-play position-relative">
-              <a
-                href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-                className="glightbox play-btn"
-              ></a>
+              
             </div>
             <div className="col-lg-7" style={{ paddingLeft: "0px !important" }}>
               <div className="content d-flex flex-column justify-content-center h-100">

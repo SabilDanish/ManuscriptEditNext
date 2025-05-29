@@ -1,0 +1,48 @@
+import Link from "next/link";
+import { Service } from "@/app/utils/interfaces";
+import { servicesData } from "@/app/utils/serviceData";
+import "./ServiceData.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen, faFileAlt, faCog, faPenNib, faMicroscope } from "@fortawesome/free-solid-svg-icons";
+
+const getIconForCategory = (category: string) => {
+  switch (category) {
+    case "English Editing":
+      return <FontAwesomeIcon icon={faPen} />;
+    case "Publication Support":
+      return <FontAwesomeIcon icon={faFileAlt} />;
+    case "Scientific / Academic Writing":
+      return <FontAwesomeIcon icon={faPenNib} />;
+    case "Research Support":
+      return <FontAwesomeIcon icon={faMicroscope} />;
+    default:
+      return <FontAwesomeIcon icon={faCog} />;
+  }
+};
+
+const ServiceList: React.FC = () => {
+  return (
+    <div className="container">
+      <h2 className="text-center mb-3" style={{marginTop: "1rem !important" }}>
+        Our Services
+      </h2>
+      {servicesData.map((service: Service, index: number) => (
+        <div key={index} className="service-category">
+          <div className="category-title">
+            <div className="icon">{getIconForCategory(service.category)}</div>
+            <h3>{service.category}</h3>
+          </div>
+          <div className="sub-services">
+            {service.subServices.map((subService, idx) => (
+              <Link key={idx} href={subService.url} style={{textDecoration:'none'}}>
+                <div className="sub-service-item">{subService.name}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default ServiceList;

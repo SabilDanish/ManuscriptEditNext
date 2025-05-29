@@ -1,337 +1,438 @@
-'use client';
+"use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
-import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import styles from "@/app/_Common/Renovation/Renovation.module.css";
+import "@/app/_Common/Renovation/Renovation.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@/app/_Common/Dropdown2/Dropdown2.css";
+import Head from "next/head";
+import {
+  faFileUpload,
+  faSearch,
+  faEdit,
+  faCheckCircle,
+  faRedo,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import FormattingPricingTable from "@/app/_Common/JSRTable/JSRTable";
 
 export default function Home() {
+  const steps = [
+    {
+      stepss: "Step 1 ➔",
+      icon: faFileUpload,
+      title:
+        "Manuscript Review & Journal Selection – Understanding the target journal’s submission guidelines.",
+    },
+    {
+      stepss: "Step 2 ➔",
+      icon: faSearch,
+      title:
+        "Document Structuring & Formatting – Ensuring compliance with font, margins, sections, and figure placements.",
+    },
+    {
+      stepss: "Step 3 ➔",
+      icon: faEdit,
+      title:
+        "Reference & Citation Formatting – Adjusting APA, Harvard, Vancouver, IEEE, and other citation styles.",
+    },
+    {
+      stepss: "Step 4 ➔",
+      icon: faCheckCircle,
+      title:
+        "Tables, Figures & Graphs Optimization – Aligning tables, equations, and illustrations as per journal requirements.",
+    },
+    {
+      stepss: "Step 5 ➔",
+      icon: faCheckCircle,
+      title:
+        "Final Compliance Check & Submission-Ready Formatting – Ensuring error-free, journal-ready document delivery.",
+    },
+  ];
+
+  const accord2: { question: string; answer: string }[] = [
+    {
+      question: "Do you format according to journal guidelines?",
+      answer:
+        "Yes! We ensure compliance with Elsevier, Springer, Wiley, BMJ, and PLOS ONE formatting standards.",
+    },
+    {
+      question: "Can you format citations and references?",
+      answer:
+        "Yes! We apply APA, MLA, Vancouver, IEEE, Chicago, Harvard, and journal-specific citation styles.",
+    },
+    {
+      question: "Do you format tables, figures, and graphs?",
+      answer:
+        "Yes! We ensure proper alignment, numbering, captions, and high-resolution figure adjustments.",
+    },
+    {
+      question: "Can you prepare my manuscript for journal submission?",
+      answer:
+        "Yes! We offer cover letter formatting, word count adjustments, and structured journal-compliant formatting.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply upload your manuscript, and our formatting experts will make it submission-ready.",
+    },
+  ];
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const gap = {
+    marginTop: "40px",
+  };
   return (
     <>
-      {breadcrum(
-        "Services / Publication Package Services",
-        "Formatting"
-      )}
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="section_title text_center mb-50 mt-5">
-              <div className="section_main_title">
-                <h1>Formatting</h1>
-              </div>
-              <div className="em_bar">
-                <div className="em_bar_bg"></div>
-              </div>
+
+    <meta
+        name="title"
+        content="Journal Formatting Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Accurate journal formatting (AMA, APA, IEEE) to meet publisher guidelines."
+      />
+      <Head>
+        <link rel="canonical" href="https://manuscriptedit.com/Formatting" />
+      </Head>
+      <div>
+        <section style={gap}>
+          <div className={styles.textWrapper}>
+            <h1 className={styles.heading}>
+              Professional Manuscript Formatting – Get Your Research
+              Submission-Ready Ensure your manuscript formatting aligns
+              precisely with journal submission requirements.
+            </h1>
+            <p className={styles.subtext}>
+              Our expert formatting services guarantee compliance with journal
+              formatting guidelines, including reference and citation formatting
+              and structured manuscript alignment, including figures and tables.
+              We enhance language style, maintain word count limits, and ensure
+              proper formatting as per target journal guidelines for a seamless
+              publication process.
+            </p>
+            <div className={styles.buttonGroup}>
+              <a href="https://manuscriptedit.com/QuotationNew/">
+                <button className={styles.primaryButton}>
+                  Get Journal Formatting Assistance
+                </button>
+              </a>
+
+              <a href="https://manuscriptedit.com/QuotationNew/">
+                <button className={styles.secondaryButton}>
+                  Request a Free Consultation
+                </button>
+              </a>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="tab_area pb-60 pt-130">
-        <div className="container">
-          <div className="row nagative_margin2">
-            <div className="col-lg-12">
-              <div className="tab_content">
-                <ul className="nav nav-tabs" role="tablist">
-                  <li className="nav-item">
-                    <a
-                     className="nav-link"
-                     data-toggle="tab"
-                     href="#tabs-1"
-                     role="tab"
-                     aria-expanded="false"
-                    >
-                      <i className="fa fa-laptop"></i> TARGET JOURNAL FORMATTING
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      data-toggle="tab"
-                      href="#tabs-2"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      <i className="fa fa-laptop"></i> CAMERA READY FORMATTING
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      data-toggle="tab"
-                      href="#tabs-3"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      <i className="fa fa-laptop"></i> TYPESETTING & INDEXING
-                    </a>
-                  </li>
-                </ul>
-                <div className="tab-content pt-3 ">
+        </section>
+
+        {/* Proofreading Overview Section */}
+        <section className={styles.benefitsWrapper}>
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>
+              Key Benefits of ManuscriptEdit’s Manuscript Formatting Services:
+            </h2>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✔ Expert Manuscript Formatting Assistance – Adherence to journal
+                standards, including Elsevier, Springer, Wiley, BMJ, PLOS ONE,
+                Nature, IEEE, and more.
+              </li>
+              <li>
+                ✔Precise Reference and Citation Formatting – Supporting APA,
+                MLA, Chicago, Harvard, Vancouver, IEEE, and custom journal
+                styles.
+              </li>
+              <li>
+                ✔ Error-Free Manuscript Structure and Layout – Ensuring proper
+                margins, headings, subheadings, font consistency, and figure
+                placement.
+              </li>
+              <li>
+                ✔ Tables, Figures &amp; Equations Alignment – Ensuring
+                structured table formatting, figure captions, and correct
+                equation placement.
+              </li>
+              <li>
+                ✔ Comprehensive Manuscript Formatting Support – Checking word
+                count adherence, section structuring, cover letter formatting,
+                and abstract length compliance.
+              </li>
+            </ul>
+          </div>
+
+          <section className={styles.proofreadingWrapper}>
+            <h2 className={styles.headingCenter}>
+              Our Journal Formatting Services
+            </h2>
+            <table className="editing-overview-table">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Best For</th>
+                  <th>Key Features</th>
+                  <th>Turnaround Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Basic Formatting</td>
+                  <td>First-time authors & students</td>
+                  <td>
+                    Font, margins, headings, tables, Standard citation
+                    formatting
+                  </td>
+                  <td>3-5 Days</td>
+                </tr>
+                <tr>
+                  <td>Advanced Formatting</td>
+                  <td>Researchers submitting to top-tier journals</td>
+                  <td>
+                    Journal-specific compliance, In-depth reference structuring
+                  </td>
+                  <td>5-7 Days</td>
+                </tr>
+                <tr>
+                  <td>Journal-Specific Citation & Reference Formatting</td>
+                  <td>Authors ensuring proper citations</td>
+                  <td>APA, MLA, Vancouver, IEEE, Cross-referencing checks</td>
+                  <td>3-5 Days</td>
+                </tr>
+                <tr>
+                  <td>Figures, Tables & Graph Alignment</td>
+                  <td>Researchers with complex data presentations</td>
+                  <td>
+                    Figure formatting, high-resolution adjustments, Caption &
+                    table alignment
+                  </td>
+                  <td>4-6 Days</td>
+                </tr>
+                <tr>
+                  <td>Journal Submission-Ready Package</td>
+                  <td>Researchers submitting final manuscripts</td>
+                  <td>
+                    Cover letter formatting, Response to reviewer comments
+                    formatting
+                  </td>
+                  <td>5-7 Days</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        {/* New Proofreading Details Section */}
+        <div className={styles.processContainer}>
+          <h2 className={styles.processTitle}>How It Works</h2>
+          <div className={styles.processSteps1}>
+            {steps.map((step, index) => (
+              <div key={index} className={styles.processStep}>
+                <h5 className={styles.stepHeading}>{step.stepss}</h5>
+                <FontAwesomeIcon
+                  icon={step.icon}
+                  size="3x"
+                  className={styles.stepIcon}
+                />
+                <h3 className={styles.stepDescription}>{step.title}</h3>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.buttonGroup}>
+            <a href="https://manuscriptedit.com/QuotationNew/">
+              <button className={styles.primaryButton}>
+                Start Your Scientific Illustration Project
+              </button>
+            </a>
+          </div>
+
+          <section className="before-after-example-section">
+            <h2 className="before-after-example-heading">
+              Before & After Journal Formatting – See the Difference
+            </h2>
+
+            <div className="before-after-example-content">
+              <div className="before-example">
+                <h3>Before (Unformatted Manuscript with Submission Errors):</h3>
+                <p className="before-text">
+                  “Title in incorrect font, double-spacing not applied,
+                  citations missing from references, figures placed incorrectly,
+                  and word count exceeding journal guidelines.”
+                </p>
+              </div>
+
+              <div className="after-example">
+                <h3>
+                  After (Professionally Formatted, Submission-Ready Manuscript):
+                </h3>
+                <p className="after-text">
+                  “Manuscript formatted to IEEE guidelines, proper citations
+                  applied in APA style, tables aligned correctly, and structured
+                  for seamless journal submission.”
+                </p>
+              </div>
+            </div>
+
+            <div className="explanation">
+              <p>
+                Journal Formatting ensures compliance, professional
+                presentation, and seamless submission.
+              </p>
+            </div>
+          </section>
+
+          <section className="pricing-turnaround-section">
+            <h2 className="pricing-turnaround-heading">
+              Pricing and Turnaround Time
+            </h2>
+
+            {/* <div className="pricing-details">
+              <div className="pricing-item">
+                <h3>Starting Price</h3>
+                <p className="pricing-text">
+                  $0.08 per word (Basic Formatting)
+                </p>
+              </div>
+
+              <div className="delivery-item">
+                <h3>Standard Delivery</h3>
+                <p className="delivery-time">
+                  $0.15 per word (Advanced Journal-Specific Formatting)
+                </p>
+              </div>
+
+              <div className="delivery-item">
+                <h3>Express Delivery</h3>
+                <p className="delivery-time">
+                  3 Days – 7 Days (Depending on complexity)
+                </p>
+              </div>
+            </div>  */}
+ <FormattingPricingTable/>
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/QuotationNew/"
+                className="cta-button"
+              >
+                Check Pricing & Get a Quote
+              </a>
+            </div>
+          </section>
+
+          <div className="wcus-container">
+            <div className="wcus-client-reviews">
+              <h3 className="editing-overview-heading">Testimonial</h3>
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                    text: "The best editing service I've used. Got published in record time!",
+                    name: "Dr. Emily Carter",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                    text: "Exceptional support from expert editors. Highly recommended!",
+                    name: "Prof. John Williams",
+                  },
+                  {
+                    imgSrc:
+                      " https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a href="/Testimonial" className="cta-button">
+                See More Reviews
+              </a>
+            </div>
+          </div>
+
+          <div className="container" style={{ marginTop: "3rem" }}>
+            <div className="accordion__wrapper2">
+              <h1 className="accordion__title">FAQs</h1>
+
+              {accord2.map((faq, index) => (
+                <div
+                  className="accordion"
+                  key={index}
+                  style={{
+                    paddingBottom: "1rem",
+                    marginBottom: "1rem",
+                    color: "#494949",
+                  }}
+                >
                   <div
-                    className="tab-pane mt-60 active"
-                    id="tabs-1"
-                    role="tabpanel"
+                    className="accordion__header"
+                    onClick={() => toggleAccordion(index)}
                   >
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div className="tab_thumb">
-                          <img src="/images/portfolio/tab2.jpg" alt="" />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div className="tab_content ml-3">
-                          <div className="tab_content_title pb-4">
-                            <h4>What We Provide</h4>
-                          </div>
-                          <div className="tab_content_text">
-                            <p>
-                              Each academic journal has a specific requirement
-                              and its own style of formatting texts, figures,
-                              tables and references. We can help you in
-                              formatting your manuscript correctly for the
-                              target journal to ensure that your manuscript is
-                              not returned from editorial office, and is peer
-                              reviewed. Our editors take special attention to
-                              minute details of the formatting style to make an
-                              error-free formatting of the whole manuscript.
-                            </p>
-                          </div>
-                          <div className="tab_content_sub_text">
-                            <ul>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
-                                Format the full manuscript in accordance with
-                                the author's guidelines of the journal.
-                              </li>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
-                                Ensure the desired line spacing and margin of
-                                the journal.
-                              </li>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
-                                Arrange texts, paragraphs and figures within a
-                                specified margin and position.
-                              </li>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
-                                Ensure that references are presented in correct
-                                style (e.g. APA, MLA, CMS, Turabian etc.)
-                              </li>
-
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i> If
-                                available, use the word template of the journal
-                                for the working document to ensure correct
-                                formatting according to the journal standard.
-                              </li>
-                            </ul>
-                            <p className="mt-3">
-                              The service does not include redrawing the figure,
-                              table and other illustrations.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <h2 className="accordion__question">{faq.question}</h2>
+                    {openIndex === index ? "⮝" : "⮟"}
+                    {/* <span className="accordion__icon">
+                <i
+                  className={`${openIndex === index ? "ri-subtract-fill" : "ri-add-line"}`}
+                ></i>
+              </span> */}
                   </div>
-                  <div className="tab-pane mt-60" id="tabs-2" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div className="tab_thumb">
-                          <img src="/images/portfolio/tab1.jpg" alt="" />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div className="tab_content ml-3">
-                          <div className="tab_content_title pb-4">
-                            <h4>What We Provide</h4>
-                          </div>
-                          <div className="tab_content_text">
-                            <p>
-                              Most conference proceedings and some journals
-                              often insist on preparing the full text of your
-                              manuscript in camera-ready format, i.e. preparing
-                              the final manuscript which is ready for direct
-                              printing by the publishers. We can help you in
-                              making the camera ready format of your manuscript.
-                              So that you can save time and effectively utilize
-                              it solely for research. It's a very time consuming
-                              process to organize the completed paper in the
-                              required format.
-                            </p>
-                            <p>
-                              Our camera-ready formatting service includes the
-                              following:
-                            </p>
-                          </div>
-                          <div className="tab_content_sub_text">
-                            <ul>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
-                                Prepare designated layout and formatting style.
-                              </li>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
-                                Arrange texts, paragraphs and figures within a
-                                specified margin and position.
-                              </li>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
-                                Ensure that the manuscript is ready for direct
-                                printing by the publisher.
-                              </li>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i> Use
-                                the desired word template for the working
-                                document, if available.
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div
+                    className="accordion__content"
+                    style={{
+                      height: openIndex === index ? "auto" : "0",
+                    }}
+                  >
+                    <div
+                      className="accordion__answer"
+                      style={{
+                        padding: "0",
+                        paddingTop: "0.5rem",
+                        marginBottom: "0",
+                        backgroundColor: "#f0f8ff",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
                   </div>
-                  <div className="tab-pane mt-60" id="tabs-3" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div className="tab_content">
-                          <div className="tab_content_title pb-4">
-                            <h4>Data Server Security</h4>
-                          </div>
-                          <div className="tab_content_text">
-                            <p>
-                              Typesetting is an important part of preparing a
-                              manuscript for the market. Our professional
-                              typesetting service involves enhancing the quality
-                              and value of our clients' manuscripts by:
-                            </p>
-                          </div>
-                          <div className="tab_content_sub_text">
-                            <ul>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
-                                Reformatting the text and images into the
-                                required style.
-                              </li>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
-                                Arranging the text, tables and figures on the
-                                predefined specifications of page sizes.
-                              </li>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
-                                Preparing a fully formatted manuscript for
-                                direct printing.
-                              </li>
-                              <li>
-                                {" "}
-                                <i className="fa fa-long-arrow-right"></i>{" "}
-                                Indexing is generally designed to help readers
-                                find their way around a document quickly and
-                                easily. This is made by preparing a route map
-                                for a document. The indexing service at
-                                Manuscriptedit covers manuscripts such as
-                                research papers, books, website, or database.
-                                Our indexers will make a systematic list of all
-                                the entities for an easy navigation within the
-                                manuscript.
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div className="tab_thumb">
-                          <img src="/images/portfolio/tab2.jpg" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
-              Request a Quote
-              </button>
-              <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
-              Submit Manuscript
-              </button>
-              <button onClick={() => {redirect('contact-us')}} className="btn btn-primary mt-3 mr-3">
-              Schedule a Call
-              </button>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-     
       </div>
-
-      <div className="container">
-        <table className="table text-center">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="col">Formatting</th>
-              <th scope="col">Turnaround Time in Days</th>
-              <th scope="col">Price per Assignment in US$</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td rowSpan={5}>Target Journal Formatting</td>
-              <td>1</td>
-              <td>0.037</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>0.033</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>0.03</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>0.026</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>0.022</td>
-            </tr>
-            <tr>
-              <td rowSpan={4}>Camera Ready Formatting	</td>
-              <td>2</td>
-              <td>0.04</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>0.037</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>0.033</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>0.03</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      {howWeWork(2)}
-      {SpecializedArea(false)}
-      {clientFeedback()}
     </>
   );
 }

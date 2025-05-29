@@ -1,14 +1,20 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
+import Metadata from "@/app/Metadata";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../utils/metaFile.js'
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
+  // const pathName: string = usePathname().split("/").filter(val => val).join("")
+  // let metaData = newData[pathName]
   return (
     <>
-      {breadcrum("Quality", "Quality & Delivery")}
-      <section className="pt-5 pb-5">
+    {/* {<Metadata metaData={metaData} />} */}
+      {/* {breadcrum("Quality", "Quality & Delivery")} */}
+      {/* <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-5">Quality & Delivery Overview</h3>
               <p className="pt-3">
                 ASetting the stage for the importance of editing in the realm of
                 written communication. Introduction to the multifaceted nature
@@ -25,20 +31,20 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section id="onfocus" className="onfocus">
+      <section id="onfocus" className="onfocus mt-2">
         <div className="container-fluid p-0" data-aos="fade-up">
           <div className="row g-0">
             <div className="col-lg-5 video-play position-relative">
-              <a
+              {/* <a
                 href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
                 className="glightbox play-btn"
-              ></a>
+              ></a> */}
             </div>
             <div className="col-lg-7" style={{ paddingLeft: "0px !important" }}>
               <div className="content d-flex flex-column justify-content-center h-100">
-                <h3 className="fst-italic">MANUSCRIPTEDIT QUALITY GUARANTEE</h3>{" "}
+                <h3 className="fst-italic">ManuscriptEdit Quality Guarantee</h3>{" "}
                 <br />
                 <ul>
                   <li>
@@ -89,7 +95,7 @@ export default function Home() {
             <div className="col-lg-9 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
               <h3 className="fst-italic">
                 {" "}
-                HOW TO APPLY FOR MANUSCRIPTEDIT'S QUALITY GUARANTEE
+                How to Apply for ManuscriptEdit’s Quality Guarantee
               </h3>
               <p>
                 {" "}
@@ -103,7 +109,7 @@ export default function Home() {
               <p>
                 {" "}
                 <i className="bi bi-check-circle-fill"></i> You will receive a
-                response from Manuscriptedit regarding the independent
+                response from ManuscriptEdit regarding the independent
                 reviewer's assessment and suggested solution for resolution
                 within two business days.
               </p>

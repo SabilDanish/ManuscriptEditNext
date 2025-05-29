@@ -23,7 +23,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/smallcard1.webp"
+                    src="/images/smallcard1.webp"
                     width="100px"
                     height="100px"
                     alt=""
@@ -38,7 +38,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/smallcard2.png"
+                    src="/images/smallcard2.png"
                     width="100px"
                     height="100px"
                     alt=""
@@ -53,7 +53,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/smallcard3.png"
+                    src="/images/smallcard3.png"
                     width="100px"
                     height="100px"
                     alt=""
@@ -66,7 +66,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/smallcard4.webp"
+                    src="/images/smallcard4.webp"
                     width="100px"
                     height="100px"
                     alt=""
@@ -79,7 +79,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/smallcard5.png"
+                    src="/images/smallcard5.png"
                     width="100px"
                     height="100px"
                     alt=""
@@ -94,7 +94,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/smallcard6.webp"
+                    src="/images/smallcard6.webp"
                     width="100px"
                     height="100px"
                     alt=""
@@ -162,7 +162,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/A5.png"
+                    src="/images/A5.png"
                     width="100px"
                     height="100px"
                     alt=""
@@ -177,7 +177,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/A8.png"
+                    src="/images/A8.png"
                     width="100px"
                     height="100px"
                     alt=""
@@ -192,7 +192,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/A7.png"
+                    src="/images/A7.png"
                     width="100px"
                     height="100px"
                     alt=""
@@ -205,7 +205,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/A6.png"
+                    src="/images/A6.png"
                     width="100px"
                     height="100px"
                     alt=""
@@ -218,7 +218,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/A9.png"
+                    src="/images/A9.png"
                     width="100px"
                     height="100px"
                     alt=""
@@ -233,7 +233,7 @@ export default function howWeWork(type: number = 1) {
               <div className="card-body">
                 <Link href={"/Process"}>
                   <img
-                    src="images/A10.png"
+                    src="/images/A10.png"
                     width="100px"
                     height="100px"
                     alt=""

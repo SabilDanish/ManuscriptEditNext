@@ -1,106 +1,502 @@
-'use client';
+"use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import Link from "next/link";
+import styles from "@/app/_Common/Renovation/Renovation.module.css";
+import "@/app/_Common/Renovation/Renovation.css";
+import "@/app/_Common/Dropdown2/Dropdown2.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChartLine,
+  faCheckCircle,
+  faCogs,
+  faEdit,
+  faFileAlt,
+  faFileUpload,
+  faPaperPlane,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import FormattingPricingTable from "@/app/_Common/JSRTable/JSRTable";
 
 export default function Home() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const accord2 = [
+    {
+      question: "How do you select the best journal for my research?",
+      answer:
+        "We evaluate your research scope, study type, and target audience, then shortlist journals indexed in Scopus, Web of Science, and PubMed.",
+    },
+    {
+      question: "Can you help me avoid predatory journals?",
+      answer:
+        "Yes! We screen all recommendations to eliminate predatory or unethical journals.",
+    },
+    {
+      question: "Do you guarantee journal acceptance?",
+      answer:
+        "While we maximize compatibility and compliance, final acceptance depends on journal peer review policies.",
+    },
+    {
+      question:
+        "Do you help with manuscript formatting for journal submission?",
+      answer:
+        "Yes! We provide formatting, reference structuring, and cover letter writing services.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply upload your manuscript, and our journal selection experts will recommend the best-fit journals.",
+    },
+  ];
+
   return (
     <>
-      {breadcrum(
-        "Services / Publication Package Services",
-        "Journal Selection"
-      )}
-      <section className="pt-5 pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <h3 className="pt-2 pb-3">What We Provide</h3>
-              <p>
-                Choosing the appropriate journal for publishing is very crucial
-                but tedious process. You may have obtained excellent set of
-                results, but if you submit to a journal whose scope and target
-                audience are irrelevant, there is a little chance of getting
-                published. Our experienced editors, (some of them are also
-                reviewer of reputed journals) with vast experience in editing
-                and publishing articles, will help you to select the correct
-                journal where the chances of getting your work published is
-                maximum. They will shortlist 4-5 journals, which suit your
-                requirement. They consider certain factors while selecting
-                appropriate journals for your manuscript. Here we list few
-                factors as example:
-              </p>
-              <div className="em-about-icon-box2">
-                <div className="list-icon">
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>Plagiarism check report. </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      Identify significant overlaps in text with published and
-                      in-press articles.{" "}
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>Reduction or elimination of plagiarized text.</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>Ensuring no extent of overlap in text.</h6>
-                  </span>
-                  <p className="mt-2">
-                    We match these points with your requirement and shortlist
-                    5-6 journals for you. Depending on your requirements, you
-                    can choose one from the list of appropriate journals to
-                    submit your manuscript.
-                  </p>
-                </div>
-              </div>
-              <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
-              Order Now
-              </button>
-              <button onClick={() => {redirect('contact-us')}} className="btn btn-primary mt-3 mr-3">
-              Schedule a Call
-              </button>
-            </div>
-            <div className="col-md-6">
-              <img
-                src="/images/menuscimg/subtantive.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
-            </div>
+      <meta
+        name="title"
+        content="Journal Selection Consulting | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Expert journal selection to target high-impact, Scopus-indexed publications."
+      />
+      <meta
+        name="keywords"
+        content="Journal Selection Services for Research Papers, Find the Best Journal for Publication, Scopus & Web of Science Journal Recommendations, Academic Journal Matching & Submission Assistance."
+      />
+      <section style={{ marginTop: "40px" }}>
+        <div className={styles.textWrapper}>
+          <h1 className={styles.heading}>
+            Find the Best-Suited Journals for your Manuscript- Expert Journal
+            Selection Service for Publication
+          </h1>
+          <p className={styles.subtext}>
+            Maximize your manuscript’s acceptance rate with our comprehensive
+            journal selection service. Our specialists evaluate impact factors,
+            indexing, and journal scope to identify the best-suited journals for
+            your manuscript. We ensure compliance with journal submission
+            guidelines and formatting, helping you navigate the publication
+            support process seamlessly.
+          </p>
+          <div className={styles.buttonGroup}>
+            <button
+              className={styles.primaryButton}
+              onClick={() =>
+                (window.location.href =
+                  "https://manuscriptedit.com/QuotationNew")
+              }
+            >
+              Get Journal Selection Assistance
+            </button>
+            <button
+              className={styles.secondaryButton}
+              onClick={() =>
+                (window.location.href =
+                  "https://manuscriptedit.com/QuotationNew/")
+              }
+            >
+              Request a Free Consultation
+            </button>
           </div>
         </div>
       </section>
-      <div className="container">
-        <table className="table text-center">
-          <thead className="thead-dark">
+      <section
+        className={styles.benefitsWrapper}
+        style={{ marginTop: "40px", marginBottom: "40px" }}
+      >
+        <div className={styles.benefitsBox}>
+          <h2 className={styles.heading}>
+            Why Choose Our Journal Selection Services?
+          </h2>
+          <p className={styles.subtext}>
+            <strong>
+              Our expert journal selection report provides researchers with
+              professional guidance to submit their work to the most relevant
+              and high-impact journals. Our key benefits include:
+            </strong>
+          </p>
+          <ul className={styles.benefitsList}>
+            <li>
+              ✔ Expert Journal Selection Assistance- Recommendations from PhD
+              specialists to identify journals indexed in Scopus, Web of
+              Science, PubMed, and DOAJ.
+            </li>
+            <li>
+              ✔ Impact Factor &amp; Q1/Q2 Ranking Analysis- Selection of
+              journals with high acceptance rates and strong citations.
+            </li>
+            <li>
+              ✔ Avoiding Predatory Journals- Ensuring journal legitimacy and
+              adherence to ethical publishing standards.
+            </li>
+            <li>
+              ✔ Customized Journal Shortlisting- Tailored recommendations based
+              on subject area, manuscript type, and research scope.
+            </li>
+            <li>
+              ✔ Manuscript Formatting as per Journal Guidelines- Compliance with
+              journal- specific requirements before submission.
+            </li>
+            <li>
+              ✔ Journal Submission Assistance- A step-by-step guide to ensure a
+              smooth journal submission process.
+            </li>
+          </ul>
+          <button
+            className={styles.primaryButton}
+            onClick={() =>
+              (window.location.href =
+                "https://manuscriptedit.com/QuotationNew/")
+            }
+          >
+            Learn More About Our Journal Selection Process
+          </button>
+        </div>
+      </section>
+
+      <section className="editing-overview-section">
+        <h2 className="editing-overview-heading">
+          Why Choose Our Journal Selection Services?
+        </h2>
+        <table className="editing-overview-table">
+          <thead>
             <tr>
-              <th scope="col">Turnaround Time in Days</th>
-              <th scope="col">Price per Assignment in US$</th>
+              <th>Service</th>
+              <th>Best For</th>
+              <th>Key Features</th>
+              <th>Turnaround Time</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>3</td>
-              <td>200</td>
+              <td>Basic Journal Selection</td>
+              <td>First-time authors & students</td>
+              <td>3-5 journal recommendations, Scope & indexing check</td>
+              <td>3-5 Days</td>
             </tr>
             <tr>
-              <td>5</td>
-              <td>150</td>
+              <td>Advanced Journal Selection</td>
+              <td>Researchers & academics</td>
+              <td>Q1/Q2 high-impact journals, Impact factor analysis</td>
+              <td>5-7 Days</td>
+            </tr>
+            <tr>
+              <td>PubMed & Scopus-Indexed Journal Selection</td>
+              <td>Medical & STEM researchers</td>
+              <td>Compliance with PubMed & Scopus, Journal ranking analysis</td>
+              <td>5-10 Days</td>
+            </tr>
+            <tr>
+              <td>Predatory Journal Screening</td>
+              <td>Authors ensuring ethical publishing</td>
+              <td>
+                Blacklist verification, Avoiding predatory & pay-to-publish
+                journals
+              </td>
+              <td>3-5 Days</td>
+            </tr>
+            <tr>
+              <td>Journal Submission Strategy & Formatting</td>
+              <td>Researchers preparing for submission</td>
+              <td>
+                Formatting according to journal guidelines, Cover letter &
+                manuscript structuring
+              </td>
+              <td>5-7 Days</td>
             </tr>
           </tbody>
         </table>
+        <button
+          className={styles.primaryButton}
+          style={{ marginTop: "40px" }}
+          onClick={() =>
+            (window.location.href = "https://manuscriptedit.com/QuotationNew/")
+          }
+        >
+          Compare Journal Selection Services
+        </button>
+      </section>
+
+      <div className={styles.processContainer}>
+        <h2 className={styles.processTitle}>
+          Journal Selection Process – How We Ensure Quality & Compliance
+        </h2>
+        <div className={styles.processSteps1}>
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 1:</h5>
+            <FontAwesomeIcon
+              icon={faFileAlt} // Suitable for manuscript evaluation
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Manuscript Evaluation – Understanding the scope, subject area, and
+              impact potential of your research.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 2:</h5>
+            <FontAwesomeIcon
+              icon={faSearch} // Suitable for searching and screening
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Journal Database Screening – Searching through Scopus, Web of
+              Science, PubMed, DOAJ, and Springer databases.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 3:</h5>
+            <FontAwesomeIcon
+              icon={faChartLine} // Suitable for impact factor analysis
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Journal Shortlisting & Impact Factor Analysis – Providing a list
+              of high-impact journals with acceptance rates.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 4:</h5>
+            <FontAwesomeIcon
+              icon={faCogs} // Suitable for checking guidelines
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Formatting & Submission Guidelines Check – Ensuring word count,
+              citation style, and formatting compliance.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 5:</h5>
+            <FontAwesomeIcon
+              icon={faPaperPlane} // Suitable for final recommendations
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Final Journal Recommendations & Submission Strategy – Delivering
+              publication-ready recommendations.
+            </h3>
+          </div>
+        </div>
+
+        <div className={styles.buttonGroup}>
+          <a href="https://manuscriptedit.com/QuotationNew/">
+            <button className={styles.primaryButton}>
+              Start Your Journal Selection Process
+            </button>
+          </a>
+        </div>
       </div>
-      {howWeWork(2)}
-      {SpecializedArea(false)}
-      {clientFeedback()}
+
+      <section className="before-after-example-section">
+        <h2 className="before-after-example-heading">
+          Before & After Journal Selection – See the Difference
+        </h2>
+
+        <div className="before-after-example-content">
+          <div className="before-example">
+            <h3>
+              Before (Random Journal Selection Without Research Scope
+              Consideration):
+            </h3>
+            <p className="before-text">
+              “I submitted my paper to Journal X because it had a high impact
+              factor, but it was rejected due to scope mismatch and formatting
+              errors.”
+            </p>
+          </div>
+
+          <div className="after-example">
+            <h3>
+              After (Professionally Curated Journal Shortlist with Compliance
+              Checks):
+            </h3>
+            <p className="after-text">
+              “After ManuscriptEdit’s journal selection service, I received a
+              shortlist of five journals indexed in Scopus and PubMed, all
+              aligned with my research topic. My manuscript was accepted on the
+              first submission attempt.”
+            </p>
+          </div>
+        </div>
+
+        <div className="explanation">
+          <p>
+            Journal Selection Assistance ensures compatibility, credibility, and
+            faster publication success.
+          </p>
+        </div>
+
+        <div className="cta-container">
+          <a
+            href="https://manuscriptedit.com/QuotationNew/"
+            className="cta-button"
+          >
+            Request a Sample Journal Recommendation
+          </a>
+        </div>
+      </section>
+
+      <section className="pricing-turnaround-section">
+        <h2 className="pricing-turnaround-heading">
+          Journal Selection Assistance – Pricing and Turnaround Time
+        </h2>
+
+        <div className="pricing-details">
+          <div className="pricing-item">
+            <h3>Starting Price</h3>
+            <p className="pricing-text">
+            Price per Assignment in USD : $350
+            </p>
+          </div>
+
+          <div className="delivery-item">
+            <h3>Turnaround Time</h3>
+            <p className="delivery-time"> 
+            Turnaround Time in Days : 5 
+            </p>
+          </div>
+        </div>
+
+        {/* <FormattingPricingTable/> */}
+
+        <div className="cta-container">
+          <a
+            href="https://manuscriptedit.com/QuotationNew/"
+            className="cta-button"
+          >
+            Check Pricing and Get a Quote
+          </a>
+        </div>
+      </section>
+
+      <div className="wcus-container">
+        <div className="wcus-client-reviews">
+          <h3 className="editing-overview-heading">Testimonial</h3>
+          <div className="row d-flex justify-content-around">
+            {[
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                text: "The best editing service I've used. Got published in record time!",
+                name: "Dr. Emily Carter",
+              },
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                text: "Exceptional support from expert editors. Highly recommended!",
+                name: "Prof. John Williams",
+              },
+              {
+                imgSrc:
+                  "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
+                text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                name: "J Y",
+              },
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
+                text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                name: "Emily Selman",
+              },
+            ].map((review, index) => (
+              <div className="wcus-review col-lg-5" key={index}>
+                <img src={review.imgSrc} alt="Client" />
+                <p>
+                  "{review.text}" - <strong>{review.name}</strong>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <h3>
+          <br />
+          🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+          publishing experts.
+          <br />
+          <br />
+          📑 Trusted by universities, funding agencies, and research
+          institutions.
+        </h3>
+        <div className="cta-container">
+          <a
+            href="https://manuscriptedit.com/Testimonial/"
+            className="cta-button"
+          >
+            See More Reviews
+          </a>
+        </div>
+      </div>
+
+      <div className="container" style={{ marginTop: "3rem" }}>
+        <div className="accordion__wrapper2">
+          <h1 className="accordion__title">
+            FAQs
+            <br />
+            <span style={{ fontSize: "1rem" }}>
+              Answers to Your Most Common Questions
+            </span>
+          </h1>
+
+          {accord2.map((faq, index) => (
+            <div
+              className="accordion"
+              key={index}
+              style={{
+                paddingBottom: "1rem",
+                marginBottom: "1rem",
+                color: "#494949",
+              }}
+            >
+              <div
+                className="accordion__header d-flex justify-content-between"
+                onClick={() => toggleAccordion(index)}
+                style={{ cursor: "pointer" }}
+              >
+                <h2 className="accordion__question">{faq.question}</h2>
+                <span>{openIndex === index ? "⮝" : "⮟"}</span>
+              </div>
+
+              <div
+                className="accordion__content"
+                style={{
+                  height: openIndex === index ? "auto" : "0",
+                  overflow: "hidden",
+                  transition: "height 0.3s ease",
+                }}
+              >
+                <div
+                  className="accordion__answer"
+                  style={{
+                    padding: "0",
+                    paddingTop: "0.5rem",
+                    marginBottom: "0",
+                    backgroundColor: "#f0f8ff",
+                  }}
+                  dangerouslySetInnerHTML={{ __html: faq.answer }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

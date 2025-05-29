@@ -1,0 +1,42 @@
+
+
+.accordion__title {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    color: var(--color-title);
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .GappyDown{
+    margin-bottom:40px !important;
+  }
+
+
+  @media (max-width:768px) {
+    .BlogImg{
+        width: 30%;
+        border-radius: 10px;
+    }
+
+    .contents{
+        width: 69%;
+        padding: 0px 21px;
+    text-align: start;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 20px !important;
+    }
+
+    .ContentSpan{
+font-weight: 300;
+    }
+  }
+
+
+  @media (min-width:769px){
+    .ContainerDesk{
+        display: none;
+    }
+  }
+

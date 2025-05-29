@@ -3,7 +3,6 @@ import env from '@/env/env';
 import { useState, useEffect } from 'react';
 
 const useFetchEditors = (type: string, limit: number, offset: number) => {
-    console.log({type})
     const [editors, setEditors] = useState<Editor[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
@@ -16,11 +15,8 @@ const useFetchEditors = (type: string, limit: number, offset: number) => {
         setLoading(true)
         try {
             fetch(
-                `${env.testingUrl}get_all_editor_profile_details.php?ediType=${type}&limit=${limit}&offset=${offset}`, {
+                `https://www.manuscriptedit.com/api/get_all_editor_profile_details.php?ediType=${type}&limit=${limit}&offset=${offset}`, {
                 method: "get",
-                headers: new Headers({
-                    "ngrok-skip-browser-warning": "69420",
-                }),
             }
             ).then(response => {
                 return response.json()

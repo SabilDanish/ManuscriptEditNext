@@ -1,9 +1,16 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
+import Metadata from "@/app/Metadata";
+import { usePathname } from 'next/navigation'
+import { data } from '../../../utils/metaFile.js'
+const newData: {[key: string]: {[key: string]: string}} = data;
 
 export default function Home() {
+  // const pathName: string = usePathname().split("/").filter(val => val).join("")
+  // let metaData = newData[pathName]
   return (
     <>
-      {breadcrum("Quality", "Frequently Asked Questions")}
+    {/* {<Metadata metaData={metaData} />} */}
+      {/* {breadcrum("Quality", "Frequently Asked Questions")} */}
       <section id="specials" className="specials faq section-bg mt-3">
         <div className="container" data-aos="fade-up">
           <div className="row" data-aos="fade-up" data-aos-delay="100">
@@ -49,7 +56,7 @@ export default function Home() {
                             aria-expanded="false"
                           >
                             {" "}
-                            Manuscriptedit has different packages for
+                            ManuscriptEdit has different packages for
                             publication support. Do these packages guarantee
                             publication?{" "}
                             <i className="bx bx-chevron-down icon-show"></i>
@@ -61,8 +68,8 @@ export default function Home() {
                             data-bs-parent=".faq-list"
                           >
                             <p>
-                              We offer three packages under "Publication
-                              Support" - Premium, Advanced and Standard.
+                              We offer four packages under "Publication
+                              Support" - Premium Plus, Premium, Advanced and Standard.
                               Depending on your need either you choose one of
                               them or we can also suggest. Publishing depends on
                               many factors. The quality of research work is the
@@ -76,7 +83,7 @@ export default function Home() {
                               suggest you to look for another journal or they
                               will delay the publication. Therefore, we cannot
                               guarantee publication if you avail our packages.
-                              However, the expert team at Manuscriptedit will
+                              However, the expert team at ManuscriptEdit will
                               assist you to shape up your manuscript in such a
                               way which maximizes the chance of publication.
                             </p>
@@ -158,7 +165,7 @@ export default function Home() {
                             aria-expanded="false"
                           >
                             How does the "Journal Selection" work at
-                            Manuscriptedit?{" "}
+                            ManuscriptEdit?{" "}
                             <i className="bx bx-chevron-down icon-show"></i>
                             <i className="bx bx-chevron-up icon-close"></i>
                           </a>
@@ -238,7 +245,7 @@ export default function Home() {
                             aria-expanded="false"
                           >
                             {" "}
-                            How does the "Writing services" at Manuscriptedit
+                            How does the "Writing services" at ManuscriptEdit
                             work?{" "}
                             <i className="bx bx-chevron-down icon-show"></i>
                             <i className="bx bx-chevron-up icon-close"></i>
@@ -257,7 +264,7 @@ export default function Home() {
                               confirmed, our expert writer starts working on
                               your manuscript. The writer may ask you for more
                               information, if required. Writing at
-                              Manuscriptedit is a collaborative work between our
+                              ManuscriptEdit is a collaborative work between our
                               writer and the author. We periodically interact
                               with the author during the course of writing
                               either via E-mail or skype. This helps both the
@@ -290,7 +297,7 @@ export default function Home() {
                             data-bs-parent=".faq-list"
                           >
                             <p>
-                              Yes, expert writers at Manuscriptedit have 5-10
+                              Yes, expert writers at ManuscriptEdit have 5-10
                               years of writing experience, and many of them have
                               published their own research work in reputed
                               International journals. Therefore, they are aware
@@ -494,7 +501,7 @@ export default function Home() {
                             aria-expanded="false"
                           >
                             How does the "Journal Selection" work at
-                            Manuscriptedit?{" "}
+                            ManuscriptEdit?{" "}
                             <i className="bx bx-chevron-down icon-show"></i>
                             <i className="bx bx-chevron-up icon-close"></i>
                           </a>
@@ -530,7 +537,7 @@ export default function Home() {
                             className="collapsed"
                             aria-expanded="false"
                           >
-                            Does Manuscriptedit guarantee publication in any of
+                            Does ManuscriptEdit guarantee publication in any of
                             the recommended journals?{" "}
                             <i className="bx bx-chevron-down icon-show"></i>
                             <i className="bx bx-chevron-up icon-close"></i>

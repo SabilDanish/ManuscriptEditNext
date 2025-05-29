@@ -1,0 +1,34 @@
+h2 {
+    font-size: 24px;
+    color: #111;
+  }
+  
+  p {
+    font-size: 16px;
+
+    margin-bottom: 20px;
+  }
+  
+  
+  .most-popular-tag {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0f1e80;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-title{
+    background-color: #d1d8eb;
+    padding: 10px;
+    color: #070361;
+    border-radius: 5px;
+  }
+  

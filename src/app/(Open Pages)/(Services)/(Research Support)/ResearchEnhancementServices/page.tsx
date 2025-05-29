@@ -1,8 +1,15 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/ResearchEnhancementServices"
+        />
+      </Head>
       {breadcrum(
         "Services / Research Support",
         "Research Enhancement Services"
@@ -11,12 +18,12 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3 className="pt-2 pb-3">
+              {/* <h3 className="pt-2 pb-3">
                 Research Enhancement Services - Where Every Citation Counts
-              </h3>
+              </h3> */}
               <p>
                 In academic research, visibility and impact are currencies of
-                success. At Manuscriptedit.com, we offer bespoke Research
+                success. At ManuscriptEdit.com, we offer bespoke Research
                 Enhancement Services designed to amplify the reach and
                 recognition of your scholarly work.
               </p>
@@ -63,11 +70,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                      <a href="service-details.html">
-                        Research Impact Analysis
-                      </a>
-                    </h4>
+                    <h4 className="pb-2">Research Impact Analysis</h4>
                     <p>
                       Gain deep insights into the influence of your work with
                       our comprehensive impact assessments.
@@ -91,11 +94,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                      <a href="service-details.html">
-                        Post-Publication Assistance
-                      </a>
-                    </h4>
+                    <h4 className="pb-2">Post-Publication Assistance</h4>
                     <p>
                       Extend the lifecycle of your research with our
                       post-publication support, ensuring continued application.
@@ -119,9 +118,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                      <a href="service-details.html">Citation Enhancement</a>
-                    </h4>
+                    <h4 className="pb-2">Citation Enhancement</h4>
                     <p>
                       Elevate your research's prominence in academic discourse
                       through strategic citation enhancement techniques.
@@ -163,11 +160,7 @@ export default function Home() {
               >
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                      <a href="service-details.html">
-                        Career Advancement Guidance
-                      </a>
-                    </h4>
+                    <h4 className="pb-2">Career Advancement Guidance</h4>
                     <p>
                       Chart a course for career growth with our personalized
                       academic career counseling.
@@ -191,11 +184,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                      <a href="service-details.html">
-                        Publication Impact Planning
-                      </a>
-                    </h4>
+                    <h4 className="pb-2">Publication Impact Planning</h4>
                     <p>
                       Strategically plan your publications to maximize impact
                       with our expert guidance.
@@ -219,11 +208,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                      <a href="service-details.html">
-                        Scholarly Metrics Monitoring
-                      </a>
-                    </h4>
+                    <h4 className="pb-2">Scholarly Metrics Monitoring</h4>
                     <p>
                       Stay informed of your research performance with our
                       meticulous tracking and analysis.
@@ -247,9 +232,7 @@ export default function Home() {
                 <div className="single_service_style_ten stt-1">
                   <div className="service_style_ten_icon pb-2"></div>
                   <div className="service_style_ten_content">
-                    <h4 className="pb-2">
-                      <a href="service-details.html">Beyond Publication</a>
-                    </h4>
+                    <h4 className="pb-2">Beyond Publication</h4>
                     <p>
                       We understand that publication is just the beginning.{" "}
                     </p>
@@ -351,8 +334,8 @@ export default function Home() {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-2 col-md-2 pr-3"></div>
-            <div className="col-lg-8 col-md-8 pr-3">
+            <div className="col-lg-1 col-md-1 pr-3"></div>
+            <div className="col-lg-10 col-md-10 pr-3">
               <div className="tab_container pt-10 pb-50">
                 <div
                   id="tab1"
@@ -374,7 +357,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a>
-                        Can Manuscriptedit.com assist me in enhancing my
+                        Can ManuscriptEdit.com assist me in enhancing my
                         academic career?
                       </a>
                       <p>
@@ -412,7 +395,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a>
-                        How can I start using Manuscriptedit.com's Research
+                        How can I start using ManuscriptEdit.com's Research
                         Enhancement Services?
                       </a>
                       <p>
@@ -436,7 +419,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-2 col-md-2 pr-3"></div>
+            <div className="col-lg-1 col-md-1 pr-3"></div>
           </div>
         </div>
       </div>

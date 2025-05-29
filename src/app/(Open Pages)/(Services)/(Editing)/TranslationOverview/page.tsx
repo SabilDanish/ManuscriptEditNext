@@ -1,215 +1,452 @@
-'use client';
+"use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import FAQ from "@/app/_Common/_FAQ/FAQ";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+import Metadata from "@/app/Metadata";
+import { usePathname } from "next/navigation";
+import { data } from "../../../../utils/metaFile.js";
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+const newData: { [key: string]: { [key: string]: string } } = data;
+import styles from "@/app/_Common/Renovation/Renovation.module.css";
+import "@/app/_Common/Renovation/Renovation.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@/app/_Common/Dropdown2/Dropdown2.css";
+
+import {
+  faFileUpload,
+  faSearch,
+  faEdit,
+  faCheckCircle,
+  faRedo,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 export default function Home() {
+  const pathName: string = usePathname()
+    .split("/")
+    .filter((val) => val)
+    .join("");
+  let metaData = newData[pathName];
+  const steps = [
+    {
+      stepss: "Step 1 ➔",
+      icon: faFileUpload,
+      title:
+        "Upload Your Document – Securely submit your non-English manuscript.",
+    },
+    {
+      stepss: "Step 2 ➔",
+      icon: faSearch,
+      title:
+        "Subject-Matter Expert Translation – Assigned translator ensures accuracy.",
+    },
+    {
+      stepss: "Step 3 ➔",
+      icon: faEdit,
+      title:
+        "Review & Proofreading – Translated document is refined for fluency.",
+    },
+    {
+      stepss: "Step 4 ➔",
+      icon: faCheckCircle,
+      title:
+        "Final Delivery & Revisions – Receive a polished, publication-ready manuscript.",
+    },
+    {
+      stepss: "Step 5 ➔",
+      icon: faCheckCircle,
+      title: "Optional Add-Ons – Choose copyediting or formatting if needed.",
+    },
+  ];
+
+  const accord2: { question: string; answer: string }[] = [
+    {
+      question: "Which languages do you support?",
+      answer:
+        "We provide translations for Chinese, Japanese, Spanish, French, German, Russian, Portuguese, and more into English and vice versa.",
+    },
+    {
+      question: "Who translates my document?",
+      answer:
+        "PhD-level subject-matter experts with academic and research experience.",
+    },
+    {
+      question: "Do you use AI for translation?",
+      answer:
+        "No, all translations are done by human experts, ensuring accuracy and academic integrity.",
+    },
+  ];
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const gap = {
+    marginTop: "40px",
+  };
+
   return (
     <>
-    {breadcrum("Services / English Editing", "Plagiarism check and reduction")}
-    <section className="pt-5 pb-5">
-    <div className="container">
-        <div className="row">
-            <div className="col-md-7">
-                <h3 className="pt-0 pb-3">Breaking the Language Barrier</h3>
-                <p>
-                  We, at Manuscriptedit not only translate but transcreate documents of highest 
-                  standards for all region-specific needs. We do not believe in shortcuts and 
-                  provide accurate and timeless language solutions across 70+ languages and 
-                  2500+ language pairs . If there is a translation request for a language beyond 
-                  the listed pairs, we have the resources to extend our translation service to 
-                  cover that language as well.
-                </p>
+    <meta
+        name="title"
+        content="Scientific Translation Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Professional scientific translation for accurate, peer-review ready manuscripts."
+      />
+      {<Metadata metaData={metaData} />}
+      <div>
+        <section style={gap}>
+          <div className={styles.textWrapper}>
+            <h1 className={styles.heading}>
+              &quot;Break Language Barriers – Translate Your Research for Global
+              Impact!&quot;
+            </h1>
+            <p className={styles.subtext}>
+              &quot;Accurate, high-quality academic translation by
+              subject-matter experts to ensure your research reaches a global
+              audience with clarity and precision.&quot;
+            </p>
+            <div className={styles.buttonGroup}>
+              <a href="https://manuscriptedit.com/QuotationNew/">
+                <button className={styles.primaryButton}>
+                  Get Translation Now
+                </button>
+              </a>
 
-                <p>
-                   Manuscriptedit provides industry-expert linguists with deep industry expertise 
-                   to ensure timely delivery of the project with quality and precision par excellence. 
-                   Our people-powered translation service also builds customized solutions keeping 
-                   in mind the client's time and budget, without compromising the output.
-                </p>
+              <a href="https://manuscriptedit.com/QuotationNew/">
+                <button className={styles.secondaryButton}>
+                  Request a Free Sample
+                </button>
+              </a>
             </div>
-            <div className="col-md-5">
-                <img src="/images/menuscimg/copyedit.jpeg" alt="" width="100%" style={{borderRadius: 10}} />
+          </div>
+        </section>
+
+        {/* Proofreading Overview Section */}
+        <section className={styles.benefitsWrapper}>
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>What is Translation Service?</h2>
+            <p className={styles.subtext}>
+              Translation Service ensures that your academic and research
+              documents are accurately translated while maintaining their
+              technical accuracy, academic tone, and cultural nuances. Our team
+              of PhD translators specializes in STEM and Non-STEM subjects,
+              ensuring discipline-specific accuracy.
+            </p>
+          </div>
+
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>Who Should Use This Service?</h2>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✔ PhD &amp; MS Students – Convert theses and dissertations into
+                English for wider accessibility.
+              </li>
+              <li>
+                ✔ Doctors &amp; Academics – Prepare research papers, grant
+                proposals, and reports for international publication.
+              </li>
+              <li>
+                ✔ Researchers &amp; Institutions – Collaborate globally by
+                translating technical reports and academic materials.
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>Key Benefits:</h2>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✔ Maintains academic integrity, terminology, and formatting.
+              </li>
+              <li>
+                ✔ Proofread and quality-checked to match publication standards.
+              </li>
+              <li>
+                ✔ Supports major languages including Chinese, Japanese, Spanish,
+                French, German, and more.
+              </li>
+            </ul>
+          </div>
+
+          <section className={styles.proofreadingWrapper}>
+            <h2 className={styles.headingCenter}>
+              When Should You Choose Translation Services?
+            </h2>
+            <table className="editing-overview-table">
+              <thead>
+                <tr>
+                  <th>Your Document Status</th>
+                  <th>Best Service</th>
+                  <th>Why?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Manuscript in a non-English language</td>
+                  <td>Translation Service</td>
+                  <td>
+                    Converts it to academic English while maintaining accuracy.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Needs improved readability post-translation</td>
+                  <td>Copyediting</td>
+                  <td>Enhances clarity and fluency of translated content.</td>
+                </tr>
+                <tr>
+                  <td>Requires journal-specific formatting</td>
+                  <td>Formatting Service</td>
+                  <td>Aligns with submission guidelines.</td>
+                </tr>
+                <tr>
+                  <td>High similarity index detected</td>
+                  <td>Plagiarism Reduction</td>
+                  <td>Rewrites flagged content while retaining accuracy.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        {/* New Proofreading Details Section */}
+        <section className={styles.proofreadingWrapper}>
+          <h2 className={styles.headingCenter}>
+            What Does Translation Service Include?
+          </h2>
+
+          <div className={styles.proofreadingBox}>
+            <h3 className={styles.proofreadingSubheading}>🚫 Not Included</h3>
+            <ul className={styles.proofreadingList}>
+              <li>❌No rewriting or paraphrasing for plagiarism reduction.</li>
+              <li>
+                ❌No manuscript restructuring (offered under substantive
+                editing).
+              </li>
+              <li>❌ No AI-generated translations – fully human-reviewed.</li>
+            </ul>
+          </div>
+          <div className={styles.proofreadingBox}>
+            <h3 className={styles.proofreadingSubheading}>✔ Included</h3>
+
+            <ul className={styles.proofreadingList}>
+              <li>
+                ✔ Human Translation – AI-free translation done by subject-matter
+                experts.
+              </li>
+              <li>
+                ✔ Academic Tone &amp; Style Retention – Ensures consistency with
+                research writing.
+              </li>
+              <li>
+                ✔ Terminology Accuracy – Discipline-specific language
+                refinement.
+              </li>
+              <li>
+                ✔ Formatting &amp; Structure Preservation – Keeps original
+                document formatting intact.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div className={styles.processContainer}>
+          <h2 className={styles.processTitle}>How It Works</h2>
+          <div className={styles.processSteps1}>
+            {steps.map((step, index) => (
+              <div key={index} className={styles.processStep}>
+                <h5 className={styles.stepHeading}>{step.stepss}</h5>
+                <FontAwesomeIcon
+                  icon={step.icon}
+                  size="3x"
+                  className={styles.stepIcon}
+                />
+                <h3 className={styles.stepDescription}>{step.title}</h3>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.buttonGroup}>
+            <a href="https://manuscriptedit.com/QuotationNew/">
+              <button className={styles.primaryButton}>
+                Start Translation Now
+              </button>
+            </a>
+          </div>
+
+          <section className="before-after-example-section">
+            <h2 className="before-after-example-heading">
+              Before and After Example
+            </h2>
+
+            <div className="before-after-example-content">
+              <div className="before-example">
+                <h3>Before (Original Manuscript in Spanish):</h3>
+                <p className="before-text">
+                  &quot;Los avances en inteligencia artificial han transformado
+                  la forma en que los médicos diagnostican enfermedades,
+                  mejorando significativamente la precisión de los
+                  diagnósticos.&quot;
+                </p>
+              </div>
+
+              <div className="after-example">
+                <h3>After (Translated into English by Expert Translator):</h3>
+                <p className="after-text">
+                  &quot;Advancements in artificial intelligence have
+                  revolutionized the way doctors diagnose diseases,
+                  significantly improving diagnostic accuracy.&quot;
+                </p>
+              </div>
             </div>
+          </section>
+
+          <section className="pricing-turnaround-section">
+            <h2 className="pricing-turnaround-heading">
+              Pricing and Turnaround Time
+            </h2>
+
+            <div className="pricing-details">
+              <div className="pricing-item">
+                <h3>Starting Price</h3>
+                <p className="pricing-text">$0.08 per word</p>
+              </div>
+
+              <div className="delivery-item">
+                <h3>Standard Delivery</h3>
+                <p className="delivery-time">4-7 business days</p>
+              </div>
+
+              <div className="delivery-item">
+                <h3>Express Delivery</h3>
+                <p className="delivery-time">
+                  48-72 hours available at additional cost
+                </p>
+              </div>
+            </div>
+
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/QuotationNew/"
+                className="cta-button"
+              >
+                Check Pricing and Get a Quote
+              </a>
+            </div>
+          </section>
+
+          <div className="wcus-container">
+            <div className="wcus-client-reviews">
+              <h3 className="editing-overview-heading">Testimonial</h3>
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      " https://manuscriptedit.com/_next/static/media/aa.5d969f42.jpg",
+                    text: "Thank you for your comments and corrections of my paper- it is done in much more professional way.",
+                    name: "Firas obeidat",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ss.a5f9add8.jpg",
+                    text: "Thank you for the excellent work. We are very satisfied and will come back with new manuscript soon!",
+                    name: "Lars-Ake",
+                  },
+                  {
+                    imgSrc:
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/Testimonial/"
+                className="cta-button"
+              >
+                See More Reviews
+              </a>
+            </div>
+          </div>
+
+          <div className="container" style={{ marginTop: "3rem" }}>
+            <div className="accordion__wrapper2">
+              <h1 className="accordion__title">FAQs</h1>
+
+              {accord2.map((faq, index) => (
+                <div
+                  className="accordion"
+                  key={index}
+                  style={{
+                    paddingBottom: "1rem",
+                    marginBottom: "1rem",
+                    color: "#494949",
+                  }}
+                >
+                  <div
+                    className="accordion__header"
+                    onClick={() => toggleAccordion(index)}
+                  >
+                    <h2 className="accordion__question">{faq.question}</h2>
+                    {openIndex === index ? "⮝" : "⮟"}
+                    {/* <span className="accordion__icon">
+                <i
+                  className={`${openIndex === index ? "ri-subtract-fill" : "ri-add-line"}`}
+                ></i>
+              </span> */}
+                  </div>
+                  <div
+                    className="accordion__content"
+                    style={{
+                      height: openIndex === index ? "auto" : "0",
+                    }}
+                  >
+                    <div
+                      className="accordion__answer"
+                      style={{
+                        padding: "0",
+                        paddingTop: "0.5rem",
+                        marginBottom: "0",
+                        backgroundColor: "#f0f8ff",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        </div>
-</section>
-<div className="pricing_area bg_color2 pt-50 pb-50">
-		<div className="container-fluid">
-			<div className="row">
-				<div className="col-lg-3 col-md-6">
-					<div className="pricing_style_four wow flipInY" data-wow-delay="0ms" data-wow-duration="2500ms">
-						<div className="pricing_style_four_content">
-							<div className="pricing_style_four_content_inner">
-								<div className="pricing_style_four_title white">
-									<h4>Paper <br/> Translation</h4>
-								</div>
-							</div>
-						</div>
-						<div className="pricing_style_four_body">
-							<ul>
-								<li className="st-list"><i className="fa fa-check"></i> <span>Professional translators accurate content</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Covers various languages for global...</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Translates legal, business, academic.</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Rigorous proofreading for accuracy.</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Considers local nuances and idioms.</span></li>
-                                <li className="st-list"><i className="fa fa-check"></i><span> Protects sensitive information with agreements.</span></li>
-                                <p><b>
-                                   Translation Certificate available upon request
-                                </b></p>
-							</ul>
-						</div>
-						<div className="pricing_style_four_button">
-							<a onClick={() => {redirect('contact-us')}} href="#">Contact Us <span>+</span></a>
-						</div>
-					</div>
-				</div>
-                <div className="col-lg-3 col-md-6">
-					<div className="pricing_style_four wow flipInY" data-wow-delay="0ms" data-wow-duration="2500ms">
-						<div className="pricing_style_four_content">
-							<div className="pricing_style_four_content_inner">
-								<div className="pricing_style_four_title white">
-									<h4>Technical <br/> Translation</h4>
-								</div>
-							</div>
-						</div>
-						<div className="pricing_style_four_body">
-							<ul>
-								<li className="st-list"><i className="fa fa-check"></i> <span>Skilled translators with technical knowledge.</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Covers technical documents, manuals, specs.</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Precise translation of technical terminology.</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Considers industry and sector-specific lang..</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span> Protects proprietary technical information.</span></li>
-                                <li className="st-list"><i className="fa fa-check"></i><span> Protects sensitive information with agreements.</span></li>
-                                <p><b>
-                                    Translation Certificate available upon request.
-                                </b></p>
-							</ul>
-						</div>
-						<div className="pricing_style_four_button">
-							<a href="#" onClick={() => {redirect('contact-us')}}>Contact Us <span>+</span></a>
-						</div>
-					</div>
-				</div>
-                <div className="col-lg-3 col-md-6">
-					<div className="pricing_style_four wow flipInY" data-wow-delay="0ms" data-wow-duration="2500ms">
-						<div className="pricing_style_four_content">
-							<div className="pricing_style_four_content_inner">
-								<div className="pricing_style_four_title white">
-									<h4>Machine <br/> Translation</h4>
-								</div>
-							</div>
-						</div>
-						<div className="pricing_style_four_body">
-							<ul>
-								<li className="st-list"><i className="fa fa-check"></i> <span>automated technology for language conver...</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Provides quick results for large volumes.</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Applies to documents, websites, texts, more.</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span> Human editing to improve translation quality.</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Balances cost with automation benefits.</span></li>
-                                <li className="st-list"><i className="fa fa-check"></i><span> Can be customized for specific needs.</span></li>
-                                <p><b>
-                                   Translation Certificate available upon request
-                                </b></p>
-							</ul>
-						</div>
-						<div className="pricing_style_four_button">
-							<a href="#" onClick={() => {redirect('contact-us')}}>Contact Us <span>+</span></a>
-						</div>
-					</div>
-				</div>
-                <div className="col-lg-3 col-md-6">
-					<div className="pricing_style_four wow flipInY" data-wow-delay="0ms" data-wow-duration="2500ms">
-						<div className="pricing_style_four_content">
-							<div className="pricing_style_four_content_inner">
-								<div className="pricing_style_four_title white">
-									<h4>Transcription TRANSLATION</h4>
-								</div>
-							</div>
-						</div>
-						<div className="pricing_style_four_body">
-							<ul>
-								<li className="st-list"><i className="fa fa-check"></i> <span>Experienced professionals for accurate transc..</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Converts spoken content into written form.</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span> Covers interviews, speeches, meetings, etc.</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Ensures accurate representation.</span></li>
-								<li className="st-list"><i className="fa fa-check"></i><span>Considers local nuances and idioms.</span></li>
-                                <li className="st-list"><i className="fa fa-check"></i><span> Protects sensitive information with agreements.</span></li>
-                                <li className="st-list"></li>
-                                <li className="st-list"></li>
-                                <p><b>
-                                Transcription Certificate available upon request
-                                </b></p>
-							</ul>
-						</div>
-						<div className="pricing_style_four_button">
-							<a href="#" onClick={() => {redirect('contact-us')}}>Contact Us <span>+</span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-  <div className="brand_area pt-35 pb-15">
-  <div className="container">
-      <div className="row">
-           <div className="col-md-5 mb-2">
-              <div className="">
-                  <h5 className="mb-2">Explore our Language Expert's Specialized Areas</h5>
-                  <p>
-                      From Medicine to Life Sciences, Physical Sciences, Economics and Art & Humanities -- our team of translators are specialized in 1,117 subject areas.
-                  </p>
-              </div>
-
-               <div className="">
-                  <h5 className="mb-2">Why choose Manuscriptedit?</h5>
-                  <p>
-                      From Medicine to Life Sciences, Physical Sciences, Economics and Art & Humanities -- our team of translators are specialized in 1,117 subject areas.
-                  </p>
-              </div>
-
-               <div className="">
-                  <h5 className="mb-2">What type of translation do you need?</h5>
-                  <p>
-                      We have tailored our translational approach that varies for document types and industries, and is based on individual requirements.
-                  </p>
-              </div>
-
-              <div className="">
-                  <h5 className="mb-2">Our translation services cover:</h5>
-                  <div className="about_icon_box wow fadeInUp animated" data-wow-delay="0.5s" style={{visibility: 'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
-                                <div className="about_icon_box_inner mb-20">
-                                    <span><i className="fa fa-check-square-o"></i> Research papers</span>
-                                </div>
-                                <div className="about_icon_box_inner mb-20">
-                                    <span><i className="fa fa-check-square-o"></i> Training materials</span>
-                                </div>
-                                <div className="about_icon_box_inner mb-20">
-                                    <span><i className="fa fa-check-square-o"></i> Manuals</span>
-                                </div>
-                                <div className="about_icon_box_inner mb-20">
-                                    <span><i className="fa fa-check-square-o"></i> Manufacturing translation</span>
-                                </div>              
-                            </div>
-              </div>
-
-           </div>
-           <div className="col-md-7 mb-2">
-              <h3 className="mb-3">Supported Languages</h3>
-              <div>
-                  <img src="/images/menuscimg/supported_lang.jpg" width="100%"/>
-              </div>
-           </div>
       </div>
-   </div>
-</div>
-    {SpecializedArea()}
-    {ourProfessional()}
-    {clientFeedback()}
-    {FAQ()}
-  </>
+    </>
   );
 }

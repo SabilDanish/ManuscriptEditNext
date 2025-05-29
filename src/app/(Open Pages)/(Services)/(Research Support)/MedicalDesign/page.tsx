@@ -1,356 +1,415 @@
-'use client';
-import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
-import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
-import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
-import redirect from "@/app/_Common/_functionality/Redirect";
+"use client";
+
+import styles from "@/app/_Common/Renovation/Renovation.module.css";
+import "@/app/_Common/Renovation/Renovation.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@/app/_Common/Dropdown2/Dropdown2.css";
+import {
+  faFileUpload,
+  faSearch,
+  faEdit,
+  faCheckCircle,
+  faRedo,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import Head from "next/head";
 
 export default function Home() {
+  const steps = [
+    {
+      stepss: "Step 1 ➔",
+      icon: faFileUpload,
+      title:
+        "Understanding Research & Illustration Needs – Reviewing manuscript, target journal, and design preferences.",
+    },
+    {
+      stepss: "Step 2 ➔",
+      icon: faSearch,
+      title:
+        "Scientific Figure Sketching & Concept Planning – Structuring raw data into a visually engaging format.",
+    },
+    {
+      stepss: "Step 3 ➔",
+      icon: faEdit,
+      title:
+        "Graphical Abstract & Data Visualization Design – Enhancing clarity with high-quality illustrations.",
+    },
+    {
+      stepss: "Step 4 ➔",
+      icon: faCheckCircle,
+      title:
+        "Quality Check, Formatting & Resolution Enhancement – Ensuring journal-compliant, high-resolution graphics.",
+    },
+    {
+      stepss: "Step 5 ➔",
+      icon: faCheckCircle,
+      title:
+        "Final Proofing & Submission-Ready Illustration Delivery – Providing print-ready, digital formats for research use.",
+    },
+  ];
+
+  const accord2: { question: string; answer: string }[] = [
+    {
+      question: "What formats do you provide for illustrations?",
+      answer:
+        "We deliver high-resolution PNG, JPG, TIFF, AI, and vector-based formats suitable for print and digital submissions.",
+    },
+    {
+      question: "Can you design figures for specific journals?",
+      answer:
+        "Yes! We create figures that comply with Elsevier, Springer, Wiley, Nature, and other journal formatting requirements.",
+    },
+    {
+      question: "Do you create medical and life sciences illustrations?",
+      answer:
+        "Yes! Our medical illustrators specialize in anatomical, pharmaceutical, and biological diagrams.",
+    },
+    {
+      question: "Will my illustrations be high-resolution and print-ready?",
+      answer:
+        "Absolutely! We ensure 300 DPI, vector-based illustrations optimized for research publication, conferences, and presentations.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply upload your research details, and our illustration experts will create a high-quality, publication-ready scientific figure.",
+    },
+  ];
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const gap = {
+    marginTop: "40px",
+  };
   return (
     <>
-      {breadcrum(
-        "Services / Research Support",
-        "Fully Experienced Researchers"
-      )}
-      <section className="pt-5 pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <h3 className="pt-2 pb-3">
-                Manuscriptedit.com offer the following services for publication
-                support.
-              </h3>
-              <p>
-                You may have an excellent product or medical research result,
-                but it needs to be marketed effectively to attract the attention
-                of clients/readers. It requires special skills and efforts to
-                design and develop lucid and appealing medical promotional/sales
-                materials. We can help you convey your message to your target
-                audience in the most effective manner through our service in
-                writing promotional & sales materials. We can prepare medico
-                marketing material aimed at consumers as well as medical
-                professionals. Our experienced designers/editors will design and
-                develop medical promotional/sales materials listed below:
-              </p>
-            </div>
-            <div className="col-md-6">
-              <img
-                src="/images/menuscimg/subtantive.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
+      <Head>
+        <link
+          rel="canonical"
+          href="https://manuscriptedit.com/MedicalDesign/"
+        />
+      </Head>
+      <div>
+        <section style={gap}>
+          <div className={styles.textWrapper}>
+            <h1 className={styles.heading}>
+              Professional Scientific Illustration &amp; Figure Formatting –
+              High-Impact Visual Communication
+            </h1>
+            <p className={styles.subtext}>
+              “Enhance your research presentation with expert figure formatting
+              and scientific illustration services. Our professional
+              illustrators specialize in artwork creation and enhancement to
+              ensure editable illustrations that comply with journal
+              guidelines.”
+            </p>
+            <div className={styles.buttonGroup}>
+              <a href="https://manuscriptedit.com/QuotationNew/">
+                <button className={styles.primaryButton}>
+                  Get a Free Artwork Formatting Quote
+                </button>
+              </a>
+
+              <a href="https://manuscriptedit.com/QuotationNew/">
+                <button className={styles.secondaryButton}>
+                  Speak with an Illustration Expert
+                </button>
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-      <div className="tab_area bg_color2 pt-80 pb-100">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="tab_content">
-                <ul className="nav nav-tabs" role="tablist">
-                  <li className="nav-item active">
-                    <a
-                      className="nav-link nav-st"
-                      data-toggle="tab"
-                      href="#tabs-1"
-                      role="tab"
-                      aria-expanded="true"
-                    >
-                      Medical Illustration
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link nav-st"
-                      data-toggle="tab"
-                      href="#tabs-2"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      Scientific Illustration
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link nav-st"
-                      data-toggle="tab"
-                      href="#tabs-3"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      Technical Illustration
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link nav-st"
-                      data-toggle="tab"
-                      href="#tabs-4"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      Graphs & Charts & Tables
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link nav-st"
-                      data-toggle="tab"
-                      href="#tabs-5"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      SImage polishing
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link nav-st"
-                      data-toggle="tab"
-                      href="#tabs-6"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      Sample Illustration
-                    </a>
-                  </li>
-                </ul>
-                <div className="tab-content white_bg pt-1 pb-5 pl-4 pr-4">
+        </section>
+
+        {/* Proofreading Overview Section */}
+        <section className={styles.benefitsWrapper}>
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>
+              Key Benefits of ManuscriptEdit’s Figure Formatting &amp; Artwork
+              Creation Services:
+            </h2>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✔ Scientific Illustration and Artwork Formatting Services –
+                Precise and detailed illustrations tailored for STEM, medical,
+                social sciences, and business research.
+              </li>
+              <li>
+                ✔Professional Figure Formatting for Research Manuscripts –
+                Ensuring journal- compliant figures, graphs, and infographics
+                are delivered in PDF, PPT, PNG, and AI formats.
+              </li>
+              <li>
+                ✔ Formatting Figures to Match Journal Guidelines – Ensuring
+                standard poster size, font, and layout recommendations comply
+                with specific submission requirements.
+              </li>
+              <li>
+                ✔ Fast Turnaround &amp; 100% Confidentiality – Secure,
+                plagiarism-free artwork creation with timely delivery.
+              </li>
+            </ul>
+          </div>
+
+          <section className={styles.proofreadingWrapper}>
+            <h2 className={styles.headingCenter}>
+              Our Research Visualization Services
+            </h2>
+            <table className="editing-overview-table">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Best For</th>
+                  <th>Key Features</th>
+                  <th>Turnaround Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Graphical Abstract Creation</td>
+                  <td>Researchers submitting to journals</td>
+                  <td>
+                    Custom-designed research abstracts, Clear & visually
+                    engaging
+                  </td>
+                  <td> 3-5 Days</td>
+                </tr>
+                <tr>
+                  <td>Scientific Figure & Data Visualization</td>
+                  <td>STEM & medical researchers</td>
+                  <td>
+                    High-resolution graphs, charts, Data clarity & structured
+                    layouts
+                  </td>
+                  <td> 4-6 Days</td>
+                </tr>
+                <tr>
+                  <td>Custom Research Diagrams & Infographics</td>
+                  <td>Authors presenting complex data</td>
+                  <td>Process flow diagrams, Thematic illustrations</td>
+                  <td> 5-7 Days</td>
+                </tr>
+                <tr>
+                  <td>Medical & Life Sciences Illustration</td>
+                  <td>Medical professionals & pharma R&D</td>
+                  <td>
+                    Anatomical & biological illustrations, HIPAA-compliant
+                    medical graphics
+                  </td>
+                  <td> 4-7 Days</td>
+                </tr>
+                <tr>
+                  <td>Conference & Presentation Figures</td>
+                  <td>Academics & industry researchers</td>
+                  <td>
+                    Slide-ready, engaging visuals, PowerPoint & digital formats
+                  </td>
+                  <td> 3-6 Days</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        {/* New Proofreading Details Section */}
+        <div className={styles.processContainer}>
+          <h2 className={styles.processTitle}>How It Works</h2>
+          <div className={styles.processSteps1}>
+            {steps.map((step, index) => (
+              <div key={index} className={styles.processStep}>
+                <h5 className={styles.stepHeading}>{step.stepss}</h5>
+                <FontAwesomeIcon
+                  icon={step.icon}
+                  size="3x"
+                  className={styles.stepIcon}
+                />
+                <h3 className={styles.stepDescription}>{step.title}</h3>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.buttonGroup}>
+            <a href="https://manuscriptedit.com/QuotationNew/">
+              <button className={styles.primaryButton}>
+                Start Your Scientific Illustration Project
+              </button>
+            </a>
+          </div>
+
+          <section className="before-after-example-section">
+            <h2 className="before-after-example-heading">
+              Before and After Example
+            </h2>
+
+            <div className="before-after-example-content">
+              <div className="before-example">
+                <h3>Before (Basic, Unstructured Diagram):</h3>
+                <p className="before-text">
+                  “Our research model suggests that variable X influences
+                  variable Y, leading to an outcome Z.”
+                </p>
+              </div>
+
+              <div className="after-example">
+                <h3>After (Professionally Designed Scientific Figure):</h3>
+                <p className="after-text">
+                  “A graphical representation of X-Y-Z interactions provides a
+                  clearer, more structured view of the research findings (Fig.
+                  1).”
+                </p>
+              </div>
+            </div>
+
+            <div className="explanation">
+              <p>
+                Our expert illustrators ensure precise, structured, and
+                journal-ready scientific visuals.
+              </p>
+            </div>
+          </section>
+
+          <section className="pricing-turnaround-section">
+            <h2 className="pricing-turnaround-heading">
+              Pricing and Turnaround Time
+            </h2>
+
+            <div className="pricing-details">
+              <div className="pricing-item">
+                <h3>Starting Price</h3>
+                <p className="pricing-text">$100 (Basic Graphical Abstract)</p>
+              </div>
+
+              <div className="delivery-item">
+                <h3>Standard Delivery</h3>
+                <p className="delivery-time">
+                  $500 (Advanced Scientific Figure with Custom Illustrations)
+                </p>
+              </div>
+
+              <div className="delivery-item">
+                <h3>Express Delivery</h3>
+                <p className="delivery-time">
+                  3 Days – 10 Days (Depending on complexity)
+                </p>
+              </div>
+            </div>
+
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/QuotationNew/"
+                className="cta-button"
+              >
+                Check Pricing & Get a Quote
+              </a>
+            </div>
+          </section>
+
+          <div className="wcus-container">
+            <div className="wcus-client-reviews">
+              <h3 className="editing-overview-heading">Testimonial</h3>
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                    text: "The best editing service I've used. Got published in record time!",
+                    name: "Dr. Emily Carter",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                    text: "Exceptional support from expert editors. Highly recommended!",
+                    name: "Prof. John Williams",
+                  },
+                  {
+                    imgSrc:
+                      " https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a href="/Testimonial" className="cta-button">
+                See More Reviews
+              </a>
+            </div>
+          </div>
+
+          <div className="container" style={{ marginTop: "3rem" }}>
+            <div className="accordion__wrapper2">
+              <h1 className="accordion__title">FAQs</h1>
+
+              {accord2.map((faq, index) => (
+                <div
+                  className="accordion"
+                  key={index}
+                  style={{
+                    paddingBottom: "1rem",
+                    marginBottom: "1rem",
+                    color: "#494949",
+                  }}
+                >
                   <div
-                    className="tab-pane mt-60 active"
-                    id="tabs-1"
-                    role="tabpanel"
+                    className="accordion__header"
+                    onClick={() => toggleAccordion(index)}
                   >
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Medical :
-                              Line.
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Medical :
-                              2-color
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Medical :
-                              4-color
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Medical :
-                              Photorealistic
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <h2 className="accordion__question">{faq.question}</h2>
+                    {openIndex === index ? "⮝" : "⮟"}
+                    {/* <span className="accordion__icon">
+                <i
+                  className={`${openIndex === index ? "ri-subtract-fill" : "ri-add-line"}`}
+                ></i>
+              </span> */}
                   </div>
-                  <div className="tab-pane mt-60" id="tabs-2" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Scientific : Line
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Scientific : 2-color
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Scientific : 4-color
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Scientific
-                              : Photorealistic
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane mt-60" id="tabs-3" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div className="row">
-                          <div className="col-lg-12">
-                            <div
-                              className="about_icon_box wow fadeInUp animated"
-                              data-wow-delay="0.5s"
-                              style={{
-                                visibility: "visible",
-                                animationDelay: "0.5s",
-                                animationName: "fadeInUp",
-                              }}
-                            >
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Technical : Line
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Technical : 2-color
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Technical : 4-color
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane mt-60" id="tabs-4" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div className="row">
-                          <div className="col-lg-12">
-                            <div
-                              className="about_icon_box wow fadeInUp animated"
-                              data-wow-delay="0.5s"
-                              style={{
-                                visibility: "visible",
-                                animationDelay: "0.5s",
-                                animationName: "fadeInUp",
-                              }}
-                            >
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Scientific : Line
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Scientific : 2-color
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Scientific : 4-color
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Scientific : Photorealistic
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane mt-60" id="tabs-5" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div className="row">
-                          <div className="col-lg-12">
-                            <div
-                              className="about_icon_box wow fadeInUp animated"
-                              data-wow-delay="0.5s"
-                              style={{
-                                visibility: "visible",
-                                animationDelay: "0.5s",
-                                animationName: "fadeInUp",
-                              }}
-                            >
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Scientific : Line
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Scientific : 2-color
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Scientific : 4-color
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Scientific : Photorealistic
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane mt-60" id="tabs-6" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div className="row">
-                          <div>
-                            <img src="/images/sample.jpeg" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div
+                    className="accordion__content"
+                    style={{
+                      height: openIndex === index ? "auto" : "0",
+                    }}
+                  >
+                    <div
+                      className="accordion__answer"
+                      style={{
+                        padding: "0",
+                        paddingTop: "0.5rem",
+                        marginBottom: "0",
+                        backgroundColor: "#f0f8ff",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
                   </div>
                 </div>
-              </div>
-              <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
-              Request a Quote
-              </button>
+              ))}
             </div>
           </div>
         </div>
       </div>
-      {SpecializedArea(false)}
-      {ourProfessional()}
-      {howWeWork(2)}
     </>
   );
 }

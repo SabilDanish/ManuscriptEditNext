@@ -8,19 +8,19 @@ import redirect from "@/app/_Common/_functionality/Redirect";
 export default function Home() {
   return (
     <>
-      {breadcrum("Services ", "Customized Services")}
+      {/* {breadcrum("Services ", "Customized Services")} */}
       {SpecializedArea(false)}
       <div className="brand_area pt-35 pb-15">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="section_title text_center mb-50 mt-3">
-                <div className="section_main_title">
+                {/* <div className="section_main_title">
                   <h1>Customized Services</h1>
                 </div>
                 <div className="em_bar">
                   <div className="em_bar_bg"></div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12">
@@ -98,11 +98,7 @@ export default function Home() {
                         <i className="fa fa-check-square-o"></i> Thesis Writing
                       </span>
                     </div>
-                    <div className="about_icon_box_inner mb-20">
-                      <span>
-                        <i className="fa fa-check-square-o"></i> Essay Writing
-                      </span>
-                    </div>
+                   
                     <div className="about_icon_box_inner mb-20">
                       <span>
                         <i className="fa fa-check-square-o"></i> Dissertation
@@ -207,11 +203,7 @@ export default function Home() {
                         <i className="fa fa-check-square-o"></i> Novel Editing
                       </span>
                     </div>
-                    <div className="about_icon_box_inner mb-20">
-                      <span>
-                        <i className="fa fa-check-square-o"></i> Book Editing
-                      </span>
-                    </div>
+                    
                     <div className="about_icon_box_inner mb-20">
                       <span>
                         <i className="fa fa-check-square-o"></i> Book Editing
@@ -307,7 +299,7 @@ export default function Home() {
                     </div>
                     <div className="about_icon_box_inner mb-20">
                       <span>
-                        <i className="fa fa-check-square-o"></i>Content
+                        <i className="fa fa-check-square-o"></i> Content
                         Processing
                       </span>
                     </div>
@@ -341,11 +333,7 @@ export default function Home() {
                         writing
                       </span>
                     </div>
-                    <div className="about_icon_box_inner mb-20">
-                      <span>
-                        <i className="fa fa-check-square-o"></i> Book Formatting
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -416,13 +404,13 @@ export default function Home() {
                     </div>
                     <div className="about_icon_box_inner mb-20">
                       <span>
-                        <i className="fa fa-check-square-o"></i>Digital
+                        <i className="fa fa-check-square-o"></i> Digital
                         Management
                       </span>
                     </div>
                     <div className="about_icon_box_inner mb-20">
                       <span>
-                        <i className="fa fa-check-square-o"></i>SEO Copywriting
+                        <i className="fa fa-check-square-o"></i> SEO Copywriting
                       </span>
                     </div>
                     <div className="about_icon_box_inner mb-20">
@@ -453,17 +441,13 @@ export default function Home() {
                         Enhancement
                       </span>
                     </div>
-                    <div className="about_icon_box_inner mb-20">
-                      <span>
-                        <i className="fa fa-check-square-o"></i> Book Formatting
-                      </span>
-                    </div>
+                   
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-lg-12">
-            <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
+            <button onClick={() => window.location.href = "/QuotationNew"} className="btn btn-primary mt-3 mr-3">
               Request a Quote
               </button>
               <button onClick={() => {redirect('contact-us')}} className="btn btn-primary mt-3 mr-3">

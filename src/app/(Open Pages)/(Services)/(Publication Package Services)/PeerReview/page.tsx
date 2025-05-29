@@ -1,478 +1,490 @@
-
 "use client";
+import Metadata from "@/app/Metadata";
+import PeerForm from "@/app/_Common/PeerForm/PeerForm";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
+import { usePathname } from "next/navigation";
+import { data } from "../../../../utils/metaFile.js";
+import styles from "@/app/_Common/Renovation/Renovation.module.css";
+import "@/app/_Common/Renovation/Renovation.css";
+import "@/app/_Common/Dropdown2/Dropdown2.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCheck,
+  faCheckCircle,
+  faComments,
+  faFileUpload,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+
+const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
+  let vari = "p < 0.05";
+  const pathName: string = usePathname()
+    .split("/")
+    .filter((val) => val)
+    .join("");
+  let metaData = newData[pathName];
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+  const accord2 = [
+    {
+      question: "How does peer review improve my manuscript?",
+      answer:
+        "Our peer review process enhances clarity, argument strength, formatting compliance, and overall quality, reducing rejection chances.",
+    },
+    {
+      question: "Can I request specific journal formatting checks?",
+      answer:
+        "Yes! We ensure journal-specific formatting compliance in all pre-submission checks.",
+    },
+    {
+      question: "What if I need revisions after peer review?",
+      answer:
+        "We offer free minor revisions within 14 days after delivering the review report.",
+    },
+    {
+      question: "Do you help with journal response letters?",
+      answer:
+        "Yes! Our Reviewer Response Assistance service helps you draft effective responses to journal critiques.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply upload your manuscript, select the review service, and get expert feedback tailored for journal submission.",
+    },
+  ];
+
   return (
     <>
-      {breadcrum(
-        "Services / Publication Package Services",
-        "Peer Review & Pre Submission"
-      )}
-      <section className="pt-5 pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8">
-              <h3 className="pt-2 pb-3">Peer Review & Pre Submission</h3>
-              <p>
-                Almost no article get accepted without revision. Peer-reviewers
-                raise their concern to the suitability of the content to get
-                published. In order to improve the quality of the content
-                further they raise important questions which need to be answered
-                by the author. At this stage, it is very important to understand
-                and correctly interpret the reviewer's comments, make desired
-                revision of the manuscript, submit a cover letter and clearly
-                communicate and make point-wise response to reviewer's queries.
-                Our expert will assist to present your "response to reviewer" in
-                the best possible manner.
-              </p>
-              <div className="em-about-icon-box2">
-                <div className="list-icon">
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      {" "}
-                      Is the Title crisp and catchy to draw attention of the
-                      reader?
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      Does the Abstract adequately represent the contents of the
-                      paper?
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      {" "}
-                      Is the Introduction/Background sound and logical as a
-                      context for the study?
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      Is the research question framed appropriately, i.e., is
-                      the motivation of the study clear and concise?
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6> Is the Methodology described in detail?</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      {" "}
-                      Is there is a clear differentiation between Results and
-                      Discussion sections.
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      the Discussion made in relation to published literature
-                      and/or fundamental basis, or is it just a mere repetition
-                      of the Results section?
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      {" "}
-                      Do the Conclusions clearly reflect the salient findings of
-                      the study?
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6> Are the references updated and adequate?</h6>
-                  </span>
-                </div>
-                <h5 className="mt-5">
-                  <strong>Disclaimer</strong>
-                </h5>
-                <p>
-                  {" "}
-                  This service does not guarantee acceptance of manuscript for
-                  publication but it guides you to improve the quality of your
-                  manuscript.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="appointment">
-                <div className="sign-up-form-wrap p-3">
-                  <div className="sign-up-form-header text-center mb-4">
-                    <h4 className="appointment_title mb-2">Create Account</h4>
-                    <p>Get started with your free account</p>
-                  </div>
-                  <form
-                    action="https://formspree.io/f/myyleorq"
-                    method="POST"
-                    id="dreamit-form"
-                    className="sign-up-form"
-                  >
-                    <div className="form-group input-group">
-                      <input
-                        type="text"
-                        name="name"
-                        className="form-control"
-                        placeholder="Your Name"
-                      />
-                    </div>
-                    <div className="form-group input-group">
-                      <input
-                        type="email"
-                        name="email"
-                        className="form-control"
-                        placeholder="Your Email"
-                      />
-                    </div>
-                    <div className="form-group input-group">
-                      <input
-                        type="text"
-                        name="phone"
-                        className="form-control"
-                        placeholder="Phone Number"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <select
-                        className="form-control"
-                        name="selectcountry"
-                        id="selectcountry"
-                        title="Kindly provide the Country name"
-                      >
-                        <option value="">-Select a Country-</option>
-                        <option value="1">Afghanistan</option>
-                        <option value="2">Albania</option>
-                        <option value="3">Algeria</option>
-                        <option value="4">American Samoa</option>
-                        <option value="5">Andorra</option>
-                        <option value="6">Angola</option>
-                        <option value="7">Anguilla</option>
-                        <option value="8">Antarctica</option>
-                        <option value="9">Antigua and Barbuda</option>
-                        <option value="10">Argentina</option>
-                        <option value="11">Armenia</option>
-                        <option value="12">Aruba</option>
-                        <option value="13">Australia</option>
-                        <option value="14">Austria</option>
-                        <option value="15">Azerbaijan</option>
-                        <option value="16">Bahamas</option>
-                        <option value="17">Bahrain</option>
-                        <option value="18">Bangladesh</option>
-                        <option value="19">Barbados</option>
-                        <option value="20">Belarus</option>
-                        <option value="21">Belgium</option>
-                        <option value="22">Belize</option>
-                        <option value="23">Benin</option>
-                        <option value="24">Bermuda</option>
-                        <option value="25">Bhutan</option>
-                        <option value="26">Bolivia</option>
-                        <option value="27">Bosnia and Herzegowina</option>
-                        <option value="28">Botswana</option>
-                        <option value="29">Bouvet Island</option>
-                        <option value="30">Brazil</option>
-                        <option value="31">
-                          British Indian Ocean Territory
-                        </option>
-                        <option value="32">Brunei Darussalam</option>
-                        <option value="33">Bulgaria</option>
-                        <option value="34">Burkina Faso</option>
-                        <option value="35">Burundi</option>
-                        <option value="36">Cambodia</option>
-                        <option value="37">Cameroon</option>
-                        <option value="38">Canada</option>
-                        <option value="39">Cape Verde</option>
-                        <option value="40">Cayman Islands</option>
-                        <option value="41">Central African Republic</option>
-                        <option value="42">Chad</option>
-                        <option value="43">Chile</option>
-                        <option value="44">China</option>
-                        <option value="45">Christmas Island</option>
-                        <option value="46">Cocoa Islands</option>
-                        <option value="47">Colombia</option>
-                        <option value="48">Comoros</option>
-                        <option value="49">Congo</option>
-                        <option value="50">Cook Islands</option>
-                        <option value="51">Costa Rica</option>
-                        <option value="52">Cote Divoire</option>
-                        <option value="53">Croatia</option>
-                        <option value="54">Cuba</option>
-                        <option value="55">Cyprus</option>
-                        <option value="56">Czech Republic</option>
-                        <option value="57">Denmark</option>
-                        <option value="58">Djibouti</option>
-                        <option value="59">Dominica</option>
-                        <option value="60">Dominican Republic</option>
-                        <option value="61">East Timor</option>
-                        <option value="62">Ecuador</option>
-                        <option value="63">Egypt</option>
-                        <option value="64">El Salvador</option>
-                        <option value="65">Equatorial Guinea</option>
-                        <option value="66">Eritrea</option>
-                        <option value="67">Estonia</option>
-                        <option value="68">Ethiopia</option>
-                        <option value="69">Falkland Islands</option>
-                        <option value="70">Faroe Islands</option>
-                        <option value="71">Fiji</option>
-                        <option value="72">Finland</option>
-                        <option value="73">France</option>
-                        <option value="74">France, Metropolitan</option>
-                        <option value="75">French Guiana</option>
-                        <option value="76">French Polynesia</option>
-                        <option value="77">French Southern Territories</option>
-                        <option value="78">Gabon</option>
-                        <option value="79">Gambia</option>
-                        <option value="80">Georgia</option>
-                        <option value="81">Germany</option>
-                        <option value="82">Ghana</option>
-                        <option value="83">Gibraltar</option>
-                        <option value="84">Greece</option>
-                        <option value="85">Greenland</option>
-                        <option value="86">Grenada</option>
-                        <option value="87">Guadeloupe</option>
-                        <option value="88">Guam</option>
-                        <option value="89">Guatemala</option>
-                        <option value="90">Guinea</option>
-                        <option value="91">Guinea-Bissau</option>
-                        <option value="92">Guyana</option>
-                        <option value="93">Haiti</option>
-                        <option value="94">Heard and Mc Donald Islands</option>
-                        <option value="95">Honduras</option>
-                        <option value="96">Hong Kong</option>
-                        <option value="97">Hungary</option>
-                        <option value="98">Iceland</option>
-                        <option value="99">India</option>
-                        <option value="100">Indonesia</option>
-                        <option value="101">Iran</option>
-                        <option value="102">Iraq</option>
-                        <option value="103">Ireland</option>
-                        <option value="104">Israel</option>
-                        <option value="105">Italy</option>
-                        <option value="106">Jamaica</option>
-                        <option value="107">Japan</option>
-                        <option value="108">Jordan</option>
-                        <option value="109">Kazakhstan</option>
-                        <option value="110">Kenya</option>
-                        <option value="111">Kiribati</option>
-                        <option value="112">
-                          Korea, Peoples Democratic Republic of
-                        </option>
-                        <option value="113">Republic of Korea</option>
-                        <option value="114">Kuwait</option>
-                        <option value="115">Kyrgyzstan</option>
-                        <option value="116">
-                          Lao, Peoples Democratic Republic
-                        </option>
-                        <option value="117">Latvia</option>
-                        <option value="118">Lebanon</option>
-                        <option value="119">Lesotho</option>
-                        <option value="120">Liberia</option>
-                        <option value="121">Libyan Arab Jamahiriya</option>
-                        <option value="122">Liechtenstein</option>
-                        <option value="123">Lithuania</option>
-                        <option value="124">Luxembourg</option>
-                        <option value="125">Macau</option>
-                        <option value="126">Macedonia, Republic of</option>
-                        <option value="127">Madagascar</option>
-                        <option value="128">Malawi</option>
-                        <option value="129">Malaysia</option>
-                        <option value="130">Maldives</option>
-                        <option value="131">Mali</option>
-                        <option value="132">Malta</option>
-                        <option value="133">Marshall Islands</option>
-                        <option value="134">Martinique</option>
-                        <option value="135">Mauritania</option>
-                        <option value="136">Mauritius</option>
-                        <option value="137">Mayotte</option>
-                        <option value="138">Mexico</option>
-                        <option value="139">
-                          Micronesia, Federated States of
-                        </option>
-                        <option value="140">Moldova, Republic of</option>
-                        <option value="141">Monaco</option>
-                        <option value="142">Mongolia</option>
-                        <option value="143">Montserrat</option>
-                        <option value="144">Morocco</option>
-                        <option value="145">Mozambique</option>
-                        <option value="146">Myanmar</option>
-                        <option value="147">Namibia</option>
-                        <option value="148">Nauru</option>
-                        <option value="149">Nepal</option>
-                        <option value="150">Netherlands</option>
-                        <option value="151">Netherlands Antilles</option>
-                        <option value="152">New Caledonia</option>
-                        <option value="153">New Zealand</option>
-                        <option value="154">Nicaragua</option>
-                        <option value="155">Niger</option>
-                        <option value="156">Nigeria</option>
-                        <option value="157">Niue</option>
-                        <option value="158">Norfolk Island</option>
-                        <option value="159">Northern Mariana Islands</option>
-                        <option value="160">Norway</option>
-                        <option value="161">Oman</option>
-                        <option value="162">Pakistan</option>
-                        <option value="163">Palau</option>
-                        <option value="164">Panama</option>
-                        <option value="165">Papua New Guinea</option>
-                        <option value="166">Paraguay</option>
-                        <option value="167">Peru</option>
-                        <option value="168">Philippines</option>
-                        <option value="169">Pitcairn</option>
-                        <option value="170">Poland</option>
-                        <option value="171">Portugal</option>
-                        <option value="172">Puerto Rico</option>
-                        <option value="173">Qatar</option>
-                        <option value="174">Reunion</option>
-                        <option value="175">Romania</option>
-                        <option value="176">RU</option>
-                        <option value="177">Rwanda</option>
-                        <option value="178">Saint Kitts and Nevis</option>
-                        <option value="179">Saint Lucia</option>
-                        <option value="180">
-                          Saint Vincent and the Grenadines
-                        </option>
-                        <option value="181">Samoa</option>
-                        <option value="182">San Marino</option>
-                        <option value="183">Sao Tome and Principe</option>
-                        <option value="184">Saudi Arabia</option>
-                        <option value="185">Senegal</option>
-                        <option value="186">Seychelles</option>
-                        <option value="187">Sierra Leone</option>
-                        <option value="188">Singapore</option>
-                        <option value="189">Slovakia (Slovak Republic)</option>
-                        <option value="190">Slovenia</option>
-                        <option value="191">Solomon Islands</option>
-                        <option value="192">Somalia</option>
-                        <option value="193">South Africa</option>
-                        <option value="194">
-                          South Georgia &amp; South Sandwich Islands
-                        </option>
-                        <option value="195">Spain</option>
-                        <option value="196">Sri Lanka</option>
-                        <option value="197">St. Helena</option>
-                        <option value="198">St. Pierre and Miquelon</option>
-                        <option value="199">Sudan</option>
-                        <option value="200">Suriname</option>
-                        <option value="201">
-                          Svalbard and Jan Mayen Islands
-                        </option>
-                        <option value="202">Swaziland</option>
-                        <option value="203">Sweden</option>
-                        <option value="204">Switzerland</option>
-                        <option value="205">Syrian Arab Republic</option>
-                        <option value="206">Taiwan</option>
-                        <option value="207">Tajikistan</option>
-                        <option value="208">
-                          Tanzania, United Republic of
-                        </option>
-                        <option value="209">Thailand</option>
-                        <option value="210">Togo</option>
-                        <option value="211">Tokelau</option>
-                        <option value="212">Tonga</option>
-                        <option value="213">Trinidad and Tobago</option>
-                        <option value="214">Tunisia</option>
-                        <option value="215">Turkey</option>
-                        <option value="216">Turkmenistan</option>
-                        <option value="217">Turks and Caicos Islands</option>
-                        <option value="218">Tuvalu</option>
-                        <option value="219">Uganda</option>
-                        <option value="220">Ukraine</option>
-                        <option value="221">United Arab Emirates</option>
-                        <option value="222">United Kingdom</option>
-                        <option value="223">United States</option>
-                        <option value="224">
-                          United States Minor Outlying Islands
-                        </option>
-                        <option value="225">Uruguay</option>
-                        <option value="226">Uzbekistan</option>
-                        <option value="227">Vanuatu</option>
-                        <option value="228">Vatican City State</option>
-                        <option value="229">Venezuela</option>
-                        <option value="230">Viet Nam</option>
-                        <option value="231">Virgin Islands (British)</option>
-                        <option value="232">Virgin Islands (U.S.)</option>
-                        <option value="233">Wallis and Futuna Islands</option>
-                        <option value="234">Western Sahara</option>
-                        <option value="235">Yemen</option>
-                        <option value="236">Yugoslavia</option>
-                        <option value="237">Zaire</option>
-                        <option value="238">Zambia</option>
-                        <option value="239">Zimbabwe</option>
-                        <option value="240">Unlisted Country</option>
-                      </select>
-                    </div>
-
-                    <div className="form-group input-group">
-                      <input
-                        type="text"
-                        name=""
-                        className="form-control"
-                        placeholder="About Info"
-                      />
-                    </div>
-                    <div className="form-group input-group">
-                      <input
-                        type="password"
-                        name=""
-                        className="form-control"
-                        placeholder="Enter Password"
-                      />
-                    </div>
-                    <div className="form-group input-group">
-                      <input
-                        type="password"
-                        name=""
-                        className="form-control"
-                        placeholder="Confirm Password "
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="submit"
-                        name="submit"
-                        id="submit"
-                        className="btn"
-                        value="Send"
-                      />
-                    </div>
-
-                    <div className="form-check d-flex align-items-center text-center"></div>
-                  </form>
-                  <div id="status"></div>
-                </div>
-              </div>
-            </div>
+      <meta
+        name="title"
+        content="Peer Review Coordination Services | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="End-to-end peer review management to streamline feedback and revisions."
+      />
+    
+      <section style={{ marginTop: "40px" }}>
+        <div className={styles.textWrapper}>
+          <h1 className={styles.heading}>
+            Expert Pre-Submission &amp; Peer Review Services – Strengthen Your
+            Research Before Journal Submission
+          </h1>
+          <p className={styles.subtext}>
+            Maximize your chances of journal acceptance with our comprehensive
+            manuscript evaluation and peer review services. Our expert reviewers
+            provide objective technical reviews with suggestions for improvement
+            to enhance your manuscript&#39;s clarity, originality, and journal
+            compliance before submission.
+          </p>
+          <div className={styles.buttonGroup}>
+            <button
+              className={styles.primaryButton}
+              onClick={() =>
+                (window.location.href =
+                  "https://manuscriptedit.com/QuotationNew/")
+              }
+            >
+              Get a Peer Review Now
+            </button>
+            <button
+              className={styles.secondaryButton}
+              onClick={() =>
+                (window.location.href =
+                  "https://manuscriptedit.com/QuotationNew/")
+              }
+            >
+              Request a Free Consultation
+            </button>
           </div>
         </div>
       </section>
-      <div className="container">
-        <table className="table text-center">
-          <thead className="thead-dark">
+      <section className={styles.benefitsWrapper} style={{ marginTop: "40px" }}>
+        <div className={styles.benefitsBox}>
+          <h2 className={styles.heading}>
+            Why Choose Our Pre-Submission &amp; Peer Review Services?
+          </h2>
+          <p className={styles.subtext}>
+            <strong>
+              At ManuscriptEdit, our pre-submission peer review services ensure
+              your manuscript is optimized for successful journal submission.
+              Our key benefits include:
+            </strong>
+          </p>
+          <ul className={styles.benefitsList}>
+            <li>
+              ✔ Subject Expert Review – PhD-level reviewers with editorial
+              expertise in high-impact journals.
+            </li>
+            <li>
+              ✔ Detailed Manuscript Assessment by Subject Experts – Evaluating
+              research clarity, originality, argument coherence, and
+              presentation quality.
+            </li>
+            <li>
+              ✔ Journal-Specific Compliance – Ensuring adherence to word limits,
+              formatting, and structural guidelines.
+            </li>
+            <li>
+              ✔ Constructive Reviewer Feedback – In-depth suggestions to improve
+              manuscript quality prior to submission.
+            </li>
+            <li>
+              ✔ Identify Technical Gaps Before Journal Submission – Addressing
+              weak arguments, missing data, and logical inconsistencies.
+            </li>
+            <li>
+              ✔ Minimize Risk of Manuscript Rejection – Fixing common rejection
+              reasons before submission.
+            </li>
+          </ul>
+          <button
+            className={styles.primaryButton}
+            onClick={() =>
+              (window.location.href =
+                "https://manuscriptedit.com/QuotationNew/")
+            }
+          >
+            Learn More About Our Review Process
+          </button>
+        </div>
+      </section>
+
+      <section className="editing-overview-section">
+        <h2 className="editing-overview-heading">
+          Our Peer Review & Pre-Submission Services
+        </h2>
+        <table className="editing-overview-table">
+          <thead>
             <tr>
-              <th scope="col">Turnaround Time in Days</th>
-              <th scope="col">Price per Assignment in US$</th>
+              <th>Service</th>
+              <th>Best For</th>
+              <th>Key Features</th>
+              <th>Turnaround Time</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>5</td>
-              <td>150</td>
+              <td>Basic Peer Review</td>
+              <td>Researchers seeking a quick review</td>
+              <td>
+                General manuscript evaluation, Minor improvement suggestions
+              </td>
+              <td>3-5 Days</td>
+            </tr>
+            <tr>
+              <td>Advanced Peer Review</td>
+              <td>Authors targeting high-impact journals</td>
+              <td>
+                Detailed reviewer comments, Structural improvement suggestions
+              </td>
+              <td>5-7 Days</td>
+            </tr>
+            <tr>
+              <td>Journal-Specific Pre-Submission Check</td>
+              <td>Researchers preparing final submission</td>
+              <td>Compliance check, Formatting & structure verification</td>
+              <td>3-5 Days</td>
+            </tr>
+            <tr>
+              <td>Reviewer Response Assistance</td>
+              <td>Authors responding to journal reviewers</td>
+              <td>Rewriting responses, Addressing critiques professionally</td>
+              <td>4-6 Days</td>
+            </tr>
+            <tr>
+              <td>Resubmission Support</td>
+              <td>Manuscripts previously rejected</td>
+              <td>Addressing reviewer comments, Rewriting & restructuring</td>
+              <td>7-10 Days</td>
             </tr>
           </tbody>
         </table>
+        <button
+          className={styles.primaryButton}
+          style={{ marginTop: "40px" }}
+          onClick={() =>
+            (window.location.href = "https://manuscriptedit.com/QuotationNew/")
+          }
+        >
+          Compare Review & Pre-Submission Services
+        </button>
+      </section>
+
+      <div className={styles.processContainer}>
+        <h2 className={styles.processTitle}>
+          Peer Review Process – How We Strengthen Your Research
+        </h2>
+        <div className={styles.processSteps1}>
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 1:</h5>
+            <FontAwesomeIcon
+              icon={faFileUpload} // Suitable for manuscript submission
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Manuscript Submission & Journal Selection – Upload your manuscript
+              & mention the target journal.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 2:</h5>
+            <FontAwesomeIcon
+              icon={faUsers} // Suitable for expert peer review
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Expert Peer Review & Evaluation – Subject experts assess
+              manuscript strengths & weaknesses.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 3:</h5>
+            <FontAwesomeIcon
+              icon={faComments} // Suitable for reviewer feedback
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Reviewer Feedback & Revision Suggestions – Comprehensive comments
+              on structure, clarity & impact.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 4:</h5>
+            <FontAwesomeIcon
+              icon={faCheckCircle} // Suitable for compliance check
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Journal Compliance & Formatting Check – Ensuring adherence to
+              submission guidelines.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 5:</h5>
+            <FontAwesomeIcon
+              icon={faCheck} // Suitable for final review and submission readiness
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Final Review & Revisions – Submission-ready manuscript with
+              improved acceptance probability.
+            </h3>
+          </div>
+        </div>
+
+        <div className={styles.buttonGroup}>
+          <a href="https://manuscriptedit.com/QuotationNew/">
+            <button className={styles.primaryButton}>
+              Start Your Peer Review Now
+            </button>
+          </a>
+        </div>
       </div>
-      {howWeWork(2)}
-      {SpecializedArea(false)}
-      {clientFeedback()}
+
+      <section className="before-after-example-section">
+        <h2 className="before-after-example-heading">
+          Before & After Peer Review – See the Difference
+        </h2>
+
+        <div className="before-after-example-content">
+          <div className="before-example">
+            <h3>Before (Raw Manuscript with Weak Argumentation & Errors):</h3>
+            <p className="before-text">
+              “The results of our study indicate that X has an effect on Y, but
+              further research is needed to confirm this. The method was applied
+              in 50 cases and seemed to work well.”
+            </p>
+          </div>
+
+          <div className="after-example">
+            <h3>
+              After (Refined Manuscript with Peer Review Feedback Implemented):
+            </h3>
+            <p className="after-text">
+              “Our study demonstrates a significant correlation between X and Y
+              ({vari}). The methodology, applied to 50 cases, showed promising
+              outcomes, warranting further exploration under controlled
+              conditions.”
+            </p>
+          </div>
+        </div>
+
+        <div className="explanation">
+          <p>
+            Peer Review enhances clarity, scientific precision, and argument
+            strength.
+          </p>
+        </div>
+
+        <div className="cta-container">
+          <a
+            href="https://manuscriptedit.com/QuotationNew/"
+            className="cta-button"
+          >
+            Request a Sample Review Report
+          </a>
+        </div>
+      </section>
+
+      <section className="pricing-turnaround-section">
+        <h2 className="pricing-turnaround-heading">
+          Advanced Review & Resubmission Support – Pricing and Turnaround Time
+        </h2>
+
+        <div className="pricing-details">
+          <div className="pricing-item">
+            <h3>Starting Price</h3>
+            <p className="pricing-text">
+            Price per Assignment in USD: $475
+            </p>
+          </div>
+
+          <div className="delivery-item">
+            <h3>Turnaround Time</h3>
+            <p className="delivery-time">
+            Turnaround Time in Days : 10
+            </p>
+          </div>
+        </div>
+
+        <div className="cta-container">
+          <a
+            href="https://manuscriptedit.com/QuotationNew/"
+            className="cta-button"
+          >
+            Check Pricing and Get a Quote
+          </a>
+        </div>
+      </section>
+      <div className="wcus-container">
+        <div className="wcus-client-reviews">
+          <h3 className="editing-overview-heading">Testimonial</h3>
+          <div className="row d-flex justify-content-around">
+            {[
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                text: "The best editing service I've used. Got published in record time!",
+                name: "Dr. Emily Carter",
+              },
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                text: "Exceptional support from expert editors. Highly recommended!",
+                name: "Prof. John Williams",
+              },
+              {
+                imgSrc:
+                  "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
+                text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                name: "J Y",
+              },
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
+                text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                name: "Emily Selman",
+              },
+            ].map((review, index) => (
+              <div className="wcus-review col-lg-5" key={index}>
+                <img src={review.imgSrc} alt="Client" />
+                <p>
+                  "{review.text}" - <strong>{review.name}</strong>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <h3>
+          <br />
+          🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+          publishing experts.
+          <br />
+          <br />
+          📑 Trusted by universities, funding agencies, and research
+          institutions.
+        </h3>
+        <div className="cta-container">
+          <a
+            href="https://manuscriptedit.com/Testimonial/"
+            className="cta-button"
+          >
+            See More Reviews
+          </a>
+        </div>
+      </div>
+
+      <div className="container" style={{ marginTop: "3rem" }}>
+        <div className="accordion__wrapper2">
+          <h1 className="accordion__title">
+            FAQs
+            <br />
+            <span style={{ fontSize: "1rem" }}>
+              Common Questions About Peer Review & Pre-Submission Services
+            </span>
+          </h1>
+
+          {accord2.map((faq, index) => (
+            <div
+              className="accordion"
+              key={index}
+              style={{
+                paddingBottom: "1rem",
+                marginBottom: "1rem",
+                color: "#494949",
+              }}
+            >
+              <div
+                className="accordion__header d-flex justify-content-between"
+                onClick={() => toggleAccordion(index)}
+                style={{ cursor: "pointer" }}
+              >
+                <h2 className="accordion__question">{faq.question}</h2>
+                <span>{openIndex === index ? "⮝" : "⮟"}</span>
+              </div>
+
+              <div
+                className="accordion__content"
+                style={{
+                  height: openIndex === index ? "auto" : "0",
+                  overflow: "hidden",
+                  transition: "height 0.3s ease",
+                }}
+              >
+                <div
+                  className="accordion__answer"
+                  style={{
+                    padding: "0",
+                    paddingTop: "0.5rem",
+                    marginBottom: "0",
+                    backgroundColor: "#f0f8ff",
+                  }}
+                  dangerouslySetInnerHTML={{ __html: faq.answer }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

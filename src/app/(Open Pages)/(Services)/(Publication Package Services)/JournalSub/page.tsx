@@ -1,147 +1,489 @@
-'use client';
+"use client";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import clientFeedback from "@/app/_Common/_ClientFeedback/ClientFeedback";
 import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
 import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
 import redirect from "@/app/_Common/_functionality/Redirect";
+import styles from "@/app/_Common/Renovation/Renovation.module.css";
+import "@/app/_Common/Renovation/Renovation.css";
+import "@/app/_Common/Dropdown2/Dropdown2.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCheckCircle,
+  faEdit,
+  faEnvelopeOpenText,
+  faPaperPlane,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 export default function Home() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const accord2 = [
+    {
+      question: "What does your full journal submission service include?",
+      answer:
+        "We handle manuscript formatting, journal selection, online submission, cover letter drafting, and tracking until acceptance.",
+    },
+    {
+      question: "Can you help with peer review communication?",
+      answer:
+        "Yes! We draft professional reviewer response letters and manage editorial communication.",
+    },
+    {
+      question: "Do you guarantee journal acceptance?",
+      answer:
+        "While we enhance submission quality and compliance, final acceptance depends on editorial and peer review decisions.",
+    },
+    {
+      question: "Can you submit my paper to multiple journals?",
+      answer:
+        "Yes! We offer multiple journal submission support and resubmission strategies.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply upload your manuscript, and our submission experts will handle the entire submission process.",
+    },
+  ];
+
   return (
     <>
-      {breadcrum(
-        "Services / Publication Package Services",
-        "Journal Submission"
-      )}
-      <section className="pt-5 pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8">
-              <h3 className="pt-2 pb-3">What We Provide</h3>
-              <p>
-                The aim of this service is to help evaluate the suitability of a
-                manuscript purely from a subject experts (peer) point of view,
-                detailing mostly the scientific inadequacy/adequacy/suggestions
-                for improving the manuscript etc. Since no editing is involved,
-                there is no change in your manuscript. We only provide
-                suggestions and expert comments in "Track-change" mode. Some of
-                the questions to be addressed here are:
-              </p>
-              <div className="em-about-icon-box2">
-                <div className="list-icon">
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      Register and create an account for you in the journal's
-                      webpage for online submission.
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      {" "}
-                      Complete all the forms in the journal submission process.{" "}
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>Does it publish original research or review papers?</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      Write a compelling cover letter to the journal elucidating
-                      the novelty of your work.
-                    </h6>
-                  </span>
 
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      Fill the patients consent form, copyright transfer form,
-                      and ethics statement.
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      {" "}
-                      Obtain the list of prospective reviewers from you and fill
-                      the corresponding form.
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      {" "}
-                      Alert the author of any missing information required for
-                      the journal submission.
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      {" "}
-                      Upload your manuscript along with figures and tables
-                      correctly.
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      Check the pdf of uploaded manuscript and approve
-                      submission.
-                    </h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>Communicate with the journal editor on your behalf.</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>
-                      Provide you the detail information related to the journal
-                      submission.
-                    </h6>
-                  </span>
-                </div>
-              </div>
-              <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
-              Order Now
-              </button>
-              <button onClick={() => {redirect('contact-us')}} className="btn btn-primary mt-3 mr-3">
-              Schedule a Call
-              </button>
-            </div>
-            <div className="col-md-4">
-              <img
-                src="/images/menuscimg/subtantive.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
-            </div>
+    <meta
+        name="title"
+        content="Journal Submission Support | ManuscriptEdit"
+      />
+      <meta
+        name="description"
+        content="Full support for journal submission, cover letters & manuscript tracking."
+      />
+      <section style={{ marginTop: "40px" }}>
+        <div className={styles.textWrapper}>
+          <h1 className={styles.heading}>
+            Hassle-Free Journal Submission Service- Submit Your Research with
+            Confidence
+          </h1>
+          <p className={styles.subtext}>
+            Increase your chances of journal acceptance with our expert journal
+            submission service. We handle journal selection and manuscript
+            formatting according to the journal guidelines. Our cover letter
+            drafting, reviewer responses, and submission process ensure that
+            your research reaches the right audience with compliance and
+            precision.
+          </p>
+          <div className={styles.buttonGroup}>
+            <button
+              className={styles.primaryButton}
+              onClick={() =>
+                (window.location.href =
+                  "https://manuscriptedit.com/QuotationNew/")
+              }
+            >
+              Get Journal Submission Assistance
+            </button>
+            <button
+              className={styles.secondaryButton}
+              onClick={() =>
+                (window.location.href =
+                  "https://manuscriptedit.com/QuotationNew/")
+              }
+            >
+              Request a Free Consultation
+            </button>
           </div>
         </div>
       </section>
-      <div className="container">
-        <table className="table text-center">
-          <thead className="thead-dark">
+      <section className={styles.benefitsWrapper} style={{ marginTop: "40px" }}>
+        <div className={styles.benefitsBox}>
+          <h2 className={styles.heading}>
+            Why Choose Our Journal Submission Service?
+          </h2>
+          <p className={styles.subtext}>
+            <strong>
+              ManuscriptEdit’s Journal Submission Services offers end-to-end
+              assistance to streamline your journal submission process to the
+              right journal and maximize your success. Our key benefits include:
+            </strong>
+          </p>
+          <ul className={styles.benefitsList}>
+            <li>
+              ✔ Expert Journal Submission Assistance- Ensuring flawless
+              submission with all journal submission requirements met.
+            </li>
+            <li>
+              ✔ Cover letter &amp; Manuscript Formatting- Professionally crafted
+              cover letters and journal-specific formatted manuscripts.
+            </li>
+            <li>
+              ✔ Submission to High-Impact Journals- Including Scopus, Web of
+              Science, PubMed, Elsevier, Springer, Wiley &amp; more.
+            </li>
+            <li>
+              ✔ Peer Review &amp; Reviewer Response Handling- Managing editorial
+              communication and reviewer comments.
+            </li>
+            <li>
+              ✔ Fast-Track Manuscript Submission- Increasing manuscript
+              acceptance chances with complete submission compliance for
+              high-impact journals.
+            </li>
+          </ul>
+          <button
+            className={styles.primaryButton}
+            onClick={() =>
+              (window.location.href =
+                "https://manuscriptedit.com/QuotationNew/")
+            }
+          >
+            Learn More About Our Submission Process
+          </button>
+        </div>
+      </section>
+      <section className="editing-overview-section">
+        <h2 className="editing-overview-heading">
+          Our Journal Submission Services
+        </h2>
+        <table className="editing-overview-table">
+          <thead>
             <tr>
-              <th scope="col">Turnaround Time in Days</th>
-              <th scope="col">Price per Assignment in US$</th>
+              <th>Service</th>
+              <th>Best For</th>
+              <th>Key Features</th>
+              <th>Turnaround Time</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>2</td>
-              <td>120</td>
+              <td>Full Journal Submission Service</td>
+              <td>First-time authors & researchers</td>
+              <td>
+                Journal selection, Formatting, Cover letter writing, Submission
+                tracking
+              </td>
+              <td>5-7 Days</td>
+            </tr>
+            <tr>
+              <td>Manuscript Formatting & Compliance Check</td>
+              <td>Authors preparing for submission</td>
+              <td>
+                Journal-specific formatting, References & citations, Ethical
+                compliance review
+              </td>
+              <td>3-5 Days</td>
+            </tr>
+            <tr>
+              <td>Cover Letter & Reviewer Response Drafting</td>
+              <td>Researchers submitting to high-impact journals</td>
+              <td>
+                Persuasive cover letter, Reviewer response structuring,
+                Scientific argumentation refinement
+              </td>
+              <td>4-6 Days</td>
+            </tr>
+            <tr>
+              <td>Multiple Journal Submissions & Resubmission Support</td>
+              <td>Authors seeking alternative publication options</td>
+              <td>
+                Multi-journal submission, Resubmission after rejection,
+                Compliance revisions
+              </td>
+              <td>7-10 Days</td>
+            </tr>
+            <tr>
+              <td>Submission Tracking & Peer Review Handling</td>
+              <td>Researchers awaiting decision & revisions</td>
+              <td>
+                Reviewer comment analysis, Manuscript revision tracking,
+                Editorial communication
+              </td>
+              <td>Ongoing</td>
             </tr>
           </tbody>
         </table>
+        <button
+          className={styles.primaryButton}
+          style={{ marginTop: "40px" }}
+          onClick={() =>
+            (window.location.href = "https://manuscriptedit.com/QuotationNew/")
+          }
+        >
+          Compare Journal Submission Services
+        </button>
+      </section>
+      <div className={styles.processContainer}>
+        <h2 className={styles.processTitle}>
+          Journal Submission Process – How We Ensure Accuracy & Acceptance
+        </h2>
+        <div className={styles.processSteps1}>
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 1:</h5>
+            <FontAwesomeIcon
+              icon={faSearch} // Suitable for journal selection
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Journal Selection & Manuscript Evaluation – Identifying the
+              best-fit journal based on scope, indexing, and impact factor.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 2:</h5>
+            <FontAwesomeIcon
+              icon={faEdit} // Suitable for manuscript formatting
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Manuscript Formatting & Cover Letter Drafting – Ensuring
+              compliance with journal formatting and submission requirements.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 3:</h5>
+            <FontAwesomeIcon
+              icon={faPaperPlane} // Suitable for online submission
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Online Submission & Compliance Check – Uploading files, responding
+              to submission questions, and tracking the application.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 4:</h5>
+            <FontAwesomeIcon
+              icon={faEnvelopeOpenText} // Suitable for editorial correspondence
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Editorial Correspondence & Peer Review Management – Handling
+              editor queries and reviewer comments professionally.
+            </h3>
+          </div>
+
+          <div className={styles.processStep}>
+            <h5 className={styles.stepHeading}>Step 5:</h5>
+            <FontAwesomeIcon
+              icon={faCheckCircle} // Suitable for decision tracking and acceptance
+              size="3x"
+              className={styles.stepIcon}
+            />
+            <h3 className={styles.stepDescription}>
+              Decision Tracking, Resubmission & Post-Acceptance Support –
+              Ensuring a smooth revision, resubmission, and acceptance process.
+            </h3>
+          </div>
+        </div>
+
+        <div className={styles.buttonGroup}>
+          <a href="https://manuscriptedit.com/QuotationNew/">
+            <button className={styles.primaryButton}>
+              Start Your Journal Submission Process
+            </button>
+          </a>
+        </div>
       </div>
-      {howWeWork(2)}
-      {SpecializedArea(false)}
-      {clientFeedback()}
+
+      <section className="before-after-example-section">
+        <h2 className="before-after-example-heading">
+          Before & After Journal Submission Assistance – See the Difference
+        </h2>
+
+        <div className="before-after-example-content">
+          <div className="before-example">
+            <h3>Before (Manuscript Rejected Due to Submission Errors):</h3>
+            <p className="before-text">
+              “I submitted my research paper to a high-impact journal, but it
+              was rejected due to formatting issues, missing references, and an
+              unstructured cover letter.”
+            </p>
+          </div>
+
+          <div className="after-example">
+            <h3>
+              After (Professionally Managed Submission with Expert Compliance
+              Check):
+            </h3>
+            <p className="after-text">
+              “After using ManuscriptEdit’s journal submission service, my
+              manuscript was accepted without formatting issues. The cover
+              letter was persuasive, and the reviewer response was handled
+              smoothly!”
+            </p>
+          </div>
+        </div>
+
+        <div className="explanation">
+          <p>
+            Journal Submission Assistance ensures compliance, efficiency, and
+            higher acceptance rates.
+          </p>
+        </div>
+
+        <div className="cta-container">
+          <a
+            href="https://manuscriptedit.com/QuotationNew/"
+            className="cta-button"
+          >
+            Request a Sample Submission Package
+          </a>
+        </div>
+      </section>
+
+      <section className="pricing-turnaround-section">
+        <h2 className="pricing-turnaround-heading">
+          Submission & Reviewer Response Assistance – Pricing and Turnaround
+          Time
+        </h2>
+
+        <div className="pricing-details">
+          <div className="pricing-item">
+            <h3>Starting Price</h3>
+            <p className="pricing-text">
+              $120 (Basic Submission Support) – $450 (Comprehensive Submission &
+              Reviewer Response Management)
+            </p>
+          </div>
+
+          <div className="delivery-item">
+            <h3>Turnaround Time</h3>
+            <p className="delivery-time">
+              3 Days – 10 Days (Depending on service type)
+            </p>
+          </div>
+        </div>
+
+        <div className="cta-container">
+          <a
+            href="https://manuscriptedit.com/QuotationNew/"
+            className="cta-button"
+          >
+            Check Pricing and Get a Quote
+          </a>
+        </div>
+      </section>
+      <div className="wcus-container">
+        <div className="wcus-client-reviews">
+          <h3 className="editing-overview-heading">Testimonial</h3>
+          <div className="row d-flex justify-content-around">
+            {[
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                text: "The best editing service I've used. Got published in record time!",
+                name: "Dr. Emily Carter",
+              },
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                text: "Exceptional support from expert editors. Highly recommended!",
+                name: "Prof. John Williams",
+              },
+              {
+                imgSrc:
+                  "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
+                text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                name: "J Y",
+              },
+              {
+                imgSrc:
+                  "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
+                text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                name: "Emily Selman",
+              },
+            ].map((review, index) => (
+              <div className="wcus-review col-lg-5" key={index}>
+                <img src={review.imgSrc} alt="Client" />
+                <p>
+                  "{review.text}" - <strong>{review.name}</strong>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <h3>
+          <br />
+          🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+          publishing experts.
+          <br />
+          <br />
+          📑 Trusted by universities, funding agencies, and research
+          institutions.
+        </h3>
+        <div className="cta-container">
+          <a
+            href="https://manuscriptedit.com/Testimonial/"
+            className="cta-button"
+          >
+            See More Reviews
+          </a>
+        </div>
+      </div>
+
+      <div className="container" style={{ marginTop: "3rem" }}>
+        <div className="accordion__wrapper2">
+          <h1 className="accordion__title">
+            FAQs
+            <br />
+            <span style={{ fontSize: "1rem" }}>
+              Common Questions About Journal Submission Services
+            </span>
+          </h1>
+
+          {accord2.map((faq, index) => (
+            <div
+              className="accordion"
+              key={index}
+              style={{
+                paddingBottom: "1rem",
+                marginBottom: "1rem",
+                color: "#494949",
+              }}
+            >
+              <div
+                className="accordion__header d-flex justify-content-between"
+                onClick={() => toggleAccordion(index)}
+                style={{ cursor: "pointer" }}
+              >
+                <h2 className="accordion__question">{faq.question}</h2>
+                <span>{openIndex === index ? "⮝" : "⮟"}</span>
+              </div>
+
+              <div
+                className="accordion__content"
+                style={{
+                  height: openIndex === index ? "auto" : "0",
+                  overflow: "hidden",
+                  transition: "height 0.3s ease",
+                }}
+              >
+                <div
+                  className="accordion__answer"
+                  style={{
+                    padding: "0",
+                    paddingTop: "0.5rem",
+                    marginBottom: "0",
+                    backgroundColor: "#f0f8ff",
+                  }}
+                  dangerouslySetInnerHTML={{ __html: faq.answer }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

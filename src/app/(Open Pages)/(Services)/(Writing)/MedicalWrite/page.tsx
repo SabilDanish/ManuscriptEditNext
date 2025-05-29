@@ -1,804 +1,445 @@
-'use client';
-import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
-import howWeWork from "@/app/_Common/_HowWeWork/HowWeWork";
-import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
-import SpecializedArea from "@/app/_Common/_SpecializedArea/SpecializedArea";
-import redirect from "@/app/_Common/_functionality/Redirect";
+"use client";
+
+// import ourProfessional from "@/app/_Common/_OurProfessional/OurProfessional";
+import { usePathname } from "next/navigation";
+import { data } from "../../../../utils/metaFile.js";
+import Metadata from "@/app/Metadata";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from "@/app/_Common/Renovation/Renovation.module.css";
+import "@/app/_Common/Renovation/Renovation.css";
+import "@/app/_Common/Dropdown2/Dropdown2.css";
+
+import {
+  faFileUpload,
+  faSearch,
+  faEdit,
+  faCheckCircle,
+  faRedo,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import ReviewArticle from "@/app/_Common/DependentTabSec/DependentTabSec";
+
+const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
+  const pathName: string = usePathname()
+    .split("/")
+    .filter((val) => val)
+    .join("");
+  let metaData = newData[pathName];
+  const steps = [
+    {
+      stepss: "Step 1 ➔",
+      icon: faFileUpload,
+      title:
+        "Consultation & Project Scope Definition – Understand writing needs & target audience.",
+    },
+    {
+      stepss: "Step 2 ➔",
+      icon: faSearch,
+      title:
+        "Data Collection & Research – Gathering evidence-based references.",
+    },
+    {
+      stepss: "Step 3 ➔",
+      icon: faEdit,
+      title:
+        "Medical Writing & Drafting – Structured document creation by medical experts.",
+    },
+    {
+      stepss: "Step 4 ➔",
+      icon: faCheckCircle,
+      title:
+        "Review & Compliance Check – Ensuring adherence to medical writing standards.",
+    },
+    {
+      stepss: "Step 5 ➔",
+      icon: faCheckCircle,
+      title:
+        "Final Delivery & Revisions – Submission-ready medical content with free minor revisions.",
+    },
+  ];
+
+  const accord2: { question: string; answer: string }[] = [
+    {
+      question: "What regulations do you follow in medical writing?",
+      answer:
+        "We ensure compliance with ICH-GCP, FDA, EMA, COPE, and journal publishing standards.",
+    },
+    {
+      question: "Can you assist with clinical trial documentation?",
+      answer:
+        "Yes! We provide protocols, case reports, regulatory submissions, and patient safety reports.",
+    },
+    {
+      question: "Do you offer plagiarism checks?",
+      answer:
+        "Yes, all medical content is checked for plagiarism & originality using Turnitin and iThenticate.",
+    },
+    {
+      question: "Can I request revisions after medical writing?",
+      answer: "Yes, 14 days of free minor revisions are included.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply upload your project details, and our expert medical writers will refine your manuscript.",
+    },
+  ];
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const gap = {
+    marginTop: "40px",
+  };
+
   return (
     <>
-      {breadcrum("Services / Writing", "Medical Writing")}
-      <section className="pt-5 pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <h3 className="pt-2 pb-3">Medical Writing</h3>
-              <p>
-                Medical writing is a specialized form of technical writing that
-                involves creating various types of documents related to
-                healthcare, medicine, and pharmaceuticals. These documents are
-                typically written for a wide range of audiences, including
-                healthcare professionals, researchers, regulatory authorities,
-                patients, and the general public.
-              </p>
-              <div className="em-about-icon-box2">
-                <div className="list-icon">
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6> CASE REPORT</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6> ORIGINAL RESEARCH ARTICLE</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6> REVIEW ARTICLE</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>RESEARCH PROPOSAL</h6>
-                  </span>
-                  <span>
-                    <i className="bi bi-check-lg"></i>
-                    <h6>CUSTOMIZED WRITING</h6>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <img
-                src="/images/menuscimg/subtantive.jpg"
-                alt=""
-                width="100%"
-                style={{ borderRadius: 10 }}
-              />
+      {<Metadata metaData={metaData} />}
+      {/* {breadcrum("Services / Writing", "Medical Writing")} */}
+
+      <div>
+        <section style={gap}>
+          <div className={styles.textWrapper}>
+            <h1 className={styles.heading}>
+              Expert Medical Writing Assistance Services- Compliance &amp;
+              Precision for Healthcare Research
+            </h1>
+            <p className={styles.subtext}>
+              Get professional medical writing assistance from PhD-level experts
+              specializing in clinical research documents, regulatory
+              submissions, and scientific publications. Our medical writing
+              assistance service ensures accuracy, clarity, and compliance with
+              ICH-GCP, FDA, EMA, and COPE guidelines- helping healthcare
+              professionals, researchers, and pharmaceutical companies publish
+              high-quality, evidence-based content.
+            </p>
+            <div className={styles.buttonGroup}>
+              <a href="https://manuscriptedit.com/QuotationNew/">
+                <button className={styles.primaryButton}>
+                  Get Medical Writing Services
+                </button>
+              </a>
+
+              <a href="https://manuscriptedit.com/QuotationNew/">
+                <button className={styles.secondaryButton}>
+                  Request a Free Consultation
+                </button>
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-      <div className="tab_area bg_color2 pt-80 pb-100">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="tab_content">
-                <ul className="nav nav-tabs" role="tablist">
-                  <li className="nav-item active">
-                    <a
-                      className="nav-link "
-                      data-toggle="tab"
-                      href="#tabs-1"
-                      role="tab"
-                      aria-expanded="true"
-                    >
-                      CASE REPORT
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      data-toggle="tab"
-                      href="#tabs-2"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      ORIGINAL RESEARCH ARTICLE
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      data-toggle="tab"
-                      href="#tabs-3"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      REVIEW ARTICLE
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      data-toggle="tab"
-                      href="#tabs-4"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      {" "}
-                      RESEARCH PROPOSAL
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      data-toggle="tab"
-                      href="#tabs-5"
-                      role="tab"
-                      aria-expanded="false"
-                    >
-                      CUSTOMIZED WRITING
-                    </a>
-                  </li>
-                </ul>
-                <div className="tab-content white_bg pt-1 pb-5 pl-4 pr-4">
+        </section>
+
+        <ReviewArticle />
+
+        {/* Proofreading Overview Section */}
+        <section className={styles.benefitsWrapper}>
+          <div className={styles.benefitsBox}>
+            <h2 className={styles.heading}>
+              Key Benefits of ManuscriptEdit’s Medical Writting Services:
+            </h2>
+            <ul className={styles.benefitsList}>
+              <li>
+                ✅ PhD Medical Writers & Editors – Experts in medicine, life
+                sciences, and healthcare research.
+              </li>
+              <li>
+                ✅ Regulatory and Compliance Support – Ensuring adherence to
+                FDA, EMA, and ICH-GCP medical writing standards.
+              </li>
+              <li>
+                ✅ Evidence-Based Medical Content – High-quality research with
+                accurate citations and data integrity.
+              </li>
+              <li>
+                ✅ Scientific & Clinical Writing Services – Custom solutions for
+                Healthcare & Pharma, with specialized writing assistance for
+                clinical trial documents, research papers, regulatory reports,
+                and journal publications.
+              </li>
+              <li>
+                ✅ Confidential & Secure Services – Guaranteed confidentiality
+                for healthcare and pharmaceutical research.
+              </li>
+            </ul>
+          </div>
+
+          <section className={styles.proofreadingWrapper}>
+            <h2 className={styles.headingCenter}>
+              Our Medical Writing Services
+            </h2>
+            <table className="editing-overview-table">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Best For</th>
+                  <th>Key Features</th>
+                  <th>Turnaround Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Regulatory Medical Writing</td>
+                  <td>Pharma & biotech companies</td>
+                  <td>
+                    Clinical trial protocols, FDA/EMA regulatory submissions
+                  </td>
+                  <td> 7-10 Days</td>
+                </tr>
+                <tr>
+                  <td>Scientific Manuscript Writing</td>
+                  <td>Researchers & academics</td>
+                  <td>
+                    Research articles, Systematic reviews, Journal submissions
+                  </td>
+                  <td> 5-7 Days</td>
+                </tr>
+                <tr>
+                  <td>Clinical Study Reports (CSR)</td>
+                  <td>Clinical researchers</td>
+                  <td>Study design & methodology, Safety & efficacy reports</td>
+                  <td> 7-12 Days</td>
+                </tr>
+                <tr>
+                  <td>Medical Literature Review</td>
+                  <td>Medical researchers</td>
+                  <td>Evidence-based literature synthesis, Meta-analyses</td>
+                  <td> 5-8 Days</td>
+                </tr>
+                <tr>
+                  <td>Case Reports & Case Series</td>
+                  <td>Clinicians & physicians</td>
+                  <td>
+                    Detailed patient case studies, Journal-compliant format
+                  </td>
+                  <td> 4-6 Days</td>
+                </tr>
+                <tr>
+                  <td>Regulatory Submission Dossiers</td>
+                  <td>Pharma & medical device companies</td>
+                  <td>IND, NDA, ANDA, CTD dossiers, Compliance with ICH-GCP</td>
+                  <td> 10-15 Days</td>
+                </tr>
+                <tr>
+                  <td>Medical Blog & Content Writing</td>
+                  <td>Healthcare organizations</td>
+                  <td>Patient education, Disease awareness articles</td>
+                  <td> 3-5 Days</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <div className={styles.processContainer}>
+          <h2 className={styles.processTitle}>
+            Medical Writing Process – How We Ensure Accuracy & Compliance
+          </h2>
+          <div className={styles.processSteps1}>
+            {steps.map((step, index) => (
+              <div key={index} className={styles.processStep}>
+                <h5 className={styles.stepHeading}>{step.stepss}</h5>
+                <FontAwesomeIcon
+                  icon={step.icon}
+                  size="3x"
+                  className={styles.stepIcon}
+                />
+                <h3 className={styles.stepDescription}>{step.title}</h3>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.buttonGroup}>
+            <a href="https://manuscriptedit.com/QuotationNew/">
+              <button className={styles.primaryButton}>
+                Start Your Medical Writing Project
+              </button>
+            </a>
+          </div>
+
+          <section className="before-after-example-section">
+            <h2 className="before-after-example-heading">
+              Before & After Medical Writing – See the Difference
+            </h2>
+
+            <div className="before-after-example-content">
+              <div className="before-example">
+                <h3>Before (Raw Scientific Data with Unclear Structure):</h3>
+                <p className="before-text">
+                  “This study about the new drug was done with 250 people. The
+                  drug had some side effects, but it also worked well in
+                  reducing symptoms.”
+                </p>
+              </div>
+
+              <div className="after-example">
+                <h3>After (Professionally Written Clinical Report):</h3>
+                <p className="after-text">
+                  “A randomized, placebo-controlled study was conducted with 250
+                  participants to evaluate the efficacy and safety profile of
+                  [Drug Name]. The treatment demonstrated significant symptom
+                  reduction, with a manageable side effect profile.”
+                </p>
+              </div>
+            </div>
+
+            <div className="explanation">
+              <p>
+                Medical Writing ensures accuracy, compliance, and scientific
+                clarity.
+              </p>
+            </div>
+          </section>
+
+          <section className="pricing-turnaround-section">
+            <h2 className="pricing-turnaround-heading">
+              Pricing and Turnaround Time
+            </h2>
+
+            <div className="pricing-details">
+              <div className="pricing-item">
+                <h3>Starting Price</h3>
+                <p className="pricing-text">
+                  $0.10 per word (Medical Blog Writing)
+                </p>
+              </div>
+
+              <div className="delivery-item">
+                <h3>Standard Delivery</h3>
+                <p className="delivery-time">
+                  $0.20 per word (Regulatory Writing)
+                </p>
+              </div>
+
+              <div className="delivery-item">
+                <h3>Express Delivery</h3>
+                <p className="delivery-time">
+                  Turnaround Time: 3 Days – 15 Days (Depending on service type)
+                </p>
+              </div>
+            </div>
+
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/QuotationNew/"
+                className="cta-button"
+              >
+                Check Pricing & Get a Quote
+              </a>
+            </div>
+          </section>
+
+          <div className="wcus-container">
+            <div className="wcus-client-reviews">
+              <h3 className="editing-overview-heading">Testimonial</h3>
+              <div className="row d-flex justify-content-around">
+                {[
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/sd.f75dbd94.jpeg",
+                    text: "The best editing service I've used. Got published in record time!",
+                    name: "Dr. Emily Carter",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ah.73aaea49.jpeg",
+                    text: "Exceptional support from expert editors. Highly recommended!",
+                    name: "Prof. John Williams",
+                  },
+                  {
+                    imgSrc:
+                      "	https://manuscriptedit.com/_next/static/media/ad.8a1b15bf.jpg",
+                    text: "Many thanks for your excellent work and the comments. I like it very much, Appreciated.",
+                    name: "J Y",
+                  },
+                  {
+                    imgSrc:
+                      "https://manuscriptedit.com/_next/static/media/ag.07ec11ab.jpg",
+                    text: "Thank you. You and your editorial/writing team have done an EXCELLENT job and i am grateful for your generosity.",
+                    name: "Emily Selman",
+                  },
+                ].map((review, index) => (
+                  <div className="wcus-review col-lg-5" key={index}>
+                    <img src={review.imgSrc} alt="Client" />
+                    <p>
+                      "{review.text}" - <strong>{review.name}</strong>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <h3>
+              <br />
+              🏆 Rated 4.9 out of 5 by academic professionals, scientists, and
+              publishing experts.
+              <br />
+              <br />
+              📑 Trusted by universities, funding agencies, and research
+              institutions.
+            </h3>
+            <div className="cta-container">
+              <a
+                href="https://manuscriptedit.com/Testimonial/"
+                className="cta-button"
+              >
+                See More Reviews
+              </a>
+            </div>
+          </div>
+
+          <div className="container" style={{ marginTop: "3rem" }}>
+            <div className="accordion__wrapper2">
+              <h1 className="accordion__title">FAQ</h1>
+
+              {accord2.map((faq, index) => (
+                <div
+                  className="accordion"
+                  key={index}
+                  style={{
+                    paddingBottom: "1rem",
+                    marginBottom: "1rem",
+                    color: "#494949",
+                  }}
+                >
                   <div
-                    className="tab-pane mt-60 active"
-                    id="tabs-1"
-                    role="tabpanel"
+                    className="accordion__header"
+                    onClick={() => toggleAccordion(index)}
                   >
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Patient
-                              Details (demographic such as age, sex, etc.)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> History
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Investigation Details
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Actual
-                              Procedure
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Treatment
-                              given
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Outcome
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Study
-                              data and photos (CT, X-ray, etc.)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Rough
-                              draft of the case
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> 1 or 2
-                              relevant paper/s you want to discuss
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Suggest a
-                              target journal
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Extensive
-                              literature survey
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Writing
-                              Introduction
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Rewriting
-                              the case report section
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Writing
-                              Discussion
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              ustification and Recommendation
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> List of
-                              references
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Formatting according to the target journal
-                              guidelines (optional)
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <h2 className="accordion__question">{faq.question}</h2>
+                    {openIndex === index ? "⮝" : "⮟"}
+                    {/* <span className="accordion__icon">
+                <i
+                  className={`${openIndex === index ? "ri-subtract-fill" : "ri-add-line"}`}
+                ></i>
+              </span> */}
                   </div>
-                  <div className="tab-pane mt-60" id="tabs-2" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Topic
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Main
-                              objective/Research question/Hypothesis
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Methods
-                              (in detail)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Data
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Statistical analysis (optional)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Relevant
-                              figures/images
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Treatment
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Follow up
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Outcome
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> 1 or 2
-                              relevant paper(s) you want to discuss
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> A
-                              suggested target journal
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Extensive
-                              literature survey
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Writing
-                              the full article
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Construction of tables and figures if required
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> List of
-                              references
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Statistical analysis (on request)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Formatting according to the target journal
-                              guidelines (optional)
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane mt-60" id="tabs-3" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div className="row">
-                          <div className="col-lg-4">
-                            <div
-                              className="about_icon_box wow fadeInUp animated"
-                              data-wow-delay="0.5s"
-                              style={{
-                                visibility: "visible",
-                                animationDelay: "0.5s",
-                                animationName: "fadeInUp",
-                              }}
-                            >
-                              <h5 className="mt-1 mb-4">What You Provide</h5>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>Topic
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i> Broad
-                                  Research Question
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i> Main
-                                  Focus point
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i> Rough
-                                  Outline
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Outcome
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Suggest 2-3 significant references
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Suggest a target journal
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-lg-8">
-                            <div
-                              className="about_icon_box wow fadeInUp animated"
-                              data-wow-delay="0.5s"
-                              style={{
-                                visibility: "visible",
-                                animationDelay: "0.5s",
-                                animationName: "fadeInUp",
-                              }}
-                            >
-                              <h5 className="mt-1 mb-4">What You Provide</h5>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Extensive literature survey, screen and
-                                  classify
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Project your research objective and the
-                                  problem
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Writing the review based on your outline and
-                                  organizing the content emphasizing the main
-                                  "research question"
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i> Clear
-                                  representation of the present status of the
-                                  field
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Identifying the controversy in the literature
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Formulating questions that need further
-                                  research
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i> List
-                                  of references
-                                </span>
-                              </div>
-                              <div className="about_icon_box_inner mb-20">
-                                <span>
-                                  <i className="fa fa-check-square-o"></i>{" "}
-                                  Formatting according to the target journal
-                                  guidelines (optional)
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane mt-60" id="tabs-4" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-5">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Specific
-                              Topic
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> A clear
-                              Research Question
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Main
-                              objective (why you want to do?)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Type of
-                              Study (prospective, retrospective...)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Methods
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Study
-                              Design (Exclusion and Inclusion criteria)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Investigations (what is to be done)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Involvement of other departmentsn
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Suggest
-                              2-3 relevant articles
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Purpose
-                              of the proposal (PhD topic, grant application,
-                              etc.)
-                            </span>
-                          </div>
-                        </div>
-                      
-                    </div>
-                    <div className="col-lg-7">
-                      <div
-                        className="about_icon_box wow fadeInUp animated"
-                        data-wow-delay="0.5s"
-                        style={{
-                          visibility: "visible",
-                          animationDelay: "0.5s",
-                          animationName: "fadeInUp",
-                        }}
-                      >
-                        <h5 className="mt-1 mb-4">What You Provide</h5>
-                        <div className="about_icon_box_inner mb-20">
-                          <span>
-                            <i className="fa fa-check-square-o"></i> Extensive
-                            literature survey
-                          </span>
-                        </div>
-                        <div className="about_icon_box_inner mb-20">
-                          <span>
-                            <i className="fa fa-check-square-o"></i> Clearly
-                            identification of the objectives, justification and
-                            methodologies to be adopted in conducting the
-                            research
-                          </span>
-                        </div>
-                        <div className="about_icon_box_inner mb-20">
-                          <span>
-                            <i className="fa fa-check-square-o"></i> Text with a
-                            good study design and method
-                          </span>
-                        </div>
-                        <div className="about_icon_box_inner mb-20">
-                          <span>
-                            <i className="fa fa-check-square-o"></i> Emphasis on
-                            the existing gap in the literature and attempt to
-                            address the research problem
-                          </span>
-                        </div>
-                        <div className="about_icon_box_inner mb-20">
-                          <span>
-                            <i className="fa fa-check-square-o"></i> A proposal
-                            that stands out among several other applications to
-                            enhance its chances of being funded
-                          </span>
-                        </div>
-                        <div className="about_icon_box_inner mb-20">
-                          <span>
-                            <i className="fa fa-check-square-o"></i> Compliance
-                            with the guidelines and formats of the funding
-                            agency as far as possible based on the information
-                            provided by you
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-
-                  <div className="tab-pane mt-60" id="tabs-5" role="tabpanel">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Statistical analysis (SPSS)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-
-                              Continuing medical application (CME)
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Medical
-                              guideline document for physicians
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Medical
-                              procedures
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Training
-                              Manuals
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i>{" "}
-                              Regulatory writing
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> New Drug
-                              Application
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Clinical
-                              study report/documentation
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase I
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Clinical
-                              protocol
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase II
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase III
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase II
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase IV
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Phase IV
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Product
-                              Inserts
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div
-                          className="about_icon_box wow fadeInUp animated"
-                          data-wow-delay="0.5s"
-                          style={{
-                            visibility: "visible",
-                            animationDelay: "0.5s",
-                            animationName: "fadeInUp",
-                          }}
-                        >
-                          <h5 className="mt-1 mb-4">What You Provide</h5>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Necessary
-                              clarification will be sought by our expert medical
-                              writers
-                            </span>
-                          </div>
-                          <div className="about_icon_box_inner mb-20">
-                            <span>
-                              <i className="fa fa-check-square-o"></i> Feedback
-                              on the 1st draft within 30 days of delivery
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div
+                    className="accordion__content"
+                    style={{
+                      height: openIndex === index ? "auto" : "0",
+                    }}
+                  >
+                    <div
+                      className="accordion__answer"
+                      style={{
+                        padding: "0",
+                        paddingTop: "0.5rem",
+                        marginBottom: "0",
+                        backgroundColor: "#f0f8ff",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
                   </div>
                 </div>
-              </div>
-              <button onClick={() => {redirect('register')}} className="btn btn-primary mt-3 mr-3">
-              Submit Manuscript
-              </button>
-              <button onClick={() => {redirect('contact-us')}} className="btn btn-primary mt-3 mr-3">
-              Schedule a Call
-              </button>
+              ))}
             </div>
-            
           </div>
         </div>
       </div>
-      {SpecializedArea(false)}
-      {ourProfessional()}
-      {howWeWork(2)}
     </>
   );
 }

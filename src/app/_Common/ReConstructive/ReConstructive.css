@@ -1,0 +1,184 @@
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+  
+  .cta-button:hover {
+    background-color: #02468e;
+    color: #f8f9fa;
+    text-decoration: none;
+  }
+
+  .trust-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .trust-section p {
+    margin: 0;
+    padding: 10px;
+  }
+
+  
+
+  .wcus-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .wcus-title {
+    font-size: 26px;
+    color: #111;
+    margin-bottom: 10px;
+  }
+  
+  .wcus-subtext {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .wcus-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .wcus-benefit-item {
+    flex: 1 1 calc(50% - 10px);
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .wcus-benefit-item i {
+    font-size: 22px;
+    color: #007bff;
+    margin-right: 10px;
+  }
+  
+  .wcus-client-reviews {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .wcus-reviews-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .wcus-review {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #fdf7f3;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wcus-review img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .wcus-review p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .wcus-live-counter {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  .process-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 66px;
+  }
+  
+  .process-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+  
+  .process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .step-icon {
+    color: #0f1e80; /* You can change this to any color */
+  }
+  
+  .step-title {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .step-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .process-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+  .step-heading{
+    color: #0f1e80;
+    margin-bottom: 18px;
+  }
+  
+  

@@ -1,10 +1,67 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
+import "./Discount.css"
 
 export default function Home() {
   return (
     <>
-    {breadcrum("Submit Manuscript", "Discount")}
-    <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
+      {/* {breadcrum("Submit Manuscript", "Discount")} */}
+
+      <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
+        <div className="formmm" style={{ margin: 0, padding: 25 }}>
+          <div className="col-lg-12 col-md-12 col-sm-12">
+            <img
+              src="/img/technologies/Offer & Discount - Peer Review (2).jpg"
+              alt=""
+              style={{ width: "100%" }}
+            />
+          </div>
+
+          <div
+            className="col-lg-12 col-md-12 col-sm-12"
+            style={{ marginTop: "2rem" }}
+          >
+            <h4>
+              <strong>Limited-Time Pre-Submission Offer!</strong>
+            </h4>
+            <h5 className="pt-2">
+              <strong>
+              Get 60% OFF on our PEER REVIEW & JOURNAL SELECTION GUIDANCE package – now only $189 (originally $475)
+              </strong>
+            </h5>
+            <ul className="pt-3 sideLeft">
+              <li>✔ Expert Peer Review Guidance</li>
+              <li>✔ Tailored Target Journal Selection</li>
+              <li>✔ AI & Plagiarism Check Reports</li>
+            </ul>
+            <p className="pt-3">
+              <strong>⭐⭐⭐⭐⭐ Rated by researchers worldwide</strong>
+            </p>
+
+            <ul className="sideLeft">
+              <li>
+               ✔ Perfect for researchers looking to publish faster and more
+                confidently.
+              </li>
+              <li>✔ Don’t miss this deal – upgrade your manuscript today!</li>
+            </ul>
+
+            <a
+              href="https://www.manuscriptedit.com/PeerReview/"
+              className="btn btn-primary mt-3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            Boost My Manuscript
+            </a>
+          </div>
+
+          {/* <div className="col-lg-6 col-md-6 col-sm-6 pt-30">
+             <img  src="/images/Scr111.png" alt="" style={{width:'100%'}}/>
+             </div> */}
+        </div>
+      </div>
+
+      {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm d-flex" style={{margin: 0, padding: 25}}>
          <div className="row rowflex">
              <div className="col-md-6 pb-2">
@@ -32,55 +89,17 @@ export default function Home() {
 
              </div>
              <div className="col-md-6">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="images/code.png" alt=""
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="/images/code.png" alt=""
                      width="100%" />
              </div>
          </div>
      </div>
- </div>
+ </div> */}
 
- <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
+      {/* <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm" style={{margin: 0, padding: 25}}>
          <div className="col-lg-12 col-md-12 col-sm-12">
-             <img  src="images/Get-published.jpg" alt=""/>
-         </div>
-         <div className="col-lg-12 col-md-12 col-sm-12 d-flex950">
-             <div className="col-lg-6 col-md-6 col-sm-6">
-                 <h4>Save time and resources - let us handle your case report</h4>
-                 <p className="pt-3">
-                     Writing a case report got you feeling overwhelmed? Don't worry, we've got you covered with our
-                     5-in-1 Case Report Writing package. For just $685, you'll get case report writing, journal
-                     selection, formatting, submission, and response to the reviewer - everything you need to get your
-                     report published!
-                 </p>
-                 <p>
-                     Even if you don't need it right now, you can pre-book and freeze this offer for the next 60 days.
-                     Our team of experts has years of experience in case report writing, and we'll take care of
-                     everything, leaving you more time to focus on your research.
-                 </p>
-             </div>
-             <div className="col-lg-6 col-md-6 col-sm-6 pt-30">
-                 <div className="box0">
-                     <p style={{fontWeight: 'bold'}}>Terms & Conditions:</p>
-                     <ul style={{padding: '0px 15px'}}>
-                         <li className="pb-3">Writing wordcount limit for this offer is 1500 words</li>
-                         <li className="pb-3">1-time publication assistance (includes 1-time Journal selection, 1-time
-                             formatting, 1-time submission, and Response to reviewer)</li>
-                         <li className="pb-3">Response to reviewer service won't include additional wordcount writing</li>
-                         <li className="pb-3">Timeline = 20-25 days</li>
-                         <li className="pb-3">Prebook option included, prebook amount is $100, and prebook timeline is 60
-                             days.</li>
-                     </ul>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
-
- <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
-     <div className="formmm" style={{margin: 0, padding: 25}}>
-         <div className="col-lg-12 col-md-12 col-sm-12">
-             <img  src="images/disc15.jpg" alt=""/>
+             <img  src="/images/disc15.jpg" alt=""/>
          </div>
          <div className="col-lg-12 col-md-12 col-sm-12 d-flex950">
              <div className="col-lg-6 col-md-6 col-sm-6">
@@ -125,7 +144,7 @@ export default function Home() {
  <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
      <div className="formmm" style={{margin: 0, padding: 25}}>
          <div className="col-lg-12 col-md-12 col-sm-12">
-             <img style={{border:'1px solid #c1c1c1', width:'100%', height:200}} src="images/disc030223.png" alt=""/>
+             <img style={{border:'1px solid #c1c1c1', width:'100%', height:200}} src="/images/disc030223.png" alt=""/>
          </div>
          <div className="col-lg-12 col-md-12 col-sm-12">
              <div className="col-lg-6 col-md-6 col-sm-6 pt-5">
@@ -190,7 +209,7 @@ export default function Home() {
 
              </div>
              <div className="col-md-6">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="images/disc5feb.jpg" alt=""
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="/images/disc5feb.jpg" alt=""
                      width="100%" />
              </div>
          </div>
@@ -217,7 +236,7 @@ export default function Home() {
 
              </div>
              <div className="col-md-6">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="images/disc24.jpg" alt=""
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="/images/disc24.jpg" alt=""
                      width="100%" />
              </div>
          </div>
@@ -242,7 +261,7 @@ export default function Home() {
 
              </div>
              <div className="col-md-6">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="images/PLAG-NEWSLETTER.png"
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="/images/PLAG-NEWSLETTER.png"
                      alt="" width="100%" />
              </div>
          </div>
@@ -266,7 +285,7 @@ export default function Home() {
 
              </div>
              <div className="col-md-6">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="images/disc3.png" alt=""
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:400,borderRadius: 10}} src="/images/disc3.png" alt=""
                      width="100%" />
              </div>
          </div>
@@ -277,7 +296,7 @@ export default function Home() {
      <div className="formmm" style={{margin: 0, padding: 25}}>
          <div className="row">
              <div className="col-md-12">
-                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:'600px',borderRadius:10}} src="images/disc1.jpg" alt=""
+                 <img style={{border:'1px solid #c1c1c1', width:'100%', height:'600px',borderRadius:10}} src="/images/disc1.jpg" alt=""
                      />
              </div>
          </div>
@@ -288,12 +307,12 @@ export default function Home() {
     <div className="formmm" style={{margin: 0, padding: 25}}>
         <div className="row">
             <div className="col-md-12">
-                <img style={{border:'1px solid #c1c1c1', width:'100%', height:'600px',borderRadius:10}} src="images/disc2.jpg" alt=""
+                <img style={{border:'1px solid #c1c1c1', width:'100%', height:'600px',borderRadius:10}} src="/images/disc2.jpg" alt=""
                     />
             </div>
         </div>
     </div>
-</div>
+</div> */}
     </>
   );
 }
