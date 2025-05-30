@@ -1,21 +1,24 @@
-"use client"
+"use client";
 import Metadata from "@/app/Metadata";
 import PeerForm from "@/app/_Common/PeerForm/PeerForm";
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
 import { usePathname } from "next/navigation";
-import { data } from '../../../utils/metaFile.js'
+import { data } from "../../../utils/metaFile.js";
 
-const newData: {[key: string]: {[key: string]: string}} = data;
+const newData: { [key: string]: { [key: string]: string } } = data;
 
 export default function Home() {
-  const pathName: string = usePathname().split("/").filter(val => val).join("")
-  let metaData = newData[pathName]
-  
+  const pathName: string = usePathname()
+    .split("/")
+    .filter((val) => val)
+    .join("");
+  let metaData = newData[pathName];
+
   return (
     <>
       {<Metadata metaData={metaData} />}
       {/* {breadcrum("More", "Contact Us")} */}
-      <div className="col-lg-10 col-md-10 col-sm-10 pt-5 mx-auto">
+      <div className="col-lg-10 col-md-10 col-sm-10 mx-auto">
         <p className="text-center widfont">
           If you have any queries about our services, submission and payment
           procedure or you would like to leave a comment or suggestion, we will
@@ -26,48 +29,67 @@ export default function Home() {
       <div>
         <div className="container text-center">
           <div className="row">
-            <div className="col">
+            <div className="col-lg-6">
               <div
                 style={{
-                  marginLeft: "3rem",
-                  marginTop: "3rem",
+                  margin: "3rem",
+                  padding: "2rem",
+                  backgroundColor: "#f8f9fa",
+                  borderRadius: "8px",
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                   textAlign: "left",
+                  color: "#333",
+                  fontSize: "1rem",
+                  lineHeight: "1.6",
                 }}
               >
+                <h4 style={{ marginBottom: "1.5rem", fontWeight: "bold" }}>
+                  Contact Information
+                </h4>
+
                 <p>
-                  {" "}
-                  <i className="fa fa-telegram" aria-hidden="true"></i> Telegram
-                  : +91-904-000-5445
-                  <br />
+                  <i
+                    className="fa fa-telegram"
+                    style={{ color: "#0088cc", marginRight: "8px" }}
+                  ></i>
+                  <strong>Telegram:</strong> +91-904-000-5445
                 </p>
+
                 <p>
-                  <i className="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp
-                  : +1 (646)916-3476 (USA)
+                  <i
+                    className="fa fa-whatsapp"
+                    style={{ color: "#25D366", marginRight: "8px" }}
+                  ></i>
+                  <strong>WhatsApp (USA):</strong> +1 (646) 916-3476
                   <br />
-                  <span style={{ color: "white" }}>
-                    <i className="fa fa-whatsapp" aria-hidden="true"></i>{" "}
-                    WhatsApp :{" "}
-                  </span>
-                  +91-904-002-3003 (India)
+                  <i
+                    className="fa fa-whatsapp"
+                    style={{ color: "#25D366", marginRight: "8px" }}
+                  ></i>
+                  <strong>WhatsApp (India):</strong> +91-904-002-3003
                   <br />
-                  <span style={{ color: "white" }}>
-                    <i className="fa fa-whatsapp" aria-hidden="true"></i>{" "}
-                    WhatsApp :{" "}
-                  </span>
-                  +91-923-730-4004 (India)
-                  <br />
+                  <i
+                    className="fa fa-whatsapp"
+                    style={{ color: "#25D366", marginRight: "8px" }}
+                  ></i>
+                  <strong>WhatsApp (India):</strong> +91-923-730-4004
                 </p>
+
                 <p>
-                  <i className="fa fa-envelope" aria-hidden="true"></i> Email id
-                  : support@manuscriptedit.com
+                  <i
+                    className="fa fa-envelope"
+                    style={{ color: "#d44638", marginRight: "8px" }}
+                  ></i>
+                  <strong>Email:</strong> support@manuscriptedit.com
                 </p>
               </div>
             </div>
-            <div className="col">
+
+            <div className="col-lg-6">
               <div
                 style={{
                   padding: "2rem",
-                  backgroundColor: "#f3d5d5",
+                  backgroundColor: "#rgb(243, 213, 213)",
                   width: "fit-content",
                   boxShadow: "-3px 3px 20px grey",
                   marginBottom: "4rem",

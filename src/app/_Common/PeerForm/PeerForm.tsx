@@ -64,8 +64,8 @@ const PeerForm = () => {
       <div className="container">
         <div className="row" style={{ justifyContent: "center" }}>
           <div className="formContainer2">
-            <h6>Get Quick Response Within 24 Hours</h6>
-            <form id="contactForm2">
+           <strong >Get Quick Response Within 24 Hours</strong>
+            <form style={{marginTop:'20px'}} id="contactForm2">
               <input
                 type="text"
                 name="name"

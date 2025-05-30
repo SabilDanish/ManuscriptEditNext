@@ -74,17 +74,33 @@ const WhyChooseUs = () => {
         >
           <div className="row g-3">
             <div className="col-lg-6">
-              <StatCard number="10,000+" text="Publications" icon="📚" />
+              <StatCard
+                number="10,000+"
+                text="Publications"
+                imgSrc="/images/WhyChooseUs/10,000+ Publications.png"
+              />
             </div>
             <div className="col-lg-6">
-              <StatCard number="1117+" text="Subject Areas" icon="🔍" />
+              <StatCard
+                number="1117+"
+                text="Subject Areas"
+                imgSrc="/images/WhyChooseUs/Subject Area.png"
+              />
             </div>
             <div className="col-lg-6">
-              <StatCard number="4,43,000+" text="Manuscripts" icon="🏆" />
+              <StatCard
+                number="4,43,000+"
+                text="Manuscripts"
+                imgSrc="/images/WhyChooseUs/4,43,000 Manuscripts.png"
+              />
             </div>
 
             <div className="col-lg-6">
-              <StatCard number="750+" text="Experts" icon="🧑‍🔬" />
+              <StatCard
+                number="750+"
+                text="Experts"
+                imgSrc="/images/WhyChooseUs/750+ Experts.png"
+              />
             </div>
           </div>
         </div>
@@ -93,10 +109,15 @@ const WhyChooseUs = () => {
   );
 };
 
-const StatCard = (props: { number: string; text: string; icon: string }) => {
+const StatCard = (props: { number: string; text: string; imgSrc: string }) => {
   return (
     <div className="stat-card d-flex align-items-center p-3 bg-white rounded shadow">
-      <div className="stat-icon me-3 fs-2">{props.icon}</div>
+      <img
+        src={props.imgSrc}
+        alt={props.text}
+        className="stat-icon me-3"
+        style={{ width: "50px", height: "50px", objectFit: "contain" }}
+      />
       <div>
         <h4 className="stat-number mb-0">{props.number}</h4>
         <p className="stat-description mb-0">{props.text}</p>

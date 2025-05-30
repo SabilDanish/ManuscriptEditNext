@@ -204,6 +204,7 @@ export default function Home() {
   console.log("wrd:", wordCount);
 
   const serviceId8 = {};
+  
 
   useEffect(() => {
     // setWordCountStatement(275);
@@ -232,7 +233,7 @@ export default function Home() {
             {/* <div className="d-flex justify-content-center"> */}
             {/* <div id="inpSec" style={{ width: "60%", padding: "15px 0" }}> */}
             <div
-              className="col-lg-3 text-right"
+              className="text-right"
               style={{
                 padding: 13,
                 fontWeight: "bold",
@@ -244,7 +245,7 @@ export default function Home() {
             </div>
             <div className="col-lg-6" style={{ padding: 5 }}>
               <input
-                type="number"
+                type="text"
                 id="wordC"
                 name="wordC"
                 placeholder="Enter Your Word Count"
