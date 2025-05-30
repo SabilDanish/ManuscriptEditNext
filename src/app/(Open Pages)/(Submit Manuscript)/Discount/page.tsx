@@ -1,5 +1,5 @@
 import breadcrum from "@/app/_Common/_Breadcrum/Breadcrum";
-import "./Discount.css"
+import "./Discount.css";
 
 export default function Home() {
   return (
@@ -9,11 +9,13 @@ export default function Home() {
       <div className="col-lg-10 col-md-10 col-sm-10 mt-5 mb-5 mx-auto">
         <div className="formmm" style={{ margin: 0, padding: 25 }}>
           <div className="col-lg-12 col-md-12 col-sm-12">
-            <img
-              src="/img/technologies/Offer & Discount - Peer Review (2).jpg"
-              alt=""
-              style={{ width: "100%" }}
-            />
+            <a href="https://www.manuscriptedit.com/PeerReview/">
+              <img
+                src="/img/technologies/Offer & Discount - Peer Review (2).jpg"
+                alt="#"
+                style={{ width: "100%" }}
+              />
+            </a>
           </div>
 
           <div
@@ -25,7 +27,8 @@ export default function Home() {
             </h4>
             <h5 className="pt-2">
               <strong>
-              Get 60% OFF on our PEER REVIEW & JOURNAL SELECTION GUIDANCE package – now only $189 (originally $475)
+                Get 60% OFF on our PEER REVIEW & JOURNAL SELECTION GUIDANCE
+                package – now only $189 (originally $475)
               </strong>
             </h5>
             <ul className="pt-3 sideLeft">
@@ -39,7 +42,7 @@ export default function Home() {
 
             <ul className="sideLeft">
               <li>
-               ✔ Perfect for researchers looking to publish faster and more
+                ✔ Perfect for researchers looking to publish faster and more
                 confidently.
               </li>
               <li>✔ Don’t miss this deal – upgrade your manuscript today!</li>
@@ -51,7 +54,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-            Boost My Manuscript
+              Boost My Manuscript
             </a>
           </div>
 

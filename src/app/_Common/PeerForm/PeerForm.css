@@ -27,7 +27,7 @@
     display: block;
     width: 100%;
     padding: 0.4rem;
-    background-color: #dc3545;
+    background-color: #adb7ff;
     color: #fff;
     border: none;
     border-radius: 0.25rem;
@@ -67,9 +67,13 @@
 }
 
 
+.submitButton{
+    background-color: #5161ce;
+}
+
 
 .submitButton:hover {
-    background-color: #c82333;
+    background-color: #384ce3;
 }
 
 .active {

@@ -1,28 +1,51 @@
-.accordion-title {
-  margin-bottom: 40px;
-  text-align: center;
-}
-.btn2 {
-  padding: 7px 50px;
-  cursor: pointer;
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
 }
 
-.btn2:hover {
-  background-color: antiquewhite;
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 60s linear infinite;
 }
 
-.buttonSeeAll {
-  background: #151130;
-  padding: 10px 87px;
-  border-radius: 7px;
+.marquee-card {
+  min-width: 200px;
+  max-width: 550px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-wrapper:hover .marquee {
+  animation-play-state: paused;
+}
+
+.btn2{
+  width: 200px;
+}
+
+.buttonSeeAll{
+  background-color: #151130;
+  padding: 10px 30px;
+  color: #ddd;
+  border-radius: 6px;
   text-decoration: none;
-  color: white;
 }
 
 .buttonSeeAll:hover {
-  background: #5746ca;
-  padding: 10px 87px;
-  border-radius: 7px;
-  text-decoration: none;
+  text-decoration: none ;
   color: white;
 }

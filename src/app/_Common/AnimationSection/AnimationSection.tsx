@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Carousel, Card, Button, Container, Row, Col } from "react-bootstrap";
+import React from "react";
+import { Container, Card, Row, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AnimationSection.css";
 import Link from "next/link";
@@ -62,65 +62,49 @@ const journals = [
 ];
 
 const AnimationSection = () => {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex: any) => {
-    setIndex(selectedIndex);
-  };
-
-  const slides = [];
-  for (let i = 0; i < journals.length; i += 2) {
-    slides.push(journals.slice(i, i + 2));
-  }
-
   return (
     <Container className="mt-4 mb-5">
-      <h2 className="accordion-title mb-3">Recent Publications</h2>
-      <Carousel activeIndex={index} onSelect={handleSelect} interval={4000}>
-        {slides.map((slide, slideIndex) => (
-          <Carousel.Item key={slideIndex}>
-            <Row className="justify-content-center">
-              {slide.map((journal) => (
-                <Col md={6} key={journal.id}>
-                  <Card className="text-center p-3">
-                    <Row className="align-items-center">
-                      <Col xs={4} className="text-center">
-                        <img
-                          src={journal.logo}
-                          alt={journal.name}
-                          className="img-fluid rounded"
-                          style={{ maxWidth: "70%" }}
-                        />
-                      </Col>
-                      <Col xs={8} className="text-start">
-                        <Card.Title>{journal.name}</Card.Title>
-                        <Card.Text>
-                          <strong>Title:</strong> {journal.title} <br />
-                          <strong>Impact Factor:</strong> {journal.impactFactor}
-                        </Card.Text>
-                        <Button
-                          className="btn2"
-                          variant="primary"
-                          href={journal.link}
-                          target="_blank"
-                        >
-                          Visit
-                        </Button>
-                      </Col>
-                    </Row>
-                  </Card>
+      <h2 className="accordion-title mb-4 text-center">Recent Publications</h2>
+
+      <div className="marquee-wrapper">
+        <div className="marquee">
+          {journals.concat(journals).map((journal, idx) => (
+            <Card className="marquee-card p-3" key={idx}>
+              <Row className="align-items-center">
+                <Col xs={4} className="text-center">
+                  <img
+                    src={journal.logo}
+                    alt={journal.name}
+                    className="img-fluid rounded"
+                    style={{ maxWidth: "100px" , height:"100px" , objectFit:"contain" }}
+                  />
                 </Col>
-              ))}
-            </Row>
-          </Carousel.Item>
-        ))}
-      </Carousel>
+                <Col xs={8} className="text-start">
+                  <Card.Title>{journal.name}</Card.Title>
+                  <Card.Text style={{ fontSize: "0.85rem" }}>
+                    <strong>Title:</strong> {journal.title} <br />
+                    <strong>Impact Factor:</strong> {journal.impactFactor}
+                  </Card.Text>
+                  <Button
+                    className="btn2"
+                    variant="primary"
+                    href={journal.link}
+                    target="_blank"
+                  >
+                    Visit
+                  </Button>
+                </Col>
+              </Row>
+            </Card>
+          ))}
+        </div>
+      </div>
 
       <div className="mb-3" style={{ marginTop: "35px", textAlign: "center" }}>
         <Link className="buttonSeeAll" href="/AllPublications">
           See All →
         </Link>
-      </div>
+      </div> 
     </Container>
   );
 };
