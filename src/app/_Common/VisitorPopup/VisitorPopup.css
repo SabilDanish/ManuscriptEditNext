@@ -1,0 +1,11 @@
+.modal-body label{
+  color: rgb(62, 62, 62);
+}
+
+button.btn.btn-primary {
+    margin-bottom: 0px;
+}
+
+.form-control{
+  height: 2rem;
+}

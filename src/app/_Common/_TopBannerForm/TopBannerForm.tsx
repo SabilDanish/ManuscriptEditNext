@@ -4,11 +4,19 @@ import "./TopBannerForm.css";
 import useForm from "@/app/hooks/mainForm/useForm";
 import { DNA } from "react-loader-spinner";
 import Link from "next/link";
+import VisitorPopup from "../VisitorPopup/VisitorPopup";
 
 const TopBannerForm = () => {
   return (
     <>
-      <div className="container mob_conti" style={{ marginBottom: "0px" , paddingLeft:"20px" , paddingRight:'20px' }}>
+      <div
+        className="container mob_conti"
+        style={{
+          marginBottom: "0px",
+          paddingLeft: "20px",
+          paddingRight: "20px",
+        }}
+      >
         <div className="row" style={{ justifyContent: "end" }}>
           <div className="col-lg-6">
             <h4 style={{ fontWeight: "Bold", fontSize: "2rem" }}>
@@ -55,19 +63,20 @@ const TopBannerForm = () => {
             >
               Submit Manuscript →
             </Link>
-            {/* <Link
-              className="btn mt-12"
-              href={"https://secure.manuscriptedit.com/advisory"}
-              role="button"
+            <Link
+            className="btn mt-12 ml-2"
+            href={"#"}
+              type="button"
               style={{
                 backgroundColor: "#151130",
                 color: "white",
                 marginTop: "1rem",
-                marginLeft: "1rem",
               }}
+              data-bs-toggle="modal"
+              data-bs-target="#contactModal"
             >
-              For Indian Researchers →
-            </Link> */}
+              Get A Consultation →
+            </Link>
           </div>
           <div
             className={`$"carouselItem" $"active" col-lg-6`}
@@ -85,6 +94,8 @@ const TopBannerForm = () => {
           </div>
         </div>
       </div>
+
+      <VisitorPopup />
     </>
   );
 };

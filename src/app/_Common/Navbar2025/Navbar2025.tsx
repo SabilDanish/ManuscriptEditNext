@@ -250,6 +250,11 @@ function Navbar2025() {
                 ABOUT US
               </Link>
             </li>
+             <li onClick={() => window.location.href='https://www.manuscriptedit.com/scholar-hangout/'}>
+              <Link href={'#'}>
+                BLOG
+                </Link>
+            </li>
           </ul>
         </nav>
 

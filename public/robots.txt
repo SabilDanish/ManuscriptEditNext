@@ -1,10 +1,9 @@
+# *
 User-agent: *
-Disallow: /admin/
-Disallow: /admin/admin/
-Disallow: /Formatting/https://www.manuscriptedit.com/Formatting/
-Disallow: /package-
-Disallow: /index
-Disallow: /logineditor
-Disallow: /forgotpasswordpanel
-Host: https://www.manuscriptedit.com
-Sitemap: https://www.manuscriptedit.com/sitemap.xml
+Allow: /
+
+# Host
+Host: https://manuscriptedit.com
+
+# Sitemaps
+Sitemap: https://manuscriptedit.com/sitemap.xml
