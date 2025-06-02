@@ -6,7 +6,28 @@ import { DNA } from "react-loader-spinner";
 import Link from "next/link";
 import VisitorPopup from "../VisitorPopup/VisitorPopup";
 
+
+
 const TopBannerForm = () => {
+  
+  useEffect(() => {
+    const showModal = () => {
+      const modalElement = document.getElementById("contactModal");
+      if (modalElement) {
+        const modal = new window.bootstrap.Modal(modalElement);
+        modal.show();
+      }
+    };
+
+    const timeouts = [
+      setTimeout(showModal, 5000),
+      setTimeout(showModal, 20000),
+      setTimeout(showModal, 40000),
+    ];
+
+    return () => timeouts.forEach(clearTimeout);
+  }, []);
+
   return (
     <>
       <div
@@ -64,8 +85,8 @@ const TopBannerForm = () => {
               Submit Manuscript →
             </Link>
             <Link
-            className="btn mt-12 ml-2"
-            href={"#"}
+              className="btn mt-12 ml-2"
+              href={"#"}
               type="button"
               style={{
                 backgroundColor: "#151130",

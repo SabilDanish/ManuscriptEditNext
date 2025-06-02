@@ -8,6 +8,8 @@ export interface Editor {
     ediExpt: string;
 }
 
+
+
 export interface Partner {
     id: string;
     part_logo: string;
@@ -60,4 +62,13 @@ export interface TabItem {
     icon: any;
     title: string;
     content: (onCheckboxChange: OnCheckboxChange, checkedItems: { [key: string]: boolean }) => JSX.Element;
+}
+
+export interface Window {
+  bootstrap: {
+    Modal: new (element: HTMLElement) => {
+      show: () => void;
+      hide: () => void;
+    };
+  };
 }
