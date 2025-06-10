@@ -1,9 +1,22 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./VisitorPopup.css";
 
-const VisitorPopup = () => {
+declare global {
+  interface Window {
+    bootstrap: any;
+  }
+}
+
+const VisitorPopup = ({
+  onSubmit,
+  onClose,
+}: {
+  onSubmit?: () => void;
+  onClose?: () => void;
+}) => {
   const modalRef = useRef<HTMLDivElement>(null);
+  const [isSubmitted, setIsSubmitted] = useState(false); // Track form submission status
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -22,8 +35,6 @@ const VisitorPopup = () => {
       hear_about: form.hear_about.value,
     };
 
-    // console.log("Form Data:", formData);
-    // You can send this data to your backend here
     try {
       const response = await fetch(
         "https://www.secure.manuscriptedit.com/api/visitors_leads.php",
@@ -39,11 +50,24 @@ const VisitorPopup = () => {
       const result = await response.json();
 
       if (response.ok) {
-        alert("Thank you for connecting with us! Your confirmation email is on its way to your inbox.");
+        alert(
+          "Thank you for connecting with us! Your confirmation email is on its way to your inbox."
+        );
         form.reset();
         form.classList.remove("was-validated");
+
+        // Close the modal after submission
         const modalEl = document.getElementById("contactModal");
-        
+        if (modalEl) {
+          const modalInstance = window.bootstrap.Modal.getInstance(modalEl);
+          modalInstance?.hide();
+        }
+
+        // Mark the form as submitted
+        setIsSubmitted(true);
+
+        // Inform parent that form was submitted
+        onSubmit?.();
       } else {
         alert(
           `Submission failed: ${result.message || "Please try again later."}`
@@ -54,6 +78,52 @@ const VisitorPopup = () => {
       alert("Something went wrong. Please try again later.");
     }
   };
+
+  const handleClose = () => {
+    // When the modal is manually closed, trigger the onClose callback
+    if (onClose) onClose();
+    setIsSubmitted(false); // Reset submission status
+  };
+
+  useEffect(() => {
+    // Initialize the Bootstrap modal
+    const modalEl = modalRef.current;
+
+    if (modalEl) {
+      const modalInstance = new window.bootstrap.Modal(modalEl);
+
+      // Event listener for when the modal is shown
+      const showModal = () => {
+        console.log("Modal shown");
+      };
+
+      // Event listener for when the modal is hidden
+      const hideModal = () => {
+        console.log("Modal hidden");
+        handleClose(); // Handle close when modal is hidden
+      };
+
+      modalEl.addEventListener("shown.bs.modal", showModal);
+      modalEl.addEventListener("hidden.bs.modal", hideModal);
+
+      // Cleanup event listeners on unmount
+      return () => {
+        modalEl.removeEventListener("shown.bs.modal", showModal);
+        modalEl.removeEventListener("hidden.bs.modal", hideModal);
+      };
+    }
+  }, []);
+
+  useEffect(() => {
+    // If form has already been submitted, prevent modal from opening again
+    if (isSubmitted) {
+      const modalEl = document.getElementById("contactModal");
+      if (modalEl) {
+        const modalInstance = window.bootstrap.Modal.getInstance(modalEl);
+        modalInstance?.hide();
+      }
+    }
+  }, [isSubmitted]);
 
   return (
     <div
@@ -78,6 +148,7 @@ const VisitorPopup = () => {
               className="btn-close btn-close-white"
               data-bs-dismiss="modal"
               aria-label="Close"
+              onClick={handleClose} // Close the modal manually via button
             ></button>
           </div>
           <form noValidate onSubmit={handleSubmit}>
@@ -164,13 +235,14 @@ const VisitorPopup = () => {
               </div>
             </div>
             <div className="modal-footer">
-              <button type="submit" className="btn" data-bs-dismiss="modal">
+              <button type="submit" className="btn btn-primary">
                 Submit
               </button>
               <button
                 type="button"
                 className="btn btn-secondary"
                 data-bs-dismiss="modal"
+                onClick={handleClose} // Handle close manually
               >
                 Cancel
               </button>

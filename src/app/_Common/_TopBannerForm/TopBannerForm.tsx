@@ -1,21 +1,28 @@
 import { useRef, useState, useEffect } from "react";
 import "./TopBannerForm.css";
-
-import useForm from "@/app/hooks/mainForm/useForm";
-import { DNA } from "react-loader-spinner";
 import Link from "next/link";
 import VisitorPopup from "../VisitorPopup/VisitorPopup";
 
-
-
 const TopBannerForm = () => {
-  
+  const [isModalOpen, setIsModalOpen] = useState(false); // Track modal open state
+  const [isModalSubmitted, setIsModalSubmitted] = useState(false); // Track if form is submitted
+  const [timeoutsCleared, setTimeoutsCleared] = useState(false); // Track if timeouts are cleared
+  const modalRef = useRef<any>(null); // Bootstrap modal instance
+
   useEffect(() => {
+    // If modal is already submitted or timeouts are cleared, skip setting up new timeouts
+    if (isModalSubmitted || timeoutsCleared) return;
+
     const showModal = () => {
+      if (isModalOpen || isModalSubmitted) return; // Don't open if modal is already open or submitted
+
       const modalElement = document.getElementById("contactModal");
       if (modalElement) {
-        const modal = new window.bootstrap.Modal(modalElement);
-        modal.show();
+        if (!modalRef.current) {
+          modalRef.current = new window.bootstrap.Modal(modalElement);
+        }
+        modalRef.current.show();
+        setIsModalOpen(true); // Track modal open state
       }
     };
 
@@ -25,8 +32,24 @@ const TopBannerForm = () => {
       setTimeout(showModal, 40000),
     ];
 
-    return () => timeouts.forEach(clearTimeout);
-  }, []);
+    // Cleanup timeouts if modal is already submitted or closed
+    return () => {
+      timeouts.forEach(clearTimeout);
+      setTimeoutsCleared(true); // Mark timeouts as cleared after cleanup
+    };
+  }, [isModalOpen, isModalSubmitted, timeoutsCleared]); // Add timeoutsCleared to dependencies
+
+  const handleModalSubmit = () => {
+    setIsModalSubmitted(true); // Mark modal as submitted
+    setIsModalOpen(false); // Close modal state
+    if (modalRef.current) {
+      modalRef.current.hide(); // Hide the modal
+    }
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false); // Update modal open state when closed
+  };
 
   return (
     <>
@@ -58,10 +81,8 @@ const TopBannerForm = () => {
             </h4>
             <h5 style={{ marginTop: "1rem" }}>
               From manuscript preparation to journal publication, our expert
-              editors provide high- quality English editing and academic and
-              scientific editing services. We ensure your research meets
-              academic and scientific top journal standards, increasing
-              acceptance rates in high-impact journals of Q1 and Q2.
+              editors provide high-quality English editing and academic and
+              scientific editing services...
             </h5>
             <h5 style={{ marginTop: ".5rem" }}>
               ✔ 20+ years of expertise in publication and editing services.
@@ -84,23 +105,32 @@ const TopBannerForm = () => {
             >
               Submit Manuscript →
             </Link>
-            <Link
+            <button
               className="btn mt-12 ml-2"
-              href={"#"}
-              type="button"
               style={{
                 backgroundColor: "#151130",
                 color: "white",
                 marginTop: "1rem",
               }}
-              data-bs-toggle="modal"
-              data-bs-target="#contactModal"
+              onClick={() => {
+                // Prevent opening modal if already submitted or open
+                if (!isModalOpen && !isModalSubmitted) {
+                  const modalElement = document.getElementById("contactModal");
+                  if (modalElement) {
+                    if (!modalRef.current) {
+                      modalRef.current = new window.bootstrap.Modal(modalElement);
+                    }
+                    modalRef.current.show();
+                    setIsModalOpen(true); // Track modal open state
+                  }
+                }
+              }}
             >
               Get A Consultation →
-            </Link>
+            </button>
           </div>
           <div
-            className={`$"carouselItem" $"active" col-lg-6`}
+            className={`carouselItem active col-lg-6`}
             style={{
               display: "flex",
               justifyContent: "center",
@@ -116,7 +146,11 @@ const TopBannerForm = () => {
         </div>
       </div>
 
-      <VisitorPopup />
+      {/* Pass handleModalSubmit to VisitorPopup */}
+      <VisitorPopup
+        onSubmit={handleModalSubmit}
+        onClose={handleModalClose} // Pass close callback
+      />
     </>
   );
 };
