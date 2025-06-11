@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SubsNewsletter.css"; // Link to custom CSS for styling
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,6 +11,49 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const NewsletterSubscribe = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const SubmitChange = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!email) {
+      setMessage("Please enter a valid email.");
+      return;
+    }
+
+    console.log(JSON.stringify({ email }));
+    let response: any;
+    try {
+      response = await fetch(
+        "https://www.secure.manuscriptedit.com/api/subscribe_newsletter.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        }
+      );
+
+      const data = await response.json();
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage("An error occurred. Please try again.");
+    } finally {
+      if (response.ok) {
+        setMessage("Successfully subscribed to the newsletter!");
+        setEmail("");
+      } else {
+        setMessage("Subscription failed. Try again.");
+      }
+    }
+  };
+
   return (
     <section className="newsletter-section container-fluid p-3">
       <div className="container">
@@ -23,23 +66,28 @@ const NewsletterSubscribe = () => {
                 type="email"
                 placeholder="Your Mail"
                 className="email-input"
+                value={email}
+                onChange={handleChange}
               />
-              <button className="subscribe-button">Subscribe</button>
+              <button className="subscribe-button" onClick={SubmitChange}>
+                Subscribe
+              </button>
             </div>
+            {message && <div className="mt-2 text-info">{message}</div>}
           </div>
 
           {/* Right - Social Media Icons */}
           <div className="col-md-4 d-flex justify-content-end">
             <div className="social-icons">
               <a
-                href=" https://www.facebook.com/@Manuscriptedit"
+                href="https://www.facebook.com/@Manuscriptedit"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
               </a>
               <a
-                href=" https://x.com/manuscriptedit"
+                href="https://x.com/manuscriptedit"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -59,7 +107,6 @@ const NewsletterSubscribe = () => {
               >
                 <FontAwesomeIcon icon={faThreads} className="social-icon" />
               </a>
-
               <a
                 href="https://www.instagram.com/manuscriptedit/"
                 target="_blank"

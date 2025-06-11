@@ -18,6 +18,10 @@ const VisitorPopup = ({
   const modalRef = useRef<HTMLDivElement>(null);
   const [isSubmitted, setIsSubmitted] = useState(false); // Track form submission status
 
+  const [countries, setCountries] = useState([]);
+
+  console.log("Cont:", countries);
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const form = e.target;
@@ -31,9 +35,12 @@ const VisitorPopup = ({
       name: form.name.value,
       email: form.email.value,
       phone_no: form.phone_no.value,
+      country: form.country_code.value,
       message: form.message.value,
       hear_about: form.hear_about.value,
     };
+
+    console.log("formData" , formData)
 
     try {
       const response = await fetch(
@@ -125,6 +132,16 @@ const VisitorPopup = ({
     }
   }, [isSubmitted]);
 
+  useEffect(() => {
+    fetch("https://www.secure.manuscriptedit.com/api/get_all_country_list.php")
+      .then((res) => res.json())
+      .then((data) => {
+        // Assuming the API returns an array like [{ name, code, dial_code }, ...]
+        setCountries(data);
+      })
+      .catch((err) => console.error("Failed to load country list:", err));
+  }, []);
+
   return (
     <div
       className="modal fade"
@@ -183,17 +200,38 @@ const VisitorPopup = ({
                 </div>
               </div>
 
-              <div className="mb-1">
+              <div className="mb-3">
                 <label htmlFor="phone_no" className="form-label">
                   Phone <span className="text-danger">*</span>
                 </label>
-                <input
-                  type="tel"
-                  className="form-control"
-                  id="phone_no"
-                  name="phone_no"
-                  required
-                />
+
+                <div className="d-flex">
+                  {/* Country Code Dropdown */}
+                  <select
+                    id="country_code"
+                    name="country_code"
+                    className="form-select me-2"
+                    style={{ maxWidth: "150px" }}
+                    required
+                  >
+                    <option value="">Country</option>
+                    {countries.map((c:any) => (
+                      <option key={c.id} value={c.id}>
+                        {c.country}
+                      </option>
+                    ))}
+                  </select>
+
+                  {/* Phone Input */}
+                  <input
+                    type="tel"
+                    className="form-control p-3"
+                    id="phone_no"
+                    name="phone_no"
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
                 <div className="invalid-feedback">
                   Please enter your phone number.
                 </div>

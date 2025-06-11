@@ -35,7 +35,7 @@
 }
 
 .subscribe-button:hover {
-  background-color: #761408; /* Darker green on hover */
+  background-color: #193cd8; /* Darker green on hover */
 }
 
 /* Social Icons */
@@ -56,3 +56,4 @@
 .social-icon:hover {
   background-color: #1a345a; /* Darker navy on hover */
 }
+
