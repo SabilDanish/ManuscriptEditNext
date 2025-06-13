@@ -40,7 +40,7 @@ const VisitorPopup = ({
       hear_about: form.hear_about.value,
     };
 
-    console.log("formData" , formData)
+    console.log("formData", formData);
 
     try {
       const response = await fetch(
@@ -158,7 +158,7 @@ const VisitorPopup = ({
             style={{ background: "#070361" }}
           >
             <h6 className="modal-title" id="contactModalLabel">
-              Get A Consultation
+              Get A Free Consultation
             </h6>
             <button
               type="button"
@@ -215,7 +215,7 @@ const VisitorPopup = ({
                     required
                   >
                     <option value="">Country</option>
-                    {countries.map((c:any) => (
+                    {countries.map((c: any) => (
                       <option key={c.id} value={c.id}>
                         {c.country}
                       </option>
