@@ -30,9 +30,10 @@ interface PriceDetails {
   submit_date: string;
   table_file: string | null;
   total_price: string;
-  turn_ar_time: string; 
+  turn_ar_time: string;
   user_name: string;
   word_count: string;
+  payment_link: string;
 }
 
 function page() {
@@ -102,7 +103,6 @@ function page() {
       console.error("Failed to submit:", error);
       setPopup("fail");
     }
-    
   };
 
   return (
@@ -231,8 +231,15 @@ function page() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-6">
-                    <div className="card bg-light">
+                  <div
+                    className="col-md-6"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {/* <div className="card bg-light">
                       <div className="card-body">
                         <h5 className="card-title">Status</h5>
                         <p className="card-text">
@@ -255,38 +262,52 @@ function page() {
                           )}
                         </p>
                       </div>
+                    </div> */}
+                    <div className="text-center">
+                      <center>
+                        <button
+                          className="btn btn-primary btn-lg"
+                          onClick={() => {
+                            if (priceDetails.payment_link) {
+                              window.location.href = priceDetails.payment_link;
+                            } else {
+                              handleSubmit();
+                            }
+                          }}
+                        >
+                          {/* {priceDetails.status === "pending / Pay Now"
+                    ? "Pay Now"
+                    : "View Invoice"} */}
+                          {priceDetails.payment_link
+                            ? "Pay Now"
+                            : "Request Payment Link"}
+                        </button>
+                      </center>
+                      <center>
+                        <div
+                          className="alert alert-primary col-lg-6"
+                          role="alert"
+                          style={{
+                            display: popup === "success" ? "block" : "none",
+                          }}
+                        >
+                          Your request is submitted successfully!
+                        </div>
+                      </center>
+                      <center>
+                        <div
+                          className="alert alert-danger col-lg-6"
+                          role="alert"
+                          style={{
+                            display: popup === "fail" ? "block" : "none",
+                          }}
+                        >
+                          Oops! Something went wrong. Please try again.
+                        </div>
+                      </center>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="text-center">
-                <button
-                  className="btn btn-primary btn-lg"
-                  onClick={handleSubmit}
-                >
-                  {priceDetails.status === "pending / Pay Now"
-                    ? "Pay Now"
-                    : "View Invoice"}
-                </button>
-                <center>
-                  <div
-                    className="alert alert-primary col-lg-6"
-                    role="alert"
-                    style={{ display: popup === "success" ? "block" : "none" }}
-                  >
-                    Your request is submitted successfully!
-                  </div>
-                </center>
-                <center>
-                  <div
-                    className="alert alert-danger col-lg-6"
-                    role="alert"
-                    style={{ display: popup === "fail" ? "block" : "none" }}
-                  >
-                    Oops! Something went wrong. Please try again.
-                  </div>
-                </center>
               </div>
             </div>
           </div>
